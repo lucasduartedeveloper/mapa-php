@@ -2,6 +2,16 @@
 <?php include ('config/config.php')?>
 <?php include ('config/txt.php')?>
 
+<?php
+  $sql = 'SELECT valor FROM param';
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $rowCount = $stmt->rowCount();
+  $details = $stmt->fetch(); 
+  echo $details;
+  echo 'sql';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,17 +54,8 @@ var x = setInterval(function() {
 </head>
 <body>
 
-<?php
-  $sql = 'SELECT valor FROM param';
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
-  $rowCount = $stmt->rowCount();
-  $details = $stmt->fetch();
-?>
-
 <div class="box">
-    <!-- Display the countdown timer in an element -->
-    <p class="contador"><?=$details?> visitas</p>
+    <p class="contador">0 visitas</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
 </div>
@@ -62,7 +63,6 @@ var x = setInterval(function() {
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 
 </body>
 </html>
