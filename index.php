@@ -3,10 +3,15 @@
 <?php include ('config/txt.php')?>
 
 <?php
+  echo 'sql';
   $sql = 'SELECT valor FROM param';
+  echo 'sql';
   $stmt = $pdo->prepare($sql);
+  echo 'sql';
   $stmt->execute();
+  echo 'sql';
   $rowCount = $stmt->rowCount();
+  echo 'sql';
   $details = $stmt->fetch(); 
   echo $details;
   echo 'sql';
