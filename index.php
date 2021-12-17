@@ -3,18 +3,17 @@
 <?php include ('config/txt.php')?>
 
 <?php
-  echo 'sql';
+try {
   $sql = 'SELECT valor FROM param';
-  echo 'sql';
   $stmt = $pdo->prepare($sql);
-  echo 'sql';
   $stmt->execute();
-  echo 'sql';
   $rowCount = $stmt->rowCount();
-  echo 'sql';
   $details = $stmt->fetch(); 
-  echo $details;
-  echo 'sql';
+}
+catch (PDOException $e) {
+   echo 'Connection failed: ' . $e->getMessage();
+}
+echo 'agora vai';
 ?>
 
 <!DOCTYPE html>
