@@ -4,13 +4,16 @@
 
 <?php
 try {
-  $sql = 'SELECT valor FROM param';
+  $sql = "SELECT valor FROM param WHERE nome='contador_visitas'";
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
   $rowCount = $stmt->rowCount();
   $details = $stmt->fetch(); 
   $contar = intval($details->valor)+1;
   
+  $sql -= "UPDATE param SET valor='".$contar."' WHERE nome='contador_visitas'";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
