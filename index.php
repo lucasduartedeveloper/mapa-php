@@ -9,6 +9,7 @@ try {
   $stmt->execute();
   $rowCount = $stmt->rowCount();
   $details = $stmt->fetch(); 
+  echo $details->valor;
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
