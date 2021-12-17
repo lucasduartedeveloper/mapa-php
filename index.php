@@ -11,9 +11,6 @@ $data   = fread($handle, 512);
 $contar = $data + 1;
 // Adiciona +1
 
-print "número: ".$contar;
-// Exibe na tela o valor encontrado no arquivo TXT
-
 fseek($handle, 0);
 // O ponteiro volta para o início do arquivo
 
