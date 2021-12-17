@@ -37,14 +37,14 @@ var x = setInterval(function() {
 }, 1000);
 
 <link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title></title>
 </head>
 <body>
 
 <div class="box">
-    <!-- Display the countdown timer in       an element -->
+    <!-- Display the countdown timer in an element -->
     <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
 </div>
