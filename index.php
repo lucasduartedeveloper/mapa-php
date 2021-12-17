@@ -88,6 +88,7 @@ html, body {
 <div class="box">
     <!-- Display the countdown timer in       an element -->
     <p><?=$contar?> visitas</p>
+    <br>
     <p id="demo"></p>
 </div>
 
