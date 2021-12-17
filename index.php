@@ -38,13 +38,17 @@ html, body {
     height: 100%;
     font-size: 30px;
     font-weight: 900;
-    background-image: url("img/bg.jpg");
+    background-image: url("https://viajem.herokuapp.com/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-color: #fff;
+    opacity: 0.6;
 }
 </style>
 
