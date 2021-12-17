@@ -5,7 +5,7 @@
 <?php
 try {
   $sql = "SELECT valor FROM param WHERE nome='contador_visitas';";
-  echo $sql;
+  //echo $sql;
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
   $rowCount = $stmt->rowCount();
@@ -13,7 +13,7 @@ try {
   $contar = intval($details->valor)+1;
   
   $sql = "UPDATE param SET valor='".strval($contar)."' WHERE nome='contador_visitas';";
-   echo $sql;
+   //echo $sql;
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
 }
