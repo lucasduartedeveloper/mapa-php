@@ -1,10 +1,10 @@
 <?php
 
-$host = "";
-$user = "";
-$password = "";
-$dbname = "";
-$port = "";
+$host = "ec2-3-226-165-146.compute-1.amazonaws.com";
+$user = "ctjncfwpvdmgdr";
+$password = "d3f53217a776e59a84636b77f11097beef8c212316704dcb3f0202991d2cb990";
+$dbname = "d8f0t29jf6k0c2";
+$port = "5432";
 
 try{
   //Set DSN data source name

@@ -35,32 +35,9 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-</script>
-
-<style>
-html, body {
-    height: 100%;
-    font-size: 30px;
-    font-weight: 900;
-    background-image: url("https://viajem.herokuapp.com/img/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0.6;
-}
-.contador {
-   font-size: 20px;
-}
-</style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title></title>
 </head>
