@@ -1,4 +1,4 @@
-<?php include ('config/db.php')?>
+<?php include ('../config/db.php')?>
 <?php
   $sql = "SELECT valor FROM param WHERE nome='contador_visitas';";
   //echo $sql;

@@ -67,6 +67,7 @@ var x = setInterval(function() {
 <div class="box">
    <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
+    <input class="btn btn-primary" type="button" value="Abrir">
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
