@@ -9,7 +9,6 @@ try {
   $stmt->execute();
   $rowCount = $stmt->rowCount();
   $details = $stmt->fetch(); 
-  echo $details.valor;
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
@@ -59,7 +58,7 @@ var x = setInterval(function() {
 <body>
 
 <div class="box">
-    <p class="contador"><?=$rowCount?> visitas</p>
+    <p class="contador">0 visitas</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
 </div>
