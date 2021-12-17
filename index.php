@@ -70,9 +70,13 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100%;
     background-color: #fff;
     opacity: 0.6;
+}
+.contador {
+   font-size: 20px;
 }
 </style>
 
@@ -84,7 +88,7 @@ html, body {
 
 <div class="box">
     <!-- Display the countdown timer in       an element -->
-    <p><?=$contar?> visitas | </p>
+    <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
 </div>
 
