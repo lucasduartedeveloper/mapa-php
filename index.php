@@ -44,8 +44,17 @@ var x = setInterval(function() {
 </head>
 <body>
 
+<?php
+  $sql = 'SELECT valor FROM param';
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $rowCount = $stmt->rowCount();
+  $details = $stmt->fetch();
+?>
+
 <div class="box">
     <!-- Display the countdown timer in an element -->
+    <p class="contador"><?=$details?> visitas</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
 </div>
