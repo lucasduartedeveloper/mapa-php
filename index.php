@@ -38,6 +38,7 @@ html, body {
     height: 100%;
     font-size: 30px;
     font-weight: 900;
+    background-image: url("img/bg.jpg");
 }
 .box{
     display: flex;
