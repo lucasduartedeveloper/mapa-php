@@ -70,7 +70,7 @@ var x = setInterval(function() {
 let map;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById("box"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 8,
   });
@@ -85,7 +85,7 @@ function initMap() {
 </head>
 <body>
 
-<div class="box">
+<div id="map" class="box">
    <p class="contador"><?=$contar?> visitas</p>
     <p id="dias"></p>
     <p id="horas"></p>
