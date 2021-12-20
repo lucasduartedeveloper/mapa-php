@@ -46,10 +46,11 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  // Display the resultghp
   document.getElementById("dias").innerHTML = days + "dias " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
+/*
   document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
   + minutes + "m " + seconds + "s ";
 
@@ -57,7 +58,7 @@ var x = setInterval(function() {
  + minutes + "m " + seconds + "s ";
 
   document.getElementById("segundos").innerHTML = ((((days * 24) + hours) * 60) +
-  minutes) * 60) + seconds + "s ";
+  minutes) * 60) + seconds + "s ";*/
 
   // If the count down is finished, write some text
   if (distance < 0) {
