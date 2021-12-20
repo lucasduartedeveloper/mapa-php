@@ -55,9 +55,7 @@ var x = setInterval(function() {
   document.getElementById("minutos").innerHTML = (((days * 24) + hours) * 60)
  + minutes + "m " + seconds + "s ";
 
-/*
-  document.getElementById("segundos").innerHTML = ((((days * 24) + hours) * 60) +
-  minutes) * 60) + seconds + "s ";*/
+  document.getElementById("segundos").innerHTML = (((((days * 24) + hours) * 60) + minutes) * 60) + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
