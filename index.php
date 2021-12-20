@@ -50,10 +50,10 @@ var x = setInterval(function() {
   document.getElementById("dias").innerHTML = days + "dias " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
-/*
   document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
   + minutes + "m " + seconds + "s ";
 
+ /*
   document.getElementById("minutos").innerHTML = (((days * 24) + hours) * 60)
  + minutes + "m " + seconds + "s ";
 
