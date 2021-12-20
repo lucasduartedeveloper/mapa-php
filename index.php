@@ -47,13 +47,25 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "dias " + hours + "h "
+  document.getElementById("dias").innerHTML = days + "dias " + hours + "h "
   + minutes + "m " + seconds + "s ";
+
+  document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  document.getElementById("minutos").innerHTML = (((days * 24) + hours) * 60)
+ + minutes + "m " + seconds + "s ";
+
+  document.getElementById("segundos").innerHTML = ((((days * 24) + hours) * 60) +
+  minutes) * 60);+ seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("dias").innerHTML = "EXPIRED";
+    document.getElementById("horas").innerHTML = "EXPIRED";
+    document.getElementById("minutos").innerHTML = "EXPIRED";
+    document.getElementById("segundos").innerHTML = "EXPIRED";
   }
 }, 1000);
 </script>
@@ -68,7 +80,10 @@ var x = setInterval(function() {
 
 <div class="box">
    <p class="contador"><?=$contar?> visitas</p>
-    <p id="demo"></p>
+    <p id="dias"></p>
+    <p id="horas"></p>
+    <p id="minutos"></p>
+    <p id="segundos"></p>
     <button id="target" type="button" class="btn btn-outline-dark">
     <i class="bi bi-unlock-fill"></i>
     Abrir
