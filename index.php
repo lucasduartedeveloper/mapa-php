@@ -55,6 +55,12 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+$(document).ready(function(){
+  $( "#target" ).click(function() {
+    alert( "Handler for .click() called." );
+  });
+);
 </script>
 
 <link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css">
@@ -68,7 +74,7 @@ var x = setInterval(function() {
 <div class="box">
    <p class="contador"><?=$contar?> visitas</p>
     <p id="demo"></p>
-    <button type="button" class="btn btn-outline-dark">
+    <button id="target" type="button" class="btn btn-outline-dark">
     <i class="bi bi-unlock-fill"></i>
     Abrir
     </button>

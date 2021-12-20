@@ -1,0 +1,4 @@
+
+api.openweathermap.org/data/2.5/weather?q=LONDRINA&appid=bc0a3d1113f20312d567bc135e5812d6
+
+api.openweathermap.org/data/2.5/forecast/daily?q=München,DE&appid=bc0a3d1113f20312d567bc135e5812d6
