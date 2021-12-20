@@ -19,3 +19,7 @@ html, body {
 .contador {
    font-size: 20px;
 }
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

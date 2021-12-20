@@ -26,7 +26,6 @@ catch (PDOException $e) {
 <html>
 <head>
 
-
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 23, 2021 20:55:00").getTime();
@@ -53,10 +52,10 @@ var x = setInterval(function() {
   document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
   + minutes + "m " + seconds + "s ";
 
- /*
   document.getElementById("minutos").innerHTML = (((days * 24) + hours) * 60)
  + minutes + "m " + seconds + "s ";
 
+/*
   document.getElementById("segundos").innerHTML = ((((days * 24) + hours) * 60) +
   minutes) * 60) + seconds + "s ";*/
 
