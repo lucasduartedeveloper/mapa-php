@@ -26,26 +26,6 @@ catch (PDOException $e) {
 <html>
 <head>
 
-<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title></title>
-</head>
-<body>
-
-<div class="box">
-   <p class="contador"><?=$contar?> visitas</p>
-    <p id="demo"></p>
-    <button id="target" type="button" class="btn btn-outline-dark">
-    <i class="bi bi-unlock-fill"></i>
-    Abrir
-    </button>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <script>
 // Set the date we're counting down to
@@ -76,13 +56,28 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-
-$(document).ready(function(){
-  $( "#target" ).click(function() {
-    alert( "Handler for .click() called." );
-  });
-);
 </script>
+
+<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+</head>
+<body>
+
+<div class="box">
+   <p class="contador"><?=$contar?> visitas</p>
+    <p id="demo"></p>
+    <button id="target" type="button" class="btn btn-outline-dark">
+    <i class="bi bi-unlock-fill"></i>
+    Abrir
+    </button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
