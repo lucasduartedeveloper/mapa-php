@@ -17,7 +17,7 @@ html, body {
     background-size: cover;
 }
 .box{
-    position: absoluta;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
