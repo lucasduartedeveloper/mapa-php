@@ -92,9 +92,6 @@ var x = setInterval(function() {
     </button>
 </div>
 
-<script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -116,6 +113,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 </script/>
+
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
 
 </body>
 </html>
