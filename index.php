@@ -35,6 +35,9 @@ catch (PDOException $e) {
 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+<script src="https://viajem.herokuapp.com/script.js"></script>
+<script src="https://viajem.herokuapp.com/geolocation.js"></script>
+
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 23, 2021 20:55:00").getTime();
@@ -85,7 +88,6 @@ var x = setInterval(function() {
     <p id="horas"></p>
     <p id="minutos"></p>
     <p id="segundos"></p>
-    <p id="demo"></p>
     <button id="target" type="button" class="btn btn-outline-dark">
     <i class="bi bi-unlock-fill"></i>
     Abrir
@@ -97,8 +99,6 @@ var x = setInterval(function() {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
-<script src="https://viajem.herokuapp.com/script.js"></script>
-<script src="https://viajem.herokuapp.com/geolocation.js"></script>
 
 <script>
 // Create the map
