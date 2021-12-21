@@ -1,34 +1,33 @@
-var x=document.getElementById("demo");
 function getLocation()
   {
   if (navigator.geolocation)
     {
     navigator.geolocation.getCurrentPosition(showPosition,showError);
     }
-  else{x.innerHTML="Seu browser não suporta Geolocalização.";}
+  else{
+      console.log("Seu browser não suporta Geolocalização.");
+    }
   }
 function showPosition(position)
   {
-  x.innerHTML="Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude; 
+  console.log("Latitude: " + position.coords.latitude +
+  "/ Longitude: " + position.coords.longitude); 
   }
 function showError(error)
   {
   switch(error.code)
     {
     case error.PERMISSION_DENIED:
-      x.innerHTML="Usuário rejeitou a solicitação de Geolocalização."
+      console.log("Usuário rejeitou a solicitação de Geolocalização.");
       break;
     case error.POSITION_UNAVAILABLE:
-      x.innerHTML="Localização indisponível."
+      console.log("Localização indisponível.");
       break;
     case error.TIMEOUT:
-      x.innerHTML="A requisição expirou."
+      console.log("A requisição expirou.");
       break;
     case error.UNKNOWN_ERROR:
-      x.innerHTML="Algum erro desconhecido aconteceu."
+      console.log("Algum erro desconhecido aconteceu.");
       break;
     }
   }
-
-getLocation();
