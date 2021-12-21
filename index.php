@@ -85,7 +85,7 @@ var x = setInterval(function() {
     <p id="horas"></p>
     <p id="minutos"></p>
     <p id="segundos"></p>
-    <p id="demo"></p/>
+    <p id="demo"></p>
     <button id="target" type="button" class="btn btn-outline-dark">
     <i class="bi bi-unlock-fill"></i>
     Abrir
