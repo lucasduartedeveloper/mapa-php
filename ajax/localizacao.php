@@ -6,8 +6,8 @@ try {
 
   $sql = "INSERT INTO localizacao(latitude,longitude) VALUES ('".$latitude."','".$longitude."');" ;
    echo $sql;
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
+  //$stmt = $pdo->prepare($sql);
+  //$stmt->execute();
 
   $sql = "SELECT latitude,longitude FROM localizacao ORDER BY id DESC";
   echo $sql;
