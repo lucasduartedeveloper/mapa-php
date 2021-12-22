@@ -9,14 +9,14 @@ try {
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
 
-  $sql = "SELECT latitude,longitude FROM localizacao ORDER BY id DESC LIMIT 1;";
+  $sql = "SELECT latitude,longitude,data_hora FROM localizacao ORDER BY id DESC LIMIT 1;";
   echo $sql."<br>";
-  //$stmt = $pdo->prepare($sql);
-  //$stmt->execute();
-  //$rowCount = $stmt->rowCount();
-  //$details = $stmt->fetch(); 
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $rowCount = $stmt->rowCount();
+  $details = $stmt->fetch(); 
   
-  //echo json_encode($details)
+  echo json_encode($details);
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
