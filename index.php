@@ -43,11 +43,12 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
+   <p class="contador">SP BARRA FUNDA</p>
    <p class="contador"><?=$contar?> visitas</p>
     <p id="dias"></p>
-    <p id="horas"></p>
-    <p id="minutos"></p>
-    <p id="segundos"></p>
+    <p hidden d="horas"></p>
+    <p hidden id="minutos"></p>
+    <p hidden id="segundos"></p>
     <button id="target" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
     Salvar
