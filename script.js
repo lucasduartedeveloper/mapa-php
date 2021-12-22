@@ -56,6 +56,7 @@ $(document).ready(function() {
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
        cicle.setLatLng(new L.LatLng(data.latitude, data.longitude));
        rectangle.setBounds(circle.getBounds());
+       rectangle.redraw();
        console.log(JSON.stringify(data));
     });
   })
