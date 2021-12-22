@@ -1,4 +1,5 @@
 // Create the map
+var geolocation = { latitude: 0, longitude: 0 };
 var map = L.map('map').setView([51.505, -0.09], 13);
 var marker = L.marker([51.505, -0.09]).addTo(map);
 
@@ -26,8 +27,7 @@ function showPosition(position)
   {
   console.log("Latitude: " + position.coords.latitude +
   " / Longitude: " + position.coords.longitude); 
-   map.setView([position.coords.latitude, position.coords.longitude], 18);
-   marker.setLatLng(new L.LatLng(position.coords.latitude, position.coords.longitude));
+   geolocation = position.coords;
   }
 function showError(error)
   {
