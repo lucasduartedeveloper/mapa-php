@@ -9,7 +9,7 @@ try {
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
 
-  $sql = "SELECT latitude,longitude FROM localizacao ORDER BY id DESC;";
+  $sql = "SELECT latitude,longitude FROM localizacao ORDER BY id DESC LIMIT 1;";
   echo $sql."<br>";
   //$stmt = $pdo->prepare($sql);
   //$stmt->execute();
