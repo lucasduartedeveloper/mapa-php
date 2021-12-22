@@ -43,7 +43,7 @@ var x = setInterval(function() {
 $(document).ready(function() {
   console.log("document.ready");
   $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
-       map.setView([data.latitude, data.longitude], 18)
+       map.setView([data.latitude, data.longitude], 18);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
        rectangle.setLatLng(new L.LatLng(data.latitude, data.longitude));
        console.log(JSON.stringify(data));
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
   $( "#target" ).click(function() {
     $.getJSON( "/ajax/localizacao.php?lat="+geolocation.latitude+"&long="+geolocation.longitude, function(data) {
-       map.setView([data.latitude, data.longitude], 18)
+       map.setView([data.latitude, data.longitude], 18);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
        rectangle.setLatLng(new L.LatLng(data.latitude, data.longitude));
        console.log(JSON.stringify(data));
