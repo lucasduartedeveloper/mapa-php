@@ -7,8 +7,11 @@ try {
   $stmt->execute();
   $rowCount = $stmt->rowCount();
   $details = $stmt->fetch(); 
-  $contar = intval($details->valor);
-  echo $contar;
+
+  //$contar = intval($details->valor);
+  //echo $contar;
+
+  echo json_encode($details);
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
