@@ -27,7 +27,7 @@ function showPosition(position)
   console.log("Latitude: " + position.coords.latitude +
   " / Longitude: " + position.coords.longitude); 
    map.setView([position.coords.latitude, position.coords.longitude], 18);
-   L.marker([position.coords.latitude, position.coords.longitude]).update(marker);
+   marker.setLatLng(new L.LatLng(position.coords.latitude, position.coords.longitude));
   }
 function showError(error)
   {
