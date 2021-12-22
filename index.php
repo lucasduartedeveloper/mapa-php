@@ -46,7 +46,7 @@ catch (PDOException $e) {
    <p class="contador">SAO PAULO BARRA FUND</p>
    <p class="contador"><?=$contar?> visitas</p>
     <p id="dias"></p>
-    <p hidden d="horas"></p>
+    <p hidden id="horas"></p>
     <p hidden id="minutos"></p>
     <p hidden id="segundos"></p>
     <button id="target" type="button" class="btn btn-outline-dark btn-sm">
@@ -58,9 +58,9 @@ catch (PDOException $e) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="https://viajem.herokuapp.com/script.js?v=3"></script>
+<script src="https://viajem.herokuapp.com/script.js?v=4"></script>
 <script src="https://viajem.herokuapp.com/geolocation.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
