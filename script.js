@@ -43,6 +43,6 @@ var x = setInterval(function() {
 $(document).ready(function() {
   console.log("document.ready");
   $( "#target" ).click(function() {
-    alert( "Handler for .click() called." );
+    alert( "TODO: Guardar posição atual." );
   })
 });

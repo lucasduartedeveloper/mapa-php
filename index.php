@@ -27,11 +27,12 @@ catch (PDOException $e) {
 <head>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css?v=0">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css?v=0">
 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
@@ -58,7 +59,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
-<script src="https://viajem.herokuapp.com/script.js?v=0"></script>
+<script src="https://viajem.herokuapp.com/script.js?v=1"></script>
 <script src="https://viajem.herokuapp.com/geolocation.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
