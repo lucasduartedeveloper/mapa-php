@@ -1,4 +1,4 @@
-console.log(",script.js");
+console.log("script.js");
 
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 23, 2021 20:55:00").getTime();
