@@ -35,6 +35,7 @@ catch (PDOException $e) {
 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+<title></title>
 </head>
 <body>
 

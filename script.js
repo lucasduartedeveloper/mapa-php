@@ -40,9 +40,9 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-$(document).ready(function()
+$(document).ready(function() {
   console.log("document.ready");
   $( "#target" ).click(function() {
     alert( "Handler for .click() called." );
   })
-);
+});
