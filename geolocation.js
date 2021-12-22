@@ -1,12 +1,15 @@
 // Create the map
 var geolocation = { latitude: 0, longitude: 0 };
 var map = L.map('map').setView([51.505, -0.09], 13);
+
 var circle = L.circle([51.505, -0.09], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 30
-}).addTo(map);
+    radius: 15
+});
+var rectangle = L.Rectangle(circle.getBounds()).addTo(map);
+
 var marker = L.marker([51.505, -0.09]).addTo(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
