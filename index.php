@@ -57,7 +57,7 @@ catch (PDOException $e) {
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
 <script src="https://viajem.herokuapp.com/script.js"></script>
-<script src="https://viajem.herokuapp.com/geolocation.js"></script>
+<script src="https://viajem.herokuapp.com/geolocation.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
