@@ -43,7 +43,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-   <p class="contador">SP BARRA FUNDA</p>
+   <p class="contador">SAO PAULO BARRA FUND</p>
    <p class="contador"><?=$contar?> visitas</p>
     <p id="dias"></p>
     <p hidden d="horas"></p>
