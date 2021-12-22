@@ -6,8 +6,8 @@ try {
 
   $sql = "INSERT INTO localizacao(latitude,longitude) VALUES ('".$latitude."','".$longitude."');";
    echo $sql."<br>";
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
+  //$stmt = $pdo->prepare($sql);
+  //$stmt->execute();
 
   $sql = "SELECT latitude,longitude FROM localizacao ORDER BY id DESC;";
   echo $sql."<br>";
@@ -20,8 +20,5 @@ try {
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
-}
-catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage();
 }
 ?>
