@@ -60,8 +60,8 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="https://viajem.herokuapp.com/script.js?v=4"></script>
-<script src="https://viajem.herokuapp.com/geolocation.js?v=0"></script>
+<script src="https://viajem.herokuapp.com/script.js?v=5"></script>
+<script src="https://viajem.herokuapp.com/geolocation.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

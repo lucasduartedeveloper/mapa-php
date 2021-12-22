@@ -1,5 +1,6 @@
 // Create the map
 var map = L.map('map').setView([51.505, -0.09], 13);
+var marker = L.marker([[51.505, -0.09]]).addTo(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -26,7 +27,7 @@ function showPosition(position)
   console.log("Latitude: " + position.coords.latitude +
   " / Longitude: " + position.coords.longitude); 
    map.setView([position.coords.latitude, position.coords.longitude], 18);
-  var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+   L.marker([position.coords.latitude, position.coords.longitude]).update(marker);
   }
 function showError(error)
   {

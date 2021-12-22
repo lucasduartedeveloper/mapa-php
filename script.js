@@ -44,7 +44,7 @@ $(document).ready(function() {
   console.log("document.ready");
   $( "#target" ).click(function() {
     $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
-       alert(JSON.stringfy(data));
+       alert(JSON.stringify(data));
     });
   })
 });
