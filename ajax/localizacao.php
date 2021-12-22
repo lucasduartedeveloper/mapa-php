@@ -16,7 +16,7 @@ try {
   $rowCount = $stmt->rowCount();
   $details = $stmt->fetch(); 
   
-  echo json_encode($details)
+  //echo json_encode($details)
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
