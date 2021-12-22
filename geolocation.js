@@ -5,7 +5,7 @@ var circle = L.circle([51.505, -0.09], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 500
+    radius: 30
 }).addTo(map);
 var marker = L.marker([51.505, -0.09]).addTo(map);
 
