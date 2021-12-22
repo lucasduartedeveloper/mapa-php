@@ -7,9 +7,9 @@ var circle = L.circle([51.505, -0.09], {
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 15
-}).getBounds();
+}).addTo(map);
 
-var rectangle = L.Rectangle(circle).addTo(map);
+var rectangle = L.rectangle(circle.getBounds()).addTo(map);
 
 var marker = L.marker([51.505, -0.09]).addTo(map);
 
