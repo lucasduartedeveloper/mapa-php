@@ -11,12 +11,12 @@ try {
 
   $sql = "SELECT latitude,longitude FROM localizacao ORDER BY id DESC;";
   echo $sql."<br>";
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
-  $rowCount = $stmt->rowCount();
-  $details = $stmt->fetch(); 
+  //$stmt = $pdo->prepare($sql);
+  //$stmt->execute();
+  //$rowCount = $stmt->rowCount();
+  //$details = $stmt->fetch(); 
   
-  echo json_encode($details)
+  //echo json_encode($details)
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
