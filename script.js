@@ -45,7 +45,8 @@ $(document).ready(function() {
   $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
        map.setView([data.latitude, data.longitude], 18);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
-       rectangle.setLatLng(new L.LatLng(data.latitude, data.longitude));
+       circle.setLatLng(new L.LatLng(data.latitude, data.longitude));
+       rectangle.setBounds(circle.getBounds());
        console.log(JSON.stringify(data));
    });
 
@@ -53,7 +54,8 @@ $(document).ready(function() {
     $.getJSON( "/ajax/localizacao.php?lat="+geolocation.latitude+"&long="+geolocation.longitude, function(data) {
        map.setView([data.latitude, data.longitude], 18);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
-       rectangle.setLatLng(new L.LatLng(data.latitude, data.longitude));
+       cicle.setLatLng(new L.LatLng(data.latitude, data.longitude));
+       rectangle.setBounds(circle.getBounds());
        console.log(JSON.stringify(data));
     });
   })
