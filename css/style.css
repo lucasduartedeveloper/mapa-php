@@ -16,6 +16,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .box{
     position: absolute;
     display: flex;
@@ -27,6 +28,7 @@ html, body {
     background-color: #fff;
     opacity: 0.6;
 }
+
 .box2{
     position: absolute;
     display: flex;
@@ -38,18 +40,20 @@ html, body {
     background-color: #fff;
     opacity: 0.6;
 }
-.local {
-   font-size: 20px;
-   margin: 0px;
-   padding: 0px;
-}
-.contador {
-   font-size: 20px;
-}
+
 .box2 p {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     -margin: 0px;
+}
+
+p.local {
+   font-size: 20px;
+   margin: 0px;
+   padding: 0px;
+}
+p.contador {
+   font-size: 20px;
 }
