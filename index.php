@@ -28,7 +28,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css?v=0">
+<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css?v=1">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -43,6 +43,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
+   <i class="bi bi-arrow-up-left"></i>
    <p class="contador">SAO PAULO BARRA FUND</p>
    <p class="contador"><?=$contar?> visitas</p>
     <p id="dias"></p>
