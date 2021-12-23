@@ -42,7 +42,7 @@ var x = setInterval(function() {
 
 $(document).ready(function() {
   console.log("document.ready");
-  document.body.requestFullscreen();
+  //document.body.requestFullscreen();
   $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
        map.setView([data.latitude, data.longitude], 17);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
@@ -58,7 +58,8 @@ $(document).ready(function() {
        circle.setLatLng(new L.LatLng(data.latitude, data.longitude));
        rectangle.setBounds(circle.getBounds());
        rectangle.redraw();
-       console.log(JSON.stringify(data));
+       console.log(JSON.stringify(data));;
+       document.body.requestFullscreen();
     });
   })
 });

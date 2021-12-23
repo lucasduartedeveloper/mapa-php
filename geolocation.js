@@ -1,6 +1,7 @@
 // Create the map
 var geolocation = { latitude: 0, longitude: 0 };
-var map = L.map('map').setView([51.505, -0.09], 13);
+//var map = L.map('map').setView([51.505, -0.09], 13);
+var map = L.map('map');
 
 var circle = L.circle([51.505, -0.09], {
     color: 'red',
