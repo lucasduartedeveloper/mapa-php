@@ -43,9 +43,9 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p class="local">RODOVIARIA &nbsp;
-    <i class="bi bi-arrow-down"></i></p>
-    <p class="local">SAO PAULO BARRA FUNDA</p>
+    <p hidden class="local">RODOVIARIA &nbsp;
+    <i hidden class="bi bi-arrow-down"></i></p>
+    <p class="local">TESTE</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
     <p id="horas"></p>
