@@ -67,4 +67,4 @@ $( "#target" ).click(function() {
 $( "#menu" ).click(function() {
     $(".box2").toggle();
     console.log("toggle");
-}
+});
