@@ -65,6 +65,6 @@ $( "#target" ).click(function() {
 });
 
 $( "#menu" ).click(function() {
-    $(".box2").hide();
+    $(".box2").toggle();
     console.log("toggle");
 });
