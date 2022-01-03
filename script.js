@@ -59,12 +59,12 @@ $( "#target" ).click(function() {
        rectangle.setBounds(circle.getBounds());
        rectangle.redraw();
        console.log(JSON.stringify(data));;
-       document.body.requestFullscreen();
+       //document.body.requestFullscreen();
     });
   })
 });
 
 $( "#menu" ).click(function() {
-    $(".box2").toggle();
+    $(".box2").hide();
     console.log("toggle");
 });
