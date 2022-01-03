@@ -26,9 +26,14 @@ catch (PDOException $e) {
 <html>
 <head>
 
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css?v=3">
+<link rel="stylesheet" href="https://viajem.herokuapp.com/css/style.css?v=4">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -42,10 +47,12 @@ catch (PDOException $e) {
 
 <div id="map" class="box">
 </div>
-<div class="box2">
+<div hidden class="box2">
     <p hidden class="local">RODOVIARIA &nbsp;
     <i hidden class="bi bi-arrow-down"></i></p>
-    <p class="local">AV. TIRADENTES, 2200</p>
+    <p hidden class="local">ENDEREÇO 1</p>
+    <p hidden class="local">ENDEREÇO 2</p>
+    <p hidden class="local">ENDEREÇO 3</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
     <p id="horas"></p>
@@ -57,12 +64,14 @@ catch (PDOException $e) {
     </button>
 </div>
 
+<i id="menu" class="bi bi-arrow-down-circle my-float"></i>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="https://viajem.herokuapp.com/script.js?v=22"></script>
+<script src="https://viajem.herokuapp.com/script.js?v=23"></script>
 <script src="https://viajem.herokuapp.com/geolocation.js?v=13"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>

@@ -1,7 +1,7 @@
 console.log("script.js");
 
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 29, 2021 8:00:00").getTime();
+var countDownDate = new Date("Jan 4, 2022 16:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -51,7 +51,7 @@ $(document).ready(function() {
        console.log(JSON.stringify(data));
    });
 
-  $( "#target" ).click(function() {
+$( "#target" ).click(function() {
     $.getJSON( "/ajax/localizacao.php?lat="+geolocation.latitude+"&long="+geolocation.longitude, function(data) {
        map.setView([data.latitude, data.longitude], 17);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
@@ -63,3 +63,8 @@ $(document).ready(function() {
     });
   })
 });
+
+$( "#menu" ).click(function() {
+    $(".box2").toggle();
+    console.log("toggle");
+}

@@ -54,6 +54,13 @@ p.local {
    margin: 0px;
    padding: 0px;
 }
+
 p.contador {
    font-size: 20px;
+}
+
+.my-float{
+   position:fixed;
+   top:40px;
+   right:40px;
 }
