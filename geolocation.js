@@ -32,7 +32,7 @@ var greenIcon = L.icon({
     shadowSize:   [50, 25], // size of the shadow
     iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
     shadowAnchor: [25, 10],  // the same for the shadow
-    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+    popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
 var marker2 = L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map).bindPopup("I am a green monster.");
