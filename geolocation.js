@@ -35,7 +35,7 @@ var greenIcon = L.icon({
     popupAnchor:  [17.5, 50] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map);
+var marker2 = L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map).bindPopup("I am a green monster.");
 
 function onMapClick(e) {
     marker2.setLatLng(e.latlng);
