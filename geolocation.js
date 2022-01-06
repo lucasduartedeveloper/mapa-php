@@ -27,7 +27,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var greenIcon = L.icon({
     iconUrl: '/img/monster.png',
-    shadowUrl: '/img/monster-shadow.jpeg',
+    shadowUrl: '/img/monster-shadow.png',
 
     iconSize:     [35, 50], // size of the icon
     shadowSize:   [35, 50], // size of the shadow
