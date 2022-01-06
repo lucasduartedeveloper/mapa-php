@@ -64,3 +64,8 @@ p.contador {
    top:20px;
    right:20px;
 }
+
+.icone {
+    width: 10vw;
+    height: 10vw;
+}

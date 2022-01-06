@@ -33,7 +33,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=7">
+<link rel="stylesheet" href="/css/style.css?v=8">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -51,15 +51,15 @@ catch (PDOException $e) {
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
     <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="options" id="option1" autocomplete="off">
-        <img src="/img/monster.png"/>
+     <img class="icone" src="/img/monster.png"/>
     </label>
     <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="options" id="option2" autocomplete="off">
-      <img src="/img/monster.png"/>
+      <img class="icone" src="/img/monster.png"/>
      </label>
      <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="options" id="option3" autocomplete="off">
-     <img src="/img/monster.png"/>
+     <img class="icone" src="/img/monster.png"/>
     </label>
     </div>
     <p hidden class="local">ENDEREÇO 1</p>
