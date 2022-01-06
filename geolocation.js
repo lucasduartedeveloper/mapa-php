@@ -28,7 +28,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var greenIcon = L.icon({
     iconUrl: '/img/monster.png',
     shadowUrl: '/img/monster-shadow.png',
-
     iconSize:     [35, 50], // size of the icon
     shadowSize:   [50, 25], // size of the shadow
     iconAnchor:   [17.5, 50], // point of the icon which will correspond to marker's location
@@ -42,7 +41,6 @@ function onMapClick(e) {
     marker2.setLatLng(e.latlng));
     console.log(e.latlng);
 }
-
 map.on('click', onMapClick);
 
 // Consultar localização
