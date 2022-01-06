@@ -30,10 +30,10 @@ var greenIcon = L.icon({
     shadowUrl: '/img/monster-shadow.png',
 
     iconSize:     [35, 50], // size of the icon
-    shadowSize:   [35, 50], // size of the shadow
+    shadowSize:   [35, 25], // size of the shadow
     iconAnchor:   [17.5, 50], // point of the icon which will correspond to marker's location
-    shadowAnchor: [17.5, 50],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    shadowAnchor: [17.5, 55],  // the same for the shadow
+    popupAnchor:  [17.5, 50] // point from which the popup should open relative to the iconAnchor
 });
 
 L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map);
