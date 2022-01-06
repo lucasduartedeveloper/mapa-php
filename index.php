@@ -55,11 +55,11 @@ catch (PDOException $e) {
     </label>
     <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="options" id="option2" autocomplete="off">
-      <img class="icone" src="/img/monster.png"/>
+      <img class="icone" src="/img/monster2.png"/>
      </label>
      <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="options" id="option3" autocomplete="off">
-     <img class="icone" src="/img/monster.png"/>
+     <img class="icone" src="/img/monster3.png"/>
     </label>
     </div>
     <p hidden class="local">ENDEREÇO 1</p>
