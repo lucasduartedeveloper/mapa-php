@@ -33,7 +33,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=6">
+<link rel="stylesheet" href="/css/style.css?v=7">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -48,6 +48,18 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-outline-dark active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked>
+        <img src="/img/monster.png"/>
+    </label>
+    <label class="btn btn-outline-dark">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+     </label>
+     <label class="btn btn-outline-dark">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+    </label>
+    </div>
     <p hidden class="local">ENDEREÇO 1</p>
     <p hidden class="local">ENDEREÇO 2</p>
     <p hidden class="local">ENDEREÇO 3</p>
@@ -69,8 +81,8 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=29"></script>
-<script src="/geolocation.js?v=28"></script>
+<script src="/script.js?v=30"></script>
+<script src="/geolocation.js?v=29"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
