@@ -49,15 +49,17 @@ catch (PDOException $e) {
 </div>
 <div class="box2">
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-outline-dark active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked>
+    <label class="btn btn-outline-dark btn-sm">
+    <input type="radio" name="options" id="option1" autocomplete="off">
         <img src="/img/monster.png"/>
     </label>
-    <label class="btn btn-outline-dark">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+    <label class="btn btn-outline-dark btn-sm">
+    <input type="radio" name="options" id="option2" autocomplete="off">
+      <img src="/img/monster.png"/>
      </label>
-     <label class="btn btn-outline-dark">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+     <label class="btn btn-outline-dark btn-sm">
+    <input type="radio" name="options" id="option3" autocomplete="off">
+     <img src="/img/monster.png"/>
     </label>
     </div>
     <p hidden class="local">ENDEREÇO 1</p>
