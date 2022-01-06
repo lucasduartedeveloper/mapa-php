@@ -61,6 +61,10 @@ catch (PDOException $e) {
     <input type="radio" name="options" id="option3" autocomplete="off">
      <img class="icone" src="/img/monster3.png"/>
     </label>
+     <label class="btn btn-outline-dark btn-sm">
+    <input type="radio" name="options" id="option3" autocomplete="off">
+     <img class="icone" src="/img/monster4.png"/>
+    </label>
     </div>
     <p hidden class="local">ENDEREÇO 1</p>
     <p hidden class="local">ENDEREÇO 2</p>
