@@ -31,8 +31,8 @@ var greenIcon = L.icon({
 
     iconSize:     [35, 50], // size of the icon
     shadowSize:   [35, 50], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
+    iconAnchor:   [17.5, 0], // point of the icon which will correspond to marker's location
+    shadowAnchor: [17.5, 0],  // the same for the shadow
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
