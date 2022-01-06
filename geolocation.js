@@ -38,7 +38,7 @@ var greenIcon = L.icon({
 var marker2 = L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map);
 
 function onMapClick(e) {
-    marker2.setLatLng(e.latlng));
+    marker2.setLatLng(e.latlng);
     console.log(e.latlng);
 }
 map.on('click', onMapClick);

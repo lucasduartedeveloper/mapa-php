@@ -70,7 +70,7 @@ catch (PDOException $e) {
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script src="/script.js?v=29"></script>
-<script src="/geolocation.js?v=21"></script>
+<script src="/geolocation.js?v=22"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
