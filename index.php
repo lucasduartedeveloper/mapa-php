@@ -48,8 +48,6 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p hidden class="local">RODOVIARIA &nbsp;
-    <i hidden class="bi bi-arrow-down"></i></p>
     <p hidden class="local">ENDEREÇO 1</p>
     <p hidden class="local">ENDEREÇO 2</p>
     <p hidden class="local">ENDEREÇO 3</p>
@@ -71,8 +69,8 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=26"></script>
-<script src="/geolocation.js?v=13"></script>
+<script src="/script.js?v=27"></script>
+<script src="/geolocation.js?v=14"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

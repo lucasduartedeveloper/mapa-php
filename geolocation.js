@@ -25,6 +25,18 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
+var greenIcon = L.icon({
+    iconUrl: '/img/monster.png',
+    shadowUrl: '/img/monster-shadow.png''
+    iconSize:     [38, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var monsterMarker = L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map);
+
 // Consultar localização
 function getLocation()
   {
