@@ -53,7 +53,7 @@ catch (PDOException $e) {
     <input type="radio" name="monster" id="monster1" autocomplete="off">
      <img class="icone" src="/img/monster1.png"/>
     </label>
-    <label class="btn btn-outline-dark btn-sm">
+    <label class="btn btn-outline-dark btn-sm checked">
     <input type="radio" name="monster" id="monster2" autocomplete="off">
       <img class="icone" src="/img/monster2.png"/>
      </label>
