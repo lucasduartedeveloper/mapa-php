@@ -6,14 +6,16 @@ try {
 
     $latitude = htmlspecialchars($_GET["lat"]);
     $longitude = htmlspecialchars($_GET["long"]);
-    $sql = "INSERT INTO localizacao_teste(latitude,longitude) VALUES ('".$latitude."','".$longitude."');";
+    $id = htmlspecialchars($_GET["id"]);
+
+    $sql = "UPDATE localizacao_teste SET latitude='"+$latitude+"', longitude='"+$longitude."' WHERE id="+$id+");";
      //echo $sql."<br>";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
   }
 
-  $sql = "SELECT latitude,longitude,data_hora FROM localizacao_teste ORDER BY id DESC LIMIT 1;";
+  $sql = "SELECT * FROM localizacao_teste ORDER BY id;";
   //echo $sql."<br>";
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
