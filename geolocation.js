@@ -73,7 +73,7 @@ var monster3 = L.marker([-23.3739541550077, -51.15929067134858], {icon: icon3}).
 
 var monster4 = L.marker([-23.373048101423944, -51.15858256816865], {icon: icon4}).addTo(map).bindPopup("GRRR");
 
-var monster = monster2;
+var monster = monster1;
 
 function onMapClick(e) {
     monster.setLatLng(e.latlng);
