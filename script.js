@@ -97,9 +97,13 @@ $(document).on('change', ':radio[name="monster"]', function() {
 });
 
 function reload() {
-    $.getJSON( "/ajax/localizacao_teste.php", function(data) {
-       console.log(data);
-       var  label = "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster1\" autocomplete=\"off\"><img class=\"icone\" src=\"/img/monster1.png\"/></label>";
+      $.getJSON( "/ajax/localizacao_teste.php", function(data) {
+      console.log(data);
+      var label = "";
+      for(var k in data) {
+           console.log(k);
+           label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster1\" autocomplete=\"off\"><img class=\"icone\" src=\"/img/monster1.png\"/></label>";
+       }
        $('#teste').html(label);
     });
 }
