@@ -49,23 +49,9 @@ catch (PDOException $e) {
 </div>
 <div class="box2">
     <p class="local">DESMORTAL KOMBAT</p>
-    <div id="teste" class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="monster" id="monster1" autocomplete="off">
-     <img class="icone" src="/img/monster1.png"/>
-    </label>
-    <label class="btn btn-outline-dark btn-sm active">
-    <input type="radio" name="monster" id="monster2" autocomplete="off">
-      <img class="icone" src="/img/monster2.png"/>
-     </label>
-     <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="monster" id="monster3" autocomplete="off">
-     <img class="icone" src="/img/monster3.png"/>
-    </label>
-     <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="monster" id="monster4" autocomplete="off">
-     <img class="icone" src="/img/monster4.png"/>
-    </label>
+    <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
+    </div>
+    <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
@@ -85,8 +71,8 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=63"></script>
-<script src="/geolocation.js?v=43"></script> 
+<script src="/script.js?v=65"></script>
+<script src="/geolocation.js?v=44"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

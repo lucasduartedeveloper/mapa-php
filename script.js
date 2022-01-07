@@ -88,7 +88,8 @@ function reload() {
       $.getJSON( "/ajax/localizacao_teste.php", function(data) {
       console.log(data);
       console.log("reload");
-      var label = "";
+      var label1 = "";
+      var label2 = "";
       for(var k in data) {
            var icon = L.icon({
                iconUrl: data[k].png,
@@ -101,7 +102,12 @@ function reload() {
       });
            data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
 
-           label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           If (k <= 3) {
+               label1 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           }
+           else {
+               label2 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           }
        }
 
        for(var k in monsters) {
@@ -109,6 +115,7 @@ function reload() {
        }
 
        monsters = data;
-       $('#teste').html(label);
+       $('#teste1').html(label1);
+       $('#teste2').html(label2);
     });
 }
