@@ -80,30 +80,29 @@ $(document).on('change', ':radio[name="monster"]', function() {
     $('label').removeClass('active');
     $(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
-    console.log(expr);
-    switch (expr) {
-       case 'monster1':
-       monster = monster1;
-       break;
-       case 'monster2':
-       monster = monster2;
-       break;
-       case 'monster3':
-       monster = monster3;
-       break;
-       default:
-       monster = monster4;
-    }
+    // trocar o marcador
 });
 
 function reload() {
       $.getJSON( "/ajax/localizacao_teste.php", function(data) {
       console.log(data);
+      console.log("reload");
       var label = "";
       for(var k in data) {
-           console.log(k);
+           var icon = L.icon({
+               iconUrl: data[k].png,
+               shadowUrl: '/img/monster-shadow.png',
+               iconSize:     [35, 40], // size of the icon
+               shadowSize:   [50, 25], // size of the shadow
+               iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+               shadowAnchor: [25, 10],  // the same for the shadow
+               popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+      });
+           data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
+
            label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+data[k].id+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
        }
+       monsters = data;
        $('#teste').html(label);
     });
 }
