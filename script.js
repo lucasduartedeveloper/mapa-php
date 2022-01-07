@@ -68,7 +68,7 @@ $( "#target" ).click(function() {
        console.log(JSON.stringify(data));
        //document.body.requestFullscreen();
     });
-  })
+  });
 });
 
 $( "#menu" ).click(function() {
@@ -99,10 +99,10 @@ function reload() {
                iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
                shadowAnchor: [25, 10],  // the same for the shadow
                popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-      });
-           data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
+          });
+          data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
 
-           If (k <= 3) {
+           if (k <= 3) {
                label1 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
            else {
