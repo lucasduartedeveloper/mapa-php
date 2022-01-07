@@ -68,3 +68,7 @@ $( "#menu" ).click(function() {
     $(".box2").toggle();
     console.log("toggle");
 });
+
+$(':radio[name="monster"]').change(function() {
+    console.log($(this).filter(':checked').val());
+}

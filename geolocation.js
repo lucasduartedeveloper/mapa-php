@@ -25,8 +25,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
-var greenIcon = L.icon({
-    iconUrl: '/img/monster.png',
+var icon1 = L.icon({
+    iconUrl: '/img/monster1.png',
     shadowUrl: '/img/monster-shadow.png',
     iconSize:     [35, 40], // size of the icon
     shadowSize:   [50, 25], // size of the shadow
@@ -35,10 +35,48 @@ var greenIcon = L.icon({
     popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([-23.3466404, -51.1476256], {icon: greenIcon}).addTo(map).bindPopup("I am a green monster.");
+var icon2 = L.icon({
+    iconUrl: '/img/monster2.png',
+    shadowUrl: '/img/monster-shadow.png',
+    iconSize:     [35, 40], // size of the icon
+    shadowSize:   [50, 25], // size of the shadow
+    iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+    shadowAnchor: [25, 10],  // the same for the shadow
+    popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var icon3 = L.icon({
+    iconUrl: '/img/monster3.png',
+    shadowUrl: '/img/monster-shadow.png',
+    iconSize:     [35, 40], // size of the icon
+    shadowSize:   [50, 25], // size of the shadow
+    iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+    shadowAnchor: [25, 10],  // the same for the shadow
+    popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var icon4 = L.icon({
+    iconUrl: '/img/monster4.png',
+    shadowUrl: '/img/monster-shadow.png',
+    iconSize:     [35, 40], // size of the icon
+    shadowSize:   [50, 25], // size of the shadow
+    iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+    shadowAnchor: [25, 10],  // the same for the shadow
+    popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var monster1 = L.marker([-23.3466404, -51.1476256], {icon: icon1}).addTo(map).bindPopup("I am a green monster.");
+
+var monster2 = L.marker([-23.3466404, -51.1476256], {icon: icon2}).addTo(map).bindPopup("I am a purple monster.");
+
+var monster3 = L.marker([-23.3466404, -51.1476256], {icon: icon3}).addTo(map).bindPopup("I am a red monster.");
+
+var monster4 = L.marker([-23.3466404, -51.1476256], {icon: icon4}).addTo(map).bindPopup("I am a purple monster.");
+
+var monster = monster2;
 
 function onMapClick(e) {
-    marker2.setLatLng(e.latlng);
+    monster.setLatLng(e.latlng);
     console.log(e.latlng);
 }
 map.on('click', onMapClick);

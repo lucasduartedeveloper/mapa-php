@@ -50,19 +50,19 @@ catch (PDOException $e) {
 <div class="box2">
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
     <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="options" id="option1" autocomplete="off">
+    <input type="radio" name="monster" id="option1" autocomplete="off">
      <img class="icone" src="/img/monster.png"/>
     </label>
     <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="options" id="option2" autocomplete="off">
+    <input type="radio" name="monster" id="option2" autocomplete="off">
       <img class="icone" src="/img/monster2.png"/>
      </label>
      <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="options" id="option3" autocomplete="off">
+    <input type="radio" name="monster" id="option3" autocomplete="off">
      <img class="icone" src="/img/monster3.png"/>
     </label>
      <label class="btn btn-outline-dark btn-sm">
-    <input type="radio" name="options" id="option3" autocomplete="off">
+    <input type="radio" name="monster" id="option4" autocomplete="off">
      <img class="icone" src="/img/monster4.png"/>
     </label>
     </div>
@@ -87,8 +87,8 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=30"></script>
-<script src="/geolocation.js?v=29"></script>
+<script src="/script.js?v=31"></script>
+<script src="/geolocation.js?v=30"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
