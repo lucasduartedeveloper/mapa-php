@@ -65,13 +65,13 @@ var icon4 = L.icon({
     popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var monster1 = L.marker([-23.372831435519085, -51.15950524806976], {icon: icon1}).addTo(map).bindPopup("I am a green monster.");
+var monster1 = L.marker([-23.372831435519085, -51.15950524806976], {icon: icon1}).addTo(map).bindPopup("GRRR");
 
-var monster2 = L.marker([-23.372964389639055, -51.15923166275025], {icon: icon2}).addTo(map).bindPopup("I am a purple monster.");
+var monster2 = L.marker([-23.372964389639055, -51.15923166275025], {icon: icon2}).addTo(map).bindPopup("GRRR");
 
-var monster3 = L.marker([-23.3739541550077, -51.15929067134858], {icon: icon3}).addTo(map).bindPopup("I am a red monster.");
+var monster3 = L.marker([-23.3739541550077, -51.15929067134858], {icon: icon3}).addTo(map).bindPopup("GRRR");
 
-var monster4 = L.marker([-23.373048101423944, -51.15858256816865], {icon: icon4}).addTo(map).bindPopup("I am a purple monster.");
+var monster4 = L.marker([-23.373048101423944, -51.15858256816865], {icon: icon4}).addTo(map).bindPopup("GRRR");
 
 var monster = monster2;
 
