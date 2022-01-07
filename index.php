@@ -49,7 +49,7 @@ catch (PDOException $e) {
 </div>
 <div class="box2">
     <p class="local">DESMORTAL KOMBAT</p>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <div id="teste" class="btn-group btn-group-toggle" data-toggle="buttons">
     <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="monster" id="monster1" autocomplete="off">
      <img class="icone" src="/img/monster1.png"/>
@@ -85,7 +85,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=46"></script>
+<script src="/script.js?v=47"></script>
 <script src="/geolocation.js?v=32"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
