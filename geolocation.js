@@ -29,7 +29,6 @@ var monsters = [];
 var monster = {};
 
 function onMapClick(e) {
-    //monster.marker.setLatLng(e.latlng);
     monster.marker.setLatLng(e.latlng);
     console.log(e.latlng);
     

@@ -80,7 +80,8 @@ $(document).on('change', ':radio[name="monster"]', function() {
     $('label').removeClass('active');
     $(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
-    // trocar o marcador
+    var k = parseInt(expr.replace('monster', ''));
+    monster = monsters[k];
 });
 
 function reload() {
@@ -100,7 +101,7 @@ function reload() {
       });
            data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
 
-           label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+data[k].id+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
        }
        monsters = data;
        $('#teste').html(label);
