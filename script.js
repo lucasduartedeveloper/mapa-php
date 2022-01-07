@@ -70,7 +70,8 @@ $( "#menu" ).click(function() {
 });
 
 $(':radio[name="monster"]').change(function() {
-    console.log($(this).filter(':checked').attr('id'));
+    var expr = $(this).filter(':checked').attr('id');
+    console.log(expr);
     switch (expr) {
        case 'monster1':
        monster = monster1;
