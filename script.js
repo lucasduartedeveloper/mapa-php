@@ -78,7 +78,7 @@ $(':radio[name="monster"]').change(function() {
        case 'monster2':
        monster = monster2;
        break;
-       case 'monster3';
+       case 'monster3':
        monster = monster3;
        break;
        default:
