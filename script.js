@@ -41,7 +41,7 @@ var x = setInterval(function() {
 }, 1000);
 
 function play() {
-  var audio = new Audio('/áudio/thebusiness.mp3');
+  var audio = new Audio('/audio/thebusiness.mp3');
   audio.play();
 }
 
