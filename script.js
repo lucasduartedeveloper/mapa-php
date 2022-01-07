@@ -102,7 +102,7 @@ function reload() {
       var label = "";
       for(var k in data) {
            console.log(k);
-           label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster1\" autocomplete=\"off\"><img class=\"icone\" src=\"/img/monster1.png\"/></label>";
+           label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k.id+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+k.png+"\"/></label>";
        }
        $('#teste').html(label);
     });
