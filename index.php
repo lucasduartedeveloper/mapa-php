@@ -74,7 +74,7 @@ catch (PDOException $e) {
     <p hidden id="segundos"></p>
     <button id="target" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
-    Mudar
+    Mudaram
     </button>
 </div>
 
@@ -85,8 +85,8 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=58"></script>
-<script src="/geolocation.js?v=37"></script>
+<script src="/script.js?v=60"></script>
+<script src="/geolocation.js?v=39"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
