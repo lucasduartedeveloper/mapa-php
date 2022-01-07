@@ -54,7 +54,7 @@ catch (PDOException $e) {
     <input type="radio" name="monster" id="monster1" autocomplete="off">
      <img class="icone" src="/img/monster1.png"/>
     </label>
-    <label class="btn btn-outline-dark btn-sm checked">
+    <label class="btn btn-outline-dark btn-sm active">
     <input type="radio" name="monster" id="monster2" autocomplete="off">
       <img class="icone" src="/img/monster2.png"/>
      </label>
@@ -85,7 +85,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=41"></script>
+<script src="/script.js?v=42"></script>
 <script src="/geolocation.js?v=32"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
