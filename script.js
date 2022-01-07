@@ -71,4 +71,4 @@ $( "#menu" ).click(function() {
 
 $(':radio[name="monster"]').change(function() {
     console.log($(this).filter(':checked').val());
-}
+});
