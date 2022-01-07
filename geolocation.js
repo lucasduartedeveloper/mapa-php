@@ -35,6 +35,7 @@ function onMapClick(e) {
     $.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id, function(data) {
         console.log(data);
     });
+    reload();
 }
 
 map.on('click', onMapClick);
