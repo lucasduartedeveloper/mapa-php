@@ -102,9 +102,12 @@ function reload() {
            data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
 
            label += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+       }
 
+       for(var k in monsters) {
            map.removeControl(monsters[k].marker);
        }
+
        monsters = data;
        $('#teste').html(label);
     });
