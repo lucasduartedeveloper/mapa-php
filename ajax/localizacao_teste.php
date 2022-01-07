@@ -20,7 +20,7 @@ try {
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
   $rowCount = $stmt->rowCount();
-  $details = $stmt->fetch(); 
+  $details = $stmt->fetchAll(); 
   
   echo json_encode($details);
 }
