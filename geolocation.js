@@ -28,6 +28,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var monsters = [];
 var monster = {};
 
+function play() {
+  var audio = new Audio('/audio/alarm.mp3');
+  audio.play();
+}
+
 function onMapClick(e) {
     monster.marker.setLatLng(e.latlng);
     console.log(e.latlng);
@@ -36,6 +41,7 @@ function onMapClick(e) {
         console.log(data);
     });
     reload();
+    play();
 }
 
 map.on('click', onMapClick);
