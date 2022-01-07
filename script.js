@@ -71,4 +71,17 @@ $( "#menu" ).click(function() {
 
 $(':radio[name="monster"]').change(function() {
     console.log($(this).filter(':checked').attr('id'));
+    switch (expr) {
+       case 'monster1':
+       monster = monster1;
+       break;
+       case 'monster2':
+       monster = monster2;
+       break;
+       case 'monster3';
+       monster = monster3;
+       break;
+       default:
+       monster = monster4;
+    }
 });
