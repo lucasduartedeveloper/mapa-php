@@ -11,7 +11,7 @@ try {
     $sql = "UPDATE localizacao_teste SET latitude='".$latitude."', longitude='".$longitude."' WHERE id=".$id.";";
     echo $sql."<br>";
     $stmt = $pdo->prepare($sql);
-    //$stmt->execute();
+    $stmt->execute();
 
   }
   else {

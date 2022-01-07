@@ -31,8 +31,6 @@ var monster = {};
 function onMapClick(e) {
     monster.marker.setLatLng(e.latlng);
     console.log(e.latlng);
-    
-    window.location.href = "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id;
 
     $.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.long+"&id="+monster.id, function(data) {
         console.log(data);
