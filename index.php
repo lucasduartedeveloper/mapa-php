@@ -74,7 +74,7 @@ catch (PDOException $e) {
     <p hidden id="segundos"></p>
     <button id="target" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
-    Mudaram
+    Mudar
     </button>
 </div>
 
