@@ -48,6 +48,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
+    <p class="local">DESMORTAL KOMBAT</p>
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
     <label class="btn btn-outline-dark btn-sm">
     <input type="radio" name="monster" id="monster1" autocomplete="off">
@@ -66,7 +67,6 @@ catch (PDOException $e) {
      <img class="icone" src="/img/monster4.png"/>
     </label>
     </div>
-    <p class="local">DESMORTAL KOMBAT</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
     <p id="horas"></p>
