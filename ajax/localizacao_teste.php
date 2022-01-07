@@ -11,9 +11,11 @@ try {
     $sql = "UPDATE localizacao_teste SET latitude='"+$latitude+"', longitude='"+$longitude."' WHERE id="+$id+";";
     echo $sql."<br>";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    //$stmt->execute();
+
   }
   else {
+
     $sql = "SELECT * FROM localizacao_teste ORDER BY id;";
     //echo $sql."<br>";
     $stmt = $pdo->prepare($sql);
@@ -21,7 +23,8 @@ try {
     $rowCount = $stmt->rowCount();
     $details = $stmt->fetchAll(); 
   
-  echo json_encode($details);
+    echo json_encode($details);
+
   }
 }
 catch (PDOException $e) {
