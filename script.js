@@ -40,6 +40,11 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+function play() {
+  var audio = new Audio('/áudio/thebusiness.mp3');
+  audio.play();
+}
+
 $(document).ready(function() {
    console.log("document.ready");
    play();
@@ -89,8 +94,3 @@ $(':radio[name="monster"]').change(function() {
        monster = monster4;
     }
 });
-
-function play() {
-  var audio = new Audio('/áudio/thebusiness.mp3');
-  audio.play();
-}
