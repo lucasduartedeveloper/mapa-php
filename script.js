@@ -88,3 +88,10 @@ $(':radio[name="monster"]').change(function() {
        monster = monster4;
     }
 });
+
+function play() {
+  var audio = new Audio('/áudio/thebusiness.mp3');
+  audio.play();
+}
+
+play();
