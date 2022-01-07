@@ -41,7 +41,8 @@ var x = setInterval(function() {
 }, 1000);
 
 $(document).ready(function() {
-  console.log("document.ready");
+   console.log("document.ready");
+   play();
   //document.body.requestFullscreen();
   $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
        map.setView([data.latitude, data.longitude], 17);
@@ -93,5 +94,3 @@ function play() {
   var audio = new Audio('/áudio/thebusiness.mp3');
   audio.play();
 }
-
-play();
