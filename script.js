@@ -47,7 +47,8 @@ function play() {
 
 $(document).ready(function() {
    console.log("document.ready");
-   play();
+   reload();
+   //play();
   //document.body.requestFullscreen();
   $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
        map.setView([data.latitude, data.longitude], 17);
@@ -79,7 +80,7 @@ $(':radio[name="monster"]').change(function() {
     $('label').removeClass('active');
     $(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
-    console.log(expr);
+    //console.log(expr);
     switch (expr) {
        case 'monster1':
        monster = monster1;
@@ -94,3 +95,9 @@ $(':radio[name="monster"]').change(function() {
        monster = monster4;
     }
 });
+
+function reload() {
+    $.getJSON( "/ajax/localizacao_teste.php", function(data) {
+       console.log(data);
+    });
+}
