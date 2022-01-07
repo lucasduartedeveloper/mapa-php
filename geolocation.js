@@ -78,7 +78,11 @@ var monster = monster2;
 function onMapClick(e) {
     monster.setLatLng(e.latlng);
     console.log(e.latlng);
+
+    $.getJSON( "/ajax/localizacao_teste.php", function(data) {
+    }
 }
+
 map.on('click', onMapClick);
 
 // Consultar localização

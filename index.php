@@ -66,9 +66,7 @@ catch (PDOException $e) {
      <img class="icone" src="/img/monster4.png"/>
     </label>
     </div>
-    <p hidden class="local">ENDEREÇO 1</p>
-    <p hidden class="local">ENDEREÇO 2</p>
-    <p hidden class="local">ENDEREÇO 3</p>
+    <p hidden class="local">MORTAL KOMBAT</p>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
     <p id="horas"></p>
