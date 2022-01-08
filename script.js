@@ -92,6 +92,7 @@ function reload() {
       var label2 = "";
       var label3 = "";
       var label4 = "";
+      var label5 = "";
       for(var k in data) {
            var icon = L.icon({
                iconUrl: data[k].png,
@@ -113,8 +114,11 @@ function reload() {
            else if (k <= 11) {
                label3 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
-           else {
+           else if(k <= 15) {
                label4 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           }
+          else {
+               label5 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
        }
 
@@ -127,5 +131,6 @@ function reload() {
        $('#teste2').html(label2);
        $('#teste3').html(label3);
        $('#teste4').html(label4);
+       $('#teste5').html(label5);
     });
 }
