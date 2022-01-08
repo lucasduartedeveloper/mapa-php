@@ -53,6 +53,8 @@ catch (PDOException $e) {
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
+    <div id="teste3" class="btn-group btn-group-toggle" data-toggle="buttons">
+    </div>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
     <p id="horas"></p>
@@ -71,7 +73,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=68"></script>
+<script src="/script.js?v=69"></script>
 <script src="/geolocation.js?v=45"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
