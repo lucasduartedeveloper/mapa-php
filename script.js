@@ -91,6 +91,7 @@ function reload() {
       var label1 = "";
       var label2 = "";
       var label3 = "";
+      var label4 = "";
       for(var k in data) {
            var icon = L.icon({
                iconUrl: data[k].png,
@@ -106,11 +107,14 @@ function reload() {
            if (k <= 3) {
                label1 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
-           else if (k <= 6) {
+           else if (k <= 7) {
                label2 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
-           else {
+           else if (k <= 11) {
                label3 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           }
+           else {
+               label4 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
        }
 
@@ -122,5 +126,6 @@ function reload() {
        $('#teste1').html(label1);
        $('#teste2').html(label2);
        $('#teste3').html(label3);
+       $('#teste4').html(label4);
     });
 }

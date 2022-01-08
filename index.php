@@ -55,6 +55,8 @@ catch (PDOException $e) {
     </div>
     <div id="teste3" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
+    <div id="teste4" class="btn-group btn-group-toggle" data-toggle="buttons">
+    </div>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
     <p id="horas"></p>
