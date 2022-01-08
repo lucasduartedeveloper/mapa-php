@@ -1,7 +1,7 @@
 console.log("script.js");
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 7, 2022 16:00:00").getTime();
+var countDownDate = new Date("Jan 8, 2022 18:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -37,6 +37,10 @@ var x = setInterval(function() {
     document.getElementById("horas").innerHTML = "EXPIRED";
     document.getElementById("minutos").innerHTML = "EXPIRED";
     document.getElementById("segundos").innerHTML = "EXPIRED";
+    
+    for(var k in monsters) {
+         map.removeControl(monsters[k].marker);
+     }
   }
 }, 1000);
 
@@ -66,7 +70,7 @@ $( "#target" ).click(function() {
        rectangle.setBounds(circle.getBounds());
        rectangle.redraw();
        console.log(JSON.stringify(data));
-       //document.body.requestFullscreen();
+      //document.body.requestFullscreen();
     });
   });
 });
