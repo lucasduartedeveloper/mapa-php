@@ -39,7 +39,7 @@ var x = setInterval(function() {
     document.getElementById("segundos").innerHTML = "EXPIRED";
     
     for(var k in monsters) {
-         map.removeControl(monsters[k].marker);
+         //map.removeControl(monsters[k].marker);
      }
   }
 }, 1000);
