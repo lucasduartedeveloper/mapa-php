@@ -90,6 +90,7 @@ function reload() {
       console.log("reload");
       var label1 = "";
       var label2 = "";
+      var label3 = "";
       for(var k in data) {
            var icon = L.icon({
                iconUrl: data[k].png,
@@ -105,8 +106,11 @@ function reload() {
            if (k <= 3) {
                label1 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
-           else {
+           else if (k <= 6) {
                label2 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+           }
+           else {
+               label3 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
        }
 
@@ -117,5 +121,6 @@ function reload() {
        monsters = data;
        $('#teste1').html(label1);
        $('#teste2').html(label2);
+       $('#teste3').html(label3);
     });
 }
