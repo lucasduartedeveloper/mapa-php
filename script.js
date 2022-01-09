@@ -78,6 +78,7 @@ $( "#target" ).click(function() {
 $( "#menu" ).click(function() {
     $(".box2").toggle();
     console.log("toggle");
+    reload();
 });
 
 $(document).on('change', ':radio[name="monster"]', function() {
