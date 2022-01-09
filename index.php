@@ -48,7 +48,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p class="local">NÃO É IMPORTANTE</p>
+    <p class="local">JUMPER 3</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -57,11 +57,12 @@ catch (PDOException $e) {
     </div>
     <div id="teste4" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
-    <div id="teste5" class="btn-group btn-group-toggle" data-toggle="buttons">
-    <button class="btn btn-outline-dark btn-sm"><input id="add"><img class="icone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OsONCu45c9Jdoxn6TJ1knGcksDKqm6Rjkg&usqp=CAU"/></button>
+    <div id="teste5" class="btn-group btn-group-toggle" data-toggle="buttons"> 
+    <input id="camera" hidden type="file" accept="*/image" capture="camera">
+    <button class="btn btn-outline-dark btn-sm"><input id="add" type=""><img class="icone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OsONCu45c9Jdoxn6TJ1knGcksDKqm6Rjkg&usqp=CAU"/></button>
     </div>
     <p class="contador"><?=$contar?> visitas</p>
-    <p hidden id="dias"></p>
+    <p hidden id="dias"></p>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OsONCu45c9Jdoxn6TJ1knGcksDKqm6Rjkg&usqp=CAU
     <p id="horas"></p>
     <p hidden id="minutos"></p>
     <p hidden id="segundos"></p>
@@ -78,7 +79,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=75"></script>
+<script src="/script.js?v=76"></script>
 <script src="/geolocation.js?v=48"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
