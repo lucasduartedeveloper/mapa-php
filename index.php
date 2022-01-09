@@ -48,7 +48,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p class="local">THE SIMS</p>
+    <p class="local">NÃO É IMPORTANTE</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -58,6 +58,7 @@ catch (PDOException $e) {
     <div id="teste4" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste5" class="btn-group btn-group-toggle" data-toggle="buttons">
+    <button class="btn btn-outline-dark btn-sm"><input id="add"><img class="icone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OsONCu45c9Jdoxn6TJ1knGcksDKqm6Rjkg&usqp=CAU"/></button>
     </div>
     <p class="contador"><?=$contar?> visitas</p>
     <p hidden id="dias"></p>
