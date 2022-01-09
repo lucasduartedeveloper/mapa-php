@@ -48,7 +48,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p class="local">JUMPER 3</p>
+    <p class="local">HELLO WORLD</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -86,4 +86,4 @@ catch (PDOException $e) {
 <script>eruda.init();</script>
 
 </body>
-</html>
+</html> 
