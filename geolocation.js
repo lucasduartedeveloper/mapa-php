@@ -41,7 +41,7 @@ function onMapClick(e) {
         console.log(data);
     });
     reload();
-    play();
+    //play();
 }
 
 map.on('click', onMapClick);
