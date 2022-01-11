@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HTML Device Capture</title>
+	</head>
+	<body>
+		<div>
+			<p>Capture a new image: <input type="file" accept="image/*" onchange="previewFile()" id="capture" capture="camera"><br>
+			<img id="curImage" height="200" size="" src=""><br>
+
+			<button onclick="storeImage()">Store Captured Image Offline</button>
+			<button onclick="loadImage()">Load Stored Image</button>
+		</div>
+		<script type="text/javascript">
+			function storeImage(){
+				var userImage = document.getElementById('capture');
+				
+				if(userImage){
+    				localStorage.setItem("imgData", document.getElementById('curImage').src);
+				}
+			}
+
+			function loadImage(){
+				var imageData = localStorage.getItem("imgData");
+				document.getElementById('curImage').src = imageData;
+			}
+
+			function previewFile(){
+  				var preview = document.querySelector('img');
+  				var file = document.querySelector('input[type=file]').files[0];
+  				var reader  = new FileReader();
+	
+  				reader.onloadend = function(){
+  				  	preview.src = reader.result;
+  				}
+				
+  				if(file){
+  				  	reader.readAsDataURL(file);
+  				}
+  				else {
+  				  	preview.src = "";
+  				}
+			}
+		</script>
+	</body>
+</html>
