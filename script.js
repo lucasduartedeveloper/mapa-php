@@ -141,9 +141,9 @@ function reload() {
 
 $('#add').click(function() {
    $('#camera').click();
-   return;
+   
   // get a reference to the file input
-  const fileInput = document.querySelector("input");
+  const fileInput = document.querySelector("camera");
 
   // get a reference to the output canvas
   const canvas = document.querySelector("canvas");
