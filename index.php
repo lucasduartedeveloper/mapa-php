@@ -64,14 +64,12 @@ catch (PDOException $e) {
     </button>
     </div>
     <p class="contador"><?=$contar?> visitas</p>
-    <p hidden id="dias"></p> 
     <p id="horas"></p>
-    <p hidden id="minutos"></p>
-    <p hidden id="segundos"></p>
     <button hidden id="target" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
     Mudar
     </button>
+    <img id="output"></img>
 </div>
 
 <i id="menu" class="bi bi-arrow-down-circle my-float"></i>
@@ -81,7 +79,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=86"></script>
+<script src="/script.js?v=87"></script>
 <script src="/geolocation.js?v=48"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>

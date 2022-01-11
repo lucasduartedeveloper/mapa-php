@@ -144,29 +144,10 @@ $('#add').click(function() {
 });
 
 function saveImage() {
-  //var preview = document.querySelector('img');
-  var file = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
-
-  reader.onloadend = function(){
-      //preview.src = reader.result;
-      //console.log(reader.result);
-      console.log(resizeImage());
-  }
-
-  if(file){
-      console.log(reader.readAsDataURL(file));
-  }
-  else {
-      preview.src = "";
-  }
-}
-
-function resizeImage() {
     if (window.File && window.FileReader && window.FileList && window.Blob) {
 
-        var filesToUploads = document.getElementById('camera').files;
-        var file = filesToUploads[0];
+        var filesToUpload = document.getElementById('camera').files;
+        var file = filesToUpload[0];
         if (file) {
 
             var reader = new FileReader();
@@ -202,12 +183,11 @@ function resizeImage() {
                 ctx.drawImage(img, 0, 0, width, height);
 
                 dataurl = canvas.toDataURL(file.type);
-                return dataurl;
-                //document.getElementById('output').src = dataurl;
+                console.log(dataurl);
+                document.getElementById('output').src = dataurl;
             }
-            return reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
         }
-
     } else {
         alert('The File APIs are not fully supported in this browser.');
     }
