@@ -162,7 +162,7 @@ function saveImage() {
 
                 document
                 .getElementById('output')
-                .parent
+                .parentNode
                 .insertBefore(canvas,
                 document.getElementById('output'));
 
