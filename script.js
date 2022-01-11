@@ -159,12 +159,6 @@ function saveImage() {
                     var ctx = canvas.getContext("2d");
                     ctx.drawImage(img, 0, 0, width, height);
 
-                    document
-                   .getElementById('output')
-                   .parentNode
-                   .insertBefore(canvas,
-                   document.getElementById('output'));
-
                    dataurl = canvas.toDataURL(file.type);
                    console.log(dataurl);
                    document.getElementById('output').src = dataurl;
