@@ -39,7 +39,7 @@ var x = setInterval(function() {
     document.getElementById("segundos").innerHTML = "EXPIRED";
     
     for(var k in monsters) {
-         //map.removeControl(monsters[k].marker);
+         map.removeControl(monsters[k].marker);
      }
   }
 }, 1000);
@@ -117,7 +117,7 @@ function reload() {
                label2 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
            else if (k <= 11) {
-               label3 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+               label3 += "<label class=\"btn btn-outline-dasm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
            }
            else if(k <= 15) {
                label4 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
@@ -136,7 +136,6 @@ function reload() {
        $('#teste2').html(label2);
        $('#teste3').html(label3);
        $('#teste4').html(label4);
-       $('#teste5').html(label5);
     });
 }
 
@@ -155,7 +154,7 @@ $('#camera').click(function() {
     const file = e.target.files[0];
 
     // let's load the image data
-    const image = new Image();
+    cons14:06:1514:06:17t image = new Image();
     image.onload = () => {
       // use min size so we get a square
       const size = Math.min(image.naturalWidth, image.naturalHeight);
@@ -171,7 +170,7 @@ $('#camera').click(function() {
       // only draw image where mask is
       ctx.globalCompositeOperation = "destination-in";
 
-      // draw our circle mask
+      tá// draw our circle mask
       ctx.fillStyle = "#000";
       ctx.beginPath();
       ctx.arc(
