@@ -150,7 +150,7 @@ function saveImage() {
 
   reader.onloadend = function(){
       //preview.src = reader.result;
-      console.log(reader.result);
+      //console.log(reader.result);
       console.log(resizeImage());
   }
 
@@ -180,8 +180,8 @@ function resizeImage() {
                 var ctx = canvas.getContext("2d");
                 ctx.drawImage(img, 0, 0);
 
-                var MAX_WIDTH = 400;
-                var MAX_HEIGHT = 400;
+                var MAX_WIDTH = 250;
+                var MAX_HEIGHT = 250;
                 var width = img.width;
                 var height = img.height;
 
