@@ -130,7 +130,7 @@ function saveImage() {
 
             var reader = new FileReader();
             // Set the image once loaded into file reader
-            reader.onload = function(e) {
+            reader.onloadend = function(e) {
 
                 var img = document.createElement("img");
                 img.src = e.target.result;
