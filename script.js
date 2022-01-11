@@ -154,7 +154,7 @@ $('#add').click(function() {
     const file = e.target.files[0];
 
     // let's load the image data
-    cons14:06:1514:06:17t image = new Image();
+    const image = new Image();
     image.onload = () => {
       // use min size so we get a square
       const size = Math.min(image.naturalWidth, image.naturalHeight);
