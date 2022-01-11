@@ -139,7 +139,7 @@ function reload() {
     });
 }
 
-$('#camera').click(function() {
+$('#add).click(function() {
    $('#camera').click();
    return;
   // get a reference to the file input

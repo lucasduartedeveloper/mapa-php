@@ -60,7 +60,7 @@ catch (PDOException $e) {
     <div id="teste5" class="btn-group btn-group-toggle" data-toggle="buttons"> 
     <input id="camera" hidden type="file" accept="*/image" capture="camera">
     <button class="btn btn-outline-dark btn-sm">
-        <img class="icone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OsONCu45c9Jdoxn6TJ1knGcksDKqm6Rjkg&usqp=CAU"/>
+        <i class="bi bi-camera-fill"></i>
     </button>
     </div>
     <p class="contador"><?=$contar?> visitas</p>
@@ -77,11 +77,11 @@ catch (PDOException $e) {
 <i id="menu" class="bi bi-arrow-down-circle my-float"></i>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>q
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=78"></script>
+<script src="/script.js?v=79"></script>
 <script src="/geolocation.js?v=48"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
