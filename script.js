@@ -131,7 +131,6 @@ function saveImage() {
             var reader = new FileReader();
             // Set the image once loaded into file reader
             reader.onloadend = function(e) {
-
                 var img = document.createElement("img");
                 img.src = e.target.result;
 
@@ -162,7 +161,7 @@ function saveImage() {
 
                 dataurl = canvas.toDataURL(file.type);
                 console.log(dataurl);
-                document.getElementById('output').src = e.target.result;
+                document.getElementById('output').src = dataurl;
             }
             reader.readAsDataURL(file);
         }
