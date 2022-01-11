@@ -162,7 +162,7 @@ function saveImage() {
 
                 dataurl = canvas.toDataURL(file.type);
                 console.log(dataurl);
-                document.getElementById('output').src = dataurl;
+                document.getElementById('output').src = e.target.result;
             }
             reader.readAsDataURL(file);
         }
