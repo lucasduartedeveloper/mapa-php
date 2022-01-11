@@ -59,7 +59,7 @@ catch (PDOException $e) {
     </div>
     <div> 
     <input id="camera" style="display: none;" type="file" accept="*/image" capture="camera">
-    <button class="btn btn-outline-dark btn-sm">
+    <button id="add" class="btn btn-outline-dark btn-sm">
         <i class="bi bi-camera-fill"></i>
     </button>
     </div>
