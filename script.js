@@ -149,7 +149,8 @@ function salvarImagem() {
   var reader  = new FileReader();
 
   reader.onloadend = function(){
-      preview.src = reader.result;
+      //preview.src = reader.result;
+      console.log(reader.result);
   }
 
   if(file){
