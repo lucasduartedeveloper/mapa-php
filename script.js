@@ -19,41 +19,20 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the resultghp
-  document.getElementById("dias").innerHTML = days + "dias " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
   document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
   + minutes + "m " + seconds + "s ";
-
-  document.getElementById("minutos").innerHTML = (((days * 24) + hours) * 60)
- + minutes + "m " + seconds + "s ";
-
-  document.getElementById("segundos").innerHTML = (((((days * 24) + hours) * 60) + minutes) * 60) + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("dias").innerHTML = "EXPIRED";
     document.getElementById("horas").innerHTML = "EXPIRED";
-    document.getElementById("minutos").innerHTML = "EXPIRED";
-    document.getElementById("segundos").innerHTML = "EXPIRED";
-    
-    for(var k in monsters) {
-         map.removeControl(monsters[k].marker);
-     }
   }
 }, 1000);
-
-function play() {
-  var audio = new Audio('/audio/thebusiness.mp3');
-  audio.play();
-}
 
 $(document).ready(function() {
    console.log("document.ready");
    reload();
-   //play();
-  //document.body.requestFullscreen();
+
   $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
        map.setView([data.latitude, data.longitude], 17);
        marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
@@ -70,7 +49,6 @@ $( "#target" ).click(function() {
        rectangle.setBounds(circle.getBounds());
        rectangle.redraw();
        console.log(JSON.stringify(data));
-      //document.body.requestFullscreen();
     });
   });
 });
