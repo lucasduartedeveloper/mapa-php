@@ -143,7 +143,7 @@ $('#add').click(function() {
    $('#camera').click();
 });
 
-function salvarImagem() {
+function saveImage() {
   //var preview = document.querySelector('img');
   var file = document.querySelector('input[type=file]').files[0];
   var reader  = new FileReader();
@@ -151,6 +151,7 @@ function salvarImagem() {
   reader.onloadend = function(){
       //preview.src = reader.result;
       console.log(reader.result);
+      console.log(resizeImage());
   }
 
   if(file){
@@ -159,4 +160,55 @@ function salvarImagem() {
   else {
       preview.src = "";
   }
+}
+
+function resizeImage() {
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+
+        var filesToUploads = document.getElementById('camera').files;
+        var file = filesToUploads[0];
+        if (file) {
+
+            var reader = new FileReader();
+            // Set the image once loaded into file reader
+            reader.onload = function(e) {
+
+                var img = document.createElement("img");
+                img.src = e.target.result;
+
+                var canvas = document.createElement("canvas");
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+
+                var MAX_WIDTH = 400;
+                var MAX_HEIGHT = 400;
+                var width = img.width;
+                var height = img.height;
+
+                if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+                canvas.width = width;
+                canvas.height = height;
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, width, height);
+
+                dataurl = canvas.toDataURL(file.type);
+                return dataurl;
+                //document.getElementById('output').src = dataurl;
+            }
+            return reader.readAsDataURL(file);
+        }
+
+    } else {
+        alert('The File APIs are not fully supported in this browser.');
+    }
 }

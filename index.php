@@ -58,7 +58,7 @@ catch (PDOException $e) {
     <div id="teste4" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div> 
-    <input id="camera" style="display: none;" type="file" accept="*/image" onchange="salvarImagem()" capture="camera">
+    <input id="camera" style="display: none;" type="file" accept="*/image" onchange="saveImage()" capture="camera">
     <button id="add" class="btn btn-outline-dark btn-sm">
         <i class="bi bi-camera-fill"></i>
     </button>
@@ -68,7 +68,7 @@ catch (PDOException $e) {
     <p id="horas"></p>
     <p hidden id="minutos"></p>
     <p hidden id="segundos"></p>
-    <button id="target" type="button" class="btn btn-outline-dark btn-sm">
+    <button hidden id="target" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
     Mudar
     </button>
@@ -81,7 +81,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="/script.js?v=83"></script>
+<script src="/script.js?v=85"></script>
 <script src="/geolocation.js?v=48"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
