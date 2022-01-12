@@ -10,10 +10,9 @@ try {
     echo $sql."<br>";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-    return;
 
   }
-
+  else {
   If (!empty($_GET["lat"])) {
 
     $latitude = htmlspecialchars($_GET["lat"]);
@@ -37,6 +36,7 @@ try {
   
     echo json_encode($details);
 
+  }
   }
 }
 catch (PDOException $e) {
