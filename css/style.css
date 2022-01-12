@@ -80,11 +80,11 @@ p.contador {
 label.btn {
     padding: 0px;
     border-radius: 0px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
 }
 
 label.btn.active{
     border-color: #fff;
-    border: 4px;
+    border: 3px;
+    margin: 3px;
 }
