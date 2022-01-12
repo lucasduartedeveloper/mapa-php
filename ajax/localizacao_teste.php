@@ -2,7 +2,7 @@
 <?php
 try {
 
-  if (!empty($_GET["deleteId"]) {
+  if (!empty($_GET["deleteId"])) {
 
     $deleteId = htmlspecialchars($_GET["deleteId"]);
 
