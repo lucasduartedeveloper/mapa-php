@@ -70,13 +70,13 @@ catch (PDOException $e) {
 
 <i id="menu" class="bi bi-arrow-down-circle my-float"></i>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script src="/script.js?v=112"></script>
 <script src="/geolocation.js?v=48"></script> 
