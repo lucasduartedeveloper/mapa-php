@@ -14,7 +14,7 @@ try {
     $data = base64_decode($data);
 
     $file_path = "/img/upload".$today.".png";
-    //file_put_contents($file_path, $data);
+    file_put_contents($file_path, $data);
 
     $sql = "INSERT localizacao_teste (nome, png, latitude, longitude) VALUES ('".$nome."','".$file_path."',0 ,0)";
     //$stmt = $pdo->prepare($sql);
@@ -28,5 +28,8 @@ try {
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
+}
+catch (Exception $e) {
+    echo 'Connection failed: ' . $e->getMessage();
 }
 ?>
