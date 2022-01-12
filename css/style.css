@@ -68,11 +68,15 @@ p.contador {
 #add{
    position:fixed;
    top:20px;
-   right:50px;
+   right:60px;
    border-radius: 50%;
 }
 
 .icone {
     width: 10vw;
     height: 10vw;
+}
+
+label.btn {
+    padding: 0px;
 }
