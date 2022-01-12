@@ -79,4 +79,9 @@ p.contador {
 
 label.btn {
     padding: 0px;
+    border-radius: 0px;
+}
+
+label.btn.active{
+    border-color: #fff;
 }
