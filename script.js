@@ -66,6 +66,7 @@ $(document).on('change', ':radio[name="monster"]', function() {
     var k = parseInt(expr.replace('monster', ''));
     monster = monsters[k];
     $('#nome').text(monster.nome);
+    document.getElementById('output').src = monster.base64;
 });
 
 function reload() {
@@ -160,7 +161,7 @@ function saveImage() {
                     var ctx = canvas.getContext("2d");
                     ctx.drawImage(img, 0, 0, width, height);
 
-                    var nome = prompt("TESTE", "TESTE");
+                    var nome = prompt("NOME DA FOTO", "TESTE");
                     var dataurl = canvas.toDataURL(file.type);
                     //console.log(dataurl);
                     document.getElementById('output').src = dataurl;
