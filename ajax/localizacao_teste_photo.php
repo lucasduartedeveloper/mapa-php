@@ -7,23 +7,11 @@ try {
     $png = htmlspecialchars($_POST["png"]);
     $nome = htmlspecialchars($_POST["nome"]);
 
-    $today = date("YmdHi");
-
-    list($type, $data) = explode(';', $data);
-    list(, $data) = explode(',', $data);
-    $data = base64_decode($data);
-
-    $file_path = "/img/upload".$today.".png";
-    file_put_contents($file_path, $data);
-
-    $sql = "INSERT localizacao_teste (nome, png, latitude, longitude) VALUES ('".$nome."','".$file_path."',0 ,0)";
+    $sql = "INSERT localizacao_teste (nome, png, latitude, longitude,base64) VALUES ('".$nome."','base64',0 ,0,".$png."')";
     //$stmt = $pdo->prepare($sql);
     //$stmt->execute();
 
-    $arr = array('status' => 'success');
-    echo json_encode($arr);
     echo $sql;
-
   }
 }
 catch (PDOException $e) {
