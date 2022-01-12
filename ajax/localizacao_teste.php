@@ -3,6 +3,7 @@
 try {
 
   If (!empty($_GET["deleteId"]) {
+
      $deleteId = htmlspecialchars($_GET["deleteId"]);
 
      $sql = "DELETE FROM localizacao_teste WHERE id=".$deleteId.";";
@@ -10,6 +11,7 @@ try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     return;
+
   }
 
   If (!empty($_GET["lat"])) {
@@ -39,5 +41,8 @@ try {
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
+}
+catch (Exception $e) {
+    echo 'Error: ' . $e->getMessage();
 }
 ?>
