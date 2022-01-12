@@ -85,5 +85,5 @@ label.btn {
 
 label.btn.active{
     border-color: #f00;
-    border: 3px;
+    padding: 5px;
 }
