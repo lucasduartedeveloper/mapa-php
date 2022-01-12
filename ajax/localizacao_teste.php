@@ -1,7 +1,17 @@
 <?php include ('../config/db.php')?>
 <?php
 try {
-  
+
+  If (!empty($_GET["deleteId"]) {
+     $deleteId = htmlspecialchars($_GET["deleteId"]);
+
+     $sql = "DELETE FROM localizacao_teste WHERE id=".$deleteId.";";
+    echo $sql."<br>";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    return;
+  }
+
   If (!empty($_GET["lat"])) {
 
     $latitude = htmlspecialchars($_GET["lat"]);

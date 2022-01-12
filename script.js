@@ -90,6 +90,15 @@ function reload() {
           });
           data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
 
+          data[k].marker.getPopup().on('remove', 
+          function() {
+                $.get("/ajax/localizacao_teste.php?deleteId="+data[k].id)
+                .done(function() { 
+                   console.log("deleteId = "+data[k].id);
+                   reload();
+                });
+          });
+
            if (k <= 3) {
                label1 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
            }
