@@ -2,10 +2,10 @@
 <?php
 try {
   
-  If (!empty($_GET["png"])) {
+  If (!empty($_POST["png"])) {
 
-    $png = htmlspecialchars($_GET["png"]);
-    $nome = htmlspecialchars($_GET["nome"]);
+    $png = htmlspecialchars($_POST["png"]);
+    $nome = htmlspecialchars($_POST["nome"]);
 
     $today = date("YmdHi");
 

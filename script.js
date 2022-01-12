@@ -164,12 +164,12 @@ function saveImage() {
                     //console.log(dataurl);
                     document.getElementById('output').src = dataurl;
 
-                    window.location.href = "/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl;
-
-                    $.getJSON("/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl, function(data) {
+                    $.post("/ajax/localizacao_teste_photo.php",
+                    { nome: nome, png: dataurl })
+                    .done(function(data) {
                        console.log(data);
                        reload();
-                   });
+                    });
                 }
                 img.src = e.target.result;
             }
