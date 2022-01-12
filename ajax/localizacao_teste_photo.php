@@ -14,7 +14,7 @@ try {
     $data = base64_decode($data);
 
     $file_path = "/img/upload".$today.".png";
-    file_put_contents($file_path, $data);
+    //file_put_contents($file_path, $data);
 
     $sql = "INSERT localizacao_teste (nome, png, latitude, longitude) VALUES ('".$nome."','".$file_path."',0 ,0)";
     //$stmt = $pdo->prepare($sql);
@@ -22,7 +22,6 @@ try {
 
     $arr = array('status' => 'success');
     echo json_encode($arr);
-
     echo $sql;
 
   }
