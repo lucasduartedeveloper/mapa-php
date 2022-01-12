@@ -2,18 +2,19 @@
 <?php
 try {
 
-  If (!empty($_GET["deleteId"]) {
+  if (!empty($_GET["deleteId"]) {
 
-     $deleteId = htmlspecialchars($_GET["deleteId"]);
+    $deleteId = htmlspecialchars($_GET["deleteId"]);
 
-     $sql = "DELETE FROM localizacao_teste WHERE id=".$deleteId.";";
+    $sql = "DELETE FROM localizacao_teste WHERE id=".$deleteId.";";
     echo $sql."<br>";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
+    return;
 
   }
-  else {
-  If (!empty($_GET["lat"])) {
+
+  if (!empty($_GET["lat"])) {
 
     $latitude = htmlspecialchars($_GET["lat"]);
     $longitude = htmlspecialchars($_GET["long"]);
@@ -37,7 +38,7 @@ try {
     echo json_encode($details);
 
   }
-  }
+
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
