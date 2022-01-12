@@ -8,8 +8,8 @@ try {
     $nome = htmlspecialchars($_POST["nome"]);
 
     $sql = "INSERT INTO localizacao_teste (nome, png, latitude, longitude,base64) VALUES ('".$nome."','base64',0,0,'".$png."')";
-    //$stmt = $pdo->prepare($sql);
-    //$stmt->execute();
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
 
     echo $sql;
   }
