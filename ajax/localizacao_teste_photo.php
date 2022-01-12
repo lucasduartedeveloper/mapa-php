@@ -17,8 +17,8 @@ try {
     file_put_contents($file_path, $data);
 
     $sql = "INSERT localizacao_teste (nome, png, latitude, longitude) VALUES ('".$nome."','".$file_path."',0 ,0)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    //$stmt = $pdo->prepare($sql);
+    //$stmt->execute();
 
     $arr = array('status' => 'success');
     echo json_encode($arr);
