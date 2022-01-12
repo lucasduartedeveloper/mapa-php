@@ -101,20 +101,22 @@ function reload() {
                 });
           });
 
+          var html = "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\" data-toggle=\"modal\" data-target=\"#exampleModal\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
+
            if (k <= 3) {
-               label1 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\" data-toggle=\"modal\" data-target=\"#exampleModal\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
+               label1 += html;
            }
            else if (k <= 7) {
-               label2 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
+               label2 += html;
            }
            else if (k <= 11) {
-               label3 += "<label class=\"btn btn-outline-dasm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
+               label3 += html;
            }
            else if(k <= 15) {
-               label4 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
+               label4 += html;
            }
           else {
-               label5 += "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
+               label5 += html;
            }
        }
 
