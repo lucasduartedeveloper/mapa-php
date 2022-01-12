@@ -159,9 +159,17 @@ function saveImage() {
                     var ctx = canvas.getContext("2d");
                     ctx.drawImage(img, 0, 0, width, height);
 
-                   dataurl = canvas.toDataURL(file.type);
-                   console.log(dataurl);
-                   document.getElementById('output').src = dataurl;
+                    var nome = prompt("TESTE", "TESTE");
+                    var dataurl = canvas.toDataURL(file.type);
+                    //console.log(dataurl);
+                    document.getElementById('output').src = dataurl;
+
+                    windows.location.href = "/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl;
+
+                    $.getJSON("/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl, function(data) {
+                       console.log(data);
+                       reload();
+                   });
                 }
                 img.src = e.target.result;
             }

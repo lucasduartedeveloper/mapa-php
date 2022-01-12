@@ -2,28 +2,28 @@
 <?php
 try {
   
-  If (!empty($_GET["lat"])) {
+  If (!empty($_GET["png"])) {
 
-    $latitude = htmlspecialchars($_GET["lat"]);
-    $longitude = htmlspecialchars($_GET["long"]);
-    $id = htmlspecialchars($_GET["id"]);
+    $png = htmlspecialchars($_GET["png"]);
+    $nome = htmlspecialchars($_GET["nome"]);
 
-    $sql = "UPDATE localizacao_teste SET latitude='".$latitude."', longitude='".$longitude."' WHERE id=".$id.";";
-    echo $sql."<br>";
+    $today = date("YmdHi");
+
+    list($type, $data) = explode(';', $data);
+    list(, $data) = explode(',', $data);
+    $data = base64_decode($data);
+
+    $file_path = "/img/upload".$today.".png";
+    file_put_contents($file_path, $data);
+
+    $sql = "INSERT localizacao_teste (nome, png, latitude, longitude) VALUES ('".$nome."','".$file_path."',0 ,0)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
-  }
-  else {
+    $arr = array('status' => 'success');
+    echo json_encode($arr);
 
-    $sql = "SELECT * FROM localizacao_teste ORDER BY id;";
-    //echo $sql."<br>";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $rowCount = $stmt->rowCount();
-    $details = $stmt->fetchAll(); 
-  
-    echo json_encode($details);
+    echo $sql;
 
   }
 }
