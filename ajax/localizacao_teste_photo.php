@@ -1,5 +1,6 @@
 <?php include ('../config/db.php')?>
 <?php
+$sql ="";
 try {
   
   If (!empty($_POST["png"])) {
@@ -16,8 +17,10 @@ try {
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
+   echo $sql;
 }
 catch (Exception $e) {
-    echo 'Connection failed: ' . $e->getMessage();
+    echo 'Error: ' . $e->getMessage();
+    echo $sql;
 }
 ?>
