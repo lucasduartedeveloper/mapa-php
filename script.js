@@ -78,7 +78,7 @@ function reload() {
       var label5 = "";
       for(var k in data) {
            var icon = L.icon({
-               iconUrl: data[k].png,
+               iconUrl: data[k].base64,
                shadowUrl: '/img/monster-shadow.png',
                iconSize:     [35, 40], // size of the icon
                shadowSize:   [50, 25], // size of the shadow
