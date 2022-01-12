@@ -65,6 +65,13 @@ p.contador {
    right:20px;
 }
 
+.my-float2{
+   position:fixed;
+   top:20px;
+   right:50px;
+   border-radius: 50%;
+}
+
 .icone {
     width: 10vw;
     height: 10vw;
