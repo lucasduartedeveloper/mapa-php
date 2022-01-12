@@ -164,7 +164,7 @@ function saveImage() {
                     //console.log(dataurl);
                     document.getElementById('output').src = dataurl;
 
-                    windows.location.href = "/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl;
+                    window.location.href = "/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl;
 
                     $.getJSON("/ajax/localizacao_teste_photo.php?nome="+nome+"&png="+dataurl, function(data) {
                        console.log(data);
