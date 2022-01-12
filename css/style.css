@@ -84,7 +84,6 @@ label.btn {
 }
 
 label.btn.active{
-    border-color: #fff;
+    border-color: #f00;
     border: 3px;
-    margin: 3px;
 }
