@@ -34,13 +34,24 @@ function play() {
 }
 
 function onMapClick(e) {
-    monster.marker.setLatLng(e.latlng);
-    console.log(e.latlng);
+    var circle = L.circle([e.latlng.lat, e.latlng.lng], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0,
+    radius: 15,
+    weight: 1,
+    stroke: false
+}).addTo(map);
 
-    $.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id, function(data) {
+var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
+
+    //monster.marker.setLatLng(e.latlng);
+    //console.log(e.latlng);
+
+    /*$.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id, function(data) {
         console.log(data);
     });
-    reload();
+    reload();*/
     //play();
 }
 
