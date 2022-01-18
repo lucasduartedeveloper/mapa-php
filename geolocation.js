@@ -36,9 +36,10 @@ function play() {
 function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
   var dist = 0.00008993216057362474;
+  // 
   
-  var a = dist ;
-  var b = ((inicio.lat) - (pos.lat)) / 100;
+  var a = dist;
+  var b = ((inicio.lat) - (pos.lat) / dist);
   var c = (b * a);
 
   console.log("- - -");
