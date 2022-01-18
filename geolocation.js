@@ -92,7 +92,7 @@ $(document).ready(function() {
             lng : geolocation.longitude
         }};
         onMapClick(pos);
-    }, 5000);
+    }, 500);
 });
 
 // Consultar localização
