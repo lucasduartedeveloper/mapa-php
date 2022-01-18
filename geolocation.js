@@ -37,9 +37,11 @@ function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
   var dist = 0.00008993216057362474;
   
-  var a = dist * 800000;
-  var b = (inicio.lat * 800000) - (pos.lat * 800000);
-  var c = inicio.lat + (b / a) / 800000;
+  var a = dist ;
+  var b = (inicio.lat) - (pos.lat);
+  var c = (b / a);
+
+  console.log("- - -");
 
   console.log(inicio);
   console.log(pos);
