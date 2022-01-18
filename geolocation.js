@@ -36,12 +36,13 @@ function play() {
 function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
 
-  var a = 0.00008993216057362474;
+  var a = 0.000008993216088271083;
   var b = (inicio.lat - (pos.lat)) / a;
   var c = Math.floor(b) + 0.5;
 
-  var d = (inicio.lng - (pos.lng)) / a;
-  var e = Math.floor(d) + 0.5;
+  var d = 0.000009956626094265175;
+  var e = (inicio.lng - (pos.lng)) / d;
+  var f = Math.floor(e) + 0.5;
 
   console.log("- - -");
 
@@ -57,7 +58,7 @@ function posicaoNoGrid(pos) {
   console.log("- - -");
 
   pos.lat = inicio.lat + ((a * c) * -1);
-  pos.lng = inicio.lng + ((a * e) * -1);
+  pos.lng = inicio.lng + ((d * f) * -1);
 
   console.log(pos);
   return pos;
@@ -81,6 +82,18 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+$(document).ready(function() {
+    setInterval(function() {
+        getLocation();
+        var pos = { 
+        latlng: {
+            lat : geolocation.latitude,
+            lng : geolocation.longitude
+        }};
+        onMapClick(pos);
+    }, 5000);
+}
 
 // Consultar localização
 function getLocation()
