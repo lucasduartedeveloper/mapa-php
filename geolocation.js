@@ -93,7 +93,7 @@ $(document).ready(function() {
         }};
         onMapClick(pos);
     }, 5000);
-}
+});
 
 // Consultar localização
 function getLocation()
@@ -133,4 +133,4 @@ function showError(error)
     }
   }
 
-getLocation ();
+getLocation();
