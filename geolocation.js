@@ -45,6 +45,8 @@ function onMapClick(e) {
 
 var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
 
+console.log(circle.getBounds();
+
     //monster.marker.setLatLng(e.latlng);
     console.log(e.latlng);
 
@@ -54,6 +56,8 @@ var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).a
     reload();*/
     //play();
 }
+
+ var x = { lat: -23.36026174491471, lng: -51.15455389022828 }
 
 map.on('click', onMapClick);
 
