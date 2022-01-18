@@ -39,7 +39,7 @@ function posicaoNoGrid(pos) {
   // 
   
   var a = dist;
-  var b = ((inicio.lat) - (pos.lat) / dist);
+  var b = ((inicio.lat) - (pos.lat));
   var c = (b * a);
 
   console.log("- - -");
