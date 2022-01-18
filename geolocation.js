@@ -45,10 +45,11 @@ function onMapClick(e) {
 
 var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
 
-console.log(circle.getBounds());
-
+    //console.log(circle.getBounds());
     //monster.marker.setLatLng(e.latlng);
-    console.log(e.latlng);
+    //console.log(e.latlng);
+
+    posicaoNoGrid(e latlng);
 
     /*$.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id, function(data) {
         console.log(data);
@@ -57,9 +58,18 @@ console.log(circle.getBounds());
     //play();
 }
 
+ var y = 0.00008993216057362474;
  var x = { lat: -23.36026174491471, lng: -51.15455389022828 };
+ var z =  { lat: -23.37471986394205, lng: -51.155176162719734 }
 
 map.on('click', onMapClick);
+
+function posicaoNoGrid(pos) {
+  var início = { lat: -23.36026174491471, lng: -51.15455389022828 };
+  var dist = 0.00008993216057362474;
+  
+  console.log(((pos.lat - inicio.lat) / dist));
+}
 
 // Consultar localização
 function getLocation()
@@ -72,6 +82,7 @@ function getLocation()
       console.log("Seu browser não suporta Geolocalização.");
     }
   }
+
 function showPosition(position)
   {
   console.log("Latitude: " + position.coords.latitude +
