@@ -69,7 +69,7 @@ function onMapClick(e) {
 
     var circle = L.circle([pos.lat, pos.lng], {
         color: 'red',
-        fillColor: '#f03',
+        fillColor: '#0066cc',
         fillOpacity: 0,
         radius: 0.5,
         weight: 1,
