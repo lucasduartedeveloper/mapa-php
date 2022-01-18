@@ -37,13 +37,20 @@ function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
   var dist = 0.00008993216057362474;
   
-  console.log(((pos.lat - inicio.lat) / dist));
+  var a = dist * 800000;
+  var b = (inicio.lat * 800000) + (pos.lat * 800000);
+  var c = inicio.lat + (b / a) / 800000;
+
+  pos.lat = c;
+
+  console log(pos);
+  return pos;
 }
 
 function onMapClick(e) {
-    posicaoNoGrid(e.latlng);
+    var pos = posicaoNoGrid(e.latlng);
 
-    var circle = L.circle([e.latlng.lat, e.latlng.lng], {
+    var circle = L.circle([pos.lat, pos.lng], {
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0,
