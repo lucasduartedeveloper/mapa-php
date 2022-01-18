@@ -3,7 +3,7 @@
 $sql ="";
 try {
   
-  If (!empty($_POST["png"])) {
+  if (!empty($_POST["png"])) {
 
     $png = htmlspecialchars($_POST["png"]);
     $nome = htmlspecialchars($_POST["nome"]);

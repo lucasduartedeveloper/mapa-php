@@ -29,32 +29,6 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-$(document).ready(function() {
-    //setInterval(reload, 15000);
-
-   console.log("document.ready");
-   reload();
-
-  $.getJSON( "/ajax/localizacao.php?lat=0&long=0", function(data) {
-       map.setView([data.latitude, data.longitude], 17);
-       marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
-       circle.setLatLng(new L.LatLng(data.latitude, data.longitude));
-       rectangle.setBounds(circle.getBounds());
-       console.log(JSON.stringify(data));
-   });
-
-$( "#target" ).click(function() {
-    $.getJSON( "/ajax/localizacao.php?lat="+geolocation.latitude+"&long="+geolocation.longitude, function(data) {
-       map.setView([data.latitude, data.longitude], 17);
-       marker.setLatLng(new L.LatLng(data.latitude, data.longitude));
-       circle.setLatLng(new L.LatLng(data.latitude, data.longitude));
-       rectangle.setBounds(circle.getBounds());
-       rectangle.redraw();
-       console.log(JSON.stringify(data));
-    });
-  });
-});
-
 $( "#menu" ).click(function() {
     $(".box2").toggle();
     console.log("toggle");
@@ -72,64 +46,9 @@ $(document).on('change', ':radio[name="monster"]', function() {
 });
 
 function reload() {
-      $.getJSON( "/ajax/localizacao_teste.php", function(data) {
-      console.log(data);
-      console.log("reload");
-      var label1 = "";
-      var label2 = "";
-      var label3 = "";
-      var label4 = "";
-      var label5 = "";
-      for(var k in data) {
-           var icon = L.icon({
-               iconUrl: data[k].base64,
-               shadowUrl: '/img/monster-shadow.png',
-               iconSize:     [35, 40], // size of the icon
-               shadowSize:   [50, 25], // size of the shadow
-               iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-               shadowAnchor: [25, 10],  // the same for the shadow
-               popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-          });
-          data[k].marker = L.marker([data[k].latitude, data[k].longitude], {icon: icon}).addTo(map).bindPopup(data[k].nome);
-
-          data[k].marker.getPopup().on('remove', 
-          function() {
-                $.get("/ajax/localizacao_teste.php?deleteId="+data[k].id)
-                .done(function() { 
-                   console.log("deleteId = "+data[k].id);
-                   reload();
-                });
-          });
-
-          var html = "<label class=\"btn btn-outline-dark btn-sm\"><input type=\"radio\" display=\"none\" name=\"monster\" id=\"monster"+k+"\" autocomplete=\"off\" data-toggle=\"modal\" data-target=\"#exampleModal\"><img class=\"icone\" src=\""+data[k].base64+"\"/></label>";
-
-           if (k <= 3) {
-               label1 += html;
-           }
-           else if (k <= 7) {
-               label2 += html;
-           }
-           else if (k <= 11) {
-               label3 += html;
-           }
-           else if(k <= 15) {
-               label4 += html;
-           }
-          else {
-               label5 += html;
-           }
-       }
-
-       for(var k in monsters) {
-           map.removeControl(monsters[k].marker);
-       }
-
-       monsters = data;
-       $('#teste1').html(label1);
-       $('#teste2').html(label2);
-       $('#teste3').html(label3);
-       $('#teste4').html(label4);
-    });
+      $.getJSON( "/ajax/localizacao_gps.php", function(data) {
+          console.log(data);
+      });
 }
 
 $('#add').click(function() {
