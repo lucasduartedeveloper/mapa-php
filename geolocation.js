@@ -60,7 +60,7 @@ var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).a
 
  var y = 0.00008993216057362474;
  var x = { lat: -23.36026174491471, lng: -51.15455389022828 };
- var z =  { lat: -23.37471986394205, lng: -51.155176162719734 }
+ var z =  { lat: -23.37471986394205, lng: -51.155176162719734 };
 
 map.on('click', onMapClick);
 
