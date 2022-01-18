@@ -79,6 +79,8 @@ function onMapClick(e) {
     console.log(circle.getBounds());
 
     var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
+
+    marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
 }
 
 map.on('click', onMapClick);
