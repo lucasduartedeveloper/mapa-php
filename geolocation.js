@@ -57,7 +57,7 @@ console.log(circle.getBounds();
     //play();
 }
 
- var x = { lat: -23.36026174491471, lng: -51.15455389022828 }
+ var x = { lat: -23.36026174491471, lng: -51.15455389022828 };
 
 map.on('click', onMapClick);
 
