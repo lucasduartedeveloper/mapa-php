@@ -33,43 +33,29 @@ function play() {
   audio.play();
 }
 
-function onMapClick(e) {
-    var circle = L.circle([e.latlng.lat, e.latlng.lng], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0,
-    radius: 5,
-    weight: 1,
-    stroke: false
-}).addTo(map);
-
-var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
-
-    //console.log(circle.getBounds());
-    //monster.marker.setLatLng(e.latlng);
-    //console.log(e.latlng);
-
-    posicaoNoGrid(e latlng);
-
-    /*$.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id, function(data) {
-        console.log(data);
-    });
-    reload();*/
-    //play();
-}
-
- var y = 0.00008993216057362474;
- var x = { lat: -23.36026174491471, lng: -51.15455389022828 };
- var z =  { lat: -23.37471986394205, lng: -51.155176162719734 };
-
-map.on('click', onMapClick);
-
 function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
   var dist = 0.00008993216057362474;
   
   console.log(((pos.lat - inicio.lat) / dist));
 }
+
+function onMapClick(e) {
+    posicaoNoGrid(e.latlng);
+
+    var circle = L.circle([e.latlng.lat, e.latlng.lng], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0,
+        radius: 5,
+        weight: 1,
+        stroke: false
+    }).addTo(map);
+
+    var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
+}
+
+map.on('click', onMapClick);
 
 // Consultar localização
 function getLocation()
