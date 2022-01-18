@@ -68,7 +68,7 @@ function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
 
     var circle = L.circle([pos.lat, pos.lng], {
-        color: 'red',
+        color: 'blue',
         fillColor: '#0066cc',
         fillOpacity: 0,
         radius: 0.5,
@@ -78,7 +78,7 @@ function onMapClick(e) {
 
     console.log(circle.getBounds());
 
-    var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
+    var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 }
 
 map.on('click', onMapClick);
