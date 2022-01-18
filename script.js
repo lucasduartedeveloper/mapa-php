@@ -1,7 +1,7 @@
 console.log("script.js");
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 18, 2050 18:00:00").getTime();
+var countDownDate = new Date("Jan 18, 2022 14:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
