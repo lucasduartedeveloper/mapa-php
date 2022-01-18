@@ -30,7 +30,7 @@ var x = setInterval(function() {
 }, 1000);
 
 $(document).ready(function() {
-    setInterval(reload, 15000);
+    //setInterval(reload, 15000);
 
    console.log("document.ready");
    reload();

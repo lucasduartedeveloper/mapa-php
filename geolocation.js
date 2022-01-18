@@ -46,7 +46,7 @@ function onMapClick(e) {
 var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
 
     //monster.marker.setLatLng(e.latlng);
-    //console.log(e.latlng);
+    console.log(e.latlng);
 
     /*$.getJSON( "/ajax/localizacao_teste.php?lat="+e.latlng.lat+"&long="+e.latlng.lng+"&id="+monster.id, function(data) {
         console.log(data);
