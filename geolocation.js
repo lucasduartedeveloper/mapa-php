@@ -36,11 +36,11 @@ function play() {
 function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
 
-  var a = 0.000008993216088271083;
+  var a = 0.000008993216088271083 * 5;
   var b = (inicio.lat - (pos.lat)) / a;
   var c = Math.floor(b) + 0.5;
 
-  var d = 0.000009956626094265175;
+  var d = 0.000009956626094265175 * 5;
   var e = (inicio.lng - (pos.lng)) / d;
   var f = Math.floor(e) + 0.5;
 
@@ -71,7 +71,7 @@ function onMapClick(e) {
         color: 'blue',
         fillColor: '#0066cc',
         fillOpacity: 0,
-        radius: 0.5,
+        radius: 2.5,
         weight: 1,
         stroke: false
     }).addTo(map);
