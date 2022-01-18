@@ -43,7 +43,7 @@ function posicaoNoGrid(pos) {
 
   pos.lat = c;
 
-  console log(pos);
+  console.log(pos);
   return pos;
 }
 
