@@ -3,17 +3,6 @@ var geolocation = { latitude: 0, longitude: 0 };
 //var map = L.map('map').setView([51.505, -0.09], 13);
 var map = L.map('map').setView([0, 0], 13);
 
-var circle = L.circle([51.505, -0.09], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0,
-    radius: 15,
-    weight: 1,
-    stroke: false
-}).addTo(map);
-
-var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
-
 var marker = L.marker([51.505, -0.09]).addTo(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -81,6 +70,7 @@ function onMapClick(e) {
     var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    map.setView([pos.lat, pos.lng], 20);
 }
 
 map.on('click', onMapClick);
