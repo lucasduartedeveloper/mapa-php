@@ -40,6 +40,9 @@ function posicaoNoGrid(pos) {
   var b = (inicio.lat - (pos.lat)) / a;
   var c = Math.floor(b) + 0.5;
 
+  var d = (inicio.lng - (pos.lng)) / a;
+  var e = Math.floor(d) + 0.5;
+
   console.log("- - -");
 
   console.log(inicio);
@@ -53,7 +56,8 @@ function posicaoNoGrid(pos) {
 
   console.log("- - -");
 
-  pos.lat = inicio.lat + (a * c);
+  pos.lat = inicio.lat + ((a * c) * -1);
+  pos.lng = inicio.lng + ((a * e) * -1);
 
   console.log(pos);
   return pos;
