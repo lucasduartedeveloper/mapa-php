@@ -65,7 +65,7 @@ var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).a
 map.on('click', onMapClick);
 
 function posicaoNoGrid(pos) {
-  var início = { lat: -23.36026174491471, lng: -51.15455389022828 };
+  var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
   var dist = 0.00008993216057362474;
   
   console.log(((pos.lat - inicio.lat) / dist));
