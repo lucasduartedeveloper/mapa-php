@@ -46,7 +46,7 @@ function posicaoNoGrid(pos) {
 
   console.log("- - -");
 
-  console log(a);
+  console.log(a);
   console.log(b);
   console.log(c);
 
