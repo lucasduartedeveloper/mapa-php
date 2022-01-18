@@ -70,10 +70,12 @@ function onMapClick(e) {
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0,
-        radius: 5,
+        radius: 0.5,
         weight: 1,
         stroke: false
     }).addTo(map);
+
+    console.log(circle.getBounds());
 
     var rectangle = L.rectangle(circle.getBounds(), {color: "#ff7800", weight: 1}).addTo(map);
 }
