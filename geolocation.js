@@ -38,7 +38,7 @@ function onMapClick(e) {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0,
-    radius: 15,
+    radius: 5,
     weight: 1,
     stroke: false
 }).addTo(map);
