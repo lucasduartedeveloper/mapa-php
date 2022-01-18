@@ -83,6 +83,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
+/*
 $(document).ready(function() {
     setInterval(function() {
         getLocation();
@@ -94,6 +95,7 @@ $(document).ready(function() {
         onMapClick(pos);
     }, 5000);
 });
+*/
 
 // Consultar localização
 function getLocation()
