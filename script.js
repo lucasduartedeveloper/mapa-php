@@ -18,6 +18,11 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  days = days.toString().padStart(2, "0");
+  hours = hours.toString().padStart(2, "0");
+  minutes = minutes.toString().padStart(2, "0");
+  seconds = seconds.toString().padStart(2, "0");
+
   // Display the resultghp
   document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
   + minutes + "m " + seconds + "s ";
