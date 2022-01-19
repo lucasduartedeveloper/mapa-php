@@ -115,7 +115,7 @@ $(document).ready(function() {
                reload();
         });
 
-        var numberOfMlSeconds = objDate.getTime();
+        var numberOfMlSeconds = new Date().getTime();
         var addMlSeconds = 30000;
         var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
 
