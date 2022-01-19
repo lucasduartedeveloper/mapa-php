@@ -115,7 +115,7 @@ $(document).ready(function() {
                reload();
         });
         countDownDate = new Date().getTime();
-        countDownDate.setSeconds(d.getSeconds() + 30);
+        countDownDate.setSeconds(countDownDate.getSeconds() + 30);
     };
     foo();
     setInterval(foo, 30000);
