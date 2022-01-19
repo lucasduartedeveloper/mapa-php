@@ -88,18 +88,6 @@ label.btn.active{
     background-color: #f00;
 }
 
-.azul {
-    background-color: #0066cc;
-}
-
-.vermelho {
-    background-color: #800000;
-}
-
-.verde {
-    background-color: #339933;
-}
-
 .coin {
     position:fixed;
     bottom: -15vw;
