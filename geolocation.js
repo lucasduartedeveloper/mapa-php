@@ -87,7 +87,7 @@ function reload() {
 
             for (var k in data) {
 
-            var html = "<label class=\"btn btn-outline-dark btn-sm active\"><input type=\"radio\" display=\"none\" name=\"cor\" id=\"+data[k].cor+"\" autocomplete=\"off\"><div class=\"icone\" style=\"background-color:"+data[k].cor+";\"></div></label>";
+            var html = "<label class=\"btn btn-outline-dark btn-sm active\"><input type=\"radio\" display=\"none\" name=\"cor\" id=\""+data[k].cor+"\" autocomplete=\"off\"><div class=\"icone\" style=\"background-color:"+data[k].cor+";\"></div></label>";
 
            if (k <= 3) {
                label1 += html;
