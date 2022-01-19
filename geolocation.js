@@ -69,7 +69,7 @@ function reload() {
         		stroke: false
 	}).addTo(map);
 
-	data[k].rectangle = L.rectangle(circle.getBounds(), {color: + "#" + data[k].cor, weight: 1}).addTo(map);
+	data[k].rectangle = L.rectangle(circle.getBounds(), {color: + data[k].cor, weight: 1}).addTo(map);
 	}
 
          reguas = data;
@@ -78,19 +78,6 @@ function reload() {
 
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
-
-    var circle = L.circle([pos.lat, pos.lng], {
-        color: 'blue',
-        fillColor: '#0066cc',
-        fillOpacity: 0,
-        radius: 2.5,
-        weight: 1,
-        stroke: false
-    }).addTo(map);
-
-    console.log(circle.getBounds());
-
-    //var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     map.setView([pos.lat, pos.lng], 19);
