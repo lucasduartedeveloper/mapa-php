@@ -57,7 +57,7 @@ catch (PDOException $e) {
     </div>
     <div id="teste4" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
-    <div> 
+    <div>
     <input id="camera" style="display: none;" type="file" accept="*/image" onchange="saveImage()" capture="camera">
     <button hidden id="add" class="btn btn-outline-dark btn-sm">
         <i class="bi bi-camera-fill"></i>
