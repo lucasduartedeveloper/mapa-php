@@ -76,7 +76,7 @@ function onMapClick(e) {
     var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    map.setView([pos.lat, pos.lng], 20);
+    map.setView([pos.lat, pos.lng], 18);
 }
 
 map.on('click', onMapClick);
@@ -90,8 +90,15 @@ $(document).ready(function() {
             lng : geolocation.longitude
         }};
         onMapClick(pos);
+
+       $.post("/ajax/localizacao_gps.php",
+       { latitude: geolocation.latitude, longitude: geolocation.latitude })
+           .done(function(data) {
+               console.log(data);
+        });
+
         reload();
-    }, 15000);
+    }, 5000);
 });
 
 // Consultar localização
