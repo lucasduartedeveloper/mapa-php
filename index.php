@@ -47,6 +47,8 @@ catch (PDOException $e) {
 <div class="box2">
     <p id="nome" class="local">TESTE GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="azul" id="azul" autocomplete="off"><img class="icone azul" src=""/></label>
+        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="vermelho" id="vermelho" autocomplete="off"><img class="icone vermelho" src=""/></label>
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
@@ -83,15 +85,6 @@ catch (PDOException $e) {
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <img id="output"></img>
-    </div>
-  </div>
-</div>
 
 </body>
 </html> 

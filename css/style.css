@@ -87,3 +87,11 @@ label.btn.active{
     border-color: #f00;
     background-color: #f00;
 }
+
+.azul {
+    background-color: #0066cc;
+}
+
+.vermelho {
+    background-color: #800000;
+}
