@@ -88,7 +88,7 @@ function onMapClick(e) {
     var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    map.setView([pos.lat, pos.lng], 18);
+    map.setView([pos.lat, pos.lng], 19);
 }
 
 map.on('click', onMapClick);
@@ -104,8 +104,8 @@ $(document).ready(function() {
         onMapClick(pos);
 
        $.post("/ajax/localizacao_gps.php", {
-            lat: pos.latitude, 
-            lng: geolocation.longitude })
+            lat: pos.latlng.lat, 
+            lng: pos.latlng.lng })
            .done(function(data) {
                console.log(data);
         });

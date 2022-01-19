@@ -8,6 +8,16 @@ try {
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
 
+     $sql = "SELECT * FROM localizacao_gps WHERE latitude='".$latitude."' AND '".$longitude."' ORDER BY id;";
+    echo $sql."<br>";else {
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $rowCount = $stmt->rowCount();
+    $details = $stmt->fetchAll(); 
+
+    echo json_encode($details);
+
     $sql = "INSERT INTO localizacao_gps (latitude, longitude) VALUES ('".$latitude."','".$longitude."')";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
