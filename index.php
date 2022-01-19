@@ -47,8 +47,8 @@ catch (PDOException $e) {
 <div class="box2">
     <p id="nome" class="local">TESTE GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="azul" id="azul" autocomplete="off"><div class="icone azul"></div></label>
-        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="vermelho" id="vermelho" autocomplete="off"><div class="icone vermelho"></div></label>
+        <label class="btn btn-outline-dark btn-sm active"><input type="radio" display="none" name="cor" id="0066cc" autocomplete="off"><div class="icone azul"></div></label>
+        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="cor" id="800000" autocomplete="off"><div class="icone vermelho"></div></label>
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
@@ -81,7 +81,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=123"></script>
-<script src="/geolocation.js?v116"></script> 
+<script src="/geolocation.js?v117"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
