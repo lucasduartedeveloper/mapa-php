@@ -20,7 +20,11 @@ var cor = "0066cc";
 
 function play() {
   var audio = new Audio('/audio/coin.mp3');
-  audio.play();
+  audio.play();  
+  $("#coin").addClass("animate");
+  setInterval (function() {
+      $("#coin").removeClass("animate");
+  }, 1000);
 }
 
 function posicaoNoGrid(pos) {
