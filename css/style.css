@@ -75,6 +75,11 @@ p.contador {
 .icone {
     width: 15vw;
     height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cor: #fff;
+    font-weight: 900;
 }
 
 label.btn {
