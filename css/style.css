@@ -113,9 +113,9 @@ label.btn.active{
 }
 
 @keyframes myanim {
-    20% { bottom: 15vh ; }
-    40% { bottom: 20vh; }
-    60% { bottom: 25vh; }
-    80% { bottom: 20vh; }
-    100% { bottom: -7.5vw; }
+    20% { bottom: 15vw ; }
+    40% { bottom: 45vw; }
+    60% { bottom: 50vw; }
+    80% { bottom: 45vw; }
+    100% { bottom: 40vw; }
 }
