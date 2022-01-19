@@ -100,7 +100,7 @@ $(document).ready(function() {
             lat : geolocation.latitude,
             lng : geolocation.longitude
         });
-        onMapClick(pos);
+        onMapClick({ latlng: pos });
 
        $.post("/ajax/localizacao_gps.php", {
             lat: pos.lat, 
