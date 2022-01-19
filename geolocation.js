@@ -56,6 +56,20 @@ function posicaoNoGrid(pos) {
 function reload() {
       $.getJSON( "/ajax/localizacao_gps.php", function(data) {
           console.log(data);
+
+         for (k in data) {
+	var pos = posicaoNoGrid(e.latlng);
+
+	var circle = L.circle([data[k].latitude, data[k].longitude], {
+		fillOpacity: 0,
+        		radius: 2.5,
+        		weight: 1,
+        		stroke: false
+	}).addTo(map);
+
+	var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
+
+	}
       });
 }
 
