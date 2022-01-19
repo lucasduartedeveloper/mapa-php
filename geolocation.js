@@ -57,7 +57,7 @@ function posicaoNoGrid(pos) {
 }
 
 function reload() {
-      $.getJSON( "/ajax/localizacao_gps.php", function(data) {
+      $.getJSON("/ajax/localizacao_gps.php", function(data) {
 
          //console.log(data);
          for (var k in reguas) {
@@ -76,9 +76,10 @@ function reload() {
         }
 
         reguas = data;
+
         });
       
-      $.getJSON( "/ajax/localizacao_gps.php?select=true", function(data) {
+      $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
 
             var label1 = "";
             var label2 = "";
@@ -86,7 +87,7 @@ function reload() {
 
             for (var k in data) {
 
-            var html = "<label class=/""btn btn-outline-dark btn-sm active/""><input type=/""radio/"" display=/""none/"" name=/""cor/"" id=/"""+data[k].cor+"/"" autocomplete=/""off/""><div class=/""icone/"" style=/""background-color:/"+data[k].cor+";/""></div></label>";
+            var html = "<label class=/""btn btn-outline-dark btn-sm active/""><input type=/""radio/"" display=/""none/"" name=/""cor/"" id=/"""+data[k].cor+"/"" autocomplete=/""off/""><div class=/""icone/"" style=/""background-color:"+data[k].cor+";/""></div></label>";
 
            if (k <= 3) {
                label1 += html;
