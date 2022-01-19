@@ -26,6 +26,8 @@ catch (PDOException $e) {
 <html>
 <head>
 
+<link rel="manifest" href="manifest.json">
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
 <link rel="stylesheet" href="/css/style.css?v=21">
