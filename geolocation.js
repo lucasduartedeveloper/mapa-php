@@ -115,6 +115,7 @@ $(document).ready(function() {
                reload();
         });
     };
+    foo();
     setInterval(foo, 30000);
 });
 
