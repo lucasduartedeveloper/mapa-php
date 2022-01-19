@@ -114,7 +114,7 @@ $(document).ready(function() {
                console.log(data);
                reload();
         });
-        countDownDate = getTime();
+        countDownDate = new Date().getTime();
         countDownDate.setSeconds(d.getSeconds() + 30);
     };
     foo();
