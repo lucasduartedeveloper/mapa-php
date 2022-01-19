@@ -23,7 +23,7 @@ var x = setInterval(function() {
   minutes = minutes.toString().padStart(2, "0");
   seconds = seconds.toString().padStart(2, "0");
 
-  // Display the resultghp
+  // Display the resul
   document.getElementById("horas").innerHTML = seconds + "s ";
 
   // If the count down is finished, write some text

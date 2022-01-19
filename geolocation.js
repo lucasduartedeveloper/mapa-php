@@ -19,7 +19,7 @@ var  regua = {};
 var cor = "0066cc";
 
 function play() {
-  var audio = new Audio('/audio/alarm.mp3');
+  var audio = new Audio('/audio/coin.mp3');
   audio.play();
 }
 
@@ -34,29 +34,27 @@ function posicaoNoGrid(pos) {
   var e = (inicio.lng - (pos.lng)) / d;
   var f = Math.floor(e) + 0.5;
 
+   /*
   console.log("- - -");
-
   console.log(inicio);
   console.log(pos);
-
   console.log("- - -");
-
   console.log(a);
   console.log(b);
   console.log(c);
-
   console.log("- - -");
+  */
 
   pos.lat = inicio.lat + ((a * c) * -1);
   pos.lng = inicio.lng + ((d * f) * -1);
 
-  console.log(pos);
+  // console.log(pos);
   return pos;
 }
 
 function reload() {
       $.getJSON( "/ajax/localizacao_gps.php", function(data) {
-         console.log(data);
+         //console.log(data);
          for (var k in reguas) {
              map.removeControl(reguas[k].rectangle);
          }
@@ -74,6 +72,7 @@ function reload() {
 
          reguas = data;
       });
+      
 }
 
 function onMapClick(e) {
@@ -100,19 +99,20 @@ $(document).ready(function() {
             cor: "#" + cor,
             })
            .done(function(data) {
-               console.log("post");
-               console.log(data);
+               //console.log("post");
+               //console.log(data);
+               play();
                reload();
         });
 
         var numberOfMlSeconds = new Date().getTime();
-        var addMlSeconds = 30000;
+        var addMlSeconds = 10000;
         var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
 
         countDownDate = newDateObj;
     };
     foo();
-    setInterval(foo, 30000);
+    setInterval(foo, 10000);
 });
 
 // Consultar localização
