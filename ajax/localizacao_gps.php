@@ -19,6 +19,7 @@ GROUP BY cor;";
 
   }
   else if (!empty($_POST["lat"])) {
+    if (!empty($_POST["cor"])) {
 
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
@@ -30,11 +31,13 @@ GROUP BY cor;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
-        $sql = "INSERT INTO localizacao_gps (cor, latitude, longitude) VALUES ('".$cor."','".$latitude."','".$longitude."')";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
+    $sql = "INSERT INTO localizacao_gps (cor, latitude, longitude) VALUES ('".$cor."','".$latitude."','".$longitude."')";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
 
-        echo $sql;
+    echo $sql;
+
+    }
   }
   else {
 
