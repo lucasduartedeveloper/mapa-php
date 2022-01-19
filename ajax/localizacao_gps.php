@@ -8,7 +8,7 @@ try {
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
 
-     $sql = "SELECT * FROM localizacao_gps WHERE latitude='".$latitude."' AND longitude=".$longitude."' ORDER BY id;";
+     $sql = "SELECT * FROM localizacao_gps WHERE latitude='".$latitude."' AND longitude='".$longitude."' ORDER BY id;";
     echo $sql."<br>";
 
     $stmt = $pdo->prepare($sql);
