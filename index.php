@@ -30,7 +30,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=21">
+<link rel="stylesheet" href="/css/style.css?v=22">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -71,6 +71,7 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Mudar
     </button>
+    <img id="coin" class="coin" src="/img/coin.gif"/>
 </div>
 
 <i id="menu" class="bi bi-arrow-down-circle my-float"></i>
@@ -83,8 +84,8 @@ catch (PDOException $e) {
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-<script src="/script.js?v=125"></script>
-<script src="/geolocation.js?v124"></script> 
+<script src="/script.js?v=126"></script>
+<script src="/geolocation.js?v125"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

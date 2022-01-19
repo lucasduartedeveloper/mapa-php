@@ -99,3 +99,11 @@ label.btn.active{
 .verde {
     background-color: #339933;
 }
+
+.coin {
+    position:fixed;
+    bottom: 0vw;
+    right:  42.5vw;
+    width: 15vw;
+    height: 15vw;
+}
