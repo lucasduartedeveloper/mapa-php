@@ -114,7 +114,7 @@ $(document).ready(function() {
                console.log(data);
                reload();
         });
-    }, 500);
+    }, 30000);
 });
 
 // Consultar localização
