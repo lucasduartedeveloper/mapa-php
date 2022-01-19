@@ -98,7 +98,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 $(document).ready(function() {
-    setInterval(function() {
+   var foo = function() {
         getLocation();
         var pos = posicaoNoGrid({
             lat : geolocation.latitude,
@@ -114,7 +114,8 @@ $(document).ready(function() {
                console.log(data);
                reload();
         });
-    }, 30000);
+    };
+    setInterval(foo, 30000);
 });
 
 // Consultar localização
