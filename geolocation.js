@@ -69,7 +69,6 @@ function reload() {
 	}).addTo(map);
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
-
 	}
 
          reguas = data;
@@ -113,9 +112,8 @@ $(document).ready(function() {
            .done(function(data) {
                console.log("post");
                console.log(data);
+               reload();
         });
-
-        reload();
     }, 500);
 });
 
