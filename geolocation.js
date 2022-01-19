@@ -96,15 +96,15 @@ map.on('click', onMapClick);
 $(document).ready(function() {
     setInterval(function() {
         getLocation();
-        var pos = { 
+        var pos = posicaoNoGrid(
         latlng: {
             lat : geolocation.latitude,
             lng : geolocation.longitude
-        }};
+        });
         onMapClick(pos);
 
        $.post("/ajax/localizacao_gps.php", {
-            lat: geolocation.latitude, 
+            lat: pos.latitude, 
             lng: geolocation.longitude })
            .done(function(data) {
                console.log(data);
