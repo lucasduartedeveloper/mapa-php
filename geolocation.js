@@ -73,7 +73,7 @@ function reload() {
 	}).addTo(map);
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
-      });
+      }});
       
       $.getJSON( "/ajax/localizacao_gps.php?select=true", function(data) {
             console.log(data);
