@@ -63,7 +63,7 @@ function reload() {
         		radius: 2.5,
         		weight: 1,
         		stroke: false
-	});
+	}).addTo(map);
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 
@@ -86,7 +86,7 @@ function onMapClick(e) {
         radius: 2.5,
         weight: 1,
         stroke: false
-    });
+    }).addTo(map);
 
     console.log(circle.getBounds());
 
