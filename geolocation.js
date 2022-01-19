@@ -97,16 +97,16 @@ $(document).ready(function() {
     setInterval(function() {
         getLocation();
         var pos = posicaoNoGrid({
-        latlng: {
             lat : geolocation.latitude,
             lng : geolocation.longitude
-        }});
+        });
         onMapClick(pos);
 
        $.post("/ajax/localizacao_gps.php", {
             lat: pos.latlng.lat, 
             lng: pos.latlng.lng })
            .done(function(data) {
+               console.log("post");
                console.log(data);
         });
 
