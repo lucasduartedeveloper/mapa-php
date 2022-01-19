@@ -52,7 +52,7 @@ function posicaoNoGrid(pos) {
   pos.lat = inicio.lat + ((a * c) * -1);
   pos.lng = inicio.lng + ((d * f) * -1);
 
-  // console.log(pos);
+  console.log(pos);
   return pos;
 }
 
