@@ -3,7 +3,22 @@
 $sql ="";
 try {
   
-  if (!empty($_POST["lat"])) {
+  if (!empty($_GET["select"])) {
+
+    $sql = "SELECT cor, count(*) as quantidade
+FROM localizacao_gps
+GROUP BY cor;";
+    //echo $sql."<br>";else {
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $rowCount = $stmt->rowCount();
+    $details = $stmt->fetchAll(); 
+  
+    echo json_encode($details);
+
+  }
+  else if (!empty($_POST["lat"])) {
 
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);

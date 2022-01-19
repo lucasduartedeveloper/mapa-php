@@ -75,6 +75,8 @@ function reload() {
 	}
 
          reguas = data;
+
+         // menu
       });
       
 }
