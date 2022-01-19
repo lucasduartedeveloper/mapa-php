@@ -100,6 +100,9 @@ function reload() {
          $('#teste4').html(label4);
       });
       
+      $.getJSON( "/ajax/localizacao_gps.php?select=true", function(data) {
+            console.log(data);
+      });
 }
 
 function onMapClick(e) {
