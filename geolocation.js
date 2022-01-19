@@ -75,7 +75,7 @@ function reload() {
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
         }
 
-        reguas = data[k];
+        reguas = data;
         });
       
       $.getJSON( "/ajax/localizacao_gps.php?select=true", function(data) {
