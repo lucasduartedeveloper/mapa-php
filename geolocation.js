@@ -14,8 +14,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
-var monsters = [];
-var monster = {};
+var  reguas = [];
+var  regua = {};
 
 function play() {
   var audio = new Audio('/audio/alarm.mp3');
@@ -63,11 +63,16 @@ function reload() {
         		radius: 2.5,
         		weight: 1,
         		stroke: false
-	}).addTo(map);
+	});
 
-	var rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
+	data[k].rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
 
 	}
+
+         reguas = data;
+         for (var k in reguas) {
+             map.removeControl(reguas[k].rectangle);
+         }
       });
 }
 
@@ -81,7 +86,7 @@ function onMapClick(e) {
         radius: 2.5,
         weight: 1,
         stroke: false
-    }).addTo(map);
+    });
 
     console.log(circle.getBounds());
 
