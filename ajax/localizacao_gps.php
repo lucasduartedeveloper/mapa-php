@@ -27,14 +27,6 @@ try {
     echo json_encode($details);
 
   }
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $rowCount = $stmt->rowCount();
-    $details = $stmt->fetchAll(); 
-  
-    echo json_encode($details);
-
-  }
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();
