@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "WEBAPP",
+  "short_name": "WEBAPP",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A readable Hacker News app.",
+  "icons": [{
+    "src": "img/item01.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  },]
+}
