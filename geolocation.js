@@ -24,7 +24,7 @@ function play() {
   $("#coin").addClass("animate");
   setInterval (function() {
       $("#coin").removeClass("animate");
-  }, 1000);
+  }, 2000);
 }
 
 function posicaoNoGrid(pos) {

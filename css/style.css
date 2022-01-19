@@ -102,18 +102,18 @@ label.btn.active{
 
 .coin {
     position:fixed;
-    bottom: -7.5vw;
+    bottom: -15vw;
     right:  42.5vw;
     width: 15vw;
     height: 15vw;
 }
 
 .animate {
-    animation: myanim 1s infinite;
+    animation: myanim 2s infinite;
 }
 
 @keyframes myanim {
-    20% { bottom: 10vh ; }
+    20% { bottom: 15vh ; }
     40% { bottom: 20vh; }
     60% { bottom: 25vh; }
     80% { bottom: 20vh; }
