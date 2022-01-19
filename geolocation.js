@@ -55,7 +55,10 @@ function posicaoNoGrid(pos) {
 
 function reload() {
       $.getJSON( "/ajax/localizacao_gps.php", function(data) {
-          console.log(data);
+         console.log(data);
+         for (var k in reguas) {
+             map.removeControl(reguas[k].rectangle);
+         }
 
          for (var k in data) {
 	var circle = L.circle([data[k].latitude, data[k].longitude], {
@@ -70,9 +73,6 @@ function reload() {
 	}
 
          reguas = data;
-         for (var k in reguas) {
-             map.removeControl(reguas[k].rectangle);
-         }
       });
 }
 
