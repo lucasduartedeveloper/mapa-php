@@ -24,8 +24,7 @@ var x = setInterval(function() {
   seconds = seconds.toString().padStart(2, "0");
 
   // Display the resultghp
-  document.getElementById("horas").innerHTML = (days * 24) + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("horas").innerHTML = seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
