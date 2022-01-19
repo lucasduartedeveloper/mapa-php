@@ -28,7 +28,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=19">
+<link rel="stylesheet" href="/css/style.css?v=20">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -47,8 +47,8 @@ catch (PDOException $e) {
 <div class="box2">
     <p id="nome" class="local">TESTE GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="azul" id="azul" autocomplete="off"><div class="icone azul" src=""/></label>
-        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="vermelho" id="vermelho" autocomplete="off"><div class="icone vermelho" src=""/></label>
+        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="azul" id="azul" autocomplete="off"><div class="icone azul"></div></label>
+        <label class="btn btn-outline-dark btn-sm"><input type="radio" display="none" name="vermelho" id="vermelho" autocomplete="off"><div class="icone vermelho"></div></label>
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
