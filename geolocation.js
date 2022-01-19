@@ -114,8 +114,12 @@ $(document).ready(function() {
                console.log(data);
                reload();
         });
-        countDownDate = new Date().getTime();
-        countDownDate.setSeconds(countDownDate.getSeconds() + 30);
+
+        var numberOfMlSeconds = objDate.getTime();
+        var addMlSeconds = 30000;
+        var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
+
+        countDownDate = newDateObj;
     };
     foo();
     setInterval(foo, 30000);
