@@ -109,7 +109,9 @@ $(document).ready(function() {
 
        $.post("/ajax/localizacao_gps.php", {
             lat: pos.lat, 
-            lng: pos.lng })
+            lng: pos.lng,
+            cor: cor,
+            })
            .done(function(data) {
                console.log("post");
                console.log(data);

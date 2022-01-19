@@ -7,6 +7,7 @@ try {
 
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
+    $cor = htmlspecialchars($_POST["cor"]);
 
      $sql = "SELECT * FROM localizacao_gps WHERE latitude='".$latitude."' AND longitude='".$longitude."' ORDER BY id;";
     //echo $sql."<br>";
@@ -18,7 +19,7 @@ try {
      echo $rowCount;
 
     if ($rowCount == 0) {
-        $sql = "INSERT INTO localizacao_gps (latitude, longitude) VALUES ('".$latitude."','".$longitude."')";
+        $sql = "INSERT INTO localizacao_gps (cor, latitude, longitude) VALUES ('".$cor."','".$latitude."','".$longitude."')";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
