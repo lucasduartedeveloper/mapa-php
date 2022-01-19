@@ -53,6 +53,12 @@ function posicaoNoGrid(pos) {
   return pos;
 }
 
+function reload() {
+      $.getJSON( "/ajax/localizacao_gps.php", function(data) {
+          console.log(data);
+      });
+}
+
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
 
@@ -84,7 +90,7 @@ $(document).ready(function() {
             lng : geolocation.longitude
         }};
         onMapClick(pos);
-    }, 500);
+    }, 15000);
 });
 
 // Consultar localização
@@ -103,7 +109,7 @@ function showPosition(position)
   {
   console.log("Latitude: " + position.coords.latitude +
   " / Longitude: " + position.coords.longitude); 
-   geolocation.latitude = position.coords.latitude; 
+   geolocation.latitude = position.coords.latitude;
    geolocation.longitude = position.coords.longitude;
   }
 function showError(error)

@@ -45,12 +45,6 @@ $(document).on('change', ':radio[name="monster"]', function() {
     document.getElementById('output').src = monster.base64;
 });
 
-function reload() {
-      $.getJSON( "/ajax/localizacao_gps.php", function(data) {
-          console.log(data);
-      });
-}
-
 $('#add').click(function() {
    $('#camera').click();
 });
