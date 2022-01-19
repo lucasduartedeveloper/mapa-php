@@ -33,16 +33,6 @@ $( "#menu" ).click(function() {
     $(".box2").toggle();
 });
 
-$(document).on('change', ':radio[name="monster"]', function() {
-    $('label').removeClass('active');
-    $(this).filter(':checked').parent().addClass('active');
-    var expr = $(this).filter(':checked').attr('id');
-    var k = parseInt(expr.replace('monster', ''));
-    monster = monsters[k];
-    $('#nome').text(monster.nome);
-    document.getElementById('output').src = monster.base64;
-});
-
 $('#add').click(function() {
    $('#camera').click();
 });
