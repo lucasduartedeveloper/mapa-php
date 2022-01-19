@@ -76,6 +76,32 @@ function reload() {
       }});
       
       $.getJSON( "/ajax/localizacao_gps.php?select=true", function(data) {
+
+            var label1 = "";
+            var label2 = "";
+            var label3 = "";
+
+            for (var k in data) {
+
+            var html = "<label class=/""btn btn-outline-dark btn-sm active/""><input type=/""radio/"" display=/""none/"" name=/""cor/"" id=/"""+data[k].cor+/""" autocomplete=/""off/""><div class=/""icone/"" style=/""background-color:/"+data[k].cor+";/""></div></label>";
+
+           if (k <= 3) {
+               label1 += html;
+           }
+           else if (k <= 7) {
+               label2 += html;
+           }
+           else if (k <= 11) {
+               label3 += html;
+           }
+
+           }
+
+           // menu
+           $('#teste1').html(label1);
+           $('#teste2').html(label2);
+           $('#teste3').html(label3);
+
             console.log(data);
       });
 }
