@@ -57,7 +57,7 @@ function reload() {
       $.getJSON( "/ajax/localizacao_gps.php", function(data) {
           console.log(data);
 
-         for (k in data) {
+         for (var k in data) {
 	var circle = L.circle([data[k].latitude, data[k].longitude], {
 		fillOpacity: 0,
         		radius: 2.5,
