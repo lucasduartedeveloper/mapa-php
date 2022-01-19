@@ -58,8 +58,6 @@ function reload() {
           console.log(data);
 
          for (k in data) {
-	var pos = posicaoNoGrid(e.latlng);
-
 	var circle = L.circle([data[k].latitude, data[k].longitude], {
 		fillOpacity: 0,
         		radius: 2.5,
