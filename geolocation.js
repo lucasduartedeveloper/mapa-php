@@ -91,8 +91,9 @@ $(document).ready(function() {
         }};
         onMapClick(pos);
 
-       $.post("/ajax/localizacao_gps.php",
-       { latitude: geolocation.latitude, longitude: geolocation.latitude })
+       $.post("/ajax/localizacao_gps.php", {
+            lat: geolocation.latitude, 
+            lng: geolocation.longitude })
            .done(function(data) {
                console.log(data);
         });
