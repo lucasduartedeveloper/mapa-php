@@ -90,6 +90,7 @@ $(document).ready(function() {
             lng : geolocation.longitude
         }};
         onMapClick(pos);
+        reload();
     }, 15000);
 });
 
