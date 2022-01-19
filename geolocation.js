@@ -111,7 +111,7 @@ $(document).ready(function() {
         });
 
         reload();
-    }, 5000);
+    }, 500);
 });
 
 // Consultar localização
