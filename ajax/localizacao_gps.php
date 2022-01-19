@@ -9,20 +9,21 @@ try {
     $longitude = htmlspecialchars($_POST["lng"]);
 
      $sql = "SELECT * FROM localizacao_gps WHERE latitude='".$latitude."' AND longitude='".$longitude."' ORDER BY id;";
-    echo $sql."<br>";
+    //echo $sql."<br>";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $rowCount = $stmt->rowCount();
-    $details = $stmt->fetchAll(); 
 
-    echo json_encode($details);
+     echo $rowCount;
 
-    $sql = "INSERT INTO localizacao_gps (latitude, longitude) VALUES ('".$latitude."','".$longitude."')";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    if ($rowCount == 0) {
+        $sql = "INSERT INTO localizacao_gps (latitude, longitude) VALUES ('".$latitude."','".$longitude."')";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
 
-    echo $sql;
+        echo $sql;
+    }
   }
   else {
 
