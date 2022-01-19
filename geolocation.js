@@ -69,7 +69,7 @@ function reload() {
         		stroke: false
 	}).addTo(map);
 
-	data[k].rectangle = L.rectangle(circle.getBounds(), {color: "#0066cc", weight: 1}).addTo(map);
+	data[k].rectangle = L.rectangle(circle.getBounds(), {color: "#" + cor, weight: 1}).addTo(map);
 	}
 
          reguas = data;
