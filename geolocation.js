@@ -119,6 +119,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
+var intervalo = 5000;
 var foo = function() {
         getLocation();
         var pos = posicaoNoGrid({
@@ -140,7 +141,7 @@ var foo = function() {
         });
 
         var numberOfMlSeconds = new Date().getTime();
-        var addMlSeconds = parseInt($("#intervalo").value) * 1000;
+        var addMlSeconds = intervalo;
         var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
 
         countDownDate = newDateObj;
@@ -148,7 +149,7 @@ var foo = function() {
 
 $(document).ready(function() {
     foo();
-    setInterval(foo, parseInt($("#intervalo").value) * 1000);
+    setInterval(foo, intervalo);
 });
 
 // Consultar localização
@@ -197,9 +198,10 @@ $(document).on('change', ':radio[name="cor"]', function() {
 });
 
 $(document).on('change', ':input[id="intervalo"]', function() {
-    parseInt($("#intervalo").value)
+    intervalo = parseInt($("#intervalo").value)
     clearInterval(foo);
-    setInterval(foo, parseInt($("#intervalo").value) * 1000);
+    setInterval(foo, intervalo);
+    console.log(intervalo);
 });
 
 getLocation();
