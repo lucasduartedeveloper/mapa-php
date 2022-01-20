@@ -65,7 +65,7 @@ html, body {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px
     -margin: 0px;
     color: #fff;
 }
@@ -81,8 +81,12 @@ p.contador {
 }
 
 p info {
-   margin: 0px;
-   font-size: 15px;
+    margin: 0px ;
+    font-size: 15px !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px
 }
 
 .my-float{
