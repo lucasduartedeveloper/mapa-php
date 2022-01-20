@@ -159,7 +159,7 @@ function getLocation()
     {
     navigator.geolocation.getCurrentPosition(showPosition,showError);
     $("#local-info").html(
-         "Local: <i class=\"bi bi-check-square-fill\"></i>");
+         "Localização: <i class=\"bi bi-check-square-fill\"></i>");
     }
   else{
       console.log("Seu browser não suporta Geolocalização.");
