@@ -26,14 +26,17 @@ catch (PDOException $e) {
 <html>
 <head>
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/favicon.ico" />
-<link rel="manifest" href="/manifest.json?v=1">
+<link rel="apple-touch-icon" sizes="76x76" href="/webapp/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/webapp/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/webapp/favicon-16x16.png">
+<link rel="manifest" href="/webapp/site.webmanifest">
+<link rel="mask-icon" href="/webapp/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=51">
+<link rel="stylesheet" href="/css/style.css?v=52">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -74,7 +77,7 @@ catch (PDOException $e) {
 
 <div class="box3">
    <p></p>
-    <img class="logo" src="/img/logo.jpeg"/>
+    <img class="logo" src="/img/logo.png"/>
     <p class="contador"><?=$contar?> visitas</p>
 
     <div class="info-box">
