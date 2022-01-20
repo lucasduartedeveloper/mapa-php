@@ -158,8 +158,7 @@ function getLocation()
   if (navigator.geolocation)
     {
     navigator.geolocation.getCurrentPosition(showPosition,showError);
-    $("#local-info").html(
-         "Localização: <i class=\"bi bi-check-square-fill\"></i>");
+    $("#local-info").html("Localização: <i class=\"bi bi-check-square-fill\"></i>");
     }
   else{
       console.log("Seu browser não suporta Geolocalização.");
@@ -206,8 +205,7 @@ if(window.DeviceMotionEvent){
   window.addEventListener("devicemotion", motion, false);
 }else{
   console.log("DeviceMotionEvent is not supported");
-    $("#motion-info").html(
-         "Localização: <i class=\"bi bi-check-square-fill\"></i>");
+    $("#motion-info").html("Localização: <i class=\"bi bi-check-square-fill\"></i>");
     }
 }
 
