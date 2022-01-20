@@ -141,13 +141,13 @@ $(document).ready(function() {
         });
 
         var numberOfMlSeconds = new Date().getTime();
-        var addMlSeconds = 5000;
+        var addMlSeconds = $("#intervalo").value() * 1000;
         var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
 
         countDownDate = newDateObj;
     };
     foo();
-    setInterval(foo, 5000);
+    setInterval(foo, $("#intervalo").value() * 1000);
 });
 
 // Consultar localização
