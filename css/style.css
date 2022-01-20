@@ -70,6 +70,12 @@ html, body {
     color: #fff;
 }
 
+p.local {
+   font-size: 20px;
+   margin: 0px;
+   padding: 0px;
+}
+
 p.contador {
    font-size: 20px;
 }
