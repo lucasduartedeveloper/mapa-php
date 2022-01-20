@@ -47,7 +47,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p id="nome" class="local"></p>
+    <p id="nome" class="local">TESTE GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -68,8 +68,6 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Mudar
     </button>
-    <label hidden for="velocidade" class="form-label">Intervalo</label>
-    <input id="intervalo" type="range" class="form-range" min="0" max="30" value="5">
 <div id='loading'>
   <div class='outer-shadow'>
   </div>
