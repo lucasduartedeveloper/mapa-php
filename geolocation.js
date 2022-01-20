@@ -150,6 +150,8 @@ $(document).ready(function() {
     setInterval(foo, 5000);
 });
 
+$("#intervalo").
+
 // Consultar localização
 function getLocation()
   {
@@ -193,6 +195,11 @@ $(document).on('change', ':radio[name="cor"]', function() {
     $(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
     cor = expr;
+});
+
+$(document).on('change', ':input[id="intervalo"]', function() {
+    console.log(
+    $(this));
 });
 
 getLocation();

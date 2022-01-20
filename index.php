@@ -68,7 +68,7 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Mudar
     </button>
-    <label for="velocidade" class="form-label">Intervalo</label>
+    <label hidden for="velocidade" class="form-label">Intervalo</label>
     <input id="intervalo" type="range" class="form-range" id="velocidade" min="0" max="10">
 </div>
 
@@ -85,7 +85,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=126"></script>
-<script src="/geolocation.js?v142"></script> 
+<script src="/geolocation.js?v143"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
