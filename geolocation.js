@@ -206,7 +206,6 @@ if(window.DeviceMotionEvent){
 }else{
   console.log("DeviceMotionEvent is not supported");
     $("#motion-info").html("Localização: <i class=\"bi bi-check-square-fill\"></i>");
-    }
 }
 
 function motion(event){
