@@ -71,7 +71,8 @@ catch (PDOException $e) {
 </div>
 
 <div class="box3">
-   <p></p>
+   <p>KHHFFDJOOJGDB</p>
+    <p class="contador"><?=$contar?> visitas</p>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
