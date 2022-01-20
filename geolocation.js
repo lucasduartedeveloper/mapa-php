@@ -158,7 +158,6 @@ function getLocation()
   if (navigator.geolocation)
     {
     navigator.geolocation.getCurrentPosition(showPosition,showError);
-    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
     }
   else{
       console.log("Seu browser não suporta Geolocalização.");
@@ -174,6 +173,8 @@ function showPosition(position)
   }
 function showError(error)
   {
+    $("#local-info").html("geolocation: <i class=\"bi bi-check-square\"></i>");
+
   switch(error.code)
     {
     case error.PERMISSION_DENIED:

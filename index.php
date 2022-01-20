@@ -76,7 +76,7 @@ catch (PDOException $e) {
 
     <div class="info-box">
     <p id="local-info" class="info">geolocation: 
-        <i class="bi bi-check-square"></i></p>
+        <i class="bi bi-check-square-fill"></i></p>
     <p id="motion-info" class="info">devicemotion: 
         <i class="bi bi-check-square"></i></p>
      </div>
@@ -95,7 +95,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=127"></script>
-<script src="/geolocation.js?v162"></script> 
+<script src="/geolocation.js?v163"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
