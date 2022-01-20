@@ -67,7 +67,7 @@ html, body {
     padding-top: 10px;
     padding-bottom: 10px;
     -margin: 0px;
-    color: #ff;
+    color: #fff;
 }
 
 p.local {
@@ -133,4 +133,8 @@ label.btn.active{
     60% { bottom: 50vw; }
     80% { bottom: 50vw; }
     100% { bottom: 48vw; }
+}
+
+.logo {
+    transform: scaleX(-1);
 }

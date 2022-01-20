@@ -30,7 +30,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=36">
+<link rel="stylesheet" href="/css/style.css?v=38">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -71,7 +71,8 @@ catch (PDOException $e) {
 </div>
 
 <div class="box3">
-   <p>KHHFFDJOOJGDB</p>
+   <p></p>
+    <img class="logo" src="/img/logo.jpeg"/>
     <p class="contador"><?=$contar?> visitas</p>
 </div>
 
