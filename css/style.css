@@ -90,8 +90,7 @@ p.info {
 }
 
 .info-box {
-    border-color: #fff;
-    border-width: 1px !important;
+    border: #fff 1px solid;
 }
 
 .my-float{
