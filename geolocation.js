@@ -19,8 +19,11 @@ var  regua = {};
 var cor = "";
 
 function play() {
-  var audio = new Audio('/audio/coin.mp3');
-  audio.play();  
+  try {
+      var audio = new Audio('/audio/coin.mp3');
+      audio.play(); 
+  } 
+  catch {}
   $("#coin").addClass("animate");
   setInterval (function() {
       $("#coin").removeClass("animate");
