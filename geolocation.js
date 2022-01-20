@@ -198,9 +198,10 @@ $(document).on('change', ':radio[name="cor"]', function() {
 });
 
 $(document).on('change', ':input[id="intervalo"]', function() {
-    intervalo = $(this).value;
+    intervalo = $(this).val();
+    clearInterval(foo);
+
     if(intervalo > 0) {
-        clearInterval(foo);
         setInterval(foo, intervalo);
     }
     console.log(intervalo);
