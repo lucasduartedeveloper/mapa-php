@@ -119,8 +119,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-$(document).ready(function() {
-   var foo = function() {
+var foo = function() {
         getLocation();
         var pos = posicaoNoGrid({
             lat : geolocation.latitude,
@@ -145,7 +144,9 @@ $(document).ready(function() {
         var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
 
         countDownDate = newDateObj;
-    };
+};
+
+$(document).ready(function() {
     foo();
     setInterval(foo, $("#intervalo").value() * 1000);
 });
@@ -196,7 +197,8 @@ $(document).on('change', ':radio[name="cor"]', function() {
 });
 
 $(document).on('change', ':input[id="intervalo"]', function() {
-    console.log($(this));
+    clearInterval(foo);
+    setInterval(foo, $("#intervalo").value() * 1000);
 });
 
 getLocation();
