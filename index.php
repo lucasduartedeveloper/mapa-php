@@ -47,7 +47,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div class="box2">
-    <p id="nome" class="local">TESTE GPS</p>
+    <p id="nome" class="local">TESTE GPS v0.9</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -62,7 +62,6 @@ catch (PDOException $e) {
         <i class="bi bi-camera-fill"></i>
     </button>
     </div>
-    <p class="contador"><?=$contar?> visitas</p>
     <p id="horas"></p>
     <button hidden id="target" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
@@ -74,6 +73,11 @@ catch (PDOException $e) {
    <p></p>
     <img class="logo" src="/img/logo.jpeg"/>
     <p class="contador"><?=$contar?> visitas</p>
+
+    <p class="contador">Localização: 
+        <i class="bi bi-check-square"></i></p>
+    <p class="contador">Acelerômetro: 
+        <i class="bi bi-check-square"></i></p>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
