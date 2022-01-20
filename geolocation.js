@@ -203,7 +203,7 @@ $(document).on('change', ':radio[name="cor"]', function() {
 
 getLocation();
 
-
+// TESTE SENSORES
 if(window.DeviceMotionEvent){
   window.addEventListener("devicemotion", motion, false);
   $("#motion-info").html("devicemotion: <i class=\"bi bi-check-square-fill\"></i>");
@@ -220,11 +220,13 @@ function motion(event){
   );*/
 }
 
-let magSensor = new Magnetometer({frequency: 60});
-
-magSensor.addEventListener('reading', e => {
-  console.log("Magnetic field along the X-axis " + magSensor.x);
-  console.log("Magnetic field along the Y-axis " + magSensor.y);
-  console.log("Magnetic field along the Z-axis " + magSensor.z);
+window.addEventListener('userproximity', function(event) {
+  console.log(event);
+  if (event.near) {
+    // let's power off the screen
+    navigator.mozPower.screenEnabled = false;
+  } else {
+    // Otherwise, let's power on the screen
+    navigator.mozPower.screenEnabled = true;
+  }
 });
-magSensor.start();
