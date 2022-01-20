@@ -198,8 +198,7 @@ $(document).on('change', ':radio[name="cor"]', function() {
 });
 
 $(document).on('change', ':input[id="intervalo"]', function() {
-    console.log(
-    $(this));
+    console.log($(this));
 });
 
 getLocation();
