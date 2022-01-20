@@ -80,6 +80,10 @@ p.contador {
    font-size: 20px;
 }
 
+p info {
+   margin: 0px;
+}
+
 .my-float{
    position:fixed;
    top:20px;

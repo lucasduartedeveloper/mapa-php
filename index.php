@@ -30,7 +30,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=38">
+<link rel="stylesheet" href="/css/style.css?v=39">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -74,9 +74,9 @@ catch (PDOException $e) {
     <img class="logo" src="/img/logo.jpeg"/>
     <p class="contador"><?=$contar?> visitas</p>
 
-    <p class="contador">Localização: 
+    <p class="info">Localização: 
         <i class="bi bi-check-square"></i></p>
-    <p class="contador">Acelerômetro: 
+    <p class="info">Movimento: 
         <i class="bi bi-check-square"></i></p>
 </div>
 
@@ -93,7 +93,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=127"></script>
-<script src="/geolocation.js?v157"></script> 
+<script src="/geolocation.js?v158"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
