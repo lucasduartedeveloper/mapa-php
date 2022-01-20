@@ -166,8 +166,7 @@ function getLocation()
 
 function showPosition(position)
   {
-  console.log("Latitude: " + position.coords.latitude +
-  " / Longitude: " + position.coords.longitude); 
+  //console.log("Latitude: " + position.coords.latitude + " / Longitude: " + position.coords.longitude); 
    geolocation.latitude = position.coords.latitude;
    geolocation.longitude = position.coords.longitude;
   }
@@ -210,9 +209,19 @@ if(window.DeviceMotionEvent){
 }
 
 function motion(event){
+  /*
   console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );
+  );*/
 }
+
+let magSensor = new Magnetometer({frequency: 60});
+
+magSensor.addEventListener('reading', e => {
+  console.log("Magnetic field along the X-axis " + magSensor.x);
+  console.log("Magnetic field along the Y-axis " + magSensor.y);
+  console.log("Magnetic field along the Z-axis " + magSensor.z);
+});
+magSensor.start();
