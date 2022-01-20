@@ -1,13 +1,13 @@
 {
   "short_name": "Teste GPS",
   "name": "Teste GPS",
-  "display" : "fullscreen"
+  "display" : "fullscreen",
   "icons": [
     {
-      "src": "/img/logo.jpeg",
-      "type": "image/jpeg",
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
       "sizes": "48x48"
     },
   ],
-  "start_url": "https://mapa-php.herokuapp.com/"
+  "start_url": "/"
 }
