@@ -52,7 +52,7 @@ function posicaoNoGrid(pos) {
   pos.lat = inicio.lat + ((a * c) * -1);
   pos.lng = inicio.lng + ((d * f) * -1);
 
-  console.log(pos);
+  //console.log(pos);
   return pos;
 }
 
@@ -106,7 +106,7 @@ function reload() {
            $('#teste2').html(label2);
            $('#teste3').html(label3);
 
-            console.log(data);
+            //console.log(data);
       });
 }
 
@@ -197,6 +197,7 @@ $(document).on('change', ':radio[name="cor"]', function() {
 });
 
 $(document).on('change', ':input[id="intervalo"]', function() {
+    parseInt($("#intervalo").value)
     clearInterval(foo);
     setInterval(foo, parseInt($("#intervalo").value) * 1000);
 });
