@@ -208,3 +208,18 @@ $(document).on('change', ':input[id="intervalo"]', function() {
 });
 
 getLocation();
+
+
+if(window.DeviceMotionEvent){
+  window.addEventListener("devicemotion", motion, false);
+}else{
+  console.log("DeviceMotionEvent is not supported");
+}
+
+function motion(event){
+  console.log("Accelerometer: "
+    + event.accelerationIncludingGravity.x + ", "
+    + event.accelerationIncludingGravity.y + ", "
+    + event.accelerationIncludingGravity.z
+  );
+}
