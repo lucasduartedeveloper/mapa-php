@@ -33,8 +33,26 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+var pagina = 2;
 $( "#menu" ).click(function() {
-    $(".box2").toggle();
+    
+    pagina = pagina -1;
+    pagina = pagina < 0 ? 2 : pagina;
+
+    switch (pagina) {
+         case 0:
+           $(".box2").hide();
+           $(".box3").hide();
+         break;
+         case 1:
+           $(".box2").show();
+           $(".box3").hide();
+         break;
+         case 2:
+           $(".box2").show();
+           $(".box3").show();
+         break;
+    }
 });
 
 $('#add').click(function() {
