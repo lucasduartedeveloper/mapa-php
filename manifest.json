@@ -3,7 +3,7 @@
   "name": "Teste GPS",
   "icons": [
     {
-      "src": "/img/logo jpeg",
+      "src": "/img/logo.jpeg",
       "type": "image/jpeg",
       "sizes": "48x48"
     },
