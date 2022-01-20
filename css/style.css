@@ -91,7 +91,7 @@ p.info {
 
 .info-box {
     border-color: #fff;
-    border-width: 1px;
+    border-width: 1px !important;
 }
 
 .my-float{
