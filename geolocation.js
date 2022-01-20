@@ -140,7 +140,7 @@ var foo = function() {
         });
 
         var numberOfMlSeconds = new Date().getTime();
-        var addMlSeconds = $("#intervalo").value * 1000;
+        var addMlSeconds = parseInt($("#intervalo").value) * 1000;
         var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
 
         countDownDate = newDateObj;
@@ -148,7 +148,7 @@ var foo = function() {
 
 $(document).ready(function() {
     foo();
-    setInterval(foo, $("#intervalo").value * 1000);
+    setInterval(foo, parseInt($("#intervalo").value) * 1000);
 });
 
 // Consultar localização
@@ -198,7 +198,7 @@ $(document).on('change', ':radio[name="cor"]', function() {
 
 $(document).on('change', ':input[id="intervalo"]', function() {
     clearInterval(foo);
-    setInterval(foo, $("#intervalo").value * 1000);
+    setInterval(foo, parseInt($("#intervalo").value) * 1000);
 });
 
 getLocation();
