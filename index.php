@@ -26,8 +26,8 @@ catch (PDOException $e) {
 <html>
 <head>
 
-<link rel="shortcut icon" href="assets/icons/favicon.ico" />
-<link rel="apple-touch-icon" href="assets/icons/homescreen-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/favicon.icon" />
 
 <link rel="manifest" href="manifest.json">
 
