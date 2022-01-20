@@ -30,9 +30,9 @@ catch (PDOException $e) {
 <link rel="icon" type="image/png" sizes="32x32" href="/webapp/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/webapp/favicon-16x16.png">
 <link rel="manifest" href="/webapp/site.webmanifest">
-<link rel="mask-icon" href="/webapp/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+<link rel="mask-icon" href="/webapp/safari-pinned-tab.svg" color="#c0c8cf">
+<meta name="msapplication-TileColor" content="#c0c8cf">
+<meta name="theme-color" content="#c0c8cf">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
