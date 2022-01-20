@@ -85,7 +85,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=126"></script>
-<script src="/geolocation.js?v143"></script> 
+<script src="/geolocation.js?v144"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

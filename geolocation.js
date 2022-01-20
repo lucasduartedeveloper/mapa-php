@@ -150,8 +150,6 @@ $(document).ready(function() {
     setInterval(foo, 5000);
 });
 
-$("#intervalo").
-
 // Consultar localização
 function getLocation()
   {
