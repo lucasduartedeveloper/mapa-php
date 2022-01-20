@@ -30,7 +30,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=31">
+<link rel="stylesheet" href="/css/style.css?v=32">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -70,6 +70,18 @@ catch (PDOException $e) {
     </button>
     <label hidden for="velocidade" class="form-label">Intervalo</label>
     <input id="intervalo" type="range" class="form-range" min="0" max="30" value="5">
+<div id='loading'>
+  <div class='outer-shadow'>
+  </div>
+  <div class='inner-shadow'>
+  </div>
+  <div class='hold left'>
+    <div class='fill'></div>
+  </div>
+  <div class='hold right'>
+    <div class='fill'></div>
+  </div>
+</div>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
@@ -85,7 +97,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=126"></script>
-<script src="/geolocation.js?v155"></script> 
+<script src="/geolocation.js?v156"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

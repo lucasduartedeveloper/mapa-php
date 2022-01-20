@@ -197,16 +197,6 @@ $(document).on('change', ':radio[name="cor"]', function() {
     cor = expr;
 });
 
-$(document).on('change', ':input[id="intervalo"]', function() {
-    intervalo = parseInt($(this).val()) * 1000;
-    clearInterval(foo);
-
-    if(intervalo > 0) {
-        setInterval(foo, intervalo);
-    }
-    //console.log(intervalo);
-});
-
 getLocation();
 
 
