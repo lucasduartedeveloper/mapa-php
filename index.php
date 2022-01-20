@@ -26,9 +26,9 @@ catch (PDOException $e) {
 <html>
 <head>
 
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/favicon.icon" />
-
+<link rel="apple-touch-icon" href="/favicon.ico" />
 <link rel="manifest" href="manifest.json">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>

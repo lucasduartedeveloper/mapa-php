@@ -1,6 +1,7 @@
 {
   "short_name": "Teste GPS",
   "name": "Teste GPS",
+  "display" : "fullscreen"
   "icons": [
     {
       "src": "/img/logo.jpeg",
