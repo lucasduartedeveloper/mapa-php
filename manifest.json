@@ -1,22 +1,12 @@
 {
-  "short_name": "Apiki Blog",
-  "name": "Blog sobre WordPress da Apiki",
+  "short_name": "Teste GPS",
+  "name": "",
   "icons": [
     {
-      "src": "icon-1x.png",
-      "type": "image/png",
+      "src": "favicon.ico",
+      "type": "image/ico",
       "sizes": "48x48"
     },
-    {
-      "src": "icon-2x.png",
-      "type": "image/png",
-      "sizes": "96x96"
-    },
-    {
-      "src": "4x.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    }
   ],
-  "start_url": "https://blog.apiki.com/?pwa_launcher=true"
+  "start_url": "https://mapa-php.herokuapp.com/"
 }
