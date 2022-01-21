@@ -233,13 +233,13 @@ function light(event) {
     lightValue = event.value;
     animar();
     //console.log(event.value);
-  }
+}
 
 function animar() {
     console.log("lightValue: " + lightValue);
     console.log("motionValue: " + motionValue);
 
-    if(lightValue = 0 & motionValue = 0) {
+    if(lightValue = 0 && motionValue = 0) {
         $("#front").attr("src", "/img/front-0.png");
     }
     else if (lightValue > 0) {
