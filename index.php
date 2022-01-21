@@ -89,6 +89,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
+    <img class="logo" src="/img/face-neutral.png"/>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
