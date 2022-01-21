@@ -246,11 +246,11 @@ function animar() {
     }
     else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-1.png");
-        type("Uma luz está acesa");
+        //type("Uma luz está acesa");
     }
     else {
         $("#front").attr("src", "/img/front-2.png");
-        type("Jdjjsnhdkdk");
+        //type("Jdjjsnhdkdk");
     }
 }
 
