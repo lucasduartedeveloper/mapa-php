@@ -242,11 +242,14 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-0.png");
+        $("#typed-info").text("TUDO TRANQUILO");
     }
     else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-1.png");
+        $("#typed-info").text("UMA LUZ FOI ACESA");
     }
     else {
         $("#front").attr("src", "/img/front-2.png");
+        $("#typed-info").text("ESTAMOS ANDANDO");
     }
 }
