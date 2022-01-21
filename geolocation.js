@@ -202,19 +202,19 @@ $(document).on('change', ':radio[name="cor"]', function() {
 getLocation();
 
 // SENSOR DE MOVIMENTO
+var motionValue = 0;
 if(window.DeviceMotionEvent){
   window.addEventListener("devicemotion", motion, false);
   $("#motion-info").html("devicemotion: <i class=\"bi bi-check-square-fill\"></i>");
-}else{
-  console.log("DeviceMotionEvent is not supported");
 }
-
 function motion(event){
-  console.log("Accelerometer: "
+  motionValue = event.accelerationIncludingGravity.x;
+  animar();
+  /*console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );
+  );*/
 }
 
 // SENSOR DE PROXIMIDADE
@@ -223,16 +223,29 @@ window.addEventListener('userproximity', function(event) {
 });
 
 // SENSOR DE LUZ
+var lightValue = 0;
 if ("ondevicelight" in window) {
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
-  function onUpdateDeviceLight(event) {
-    if(event.value = 0) {
+  window.addEventListener("devicelight", light);
+}
+
+function light(event) {
+    lightValue = event.value;
+    animar();
+    //console.log(event.value);
+  }
+
+function animar() {
+    console.log("lightValue: " + lightValue);
+    console.log("motionValue: " + motionValue);
+
+    if(lightValue = 0 & motionValue = 0) {
         $("#front").attr("src", "/img/front-0.png");
     }
-    else {
+    else if (lightValue > 0) {
         $("#front").attr("src", "/img/front-1.png");
     }
-    console.log(event.value);
-  }
-  window.addEventListener("devicelight", onUpdateDeviceLight);
+    else {
+        $("#front").attr("src", "/img/front-2.png");
+    }
 }
