@@ -234,8 +234,13 @@ window.addEventListener('userproximity', function(event) {
 
 if ("ondevicelight" in window) {
   function onUpdateDeviceLight(event) {
+    if(event.value > 0) {
+        $("#front").attr("src", "/img/front-0.png");
+    }
+    else {
+        $("#front").attr("src", "/img/front-1.png");
+    }
     console.log(event.value);
   }
-  
   window.addEventListener("devicelight", onUpdateDeviceLight);
 }
