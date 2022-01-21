@@ -248,11 +248,11 @@ function animar() {
     }
     else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/v1/blinking.gif");
-        type("Uma luz está acesa");
+        type("Uma luz está acesa " + lightValue);
     }
     else {
         $("#front").attr("src", "/img/v1/blinking.gif");
-        type("Jdjjsnhdkdk");
+        type("Jdjjsn " + motionValue + " hdkdk");
     }
 }
 
