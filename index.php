@@ -85,7 +85,7 @@ catch (PDOException $e) {
         <i class="bi bi-check-square-fill"></i></p>
     <p id="motion-info" class="info">devicemotion: 
         <i class="bi bi-check-square"></i></p>
-    <p id="motion-info" class="info">ambientlight: 
+    <p id="light-info" class="info">ambientlight: 
         <i class="bi bi-check-square"></i></p>
      </div>
 </div>
