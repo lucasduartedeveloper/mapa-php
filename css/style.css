@@ -171,7 +171,7 @@ label.btn.active{
 
 .typing-demo {
   height: 30px;
-  border-right: 20px solid #c0c8cf;
+  border-right: 15px solid #c0c8cf;
   white-space: nowrap;
   font-size: 25px;
   color: #c0c8cf;
