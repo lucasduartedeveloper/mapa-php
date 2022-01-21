@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var  reguas = [];
 var  regua = {};
-var cor = "";
+var cor = "#2f2e40";
 
 function play() {
    return;
@@ -265,6 +265,6 @@ function type(text) {
          $(".typing-wrapper").html(html);
          running = 1;
          last_text = text;
-         setInterval(function() { running = 0 }, 5000);
+         setInterval(function() { running = 0; }, 5000);
      }
 }
