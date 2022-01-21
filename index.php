@@ -94,6 +94,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
+    <p class="contador">NOU v74.129.192</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
     <div class="typing-wrapper"></div>
 </div>
