@@ -58,7 +58,7 @@ function posicaoNoGrid(pos) {
 }
 
 function reload() {
-      $.getJSON("/ajax/localizacao_gps.php", function(data) {
+         $.getJSON("/ajax/localizacao_gps.php", function(data) {
 
          //console.log(data);
          for (var k in reguas) {
@@ -121,6 +121,8 @@ map.on('click', onMapClick);
 
 var intervalo = 5000;
 var foo = function() {
+        type("Mapeando área");
+
         getLocation();
         var pos = posicaoNoGrid({
             lat : geolocation.latitude,
