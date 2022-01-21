@@ -265,6 +265,6 @@ function type(text) {
          $(".typing-wrapper").html(html);
          running = 1;
          last_text = text;
-         setInterval(function() { running = 0; }, 5000);
+         setTimeout(function() { running = 0; }, 5000);
      }
 }
