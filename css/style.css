@@ -169,9 +169,7 @@ label.btn.active{
 }
 
 .typing-demo {
-  width: 22ch;
   height: 30px;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   border-right: 20px solid #c0c8cf;
   white-space: nowrap;
   font-size: 25px;

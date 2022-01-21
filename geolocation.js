@@ -242,14 +242,19 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-0.png");
-        $("#typed-info").text("TUDO TRANQUILO");
+        type("Tudo tranquilo");
     }
     else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-1.png");
-        $("#typed-info").text("UMA LUZ FOI ACESA");
+        type("Uma luz está acesa");
     }
     else {
         $("#front").attr("src", "/img/front-2.png");
-        $("#typed-info").text("ESTAMOS ANDANDO");
+        type("Jdjjsnhdkdk");
     }
+}
+
+function type(text) {
+     var html = "<div class=\"typing-demo\" style=\"width: 22ch; animation: typing 2s steps(22), blink .5s step-end infinite alternate;\">" + text + "</div>";
+     $(".typing-wrapper").html(text);
 }
