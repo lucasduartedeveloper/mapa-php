@@ -246,16 +246,16 @@ function animar() {
     }
     else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-1.png");
-        //type("Uma luz está acesa");
+        type("Uma luz está acesa");
     }
     else {
         $("#front").attr("src", "/img/front-2.png");
-        //type("Jdjjsnhdkdk");
+        type("Jdjjsnhdkdk");
     }
 }
 
 function type(text) {
      $(".typing-wrapper").html("");
-     var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+2) + "ch; animation: typing 2s steps(" + (text.length+2) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
+     var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+3) + "ch; animation: typing 2s steps(" + (text.length+3) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
      $(".typing-wrapper").html(html);
 }
