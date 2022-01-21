@@ -242,7 +242,7 @@ function animar() {
     if(lightValue == 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-0.png");
     }
-    else if (lightValue > 0) {
+    else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/front-1.png");
     }
     else {
