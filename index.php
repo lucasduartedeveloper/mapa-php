@@ -101,7 +101,10 @@ catch (PDOException $e) {
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
 
+<img id="menu" class="my-float" src="/img/parafuso.png"/>
+<!-- 
 <i id="menu" class="bi bi-arrow-down-circle my-float"></i>
+ -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
