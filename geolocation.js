@@ -256,6 +256,6 @@ function animar() {
 
 function type(text) {
      $(".typing-wrapper").html("");
-     var html = "<div class=\"typing-demo\" style=\"width: " + text.length + "ch; animation: typing 2s steps(" + text.length +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
+     var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+2) + "ch; animation: typing 2s steps(" + (text.length+2) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
      $(".typing-wrapper").html(html);
 }
