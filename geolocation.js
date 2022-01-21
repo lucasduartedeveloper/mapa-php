@@ -65,6 +65,7 @@ function reload() {
              map.removeControl(reguas[k].rectangle);
          }
 
+         var ultimo = 0;
          for (var k in data) {
 	var circle = L.circle([data[k].latitude, data[k].longitude], {
 		fillOpacity: 0,
@@ -74,8 +75,15 @@ function reload() {
 	}).addTo(map);
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
+               
+               ultimo = k;
         }
 
+        var pos = {
+            lat : data[ultimo].latitude,
+            lng : data[ultimo].longitude
+        };
+        marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
         reguas = data;
 
         });
