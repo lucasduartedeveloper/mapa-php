@@ -19,11 +19,9 @@ var  regua = {};
 var cor = "";
 
 function play() {
-  try {
-      var audio = new Audio('/audio/coin.mp3');
-      audio.play(); 
-  } 
-  catch {}
+   return;
+   var audio = new Audio('/audio/coin.mp3');
+   audio.play(); 
   $("#coin").addClass("animate");
   setInterval (function() {
       $("#coin").removeClass("animate");
@@ -203,7 +201,7 @@ $(document).on('change', ':radio[name="cor"]', function() {
 
 getLocation();
 
-// TESTE SENSORES
+// SENSOR DE MOVIMENTO
 if(window.DeviceMotionEvent){
   window.addEventListener("devicemotion", motion, false);
   $("#motion-info").html("devicemotion: <i class=\"bi bi-check-square-fill\"></i>");
@@ -212,29 +210,21 @@ if(window.DeviceMotionEvent){
 }
 
 function motion(event){
-  /*
   console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );*/
+  );
 }
 
 window.addEventListener('userproximity', function(event) {
   console.log(event);
-  if (event.near) {
-    // let's power off the screen
-    navigator.mozPower.screenEnabled = false;
-  } else {
-    // Otherwise, let's power on the screen
-    navigator.mozPower.screenEnabled = true;
-  }
 });
 
-
+// SENSOR DE LUZ
 if ("ondevicelight" in window) {
   function onUpdateDeviceLight(event) {
-    if(event.value > 0) {
+    if(event.value = 0) {
         $("#front").attr("src", "/img/front-0.png");
     }
     else {
