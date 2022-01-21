@@ -1,13 +1,14 @@
 .typing-wrapper {
   /*This part is important for centering*/
+  width: 90vw;
   display: flex;
   align-items: left;
   justify-content: center;
 }
 
 .typing-demo {
-  width: 100vw;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  width: 24ch;
+  animation: typing 2s steps(24), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   color: #c0c8cf;
