@@ -152,3 +152,8 @@ label.btn.active{
 .logo {
     --transform: scaleX(-1);
 }
+
+.face {
+    width: 50vw;
+    height: 50vw;
+}
