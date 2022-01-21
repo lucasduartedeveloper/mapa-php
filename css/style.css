@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 8-bit;
-    src: url(/font/8-bit.ttf);
+    font-family: 8bit;
+    src: url(/font/8bit.ttf);
 }
 
 /* Always set the map height explicitly to define the size of the div
@@ -11,7 +11,7 @@
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
-    font-family: 8-bit !important;
+    font-family: 8bit !important;
     margin: 0;
     padding: 0;
     height: 100%;
