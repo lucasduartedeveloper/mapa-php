@@ -169,10 +169,10 @@ label.btn.active{
 }
 
 .typing-demo {
-  width: 24ch;
-  animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(20), blink .5s step-end infinite alternate;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 25px;
+  color: #c0c8cf;
   overflow: hidden;
 }
 
