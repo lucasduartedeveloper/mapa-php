@@ -217,12 +217,14 @@ function motion(event){
   );
 }
 
+// SENSOR DE PROXIMIDADE
 window.addEventListener('userproximity', function(event) {
   console.log(event);
 });
 
 // SENSOR DE LUZ
 if ("ondevicelight" in window) {
+  $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   function onUpdateDeviceLight(event) {
     if(event.value = 0) {
         $("#front").attr("src", "/img/front-0.png");
