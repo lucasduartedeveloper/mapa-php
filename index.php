@@ -52,7 +52,7 @@ catch (PDOException $e) {
 
 <div id="map" class="box">
 </div>
-<div class="box2">
+<div id="box2" class="box2">
     <p id="nome" class="local">TESTE GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
@@ -75,7 +75,7 @@ catch (PDOException $e) {
     </button>
 </div>
 
-<div class="box3">
+<div id="box3" class="box3">
    <p></p>
     <img class="logo" src="/img/logo.png"/>
     <p class="contador"><?=$contar?> visitas</p>
@@ -86,6 +86,9 @@ catch (PDOException $e) {
     <p id="motion-info" class="info">devicemotion: 
         <i class="bi bi-check-square"></i></p>
      </div>
+</div>
+
+<div id="box4" class="box3">
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
@@ -100,8 +103,8 @@ catch (PDOException $e) {
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-<script src="/script.js?v=127"></script>
-<script src="/geolocation.js?v166"></script> 
+<script src="/script.js?v=128"></script>
+<script src="/geolocation.js?v167"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

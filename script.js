@@ -37,20 +37,28 @@ var pagina = 2;
 $( "#menu" ).click(function() {
     
     pagina = pagina -1;
-    pagina = pagina < 0 ? 2 : pagina;
+    pagina = pagina < 0 ? 3 : pagina;
 
     switch (pagina) {
          case 0:
-           $(".box2").hide();
-           $(".box3").hide();
+           $("#box2").hide();
+           $("#box3").hide();
+           $("#box4").hide();
          break;
          case 1:
-           $(".box2").show();
-           $(".box3").hide();
+           $("#box2").show();
+           $("#box3").hide();
+           $("#box4").hide();
          break;
          case 2:
-           $(".box2").show();
-           $(".box3").show();
+           $("#box2").show();
+           $("#box3").show();
+           $("#box4").hide();
+         break;
+        case 3:
+           $("#box2").show();
+           $("#box3").show();
+           $("#box4").show();
          break;
     }
 });

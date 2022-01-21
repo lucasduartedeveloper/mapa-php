@@ -230,3 +230,12 @@ window.addEventListener('userproximity', function(event) {
     navigator.mozPower.screenEnabled = true;
   }
 });
+
+
+if ("ondevicelight" in window) {
+  function onUpdateDeviceLight(event) {
+    console.log(event.value);
+  }
+  
+  window.addEventListener("devicelight", onUpdateDeviceLight);
+}
