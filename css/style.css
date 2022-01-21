@@ -99,6 +99,8 @@ p.info {
    position:fixed;
    top:20px;
    right:20px;
+   width: 20px;
+   height: 20px;
 }
 
 #add{
