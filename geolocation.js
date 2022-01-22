@@ -1,5 +1,4 @@
 // Create the map
-var geolocation = { latitude: 0, longitude: 0 };
 //var map = L.map('map').setView([51.505, -0.09], 13);
 var map = L.map('map').setView([0, 0], 13);
 
@@ -73,12 +72,14 @@ function reload() {
 	}).addTo(map);
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
-              ultima = k;
+               ultima = k;
         }
 
         reguas = data;
-        geolocation.latitude = data[0].latitude;
-        geolocation.longitude = data[0].longitude;
+        onMapClick({ latlng: {
+             lat: reguas[reguas.length - 1].latitude,
+             lng: reguas[reguas.length - 1].longitude
+        }});
         });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
@@ -233,9 +234,7 @@ function success(position) {
 
 function error(error) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square\"></i>");
-   geolocation.latitude = reguas[reguas.length - 1].latitude;
-   geolocation.longitude = reguas[reguas.length - 1].longitude;
-
+   
   switch(error.code)  {
     case error.PERMISSION_DENIED:
       console.log("Usuário rejeitou a solicitação de Geolocalização.");
