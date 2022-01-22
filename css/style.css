@@ -207,9 +207,10 @@ label.btn.active{
      to { 
         -webkit-transform: rotate(0deg); 
         transform:rotate(0deg); 
-        top:-100px;
-        right:-100px;
+        top:-20px;
+        right:-20px;
         width: 100px;
         height: 100px;
+        opacity: 0.5;
     } 
 }
