@@ -104,7 +104,7 @@ p.info {
 }
 
 .my-float.rotating-out {
-    transform-origin: 40% 50%;
+    transform-origin: 47% 50.5%;
     -webkit-animation:rotating-out 1s infinite;
     -moz-animation:rotating-out 1s infinite;
     animation: rotating-out 1s infinite;
