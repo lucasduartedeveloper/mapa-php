@@ -124,7 +124,7 @@ function onMapClick(e) {
           }
      }
      if (novaArea) {
-         text("Você desbloqueou uma nova área");
+         type("Você entrou em uma nova área");
      }
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
