@@ -131,7 +131,6 @@ var foo = function() {
             lat : geolocation.latitude,
             lng : geolocation.longitude
         });
-        onMapClick({ latlng: pos });
 
        $.post("/ajax/localizacao_gps.php", {
             lat: pos.lat, 
@@ -143,11 +142,11 @@ var foo = function() {
                //console.log(data);
                play();
                reload();
+               onMapClick({ latlng: pos });
         });
 
         var numberOfMlSeconds = new Date().getTime();
-        var addMlSeconds = intervalo;
-        var newDateObj = new Date(numberOfMlSeconds + addMlSeconds);
+        var newDateObj = new Date(numberOfMlSeconds + intervalo);
 
         countDownDate = newDateObj;
 };
