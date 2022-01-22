@@ -21,7 +21,7 @@ function play() {
    var audio = new Audio('/audio/coin.mp3');
    audio.play(); 
    $("#coin").addClass("animate");
-   setInterval (function() {
+   setTimeout(function() {
    $("#coin").removeClass("animate");
   }, 2000);
 }
@@ -116,6 +116,17 @@ function reload() {
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
 
+     var novaArea = true;
+     for (var k in reguas) {
+          if (reguas[k].latitude == pos.lat &&
+               reguas[k].longitude == pos.lng) {
+               novaArea = false;
+          }
+     }
+     if (novaArea) {
+         text("Você desbloqueou uma nova área");
+     }
+
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     map.setView([pos.lat, pos.lng], 19);
 }
@@ -126,7 +137,7 @@ map.on('click', onMapClick);
 var intervalo = 15000;
 var foo = function() {
         reload();
-
+        
         var numberOfMlSeconds = new Date().getTime();
         var newDateObj = new Date(numberOfMlSeconds + intervalo);
 
