@@ -65,7 +65,6 @@ function reload() {
              map.removeControl(reguas[k].rectangle);
          }
          
-         var ultima = 0;
          for (var k in data) {
 	var circle = L.circle([data[k].latitude, data[k].longitude], {
 		fillOpacity: 0,
@@ -78,6 +77,7 @@ function reload() {
               ultima = k;
         }
 
+        var ultima = data.length - 1;
         reguas = data;
         geolocation.latitude = data[ultima].latitude;
         geolocation.longitude = data[ultima].longitude;
