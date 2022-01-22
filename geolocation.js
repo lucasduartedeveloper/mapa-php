@@ -114,6 +114,7 @@ function reload() {
 
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
+
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     map.setView([pos.lat, pos.lng], 19);
 }
@@ -121,10 +122,13 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 // ATUALIZAR 
-var intervalo = 60000;
+var intervalo = 15000;
 var foo = function() {
+        reload();
+
         var numberOfMlSeconds = new Date().getTime();
         var newDateObj = new Date(numberOfMlSeconds + intervalo);
+
         countDownDate = newDateObj;
 };
 
@@ -207,6 +211,8 @@ function type(text) {
 
 // Localização melhor
 function success(position) {
+   $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
+
    type("Mapeando área");
 
    var pos = posicaoNoGrid({
@@ -220,9 +226,8 @@ function success(position) {
         lng: pos.lng,
         cor: cor,
         })
-           .done(function(data) {
+        .done(function(data) {
                play();
-               reload();
         });
 }
 
@@ -249,8 +254,8 @@ function error(error) {
 
 const options = {
   enableHighAccuracy: true,
-  maximumAge: 30000,
-  timeout: 27000
+  maximumAge: 0,
+  timeout: 5000
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
