@@ -41,7 +41,7 @@ GROUP BY cor;";
   }
   else {
 
-    $sql = "SELECT * FROM localizacao_gps ORDER BY id;";
+    $sql = "SELECT * FROM localizacao_gps ORDER BY data_hora DESC;";
     //echo $sql."<br>";else {
 
     $stmt = $pdo->prepare($sql);
