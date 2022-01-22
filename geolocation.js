@@ -77,8 +77,8 @@ function reload() {
 
         reguas = data;
         onMapClick({ latlng: {
-             lat: reguas[reguas.length - 1].latitude,
-             lng: reguas[reguas.length - 1].longitude
+             lat: reguas[0].latitude,
+             lng: reguas[0].longitude
         }});
         });
 
