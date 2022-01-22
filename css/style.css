@@ -103,10 +103,10 @@ p.info {
    height: 60px;
 }
 
-.my-float .rotating {
-    -webkit-animation:rotating 4s infinite;
-    -moz-animation:rotating 4s infinite;
-    animation: rotating 4s infinite;
+.my-float.rotating-out {
+    -webkit-animation:rotating-out 4s infinite;
+    -moz-animation:rotating-out 4s infinite;
+    animation: rotating-out 4s infinite;
 }
 
 #add{
@@ -198,13 +198,18 @@ label.btn.active{
   }
 }
 
-@keyframes rotating { 
+@keyframes rotating-out { 
      from {
-        -webkit-transform: rotate(0deg);
-        transform:rotate(0deg); 
+        -webkit-transform: rotate(359deg);
+        transform:rotate(359deg); 
+        
      }
      to { 
-        -webkit-transform: rotate(359deg); 
-        transform:rotate(359deg); 
+        -webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+        top:-100px;
+        right:-100px;
+        width: 100px;
+        height: 100px;
     } 
 }

@@ -62,8 +62,8 @@ $( "#menu" ).click(function() {
          break;
     }
 
-    $(this).addClass ("rotating");
-    setTimeout(function() {  $(this).removeClass("rotating"); }, 4000);
+    $(this).addClass ("rotating-out");
+    setTimeout(function() {  $(this).removeClass("rotating-out"); }, 4000);
 });
 
 $('#add').click(function() {
