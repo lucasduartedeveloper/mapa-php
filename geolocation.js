@@ -114,7 +114,6 @@ function reload() {
 
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
-
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     map.setView([pos.lat, pos.lng], 19);
 }
@@ -195,7 +194,7 @@ function animar() {
 
 var last_text = "";
 var running = 0;
-function type(text, ) {
+function type(text) {
      if (running == 0 && text != last_text) {
          $(".typing-wrapper").html("");
          var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+3) + "ch; animation: typing 2s steps(" + (text.length+3) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
@@ -212,7 +211,7 @@ function success(position) {
 
    var pos = posicaoNoGrid({
         lat : position.coords.latitude,
-        lng : position.coords..longitude
+        lng : position.coords.longitude
     });
     onMapClick({ latlng: pos });
 
@@ -221,7 +220,7 @@ function success(position) {
         lng: pos.lng,
         cor: cor,
         })
-           .done(function(data)
+           .done(function(data) {
                play();
                reload();
         });
