@@ -125,11 +125,11 @@ var intervalo = 5000;
 var foo = function() {
         type("Mapeando área");
 
-        getLocation();
         var pos = posicaoNoGrid({
             lat : geolocation.latitude,
             lng : geolocation.longitude
         });
+       onMapClick({ latlng: pos });
 
        // PROBLEMA
        $.post("/ajax/localizacao_gps.php", {
@@ -142,7 +142,6 @@ var foo = function() {
                //console.log(data);
                play();
                reload();
-               onMapClick({ latlng: pos });
         });
 
         var numberOfMlSeconds = new Date().getTime();
