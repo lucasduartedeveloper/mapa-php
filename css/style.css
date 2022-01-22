@@ -167,6 +167,8 @@ label.btn.active{
 .front {
     width: 50vw;
     height: 50vw;
+    max-width: 128px;
+    max-height: 128px;
 }
 
  /*This part is important for centering*/
