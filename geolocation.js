@@ -82,7 +82,8 @@ function reload() {
         geolocation.latitude = data[ultima].latitude;
         geolocation.longitude = data[ultima].longitude;
         });
-      
+       console.log(geolocation);
+
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
 
             var label1 = "";
