@@ -77,11 +77,9 @@ function reload() {
               ultima = k;
         }
 
-        var ultima = data.length - 1;
-        reguas = data;
-        console.log(data[ultima]);
-        geolocation.latitude = data[ultima].latitude;
-        geolocation.longitude = data[ultima].longitude;
+        reguas = data;);
+        geolocation.latitude = data[0].latitude;
+        geolocation.longitude = data[0].longitude;
         });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
