@@ -244,7 +244,7 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         $("#front").attr("src", "/img/v1/blinking.gif");
-        type("Tudo tranquilo");
+        type("Não encontrei nada interessante");
     }
     else if (lightValue > 0 && motionValue == 0) {
         $("#front").attr("src", "/img/v1/blinking.gif");
