@@ -204,6 +204,12 @@ function type(text) {
          $(".typing-wrapper").html("");
          var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+3) + "ch; animation: typing 2s steps(" + (text.length+3) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
          $(".typing-wrapper").html(html);
+
+         // Teste SpeechSynthesisUtterance
+         var msg = new SpeechSynthesisUtterance();
+         msg.text = text;
+         window.speechSynthesis.speak(msg);
+
          running = 1;
          last_text = text;
          setTimeout(function() { running = 0; }, 5000);
