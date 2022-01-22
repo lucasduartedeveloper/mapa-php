@@ -131,6 +131,7 @@ var foo = function() {
             lng : geolocation.longitude
         });
 
+       // PROBLEMA
        $.post("/ajax/localizacao_gps.php", {
             lat: pos.lat, 
             lng: pos.lng,
@@ -155,55 +156,12 @@ $(document).ready(function() {
     setInterval(foo, intervalo);
 });
 
-// Consultar localização
-function getLocation()
-  {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.getCurrentPosition(showPosition,showError);
-    }
-  else{
-      console.log("Seu browser não suporta Geolocalização.");
-    }
-  }
-
-function showPosition(position)
-  {
-  //console.log("Latitude: " + position.coords.latitude + " / Longitude: " + position.coords.longitude); 
-   geolocation.latitude = position.coords.latitude;
-   geolocation.longitude = position.coords.longitude;
-  }
-function showError(error)
-  {
-    $("#local-info").html("geolocation: <i class=\"bi bi-check-square\"></i>");
-    geolocation.latitude = reguas[reguas.length - 1].latitude;
-    geolocation.longitude = reguas[reguas.length - 1].longitude;
-
-  switch(error.code)
-    {
-    case error.PERMISSION_DENIED:
-      console.log("Usuário rejeitou a solicitação de Geolocalização.");
-      break;
-    case error.POSITION_UNAVAILABLE:
-      console.log("Localização indisponível.");
-      break;
-    case error.TIMEOUT:
-      console.log("A requisição expirou.");
-      break;
-    case error.UNKNOWN_ERROR:
-      console.log("Algum erro desconhecido aconteceu.");
-      break;
-    }
-  }
-
 $(document).on('change', ':radio[name="cor"]', function() {
     $('label').removeClass('active');
     $(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
     cor = expr;
 });
-
-getLocation();
 
 // SENSOR DE MOVIMENTO
 var motionValue = 0;
@@ -269,3 +227,39 @@ function type(text, ) {
          setTimeout(function() { running = 0; }, 5000);
      }
 }
+
+// Localização melhor
+function success(position) {
+   geolocation.latitude = position.coords.latitude;
+   geolocation.longitude = position.coords.longitude;
+   console.log(position);
+}
+
+function error(error) {
+   $("#local-info").html("geolocation: <i class=\"bi bi-check-square\"></i>");
+   geolocation.latitude = reguas[reguas.length - 1].latitude;
+   geolocation.longitude = reguas[reguas.length - 1].longitude;
+
+  switch(error.code)  {
+    case error.PERMISSION_DENIED:
+      console.log("Usuário rejeitou a solicitação de Geolocalização.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      console.log("Localização indisponível.");
+      break;
+    case error.TIMEOUT:
+      console.log("A requisição expirou.");
+      break;
+    case error.UNKNOWN_ERROR:
+      console.log("Algum erro desconhecido aconteceu.");
+      break;
+    }
+}
+
+const options = {
+  enableHighAccuracy: true,
+  maximumAge: 30000,
+  timeout: 27000
+};
+
+const watchID = navigator.geolocation.watchPosition(success, error, options);
