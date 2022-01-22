@@ -63,7 +63,7 @@ $( "#menu" ).click(function() {
     }
 
     $(this).addClass ("rotating-out");
-    setTimeout(function() {  $(this).removeClass("rotating-out"); }, 1000);
+    setTimeout(function() {  $("#menu").removeClass("rotating-out"); }, 1000);
 });
 
 $('#add').click(function() {
