@@ -77,7 +77,7 @@ function reload() {
               ultima = k;
         }
 
-        reguas = data;);
+        reguas = data;
         geolocation.latitude = data[0].latitude;
         geolocation.longitude = data[0].longitude;
         });
