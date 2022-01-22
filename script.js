@@ -61,6 +61,9 @@ $( "#menu" ).click(function() {
            $("#box4").show();
          break;
     }
+
+    $(this).addClass ("spin");
+    setTimeout(function() {  $(this).removeClass("spin"); }, 4000);
 });
 
 $('#add').click(function() {
