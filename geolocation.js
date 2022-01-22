@@ -243,15 +243,15 @@ function animar() {
     //console.log("motionValue: " + motionValue);
 
     if(lightValue == 0 && motionValue == 0) {
-        $("#front").attr("src", "/img/v1/blinking.gif");
+        //$("#front").attr("src", "/img/v1/blinking.gif");
         type("Não encontrei nada interessante");
     }
     else if (lightValue > 0 && motionValue == 0) {
-        $("#front").attr("src", "/img/v1/blinking.gif");
+        //$("#front").attr("src", "/img/v1/blinking.gif");
         type("Uma luz está acesa " + lightValue);
     }
     else {
-        $("#front").attr("src", "/img/v1/blinking.gif");
+       // $("#front").attr("src", "/img/v1/blinking.gif");
         type("Me solte, por favor");
     }
 }
