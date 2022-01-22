@@ -57,7 +57,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 <div id="box2" class="box2">
-    <p id="nome" class="local">TESTE GPS</p>
+    <p id="nome" class="local">NOU GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
