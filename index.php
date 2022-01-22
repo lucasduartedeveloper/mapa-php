@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=83">
+<link rel="stylesheet" href="/css/style.css?v=84">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -94,7 +94,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v83.131.192</p>
+    <p class="contador">NOU v84.132.192</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
     <div class="typing-wrapper"></div>
 </div>
@@ -114,7 +114,7 @@ catch (PDOException $e) {
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-<script src="/script.js?v=131"></script>
+<script src="/script.js?v=132"></script>
 <script src="/geolocation.js?v192"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>

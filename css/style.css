@@ -104,9 +104,9 @@ p.info {
 }
 
 .my-float.rotating-out {
-    -webkit-animation:rotating-out 4s infinite;
-    -moz-animation:rotating-out 4s infinite;
-    animation: rotating-out 4s infinite;
+    -webkit-animation:rotating-out 1s infinite;
+    -moz-animation:rotating-out 1s infinite;
+    animation: rotating-out 1s infinite;
 }
 
 #add{
