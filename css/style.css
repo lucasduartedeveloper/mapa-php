@@ -103,10 +103,10 @@ p.info {
    height: 60px;
 }
 
-.my-float .spin {
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+.my-float .rotating {
+    -webkit-animation:rotating 4s infinite;
+    -moz-animation:rotating 4s infinite;
+    animation: rotating 4s infinite;
 }
 
 #add{
@@ -198,13 +198,13 @@ label.btn.active{
   }
 }
 
-@keyframes spin { 
+@keyframes rotating { 
      from {
         -webkit-transform: rotate(0deg);
         transform:rotate(0deg); 
      }
-     100% { 
-        -webkit-transform: rotate(360deg); 
+     to { 
+        -webkit-transform: rotate(359deg); 
         transform:rotate(359deg); 
     } 
 }

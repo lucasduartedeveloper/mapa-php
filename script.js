@@ -62,8 +62,8 @@ $( "#menu" ).click(function() {
          break;
     }
 
-    $(this).addClass ("spin");
-    setTimeout(function() {  $(this).removeClass("spin"); }, 4000);
+    $(this).addClass ("rotating");
+    setTimeout(function() {  $(this).removeClass("rotating"); }, 4000);
 });
 
 $('#add').click(function() {
