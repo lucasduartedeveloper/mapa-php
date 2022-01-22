@@ -252,7 +252,7 @@ function animar() {
     }
     else {
         $("#front").attr("src", "/img/v1/blinking.gif");
-        type("Jdjjsn " + motionValue + " hdkdk");
+        type("Me solte, por favor");
     }
 }
 
