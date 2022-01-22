@@ -258,7 +258,7 @@ function animar() {
 
 var last_text = "";
 var running = 0;
-function type(text) {
+function type(text, ) {
      if (running == 0 && text != last_text) {
          $(".typing-wrapper").html("");
          var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+3) + "ch; animation: typing 2s steps(" + (text.length+3) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
