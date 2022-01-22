@@ -77,10 +77,9 @@ function reload() {
               ultima = k;
         }
 
-        console.log(data.length);
-
         var ultima = data.length - 1;
         reguas = data;
+        console.log(data[ultima]);
         geolocation.latitude = data[ultima].latitude;
         geolocation.longitude = data[ultima].longitude;
         });
