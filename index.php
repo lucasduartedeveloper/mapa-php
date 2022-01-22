@@ -94,9 +94,9 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v89.134.205</p>
+    <p class="contador">NOU v89.134.206</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
-    <div class="typing-wrapper"></div>
+     <div class="typing-wrapper"></div>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
@@ -115,7 +115,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=134"></script>
-<script src="/geolocation.js?v205"></script> 
+<script src="/geolocation.js?v206"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
