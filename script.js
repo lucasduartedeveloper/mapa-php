@@ -66,8 +66,8 @@ $( "#menu" ).click(function() {
     setTimeout(function() {  $("#menu").removeClass("rotating-out"); }, 1000);
 });
 
-$('#add').click(function() {
-   $('#camera').click();
+$('#front').click(function() {
+   location.reload();
 });
 
 function saveImage() {

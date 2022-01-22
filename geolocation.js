@@ -22,9 +22,9 @@ function play() {
    return;
    var audio = new Audio('/audio/coin.mp3');
    audio.play(); 
-  $("#coin").addClass("animate");
-  setInterval (function() {
-      $("#coin").removeClass("animate");
+   $("#coin").addClass("animate");
+   setInterval (function() {
+   $("#coin").removeClass("animate");
   }, 2000);
 }
 
