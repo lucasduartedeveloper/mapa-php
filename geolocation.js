@@ -77,12 +77,13 @@ function reload() {
               ultima = k;
         }
 
+        console.log(data.length);
+
         var ultima = data.length - 1;
         reguas = data;
         geolocation.latitude = data[ultima].latitude;
         geolocation.longitude = data[ultima].longitude;
         });
-       console.log(geolocation);
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
 
