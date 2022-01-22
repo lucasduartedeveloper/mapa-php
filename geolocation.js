@@ -64,7 +64,8 @@ function reload() {
          for (var k in reguas) {
              map.removeControl(reguas[k].rectangle);
          }
-
+         
+         var ultima = 0;
          for (var k in data) {
 	var circle = L.circle([data[k].latitude, data[k].longitude], {
 		fillOpacity: 0,
@@ -77,6 +78,8 @@ function reload() {
         }
 
         reguas = data;
+        geolocation.latitude = data[k].latitude;
+        geolocation.longitude = data[k].longitude;
         });
       
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
