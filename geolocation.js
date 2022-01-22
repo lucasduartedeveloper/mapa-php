@@ -75,11 +75,12 @@ function reload() {
 	}).addTo(map);
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
+              ultima = k;
         }
 
         reguas = data;
-        geolocation.latitude = data[k].latitude;
-        geolocation.longitude = data[k].longitude;
+        geolocation.latitude = data[ultima].latitude;
+        geolocation.longitude = data[ultima].longitude;
         });
       
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
