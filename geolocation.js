@@ -121,32 +121,11 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-var intervalo = 5000;
+// ATUALIZAR 
+var intervalo = 60000;
 var foo = function() {
-        type("Mapeando área");
-
-        var pos = posicaoNoGrid({
-            lat : geolocation.latitude,
-            lng : geolocation.longitude
-        });
-       onMapClick({ latlng: pos });
-
-       // PROBLEMA
-       $.post("/ajax/localizacao_gps.php", {
-            lat: pos.lat, 
-            lng: pos.lng,
-            cor: cor,
-            })
-           .done(function(data) {
-               //console.log("post");
-               //console.log(data);
-               play();
-               reload();
-        });
-
         var numberOfMlSeconds = new Date().getTime();
         var newDateObj = new Date(numberOfMlSeconds + intervalo);
-
         countDownDate = newDateObj;
 };
 
@@ -229,9 +208,23 @@ function type(text, ) {
 
 // Localização melhor
 function success(position) {
-   geolocation.latitude = position.coords.latitude;
-   geolocation.longitude = position.coords.longitude;
-   console.log(position);
+   type("Mapeando área");
+
+   var pos = posicaoNoGrid({
+        lat : position.coords.latitude,
+        lng : position.coords..longitude
+    });
+    onMapClick({ latlng: pos });
+
+   $.post("/ajax/localizacao_gps.php", {
+        lat: pos.lat, 
+        lng: pos.lng,
+        cor: cor,
+        })
+           .done(function(data)
+               play();
+               reload();
+        });
 }
 
 function error(error) {
