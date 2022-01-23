@@ -17,13 +17,13 @@ var  reguas = [];
 var cor = "#2f2e40";
 
 function play() {
-   return;
+   //return;
    var audio = new Audio('/audio/coin.mp3');
    audio.play(); 
-   $("#coin").addClass("animate");
-   setTimeout(function() {
-   $("#coin").removeClass("animate");
-  }, 2000);
+   //$("#coin").addClass("animate");
+   //setTimeout(function() {
+   //$("#coin").removeClass("animate");
+  //}, 2000);
 }
 
 function posicaoNoGrid(pos) {
@@ -125,7 +125,8 @@ function onMapClick(e) {
      }
      if (novaArea) {
          type("Você entrou em uma nova área");
-         say("Você entrou em uma nova área");
+         //say("Você entrou em uma nova área");
+         play();
      }
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
@@ -257,7 +258,7 @@ function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
 
    type("Corrigindo localização");
-   say("Corrigindo localização");
+   //say("Corrigindo localização");
 
    var pos = posicaoNoGrid({
         lat : position.coords.latitude,
