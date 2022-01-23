@@ -248,7 +248,8 @@ function say(text) {
                   console.log("onend");
                   last_text2 = "";
               window.speechSynthesis.speak(msg);
-         }
+              }
+        }
 }
 
 // Localização melhor
