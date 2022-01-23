@@ -80,10 +80,6 @@ function reload() {
              lat: reguas[0].latitude,
              lng: reguas[0].longitude
         }});
-
-      $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
-          type("Estamos próximos à " + data.display_name);
-      });
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
@@ -160,6 +156,13 @@ $(document).on('change', ':radio[name="cor"]', function() {
     cor = expr;
 });
 
+$("#box4").click(function() {
+      $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
+          type("Dizendo localização");
+          say("Estamos próximos à " + data.display_name);
+      });
+});
+
 // SENSOR DE MOVIMENTO
 var motionValue = 0;
 if(window.DeviceMotionEvent){
@@ -200,15 +203,21 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
-        type("Não encontrei nada interessante");
+        var text = "Que lugar legal";
+        type(text);
+        say(text);
     }
     else if (lightValue > 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
-        type("Uma luz está acesa " + lightValue);
+        var text = "Uma luz está acesa " + lightValue;
+        type(text);
+        say(text);
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
-        type("Me solte, por favor");
+       var text = "Me solte, por favor";
+       type(text);
+       say(text);
     }
 }
 
@@ -220,22 +229,24 @@ function type(text) {
          var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+3) + "ch; animation: typing 2s steps(" + (text.length+3) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
          $(".typing-wrapper").html(html);
 
-         // Teste SpeechSynthesisUtterance
-         var msg = new SpeechSynthesisUtterance();
-         msg.text = text;
-         window.speechSynthesis.speak(msg);
-
          running = 1;
          last_text = text;
          setTimeout(function() { running = 0; }, 5000);
      }
 }
 
+function say(text) {
+         // Teste SpeechSynthesisUtterance
+         var msg = new SpeechSynthesisUtterance();
+         msg.text = text;
+         window.speechSynthesis.speak(msg);
+}
+
 // Localização melhor
 function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
 
-   type("Mapeando área");
+   type("Corrigindo localização");
 
    var pos = posicaoNoGrid({
         lat : position.coords.latitude,
