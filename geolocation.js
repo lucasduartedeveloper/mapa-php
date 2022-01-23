@@ -82,7 +82,7 @@ function reload() {
         }});
 
       $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
-          console.log(data);
+          type("Estamos próximos à " + data.display_name);
       });
       });
 
