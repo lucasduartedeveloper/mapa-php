@@ -59,7 +59,7 @@ catch (PDOException $e) {
 
 <div id="box1" class="box1">
      <!--  -->
-     <div id="turret" class="turret"></div>
+     <img id="turret" class="turret" src="/img/v1/blinking.gif"></div>
      <div id="laser" class="laser"></div>
 </div>
 
@@ -101,7 +101,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v89.134.231</p>
+    <p class="contador">NOU v90.135.231</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
      <div class="typing-wrapper"></div>
 </div>
