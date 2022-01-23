@@ -235,11 +235,15 @@ function type(text) {
      }
 }
 
+var last_text2 = "";
 function say(text) {
-         // Teste SpeechSynthesisUtterance
-         var msg = new SpeechSynthesisUtterance();
-         msg.text = text;
-         window.speechSynthesis.speak(msg);
+         if (text != last_text2) {
+              // Teste SpeechSynthesisUtterance
+              last_text2 = text;
+              var msg = new SpeechSynthesisUtterance();
+              msg.text = text;
+              window.speechSynthesis.speak(msg);
+         }
 }
 
 // Localização melhor
