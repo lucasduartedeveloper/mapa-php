@@ -57,7 +57,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 
-<div id="box1" class="box1">
+<div hidden id="box1" class="box1">
      <!--  -->
      <p class="contador">?</p>
      <img id="turret" class="turret" src="/img/v1/blinking.gif"/>
