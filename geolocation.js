@@ -238,11 +238,11 @@ function type(text) {
 var last_text2 = "";
 var running2 = 0;
 function say(text) {
-         if (text != last_text2 && running == 0 &&) {
+         if (text != last_text2 && running2 == 0) {
               // Teste SpeechSynthesisUtterance
-              //running2 = 2;
+              running2 = 2;
               last_text2 = text;
-              //setTimeout(function() { running2 = 0; }, 5000);
+              setTimeout(function() { running2 = 0; }, 5000);
 
               var msg = new SpeechSynthesisUtterance();
               msg.text = text;
