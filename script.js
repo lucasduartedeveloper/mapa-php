@@ -33,7 +33,7 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-var pagina = 2;
+var pagina = 3;
 $( "#menu" ).click(function() {
     
     pagina = pagina -1;
@@ -41,21 +41,31 @@ $( "#menu" ).click(function() {
 
     switch (pagina) {
          case 0:
+           $("#box1").hide();
            $("#box2").hide();
            $("#box3").hide();
            $("#box4").hide();
          break;
          case 1:
-           $("#box2").show();
+           $("#box1").show();
+           $("#box2").hide();
            $("#box3").hide();
            $("#box4").hide();
          break;
          case 2:
+           $("#box1").show();
+           $("#box2").show();
+           $("#box3").hide();
+           $("#box4").hide();
+         break;
+        case 3:
+           $("#box1").show();
            $("#box2").show();
            $("#box3").show();
            $("#box4").hide();
          break;
-        case 3:
+         case 4:
+           $("#box1").show();
            $("#box2").show();
            $("#box3").show();
            $("#box4").show();

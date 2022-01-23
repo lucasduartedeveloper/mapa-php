@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=89">
+<link rel="stylesheet" href="/css/style.css?v=90">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -56,6 +56,13 @@ catch (PDOException $e) {
 
 <div id="map" class="box">
 </div>
+
+<div id="box1" class="box1">
+     <!--  -->
+     <div id="turret" class="turret"></div>
+     <div id="laser" class="laser"></div>
+</div>
+
 <div id="box2" class="box2">
     <p id="nome" class="local">NOU GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -114,7 +121,7 @@ catch (PDOException $e) {
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-<script src="/script.js?v=134"></script>
+<script src="/script.js?v=135"></script>
 <script src="/geolocation.js?v231"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
