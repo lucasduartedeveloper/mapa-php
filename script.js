@@ -33,11 +33,11 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-var pagina = 3;
+var pagina = 4;
 $( "#menu" ).click(function() {
     
     pagina = pagina -1;
-    pagina = pagina < 0 ? 3 : pagina;
+    pagina = pagina < 0 ? 4 : pagina;
 
     switch (pagina) {
          case 0:
