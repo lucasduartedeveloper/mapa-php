@@ -111,6 +111,11 @@ function reload() {
 
             //console.log(data);
       });
+
+      $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
+          console.log(data);
+      }
+}
 }
 
 function onMapClick(e) {
