@@ -130,7 +130,7 @@ function onMapClick(e) {
      }
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    map.setView([pos.lat, pos.lng], 19);
+    map.setView([pos.lat, pos.lng], 17);
 }
 
 map.on('click', onMapClick);
