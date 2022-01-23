@@ -203,21 +203,21 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
-        var text = "Que lugar legal";
+        var text = "Qi";
         type(text);
-        say(text);
+        //say(text);
     }
     else if (lightValue > 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
         var text = "Uma luz está acesa " + lightValue;
         type(text);
-        say(text);
+        //say(text);
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
        var text = "Me solte, por favor";
        type(text);
-       say(text);
+       //say(text);
     }
 }
 
@@ -257,6 +257,7 @@ function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
 
    type("Corrigindo localização");
+   say("Corrigindo localização");
 
    var pos = posicaoNoGrid({
         lat : position.coords.latitude,
