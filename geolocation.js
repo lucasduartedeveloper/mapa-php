@@ -248,6 +248,7 @@ function say(text) {
               msg.text = text;
               msg.onend = function(event) {
                   console.log("onend");
+                  last_text2 = "";
                   running2 = 0; };
               window.speechSynthesis.speak(msg);
          }
