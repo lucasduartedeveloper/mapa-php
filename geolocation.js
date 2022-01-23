@@ -80,7 +80,11 @@ function reload() {
              lat: reguas[0].latitude,
              lng: reguas[0].longitude
         }});
-        });
+
+      $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
+          console.log(data);
+      });
+      });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
 
@@ -110,10 +114,6 @@ function reload() {
            $('#teste3').html(label3);
 
             //console.log(data);
-      });
-
-      $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
-          console.log(data);
       });
 }
 
