@@ -247,8 +247,8 @@ function say(text) {
               msg.onend = function(event) {
                   console.log("onend");
                   last_text2 = "";
-              window.speechSynthesis.speak(msg);
               }
+              window.speechSynthesis.speak(msg);
         }
 }
 
