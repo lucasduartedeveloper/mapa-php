@@ -242,10 +242,12 @@ function say(text) {
               // Teste SpeechSynthesisUtterance
               running2 = 2;
               last_text2 = text;
-              setTimeout(function() { running2 = 0; }, 5000);
 
               var msg = new SpeechSynthesisUtterance();
               msg.text = text;
+              msg.onend = function(event) {
+                  console.log("onend");
+                  running2 = 0; };
               window.speechSynthesis.speak(msg);
          }
 }
