@@ -116,7 +116,6 @@ function reload() {
           console.log(data);
       });
 }
-}
 
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
