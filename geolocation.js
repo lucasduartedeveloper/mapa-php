@@ -124,9 +124,9 @@ function onMapClick(e) {
           }
      }
      if (novaArea) {
-         type("Matando alienígenas");
-         say("Matando alienígenas");
-         //play();
+         type("Limpando ambiente sonoro");
+         say("Limpando ambiente sonoro");
+         play();
      }
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
@@ -207,7 +207,7 @@ function animar() {
         //$("#front").attr("src", "/img/v1/blinking.gif");
         var text = "Oi";
         type(text);
-        //say(text);
+        say(text);
     }
     else if (lightValue > 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
