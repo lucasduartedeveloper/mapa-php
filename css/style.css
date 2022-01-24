@@ -219,9 +219,10 @@ label.btn.active{
     } 
 }
 
-.girl {
+.balao {
      color:  #B8860B;
      font-size: 30px;
+     background-image: url("/img/balao.png");
 }
 
 .turret {
