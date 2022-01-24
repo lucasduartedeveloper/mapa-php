@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=108">
+<link rel="stylesheet" href="/css/style.css?v=109">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -103,7 +103,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v108.136.260</p>
+    <p class="contador">NOU v109.136.260</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
     <div class="typing-wrapper"></div>
      <p  id="distancia" class="contador">0 m</p>

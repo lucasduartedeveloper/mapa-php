@@ -12,8 +12,7 @@ try {
     $stmt->execute();
 
   }
-
-  if (!empty($_GET["select"])) {
+  else if (!empty($_GET["select"])) {
 
     $sql = "SELECT cor, count(*) as quantidade
 FROM localizacao_gps
