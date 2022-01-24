@@ -153,7 +153,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 // ATUALIZAR 
-var intervalo = 15000;
+var intervalo = 5000;
 var foo = function() {
         reload();
         
