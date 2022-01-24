@@ -69,6 +69,7 @@ function reload() {
          map.removeControl(firstpolyline);
 
          var pointList = [];
+         var distancia = 0;
          for (var k in data) {
                
 	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
@@ -82,6 +83,10 @@ function reload() {
 	//data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
 
                pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
+
+               if (k > 0) {
+                    distancia += pointList[k-1].distanceTo(pointList[k]);
+               }
         }
 
         reguas = data;
@@ -97,6 +102,8 @@ function reload() {
             smoothFactor: 1
         });
         firstpolyline.addTo(map);
+
+        $("#distancia").text(distancia + " m");
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {

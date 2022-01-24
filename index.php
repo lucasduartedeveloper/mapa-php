@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=104">
+<link rel="stylesheet" href="/css/style.css?v=105">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -59,9 +59,6 @@ catch (PDOException $e) {
 
 <div hidden id="box1" class="box1">
      <!--  -->
-     <div class="balao"></div>
-     <img id="turret" class="turret" src="/img/v1/blinking.gif"/>
-     <div id="laser" class="laser"></div>
 </div>
 
 <div id="box2" class="box2">
@@ -102,9 +99,10 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v104.136.258</p>
+    <p class="contador">NOU v105.136.259</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
-     <div class="typing-wrapper"></div>
+    <div class="typing-wrapper"></div>
+    <p  id="distancia" class="contador">0 m</p>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
@@ -123,7 +121,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=136"></script>
-<script src="/geolocation.js?v258"></script> 
+<script src="/geolocation.js?v259"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
