@@ -213,13 +213,13 @@ function animar() {
         //$("#front").attr("src", "/img/v1/blinking.gif");
         var text = "Uma luz está acesa " + lightValue;
         type(text);
-        //say(text);
+        say(text);
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
        var text = "Estamos nos movendo";
        type(text);
-       //say(text);
+       say(text);
     }
 }
 
