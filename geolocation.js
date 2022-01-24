@@ -63,21 +63,23 @@ function reload() {
 
          //console.log(data);
          for (var k in reguas) {
-             map.removeControl(reguas[k].rectangle);
+             //map.removeControl(reguas[k].rectangle);
+             map.removeControl(reguas[k].circle);
          }
          map.removeControl(firstpolyline);
 
          var pointList = [];
          for (var k in data) {
                
-	var circle = L.circle([data[k].latitude, data[k].longitude], {
-		fillOpacity: 0,
-        		radius: 2.5,
+	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
+                              color: data[k].cor,
+		fillOpacity: 0.5,
+        		radius: 0.5,
         		weight: 1,
         		stroke: false
 	}).addTo(map);
-
-	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
+               
+	data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
 
                pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
         }
@@ -90,8 +92,8 @@ function reload() {
 
         firstpolyline = new L.Polyline(pointList, {
             color: 'black',
-            weight: 1,
-            opacity: 1,
+            weight: 2,
+            opacity: 0.5,
             smoothFactor: 1
         });
         firstpolyline.addTo(map);
