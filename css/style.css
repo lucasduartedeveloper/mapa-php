@@ -226,6 +226,8 @@ label.btn.active{
      background-size:  contain; 
      background-repeat:   no-repeat;
      background-position: center center;
+     width: 20vw;
+     height: 20vw;
 }
 
 .turret {
