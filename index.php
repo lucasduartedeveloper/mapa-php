@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=105">
+<link rel="stylesheet" href="/css/style.css?v=106">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -59,7 +59,7 @@ catch (PDOException $e) {
 
 <div id="box1" class="box1">
      <!--  -->
-    <button id="reset" type="button" class="btn btn-outline-dark btn-sm">
+    <button id="reset" type="button" class="btn btn-danger btn-sm">
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
@@ -103,7 +103,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v105.136.260</p>
+    <p class="contador">NOU v106.136.260</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
     <div class="typing-wrapper"></div>
      <p  id="distancia" class="contador">0 m</p>
