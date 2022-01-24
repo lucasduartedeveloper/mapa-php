@@ -189,6 +189,12 @@ $("#box4").click(function() {
       });
 });
 
+$("#reset").click(function() {
+      $.getJSON("/ajax/localizacao_gps.php?delete=true", function(data) {
+          type("GAME OVER");
+      });
+});
+
 // SENSOR DE MOVIMENTO
 var motionValue = 0;
 if(window.DeviceMotionEvent){

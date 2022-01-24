@@ -5,7 +5,7 @@ try {
   
   if (!empty($_GET["delete"])) {
 
-    $l$sql = "DELETE FROM localizacao_gps;";
+    $sql = "DELETE FROM localizacao_gps;";
     //echo $sql."<br>";
 
     $stmt = $pdo->prepare($sql);
