@@ -124,9 +124,9 @@ function onMapClick(e) {
           }
      }
      if (novaArea) {
-         type("Você entrou em uma  área desconhecida");
-         say("Você entrou em uma área desconhecida");
-         play();
+         type("Matando alienígenas");
+         say("Matando alienígenas");
+         //play();
      }
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
@@ -257,9 +257,6 @@ function say(text) {
 function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
 
-   type("Corrigindo localização");
-   say("Corrigindo localização");
-
    var pos = posicaoNoGrid({
         lat : position.coords.latitude,
         lng : position.coords.longitude
@@ -272,6 +269,8 @@ function success(position) {
         cor: cor,
         })
         .done(function(data) {
+               type("Atualizando localização");
+               //say("Atualizando localização");
                play();
         });
 }
