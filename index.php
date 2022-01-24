@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=102">
+<link rel="stylesheet" href="/css/style.css?v=103">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -57,9 +57,9 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 
-<div id="box1" class="box1">
+<div hidden id="box1" class="box1">
      <!--  -->
-     <div class="balao">BLA BLA BLA</div>
+     <div class="balao"></div>
      <img id="turret" class="turret" src="/img/v1/blinking.gif"/>
      <div id="laser" class="laser"></div>
 </div>
@@ -102,7 +102,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v102.136.238</p>
+    <p class="contador">NOU v103.136.238</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
      <div class="typing-wrapper"></div>
 </div>
