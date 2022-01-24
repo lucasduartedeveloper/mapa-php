@@ -223,7 +223,7 @@ label.btn.active{
     padding: 20px;
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: bottom;
     align-items: bottom;
     flex-direction: column;
     width: 100%;
