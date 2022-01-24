@@ -65,16 +65,16 @@ function reload() {
          
          var pointList = [];
          for (var k in data) {
-	var circle = L.circle([data[k].latitude, data[k].longitude], {
+	//var circle = L.circle([data[k].latitude, data[k].longitude], {
 		fillOpacity: 0,
         		radius: 2.5,
         		weight: 1,
         		stroke: false
 	}).addTo(map);
 
-	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
+	//data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
 
-               //pointList.push(new L.LatLng([data[k].latitude, data[k].longitude]));
+               pointList.push(new L.LatLng([data[k].latitude, data[k].longitude]));
         }
 
         reguas = data;
@@ -85,8 +85,8 @@ function reload() {
 
         var firstpolyline = new L.Polyline(pointList, {
             color: 'black',
-            weight: 1,
-            opacity: 0.5,
+            weight: 5,
+            opacity: 1,
             smoothFactor: 1
         });
         firstpolyline.addTo(map);
