@@ -73,7 +73,7 @@ function reload() {
                
 	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
-		fillOpacity: 0.3,
+		fillOpacity: 0.5,
         		radius: 1.5,
         		weight: 1,
         		stroke: false
@@ -93,7 +93,7 @@ function reload() {
         firstpolyline = new L.Polyline(pointList, {
             color: 'black',
             weight: 2,
-            opacity: 0.5,
+            opacity: 0.3,
             smoothFactor: 1
         });
         firstpolyline.addTo(map);
