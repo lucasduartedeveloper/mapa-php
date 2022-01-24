@@ -124,13 +124,13 @@ function onMapClick(e) {
           }
      }
      if (novaArea) {
-         type("Você entrou em uma nova área");
-         //say("Você entrou em uma nova área");
+         type("Você entrou em uma  área desconhecida");
+         say("Você entrou em uma área desconhecida");
          play();
      }
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    map.setView([pos.lat, pos.lng], 17);
+    map.setView([pos.lat, pos.lng], 18);
 }
 
 map.on('click', onMapClick);
@@ -258,7 +258,7 @@ function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
 
    type("Corrigindo localização");
-   //say("Corrigindo localização");
+   say("Corrigindo localização");
 
    var pos = posicaoNoGrid({
         lat : position.coords.latitude,
