@@ -124,8 +124,8 @@ function onMapClick(e) {
           }
      }
      if (novaArea) {
-         type("Limpando ambiente sonoro");
-         say("Limpando ambiente sonoro");
+         type("Marcando nova área");
+         say("Marcando nova área");
          play();
      }
 
@@ -160,7 +160,7 @@ $(document).on('change', ':radio[name="cor"]', function() {
 
 $("#box4").click(function() {
       $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
-          type("Dizendo localização");
+          type("Informando localização");
           say("Estamos próximos à " + data.display_name);
       });
 });
@@ -207,19 +207,19 @@ function animar() {
         //$("#front").attr("src", "/img/v1/blinking.gif");
         var text = "Oi";
         type(text);
-        say(text);
+        //say(text);
     }
     else if (lightValue > 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
         var text = "Uma luz está acesa " + lightValue;
         type(text);
-        say(text);
+        //say(text);
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
-       var text = "Estamos nos movendo";
+       var text = " " + motionValue;
        type(text);
-       say(text);
+       //say(text);
     }
 }
 
