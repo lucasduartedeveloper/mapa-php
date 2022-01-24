@@ -142,7 +142,7 @@ function onMapClick(e) {
      }
      if (novaArea) {
          type("Marcando nova área");
-         say("Marcando nova área");
+         //say("Marcando nova área");
          play();
      }
 
@@ -287,8 +287,8 @@ function success(position) {
         })
         .done(function(data) {
                type("Atualizando localização");
-               say("Atualizando localização");
-               play();
+               //say("Atualizando localização");
+               //play();
         });
 }
 
