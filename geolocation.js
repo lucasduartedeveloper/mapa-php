@@ -1,7 +1,10 @@
 // Create the map
 //var map = L.map('map').setView([51.505, -0.09], 13);
 var map = L.map('map').setView([0, 0], 13);
-var linha = {};
+
+var firstpolyline = new L.Polyline([]);
+firstpolyline.addTo(map);
+
 var marker = L.marker([51.505, -0.09]).addTo(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -62,7 +65,7 @@ function reload() {
          for (var k in reguas) {
              map.removeControl(reguas[k].rectangle);
          }
-         map.removeControl(linha);
+         map.removeControl(firstpolyline);
 
          var pointList = [];
          for (var k in data) {
@@ -85,7 +88,7 @@ function reload() {
              lng: reguas[0].longitude
         }});
 
-        linha = new L.Polyline(pointList, {
+        firstpolyline = new L.Polyline(pointList, {
             color: 'black',
             weight: 1,
             opacity: 1,
