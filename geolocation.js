@@ -217,7 +217,7 @@ function animar() {
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
-       var text = "Weeeeeee";
+       var text = "";
        type(text);
        //say(text);
     }

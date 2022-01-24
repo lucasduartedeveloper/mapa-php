@@ -219,14 +219,19 @@ label.btn.active{
     } 
 }
 
+.girl {
+     color:  #B8860B;
+     font-size: 30px;
+}
+
 .turret {
-    background-color:  #f00;
+    background-color:  #B8860B;
     width: 10vw;
     height: 10vw;
 }
 
 .laser {
-    background-color: #f00;
+    background-color:  #B8860B;
     width: 10vw;
     height: 10vw;
 }
