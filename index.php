@@ -59,6 +59,7 @@ catch (PDOException $e) {
 
 <div hidden id="box1" class="box1">
      <!--  -->
+     <p  id="distancia" class="contador">0 m</p>
 </div>
 
 <div id="box2" class="box2">
@@ -102,7 +103,6 @@ catch (PDOException $e) {
     <p class="contador">NOU v105.136.260</p>
     <img id="front" class="front" src="/img/v1/blinking.gif"/>
     <div class="typing-wrapper"></div>
-    <p  id="distancia" class="contador">0 m</p>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
