@@ -57,7 +57,7 @@ catch (PDOException $e) {
 <div id="map" class="box">
 </div>
 
-<div hidden id="box1" class="box1">
+<div id="box1" class="box1">
      <!--  -->
     <button id="reset" type="button" class="btn btn-outline-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
