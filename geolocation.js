@@ -205,7 +205,7 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
-        var text = "Oi";
+        var text = "";
         type(text);
         //say(text);
     }
@@ -217,7 +217,7 @@ function animar() {
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
-       var text = "Me solte, por favor";
+       var text = "Weeeeeee";
        type(text);
        //say(text);
     }
