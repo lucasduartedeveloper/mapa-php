@@ -220,14 +220,14 @@ label.btn.active{
 }
 
 .balao {
-     color:  #B8860B;
-     font-size: 20px;
+     color:  #000;
+     font-size: 15px;
      background-image: url("/img/balao.png");
      background-size:  cover; 
      background-repeat:   no-repeat;
      --background-position: center center;
-     width: 20vw;
-     height: 20vw;
+     width: 200px;
+     height: 200px;
 }
 
 .turret {
