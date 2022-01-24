@@ -205,7 +205,7 @@ function animar() {
 
     if(lightValue == 0 && motionValue == 0) {
         //$("#front").attr("src", "/img/v1/blinking.gif");
-        var text = "";
+        var text = "Oi";
         type(text);
         //say(text);
     }
@@ -217,7 +217,7 @@ function animar() {
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
-       var text = "";
+       var text = "Estamos nós movendo";
        type(text);
        //say(text);
     }
@@ -270,7 +270,7 @@ function success(position) {
         })
         .done(function(data) {
                type("Atualizando localização");
-               //say("Atualizando localização");
+               say("Atualizando localização");
                play();
         });
 }
