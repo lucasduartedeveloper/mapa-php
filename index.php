@@ -59,6 +59,10 @@ catch (PDOException $e) {
 
 <div hidden id="box1" class="box1">
      <!--  -->
+    <button id="reset" type="button" class="btn btn-outline-dark btn-sm">
+    <i class="bi bi-geo-alt"></i>
+    Reset
+    </button>
 </div>
 
 <div id="box2" class="box2">

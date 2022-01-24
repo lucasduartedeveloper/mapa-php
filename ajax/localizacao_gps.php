@@ -3,6 +3,16 @@
 $sql ="";
 try {
   
+  if (!empty($_GET["delete"])) {
+
+    $l$sql = "DELETE FROM localizacao_gps;";
+    //echo $sql."<br>";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+  }
+
   if (!empty($_GET["select"])) {
 
     $sql = "SELECT cor, count(*) as quantidade
