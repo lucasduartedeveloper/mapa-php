@@ -223,7 +223,7 @@ label.btn.active{
      color:  #B8860B;
      font-size: 20px;
      background-image: url("/img/balao.png");
-     background-size:     cover; 
+     background-size:  contain; 
      background-repeat:   no-repeat;
      background-position: center center;
 }
