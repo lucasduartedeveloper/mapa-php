@@ -217,7 +217,7 @@ function animar() {
     }
     else {
        // $("#front").attr("src", "/img/v1/blinking.gif");
-       var text = "Estamos nós movendo";
+       var text = "Estamos nos movendo";
        type(text);
        //say(text);
     }
