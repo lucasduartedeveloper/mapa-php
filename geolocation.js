@@ -75,7 +75,7 @@ function reload() {
 
 	//data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
 
-               pointList.push(new L.LatLng([data[k].latitude, data[k].longitude]));
+               pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
         }
 
         reguas = data;
