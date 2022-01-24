@@ -74,7 +74,7 @@ function reload() {
 
 	data[k].rectangle = L.rectangle(circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
 
-               pointList.push(new L.LatLng([data[k].latitude, data[k].longitude]));
+               //pointList.push(new L.LatLng([data[k].latitude, data[k].longitude]));
         }
 
         reguas = data;
@@ -83,13 +83,13 @@ function reload() {
              lng: reguas[0].longitude
         }});
 
-var firstpolyline = new L.Polyline(pointList, {
-    color: 'black',
-    weight: 1,
-    opacity: 0.5,
-    smoothFactor: 1
-});
-firstpolyline.addTo(map);
+        var firstpolyline = new L.Polyline(pointList, {
+            color: 'black',
+            weight: 1,
+            opacity: 0.5,
+            smoothFactor: 1
+        });
+        firstpolyline.addTo(map);
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
