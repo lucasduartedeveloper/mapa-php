@@ -226,8 +226,9 @@ label.btn.active{
      background-size:  cover; 
      background-repeat:   no-repeat;
      --background-position: center center;
-     width: 200px;
-     height: 200px;
+     width: 100px;
+     height: 100px;
+     padding: 20px;
 }
 
 .turret {
