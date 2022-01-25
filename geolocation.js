@@ -70,7 +70,7 @@ function reload() {
           itens = [];
 
           for (var k in data) {
-             var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+data[k].id+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+             var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              label1 += html;
 
@@ -86,6 +86,7 @@ function reload() {
             popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
         });
 
+       item.id = data[k].id;
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon}).addTo(map).bindPopup("後で");
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
@@ -222,13 +223,13 @@ function onMapClick(e) {
 
          if (itens.length > 0) {
          // Posição dos itens
-         itens[itemId -1].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-         itens[itemId -1].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         itens[itemId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
         $.post("/ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
         lng: pos.lng,
-        id: itemId,
+        id: itens[itemId].id,
         })
         .done(function(data) {
                //type("Item salvo");
