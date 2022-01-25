@@ -139,7 +139,7 @@ function reload() {
 
 var heartIcon = L.icon({
        iconUrl: "/img/heart.png",
-       shadowUrl: '/img/icon-shadow.png',
+       /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
       shadowSize:   [50, 25], // size of the shadow
       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
@@ -147,6 +147,14 @@ var heartIcon = L.icon({
       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
           });
 var heartMarker = L.marker([0, 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
+
+var shadow = L.circle([0, 0], {
+                              color: data[k].cor,
+		fillOpacity: 0.5,
+        		radius: 2.5,
+        		weight: 1,
+        		stroke: false
+	}).addTo(map);
 
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
@@ -162,6 +170,7 @@ function onMapClick(e) {
          type("Marcando nova área");
          //say("Marcando nova área");
          heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         shadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
          play();
      }
 
