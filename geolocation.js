@@ -61,6 +61,12 @@ function reload() {
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
           var label1 = "";
+          
+          for (var k in itens) {
+             //map.removeControl(reguas[k].rectangle);
+             map.removeControl(itens[k].marker);
+             map.removeControl(itens[k].markerShadow);
+          }
           itens = [];
 
           for (var k in data) {
@@ -102,13 +108,6 @@ function reload() {
          for (var k in reguas) {
              //map.removeControl(reguas[k].rectangle);
              map.removeControl(reguas[k].circle);
-         }
-         map.removeControl(firstpolyline);
-
-        for (var k in itens) {
-             //map.removeControl(reguas[k].rectangle);
-             map.removeControl(itens[k].marker);
-             map.removeControl(itens[k].markerShadow);
          }
          map.removeControl(firstpolyline);
 
