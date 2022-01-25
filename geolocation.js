@@ -88,6 +88,9 @@ function reload() {
 
        item.id = data[k].id;
        item.nome = data[k].nome;
+       item.lat = data[k].latitude;
+       item.lng = data[k].longitude;
+
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon}).addTo(map).bindPopup("後で");
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
