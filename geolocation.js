@@ -136,7 +136,7 @@ function reload() {
 }
 
 var markerIcon= L.icon({
-       iconUrl: "/img/heart.png",
+       iconUrl: "/img/marker.png",
        /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
        shadowSize:   [50, 25], // size of the shadow
