@@ -194,7 +194,6 @@ $(document).on('click', ':radio[name="item"]', function() {
     $(this).filter(':checked').checked = false;
     itemId = expr;
     $("#menu").click();
-    console.log(itemId);
 });
 
 function onMapClick(e) {
@@ -212,8 +211,8 @@ function onMapClick(e) {
          //say("Marcando nova área");
 
          // Posição dos itens
-         itens[itemId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-         itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         itens[itemId -1].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         itens[itemId -1].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
          play();
      }
