@@ -63,7 +63,7 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
-     <p  id="distancia" class="contador">0 m</p>
+     <p  class="distancia" class="contador">0 m</p>
 </div>
 
 <div id="box2" class="box2">
@@ -104,10 +104,10 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">v112.136.262</p>
+    <p class="contador">v112.136.263</p>
     <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
-     <p  id="distancia" class="contador">0 m</p>
+     <p  class="distancia" class="contador">0 m</p>
 </div>
 
 <img id="coin" class="coin" src="/img/coin.gif"/>
@@ -126,7 +126,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=136"></script>
-<script src="/geolocation.js?v262"></script> 
+<script src="/geolocation.js?v263"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

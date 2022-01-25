@@ -103,7 +103,7 @@ function reload() {
         });
         firstpolyline.addTo(map);
 
-        $("#distancia").text(Math.floor(distancia) + " m");
+        $(".distancia").text(Math.floor(distancia) + " m");
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
