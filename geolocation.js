@@ -190,10 +190,10 @@ var swordShadow = L.circle([0, 0], {
 var itemMarker = "heart";
 $(document).on('change', ':radio[name="item"]', function() {
     $('label').removeClass('active');
-    $(this).filter(':checked').parent().addClass('active');
+    //$(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
     itemMarker = expr;
-    $( "#menu" ).click();
+    $("#menu").click();
     console.log(itemMarker);
 });
 
