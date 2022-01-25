@@ -212,8 +212,8 @@ function onMapClick(e) {
          //say("Marcando nova área");
 
          // Posição dos itens
-         //heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-         //heartShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         itens[itemId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
          play();
      }
