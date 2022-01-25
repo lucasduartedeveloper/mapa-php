@@ -66,7 +66,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box2" class="box2">
-    <p id="nome" class="local">NOU GPS</p>
+    <p id="nome" class="local">GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -90,7 +90,7 @@ catch (PDOException $e) {
 
 <div id="box3" class="box3">
    <p></p>
-    <img class="logo" src="/img/logo.png"/>
+    <img  hidden class="logo" src="/img/logo.png"/>
     <p class="contador"><?=$contar?> visitas</p>
     <div class="info-box">
     <p id="local-info" class="info">geolocation: 
@@ -103,9 +103,9 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">NOU v109.136.262</p>
+    <p class="contador">v109.136.262</p>
     <img id="front" class="front" src="/img/ícone.png"/>
-    <div class="typing-wrapper"></div>
+    <div hidden class="typing-wrapper"></div>
      <p  id="distancia" class="contador">0 m</p>
 </div>
 
