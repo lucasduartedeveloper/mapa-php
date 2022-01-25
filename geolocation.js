@@ -192,6 +192,7 @@ $(document).on('change', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
     //$(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
+    $(this).filter(':checked').checked = false;
     itemMarker = expr;
     $("#menu").click();
     console.log(itemMarker);
