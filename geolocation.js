@@ -66,9 +66,8 @@ function reload() {
              var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+data[k].id+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              label1 += html;
-
-       itens = [];
-       var item = {};
+             itens = [];
+             var item = {};
 
        // Marcador do item
        var itemIcon = L.icon({
@@ -80,7 +79,7 @@ function reload() {
             popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
         });
 
-       item.marker = L.marker([0, 0], {icon: itemIcon}).addTo(map).bindPopup("後で");
+       item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon}).addTo(map).bindPopup("後で");
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
 		fillOpacity: 0.5,
@@ -91,6 +90,7 @@ function reload() {
 
          itens.push(item);
           }
+          console.log(itens);
 
          // menu de itens
          $("#itens").html(label1);
