@@ -225,7 +225,7 @@ function onMapClick(e) {
          console.log(itemId);
          play();
 
-         if (itens.length > 0 && itemId > 0) {
+         if (itens.length > 0 && itemId >= 0) {
          // Posição dos itens
          itens[itemId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
          itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
