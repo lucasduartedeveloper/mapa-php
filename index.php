@@ -63,6 +63,21 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-outline-dark active">
+       <input type="radio" name="options" id="option1" checked> 
+        <img class="icone" src="/img/heart.png" />
+  </label>
+  <label class="btn btn-outline-dark">
+       <input type="radio" name="options" id="option2">
+        <img class="icone" src="/img/heart.png" />
+  </label>
+  <label class="btn btn-outline-dark">
+       <input type="radio" name="options" id="option2">
+        <img class="icone" src="/img/heart.png" />
+  </label>
+</div>
+
      <p  class="distancia" class="contador">0 m</p>
 </div>
 
