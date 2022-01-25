@@ -246,14 +246,16 @@ function onMapClick(e) {
      }
      else {
           for (var k in itens) {
+               console.log(pos):
+               console.log(itens[k].lat);
                if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
-                    $.post("/ajax/localizacao_gps_item.php", {
+               $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
                })
                .done(function(data) {
-                   //type("Item salvo");
+                   //type("Você recuperou");
                    say("Você recuperou " + itens[k].nome);
                   //play();
                   //console.log(data);
