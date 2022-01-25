@@ -214,6 +214,18 @@ function onMapClick(e) {
          itens[itemId -1].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
          itens[itemId -1].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
+        $.post("/ajax/localizacao_gps.php", {
+        lat: pos.lat, 
+        lng: pos.lng,
+        id: itemId,
+        })
+        .done(function(data) {
+               //type("Item salvo");
+               say("Item salvo");
+               //play();
+               console.log(data);
+        });
+
          play();
      }
 

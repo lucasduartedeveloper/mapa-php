@@ -3,26 +3,17 @@
 $sql ="";
 try {
  
-  if (!empty($_POST["lat"])) {
-    if (!empty($_POST["cor"])) {
+  if (!empty($_POST["id"])) {
 
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
-    $cor = htmlspecialchars($_POST["cor"]);
+    $id = htmlspecialchars($_POST["id"]);
 
-     $sql = "DELETE FROM localizacao_gps WHERE latitude='".$latitude."' AND longitude='".$longitude."';";
-    //echo $sql."<br>";
-
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-
-    $sql = "INSERT INTO localizacao_gps (cor, latitude, longitude) VALUES ('".$cor."','".$latitude."','".$longitude."')";
+    $sql = "UPDATE localizacao_gps_item SET latitude=".$lat.", longitude=".$lng." WHERE id=".$id.";";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
     echo $sql;
-
-    }
   }
   else {
 
