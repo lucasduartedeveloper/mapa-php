@@ -97,7 +97,7 @@ function reload() {
 
         firstpolyline = new L.Polyline(pointList, {
             color: 'black',
-            weight: 2,
+            weight: 3,
             opacity: 0.3,
             smoothFactor: 1
         });
