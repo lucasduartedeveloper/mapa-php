@@ -104,7 +104,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">v109.136.262</p>
-    <img id="front" class="front" src="/img/ícone.png"/>
+    <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  id="distancia" class="contador">0 m</p>
 </div>
