@@ -193,6 +193,8 @@ $(document).on('change', ':radio[name="item"]', function() {
     $(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
     itemMarker = expr;
+    $( "#menu" ).click();
+    console.log(itemMarker);
 });
 
 function onMapClick(e) {
