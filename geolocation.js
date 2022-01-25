@@ -199,6 +199,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     var expr = $(this).filter(':checked').attr('id');
     $(this).filter(':checked').checked = false;
     itemId = expr;
+    console.log(itemId);
     $("#menu").click();
 });
 
