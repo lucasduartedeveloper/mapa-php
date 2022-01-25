@@ -59,10 +59,11 @@ catch (PDOException $e) {
 
 <div id="box1" class="box1">
      <!--  -->
-    <button id="reset" type="button" class="btn btn-danger btn-sm">
+    <button id="reset" type="button" class="btn btn-dark btn-sm">
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
+     <p  id="distancia" class="contador">0 m</p>
 </div>
 
 <div id="box2" class="box2">
