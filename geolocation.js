@@ -61,12 +61,13 @@ function reload() {
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
           var label1 = "";
+          itens = [];
 
           for (var k in data) {
              var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+data[k].id+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              label1 += html;
-             itens = [];
+
              var item = {};
 
        // Marcador do item
@@ -90,7 +91,6 @@ function reload() {
 
          itens.push(item);
           }
-          console.log(itens);
 
          // menu de itens
          $("#itens").html(label1);
