@@ -69,9 +69,10 @@ function reload() {
              map.removeControl(itens[k].markerShadow);
           }
           itens = [];
-
+          
           for (var k in data) {
-             var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+             var hidden = data[k].latitude != 0 ? "" : " hidden "
+             var html =  "<label "+hidden+" class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              if (k <= 3) {
                  label1 += html;
@@ -242,8 +243,8 @@ function onMapClick(e) {
         id: itens[itemId].id,
         })
         .done(function(data) {
-               //type("Item salvo");
-               say("Item salvo");
+               //type("Item posicionado");
+               say("Item posicionado");
                itemId = -1;
                //play();
                //console.log(data);
