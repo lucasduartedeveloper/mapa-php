@@ -165,9 +165,9 @@ label.btn.active{
 }
 
 .front {
-    width: 25vw;
+    width: 27vw;
     height: 50vw;
-    max-width: 75px;
+    max-width: 81px;
     max-height: 150px;
     opacity: 0.5;
 }
