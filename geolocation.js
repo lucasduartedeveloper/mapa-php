@@ -61,6 +61,7 @@ function reload() {
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
           var label1 = "";
+          var label2 = "";
           
           for (var k in itens) {
              //map.removeControl(reguas[k].rectangle);
@@ -73,6 +74,14 @@ function reload() {
              var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              label1 += html;
+             label2 += html;
+
+             if (k <= 3) {
+                 label1 += html;
+             }
+             else if (k <= 7) {
+                label2 += html;
+             }
 
              var item = {};
 
@@ -104,7 +113,8 @@ function reload() {
           }
 
          // menu de itens
-         $("#itens").html(label1);
+         $("#itens1").html(label1);
+         $("#itens1").html(label1);
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
