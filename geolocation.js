@@ -189,7 +189,7 @@ var swordShadow = L.circle([0, 0], {
 
 var itemMarker = "heart";
 $(document).on('change', ':radio[name="item"]', function() {
-    $('label').removeClass('active');
+    //$('label').removeClass('active');
     //$(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
     itemMarker = expr;
@@ -210,12 +210,11 @@ function onMapClick(e) {
      if (novaArea) {
          type("Marcando nova área");
          //say("Marcando nova área");
-         heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-         heartShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
          play();
      }
 
      // Posição dos itens
+     console.log(itemMarker);
      switch (itemMarker) {
          case "heart":
              heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
