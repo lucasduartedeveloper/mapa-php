@@ -108,7 +108,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">GPS GAME</p>
-    <p class="contador">v115.136.291</p>
+    <p class="contador">v115.136.292</p>
     <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="distancia" class="contador">0 m</p>
@@ -130,7 +130,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=136"></script>
-<script src="/geolocation.js?v291"></script> 
+<script src="/geolocation.js?v292"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
