@@ -137,6 +137,17 @@ function reload() {
       });
 }
 
+var heartIcon = L.icon({
+       iconUrl: "/img/heart.png",
+       shadowUrl: '/img/icon-shadow.png',
+       iconSize:     [35, 40], // size of the icon
+      shadowSize:   [50, 25], // size of the shadow
+      iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+      shadowAnchor: [25, 10],  // the same for the shadow
+      popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+          });
+var heartMarker = L.marker([0 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
+
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
 
@@ -150,19 +161,9 @@ function onMapClick(e) {
      if (novaArea) {
          type("Marcando nova área");
          //say("Marcando nova área");
+         heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
          play();
      }
-
-    var icon = L.icon({
-               iconUrl: "/img/heart.png",
-               shadowUrl: '/img/icon-shadow.png',
-               iconSize:     [35, 40], // size of the icon
-               shadowSize:   [50, 25], // size of the shadow
-               iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-               shadowAnchor: [25, 10],  // the same for the shadow
-               popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-          });;
-    var marker = L.marker([pos.lat, pos.lng], {icon: icon}).addTo(map).bindPopup("後で");
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
      map.setView([pos.lat, pos.lng], 18);
