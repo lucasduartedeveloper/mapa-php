@@ -139,7 +139,7 @@ function reload() {
 
 var heartIcon = L.icon({
        iconUrl: "/img/heart.png",
-       /*shadowUrl: '/img/icon-shadow.png',*/
+       shadowUrl: '/img/icon-shadow.png',
        iconSize:     [35, 40], // size of the icon
       shadowSize:   [50, 25], // size of the shadow
       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
