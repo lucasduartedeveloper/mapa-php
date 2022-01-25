@@ -71,7 +71,7 @@ function reload() {
           itens = [];
           
           for (var k in data) {
-             var hidden = data[k].latitude != 0 ? "" : " hidden "
+             var hidden = data[k].latitude != 0 ? " hidden " : ""
              var html =  "<label "+hidden+" class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              if (k <= 3) {
