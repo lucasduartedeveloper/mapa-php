@@ -311,14 +311,14 @@ $("#box4").click(function() {
 $("#reset").click(function() {
       $.getJSON("/ajax/localizacao_gps.php?delete=true", function(data) {
           //say("");
-          for (var k in itens) {
-               $.post("/ajax/localizacao_gps_item.php", {
-                    lat: 0, 
-                    lng: 0,
-                    id: itens[k].id,
-               });
-          }
       });
+      for (var k in itens) {
+           $.post("/ajax/localizacao_gps_item.php", {
+                 lat: 0, 
+                 lng: 0,
+                 id: itens[k].id,
+            });
+       }
 });
 
 // SENSOR DE MOVIMENTO
