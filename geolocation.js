@@ -5,8 +5,6 @@ var map = L.map('map').setView([0, 0], 13);
 var firstpolyline = new L.Polyline([]);
 firstpolyline.addTo(map);
 
-var marker = L.marker([51.505, -0.09]).addTo(map);
-
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 20,
@@ -136,6 +134,18 @@ function reload() {
             //console.log(data);
       });
 }
+
+var markerIcon= L.icon({
+       iconUrl: "/img/heart.png",
+       /*shadowUrl: '/img/icon-shadow.png',*/
+       iconSize:     [35, 40], // size of the icon
+       shadowSize:   [50, 25], // size of the shadow
+       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+       shadowAnchor: [25, 10],  // the same for the shadow
+       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map);
 
 var heartIcon = L.icon({
        iconUrl: "/img/heart.png",
