@@ -222,7 +222,7 @@ function onMapClick(e) {
          type("Marcando nova área");
          //say("Marcando nova área");
 
-         console.log(itemId);
+         //console.log(itemId);
          play();
 
          if (itens.length > 0 && itemId >= 0) {
@@ -246,9 +246,10 @@ function onMapClick(e) {
      }
      else {
           for (var k in itens) {
+               if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
                console.log(pos.lat);
                console.log(itens[k].lat);
-               if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
+
                $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
                     lng: 0,
