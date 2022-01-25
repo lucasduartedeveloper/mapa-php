@@ -159,13 +159,41 @@ var heartIcon = L.icon({
 
 var heartMarker = L.marker([0, 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
 
-var shadow = L.circle([0, 0], {
+var swordIcon = L.icon({
+       iconUrl: "/img/sword.png",
+       /*shadowUrl: '/img/icon-shadow.png',*/
+       iconSize:     [35, 40], // size of the icon
+       shadowSize:   [50, 25], // size of the shadow
+       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+       shadowAnchor: [25, 10],  // the same for the shadow
+       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var swordMarker = L.marker([0, 0], {icon: swordIcon}).addTo(map).bindPopup("後で");
+
+var heartShadow = L.circle([0, 0], {
         color: "#2f2e40",
         fillOpacity: 0.5,
         radius: 2.5,
         weight: 1,
         stroke: false
 }).addTo(map);
+
+var swordShadow = L.circle([0, 0], {
+        color: "#2f2e40",
+        fillOpacity: 0.5,
+        radius: 2.5,
+        weight: 1,
+        stroke: false
+}).addTo(map);
+
+var itemMarker = "heart";
+$(document).on('change', ':radio[name="item"]', function() {
+    $('label').removeClass('active');
+    $(this).filter(':checked').parent().addClass('active');
+    var expr = $(this).filter(':checked').attr('id');
+    itemMarker = expr;
+});
 
 function onMapClick(e) {
      var pos = posicaoNoGrid(e.latlng);
@@ -181,9 +209,21 @@ function onMapClick(e) {
          type("Marcando nova área");
          //say("Marcando nova área");
          heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-         shadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         heartShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
          play();
      }
+
+     // Posição dos itens
+     switch (itemMarker) {
+         case "heart":
+             heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+             heartShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+             break;
+         case "sword":
+             swordMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+             swordShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+             break;
+      }
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
      map.setView([pos.lat, pos.lng], 18);
