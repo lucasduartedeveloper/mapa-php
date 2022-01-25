@@ -75,7 +75,7 @@ function reload() {
 	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
 		fillOpacity: 0.5,
-        		radius: 1.5,
+        		radius: 2.5,
         		weight: 1,
         		stroke: false
 	}).addTo(map);
@@ -191,7 +191,7 @@ $("#box4").click(function() {
 
 $("#reset").click(function() {
       $.getJSON("/ajax/localizacao_gps.php?delete=true", function(data) {
-          type("GAME OVER");
+          //type("GAME OVER");
       });
 });
 
