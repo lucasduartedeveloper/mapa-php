@@ -173,15 +173,15 @@ var markerIcon= L.icon({
 
 var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map);
 
-var itemMarker = "heart";
+var itemId = 0;
 $(document).on('click', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
     //$(this).filter(':checked').parent().addClass('active');
     var expr = $(this).filter(':checked').attr('id');
     $(this).filter(':checked').checked = false;
-    itemMarker = expr;
+    itemId = expr;
     $("#menu").click();
-    console.log(itemMarker);
+    console.log(itemId);
 });
 
 function onMapClick(e) {
@@ -199,21 +199,8 @@ function onMapClick(e) {
          //say("Marcando nova área");
 
          // Posição dos itens
-         switch (itemMarker) {
-         case "heart":
-             heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-             heartShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
-             break;
-         case "sword":
-             swordMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-             swordShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
-             break;
-         case "gloves":
-             glovesMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-             glovesShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
-             break;
-         }
-         itemMarker = "";
+         //heartMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+         //heartShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
          play();
      }
