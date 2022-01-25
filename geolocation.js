@@ -111,7 +111,7 @@ function reload() {
 
          // menu de itens
          $("#itens1").html(label1);
-         $("#itens1").html(label1);
+         $("#itens2").html(label2);
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
