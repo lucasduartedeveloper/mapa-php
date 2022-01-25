@@ -107,7 +107,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">GPS GAME</p>
+    <p class="contador">GPS & SPRINGBOOT</p>
     <p class="contador">v115.136.299</p>
     <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
