@@ -105,6 +105,13 @@ function reload() {
          }
          map.removeControl(firstpolyline);
 
+        for (var k in itens) {
+             //map.removeControl(reguas[k].rectangle);
+             map.removeControl(itens[k].marker);
+             map.removeControl(itens[k].markerShadow);
+         }
+         map.removeControl(firstpolyline);
+
          var pointList = [];
          var distancia = 0;
          for (var k in data) {
