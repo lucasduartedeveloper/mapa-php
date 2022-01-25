@@ -9,7 +9,7 @@ try {
     $longitude = htmlspecialchars($_POST["lng"]);
     $id = htmlspecialchars($_POST["id"]);
 
-    $sql = "UPDATE localizacao_gps_item SET latitude=".$lat.", longitude=".$lng." WHERE id=".$id.";";
+    $sql = "UPDATE localizacao_gps_item SET latitude=".$latitude.", longitude=".$longitude." WHERE id=".$id.";";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 

@@ -210,6 +210,10 @@ function onMapClick(e) {
          type("Marcando nova área");
          //say("Marcando nova área");
 
+         console.log(itemId);
+         play();
+
+         if (itens.length > 0) {
          // Posição dos itens
          itens[itemId -1].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
          itens[itemId -1].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
@@ -225,9 +229,7 @@ function onMapClick(e) {
                //play();
                console.log(data);
         });
-
-        console.log(itemId);
-         play();
+        }
      }
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
