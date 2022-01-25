@@ -139,25 +139,26 @@ function reload() {
 
 var heartIcon = L.icon({
        iconUrl: "/img/heart.png",
-       shadowUrl: '/img/icon-shadow.png',
+       /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
-      shadowSize:   [50, 25], // size of the shadow
-      iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-      shadowAnchor: [25, 10],  // the same for the shadow
-      popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-          });
+       shadowSize:   [50, 25], // size of the shadow
+       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+       shadowAnchor: [25, 10],  // the same for the shadow
+       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
 var heartMarker = L.marker([0, 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
 
 var shadow = L.circle([0, 0], {
-                              color: data[k].cor,
-		fillOpacity: 0.5,
-        		radius: 2.5,
-        		weight: 1,
-        		stroke: false
-	}).addTo(map);
+        color: "#2f2e40",
+        fillOpacity: 0.5,
+        radius: 2.5,
+        weight: 1,
+        stroke: false
+}).addTo(map);
 
 function onMapClick(e) {
-    var pos = posicaoNoGrid(e.latlng);
+     var pos = posicaoNoGrid(e.latlng);
 
      var novaArea = true;
      for (var k in reguas) {
