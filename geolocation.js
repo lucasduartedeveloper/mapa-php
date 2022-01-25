@@ -93,7 +93,7 @@ function reload() {
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon}).addTo(map).bindPopup("後で");
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
-                              color: data[k].cor,
+                              color: "#581845"
 		fillOpacity: 0.5,
         		radius: 2.5,
         		weight: 1,
@@ -263,7 +263,7 @@ function onMapClick(e) {
      }
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-     map.setView([pos.lat, pos.lng], 18);
+     map.setView([pos.lat, pos.lng], 19);
 }
 
 map.on('click', onMapClick);
