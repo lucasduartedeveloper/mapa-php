@@ -146,7 +146,7 @@ var heartIcon = L.icon({
       shadowAnchor: [25, 10],  // the same for the shadow
       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
           });
-var heartMarker = L.marker([0 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
+var heartMarker = L.marker([0, 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
 
 function onMapClick(e) {
     var pos = posicaoNoGrid(e.latlng);
