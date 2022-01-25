@@ -221,7 +221,6 @@ function onMapClick(e) {
      if (novaArea) {
          type("Marcando nova área");
          //say("Marcando nova área");
-
          //console.log(itemId);
          play();
 
@@ -256,8 +255,8 @@ function onMapClick(e) {
                     id: itens[k].id,
                })
                .done(function(data) {
-                   //type("Você recuperou");
-                   say("Você recuperou " + itens[k].nome);
+                   //type("Você recuperou um item");
+                   say("Você recuperou um item");
                   //play();
                   //console.log(data);
                });
