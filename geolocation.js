@@ -248,7 +248,7 @@ function onMapClick(e) {
           for (var k in itens) {
                if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
                console.log(pos);
-               console.log(itens[k));
+               console.log(itens[k]);
 
                $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
