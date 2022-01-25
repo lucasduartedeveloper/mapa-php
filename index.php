@@ -63,15 +63,7 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-outline-dark">
-       <input type="radio" name="item" id="heart" checked> 
-        <img class="icone" src="/img/heart.png" />
-  </label>
-  <label class="btn btn-outline-dark">
-       <input type="radio" name="item" id="sword">
-        <img class="icone" src="/img/sword.png" />
-  </label>
+    <div id="itens" class="btn-group btn-group-toggle" data-toggle="buttons">
 </div>
 
      <p  class="distancia" class="contador">0 m</p>
@@ -115,8 +107,8 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">GPS SPRINGBOOT</p>
-    <p class="contador">v115.136.280</p>
+    <p class="contador">GPS GAME</p>
+    <p class="contador">v115.136.281</p>
     <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="distancia" class="contador">0 m</p>
@@ -138,7 +130,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=136"></script>
-<script src="/geolocation.js?v280"></script> 
+<script src="/geolocation.js?v281"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

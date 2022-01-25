@@ -57,6 +57,32 @@ function posicaoNoGrid(pos) {
 }
 
 function reload() {
+         $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
+
+          var label1 = "";
+
+          for (var k in data) {
+             var html =  "<label class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+data[k].nome+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
+
+             label1 += html;
+
+       // Marcador do item
+       var itemIcon = L.icon({
+            iconUrl: data[k].png,
+            iconSize:     [35, 40], // size of the icon
+            shadowSize:   [50, 25], // size of the shadow
+            iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+            shadowAnchor: [25, 10],  // the same for the shadow
+            popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+        });
+
+       var itemMarker = L.marker([0, 0], {icon: itemIcon}).addTo(map).bindPopup("後で");
+          }
+
+         // menu de itens
+         $("#itens").html(label1);
+         });
+
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
 
          //console.log(data);
@@ -147,46 +173,6 @@ var markerIcon= L.icon({
 
 var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map);
 
-var heartIcon = L.icon({
-       iconUrl: "/img/heart.png",
-       /*shadowUrl: '/img/icon-shadow.png',*/
-       iconSize:     [35, 40], // size of the icon
-       shadowSize:   [50, 25], // size of the shadow
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       shadowAnchor: [25, 10],  // the same for the shadow
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-});
-
-var heartMarker = L.marker([0, 0], {icon: heartIcon}).addTo(map).bindPopup("後で");
-
-var swordIcon = L.icon({
-       iconUrl: "/img/sword.png",
-       /*shadowUrl: '/img/icon-shadow.png',*/
-       iconSize:     [35, 40], // size of the icon
-       shadowSize:   [50, 25], // size of the shadow
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       shadowAnchor: [25, 10],  // the same for the shadow
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-});
-
-var swordMarker = L.marker([0, 0], {icon: swordIcon}).addTo(map).bindPopup("後で");
-
-var heartShadow = L.circle([0, 0], {
-        color: "#2f2e40",
-        fillOpacity: 0.5,
-        radius: 2.5,
-        weight: 1,
-        stroke: false
-}).addTo(map);
-
-var swordShadow = L.circle([0, 0], {
-        color: "#2f2e40",
-        fillOpacity: 0.5,
-        radius: 2.5,
-        weight: 1,
-        stroke: false
-}).addTo(map);
-
 var itemMarker = "heart";
 $(document).on('click', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
@@ -221,6 +207,10 @@ function onMapClick(e) {
          case "sword":
              swordMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
              swordShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+             break;
+         case "gloves":
+             glovesMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+             glovesShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
              break;
          }
          itemMarker = "";
