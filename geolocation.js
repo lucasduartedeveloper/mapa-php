@@ -225,6 +225,7 @@ function onMapClick(e) {
              swordShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
              break;
       }
+      itemMarker = "";
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
      map.setView([pos.lat, pos.lng], 18);
