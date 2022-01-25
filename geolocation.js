@@ -214,7 +214,7 @@ function onMapClick(e) {
          itens[itemId -1].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
          itens[itemId -1].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
-        $.post("/ajax/localizacao_gps.php", {
+        $.post("/ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
         lng: pos.lng,
         id: itemId,
@@ -226,6 +226,7 @@ function onMapClick(e) {
                console.log(data);
         });
 
+        console.log(itemId);
          play();
      }
 
