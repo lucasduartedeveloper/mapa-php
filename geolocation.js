@@ -93,7 +93,7 @@ function reload() {
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon}).addTo(map).bindPopup("後で");
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
-                              color: "#581845"
+                              color: "#581845",
 		fillOpacity: 0.5,
         		radius: 2.5,
         		weight: 1,
@@ -246,7 +246,7 @@ function onMapClick(e) {
      }
      else {
           for (var k in itens) {
-               if (itens[k].lat === pos.lat && itens[k].lng === pos.lng) {
+               if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
                     $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
                     lng: 0,
