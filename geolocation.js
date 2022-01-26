@@ -63,6 +63,7 @@ function reload() {
           var label1 = "";
           var label2 = "";
           var label3 = "";
+          var label4 = "";
           
           for (var k in itens) {
              //map.removeControl(reguas[k].rectangle);
@@ -83,6 +84,9 @@ function reload() {
              }
              else if (k <= 11) {
                 label3 += html;
+             }
+             else if (k <= 15) {
+                label4 += html;
              }
 
              var item = {};
@@ -118,6 +122,7 @@ function reload() {
          $("#itens1").html(label1);
          $("#itens2").html(label2);
          $("#itens3").html(label3);
+         $("#itens4").html(label4);
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
