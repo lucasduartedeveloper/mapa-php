@@ -434,7 +434,7 @@ function success(position) {
        console.log(distancia);
        console.log(tempo);
 
-       $(".velocidade").text(Math.floor(distancia / (tempo / 1000) + "m/s");
+       $(".velocidade").text(Math.floor(distancia / (tempo / 1000)) + "m/s");
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
