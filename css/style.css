@@ -237,7 +237,7 @@ label.btn.active{
 #inventario {
     overflow-y: scroll;
     display: flex;
-    j--ustify-content: space-between;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
