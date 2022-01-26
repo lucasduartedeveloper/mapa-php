@@ -413,6 +413,9 @@ function say(text) {
 }
 
 // Localização melhor
+var velocidade = 0;
+var posAnterior = 0;
+var dhPosAnterior = new Date().getTime();
 function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
 
@@ -421,6 +424,19 @@ function success(position) {
         lng : position.coords.longitude
     });
     onMapClick({ latlng: pos });
+
+   if (posicaoAnterior) {
+       var distancia = posAnterior.distanceTo(pos);
+       var now = new Date().getTime();
+       var tempo = now - dhPosAnterior;
+       
+       console.log(distancia / tempo * 1000);
+       console log(distancia);
+       console.log(tempo);
+
+       posAnterior = pos;
+       dhPosAnterior = now;
+   }
 
    $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
