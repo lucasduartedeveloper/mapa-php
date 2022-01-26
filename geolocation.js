@@ -213,7 +213,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     var expr = $(this).filter(':checked').attr('id');
     $(this).filter(':checked').checked = false;
     itemId = expr;
-    console.log(itemId);
+    //console.log(itemId);
     say("Você selecionou " + itens[itemId].nome);
     $("#menu").click();
 });
@@ -423,8 +423,7 @@ function success(position) {
         lat : position.coords.latitude,
         lng : position.coords.longitude
     });
-    onMapClick({ latlng: pos });
-
+    
    if (posAnterior) {
        var distancia = posAnterior.distanceTo(pos);
        var now = new Date().getTime();
@@ -437,6 +436,8 @@ function success(position) {
        posAnterior = pos;
        dhPosAnterior = now;
    }
+
+   onMapClick({ latlng: pos });
 
    $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
