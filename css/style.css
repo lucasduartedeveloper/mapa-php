@@ -240,4 +240,5 @@ label.btn.active{
     justify-content: space-between;
     align-items: center;
     flex-direction: wrap;
+    max-width: 90vw;
 }
