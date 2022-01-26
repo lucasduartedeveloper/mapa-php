@@ -111,8 +111,7 @@ function reload() {
        item.lng = data[k].longitude;
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
-       .on('click', onClick);
-function onClick(e) { onMapClick(e.latlng); }
+       .on('click', function(e) { onMapClick(e.latlng); });
        .addTo(map)
        .bindPopup("後で");
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
