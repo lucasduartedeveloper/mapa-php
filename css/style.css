@@ -239,6 +239,6 @@ label.btn.active{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: wrap;
+    flex-wrap: wrap;
     max-width: 90vw;
 }
