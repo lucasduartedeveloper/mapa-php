@@ -111,7 +111,8 @@ function reload() {
        item.lng = data[k].longitude;
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
-       .on('click', onMapClick)
+       .on("click", onMapClick)
+       .on("dblclick", onMapClick)
        .addTo(map)
        .bindPopup("後で");
 
@@ -240,6 +241,8 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 function onMapClick(e) {
      var pos = posicaoNoGrid(e.latlng);
+
+     console.log(e);
 
      var novaArea = true;
      for (var k in reguas) {
