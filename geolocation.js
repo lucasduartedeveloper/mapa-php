@@ -165,10 +165,12 @@ function reload() {
         }
 
         reguas = data;
-        onMapClick({ latlng: {
-             lat: reguas[0].latitude,
-             lng: reguas[0].longitude
-        }});
+        if (reguas) {
+             onMapClick({ latlng: {
+                 lat: reguas[0].latitude,
+                 lng: reguas[0].longitude
+             }});
+        }
 
         firstpolyline = new L.Polyline(pointList, {
             color: 'black',
