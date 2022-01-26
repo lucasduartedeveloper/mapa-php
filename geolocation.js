@@ -424,15 +424,19 @@ function success(position) {
         lng : position.coords.longitude
     });
     
+   var now = new Date().getTime();
    if (posAnterior) {
        var distancia = posAnterior.distanceTo(pos);
-       var now = new Date().getTime();
        var tempo = now - dhPosAnterior;
        
        console.log(distancia / tempo * 1000);
        console.log(distancia);
        console.log(tempo);
 
+       posAnterior = pos;
+       dhPosAnterior = now;
+   }
+   else {
        posAnterior = pos;
        dhPosAnterior = now;
    }
