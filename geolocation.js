@@ -431,7 +431,7 @@ function success(position) {
        var tempo = now - dhPosAnterior;
        
        console.log(distancia / tempo * 1000);
-       console log(distancia);
+       console.log(distancia);
        console.log(tempo);
 
        posAnterior = pos;
