@@ -430,9 +430,11 @@ function success(position) {
        .distanceTo(new L.LatLng(pos.lat, pos.lng));
        var tempo = now - dhPosAnterior;
        
-       console.log(distancia / tempo * 1000);
+       console.log(distancia / (tempo / 1000));
        console.log(distancia);
        console.log(tempo);
+
+       $(".velocidade").text(Math.floor(distancia / (tempo / 1000) + "m/s");
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
