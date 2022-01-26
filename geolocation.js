@@ -241,8 +241,7 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 function onMapClick(e) {
      var pos = posicaoNoGrid(e.latlng);
-
-     console.log(e);
+     // console.log(e);
 
      var novaArea = true;
      for (var k in reguas) {
@@ -251,7 +250,7 @@ function onMapClick(e) {
                novaArea = false;
           }
      }
-     if (novaArea) {
+     if (novaArea || e.type == "dblclick") {
          type("Marcando nova área");
          //say("Marcando nova área");
          //console.log(itemId);
