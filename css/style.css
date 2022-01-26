@@ -238,7 +238,7 @@ label.btn.active{
 #inventario {
     overflow-y: scroll;
     display: flex;
-    align-items: stretch;
+    align-items: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 90vw;
