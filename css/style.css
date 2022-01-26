@@ -133,7 +133,7 @@ label.btn {
     border-radius: 0px;
     margin: 5px;
     border-width: 2px;
-    flex: 1;
+    flex: 0;
 }
 
 label.btn.active{
