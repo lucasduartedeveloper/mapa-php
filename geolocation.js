@@ -111,9 +111,10 @@ function reload() {
        item.lng = data[k].longitude;
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
-       .on('click', function(e) { onMapClick(e); })
+       .on('click', onMapClick)
        .addTo(map)
        .bindPopup("後で");
+
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
                               color: "#581845",
 		fillOpacity: 0.5,
