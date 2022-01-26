@@ -426,7 +426,8 @@ function success(position) {
     
    var now = new Date().getTime();
    if (posAnterior) {
-       var distancia = posAnterior.distanceTo(pos);
+       var distancia = posAnterior
+       .distanceTo(new L.LatLng(pos.lat, pos.lng));
        var tempo = now - dhPosAnterior;
        
        console.log(distancia / tempo * 1000);
@@ -437,7 +438,7 @@ function success(position) {
        dhPosAnterior = now;
    }
    else {
-       posAnterior = pos;
+       posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
    }
 
