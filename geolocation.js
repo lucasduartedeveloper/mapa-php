@@ -414,7 +414,7 @@ function say(text) {
 
 // Localização melhor
 var velocidade = 0;
-var posAnterior = 0;
+var posAnterior = false;
 var dhPosAnterior = new Date().getTime();
 function success(position) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square-fill\"></i>");
@@ -434,7 +434,7 @@ function success(position) {
        console.log(distancia);
        console.log(tempo);
 
-       posAnterior = pos;
+       posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
    }
    else {
