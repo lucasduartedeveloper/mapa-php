@@ -257,8 +257,8 @@ function onMapClick(e) {
      else {
           for (var k in itens) {
                if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
-               console.log(pos);
-               console.log(itens[k]);
+               //console.log(pos);
+               //console.log(itens[k]);
 
                $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
@@ -405,7 +405,7 @@ function say(text) {
               var msg = new SpeechSynthesisUtterance();
               msg.text = text;
               msg.onend = function(event) {
-                  console.log("onend");
+                  //console.log("onend");
                   last_text2 = "";
               }
               window.speechSynthesis.speak(msg);

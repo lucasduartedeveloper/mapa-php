@@ -238,7 +238,8 @@ label.btn.active{
     overflow-y: scroll;
     display: flex;
     align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
     max-width: 90vw;
-    justify-content: space-between;;
+    justify-content: flex-start;
 }
