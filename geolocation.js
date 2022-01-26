@@ -77,6 +77,9 @@ function reload() {
              var hidden = data[k].latitude != 0 ? " hidden " : ""
              var html =  "<label "+hidden+" class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
+             // Incluir barra de rolagem
+
+
              if (k <= 3) {
                  label1 += html;
              }

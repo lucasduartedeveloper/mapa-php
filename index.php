@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=115">
+<link rel="stylesheet" href="/css/style.css?v=116">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -63,6 +63,7 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
+    <div class="inventario">
     <div id="itens1" class="btn-group btn-group-toggle" data-toggle="buttons">
 </div>
     <div id="itens2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -72,6 +73,7 @@ catch (PDOException $e) {
     <div id="itens4" class="btn-group btn-group-toggle" data-toggle="buttons">
 </div>
     <div id="itens5" class="btn-group btn-group-toggle" data-toggle="buttons">
+     </div>
 </div>
 
      <p  class="distancia" class="contador">0 m</p>
@@ -116,7 +118,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">GPS EDITÁVEL</p>
-    <p class="contador">v115.136.328</p>
+    <p class="contador">v116.136.329</p>
     <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="distancia" class="contador">0 m</p>
@@ -138,7 +140,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=136"></script>
-<script src="/geolocation.js?v328"></script> 
+<script src="/geolocation.js?v329"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
