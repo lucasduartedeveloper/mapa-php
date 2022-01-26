@@ -223,6 +223,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     $(this).filter(':checked').checked = false;
     itemId = expr;
     console.log(itemId);
+    say("Você selecionou " + itens[itemId].nome);
     $("#menu").click();
 });
 
