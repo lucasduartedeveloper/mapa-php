@@ -250,8 +250,8 @@ function onMapClick(e) {
                novaArea = false;
           }
      }
-     if (novaArea || e.type == "dblclick") {
-         type("Marcando nova área");
+     if (novaArea && e.type != "dblclick") {
+         //type("Marcando nova área");
          //say("Marcando nova área");
          //console.log(itemId);
          play();
