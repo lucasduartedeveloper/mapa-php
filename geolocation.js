@@ -425,7 +425,7 @@ function success(position) {
     });
     onMapClick({ latlng: pos });
 
-   if (posicaoAnterior) {
+   if (posAnterior) {
        var distancia = posAnterior.distanceTo(pos);
        var now = new Date().getTime();
        var tempo = now - dhPosAnterior;
