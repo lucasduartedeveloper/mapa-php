@@ -133,7 +133,7 @@ label.btn {
     border-radius: 0px;
     margin: 5px;
     border-width: 2px;
-    flex: 0;
+    flex-grow: 0;
 }
 
 label.btn.active{
@@ -238,9 +238,7 @@ label.btn.active{
 #inventario {
     overflow-y: scroll;
     display: flex;
-    align-items: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-flow: row wrap;
     max-width: 90vw;
-    justify-content: flex-start;
 }
