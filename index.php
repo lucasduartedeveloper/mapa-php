@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=118">
+<link rel="stylesheet" href="/css/style.css?v=119">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -63,18 +63,9 @@ catch (PDOException $e) {
     <i class="bi bi-geo-alt"></i>
     Reset
     </button>
-    <div class="inventario">
-    <div id="itens1" class="btn-group btn-group-toggle" data-toggle="buttons">
-</div>
-    <div id="itens2" class="btn-group btn-group-toggle" data-toggle="buttons">
-</div>
-    <div id="itens3" class="btn-group btn-group-toggle" data-toggle="buttons">
-</div>
-    <div id="itens4" class="btn-group btn-group-toggle" data-toggle="buttons">
-</div>
-    <div id="itens5" class="btn-group btn-group-toggle" data-toggle="buttons">
-     </div>
-</div>
+
+    <div id="inventario" class="btn-group btn-group-toggle" data-toggle="buttons">
+    </div>
 
      <p  class="distancia" class="contador">0 m</p>
 </div>

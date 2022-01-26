@@ -60,11 +60,7 @@ function posicaoNoGrid(pos) {
 function reload() {
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
-          var label1 = "";
-          var label2 = "";
-          var label3 = "";
-          var label4 = "";
-          var label5 = "";
+          var inventario = "";
           
           for (var k in itens) {
              //map.removeControl(reguas[k].rectangle);
@@ -78,23 +74,7 @@ function reload() {
              var html =  "<label "+hidden+" class=\"btn btn-outline-dark\"><input type=\"radio\" name=\"item\" id=\""+k+"\"><img class=\"icone\" src=\""+data[k].png+"\"/></label>";
 
              // Incluir barra de rolagem
-
-
-             if (k <= 3) {
-                 label1 += html;
-             }
-             else if (k <= 7) {
-                label2 += html;
-             }
-             else if (k <= 11) {
-                label3 += html;
-             }
-             else if (k <= 15) {
-                label4 += html;
-             }
-             else if (k <= 19) {
-                label5 += html;
-             }
+             inventario += html;
 
              var item = {};
 
@@ -131,11 +111,7 @@ function reload() {
           }
 
          // INVENTÁRIO
-         $("#itens1").html(label1);
-         $("#itens2").html(label2);
-         $("#itens3").html(label3);
-         $("#itens4").html(label4);
-         $("#itens5").html(label5);
+         $("#inventario").html(inventario);
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {

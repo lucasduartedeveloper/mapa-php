@@ -234,7 +234,7 @@ label.btn.active{
     opacity: 1;
 }
 
-.inventario {
+#inventario {
     overflow-y: scroll;
     display: flex;
     j--ustify-content: space-between;
