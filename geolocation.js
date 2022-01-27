@@ -218,7 +218,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     $("#menu").click();
 });
 
-var mapLocked = false;
+var mapLocked = true;
 function onMapClick(e) {
      var pos = posicaoNoGrid(e.latlng);
      // console.log(e);
