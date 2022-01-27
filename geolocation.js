@@ -214,7 +214,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     $(this).filter(':checked').checked = false;
     itemId = expr;
     //console.log(itemId);
-    say("Você selecionou " + itens[itemId].nome);
+    say("Você selecionou a missão " + itens[itemId].nome);
     $("#menu").click();
 });
 
@@ -268,7 +268,7 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                   say("Você recuperou um item");
+                   say("Você concluiu uma missão");
                   //play();
                   //console.log(data);
                });
@@ -342,17 +342,18 @@ $("#reset").click(function() {
 // SENSOR DE MOVIMENTO
 var motionValue = 0;
 if(window.DeviceMotionEvent){
+  return false; // Função inútil
   window.addEventListener("devicemotion", motion, false);
   $("#motion-info").html("devicemotion: <i class=\"bi bi-check-square-fill\"></i>");
 }
 function motion(event){
   motionValue = event.accelerationIncludingGravity.x;
-  animar();
+  animar();/*
   console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );
+  );*/
 }
 
 // SENSOR DE PROXIMIDADE
@@ -469,7 +470,7 @@ function success(position) {
         cor: cor,
         })
         .done(function(data) {
-               type("Atualizando localização");
+               //type("Atualizando localização");
                //say("Atualizando localização");
                //play();
         });
@@ -501,3 +502,20 @@ const options = {
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
+
+// ÚLTIMA FUNÇÃO
+var myShakeEvent = new Shake({
+    threshold: 15, // optional shake strength threshold
+    timeout: 1000 // optional, determines the frequency of event generation
+});
+
+myShakeEvent.start();
+
+window.addEventListener('shake', shakeEventDidOccur, false);
+
+//function to call when shake occurs
+function shakeEventDidOccur () {
+
+    //put your own code here etc.
+    alert('shake!');
+}
