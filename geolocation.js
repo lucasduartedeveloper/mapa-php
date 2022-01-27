@@ -363,6 +363,7 @@ window.addEventListener('userproximity', function(event) {
 // SENSOR DE LUZ
 var lightValue = 0;
 if ("ondevicelight" in window) {
+  return false; // Função inútil
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   window.addEventListener("devicelight", light);
 }
@@ -374,6 +375,7 @@ function light(event) {
 }
 
 function animar() {
+    return false; // Função inútil
     //console.log("lightValue: " + lightValue);
     //console.log("motionValue: " + motionValue);
 
@@ -400,6 +402,7 @@ function animar() {
 var last_text = "";
 var running = 0;
 function type(text) {
+     return false; // Função inútil
      if (running == 0 && text != last_text) {
          $(".typing-wrapper").html("");
          var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+2) + "ch; animation: typing 2s steps(" + (text.length+2) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
