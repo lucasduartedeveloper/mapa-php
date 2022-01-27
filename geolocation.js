@@ -347,12 +347,12 @@ if(window.DeviceMotionEvent){
 }
 function motion(event){
   motionValue = event.accelerationIncludingGravity.x;
-  animar();
+  animar();/*
   console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );
+  );*/
 }
 
 // SENSOR DE PROXIMIDADE
@@ -375,7 +375,7 @@ function light(event) {
 }
 
 function animar() {
-    return false; // Função inútil
+    //return false; // Função inútil
     //console.log("lightValue: " + lightValue);
     //console.log("motionValue: " + motionValue);
 
@@ -402,7 +402,7 @@ function animar() {
 var last_text = "";
 var running = 0;
 function type(text) {
-     return false; // Função inútil
+     //return false; // Função inútil
      if (running == 0 && text != last_text) {
          $(".typing-wrapper").html("");
          var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+2) + "ch; animation: typing 2s steps(" + (text.length+2) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
