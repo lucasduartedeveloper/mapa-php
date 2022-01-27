@@ -114,7 +114,7 @@ catch (PDOException $e) {
 <div id="box4" class="box3">
     <p class="contador">GTA GO - PUBG</p>
     <p class="contador">v130.136.356</p>
-    <img id="front" class="front" src="/img/icone.png"/>
+    <img id="front" class="front" src="/img/rockstar-logo.png.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 m/s</p>
      <p  class="distancia" class="contador">0 m</p>
