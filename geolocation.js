@@ -248,7 +248,7 @@ function onMapClick(e) {
         })
         .done(function(data) {
                //type("Item posicionado");
-               say("Item posicionado");
+               say("Missão posicionada");
                itemId = -1;
                //play();
                //console.log(data);
