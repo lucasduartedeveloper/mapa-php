@@ -341,8 +341,7 @@ $("#reset").click(function() {
 
 // SENSOR DE MOVIMENTO
 var motionValue = 0;
-if(window.DeviceMotionEvent){
-  return false; // Função inútil
+if(window.DeviceMotionEvent && true == false){
   window.addEventListener("devicemotion", motion, false);
   $("#motion-info").html("devicemotion: <i class=\"bi bi-check-square-fill\"></i>");
 }
