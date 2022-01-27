@@ -256,10 +256,13 @@ function onMapClick(e) {
         }
      }
      else {
+          var kforadofor = 0;
           for (var k in itens) {
                if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
                //console.log(pos);
                //console.log(itens[k]);
+
+               kforadofor = k;
 
                $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
@@ -268,7 +271,7 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                   say("Você concluiu uma missão");
+                   say("Você concluiu a missão " + itens[kforadofor].id);
                   //play();
                   //console.log(data);
                });
