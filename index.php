@@ -75,7 +75,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box2" class="box2">
-    <p id="nome" class="local">GPS</p>
+    <p id="nome" class="local">PONTOS GPS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -112,7 +112,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">GPS DO VEDITA DUBLADO</p>
+    <p class="contador">GTA GO - PUBG</p>
     <p class="contador">v130.136.356</p>
     <img id="front" class="front" src="/img/icone.png"/>
     <div hidden class="typing-wrapper"></div>
