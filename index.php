@@ -64,7 +64,7 @@ catch (PDOException $e) {
     Reset
     </button>
     <button id="auto" class="btn btn-dark btn-sm">
-    <i class="bi bi-lock-fill"></i>
+    <i class=""></i>
     </button>
 
     <div id="inventario" class="btn-group btn-group-toggle" data-toggle="buttons">

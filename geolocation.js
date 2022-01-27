@@ -287,12 +287,12 @@ map.on('click', onMapClick);
 $("#auto").click(function() {
     mapLocked =! mapLocked;
     if (mapLocked) {
-        $(this).removeClass("btn-dark");
-        $(this).addClass("btn-outline-dark");
-    }
-    else {
         $(this).removeClass("btn-outline-dark");
         $(this).addClass("btn-dark");
+    }
+    else {
+        $(this).removeClass("btn-dark");
+        $(this).addClass("btn-outline-dark");
     }
 });
 
