@@ -99,7 +99,7 @@ catch (PDOException $e) {
 
 <div id="box3" class="box3">
    <p></p>
-    <img  hidden class="logo" src="/img/logo.png"/>
+    <img  hidden class="logo" src="/img/rockstar-logo.png"/>
     <p class="contador"><?=$contar?> visitas</p>
     <div class="info-box">
     <p id="local-info" class="info">geolocation: 
