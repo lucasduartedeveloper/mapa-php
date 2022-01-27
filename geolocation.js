@@ -271,7 +271,7 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                   say("Você concluiu a missão " + itens[kforadofor].id);
+                   say("Você concluiu a missão " + itens[kforadofor].nome);
                   //play();
                   //console.log(data);
                });
