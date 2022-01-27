@@ -218,6 +218,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     $("#menu").click();
 });
 
+var mapLocked = false;
 function onMapClick(e) {
      var pos = posicaoNoGrid(e.latlng);
      // console.log(e);
@@ -276,10 +277,24 @@ function onMapClick(e) {
      }
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-     map.setView([pos.lat, pos.lng], 19);
+     if (mapLocked) {
+         map.setView([pos.lat, pos.lng], 19);
+     }
 }
 
 map.on('click', onMapClick);
+
+$("#auto").click(function() {
+    mapLocked =! mapLocked;
+    if (mapLocked) {
+        $(this).removeClass("btn-dark");
+        $(this).addClass("btn-outline-dark");
+    }
+    else {
+        $(this).removeClass("btn-outline-dark");
+        $(this).addClass("btn-dark");
+    }
+});
 
 // ATUALIZAR 
 var intervalo = 5000;
