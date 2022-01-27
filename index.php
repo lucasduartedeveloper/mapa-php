@@ -60,7 +60,7 @@ catch (PDOException $e) {
 <div id="box1" class="box1">
      <!--  -->
     <button id="reset" type="button" class="btn btn-dark btn-sm">
-    <i class="bi bi-geo-alt"></i>
+    <i class="bi bi-geo-alt-fill"></i>
     Reset
     </button>
     <button id="auto" class="btn btn-dark btn-sm">
