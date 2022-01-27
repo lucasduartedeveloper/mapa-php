@@ -348,11 +348,11 @@ if(window.DeviceMotionEvent){
 function motion(event){
   motionValue = event.accelerationIncludingGravity.x;
   animar();
-  /*console.log("Accelerometer: "
+  console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );*/
+  );
 }
 
 // SENSOR DE PROXIMIDADE
