@@ -360,6 +360,7 @@ $("#reset").click(function() {
                  id: itens[k].id,
             });
        }
+       $("#menu").click();
 });
 
 // SENSOR DE MOVIMENTO
