@@ -39,6 +39,8 @@ $( "#menu" ).click(function() {
     pagina = pagina -1;
     pagina = pagina < 0 ? 4 : pagina;
 
+    console.log(página);
+
     switch (pagina) {
          case 0:
            $("#box1").hide();
