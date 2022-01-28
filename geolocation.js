@@ -218,7 +218,7 @@ var markerIconUnlocked= L.icon({
 
 var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map);
 
-var itemId = 0;
+var itemId = -1;
 $(document).on('click', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
     //$(this).filter(':checked').parent().addClass('active');
