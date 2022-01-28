@@ -39,7 +39,7 @@ $( "#menu" ).click(function() {
     pagina = pagina -1;
     pagina = pagina < 0 ? 4 : pagina;
 
-    console.log(página);
+    console.log(pagina);
 
     switch (pagina) {
          case 0:
