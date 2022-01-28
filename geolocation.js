@@ -18,9 +18,10 @@ var  reguas = [];
 var  itens = [];
 var cor = "#2f2e40";
 
-function play() {
+function play(file_path) {
    //return;
-   var audio = new Audio('/audio/coin.mp3');
+   file_path = file_path ? file_path : '/audio/coin.mp3';
+   var audio = new Audio(file_path);
    audio.play(); 
    //$("#coin").addClass("animate");
    //setTimeout(function() {
@@ -282,6 +283,7 @@ function onMapClick(e) {
                .done(function(data) {
                    //type("Você recuperou um item");
                    say("Você chegou em " + itens[kforadofor].nome);
+                   
                    if (itens[kforadofor].audio) {
                        play(itens[kforadofor].audio);
                    }
