@@ -282,8 +282,8 @@ function onMapClick(e) {
                .done(function(data) {
                    //type("Você recuperou um item");
                    say("Você chegou em " + itens[kforadofor].nome);
-                   if (itens[k].audio) {
-                       play(itens[k].audio);
+                   if (itens[kforadofor].audio) {
+                       play(itens[kforadofor].audio);
                    }
                    //console.log(data);
                });
