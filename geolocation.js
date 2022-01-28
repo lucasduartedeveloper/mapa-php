@@ -287,7 +287,7 @@ function onMapClick(e) {
                    if (itens[kforadofor].audio) {
                        play(itens[kforadofor].audio);
                    }
-                   //console.log(data);
+                   console.log(itens[kforadofor].audio);
                });
                }
           }
