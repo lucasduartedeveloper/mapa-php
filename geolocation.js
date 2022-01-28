@@ -224,7 +224,7 @@ $(document).on('click', ':radio[name="item"]', function() {
     $(this).filter(':checked').checked = false;
     itemId = expr;
     //console.log(itemId);
-    say("Você selecionou a missão " + itens[itemId].nome);
+    say("Você selecionou o marcador " + itens[itemId].nome);
     $("#menu").click();
 });
 
@@ -258,7 +258,7 @@ function onMapClick(e) {
         })
         .done(function(data) {
                //type("Item posicionado");
-               say("Missão posicionada");
+               say("Pronto");
                itemId = -1;
                //play();
                //console.log(data);
@@ -281,7 +281,7 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                   say("Você concluiu a missão " + itens[kforadofor].nome);
+                   say("Você chegou em " + itens[kforadofor].nome);
                   //play();
                   //console.log(data);
                });
@@ -293,7 +293,7 @@ function onMapClick(e) {
      if (mapLocked) {
          map.setView([pos.lat, pos.lng], 19);
      }
-     // MODO HACK IMORTAL
+     // MODO SIMULAÇÃO
      else {
         $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
