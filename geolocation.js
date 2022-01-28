@@ -204,6 +204,16 @@ var markerIcon= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
+var markerIconUnlocked= L.icon({
+       iconUrl: "/img/marker-unlocked.png",
+       /*shadowUrl: '/img/icon-shadow.png',*/
+       iconSize:     [35, 40], // size of the icon
+       shadowSize:   [50, 25], // size of the shadow
+       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+       shadowAnchor: [25, 10],  // the same for the shadow
+       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
 var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map);
 
 var itemId = 0;
@@ -299,10 +309,12 @@ $("#auto").click(function() {
     if (mapLocked) {
         $(this).removeClass("btn-outline-dark");
         $(this).addClass("btn-dark");
+        marker.setIcon(markerIcon);
     }
     else {
         $(this).removeClass("btn-dark");
         $(this).addClass("btn-outline-dark");
+        marker.setIcon(markerIconUnlocked);
     }
     $("#menu").click();
 });
