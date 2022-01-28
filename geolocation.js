@@ -18,10 +18,12 @@ var  reguas = [];
 var  itens = [];
 var cor = "#2f2e40";
 
+var audio = new Audio();
 function play(file_path) {
    //return;
    file_path = file_path ? file_path : '/audio/coin.mp3';
-   var audio = new Audio(file_path);
+   audio.pause();
+   audio = new Audio(file_path);
    audio.play(); 
    //$("#coin").addClass("animate");
    //setTimeout(function() {
