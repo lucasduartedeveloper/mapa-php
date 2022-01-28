@@ -40,7 +40,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=134">
+<link rel="stylesheet" href="/css/style.css?v=135">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -113,7 +113,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">MAP CLEANER</p>
-    <p class="contador">v134.139.360 stable</p>
+    <p class="contador">v135.139.360 stable</p>
     <img id="front" class="front" src="/img/logo.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 m/s</p>
