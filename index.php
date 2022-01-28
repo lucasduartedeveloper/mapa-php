@@ -99,7 +99,7 @@ catch (PDOException $e) {
 
 <div id="box3" class="box3">
    <p></p>
-    <img  hidden class="logo" src="/img/rockstar-logo.png"/>
+    <img  hidden class="logo" src="/img/logo.png"/>
     <p class="contador"><?=$contar?> visitas</p>
     <div class="info-box">
     <p id="local-info" class="info">geolocation: 
@@ -119,8 +119,6 @@ catch (PDOException $e) {
      <p  class="velocidade" class="contador">0 m/s</p>
      <p  class="distancia" class="contador">0 m</p>
 </div>
-
-<img id="coin" class="coin" src="/img/coin.gif"/>
 
 <img id="menu" class="my-float" src="/img/parafuso.png"/>
 <!-- 

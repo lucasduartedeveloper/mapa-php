@@ -172,6 +172,7 @@ label.btn.active{
     max-width: 150px;
     max-height: 150px;
     opacity: 0.5;
+    border-radius: 25%;
 }
 
  /*This part is important for centering*/
