@@ -93,6 +93,7 @@ function reload() {
        item.nome = data[k].nome;
        item.lat = data[k].latitude;
        item.lng = data[k].longitude;
+       item.audio = data[k].audio;
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
        .on("click", onMapClick)
