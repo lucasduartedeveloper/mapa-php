@@ -171,7 +171,7 @@ label.btn.active{
     height: 50vw;
     max-width: 150px;
     max-height: 150px;
-    opacity: 0.5;
+    opacity: 1;
     border-radius: 25%;
 }
 
