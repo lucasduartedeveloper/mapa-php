@@ -283,6 +283,13 @@ function onMapClick(e) {
      if (mapLocked) {
          map.setView([pos.lat, pos.lng], 19);
      }
+     // MODO HACK IMORTAL
+     else {
+        $.post("/ajax/localizacao_gps.php", {
+        lat: pos.lat, 
+        lng: pos.lng,
+        cor: cor });
+     }
 }
 
 map.on('click', onMapClick);
@@ -297,6 +304,7 @@ $("#auto").click(function() {
         $(this).removeClass("btn-dark");
         $(this).addClass("btn-outline-dark");
     }
+    $("#menu").click();
 });
 
 // ATUALIZAR 

@@ -58,6 +58,10 @@ catch (PDOException $e) {
 </div>
 
 <div id="box1" class="box1">
+    
+</div>
+
+<div id="box1" class="box1">
      <!--  -->
     <button id="reset" type="button" class="btn btn-dark btn-sm">
     <i class="bi bi-plug-fill"></i>
@@ -113,7 +117,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">GTA - AS MISSÕES QUE ANDEM</p>
-    <p class="contador">v131.136.356</p>
+    <p class="contador">v131.136.357</p>
     <img id="front" class="front" src="/img/rockstar-logo.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 m/s</p>
@@ -136,7 +140,7 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=136"></script>
-<script src="/geolocation.js?v356"></script> 
+<script src="/geolocation.js?v357"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
