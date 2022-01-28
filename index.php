@@ -112,7 +112,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">GTA - AS MISSÕES QUE ANDEM</p>
+    <p class="contador">MAP CLEANER</p>
     <p class="contador">v131.139.359</p>
     <img id="front" class="front" src="/img/rockstar-logo.png"/>
     <div hidden class="typing-wrapper"></div>
