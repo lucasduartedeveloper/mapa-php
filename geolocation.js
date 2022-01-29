@@ -168,7 +168,6 @@ function reload() {
         $(".distancia").text(Math.floor(distancia) + " m");
 
         // LEMBRAR ANOTAÇÕES
-        console.log(itens);
         if (reloadCount == 0) {
              lembrarAnotacoes();
         }
@@ -354,12 +353,12 @@ $(document).ready(function() {
 
 // LEMBRAR ANOTAÇÕES
 function lembrarAnotacoes() {
-    var anotacoes = "Você anotou no último acesso: ";
+    var anotacoes = "Você anotou no último acesso:\n";
     var nro = 0;
     for (var k in itens) {
          if (itens[k].lat) {
               nro +=1;
-              anotacoes += nro + " " + itens[k].anotacao;
+              anotacoes += nro + " " + itens[k].anotacao + "\n";;
          }
     }
     if (nro > 0) {
