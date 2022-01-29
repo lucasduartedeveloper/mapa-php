@@ -365,7 +365,7 @@ $(document).ready(function() {
 
 // LEMBRAR ANOTAÇÕES
 function lembrarAnotacoes() {
-    var anotacoes = "Você incluiu no último acesso:\n";
+    var anotacoes = "No último episódio:\n";
     var nro = 0;
     for (var k in itens) {
          if (itens[k].lat != 0) {

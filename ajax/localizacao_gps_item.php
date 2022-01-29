@@ -18,7 +18,7 @@ try {
   }
   else {
 
-    $sql = "SELECT * FROM localizacao_gps_item ORDER BY data_hora DESC;";
+    $sql = "SELECT * FROM localizacao_gps_item ORDER BY data_hora;";
     //echo $sql."<br>";else {
 
     $stmt = $pdo->prepare($sql);
