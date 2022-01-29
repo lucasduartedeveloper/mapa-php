@@ -300,7 +300,7 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                  if (itens[kforadofor].anotacao != "後で") {
+                  if (!itens[kforadofor].anotacao .startsWith("後で")) {
                          say(itens[kforadofor].anotacao);
                    }
                    else  {
