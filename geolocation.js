@@ -263,16 +263,18 @@ function onMapClick(e) {
          itens[itemId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
          itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
+        var id = itemId;
+        itemId = -1;
+
         $.post("/ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
         lng: pos.lng,
-        id: itens[itemId].id,
+        id: itens[id].id,
         anotacao: prompt("Anotação:","後で")
         })
         .done(function(data) {
                //type("Item posicionado");
                say("Pronto");
-               itemId = -1;
                //play();
                //console.log(data);
         });
@@ -286,6 +288,8 @@ function onMapClick(e) {
                //console.log(itens[k]);
 
                kforadofor = k;
+               itens[k].lat = 0;
+               itens[k].lng = 0;
 
                $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
@@ -294,12 +298,12 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                   say("Você chegou em " + itens[kforadofor].nome);
+                   say("Você recuperou " + itens[kforadofor].nome);
                    
                    if (itens[kforadofor].audio) {
                        play(itens[kforadofor].audio);
                    }
-                   console.log(itens[kforadofor].audio);
+                   console.log("Tocando: " + itens[kforadofor].audio);
                });
                }
           }
