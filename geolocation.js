@@ -21,7 +21,8 @@ var cor = "#2f2e40";
 var audio = new Audio();
 function play(file_path) {
    //return;
-   file_path = file_path ? file_path : '/audio/coin.mp3';
+   //file_path = file_path ? file_path : '/audio/coin.mp3';
+   file_path = file_path ? file_path : '/audio/missile.mp3';
    audio.pause();
    audio = new Audio(file_path);
    audio.play(); 
