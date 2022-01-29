@@ -168,6 +168,7 @@ function reload() {
         $(".distancia").text(Math.floor(distancia) + " m");
 
         // LEMBRAR ANOTAÇÕES
+        console.log(itens);
         if (reloadCount == 0) {
              lembrarAnotacoes();
         }
@@ -360,7 +361,6 @@ function lembrarAnotacoes() {
               nro +=1;
               anotacoes += nro + " " + itens[k].anotacao;
          }
-         console.log(itens[k].nome);
     }
     if (nro > 0) {
          say(anotacoes);
