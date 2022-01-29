@@ -264,13 +264,15 @@ function onMapClick(e) {
          itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
         var id = itemId;
+        var anotacao = prompt("Anotação:","後で");
+        anotacao = anotacao =! "" ? anotacao : "後で";
         itemId = -1;
 
         $.post("/ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
         lng: pos.lng,
         id: itens[id].id,
-        anotacao: prompt("Anotação:","後で")
+        anotacao: anotacao
         })
         .done(function(data) {
                //type("Item posicionado");
