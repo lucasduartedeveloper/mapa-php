@@ -347,7 +347,7 @@ var foo = function() {
 
 var reloadCount = 0;
 $(document).ready(function() {
-    //foo();
+    foo();
     setInterval(foo, intervalo);
 });
 
@@ -361,9 +361,10 @@ function lembrarAnotacoes() {
               anotacoes += nro + " " + itens[k].anotacao;
          }
     }
-    if (nro) {
+    if (nro > 0) {
          say(anotacoes);
     }
+    console.log(anotacoes);
 }
 
 $(document).on('change', ':radio[name="cor"]', function() {
