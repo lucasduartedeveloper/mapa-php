@@ -314,7 +314,7 @@ function onMapClick(e) {
          map.setView([pos.lat, pos.lng], 19);
      }
      // MODO SIMULAÇÃO
-     else {
+     else if (itemId < 0)  {
         $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
