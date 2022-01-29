@@ -351,8 +351,8 @@ $(document).ready(function() {
     setInterval(foo, intervalo);
 });
 
+// LEMBRAR ANOTAÇÕES
 function lembrarAnotacoes() {
-    // LEMBRAR ANOTAÇÕES
     var anotacoes = "Você anotou no último acesso: ";
     var nro = 0;
     for (var k in itens) {
@@ -360,6 +360,7 @@ function lembrarAnotacoes() {
               nro +=1;
               anotacoes += nro + " " + itens[k].anotacao;
          }
+         console.log(itens[k].nome);
     }
     if (nro > 0) {
          say(anotacoes);
