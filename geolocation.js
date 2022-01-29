@@ -345,12 +345,15 @@ $(document).ready(function() {
 
     // LEMBRAR ANOTAÇÕES
     var anotacoes = "Você anotou no último acesso:";
-    var no = 1;
+    var nro = 0;
     for (var k in itens) {
          if (itens[k].latitude) {
-              anotacoes += no + " " + itens[k].anotacao;
-              no +=1;
+              nro +=1;
+              anotacoes += nro + " " + itens[k].anotacao;
          }
+    }
+    if (nro) {
+         say(anotacoes);
     }
 });
 
