@@ -358,7 +358,7 @@ function lembrarAnotacoes() {
     for (var k in itens) {
          if (itens[k].lat != 0) {
               nro +=1;
-              anotacoes += nro + " " + itens[k].anotacao + "\n";;
+              anotacoes += nro + ". " + itens[k].anotacao + "\n";;
          }
     }
     if (nro > 0) {
