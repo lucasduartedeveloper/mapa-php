@@ -365,6 +365,7 @@ $("#reset").click(function() {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
+                 anotacao: prompt("Anotação:","")
             });
        }
        $("#menu").click();
