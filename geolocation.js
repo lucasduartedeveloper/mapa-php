@@ -119,6 +119,12 @@ function reload() {
          $("#inventario").html(inventario);
          });
 
+        // LEMBRAR ANOTAÇÕES
+        if (reloadCount == 0) {
+             lembrarAnotacoes();
+        }
+        reloadCount += 1;
+
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
 
          //console.log(data);
@@ -339,12 +345,15 @@ var foo = function() {
         countDownDate = newDateObj;
 };
 
+var reloadCount = 0;
 $(document).ready(function() {
-    foo();
+    //foo();
     setInterval(foo, intervalo);
+});
 
+function lembrarAnotacoes() {
     // LEMBRAR ANOTAÇÕES
-    var anotacoes = "Você anotou no último acesso:";
+    var anotacoes = "Você anotou no último acesso: ";
     var nro = 0;
     for (var k in itens) {
          if (itens[k].latitude) {
@@ -355,7 +364,7 @@ $(document).ready(function() {
     if (nro) {
          say(anotacoes);
     }
-});
+}
 
 $(document).on('change', ':radio[name="cor"]', function() {
     $('label').removeClass('active');
