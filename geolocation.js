@@ -96,12 +96,13 @@ function reload() {
        item.lat = data[k].latitude;
        item.lng = data[k].longitude;
        item.audio = data[k].audio;
+       item.anotacao = data[k].anotacao;
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
        .addTo(map)
-       .bindPopup("後で");
+       .bindPopup(item.anotacao);
 
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
                               color: "#581845",
@@ -259,7 +260,7 @@ function onMapClick(e) {
         lat: pos.lat, 
         lng: pos.lng,
         id: itens[itemId].id,
-        anotacao: prompt("Anotação:","")
+        anotacao: prompt("Anotação:","後で")
         })
         .done(function(data) {
                //type("Item posicionado");

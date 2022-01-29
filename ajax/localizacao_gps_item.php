@@ -5,11 +5,12 @@ try {
  
   if (!empty($_POST["id"])) {
 
+    $id = htmlspecialchars($_POST["id"]);
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
-    $id = htmlspecialchars($_POST["id"]);
+    $anotacao = htmlspecialchars($_POST["anotacao"]);
 
-    $sql = "UPDATE localizacao_gps_item SET latitude=".$latitude.", longitude=".$longitude." WHERE id=".$id.";";
+    $sql = "UPDATE localizacao_gps_item SET latitude=".$latitude.", longitude=".$longitude.",  anotacao='".$anotacao." ' WHERE id=".$id.";";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
