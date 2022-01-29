@@ -112,7 +112,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box4" class="box3">
-    <p class="contador">MAP CLEANER (BETS)</p>
+    <p class="contador">MAP CLEANER</p>
     <p class="contador">v135.139.392 test</p>
     <img id="front" class="front" src="/img/logo.png"/>
     <div hidden class="typing-wrapper"></div>
