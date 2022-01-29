@@ -356,7 +356,7 @@ function lembrarAnotacoes() {
     var anotacoes = "Você anotou no último acesso:\n";
     var nro = 0;
     for (var k in itens) {
-         if (itens[k].lat !== 0) {
+         if (itens[k].lat != 0) {
               nro +=1;
               anotacoes += nro + " " + itens[k].anotacao + "\n";;
          }
