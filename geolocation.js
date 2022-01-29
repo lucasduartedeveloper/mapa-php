@@ -298,8 +298,13 @@ function onMapClick(e) {
                })
                .done(function(data) {
                    //type("Você recuperou um item");
-                   say("Você recuperou " + itens[kforadofor].nome);
-                   
+                  if (itens[kforadofor].anotacao != "後で") {
+                         say(itens[kforadofor].anotacao);
+                   }
+                   else  {
+                         say("Você recuperou " + itens[kforadofor].nome);
+                   }
+
                    if (itens[kforadofor].audio) {
                        play(itens[kforadofor].audio);
                    }
