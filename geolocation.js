@@ -282,6 +282,7 @@ function onMapClick(e) {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
+                    anotacao: prompt("Anotação:","")
                })
                .done(function(data) {
                    //type("Você recuperou um item");
@@ -364,8 +365,7 @@ $("#reset").click(function() {
            $.post("/ajax/localizacao_gps_item.php", {
                  lat: 0, 
                  lng: 0,
-                 id: itens[k].id,
-                 anotacao: prompt("Anotação:","")
+                 id: itens[k].id
             });
        }
        $("#menu").click();
