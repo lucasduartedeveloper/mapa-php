@@ -117,6 +117,12 @@ function reload() {
 
          // INVENTÁRIO
          $("#inventario").html(inventario);
+
+        // LEMBRAR ANOTAÇÕES
+        if (reloadCount == 0) {
+             lembrarAnotacoes();
+        }
+        reloadCount += 1;
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
@@ -166,12 +172,6 @@ function reload() {
         firstpolyline.addTo(map);
 
         $(".distancia").text(Math.floor(distancia) + " m");
-
-        // LEMBRAR ANOTAÇÕES
-        if (reloadCount == 0) {
-             lembrarAnotacoes();
-        }
-        reloadCount += 1;
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
