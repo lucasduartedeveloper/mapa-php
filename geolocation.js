@@ -119,12 +119,6 @@ function reload() {
          $("#inventario").html(inventario);
          });
 
-        // LEMBRAR ANOTAÇÕES
-        if (reloadCount == 0) {
-             lembrarAnotacoes();
-        }
-        reloadCount += 1;
-
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
 
          //console.log(data);
@@ -172,6 +166,12 @@ function reload() {
         firstpolyline.addTo(map);
 
         $(".distancia").text(Math.floor(distancia) + " m");
+
+        // LEMBRAR ANOTAÇÕES
+        if (reloadCount == 0) {
+             lembrarAnotacoes();
+        }
+        reloadCount += 1;
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
@@ -356,7 +356,7 @@ function lembrarAnotacoes() {
     var anotacoes = "Você anotou no último acesso: ";
     var nro = 0;
     for (var k in itens) {
-         if (itens[k].latitude) {
+         if (itens[k].lat) {
               nro +=1;
               anotacoes += nro + " " + itens[k].anotacao;
          }
