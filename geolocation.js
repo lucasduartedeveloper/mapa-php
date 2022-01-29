@@ -342,6 +342,16 @@ var foo = function() {
 $(document).ready(function() {
     foo();
     setInterval(foo, intervalo);
+
+    // LEMBRAR ANOTAÇÕES
+    var anotacoes = "Você anotou no último acesso:";
+    var no = 1;
+    for (var k in itens) {
+         if (itens[k].latitude) {
+              anotacoes += no + " " + itens[k].anotacao;
+              no +=1;
+         }
+    }
 });
 
 $(document).on('change', ':radio[name="cor"]', function() {
