@@ -365,7 +365,7 @@ $(document).ready(function() {
 
 // LEMBRAR ANOTAÇÕES
 function lembrarAnotacoes() {
-    var anotacoes = "Anotações de homem: \n";
+    var anotacoes = "Anotações no mapa: \n";
     var nro = 0;
     for (var k in itens) {
          if (itens[k].lat != 0) {
