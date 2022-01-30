@@ -121,7 +121,7 @@ function reload() {
 
         // LEMBRAR ANOTAÇÕES
         if (reloadCount == 0) {
-             lembrarAnotacoes();
+             //lembrarAnotacoes();
         }
         reloadCount += 1;
          });
@@ -368,7 +368,6 @@ $(document).ready(function() {
 
 // LEMBRAR ANOTAÇÕES
 function lembrarAnotacoes() {
-    return false;
     var anotacoes = "Anotações no mapa: \n";
     var nro = 0;
     for (var k in itens) {
@@ -606,7 +605,7 @@ function desenharControle()  {
      if (yellow && tnt) {
          var pointList = [ 
             new L.LatLng(yellow.lat, yellow.lng),
-            new L.LatLng(tnt.lat, tnt.lng);
+            new L.LatLng(tnt.lat, tnt.lng)
          ];
 
          var yellow_wire = new L.Polyline(pointList, {
