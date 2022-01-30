@@ -520,10 +520,15 @@ function success(position) {
        //console.log(distancia);
        //console.log(tempo);
 
-       $(".velocidade").text(Math.floor(distancia / (tempo / 1000)) + "m/s");
+       var velocidade = Math.floor(distancia / (tempo / 1000));
+       $(".velocidade").text(velocidade + " m/s");
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
+
+       if (velocidade > 0) {
+           say("Você está à " + velocidade + " metros por segundo");
+      }
    }
    else {
        posAnterior = new L.LatLng(pos.lat, pos.lng);
