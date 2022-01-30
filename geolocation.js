@@ -598,9 +598,9 @@ function shakeEventDidOccur () {
 // Controle do explosivo
 function desenharControle()  {
      var yellow = itens.filter(x => x.id == 96)[0];
-     var red = itens.filter(x => x.id > 95)[0];
-     var green = itens.filter(x => x.id > 97)[0];
-     var tnt = itens.filter(x => x.id > 98)[0];
+     var red = itens.filter(x => x.id == 95)[0];
+     var green = itens.filter(x => x.id == 97)[0];
+     var tnt = itens.filter(x => x.id == 98)[0];
 
      if (yellow && tnt) {
          var pointList = [ 
