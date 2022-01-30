@@ -271,9 +271,6 @@ function onMapClick(e) {
         anotacao = anotacao =! "" ? anotacao : "後で";
         itemId = -1;
 
-        // ---- Explosivo
-        desenharControle();
-
         $.post("/ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
         lng: pos.lng,
@@ -283,6 +280,7 @@ function onMapClick(e) {
         .done(function(data) {
                //type("Item posicionado");
                say("Pronto");
+               reload();
                //play();
                //console.log(data);
         });
@@ -317,6 +315,7 @@ function onMapClick(e) {
                        play(itens[kforadofor].audio);
                    }
                    console.log("Tocando: " + itens[kforadofor].audio);
+                   reload();
                });
                }
           }
@@ -410,6 +409,7 @@ $("#reset").click(function() {
                  id: itens[k].id
             });
        }
+       reload();
        $("#menu").click();
 });
 
