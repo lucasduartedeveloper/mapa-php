@@ -629,7 +629,7 @@ function desenharControle()  {
      }
 
      
-     if (red.lat > && tnt.lat > 0) {
+     if (red.lat > 0 && tnt.lat > 0) {
          var pointList = [ 
             new L.LatLng(red.lat, red.lng),
             new L.LatLng(tnt.lat, tnt.lng)
