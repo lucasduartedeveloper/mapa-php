@@ -172,6 +172,9 @@ function reload() {
         });
         firstpolyline.addTo(map);
 
+        // ----
+        desenharControle();
+
         $(".distancia").text(Math.floor(distancia) + " m");
       });
 
@@ -592,3 +595,29 @@ function shakeEventDidOccur () {
     //put your own code here etc.
     alert('shake!');
 }
+
+// Controle do explosivo
+function desenharControle()  {
+     var yellow = itens.filter(function(x) x.id == 96)[0];
+     var red = itens.filter(function(x) x.id > 95)[0];
+     var green = itens.filter(function(x) x.id > 97)[0];
+     var tnt = itens.filter(function(x) x.id > 98)[0];
+
+     if (yellow && tnt) {
+         var pointList = [ 
+            new L.LatLng(yellow.lat, yellow.lng),
+            new L.LatLng(tnt.lat, tnt.lng);
+         ];
+
+         var yellow_wire = new L.Polyline(pointList, {
+            color: 'yellow',
+            weight: 3,
+            opacity: 0.3,
+            smoothFactor: 1
+        });
+        yellow_wire.addTo(map);
+     }
+
+}
+
+
