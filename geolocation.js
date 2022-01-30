@@ -596,7 +596,14 @@ function shakeEventDidOccur () {
 }
 
 // Controle do explosivo
+var bomb_wires = [];
 function desenharControle()  {
+
+     for (var k in bomb_wires) {
+             map.removeControl(bomb_wires[k]);
+      }
+      bomb_wires=[];
+
      var yellow = itens.filter(x => x.id == 96)[0];
      var red = itens.filter(x => x.id == 95)[0];
      var green = itens.filter(x => x.id == 97)[0];
@@ -611,10 +618,11 @@ function desenharControle()  {
          var wire = new L.Polyline(pointList, {
             color: 'yellow',
             weight: 3,
-            opacity: 1,
+            opacity: 0.8,
             smoothFactor: 1
         });
         wire.addTo(map);
+        bomb_wires.push(wire);
      }
 
      
@@ -627,10 +635,11 @@ function desenharControle()  {
          var wire = new L.Polyline(pointList, {
             color: 'red',
             weight: 3,
-            opacity: 1,
+            opacity: 0.8,
             smoothFactor: 1
         });
         wire.addTo(map);
+        bomb_wires.push(wire);
      }
 
 
@@ -643,13 +652,12 @@ function desenharControle()  {
          var wire = new L.Polyline(pointList, {
             color: 'green',
             weight: 3,
-            opacity: 1,
+            opacity: 0.8,
             smoothFactor: 1
         });
         wire.addTo(map);
+        bomb_wires.push(wire);
      }
-
-
 }
 
 
