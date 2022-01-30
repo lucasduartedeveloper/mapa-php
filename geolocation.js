@@ -172,9 +172,6 @@ function reload() {
         });
         firstpolyline.addTo(map);
 
-        // ----
-        desenharControle();
-
         $(".distancia").text(Math.floor(distancia) + " m");
       });
 
@@ -270,6 +267,9 @@ function onMapClick(e) {
         var anotacao = prompt("Anotação:","後で");
         anotacao = anotacao =! "" ? anotacao : "後で";
         itemId = -1;
+
+        // ----
+        desenharControle();
 
         $.post("/ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
@@ -657,6 +657,11 @@ function desenharControle()  {
         });
         wire.addTo(map);
         bomb_wires.push(wire);
+     }
+
+     if (bomb_wires.length == 0 && tnt) {
+          console.log("TODO: Apagar tudo");
+         // Apagar tudo
      }
 }
 
