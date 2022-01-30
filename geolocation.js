@@ -608,14 +608,47 @@ function desenharControle()  {
             new L.LatLng(tnt.lat, tnt.lng)
          ];
 
-         var yellow_wire = new L.Polyline(pointList, {
+         var wire = new L.Polyline(pointList, {
             color: 'yellow',
             weight: 3,
-            opacity: 0.3,
+            opacity: 1,
             smoothFactor: 1
         });
-        yellow_wire.addTo(map);
+        wire.addTo(map);
      }
+
+     
+     if (red && tnt) {
+         var pointList = [ 
+            new L.LatLng(red.lat, red.lng),
+            new L.LatLng(tnt.lat, tnt.lng)
+         ];
+
+         var wire = new L.Polyline(pointList, {
+            color: 'red',
+            weight: 3,
+            opacity: 1,
+            smoothFactor: 1
+        });
+        wire.addTo(map);
+     }
+
+
+     if (green && tnt) {
+         var pointList = [ 
+            new L.LatLng(green.lat, green.lng),
+            new L.LatLng(tnt.lat, tnt.lng)
+         ];
+
+         var wire = new L.Polyline(pointList, {
+            color: 'green',
+            weight: 3,
+            opacity: 1,
+            smoothFactor: 1
+        });
+        wire.addTo(map);
+     }
+
 
 }
 
