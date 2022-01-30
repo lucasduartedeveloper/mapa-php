@@ -662,9 +662,10 @@ function desenharControle()  {
         bomb_wires.push(wire);
      }
 
+     // Apagar tudo
      if (bomb_wires.length == 0 && tnt.lat != 0) {
-          console.log("TODO: Apagar tudo");
-         // Apagar tudo
+          play("/audio/explosion.mp3");
+          $("#reset").click();
      }
 }
 
