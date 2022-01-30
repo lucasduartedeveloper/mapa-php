@@ -612,7 +612,7 @@ function desenharControle()  {
      var green = itens.filter(x => x.id == 97)[0];
      var tnt = itens.filter(x => x.id == 98)[0];
 
-     if (yellow.lat > 0 && tnt.lat > 0) {
+     if (yellow.lat != 0 && tnt.lat != 0) {
          var pointList = [ 
             new L.LatLng(yellow.lat, yellow.lng),
             new L.LatLng(tnt.lat, tnt.lng)
@@ -629,7 +629,7 @@ function desenharControle()  {
      }
 
      
-     if (red.lat > 0 && tnt.lat > 0) {
+     if (red.lat != 0 && tnt.lat != 0) {
          var pointList = [ 
             new L.LatLng(red.lat, red.lng),
             new L.LatLng(tnt.lat, tnt.lng)
@@ -646,7 +646,7 @@ function desenharControle()  {
      }
 
 
-     if (green.lat > 0 && tnt.lat > 0) {
+     if (green.lat != 0 && tnt.lat != 0) {
          var pointList = [ 
             new L.LatLng(green.lat, green.lng),
             new L.LatLng(tnt.lat, tnt.lng)
@@ -662,7 +662,7 @@ function desenharControle()  {
         bomb_wires.push(wire);
      }
 
-     if (bomb_wires.length == 0 && tnt.lat > 0) {
+     if (bomb_wires.length == 0 && tnt.lat != 0) {
           console.log("TODO: Apagar tudo");
          // Apagar tudo
      }
