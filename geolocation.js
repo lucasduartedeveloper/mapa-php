@@ -207,7 +207,7 @@ function reload() {
 }
 
 var markerIcon= L.icon({
-       iconUrl: "/img/marker-v2.png",
+       iconUrl: "/img/marker.png",
        /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
        shadowSize:   [50, 25], // size of the shadow
@@ -217,7 +217,7 @@ var markerIcon= L.icon({
 });
 
 var markerIconUnlocked= L.icon({
-       iconUrl: "/img/marker-v2-unlocked.png",
+       iconUrl: "/img/marker-unlocked.png",
        /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
        shadowSize:   [50, 25], // size of the shadow
@@ -365,12 +365,12 @@ $(document).ready(function() {
 
 // LEMBRAR ANOTAÇÕES
 function lembrarAnotacoes() {
-    var anotacoes = "No último episódio:\n";
+    var anotacoes = "Anotações de homem: \n";
     var nro = 0;
     for (var k in itens) {
          if (itens[k].lat != 0) {
               nro +=1;
-              anotacoes += nro + ". " + itens[k].anotacao + "\n";;
+              anotacoes += itens[k].anotacao + "\n";;
          }
     }
     if (nro > 0) {
