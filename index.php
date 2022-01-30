@@ -113,7 +113,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">MAP CLEANER</p>
-    <p class="contador">v135.139.402 final*</p>
+    <p class="contador">v135.139.403 final*</p>
     <img id="front" class="front" src="/img/logo.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 m/s</p>
@@ -134,12 +134,16 @@ catch (PDOException $e) {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="/script.js?v=139"></script>
-<script src="/geolocation.js?v402"></script> 
+<script src="/geolocation.js?v403"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
 
 <script src="/shake.js"></script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/hosuaby/Leaflet.SmoothMarkerBouncing@v2.0.0/dist/bundle.js"
+        crossorigin="anonymous"></script>
 
 </body>
 </html> 

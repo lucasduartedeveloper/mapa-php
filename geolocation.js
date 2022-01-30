@@ -226,7 +226,7 @@ var markerIconUnlocked= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map);
+var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map).bounce();
 
 var itemId = -1;
 $(document).on('click', ':radio[name="item"]', function() {
