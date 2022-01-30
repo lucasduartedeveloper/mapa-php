@@ -410,7 +410,7 @@ $("#reset").click(function() {
             });
        }
        reload();
-       $("#menu").click();
+       //$("#menu").click();
 });
 
 // SENSOR DE MOVIMENTO
