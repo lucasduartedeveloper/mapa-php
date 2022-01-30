@@ -124,6 +124,9 @@ function reload() {
              //lembrarAnotacoes();
         }
         reloadCount += 1;
+
+        // ---- Explosivo
+        desenharControle();
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
@@ -268,7 +271,7 @@ function onMapClick(e) {
         anotacao = anotacao =! "" ? anotacao : "後で";
         itemId = -1;
 
-        // ----
+        // ---- Explosivo
         desenharControle();
 
         $.post("/ajax/localizacao_gps_item.php", {
