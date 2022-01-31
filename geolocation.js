@@ -308,7 +308,7 @@ function onMapClick(e) {
                          say(itens[kforadofor].anotacao);
                    }
                    else  {
-                         say("Você recuperou " + itens[kforadofor].nome);
+                         say("Você recuperou o marcador " + itens[kforadofor].nome);
                    }
 
                    if (itens[kforadofor].audio) {
