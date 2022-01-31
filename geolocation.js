@@ -140,6 +140,7 @@ function reload() {
 
          var pointList = [];
          var distancia = 0;
+         var p = 0;
          for (var k in data) {
 	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
@@ -157,11 +158,13 @@ function reload() {
                }).addTo(map);
 
                if (data[k].cor == cor) {
-               pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
+               pointList.push(new L.LatLng(data[p].latitude, data[p].longitude));
 
-               if (k > 0) {
-                    distancia += pointList[k-1].distanceTo(pointList[k]);
-               } }
+               if (p > 0) {
+                    distancia += pointList[p-1].distanceTo(pointList[p]);
+               }
+               p = p + 1;
+               }
         }
 
         reguas = data;
