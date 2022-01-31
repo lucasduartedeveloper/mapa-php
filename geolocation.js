@@ -676,8 +676,14 @@ function desenharControle()  {
      // Apagar tudo
      if (bomb_wires.length == 0 && tnt.lat != 0) {
           play("/audio/explosion.mp3");
-          $("#reset").click();
+          explodirArea(tnt);
      }
 }
 
-
+var corExplodida = "#2E2E2E";
+function explodirArea(pos) {
+        $.post("/ajax/localizacao_gps.php", {
+        lat: pos.lat, 
+        lng: pos.lng,
+        cor: corExplodida });
+}
