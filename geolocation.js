@@ -680,8 +680,8 @@ function desenharControle()  {
 }
 
 function explodirArea(pos) {
-        var a = 0.000008993216088271083;
-        var d = 0.000009956626094265175;
+        var a = 0.000008993216088271083 * 5;
+        var d = 0.000009956626094265175 * 5;
         var corExplodida = "#2E2E2E";
 
         for (let k = -2; k <= 2; k++) {
