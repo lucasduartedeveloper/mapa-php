@@ -323,7 +323,7 @@ function onMapClick(e) {
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
      if (mapLocked) {
-         map.setView([pos.lat, pos.lng], 19);
+         map.setView([pos.lat, pos.lng], 18);
      }
      // MODO SIMULAÇÃO
      else if (itemId < 0)  {
