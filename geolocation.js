@@ -540,7 +540,7 @@ function success(position) {
        dhPosAnterior = now;
 
        if (velocidade > 0) {
-           say("Você está à " + velocidade + " centímetros por segundo");
+           say("Você está à " + (velocidade * 100) + " centímetros por segundo");
       }
    }
    else {
