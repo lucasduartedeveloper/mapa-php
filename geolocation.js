@@ -681,10 +681,20 @@ function desenharControle()  {
 
 var corExplodida = "#2E2E2E";
 function explodirArea(pos) {
-        $.post("/ajax/localizacao_gps.php", {
-        lat: pos.lat, 
-        lng: pos.lng,
-        cor: corExplodida });
+        var a = 0.000008993216088271083;
+        var d = 0.000009956626094265175;
+
+        for (var k = -2 to 2) {
+             for (var j = -2 to 2) {
+                   console.log("k " + k);
+                   console.log("j " + j);
+
+                   $.post("/ajax/localizacao_gps.php", {
+                   lat: pos.lat - (a * k),
+                   lng: pos.lng - (a *  j),
+                   cor: corExplodida });
+              }
+        }
 
         $.post("/ajax/localizacao_gps_item.php", {
         lat: 0, 
