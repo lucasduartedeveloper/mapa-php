@@ -100,7 +100,7 @@ catch (PDOException $e) {
 <div id="box3" class="box3">
    <p></p>
     <p class="contador">PIX</p>
-    <img  class="logo" src="/img/qr_code_pix.png"/>
+    <img  class="logo" src="/img/qr_code_pix.jpg"/>
     <p class="contador"><?=$contar?> visitas</p>
     <div class="info-box">
     <p id="local-info" class="info">geolocation: 
