@@ -181,6 +181,15 @@ label.btn.active{
     border-radius: 25%;
 }
 
+line {
+    width: 50vw;
+    height: 25vw;
+    max-width: 150px;
+    max-height: 75px;
+    opacity: 0.7;
+    border-radius: 25%;
+}
+
  /*This part is important for centering*/
 
 .typing-wrapper {
