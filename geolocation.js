@@ -150,7 +150,7 @@ function reload() {
         		stroke: false
 	}).addTo(map);
                
-	data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
+	data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 0}).addTo(map);
 
                pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
 
@@ -323,7 +323,7 @@ function onMapClick(e) {
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
      if (mapLocked) {
-         map.setView([pos.lat, pos.lng], 18);
+         map.setView([pos.lat, pos.lng], 19);
      }
      // MODO SIMULAÇÃO
      else if (itemId < 0)  {
