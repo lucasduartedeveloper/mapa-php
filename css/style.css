@@ -165,6 +165,10 @@ label.btn.active{
 }
 
 .logo {
+    width: 75vw;
+    height: 75vw;
+    max-width: 200px;
+    max-height: 200px;
     --transform: scaleX(-1);
 }
 
