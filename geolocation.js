@@ -699,7 +699,10 @@ function explodirArea(pos) {
                    lng: pos.lng - (d *  j),
                    cor: corExplodida })
                   .done(function(data) {
-                       console.log(data);
+                       //console.log(data);
+                       if (k+j == 4) {
+                            reload();
+                       }
                    });
               }
         }
@@ -711,4 +714,8 @@ function explodirArea(pos) {
         });
 
         play("/audio/explosion.mp3");
+}
+
+function () {
+        
 }
