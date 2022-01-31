@@ -675,7 +675,6 @@ function desenharControle()  {
 
      // Apagar tudo
      if (bomb_wires.length == 0 && tnt.lat != 0) {
-          play("/audio/explosion.mp3");
           explodirArea(tnt);
      }
 }
@@ -686,4 +685,12 @@ function explodirArea(pos) {
         lat: pos.lat, 
         lng: pos.lng,
         cor: corExplodida });
+
+        $.post("/ajax/localizacao_gps_item.php", {
+        lat: 0, 
+        lng: 0,
+        id: 98
+        });
+
+        play("/audio/explosion.mp3");
 }
