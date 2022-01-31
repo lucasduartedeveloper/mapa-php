@@ -716,6 +716,6 @@ function explodirArea(pos) {
         play("/audio/explosion.mp3");
 }
 
-function () {
-        
+function AI_Girafa() {
+        // Criar um comportamento para a girafa
 }
