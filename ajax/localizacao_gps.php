@@ -45,8 +45,8 @@ GROUP BY cor;";
     $stmt->execute();
 
     echo $sql;
-
     }
+    else { echo $latitude." / ".$longitude; }
   }
   else {
 
