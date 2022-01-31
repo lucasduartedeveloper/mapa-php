@@ -158,7 +158,7 @@ function reload() {
                }).addTo(map);
 
                if (data[k].cor == cor) {
-               pointList.push(new L.LatLng(data[p].latitude, data[p].longitude));
+               pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
 
                if (p > 0) {
                     distancia += pointList[p-1].distanceTo(pointList[p]);
