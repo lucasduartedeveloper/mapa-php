@@ -700,7 +700,7 @@ function explodirArea(pos) {
                    cor: corExplodida })
                   .done(function(data) {
                        //console.log(data);
-                       if (k+j == 4) {
+                       if ((k+j) == 4) {
                             reload();
                        }
                    });
