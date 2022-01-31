@@ -144,13 +144,13 @@ function reload() {
                
 	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
-		fillOpacity: 0.5,
-        		radius: 2.5,
+		fillOpacity: 0,
+        		radius: 2.25,
         		weight: 1,
         		stroke: false
 	}).addTo(map);
                
-	//data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
+	data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 1}).addTo(map);
 
                pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
 
