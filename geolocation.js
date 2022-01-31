@@ -619,10 +619,12 @@ function desenharControle()  {
          ];
 
          var wire = new L.Polyline(pointList, {
-            color: 'yellow',
+            color: '#8A0829',
             weight: 3,
             opacity: 0.8,
-            smoothFactor: 1
+            smoothFactor: 1,
+            dashArray: '5, 2',
+            dashOffset: '0'
         });
         wire.addTo(map);
         bomb_wires.push(wire);
@@ -636,10 +638,12 @@ function desenharControle()  {
          ];
 
          var wire = new L.Polyline(pointList, {
-            color: 'red',
+            color: '#8A0829',
             weight: 3,
             opacity: 0.8,
-            smoothFactor: 1
+            smoothFactor: 1,
+            dashArray: '5, 2',
+            dashOffset: '0'
         });
         wire.addTo(map);
         bomb_wires.push(wire);
@@ -653,10 +657,12 @@ function desenharControle()  {
          ];
 
          var wire = new L.Polyline(pointList, {
-            color: 'green',
+            color: '#8A0829',
             weight: 3,
             opacity: 0.8,
-            smoothFactor: 1
+            smoothFactor: 1,
+            dashArray: '5, 2',
+            dashOffset: '0'
         });
         wire.addTo(map);
         bomb_wires.push(wire);
