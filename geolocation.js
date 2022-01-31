@@ -103,6 +103,7 @@ function reload() {
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
        .addTo(map)
+       .bounce()
        .bindPopup(item.anotacao);
 
        item.markerShadow = L.circle([data[k].latitude, data[k].longitude], {
