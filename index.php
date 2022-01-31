@@ -70,7 +70,7 @@ catch (PDOException $e) {
     <div id="inventario" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
 
-     <p  class="velocidade" class="contador">0 m/s</p>
+     <p  class="velocidade" class="contador">0 cm/s</p>
      <p  class="distancia" class="contador">0 m</p>
 </div>
 
@@ -113,7 +113,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">MAP CLEANER</p>
-    <p class="contador">v135.139.444 final*</p>
+    <p class="contador">v135.139.445 final*</p>
     <img id="front" class="front" src="/img/logo.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 m/s</p>
@@ -138,7 +138,7 @@ catch (PDOException $e) {
         crossorigin="anonymous"></script>
 
 <script src="/script.js?v=139"></script>
-<script src="/geolocation.js?v444"></script> 
+<script src="/geolocation.js?v445"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

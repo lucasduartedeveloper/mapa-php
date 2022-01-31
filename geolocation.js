@@ -183,7 +183,7 @@ function reload() {
         });
         firstpolyline.addTo(map);
 
-        $(".distancia").text(Math.floor(distancia) + " m");
+        $(".distancia").text(Math.floor(distancia * 100) + " cm");
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
@@ -534,13 +534,13 @@ function success(position) {
        //console.log(tempo);
 
        var velocidade = Math.floor(distancia / (tempo / 1000));
-       $(".velocidade").text(velocidade + " m/s");
+       $(".velocidade").text(velocidade * 100 + " cm/s");
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
 
        if (velocidade > 0) {
-           say("Você está à " + velocidade + " metros por segundo");
+           say("Você está à " + velocidade + " centímetros por segundo");
       }
    }
    else {
@@ -714,8 +714,4 @@ function explodirArea(pos) {
         });
 
         play("/audio/explosion.mp3");
-}
-
-function AI_Girafa() {
-        // Criar um comportamento para a girafa
 }
