@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var  reguas = [];
 var  itens = [];
-var cor = "#2f2e40";
+var cor = "#084B8A";
 
 var audio = new Audio();
 function play(file_path) {
