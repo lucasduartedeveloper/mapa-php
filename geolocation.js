@@ -686,13 +686,16 @@ function explodirArea(pos) {
 
         for (let k = -2; k <= 2; k++) {
              for (let j = -2; j <= 2; j++) {
-                   console.log("k " + k);
-                   console.log("j " + j);
+                   //console.log("k " + k);
+                   //console.log("j " + j);
 
                    $.post("/ajax/localizacao_gps.php", {
                    lat: pos.lat - (a * k),
-                   lng: pos.lng - (a *  j),
-                   cor: corExplodida });
+                   lng: pos.lng - (d *  j),
+                   cor: corExplodida })
+                  .done(function(data) {
+                       console.log(data);
+                  });
               }
         }
 
