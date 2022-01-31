@@ -46,7 +46,7 @@ GROUP BY cor;";
 
     echo $sql;
     }
-    else { echo $latitude." / ".$longitude; }
+    else { echo $_POST["lat"]." / ".$_POST["lng"]; }
   }
   else {
 
