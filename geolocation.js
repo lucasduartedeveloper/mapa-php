@@ -535,14 +535,14 @@ function success(position) {
        //console.log(distancia);
        //console.log(tempo);
 
-       var velocidade = Math.floor(distancia / (tempo / 1000));
-       $(".velocidade").text(velocidade * 100 + " cm/s");
+       var velocidade = Math.floor((distancia * 100) / (tempo / 1000));
+       $(".velocidade").text(velocidade + " cm/s");
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
 
        if (velocidade > 0) {
-           say("Você está à " + (velocidade * 100) + " centímetros por segundo");
+           say("Você está à " + (velocidade) + " centímetros por segundo");
       }
    }
    else {
