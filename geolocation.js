@@ -679,10 +679,10 @@ function desenharControle()  {
      }
 }
 
-var corExplodida = "#2E2E2E";
 function explodirArea(pos) {
         var a = 0.000008993216088271083;
         var d = 0.000009956626094265175;
+        var corExplodida = "#2E2E2E";
 
         for (let k = -2; k <= 2; k++) {
              for (let j = -2; j <= 2; j++) {
@@ -695,7 +695,7 @@ function explodirArea(pos) {
                    cor: corExplodida })
                   .done(function(data) {
                        console.log(data);
-                  });
+                   });
               }
         }
 
