@@ -526,7 +526,9 @@ function success(position) {
    var now = new Date().getTime();
    if (posAnterior) {
        var distancia = posAnterior
-       .distanceTo(new L.LatLng(pos.lat, pos.lng));
+       .distanceTo(new L.LatLng(
+           position.coords.latitude, 
+           position.coords.longitude));
        var tempo = now - dhPosAnterior;
        
        //console.log(distancia / (tempo / 1000));
@@ -544,7 +546,9 @@ function success(position) {
       }
    }
    else {
-       posAnterior = new L.LatLng(pos.lat, pos.lng);
+       posAnterior = new L.LatLng(
+              position.coords.latitude,
+              position.coords.longitude);
        dhPosAnterior = now;
    }
 
