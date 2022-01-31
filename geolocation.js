@@ -150,7 +150,12 @@ function reload() {
         		stroke: false
 	}).addTo(map);
                
-	data[k].rectangle = L.rectangle(data[k].circle.getBounds(), {color: data[k].cor, weight: 0}).addTo(map);
+	data[k].rectangle = 
+               L.rectangle(data[k].circle.getBounds(), {
+               color: data[k].cor, 
+               	weight: 0,
+               fillOpacity: 0.5
+               }).addTo(map);
 
                pointList.push(new L.LatLng(data[k].latitude, data[k].longitude));
 
@@ -168,9 +173,9 @@ function reload() {
         }
 
         firstpolyline = new L.Polyline(pointList, {
-            color: 'black',
+            color: cor,
             weight: 3,
-            opacity: 0.3,
+            opacity: 0.8,
             smoothFactor: 1
         });
         firstpolyline.addTo(map);
