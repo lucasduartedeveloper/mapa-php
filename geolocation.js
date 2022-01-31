@@ -133,8 +133,8 @@ function reload() {
 
          //console.log(data);
          for (var k in reguas) {
-             //map.removeControl(reguas[k].rectangle);
              map.removeControl(reguas[k].circle);
+             map.removeControl(reguas[k].rectangle);
          }
          map.removeControl(firstpolyline);
 
