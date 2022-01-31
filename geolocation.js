@@ -623,7 +623,7 @@ function desenharControle()  {
             weight: 3,
             opacity: 0.5,
             smoothFactor: 1,
-            dashArray: '5,',
+            dashArray: '5',
             dashOffset: '0'
         });
         wire.addTo(map);
@@ -642,7 +642,7 @@ function desenharControle()  {
             weight: 3,
             opacity: 0.5,
             smoothFactor: 1,
-            dashArray: '5,',
+            dashArray: '5',
             dashOffset: '0'
         });
         wire.addTo(map);
@@ -661,7 +661,7 @@ function desenharControle()  {
             weight: 3,
             opacity: 0.5,
             smoothFactor: 1,
-            dashArray: '5,,
+            dashArray: '5',
             dashOffset: '0'
         });
         wire.addTo(map);
