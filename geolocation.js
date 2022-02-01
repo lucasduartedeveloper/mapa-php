@@ -469,8 +469,8 @@ function light(event) {
     $("#box4").css({ "background-color" : rgba});
     */
 
-    var porcento = lightValue / 100;
-    say("Luz em " + porcento + " porcento");
+    var porcento = lightValue / 10;
+    say(porcento + " porcento");
 }
 
 function animar() {
