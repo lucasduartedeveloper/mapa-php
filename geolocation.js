@@ -128,6 +128,8 @@ function reload() {
 
         // ---- Explosivo
         desenharControle();
+        // ---- Planta
+        desenharPlanta();
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
@@ -292,7 +294,7 @@ function onMapClick(e) {
                say("Pronto");
                reload();
                //play();
-               console.log(data);
+               //console.log(data);
         });
         }
      }
@@ -314,7 +316,7 @@ function onMapClick(e) {
                     data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
                })
                .done(function(data) {
-                  console.log(data);
+                  //console.log(data);
                   //type("Você recuperou um item");
                   if (!itens[kforadofor].anotacao .startsWith("後で")) {
                          say(itens[kforadofor].anotacao);
@@ -728,5 +730,9 @@ function explodirArea(pos) {
 function desenharPlanta() {
      var seed = itens.filter(x => x.id == 108)[0];
      
+     var agora = new Date().getTime();
+     var plantado = moment(itens.data_hora, 'YYYY-MM-DD HH:MM:SS').toDate();
 
+     console.log(agora);
+     console.log(plantado);
 }
