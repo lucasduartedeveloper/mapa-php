@@ -785,7 +785,7 @@ function desenharVoldemort() {
      var y = 0.000009956626094265175;
 
      var luz = lightValue / 1000;
-     var raio = a * 10;
+     var raio = x * 10;
     
      var voldemort = itens.filter(x => x.id == 109)[0];
 
@@ -797,10 +797,10 @@ function desenharVoldemort() {
      var circle = L.circle([reguas[0].latitude, reguas[0].longitude], {
                               color: cor,
 		fillOpacity: 0,
-        		radius: raio,
+        		radius: h/x,
         		weight: 2,
         		stroke: true
       }).addTo(map);
 
-     console.log(h );
+     console.log(h/x);
 }
