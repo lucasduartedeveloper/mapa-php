@@ -798,6 +798,7 @@ function desenharPlanta() {
 }
 
 // Voldemort
+var h = 0;
 function desenharVoldemort() {
      var x = 0.000008993216088271083;
      var y = 0.000009956626094265175;
@@ -812,7 +813,7 @@ function desenharVoldemort() {
      var a = voldemort.lat - reguas[0].latitude;
      var b = voldemort.lng - reguas[0].longitude;
 
-     var h = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+     h = h != 0 ? h : Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
      var sen = a/h;
      var cos = b/h;
