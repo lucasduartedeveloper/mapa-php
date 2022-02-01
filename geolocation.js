@@ -261,6 +261,8 @@ var markerShadow = L.circle([0, 0], {
         }).addTo(map);
 
 var itemId = -1;
+var h = 0; // 
+
 $(document).on('click', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
     //$(this).filter(':checked').parent().addClass('active');
@@ -798,7 +800,6 @@ function desenharPlanta() {
 }
 
 // Voldemort
-var h = 0;
 function desenharVoldemort() {
      var x = 0.000008993216088271083;
      var y = 0.000009956626094265175;
