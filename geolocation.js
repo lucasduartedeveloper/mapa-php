@@ -780,6 +780,14 @@ function desenharPlanta() {
 }
 
 // Voldemort
+var circle = L.circle([0, 0], {
+               color: cor,
+	fillOpacity: 0,
+        	radius: 0,
+        	weight: 2,
+        	stroke: true
+        }).addTo(map); 
+
 function desenharVoldemort() {
      var x = 0.000008993216088271083;
      var y = 0.000009956626094265175;
@@ -794,13 +802,8 @@ function desenharVoldemort() {
 
      var h = Math.sqrt(a + b);
 
-     var circle = L.circle([reguas[0].latitude, reguas[0].longitude], {
-                              color: cor,
-		fillOpacity: 0,
-        		radius: (h/x) * luz,
-        		weight: 2,
-        		stroke: true
-      }).addTo(map);
+     circle.setLatLng(new L.LatLng(reguas[0].latitude, reguas[0].longitude));
+     circle.setRadius((h/x) * luz);
 
      console.log((h/x) * luz);
 }
