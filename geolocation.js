@@ -244,6 +244,14 @@ var markerIconUnlocked= L.icon({
 
 var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map).bounce();
 
+var markerShadow = L.circle([0, 0], {
+               color: cor,
+	fillOpacity: 0.2,
+        	radius: 0,
+        	weight: 0,
+        	stroke: true
+        }).addTo(map); 
+
 var itemId = -1;
 $(document).on('click', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
@@ -338,6 +346,7 @@ function onMapClick(e) {
      }
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+     markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
      if (mapLocked) {
          map.setView([pos.lat, pos.lng], 19);
      }
@@ -780,14 +789,6 @@ function desenharPlanta() {
 }
 
 // Voldemort
-var circle = L.circle([0, 0], {
-               color: cor,
-	fillOpacity: 0,
-        	radius: 0,
-        	weight: 2,
-        	stroke: true
-        }).addTo(map); 
-
 function desenharVoldemort() {
      var x = 0.000008993216088271083;
      var y = 0.000009956626094265175;
@@ -797,13 +798,15 @@ function desenharVoldemort() {
     
      var voldemort = itens.filter(x => x.id == 109)[0];
 
+     if (voldemort.lat > 0) {
+
      var a = Math.pow(voldemort.lat - reguas[0].latitude, 2);
      var b = Math.pow(voldemort.lng - reguas[0].longitude, 2);
 
      var h = Math.sqrt(a + b);
-
-     circle.setLatLng(new L.LatLng(reguas[0].latitude, reguas[0].longitude));
-     circle.setRadius((h/x) * luz);
+     markerShadow.setRadius((h/x) * luz);
 
      console.log((h/x) * luz);
+
+     }
 }
