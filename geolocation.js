@@ -731,7 +731,7 @@ function desenharPlanta() {
      var seed = itens.filter(x => x.id == 108)[0];
      
      var agora = new Date().getTime();
-     var plantado = moment(itens.data_hora, 'YYYY-MM-DD HH:MM:SS').toDate().getTime();
+     var plantado = moment(seed.data_hora, 'YYYY-MM-DD HH:MM:SS').toDate().getTime();
 
      var tempo = agora - plantado;
 
