@@ -171,7 +171,7 @@ function reload() {
         }
 
         reguas = data;
-        if (reguas) {
+        if (reguas.length > 0) {
              onMapClick({ latlng: {
                  lat: reguas[0].latitude,
                  lng: reguas[0].longitude
@@ -740,7 +740,7 @@ function explodirArea(pos) {
         play("/audio/explosion.mp3");
 }
 
-//Planta relógio
+//Planta com tempo
 function desenharPlanta() {
      var seed = itens.filter(x => x.id == 108)[0];
      
@@ -774,4 +774,22 @@ function desenharPlanta() {
       });
 
      seed.marker.setIcon(seedIcon);
+}
+
+// Voldemort
+function desenharVoldemort() {
+     var x = 0.000008993216088271083 * 5;
+     var y = 0.000009956626094265175 * 5;
+
+    var luz = lightValue / 1000;
+    var raio = a * 10;
+    
+     var voldemort = itens.filter(x => x.id == 109)[0];
+
+     var a = Math.pow(voldemort.latitude, 2);
+     var b = Math.pow(voldemort.longitude, 2);
+
+     var h = Math.sqrt(a + b);
+
+     console.log(h);
 }
