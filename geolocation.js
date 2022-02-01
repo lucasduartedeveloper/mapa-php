@@ -809,10 +809,10 @@ function desenharVoldemort() {
 
      if (voldemort.lat != 0) {
 
-     var a = Math.pow(voldemort.lat - reguas[0].latitude, 2);
-     var b = Math.pow(voldemort.lng - reguas[0].longitude, 2);
+     var a = voldemort.lat - reguas[0].latitude;
+     var b = voldemort.lng - reguas[0].longitude;
 
-     var h = Math.sqrt(a + b);
+     var h = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
      var sen = a/h;
      var cos = b/h;
