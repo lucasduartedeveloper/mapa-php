@@ -114,7 +114,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">MAP BROS</p>
-    <p class="contador">v137.139.461 final*</p>
+    <p class="contador">v137.139.462 final*</p>
     <img id="front" class="front" src="/img/logo-v2.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 cm/s</p>
@@ -142,7 +142,7 @@ catch (PDOException $e) {
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
 <script src="/script.js?v=139"></script>
-<script src="/geolocation.js?v461"></script> 
+<script src="/geolocation.js?v462"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

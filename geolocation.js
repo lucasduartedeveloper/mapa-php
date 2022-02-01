@@ -294,7 +294,7 @@ function onMapClick(e) {
                say("Pronto");
                reload();
                //play();
-               //console.log(data);
+               console.log(data);
         });
         }
      }
@@ -316,7 +316,7 @@ function onMapClick(e) {
                     data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
                })
                .done(function(data) {
-                  //console.log(data);
+                  console.log(data);
                   //type("Você recuperou um item");
                   if (!itens[kforadofor].anotacao .startsWith("後で")) {
                          say(itens[kforadofor].anotacao);
@@ -565,6 +565,7 @@ function success(position) {
         lat: pos.lat, 
         lng: pos.lng,
         cor: cor,
+        data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
         })
         .done(function(data) {
                //type("Atualizando localização");
@@ -708,7 +709,9 @@ function explodirArea(pos) {
                    $.post("/ajax/localizacao_gps.php", {
                    lat: pos.lat - (a * k),
                    lng: pos.lng - (d *  j),
-                   cor: corExplodida })
+                   cor: corExplodida,
+                  data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
+                   })
                   .done(function(data) {
                        //console.log(data);
                        if ((k+j) == 4) {
