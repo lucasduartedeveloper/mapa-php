@@ -98,6 +98,7 @@ function reload() {
        item.lng = data[k].longitude;
        item.audio = data[k].audio;
        item.anotacao = data[k].anotacao;
+       item.data_hora = data[k].data_hora
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
        .on("click", onMapClick)
@@ -722,5 +723,6 @@ function explodirArea(pos) {
 
 //Planta relógio
 function desenharPlanta() {
+     var seed = itens.filter(x => x.id == 108)[0];
      
 }
