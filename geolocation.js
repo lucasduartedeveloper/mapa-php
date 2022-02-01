@@ -834,7 +834,6 @@ function desenharVoldemort() {
         lng : parseFloat(reguas[0].longitude) + b2
      });
     
-     /*
      console.log(voldemort);
      console.log(reguas[0]);
      console.log(pos);
@@ -846,7 +845,6 @@ function desenharVoldemort() {
      console.log("b:" + b);
      console.log("a2:" + a2);
      console.log(reguas[0].longitude + b2);
-    */
 
      markerLight.setRadius((h/((x+y)/2)) * luz);
      
@@ -857,7 +855,10 @@ function desenharVoldemort() {
      data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
      });
 
-     console.log(h);
+     // Game over
+     if (h2 == 0) {
+          $("#reset").click();
+     }
 
      voldemort.marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
      voldemort.markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
