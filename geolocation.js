@@ -314,7 +314,8 @@ function onMapClick(e) {
                     data_hora: new Date().getTime()
                })
                .done(function(data) {
-                   //type("Você recuperou um item");
+                  console.log(data);
+                  //type("Você recuperou um item");
                   if (!itens[kforadofor].anotacao .startsWith("後で")) {
                          say(itens[kforadofor].anotacao);
                    }
