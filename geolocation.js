@@ -830,10 +830,12 @@ function desenharVoldemort() {
     
      console.log(voldemort);
      console.log(pos);
-     console.log(h);
-     console.log(h2);
-     console.log(sen);
-     console.log(cos);
+     console.log("h:" + h);
+     console.log("h2:" + h2);
+     console.log("sen:" + sen);
+     console.log("cos:" + cos);
+     console.log("a:" + a);
+     console.log("b:" + b);
 
      markerLight.setRadius(h2/x);
      voldemort.marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
