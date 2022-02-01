@@ -724,7 +724,8 @@ function explodirArea(pos) {
         $.post("/ajax/localizacao_gps_item.php", {
         lat: 0, 
         lng: 0,
-        id: 98
+        id: 98,
+        data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         });
 
         play("/audio/explosion.mp3");
