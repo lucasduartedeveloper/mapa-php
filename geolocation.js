@@ -813,9 +813,23 @@ function desenharVoldemort() {
      var b = Math.pow(voldemort.lng - reguas[0].longitude, 2);
 
      var h = Math.sqrt(a + b);
-     markerLight.setRadius((h/x) * luz);
 
+     var sen = a/h;
+     var cos = b/h;
+
+    // -------------------
      
+     var h2 = h * luz;
+     var a2 = h2 * sen;
+     var b2 = h2 * cos;
+
+     var pos = posicaoNoGrid({
+        lat : a2,
+        lng : b2
+     });
+    
+     markerLight.setRadius(h2/x);
+     voldemort.marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
      }
 }
