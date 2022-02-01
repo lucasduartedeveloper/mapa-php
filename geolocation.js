@@ -420,7 +420,8 @@ $("#reset").click(function() {
            $.post("/ajax/localizacao_gps_item.php", {
                  lat: 0, 
                  lng: 0,
-                 id: itens[k].id
+                 id: itens[k].id,
+                 data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
             });
        }
        reload();
