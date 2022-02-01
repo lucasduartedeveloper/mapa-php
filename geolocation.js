@@ -844,7 +844,16 @@ function desenharVoldemort() {
      
 
      markerLight.setRadius((h/((x+y)/2)) * luz);
+     
+     $.post("/ajax/localizacao_gps_item.php", {
+     lat: pos.lat,
+     lng: pos.lng,
+     id: 109,
+     data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
+     });
+
      voldemort.marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+     voldemort.markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
      }
 }
