@@ -285,7 +285,7 @@ function onMapClick(e) {
         lng: pos.lng,
         id: itens[id].id,
         anotacao: anotacao,
-        data_hora: new Date().getTime();
+        data_hora: new Date().getTime()
         })
         .done(function(data) {
                //type("Item posicionado");
