@@ -858,6 +858,9 @@ function desenharVoldemort() {
      // Game over
      if (h2 == 0) {
           $("#reset").click();
+          h = 0;
+          a = 0;
+          b = 0;
      }
 
      voldemort.marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
