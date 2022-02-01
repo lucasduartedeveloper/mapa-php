@@ -461,8 +461,10 @@ function light(event) {
     //animar();
     //console.log(event.value);
 
-    var rgba = "rgba(255,255,255," + (1-(lightValue / 1000)) + ")";
-    console.log(rgba);
+    var multiplicador = (lightValue / 1000);
+    var rgb = Math.floor(multiplicador * 255);
+    var rgba = "rgba("+rgb+","+rgb+","+rgb+",1)";
+    @console.log(rgba);
 
     $("#box4").css({ "background-color" : rgba});
 }
