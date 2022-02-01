@@ -744,10 +744,10 @@ function desenharPlanta() {
      if (tempo > 10000) {
            iconUrl = "/img/plant.png";
      }
-     else if (tempo > 20000) {
+     if (tempo > 20000) {
            iconUrl = "/img/plant-v2.png";
      }
-     else if (tempo > 30000) {
+     if (tempo > 30000) {
            iconUrl = "/img/tree.png";
      }
 
