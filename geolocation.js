@@ -829,6 +829,7 @@ function desenharVoldemort() {
      });
     
      console.log(voldemort);
+     console.log(reguas[0]);
      console.log(pos);
      console.log("h:" + h);
      console.log("h2:" + h2);
