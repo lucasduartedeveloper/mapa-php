@@ -742,7 +742,7 @@ function desenharPlanta() {
 
     var iconUrl = "/img/seed.png";
      if (tempo > 10000) {
-           iconUrl.= "/img/plant.png"
+           iconUrl = "/img/plant.png";
      }
 
      var seedIcon= L.icon({
