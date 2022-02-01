@@ -248,7 +248,7 @@ var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map).bounce();
 
 var markerLight = L.circle([0, 0], {
                color: "#fff",
-	fillOpacity: 0.5,
+	fillOpacity: 0.8
         	radius: 0,
         	weight: 0,
         	stroke: true
