@@ -9,8 +9,9 @@ try {
     $latitude = htmlspecialchars($_POST["lat"]);
     $longitude = htmlspecialchars($_POST["lng"]);
     $anotacao = htmlspecialchars($_POST["anotacao"]);
+    $data_hora = htmlspecialchars($_POST["data_hora"]);
 
-    $sql = "UPDATE localizacao_gps_item SET latitude=".$latitude.", longitude=".$longitude.",  anotacao='".$anotacao." ' WHERE id=".$id.";";
+    $sql = "UPDATE localizacao_gps_item SET latitude=".$latitude.", longitude=".$longitude.",  anotacao='".$anotacao." ' ,data_hora='".$data_hora."' WHERE id=".$id.";";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 

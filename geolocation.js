@@ -284,14 +284,15 @@ function onMapClick(e) {
         lat: pos.lat, 
         lng: pos.lng,
         id: itens[id].id,
-        anotacao: anotacao
+        anotacao: anotacao,
+        data_hora: new Date().getTime();
         })
         .done(function(data) {
                //type("Item posicionado");
                say("Pronto");
                reload();
                //play();
-               //console.log(data);
+               console.log(data);
         });
         }
      }
@@ -725,4 +726,5 @@ function explodirArea(pos) {
 function desenharPlanta() {
      var seed = itens.filter(x => x.id == 108)[0];
      
+
 }
