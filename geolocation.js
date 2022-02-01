@@ -452,7 +452,7 @@ window.addEventListener('userproximity', function(event) {
 });
 
 // SENSOR DE LUZ
-var lightValue = 0;
+var lightValue = 1000;
 if ("ondevicelight" in window) {
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   window.addEventListener("devicelight", light);
@@ -781,18 +781,26 @@ function desenharPlanta() {
 
 // Voldemort
 function desenharVoldemort() {
-     var x = 0.000008993216088271083 * 5;
-     var y = 0.000009956626094265175 * 5;
+     var x = 0.000008993216088271083;
+     var y = 0.000009956626094265175;
 
-    var luz = lightValue / 1000;
-    var raio = a * 10;
+     var luz = lightValue / 1000;
+     var raio = a * 10;
     
      var voldemort = itens.filter(x => x.id == 109)[0];
 
-     var a = Math.pow(voldemort.lat, 2);
-     var b = Math.pow(voldemort.lng, 2);
+     var a = Math.pow(voldemort.lat - reguas[0].latitude, 2);
+     var b = Math.pow(voldemort.lng - reguas[0].longitude, 2);
 
      var h = Math.sqrt(a + b);
 
-     console.log(h);
+     var circle = L.circle([reguas[0].latitude, reguas[0].longitude], {
+                              color: cor,
+		fillOpacity: 0,
+        		radius: h,
+        		weight: 2,
+        		stroke: true
+      }).addTo(map);
+
+     console.log(h );
 }
