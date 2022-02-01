@@ -451,6 +451,7 @@ $("#reset").click(function() {
             });
        }
        reload();
+       play("/audio/game_over.mp3");
        //$("#menu").click();
 });
 
