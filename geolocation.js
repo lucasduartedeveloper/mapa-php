@@ -451,7 +451,7 @@ window.addEventListener('userproximity', function(event) {
 
 // SENSOR DE LUZ
 var lightValue = 0;
-if ("ondevicelight" in window) {
+if ("ondevicelight" in window && true == false) {
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   window.addEventListener("devicelight", light);
 }
@@ -514,8 +514,9 @@ function type(text) {
 }
 
 var last_text2 = "";
+var speaking = false;
 function say(text) {
-         if (text != last_text2) {
+         if (text != last_text2 && !speaking) {
               // Teste SpeechSynthesisUtterance
               last_text2 = text;
 
@@ -524,7 +525,9 @@ function say(text) {
               msg.onend = function(event) {
                   //console.log("onend");
                   last_text2 = "";
+                  speaking = false;
               };
+              speaking = true;
               window.speechSynthesis.speak(msg);
         }
 }
@@ -560,7 +563,7 @@ function success(position) {
        dhPosAnterior = now;
 
        if (velocidade > 0) {
-           //say("Você está à " + (velocidade) + " centímetros por segundo");
+           say("Você está à " + (velocidade) + " centímetros por segundo");
       }
    }
    else {
