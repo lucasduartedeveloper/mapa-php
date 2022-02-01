@@ -719,3 +719,8 @@ function explodirArea(pos) {
 
         play("/audio/explosion.mp3");
 }
+
+//Planta relógio
+function desenharPlanta() {
+     
+}
