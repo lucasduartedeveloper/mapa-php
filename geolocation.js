@@ -310,7 +310,8 @@ function onMapClick(e) {
                $.post("/ajax/localizacao_gps_item.php", {
                     lat: 0, 
                     lng: 0,
-                    id: itens[k].id
+                    id: itens[k].id,
+                    data_hora: new Date().getTime()
                })
                .done(function(data) {
                    //type("Você recuperou um item");
