@@ -15,8 +15,8 @@ try {
 
     echo $sql;
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    //$stmt = $pdo->prepare($sql);
+    //$stmt->execute();
   }
   else {
 
