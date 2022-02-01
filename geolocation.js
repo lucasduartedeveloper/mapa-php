@@ -735,5 +735,7 @@ function desenharPlanta() {
 
      var tempo = agora - plantado;
 
+     console.log(agora);
+     console.log(plantado);
      console.log(tempo);
 }
