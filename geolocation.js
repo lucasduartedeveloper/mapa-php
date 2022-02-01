@@ -459,7 +459,7 @@ if ("ondevicelight" in window) {
 function light(event) {
     lightValue = event.value;
     //animar();
-    //console.log(event.value);
+    console.log(event.value);
 }
 
 function animar() {
