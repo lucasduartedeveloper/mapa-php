@@ -126,12 +126,14 @@ function reload() {
         }
         reloadCount += 1;
 
-        // ---- Explosivo
-        desenharControle();
-        // ---- Planta
-        desenharPlanta();
-        // ---- Voldemort
-        desenharVoldemort();
+        if (reguas.length > 0) {
+        	// ---- Explosivo
+        	desenharControle();
+        	// ---- Planta
+        	desenharPlanta();
+        	// ---- Voldemort
+        	desenharVoldemort();
+        }
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
