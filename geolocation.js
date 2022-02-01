@@ -824,8 +824,8 @@ function desenharVoldemort() {
      var b2 = h2 * cos;
 
      var pos = posicaoNoGrid({
-        lat : a2,
-        lng : b2
+        lat : reguas[0].latitude + a2,
+        lng : reguas[0].longitude + b2
      });
     
      console.log(voldemort);
