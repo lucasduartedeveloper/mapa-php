@@ -796,9 +796,9 @@ function desenharVoldemort() {
 
      var circle = L.circle([reguas[0].latitude, reguas[0].longitude], {
                               color: cor,
-		fillOpacity: 0,
-        		radius: h/x,
-        		weight: 2,
+		fillOpacity: 0.2,
+        		radius: (h/x) * luz,
+        		weight: 0,
         		stroke: true
       }).addTo(map);
 
