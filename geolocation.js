@@ -264,6 +264,8 @@ var markerShadow = L.circle([0, 0], {
 
 var itemId = -1;
 var h = 0; // 
+var a = 0;
+var b = 0;
 
 $(document).on('click', ':radio[name="item"]', function() {
     //$('label').removeClass('active');
@@ -813,9 +815,8 @@ function desenharVoldemort() {
 
      if (voldemort.lat != 0) {
 
-     var a = voldemort.lat - reguas[0].latitude;
-     var b = voldemort.lng - reguas[0].longitude;
-
+     a = a != 0 ? a : voldemort.lat - reguas[0].latitude;
+     b = b != 0 ? b : voldemort.lng - reguas[0].longitude;
      h = h != 0 ? h : Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
      var sen = a/h;
@@ -832,7 +833,7 @@ function desenharVoldemort() {
         lng : parseFloat(reguas[0].longitude) + b2
      });
     
-     
+     /*
      console.log(voldemort);
      console.log(reguas[0]);
      console.log(pos);
@@ -844,7 +845,7 @@ function desenharVoldemort() {
      console.log("b:" + b);
      console.log("a2:" + a2);
      console.log(reguas[0].longitude + b2);
-    
+    */
 
      markerLight.setRadius((h/((x+y)/2)) * luz);
      
