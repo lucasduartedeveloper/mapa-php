@@ -798,7 +798,7 @@ function desenharVoldemort() {
     
      var voldemort = itens.filter(x => x.id == 109)[0];
 
-     if (voldemort.lat > 0) {
+     if (voldemort.lat != 0) {
 
      var a = Math.pow(voldemort.lat - reguas[0].latitude, 2);
      var b = Math.pow(voldemort.lng - reguas[0].longitude, 2);
