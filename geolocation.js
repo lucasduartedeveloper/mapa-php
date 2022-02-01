@@ -459,7 +459,12 @@ if ("ondevicelight" in window) {
 function light(event) {
     lightValue = event.value;
     //animar();
-    console.log(event.value);
+    //console.log(event.value);
+
+    var rgba = "rgba(255,255,255," + (1-(lightValue / 1000)) + ")";
+    console.log(rgba);
+
+    $(".box4").css({ "background-color" : rgba});
 }
 
 function animar() {
