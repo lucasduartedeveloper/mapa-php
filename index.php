@@ -114,7 +114,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">MAP BROS</p>
-    <p class="contador">v137.139.455 final*</p>
+    <p class="contador">v137.139.456 final*</p>
     <img id="front" class="front" src="/img/logo-v2.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 cm/s</p>
@@ -139,8 +139,10 @@ catch (PDOException $e) {
         src="https://cdn.jsdelivr.net/gh/hosuaby/Leaflet.SmoothMarkerBouncing@v2.0.0/dist/bundle.js"
         crossorigin="anonymous"></script>
 
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+
 <script src="/script.js?v=139"></script>
-<script src="/geolocation.js?v455"></script> 
+<script src="/geolocation.js?v456"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

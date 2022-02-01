@@ -285,7 +285,7 @@ function onMapClick(e) {
         lng: pos.lng,
         id: itens[id].id,
         anotacao: anotacao,
-        data_hora: new Date().toString()
+        data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
         })
         .done(function(data) {
                //type("Item posicionado");
@@ -311,7 +311,7 @@ function onMapClick(e) {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
-                    data_hora: new Date().toString()
+                    data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
                })
                .done(function(data) {
                   console.log(data);
