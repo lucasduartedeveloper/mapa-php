@@ -740,7 +740,7 @@ function desenharPlanta() {
      var tempo = agora - plantado;
      //console.log(tempo);
 
-     seed.marker.bindPopup(Math.floor(180 - (tempo / 1000)) + " s").openPopup();
+     //seed.marker.bindPopup(Math.floor(180 - (tempo / 1000)) + " s").openPopup();
 
     var iconUrl = "/img/seed.png";
      if (tempo > 60000) {
