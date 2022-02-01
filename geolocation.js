@@ -287,14 +287,14 @@ function onMapClick(e) {
         lng: pos.lng,
         id: itens[id].id,
         anotacao: anotacao,
-        data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
+        data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         })
         .done(function(data) {
                //type("Item posicionado");
                say("Pronto");
                reload();
                //play();
-               console.log(data);
+               //console.log(data);
         });
         }
      }
@@ -313,10 +313,10 @@ function onMapClick(e) {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
-                    data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
+                    data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                })
                .done(function(data) {
-                  console.log(data);
+                  //console.log(data);
                   //type("Você recuperou um item");
                   if (!itens[kforadofor].anotacao .startsWith("後で")) {
                          say(itens[kforadofor].anotacao);
@@ -565,7 +565,7 @@ function success(position) {
         lat: pos.lat, 
         lng: pos.lng,
         cor: cor,
-        data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
+        data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         })
         .done(function(data) {
                //type("Atualizando localização");
@@ -710,7 +710,7 @@ function explodirArea(pos) {
                    lat: pos.lat - (a * k),
                    lng: pos.lng - (d *  j),
                    cor: corExplodida,
-                  data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
+                  data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                    })
                   .done(function(data) {
                        //console.log(data);
