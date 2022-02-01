@@ -735,11 +735,25 @@ function desenharPlanta() {
      var seed = itens.filter(x => x.id == 108)[0];
      
      var agora = new Date().getTime();
-     var plantado = moment(seed.data_hora, 'YYYY-MM-DD HH:MM:SS').toDate().getTime();
+     var plantado = moment(seed.data_hora, 'YYYY-MM-DD HH:mm:ss').toDate().getTime();
 
      var tempo = agora - plantado;
+    console.log(tempo);
 
-     console.log(agora);
-     console.log(plantado);
-     console.log(tempo);
+    var iconUrl = "/img/seed.png";
+     if (tempo > 10000) {
+           iconUrl.= "/img/plant.png"
+     }
+
+     var seedIcon= L.icon({
+       iconUrl: iconUrl,
+       /*shadowUrl: '/img/icon-shadow.png',*/
+       iconSize:     [35, 40], // size of the icon
+       shadowSize:   [50, 25], // size of the shadow
+       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+       shadowAnchor: [25, 10],  // the same for the shadow
+       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+      });
+
+     seed.setIcon(seedIcon);
 }
