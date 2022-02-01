@@ -130,6 +130,8 @@ function reload() {
         desenharControle();
         // ---- Planta
         desenharPlanta();
+        // ---- Voldemort
+        desenharVoldemort();
          });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
@@ -451,7 +453,7 @@ window.addEventListener('userproximity', function(event) {
 
 // SENSOR DE LUZ
 var lightValue = 0;
-if ("ondevicelight" in window && true == false) {
+if ("ondevicelight" in window) {
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   window.addEventListener("devicelight", light);
 }
