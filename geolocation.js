@@ -740,14 +740,16 @@ function desenharPlanta() {
      var tempo = agora - plantado;
      //console.log(tempo);
 
+     seed.openPopup((tempo / 1000) + " s");
+
     var iconUrl = "/img/seed.png";
-     if (tempo > 10000) {
+     if (tempo > 600000) {
            iconUrl = "/img/plant.png";
      }
-     if (tempo > 20000) {
+     if (tempo > 1200000) {
            iconUrl = "/img/plant-v2.png";
      }
-     if (tempo > 30000) {
+     if (tempo > 1800000) {
            iconUrl = "/img/tree.png";
      }
 
