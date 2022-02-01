@@ -451,14 +451,14 @@ window.addEventListener('userproximity', function(event) {
 
 // SENSOR DE LUZ
 var lightValue = 0;
-if ("ondevicelight" in window && true == false) {
+if ("ondevicelight" in window) {
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   window.addEventListener("devicelight", light);
 }
 
 function light(event) {
     lightValue = event.value;
-    animar();
+    //animar();
     //console.log(event.value);
 }
 
@@ -549,7 +549,7 @@ function success(position) {
        dhPosAnterior = now;
 
        if (velocidade > 0) {
-           say("Você está à " + (velocidade) + " centímetros por segundo");
+           //say("Você está à " + (velocidade) + " centímetros por segundo");
       }
    }
    else {
