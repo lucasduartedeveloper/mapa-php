@@ -461,12 +461,16 @@ function light(event) {
     //animar();
     //console.log(event.value);
 
+    /*
     var multiplicador = (lightValue / 1000);
     var rgb = Math.floor(multiplicador * 255);
     var rgba = "rgba("+rgb+","+rgb+","+rgb+",1)";
     console.log(rgba);
-
     $("#box4").css({ "background-color" : rgba});
+    */
+
+    var porcento = lightValue / 100;
+    say("Luz em " + porcento + " porcento");
 }
 
 function animar() {
