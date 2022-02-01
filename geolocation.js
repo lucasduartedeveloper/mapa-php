@@ -436,12 +436,12 @@ if(window.DeviceMotionEvent && true == false){
 }
 function motion(event){
   motionValue = event.accelerationIncludingGravity.x;
-  animar();/*
+  animar();
   console.log("Accelerometer: "
     + event.accelerationIncludingGravity.x + ", "
     + event.accelerationIncludingGravity.y + ", "
     + event.accelerationIncludingGravity.z
-  );*/
+  );
 }
 
 // SENSOR DE PROXIMIDADE
@@ -513,18 +513,13 @@ function type(text) {
      }
 }
 
-var last_text2 = "";
 var speaking = false;
 function say(text) {
-         if (text != last_text2 && !speaking) {
+         if (!speaking) {
               // Teste SpeechSynthesisUtterance
-              last_text2 = text;
-
               var msg = new SpeechSynthesisUtterance();
               msg.text = text;
               msg.onend = function(event) {
-                  //console.log("onend");
-                  last_text2 = "";
                   speaking = false;
               };
               speaking = true;
