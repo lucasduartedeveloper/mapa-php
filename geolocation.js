@@ -824,10 +824,11 @@ function desenharVoldemort() {
      var b2 = h2 * cos;
 
      var pos = posicaoNoGrid({
-        lat : reguas[0].latitude + a2,
-        lng : reguas[0].longitude + b2
+        lat : parseFloat(reguas[0].latitude) + a2,
+        lng : parseFloat(reguas[0].longitude) + b2
      });
     
+     /*
      console.log(voldemort);
      console.log(reguas[0]);
      console.log(pos);
@@ -839,6 +840,7 @@ function desenharVoldemort() {
      console.log("b:" + b);
      console.log("a2:" + a2);
      console.log(reguas[0].longitude + b2);
+    */
      
 
      markerLight.setRadius((h/((x+y)/2)) * luz);
