@@ -244,13 +244,21 @@ var markerIconUnlocked= L.icon({
 
 var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map).bounce();
 
-var markerShadow = L.circle([0, 0], {
-               color: cor,
-	fillOpacity: 0.2,
+var markerLight = L.circle([0, 0], {
+               color: "#fff",
+	fillOpacity: 0.5,
         	radius: 0,
         	weight: 0,
         	stroke: true
         }).addTo(map); 
+
+var markerShadow = L.circle([0, 0], {
+               color: "#2E2E2E",
+	fillOpacity: 0.5,
+        	radius: 2.25,
+        	weight: 0,
+        	stroke: true
+        }).addTo(map);
 
 var itemId = -1;
 $(document).on('click', ':radio[name="item"]', function() {
@@ -346,6 +354,7 @@ function onMapClick(e) {
      }
 
      marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+     markerLight.setLatLng(new L.LatLng(pos.lat, pos.lng));
      markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
      if (mapLocked) {
          map.setView([pos.lat, pos.lng], 19);
@@ -804,9 +813,9 @@ function desenharVoldemort() {
      var b = Math.pow(voldemort.lng - reguas[0].longitude, 2);
 
      var h = Math.sqrt(a + b);
-     markerShadow.setRadius((h/x) * luz);
+     markerLight.setRadius((h/x) * luz);
 
-     console.log((h/x) * luz);
+     
 
      }
 }
