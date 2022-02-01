@@ -12,10 +12,11 @@ try {
     $data_hora = htmlspecialchars($_POST["data_hora"]);
 
     $sql = "UPDATE localizacao_gps_item SET latitude=".$latitude.", longitude=".$longitude.",  anotacao='".$anotacao." ' ,data_hora='".$data_hora."' WHERE id=".$id.";";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
 
     echo $sql;
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
   }
   else {
 
