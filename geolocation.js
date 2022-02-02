@@ -392,7 +392,7 @@ function onMapClick(e) {
      }
 
      // PONTUAÇÃO LIMITE
-     if (reguas.length >= 15)
+     if (reguas.length >= 15) {
           $("#reset").click();
           say("Você perdeu também!");
      }
