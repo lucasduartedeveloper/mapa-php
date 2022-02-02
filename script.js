@@ -47,30 +47,42 @@ $( "#menu" ).click(function() {
            $("#box2").hide();
            $("#box3").hide();
            $("#box4").hide();
+           $("#box5").hide();
          break;
          case 1:
            $("#box1").show();
            $("#box2").hide();
            $("#box3").hide();
            $("#box4").hide();
+           $("#box5").hide();
          break;
          case 2:
            $("#box1").show();
            $("#box2").show();
            $("#box3").hide();
            $("#box4").hide();
+           $("#box5").hide();
          break;
         case 3:
            $("#box1").show();
            $("#box2").show();
            $("#box3").show();
            $("#box4").hide();
+           $("#box5").hide();
          break;
          case 4:
            $("#box1").show();
            $("#box2").show();
            $("#box3").show();
            $("#box4").show();
+           $("#box5").hide();
+         break;
+         case 5:
+           $("#box1").show();
+           $("#box2").show();
+           $("#box3").show();
+           $("#box4").show();
+           $("#box5").show();
          break;
     }
 
