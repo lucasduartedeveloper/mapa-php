@@ -102,7 +102,7 @@ function reload() {
 
        var dragend = (e, k) => {
             itemId = k;
-            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); }.bind(item);
+            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
