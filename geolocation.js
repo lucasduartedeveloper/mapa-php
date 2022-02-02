@@ -16,6 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var  reguas = [];
 var  itens = [];
+var grid = [];
 var cor = "#084B8A";
 
 var audio = new Audio();
@@ -290,6 +291,8 @@ $(document).on('click', ':radio[name="item"]', function() {
 var mapLocked = true;
 function onMapClick(e) {
       var pos = posicaoNoGrid(e.latlng);
+
+     desenharGrid(pos);
 
      var novaArea = true;
      for (var k in reguas) {
@@ -748,7 +751,7 @@ function explodirArea(pos) {
         var d = 0.000009956626094265175 * 5;
         var corExplodida = "#2E2E2E";
 
-        var giraffe = itens.filter(x => x.id == 100)[0];
+        //var giraffe = itens.filter(x => x.id == 100)[0];
 
         for (let k = -2; k <= 2; k++) {
              for (let j = -2; j <= 2; j++) {
@@ -881,4 +884,38 @@ function desenharVoldemort() {
      voldemort.markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
      }
+}
+
+// Grid
+function desenharGrid(pos) {
+     var a = 0.000008993216088271083 * 5;
+     var d = 0.000009956626094265175 * 5;
+    var corGrid = "#61656b";
+
+    for (let k = -7; k <= 7; k++) {
+             for (let j = -7; j <= 7; j++) {
+               var obj = {};
+
+               obj.circle = L.circle([
+		pos.lat - (a * k),
+		pos.lng - (d *  j)
+               		], {
+                              color: data[k]
+		fillOpacity: 0,
+        		radius: 2.5,
+        		weight: 1,
+        		stroke: false
+	}).addTo(map);
+
+               obj.rectangle = L.rectangle(obj.circle.getBounds(), {
+               		color: corGrid, 
+               		weight: 2,
+               		opacity: 0.3,
+               		fillOpacity: 0,
+               		dashArray: "1"
+               }).addTo(map);
+
+               grid.push(obj);
+             }
+    }
 }
