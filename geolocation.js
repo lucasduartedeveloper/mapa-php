@@ -284,11 +284,11 @@ function onMapClick(e) {
       var pos = {};
      if (e.type == "dragend") {
          pos = posicaoNoGrid(e.target.getLatLng());
-         console.log(e);
      }
      else {
           pos = posicaoNoGrid(e.latlng);
      }
+     console.log(pos);
 
      var novaArea = true;
      for (var k in reguas) {
