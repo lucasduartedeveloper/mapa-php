@@ -906,8 +906,8 @@ function desenharGrid(pos) {
                var obj = {};
 
                obj.circle = L.circle([
-		pos.lat - (a * k),
-		pos.lng - (d *  j)
+		parseFloat(pos.lat) - (a * k),
+		parseFloat(pos.lng) - (d *  j)
                		], {
                               color: corGrid,
 		fillOpacity: 0,
