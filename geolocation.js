@@ -306,7 +306,7 @@ function onMapClick(e) {
 
         var id = itemId;
         var anotacao = 
-        e.type != "dragend" ?  
+        e.type == "dragend" ?  
         itens[id].anotacao : 
         prompt("Anotação:","後で");
         anotacao = anotacao =! "" ? anotacao : "後で";
