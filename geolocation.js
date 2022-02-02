@@ -867,7 +867,7 @@ function desenharVoldemort() {
      });
 
      // Game over
-     if (luz == 0) {
+     if (luz <= 0.1) {
           $("#reset").click();
           h = 0;
           a = 0;
