@@ -144,10 +144,10 @@ function reload() {
         	// ---- Voldemort
         	desenharVoldemort();
                // ---- Grid de completar
-               desenharGrid({ latlng: {
+               desenharGrid({
                    lat: reguas[reguas.length -1].latitude,
                    lng: reguas[reguas.length -1].longitude
-               }});
+               });
         }
         });
 
