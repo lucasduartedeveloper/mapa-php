@@ -103,6 +103,7 @@ function reload() {
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
+       .on("dragend", onMapClick)
        .addTo(map)
        .bindPopup(item.anotacao);
 
