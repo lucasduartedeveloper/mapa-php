@@ -103,7 +103,7 @@ function reload() {
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
-       .on("dragend", onMapClick)
+       .on("dragend", function(e) { itemId = item.id; onMapClick(e.target.getLatLng()); })
        .addTo(map)
        .bindPopup(item.anotacao);
 
@@ -281,13 +281,7 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 var mapLocked = true;
 function onMapClick(e) {
-      var pos = {};
-     if (e.type == "dragend") {
-         pos = posicaoNoGrid(e.target.getLatLng());
-     }
-     else {
-          pos = posicaoNoGrid(e.latlng);
-     }
+      var pos = posicaoNoGrid(e.latlng);
 
      var novaArea = true;
      for (var k in reguas) {
