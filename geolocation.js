@@ -104,6 +104,7 @@ function reload() {
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
        .on("dragend", function(e) {
+            itemId = k;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" });
         })
        .addTo(map)
