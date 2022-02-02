@@ -100,9 +100,9 @@ function reload() {
        item.anotacao = data[k].anotacao;
        item.data_hora = data[k].data_hora;
 
-       var dragend = (e, m = k) => {
-            itemId = m;
-            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
+       var dragend = (e, k) => {
+            itemId = k;
+            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); }.bind(item);
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
