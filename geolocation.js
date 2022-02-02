@@ -92,6 +92,7 @@ function reload() {
             popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
         });
 
+       item.k = k;
        item.id = data[k].id;
        item.nome = data[k].nome;
        item.lat = data[k].latitude;
@@ -100,14 +101,14 @@ function reload() {
        item.anotacao = data[k].anotacao;
        item.data_hora = data[k].data_hora;
 
-       var dragend = (e, k) => {
-            itemId = k;
+       var dragend = (e) => {
+            itemId = this.k;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
-       .on("dragend", dragend)
+       .on("dragend", dragend.bind(item))
        .addTo(map)
        .bindPopup(item.anotacao);
 
