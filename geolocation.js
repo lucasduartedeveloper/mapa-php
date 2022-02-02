@@ -888,7 +888,7 @@ function desenharVoldemort() {
 function desenharGrid(pos) {
      var a = 0.000008993216088271083 * 5;
      var d = 0.000009956626094265175 * 5;
-     var corGrid = "#61656b";
+     var corGrid = "#268034";
 
      for (var k in grid) {
            map.removeControl(grid[k].circle);
@@ -896,8 +896,8 @@ function desenharGrid(pos) {
      }
      grid = [];
 
-    for (let k = -7; k <= 7; k++) {
-             for (let j = -7; j <= 7; j++) {
+    for (let k = -5; k <= 5; k++) {
+             for (let j = -5; j <= 5; j++) {
                var obj = {};
 
                obj.circle = L.circle([
@@ -913,10 +913,10 @@ function desenharGrid(pos) {
 
                obj.rectangle = L.rectangle(obj.circle.getBounds(), {
                		color: corGrid, 
-               		weight: 2,
-               		opacity: 0.1,
+               		weight: 3,
+               		opacity: 0.2,
                		fillOpacity: 0,
-               		dashArray: "2.5"
+               		dashArray: "5"
                }).addTo(map);
 
                grid.push(obj);
