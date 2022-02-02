@@ -467,7 +467,7 @@ $("#reset").click(function() {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
-                 data_hora: moment(new Date()).format('YYYY-MM-DD HH:MM:SS')
+                 data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:as')
             });
        }
        reload();
@@ -901,8 +901,8 @@ function desenharGrid(pos) {
      }
      grid = [];
 
-    for (let k = -5; k <= 5; k++) {
-             for (let j = -5; j <= 5; j++) {
+    for (let k = -4; k <= 3; k++) {
+             for (let j = -4; j <= 3; j++) {
                var obj = {};
 
                obj.circle = L.circle([
