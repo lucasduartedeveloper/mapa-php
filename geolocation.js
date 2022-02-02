@@ -65,6 +65,7 @@ function reload() {
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
           var inventario = "";
+          itemId = -1; // Someone
           
           for (var k in itens) {
              //map.removeControl(reguas[k].rectangle);
