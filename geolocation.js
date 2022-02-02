@@ -22,7 +22,7 @@ var cor = "#084B8A";
 var audio = new Audio();
 function play(file_path) {
    //return;
-   file_path = file_path ? file_path : '/audio/coin.mp3';
+   file_path = file_path ? file_path : '/audio/game_notification.wav';
    //file_path = file_path ? file_path : '/audio/missile.mp3';
    audio.pause();
    audio = new Audio(file_path);
