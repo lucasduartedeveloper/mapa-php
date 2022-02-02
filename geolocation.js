@@ -99,8 +99,9 @@ function reload() {
        item.audio = data[k].audio;
        item.anotacao = data[k].anotacao;
        item.data_hora = data[k].data_hora;
-       var dragend = (e, k) => {
-            itemId = k;
+
+       var dragend = (e, m = k) => {
+            itemId = m;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
