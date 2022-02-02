@@ -288,7 +288,6 @@ function onMapClick(e) {
      else {
           pos = posicaoNoGrid(e.latlng);
      }
-     console.log(pos);
 
      var novaArea = true;
      for (var k in reguas) {
@@ -297,7 +296,7 @@ function onMapClick(e) {
                novaArea = false;
           }
      }
-     if (novaArea && e.type != "dblclick") {
+     if (novaArea && (e.type != "dblclick" || e.type != "dragend")) {
          //type("Marcando nova área");
          //say("Marcando nova área");
          //console.log(itemId);
@@ -309,8 +308,12 @@ function onMapClick(e) {
          itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
         var id = itemId;
-        var anotacao = prompt("Anotação:","後で");
+        var anotacao = 
+        e.type != "dragend" ?  
+        itens[id].anotacao : 
+        prompt("Anotação:","後で");
         anotacao = anotacao =! "" ? anotacao : "後で";
+
         itemId = -1;
 
         $.post("/ajax/localizacao_gps_item.php", {
