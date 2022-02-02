@@ -391,11 +391,13 @@ function onMapClick(e) {
         cor: cor });
      }
 
-     // PONTUAÇÃO LIMITE
+     // PONTUAÇÃO MÁXIMA
+    /*
      if (reguas.length >= 15) {
           $("#reset").click();
-          say("Você perdeu também!");
-     }
+          say("Você perdeu!"); 
+          say("Você ganhou!"); 
+     }*/
 }
 
 map.on('click', onMapClick);
@@ -471,7 +473,7 @@ $("#reset").click(function() {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
-                 data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:as')
+                 data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
             });
        }
        reload();
