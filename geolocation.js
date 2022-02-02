@@ -102,7 +102,7 @@ function reload() {
        item.data_hora = data[k].data_hora;
 
        var dragend = function (e) {
-            console.log(this);
+            //console.log(this);
             itemId = this.m;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
        var itemdragend = dragend.bind(item);
@@ -845,6 +845,7 @@ function desenharVoldemort() {
         lng : parseFloat(reguas[0].longitude) + b2
      });
     
+     /*
      console.log(voldemort);
      console.log(reguas[0]);
      console.log(pos);
@@ -856,6 +857,7 @@ function desenharVoldemort() {
      console.log("b:" + b);
      console.log("a2:" + a2);
      console.log("luz:" + luz);
+     */
 
      markerLight.setRadius((h/((x+y)/2)) * luz);
      
