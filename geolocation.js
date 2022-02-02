@@ -392,8 +392,9 @@ function onMapClick(e) {
      }
 
      // PONTUAÇÃO LIMITE
-     if (reguas.length >= 72) {
+     if (reguas.length >= 15)
           $("#reset").click();
+          say("Você perdeu também!");
      }
 }
 
@@ -904,8 +905,8 @@ function desenharGrid(pos) {
      }
      grid = [];
 
-    for (let k = -4; k <= 3; k++) {
-             for (let j = -4; j <= 3; j++) {
+    for (let k = -2; k <= 2; k++) {
+             for (let j = -2; j <= 2; j++) {
                var obj = {};
 
                obj.circle = L.circle([
