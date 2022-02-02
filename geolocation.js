@@ -100,7 +100,7 @@ function reload() {
        item.anotacao = data[k].anotacao;
        item.data_hora = data[k].data_hora
 
-       item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon})
+       item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
        .addTo(map)
