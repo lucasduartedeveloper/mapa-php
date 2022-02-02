@@ -103,7 +103,10 @@ function reload() {
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
-       .on("dragend", function(e) { itemId = item.id; onMapClick(e.target.getLatLng()); })
+       .on("dragend", function(e) {
+            itemId = item.id;
+            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" });
+        })
        .addTo(map)
        .bindPopup(item.anotacao);
 
