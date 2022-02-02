@@ -104,7 +104,6 @@ function reload() {
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
        .on("dragend", function(e) {
-            itemId = k;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" });
         })
        .addTo(map)
@@ -293,7 +292,7 @@ function onMapClick(e) {
                novaArea = false;
           }
      }
-     if (novaArea && (e.type != "dblclick" || e.type != "dragend")) {
+     if (novaArea && (e.type != "dblclick" || e.type == "dragend")) {
          //type("Marcando nova área");
          //say("Marcando nova área");
          //console.log(itemId);
