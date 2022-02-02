@@ -92,7 +92,7 @@ function reload() {
             popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
         });
 
-       item.k = k;
+       item.m = k;
        item.id = data[k].id;
        item.nome = data[k].nome;
        item.lat = data[k].latitude;
@@ -101,7 +101,7 @@ function reload() {
        item.anotacao = data[k].anotacao;
        item.data_hora = data[k].data_hora;
 
-       var dragend = (e) => {
+       var dragend = function (e) {
             console.log(this);
             itemId = this.m;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
