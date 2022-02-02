@@ -102,13 +102,14 @@ function reload() {
        item.data_hora = data[k].data_hora;
 
        var dragend = (e) => {
-            itemId = this.k;
+            itemId = this.m;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
+       dragend = dragend.bind({ m: k });
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
-       .on("dragend", dragend.bind(item))
+       .on("dragend", dragend)
        .addTo(map)
        .bindPopup(item.anotacao);
 
