@@ -33,11 +33,11 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-var pagina = 4;
+var pagina = 5;
 $( "#menu" ).click(function() {
     
     pagina = pagina -1;
-    pagina = pagina < 0 ? 4 : pagina;
+    pagina = pagina < 0 ? 5 : pagina;
 
     //console.log(pagina);
 
