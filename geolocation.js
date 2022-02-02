@@ -820,7 +820,7 @@ function desenharVoldemort() {
      var x = 0.000008993216088271083;
      var y = 0.000009956626094265175;
 
-     var luz = lightValue / 1000;
+     var luz = (lightValue + 100) / 1000;
      var raio = x * 10;
     
      var voldemort = itens.filter(x => x.id == 109)[0];
