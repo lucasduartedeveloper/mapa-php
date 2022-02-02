@@ -281,10 +281,10 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 var mapLocked = true;
 function onMapClick(e) {
-      var pos = posicaoNoGrid(e.latlng);
+      var pos = {};
      if (e.type == "dragend") {
-         pos = posicaoNoGrid(e.target._latlng);
-         // console.log(e);
+         pos = posicaoNoGrid(e.target.getLatLng());
+         console.log(e);
      }
      else {
           pos = posicaoNoGrid(e.latlng);
