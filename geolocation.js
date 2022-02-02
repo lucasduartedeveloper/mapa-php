@@ -297,8 +297,6 @@ var mapLocked = true;
 function onMapClick(e) {
       var pos = posicaoNoGrid(e.latlng);
 
-     //desenharGrid(pos);
-
      var novaArea = true;
      for (var k in reguas) {
           if (reguas[k].latitude == pos.lat &&
@@ -391,6 +389,11 @@ function onMapClick(e) {
         lat: pos.lat, 
         lng: pos.lng,
         cor: cor });
+     }
+
+     // PONTUAÇÃO LIMITE
+     if (reguas.length >= 72) {
+          $("#reset").click();
      }
 }
 
