@@ -142,7 +142,7 @@ catch (PDOException $e) {
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
 <script src="/script.js?v=139"></script>
-<script src="/geolocation.js?v530></script> 
+<script src="/geolocation.js?v530"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
