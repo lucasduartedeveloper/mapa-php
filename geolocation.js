@@ -98,15 +98,15 @@ function reload() {
        item.lng = data[k].longitude;
        item.audio = data[k].audio;
        item.anotacao = data[k].anotacao;
-       item.data_hora = data[k].data_hora
+       item.data_hora = data[k].data_hora;
+       var dragend = (e, k) => {
+            itemId = k;
+            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
 
        item.marker = L.marker([data[k].latitude, data[k].longitude], {icon: itemIcon, draggable: true})
        .on("click", onMapClick)
        .on("dblclick", onMapClick)
-       .on("dragend", (e, m = k) => {
-            itemId = m;
-            onMapClick({ latlng: e.target.getLatLng(), type: "dragend" });
-        })
+       .on("dragend", dragend)
        .addTo(map)
        .bindPopup(item.anotacao);
 
