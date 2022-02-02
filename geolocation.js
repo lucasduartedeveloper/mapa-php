@@ -102,6 +102,7 @@ function reload() {
        item.data_hora = data[k].data_hora;
 
        var dragend = (e) => {
+            console.log(this);
             itemId = this.m;
             onMapClick({ latlng: e.target.getLatLng(), type: "dragend" }); };
        dragend = dragend.bind({ m: k });
