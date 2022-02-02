@@ -143,8 +143,13 @@ function reload() {
         	desenharPlanta();
         	// ---- Voldemort
         	desenharVoldemort();
+               // ---- Grid de completar
+               desenharGrid({ latlng: {
+                   lat: reguas[reguas.length -1].latitude,
+                   lng: reguas[reguas.length -1].longitude
+               }});
         }
-         });
+        });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
 
@@ -292,7 +297,7 @@ var mapLocked = true;
 function onMapClick(e) {
       var pos = posicaoNoGrid(e.latlng);
 
-     desenharGrid(pos);
+     //desenharGrid(pos);
 
      var novaArea = true;
      for (var k in reguas) {
@@ -888,7 +893,7 @@ function desenharVoldemort() {
 function desenharGrid(pos) {
      var a = 0.000008993216088271083 * 5;
      var d = 0.000009956626094265175 * 5;
-     var corGrid = "#268034";
+     var corGrid = "#084B8A";
 
      for (var k in grid) {
            map.removeControl(grid[k].circle);
