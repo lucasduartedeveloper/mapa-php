@@ -751,8 +751,6 @@ function explodirArea(pos) {
         var d = 0.000009956626094265175 * 5;
         var corExplodida = "#2E2E2E";
 
-        //var giraffe = itens.filter(x => x.id == 100)[0];
-
         for (let k = -2; k <= 2; k++) {
              for (let j = -2; j <= 2; j++) {
                    //console.log("k " + k);
@@ -900,7 +898,7 @@ function desenharGrid(pos) {
 		pos.lat - (a * k),
 		pos.lng - (d *  j)
                		], {
-                              color: data[k]
+                              color: corGrid,
 		fillOpacity: 0,
         		radius: 2.5,
         		weight: 1,
