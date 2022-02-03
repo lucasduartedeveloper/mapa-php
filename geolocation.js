@@ -709,10 +709,10 @@ function desenharGrid() {
      grid = [];
 
      var icon = L.icon({
-            iconUrl: createLabel("FASE "+faseAtual),
+            iconUrl: createLabel("Fase 0"+faseAtual),
             iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [20, 100], // point of the icon which will correspond to marker's location
-            });
+            iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
+     });
 
     var marker = L.marker([pos.lat, pos.lng],  {icon: icon}).addTo(map);
 
@@ -774,7 +774,7 @@ function createLabel(text) {
      canvas.width = 40;
      canvas.height = 100;
 	
-     // draw a box around the canvas
+     //*draw a box around the canvas
      context.beginPath(); // always start a new line with beginPath
      context.lineWidth = 3;
      context.moveTo( 0, 0 ); // start position
@@ -782,13 +782,13 @@ function createLabel(text) {
      context.lineTo( canvas.width - 1, canvas.height - 1 );
      context.lineTo( 0, canvas.height - 1 );
      context.lineTo( 0, 0 );
-     context.stroke(); // actually draw the line
+     context.stroke(); // actually draw the line*/
 
     context.save();
     context.translate( canvas.width / 2, canvas.height / 2 );
     context.rotate( Math.PI / 4 );
-    context.font = "16px serif";
-    context.fillStyle = "#00df00"; // green
+    context.font = "16px 'VT323'";
+    context.fillStyle = "#000"; // green
     context.textAlign = "center";
     context.fillText(text, 0, 0 );
     context.restore();
