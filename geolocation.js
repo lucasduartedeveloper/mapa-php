@@ -18,7 +18,7 @@ var  reguas = [];
 var  itens = [];
 var grid = [];
 var cor = "#084B8A";
-var pontuacaoMinima = 25;
+var pontuacaoMinima = 9;
 
 var audio = new Audio();
 function play(file_path) {
@@ -374,6 +374,10 @@ function onMapClick(e) {
                  $("#reset").click();
                  say("Você perdeu!"); 
            }
+           else {
+                var raiz = Math.sqrt(pontuacaoMinima);
+                pontuacaoMinima = Math.pow(raiz, 2);
+           }
      }
      else if (reguas.length >= 1)  {
            desenharGrid();
@@ -672,6 +676,10 @@ function desenharVoldemort() {
      }
 }
 
+function par(num) {
+     return Math.ceil((pontuacaoMinima + 1) % 2);
+}
+
 // Grid
 function desenharGrid() {
      var a = 0.000008993216088271083 * 5;
@@ -680,6 +688,7 @@ function desenharGrid() {
 
       var raiz = Math.sqrt(pontuacaoMinima);
       var v = Math.floor(raiz / 2);
+      var w = v - par(pontuacaoMinima);
 
      var pos = {
             lat: reguas[reguas.length -1].latitude,
@@ -724,9 +733,6 @@ function desenharGrid() {
 }
 
 function validarGrid() {
-     var raiz = Math.sqrt(pontuacaoMinima);
-     var v = Math.floor(raiz / 2);
-
      var pontos = 0;
      for (var k in reguas) {
           var pos = {
