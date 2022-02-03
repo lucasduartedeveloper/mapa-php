@@ -391,6 +391,7 @@ function onMapClick(e) {
 
      // PONTUAÇÃO MÍNIMA
      if (reguas.length >= pontuacaoMinima) {
+     desenharGrid();
      if (validarGrid()) {
            say("Você ganhou!"); 
      }
