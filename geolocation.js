@@ -336,7 +336,7 @@ function onMapClick(e) {
                say("Pronto");
                reload();
                //play();
-               //console.log(data);
+               console.log(data);
         });
         }
      }
