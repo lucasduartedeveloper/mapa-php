@@ -965,16 +965,13 @@ function validarGrid() {
                         lat: reguas[k].latitude,
                         lng: reguas[k].longitude
                    };
-
-                   var lat = parseFloat(pos.lat);
-                   var lng = parseFloat(pos.lng);
                   
-                   var log1 = "lat: " + lat + " | lat: " + grid[m].lat;
-                   var log2 = "lng: " + lng + " | lng: " + grid[m].lng;
+                   var log1 = "lat: " + pos.lat + " | lat: " + grid[m].lat;
+                   var log2 = "lng: " + pos.lng + " | lng: " + grid[m].lng;
  
-                   if (grid[m].lat == lat && grid[m].lng == lng) {
-                          log1 = " - " + log1;
-                          log2 = " - " + log2;
+                   if (grid[m].lat == pos.lat && grid[m].lng == pos.lng) {
+                          log1 = "[ x ] " + log1;
+                          log2 = "[ x ] " + log2;
                           pontos += 1;
                    }
 
