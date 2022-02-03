@@ -18,7 +18,7 @@ var  reguas = [];
 var  itens = [];
 var grid = [];
 var cor = "#084B8A";
-var pontuacaoMinima = 25;
+var pontuacaoMinima = 9;
 
 var audio = new Audio();
 function play(file_path) {
