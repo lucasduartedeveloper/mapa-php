@@ -180,10 +180,10 @@ function reload() {
 
         reguas = data;
         if (reguas.length > 0) {
-               onMapClick(latlng: {
+               onMapClick({latlng: {
                       lat: reguas[0].latitude,
                       lng: reguas[0].longitude
-               });
+               }});
         }
 
         firstpolyline = new L.Polyline(pointList, {
