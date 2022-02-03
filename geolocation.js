@@ -202,7 +202,7 @@ function reload() {
 
         if (reguas.length > 0) {
         	// ---- Voldemort
-        	desenharVoldemort();
+        	//desenharVoldemort();
         }
       });
 
@@ -511,7 +511,7 @@ window.addEventListener('userproximity', function(event) {
 
 // SENSOR DE LUZ
 var lightValue = 1000;
-if ("ondevicelight" in window) {
+if ("ondevicelight" in window && true == false) {
   $("#light-info").html("ambientlight: <i class=\"bi bi-check-square-fill\"></i>");
   window.addEventListener("devicelight", light);
 }
@@ -704,7 +704,7 @@ function desenharControle()  {
      var green = itens.filter(x => x.id == 97)[0];
      var tnt = itens.filter(x => x.id == 98)[0];
 
-     if (yellow.lat != 0 && tnt.lat != 0) {
+     if (yellow && yellow.lat != 0 && tnt.lat != 0) {
          var pointList = [ 
             new L.LatLng(yellow.lat, yellow.lng),
             new L.LatLng(tnt.lat, tnt.lng)
@@ -742,7 +742,7 @@ function desenharControle()  {
      }
 
 
-     if (green.lat != 0 && tnt.lat != 0) {
+     if (green && green.lat != 0 && tnt.lat != 0) {
          var pointList = [ 
             new L.LatLng(green.lat, green.lng),
             new L.LatLng(tnt.lat, tnt.lng)
