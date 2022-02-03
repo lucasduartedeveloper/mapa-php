@@ -979,7 +979,7 @@ function validarGrid() {
 		pos.lat,
 		pos.lng
                		], {
-                              color: red,
+                              color: 'red',
 		fillOpacity: 0.5,
         		radius: 0.5,
         		weight: 1,
