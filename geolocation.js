@@ -969,10 +969,10 @@ function validarGrid() {
 	pos.lat,
 	pos.lng
                	], {
-               color: 'blue',
+               fillColor: 'blue',
 	fillOpacity: 0.5,
         	radius: 0.5,
-        	weight: 1,
+        	weight: 0,
         	stroke: false
            }).addTo(map);
 
@@ -991,10 +991,10 @@ function validarGrid() {
 		grid[m].lat,
 		grid[m].lng
                		], {
-                              color: 'yellow',
+                              fillColor: 'yellow',
 		fillOpacity: 0.5,
         		radius: 0.5,
-        		weight: 1,
+        		weight: 0,
         		stroke: false
 	   }).addTo(map);
 
