@@ -962,12 +962,12 @@ function validarGrid() {
      for (var k in reguas) {
            for (var m in grid) {
                    var pos = {
-                        lat: reguas[reguas.length -1].latitude,
-                        lng: reguas[reguas.length -1].longitude
+                        lat: reguas[k].latitude,
+                        lng: reguas[k].longitude
                    };
 
-                   var lat = parseFloat(pos.lat) - (a * k);
-                   var lng = parseFloat(pos.lng) - (d *  j);
+                   var lat = parseFloat(pos.lat);
+                   var lng = parseFloat(pos.lng);
                    
                    console.log("lat: " + lat + " | lat: " + grid[m].lat);
                    console.log("lng: " + lng + " | lng: " + grid[m].lng);
