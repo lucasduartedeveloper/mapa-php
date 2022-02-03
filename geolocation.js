@@ -740,7 +740,7 @@ function desenharGrid() {
 }
 
 function validarGrid() {
-     var pontos = 0;
+     var erros = 0;
      for (var k in reguas) {
           var pos = {
                 lat: reguas[k].latitude,
@@ -749,11 +749,11 @@ function validarGrid() {
 
          for (var m in grid) {
                 if (grid[m].lat == pos.lat && grid[m].lng == pos.lng) {
-                       pontos += 1;
+                       erros += 1;
                 }
          }
      } 
 
      console.log(pontos);
-     return pontos == pontuacaoMinima;
+     return erros <= 3;
 }
