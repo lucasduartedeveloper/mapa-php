@@ -18,6 +18,7 @@ var  reguas = [];
 var  itens = [];
 var grid = [];
 var cor = "#084B8A";
+var pontuacaoMinima = 25;
 
 var audio = new Audio();
 function play(file_path) {
@@ -388,8 +389,8 @@ function onMapClick(e) {
         cor: cor });
      }
 
-     // PONTUAÇÃO MÁXIMA
-     if (reguas.length >= 15) {
+     // PONTUAÇÃO MÍNIMA
+     if (reguas.length >= pontuacaoMinima) {
      if (validarGrid()) {
            say("Você ganhou!"); 
      }
@@ -904,6 +905,9 @@ function desenharGrid() {
      var d = 0.000009956626094265175 * 5;
      var corGrid = "#000000";
 
+      var raiz = Math.sqrt(pontuacaoMinima);
+      var v = Math.floor(raiz / 2);
+
      var pos = {
             lat: reguas[reguas.length -1].latitude,
             lng: reguas[reguas.length -1].longitude
@@ -915,8 +919,8 @@ function desenharGrid() {
      }
      grid = [];
 
-    for (let k = -2; k <= 2; k++) {
-             for (let j = -2; j <= 2; j++) {
+    for (let k = -v; k <= v; k++) {
+             for (let j = -v; j <= v; j++) {
                var obj = {};
 
                obj.circle = L.circle([
@@ -947,6 +951,9 @@ function validarGrid() {
        var a = 0.000008993216088271083 * 5;
        var d = 0.000009956626094265175 * 5;
 
+      var raiz = Math.sqrt(pontuacaoMinima);
+      var v = Math.floor(raiz / 2);
+
        var pos = {
               lat: reguas[reguas.length -1].latitude,
               lng: reguas[reguas.length -1].longitude
@@ -954,8 +961,8 @@ function validarGrid() {
 
      var m = 0;
      var pontos = 0;
-     for (let k = -2; k <= 2; k++) {
-             for (let j = -2; j <= 2; j++) {
+     for (let k = -v; k <= v; k++) {
+             for (let j = -v; j <= v; j++) {
                    var lat = parseFloat(pos.lat) - (a * k);
                    var lng = parseFloat(pos.lng) - (d *  j);
 
@@ -966,5 +973,5 @@ function validarGrid() {
              }
      }
 
-     return pontos == 15;
+     return pontos == pontuacaoMinima;
 }
