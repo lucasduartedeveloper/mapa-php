@@ -637,7 +637,7 @@ function success(position) {
    $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
-        cor: cor)
+        cor: cor
         })
         .done(function(data) {
                reload();
