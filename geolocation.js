@@ -144,7 +144,7 @@ function reload() {
         	// ---- Voldemort
         	desenharVoldemort();
                // ---- Grid de completar
-               desenharGrid();
+               //desenharGrid();
         }
         });
 
@@ -397,6 +397,9 @@ function onMapClick(e) {
            $("#reset").click();
            say("Você perdeu!"); 
      }
+     }
+     else {
+           desenharGrid();
      }
 }
 
@@ -899,7 +902,7 @@ function desenharVoldemort() {
 function desenharGrid() {
      var a = 0.000008993216088271083 * 5;
      var d = 0.000009956626094265175 * 5;
-     var corGrid = "#084B8A";
+     var corGrid = "#000000";
 
      var pos = {
             lat: reguas[reguas.length -1].latitude,
