@@ -193,11 +193,6 @@ function reload() {
         firstpolyline.addTo(map);
 
         $(".distancia").text(Math.floor(distancia * 100) + " cm");
-
-        if (reguas.length > 0) {
-        	// ---- Voldemort
-        	//desenharVoldemort();
-        }
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
@@ -297,9 +292,6 @@ function onMapClick(e) {
           }
      }
      if (novaArea && (e.type != "dblclick" || e.type == "dragend")) {
-         //type("Marcando nova área");
-         //say("Marcando nova área");
-         //console.log(itemId);
          play();
 
          if (itens.length > 0 && itemId >= 0) {
@@ -308,11 +300,7 @@ function onMapClick(e) {
          itens[itemId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
         var id = itemId;
-        var anotacao = 
-        e.type == "dragend" ?  
-        itens[id].anotacao : 
-        prompt("Anotação:","後で");
-        anotacao = anotacao =! "" ? anotacao : "後で";
+        var anotacao = "後で";
 
         itemId = -1;
 
@@ -324,11 +312,8 @@ function onMapClick(e) {
         data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         })
         .done(function(data) {
-               //type("Item posicionado");
                say("Pronto");
                reload();
-               //play();
-               //console.log(data);
         });
         }
      }
@@ -350,8 +335,6 @@ function onMapClick(e) {
                     data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                })
                .done(function(data) {
-                  //console.log(data);
-                  //type("Você recuperou um item");
                   if (!itens[kforadofor].anotacao .startsWith("後で")) {
                          say(itens[kforadofor].anotacao);
                    }
@@ -380,21 +363,18 @@ function onMapClick(e) {
         $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
-        cor: cor }).done(function(data) {
+        cor: cor })
+       .done(function(data) {
              reload();
         });
      }
 
      // PONTUAÇÃO MÍNIMA
      if (reguas.length >= pontuacaoMinima) {
-     desenharGrid();
-     if (validarGrid()) {
-           say("Você ganhou!"); 
-     }
-     else {
-           $("#reset").click();
-           say("Você perdeu!"); 
-     }
+           if (!validarGrid()) {
+                 $("#reset").click();
+                 say("Você perdeu!"); 
+           }
      }
      else if (reguas.length >= 1)  {
            desenharGrid();
@@ -418,39 +398,6 @@ $("#auto").click(function() {
     $("#menu").click();
 });
 
-// ATUALIZAR 
-var intervalo = 5000;
-var foo = function() {
-        reload();
-        
-        var numberOfMlSeconds = new Date().getTime();
-        var newDateObj = new Date(numberOfMlSeconds + intervalo);
-
-        countDownDate = newDateObj;
-};
-
-var reloadCount = 0;
-$(document).ready(function() {
-    //foo();
-    //setInterval(foo, intervalo);
-});
-
-// LEMBRAR ANOTAÇÕES
-function lembrarAnotacoes() {
-    var anotacoes = "Anotações no mapa: \n";
-    var nro = 0;
-    for (var k in itens) {
-         if (itens[k].lat != 0) {
-              nro +=1;
-              anotacoes += itens[k].anotacao + "\n";;
-         }
-    }
-    if (nro > 0) {
-         say(anotacoes);
-    }
-    console.log(anotacoes);
-}
-
 $(document).on('change', ':radio[name="cor"]', function() {
     $('label').removeClass('active');
     $(this).filter(':checked').parent().addClass('active');
@@ -460,7 +407,6 @@ $(document).on('change', ':radio[name="cor"]', function() {
 
 $("#box4").click(function() {
       $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+reguas[0].latitude+"&lon="+reguas[0].longitude+"&format=json", function(data) {
-          type("Informando localização");
           say("Estamos próximos à " + data.display_name);
       });
 });
@@ -785,7 +731,7 @@ function desenharGrid() {
 
 function validarGrid() {
      var raiz = Math.sqrt(pontuacaoMinima);
-      var v = Math.floor(raiz / 2);
+     var v = Math.floor(raiz / 2);
 
      var pontos = 0;
      for (var k in reguas) {
@@ -795,16 +741,9 @@ function validarGrid() {
           };
 
          for (var m in grid) {
-       
-                   var log1 = "lat: " + pos.lat + " | lat: " + grid[m].lat;
-                   var log2 = "lng: " + pos.lng + " | lng: " + grid[m].lng;
- 
-                   if (grid[m].lat == pos.lat && grid[m].lng == pos.lng) {
-                          log1 = "[ x ] " + log1;
-                          log2 = "[ x ] " + log2;
-                          pontos += 1;
-                   }
-
+                if (grid[m].lat == pos.lat && grid[m].lng == pos.lng) {
+                       pontos += 1;
+                }
          }
      } 
 
