@@ -794,8 +794,8 @@ function createLabel(text) {
     */
 
     context.save();
-    //context.translate( canvas.width / 2, canvas.height / 2 );
-    context.rotate( Math.PI / 2 );
+    context.translate( canvas.width / 2, canvas.height / 2 );
+    context.rotate( -(Math.PI / 2) );
     context.font = "20px 'VT323'";
     context.fillStyle = "#000"; // green
     context.textAlign = "center";
