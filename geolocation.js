@@ -793,5 +793,5 @@ function createLabel(text) {
     context.fillText(text, 0, 0 );
     context.restore();
 
-    return canvas.toDataUrl();
+    return canvas.toDataURL();
 }
