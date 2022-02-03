@@ -754,6 +754,6 @@ function validarGrid() {
          }
      } 
 
-     console.log(pontos);
+     console.log(erros);
      return erros <= 3;
 }
