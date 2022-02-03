@@ -975,7 +975,7 @@ function validarGrid() {
                           pontos += 1;
                    }
 
-                   obj.circle = L.circle([
+                   L.circle([
 		pos.lat,
 		pos.lng
                		], {
