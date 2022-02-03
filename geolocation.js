@@ -923,8 +923,8 @@ function desenharGrid() {
     for (let k = -v; k <= v; k++) {
              for (let j = -v; j <= v; j++) {
                var obj = {
-                      lat: parseFloat(pos.lat) - (a * k),
-                      lng: parseFloat(pos.lng) - (d *  j)
+                      lat: parseFloat(pos.lat).toFixed(14) - (a * k),
+                      lng: parseFloat(pos.lng).toFixed(14) - (d *  j)
                };
 
                obj.circle = L.circle([
@@ -952,10 +952,7 @@ function desenharGrid() {
 }
 
 function validarGrid() {
-       var a = 0.000008993216088271083 * 5;
-       var d = 0.000009956626094265175 * 5;
-
-      var raiz = Math.sqrt(pontuacaoMinima);
+     var raiz = Math.sqrt(pontuacaoMinima);
       var v = Math.floor(raiz / 2);
 
      var pontos = 0;
@@ -965,6 +962,7 @@ function validarGrid() {
                 lng: reguas[k].longitude
           };
 
+          /*
           L.circle([
 	pos.lat,
 	pos.lng
@@ -974,7 +972,7 @@ function validarGrid() {
         	radius: 0.5,
         	weight: 0,
         	stroke: false
-           }).addTo(map);
+           }).addTo(map);*/
 
            for (var m in grid) {
                    
@@ -987,6 +985,7 @@ function validarGrid() {
                           pontos += 1;
                    }
 
+                   /*
                    L.circle([
 		grid[m].lat,
 		grid[m].lng
@@ -996,7 +995,7 @@ function validarGrid() {
         		radius: 0.5,
         		weight: 0,
         		stroke: false
-	   }).addTo(map);
+	   }).addTo(map);*/
 
                   console.log("---");
                   console.log(log1);
