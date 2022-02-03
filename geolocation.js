@@ -21,7 +21,7 @@ var cor = "#084B8A";
 
 var faseAtual = 1;
 var powerUps = 0;
-var pontuacaoMinima = [1,4, 9, 16, 25, 36, 49, 64, 81, 100, 121];
+var pontuacaoMinima = [1,4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 196, 225, 256];
 
 var audio = new Audio();
 function play(file_path) {
@@ -397,6 +397,14 @@ function onMapClick(e) {
           // Power UP: Academia
           var deAcademia = itens.filter(x => x.id == 102)[0].lat != 0;
           soma = deAcademia ? soma + 2 : soma;
+
+          // Power UP: Moeda
+          var deCigarro = itens.filter(x => x.id == 115)[0].lat != 0;
+          soma = deCigarro ? soma + 1 : soma;
+
+          // Power UP: Dinheiro
+          var deDinheiro = itens.filter(x => x.id == 114)[0].lat != 0;
+          soma = deDinheiro ? soma + 2 : soma;
 
           // Power UP: ???
           // ----
