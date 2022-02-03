@@ -371,7 +371,8 @@ function onMapClick(e) {
      }
 
      // PONTUAÇÃO MÍNIMA
-     if (reguas.length >= pontuacaoMinima) {
+     var de99 = itens.filter(x => x.id == 111)[0].lat != 0;
+     if (reguas.length >= pontuacaoMinima && !de99) {
            if (!validarGrid()) {
                  faseAtual = 1;
                  pontuacaoMinima = 4;
