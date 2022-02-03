@@ -958,15 +958,14 @@ function validarGrid() {
       var raiz = Math.sqrt(pontuacaoMinima);
       var v = Math.floor(raiz / 2);
 
-       var pos = {
-              lat: reguas[reguas.length -1].latitude,
-              lng: reguas[reguas.length -1].longitude
-       };
-
-     var m = 0;
      var pontos = 0;
-     for (let k = -v; k <= v; k++) {
-             for (let j = -v; j <= v; j++) {
+     for (var k in reguas) {
+           for (var m in grid) {
+                   var pos = {
+                        lat: reguas[reguas.length -1].latitude,
+                        lng: reguas[reguas.length -1].longitude
+                   };
+
                    var lat = parseFloat(pos.lat) - (a * k);
                    var lng = parseFloat(pos.lng) - (d *  j);
                    
@@ -976,9 +975,8 @@ function validarGrid() {
                    if (grid[m].lat == lat && grid[m].lng == lng) {
                           pontos += 1;
                    }
-                   m += 1;
-             }
-     }
+           } 
+     } 
 
      console.log(pontos);
      return pontos == pontuacaoMinima;
