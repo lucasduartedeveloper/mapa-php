@@ -743,7 +743,7 @@ function desenharGrid() {
                }).addTo(map);
 
                grid.push(obj);
-               inicio = (k == w) && (j == 0) ? obj : inicio;
+               inicio = (k == w) && (j == -v) ? obj : inicio;
              }
     }
 
