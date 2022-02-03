@@ -64,6 +64,8 @@ function posicaoNoGrid(pos) {
 }
 
 function reload() {
+          console.log("reload: " + moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
+
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
           var inventario = "";
@@ -275,7 +277,6 @@ $(document).on('click', ':radio[name="item"]', function() {
     var expr = $(this).filter(':checked').attr('id');
     $(this).filter(':checked').checked = false;
     itemId = expr;
-    //console.log(itemId);
     say("Você selecionou o marcador " + itens[itemId].nome);
     $("#menu").click();
 });
@@ -321,9 +322,7 @@ function onMapClick(e) {
           var kforadofor = 0;
           for (var k in itens) {
                if (itens[k].lat == pos.lat && itens[k].lng == pos.lng) {
-               //console.log(pos);
-               //console.log(itens[k]);
-
+               
                kforadofor = k;
                itens[k].lat = 0;
                itens[k].lng = 0;
