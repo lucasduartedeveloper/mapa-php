@@ -136,6 +136,9 @@ function reload() {
              //lembrarAnotacoes();
         }
         reloadCount += 1;
+
+        // ---- Explosivo
+        desenharControle();
         });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
@@ -198,14 +201,8 @@ function reload() {
         $(".distancia").text(Math.floor(distancia * 100) + " cm");
 
         if (reguas.length > 0) {
-        	// ---- Explosivo
-        	desenharControle();
-        	// ---- Planta
-        	desenharPlanta();
         	// ---- Voldemort
         	desenharVoldemort();
-               // ---- Grid de completar
-               //desenharGrid();
         }
       });
 
