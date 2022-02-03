@@ -991,7 +991,7 @@ function validarGrid() {
 		grid[m].lat,
 		grid[m].lng
                		], {
-                              color: 'orange',
+                              color: 'yellow',
 		fillOpacity: 0.5,
         		radius: 0.5,
         		weight: 1,
