@@ -923,7 +923,7 @@ function desenharGrid() {
     for (let k = -v; k <= v; k++) {
              for (let j = -v; j <= v; j++) {
                var obj = {
-                      lat: (parseFloat(pos.lat) - (a * k)).toFixed(14),
+                      lat: (parseFloat(pos.lat) - (a * k)).toFixed(15),
                       lng: (parseFloat(pos.lng) - (d *  j)).toFixed(13)
                };
 
