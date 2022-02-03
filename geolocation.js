@@ -755,6 +755,6 @@ function validarGrid() {
      } 
 
      var erros = reguas.length - pontos;
-     //console.log(pontos);
+     console.log("erros: " + erros);
      return erros <= 3;
 }
