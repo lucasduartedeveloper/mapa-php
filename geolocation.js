@@ -973,5 +973,6 @@ function validarGrid() {
              }
      }
 
+     console.log(pontos);
      return pontos == pontuacaoMinima;
 }
