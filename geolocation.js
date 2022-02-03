@@ -774,7 +774,8 @@ function createLabel(text) {
      canvas.width = 40;
      canvas.height = 100;
 	
-     //*draw a box around the canvas
+     /*
+     //draw a box around the canvas
      context.beginPath(); // always start a new line with beginPath
      context.lineWidth = 3;
      context.moveTo( 0, 0 ); // start position
@@ -782,11 +783,12 @@ function createLabel(text) {
      context.lineTo( canvas.width - 1, canvas.height - 1 );
      context.lineTo( 0, canvas.height - 1 );
      context.lineTo( 0, 0 );
-     context.stroke(); // actually draw the line*/
+     context.stroke(); // actually draw the line
+    */
 
     context.save();
     context.translate( canvas.width / 2, canvas.height / 2 );
-    context.rotate( Math.PI / 4 );
+    context.rotate( Math.PI / 2 );
     context.font = "16px 'VT323'";
     context.fillStyle = "#000"; // green
     context.textAlign = "center";
