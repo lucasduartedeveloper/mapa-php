@@ -389,7 +389,7 @@ function onMapClick(e) {
      }
 
      // PONTUAÇÃO MÁXIMA
-     if (reguas.length == 15) {
+     if (reguas.length >= 15) {
      if (validarGrid()) {
            say("Você ganhou!"); 
      }
