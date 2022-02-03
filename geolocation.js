@@ -437,8 +437,8 @@ var foo = function() {
 
 var reloadCount = 0;
 $(document).ready(function() {
-    foo();
-    setInterval(foo, intervalo);
+    //foo();
+    //setInterval(foo, intervalo);
 });
 
 // LEMBRAR ANOTAÇÕES
@@ -648,7 +648,7 @@ function success(position) {
 
 function error(error) {
    $("#local-info").html("geolocation: <i class=\"bi bi-check-square\"></i>");
-   
+   reload();
   switch(error.code)  {
     case error.PERMISSION_DENIED:
       console.log("Usuário rejeitou a solicitação de Geolocalização.");
