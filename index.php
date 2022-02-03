@@ -123,11 +123,11 @@ catch (PDOException $e) {
 </div>
 
 <div id="box5" class="box3">
-    <p class="contador">CHAT</p>
+    <p class="contador">NOTAS</p>
     <div class="chat-history">
-         <p class="contador">Lucas: Oi</p>
-         <p class="contador">Lucas: 72 então</p>
-         <p class="contador">Lucas: 15</p>
+         <p class="contador"></p>
+         <p class="contador"></p>
+         <p class="contador"></p>
     </div>
 </div>
 
