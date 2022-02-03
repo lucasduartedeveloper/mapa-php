@@ -966,6 +966,11 @@ function validarGrid() {
                    var lat = parseFloat(pos.lat) - (a * k);
                    var lng = parseFloat(pos.lng) - (d *  j);
 
+                   console.log("lat: " + lat);
+                   console.log("lng: " + lng);
+                   console.log("lat: " + grid[m].lat);
+                   console.log("lng: " + grid[m].lng);
+
                    if (grid[m].lat == lat && grid[m].lng == lng) {
                           pontos += 1;
                    }
