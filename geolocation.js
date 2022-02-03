@@ -247,7 +247,7 @@ var markerIcon= L.icon({
 });
 
 var markerIconUnlocked= L.icon({
-       iconUrl: "/img/marker-unlocked.png",
+       iconUrl: "/img/marker-v3-unlocked.png",
        /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
        shadowSize:   [50, 25], // size of the shadow
