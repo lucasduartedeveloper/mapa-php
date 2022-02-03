@@ -136,17 +136,6 @@ function reload() {
              //lembrarAnotacoes();
         }
         reloadCount += 1;
-
-        if (reguas.length > 0) {
-        	// ---- Explosivo
-        	desenharControle();
-        	// ---- Planta
-        	desenharPlanta();
-        	// ---- Voldemort
-        	desenharVoldemort();
-               // ---- Grid de completar
-               //desenharGrid();
-        }
         });
 
          $.getJSON("/ajax/localizacao_gps.php", function(data) {
@@ -187,6 +176,9 @@ function reload() {
                }
         }
 
+        data[k].latitude = parseFloat(data[k].latitude);
+        data[k].longitude = parseFloat(data[k].longitude);
+
         reguas = data;
         if (reguas.length > 0) {
              onMapClick({ latlng: {
@@ -204,6 +196,17 @@ function reload() {
         firstpolyline.addTo(map);
 
         $(".distancia").text(Math.floor(distancia * 100) + " cm");
+
+        if (reguas.length > 0) {
+        	// ---- Explosivo
+        	desenharControle();
+        	// ---- Planta
+        	desenharPlanta();
+        	// ---- Voldemort
+        	desenharVoldemort();
+               // ---- Grid de completar
+               //desenharGrid();
+        }
       });
 
       $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
@@ -859,8 +862,8 @@ function desenharVoldemort() {
      var b2 = h2 * cos;
 
      var pos = posicaoNoGrid({
-        lat : parseFloat(reguas[0].latitude) + a2,
-        lng : parseFloat(reguas[0].longitude) + b2
+        lat : reguas[0].latitude + a2,
+        lng : reguas[0].longitude + b2
      });
     
      /*
@@ -923,8 +926,8 @@ function desenharGrid() {
     for (let k = -v; k <= v; k++) {
              for (let j = -v; j <= v; j++) {
                var obj = {
-                      lat: parseFloat(pos.lat) - (a * k),
-                      lng: parseFloat(pos.lng) - (d *  j)
+                      lat: pos.lat - (a * k),
+                      lng: pos.lng - (d *  j)
                };
 
                obj.circle = L.circle([
@@ -958,8 +961,8 @@ function validarGrid() {
      var pontos = 0;
      for (var k in reguas) {
           var pos = {
-                lat: parseFloat(reguas[k].latitude),
-                lng: parseFloat(reguas[k].longitude)
+                lat: reguas[k].latitude,
+                lng: reguas[k].longitude
           };
 
           /*
