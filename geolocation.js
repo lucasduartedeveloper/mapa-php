@@ -64,7 +64,7 @@ function posicaoNoGrid(pos) {
 }
 
 function reload() {
-          console.log("reload: " + moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
+          console.log("reload: " + moment(new Date()).format('YYYY-MM-DD HH:mm:ss'));
 
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
