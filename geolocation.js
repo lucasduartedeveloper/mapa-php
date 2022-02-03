@@ -317,6 +317,11 @@ function onMapClick(e) {
         .done(function(data) {
                say("Pronto");
                reload();
+               if (itens[id].id == 118) {
+                     pontuacaoMinima = 25;
+                     faseAtual = 4;
+                     desenharGrid();
+               }
         });
         }
      }
