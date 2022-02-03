@@ -743,17 +743,17 @@ function desenharGrid() {
                }).addTo(map);
 
                grid.push(obj);
-               inicio = (k == 0) && (j == 0) ? obj : inicio;
+               inicio = (k == -v) && (j == 0) ? obj : inicio;
              }
     }
 
-    console.log(v);
-    console.log(w);
+    //console.log(v);
+    //console.log(w);
 
     gridIcon = L.icon({
             iconUrl: createLabel("Fase 0"+faseAtual),
             iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [20 + (v*15), 50], // point of the icon which will correspond to marker's location
+            iconAnchor:   [40, 50], // point of the icon which will correspond to marker's location
      });
 
     gridMarker = L.marker([inicio.lat, inicio.lng],  {icon: gridIcon}).addTo(map);
