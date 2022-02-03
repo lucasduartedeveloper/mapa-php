@@ -389,7 +389,9 @@ function onMapClick(e) {
         $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
-        cor: cor });
+        cor: cor }).done(function(data) {
+             reload();
+        });
      }
 
      // PONTUAÇÃO MÍNIMA
@@ -630,15 +632,15 @@ function success(position) {
        dhPosAnterior = now;
    }
 
-   onMapClick({ latlng: pos });
+   //onMapClick({ latlng: pos });
 
    $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
-        cor: cor,
-        data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
+        cor: cor)
         })
         .done(function(data) {
+               reload();
                //type("Atualizando localização");
                //say("Atualizando localização");
                //play();
@@ -965,20 +967,8 @@ function validarGrid() {
                 lng: reguas[k].longitude
           };
 
-          /*
-          L.circle([
-	pos.lat,
-	pos.lng
-               	], {
-               fillColor: 'blue',
-	fillOpacity: 0.5,
-        	radius: 0.5,
-        	weight: 0,
-        	stroke: false
-           }).addTo(map);*/
-
-           for (var m in grid) {
-                   
+         for (var m in grid) {
+       
                    var log1 = "lat: " + pos.lat + " | lat: " + grid[m].lat;
                    var log2 = "lng: " + pos.lng + " | lng: " + grid[m].lng;
  
@@ -988,23 +978,7 @@ function validarGrid() {
                           pontos += 1;
                    }
 
-                   /*
-                   L.circle([
-		grid[m].lat,
-		grid[m].lng
-               		], {
-                              fillColor: 'yellow',
-		fillOpacity: 0.5,
-        		radius: 0.5,
-        		weight: 0,
-        		stroke: false
-	   }).addTo(map);*/
-
-                  /*
-                  console.log("---");
-                  console.log(log1);
-                  console.log(log2);*/
-           } 
+         }
      } 
 
      console.log(pontos);
