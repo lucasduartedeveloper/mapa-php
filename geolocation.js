@@ -131,12 +131,6 @@ function reload() {
          // INVENTÁRIO
          $("#inventario").html(inventario);
 
-        // LEMBRAR ANOTAÇÕES
-        if (reloadCount == 0) {
-             //lembrarAnotacoes();
-        }
-        reloadCount += 1;
-
         // ---- Explosivo
         desenharControle();
         });
@@ -475,17 +469,20 @@ $("#reset").click(function() {
       $.getJSON("/ajax/localizacao_gps.php?delete=true", function(data) {
           //say("");
       });
+
       for (var k in itens) {
            $.post("/ajax/localizacao_gps_item.php", {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
                  data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
+            }).done(function(data) {
+                 if (k == itens.length -1) {
+                      reload();
+                      play("/audio/game_over.mp3");
+                 }
             });
        }
-       reload();
-       play("/audio/game_over.mp3");
-       //$("#menu").click();
 });
 
 // SENSOR DE MOVIMENTO
@@ -518,60 +515,6 @@ if ("ondevicelight" in window && true == false) {
 
 function light(event) {
     lightValue = event.value;
-    //animar();
-    //console.log(event.value);
-
-    /*
-    var multiplicador = (lightValue / 1000);
-    var rgb = Math.floor(multiplicador * 255);
-    var rgba = "rgba("+rgb+","+rgb+","+rgb+",1)";
-    console.log(rgba);
-    $("#box4").css({ "background-color" : rgba});
-    */
-    /*
-    var porcento = lightValue / 10;
-    say(porcento + " porcento");
-    */
-}
-
-function animar() {
-    return false; // Função inútil
-    //console.log("lightValue: " + lightValue);
-    //console.log("motionValue: " + motionValue);
-
-    if(lightValue == 0 && motionValue == 0) {
-        //$("#front").attr("src", "/img/v1/blinking.gif");
-        var text = "Oi";
-        type(text);
-        //say(text);
-    }
-    else if (lightValue > 0 && motionValue == 0) {
-        //$("#front").attr("src", "/img/v1/blinking.gif");
-        var text = "Uma luz está acesa " + lightValue;
-        type(text);
-        //say(text);
-    }
-    else {
-       // $("#front").attr("src", "/img/v1/blinking.gif");
-       var text = " " + motionValue;
-       type(text);
-       //say(text);
-    }
-}
-
-var last_text = "";
-var running = 0;
-function type(text) {
-     return false; // Função inútil
-     if (running == 0 && text != last_text) {
-         $(".typing-wrapper").html("");
-         var html = "<div class=\"typing-demo\" style=\"width: " + (text.length+2) + "ch; animation: typing 2s steps(" + (text.length+2) +"), blink .5s step-end infinite alternate;\">" + text + "</div>";
-         $(".typing-wrapper").html(html);
-
-         running = 1;
-         last_text = text;
-         setTimeout(function() { running = 0; }, 5000);
-     }
 }
 
 var speaking = false;
@@ -610,10 +553,6 @@ function success(position) {
            position.coords.longitude));
        var tempo = now - dhPosAnterior;
        
-       //console.log(distancia / (tempo / 1000));
-       //console.log(distancia);
-       //console.log(tempo);
-
        var velocidade = Math.floor((distancia * 100) / (tempo / 1000));
        $(".velocidade").text(velocidade + " cm/s");
 
@@ -631,8 +570,7 @@ function success(position) {
        dhPosAnterior = now;
    }
 
-   //onMapClick({ latlng: pos });
-
+   // Salvar localização
    $.post("/ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
@@ -640,9 +578,6 @@ function success(position) {
         })
         .done(function(data) {
                reload();
-               //type("Atualizando localização");
-               //say("Atualizando localização");
-               //play();
         });
 }
 
@@ -671,24 +606,7 @@ const options = {
   timeout: 5000
 };
 
-const watchID = navigator.geolocation.watchPosition(success, error, options);
-
-// ÚLTIMA FUNÇÃO
-var myShakeEvent = new Shake({
-    threshold: 15, // optional shake strength threshold
-    timeout: 1000 // optional, determines the frequency of event generation
-});
-
-myShakeEvent.start();
-
-window.addEventListener('shake', shakeEventDidOccur, false);
-
-//function to call when shake occurs
-function shakeEventDidOccur () {
-
-    //put your own code here etc.
-    alert('shake!');
-}
+const watchID = navigator.geolocation.watchPosition(success, error, options); 
 
 // Controle do explosivo
 var bomb_wires = [];
@@ -699,52 +617,12 @@ function desenharControle()  {
       }
       bomb_wires=[];
 
-     var yellow = itens.filter(x => x.id == 96)[0];
      var red = itens.filter(x => x.id == 95)[0];
-     var green = itens.filter(x => x.id == 97)[0];
      var tnt = itens.filter(x => x.id == 98)[0];
 
-     if (yellow && yellow.lat != 0 && tnt.lat != 0) {
-         var pointList = [ 
-            new L.LatLng(yellow.lat, yellow.lng),
-            new L.LatLng(tnt.lat, tnt.lng)
-         ];
-
-         var wire = new L.Polyline(pointList, {
-            color: '#8A0829',
-            weight: 3,
-            opacity: 0.5,
-            smoothFactor: 1,
-            dashArray: '5',
-            dashOffset: '0'
-        });
-        wire.addTo(map);
-        bomb_wires.push(wire);
-     }
-
-     
      if (red.lat != 0 && tnt.lat != 0) {
          var pointList = [ 
             new L.LatLng(red.lat, red.lng),
-            new L.LatLng(tnt.lat, tnt.lng)
-         ];
-
-         var wire = new L.Polyline(pointList, {
-            color: '#8A0829',
-            weight: 3,
-            opacity: 0.5,
-            smoothFactor: 1,
-            dashArray: '5',
-            dashOffset: '0'
-        });
-        wire.addTo(map);
-        bomb_wires.push(wire);
-     }
-
-
-     if (green && green.lat != 0 && tnt.lat != 0) {
-         var pointList = [ 
-            new L.LatLng(green.lat, green.lng),
             new L.LatLng(tnt.lat, tnt.lng)
          ];
 
@@ -801,42 +679,6 @@ function explodirArea(pos) {
         play("/audio/explosion.mp3");
 }
 
-//Planta com tempo
-function desenharPlanta() {
-     var seed = itens.filter(x => x.id == 108)[0];
-     
-     var agora = new Date().getTime();
-     var plantado = moment(seed.data_hora, 'YYYY-MM-DD HH:mm:ss').toDate().getTime();
-
-     var tempo = agora - plantado;
-     //console.log(tempo);
-
-     //seed.marker.bindPopup(Math.floor(180 - (tempo / 1000)) + " s").openPopup();
-
-    var iconUrl = "/img/seed.png";
-     if (tempo > 60000) {
-           iconUrl = "/img/plant.png";
-     }
-     if (tempo > 120000) {
-           iconUrl = "/img/plant-v2.png";
-     }
-     if (tempo > 180000) {
-           iconUrl = "/img/tree.png";
-     }
-
-     var seedIcon= L.icon({
-       iconUrl: iconUrl,
-       /*shadowUrl: '/img/icon-shadow.png',*/
-       iconSize:     [35, 40], // size of the icon
-       shadowSize:   [50, 25], // size of the shadow
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       shadowAnchor: [25, 10],  // the same for the shadow
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-      });
-
-     seed.marker.setIcon(seedIcon);
-}
-
 // Voldemort
 function desenharVoldemort() {
      var x = 0.000008993216088271083;
@@ -866,21 +708,7 @@ function desenharVoldemort() {
         lat : reguas[0].latitude + a2,
         lng : reguas[0].longitude + b2
      });
-    
-     /*
-     console.log(voldemort);
-     console.log(reguas[0]);
-     console.log(pos);
-     console.log("h:" + h);
-     console.log("h2:" + h2);
-     console.log("sen:" + sen);
-     console.log("cos:" + cos);
-     console.log("a:" + a);
-     console.log("b:" + b);
-     console.log("a2:" + a2);
-     console.log("luz:" + luz);
-     */
-
+     
      markerLight.setRadius((h/((x+y)/2)) * luz);
      
      $.post("/ajax/localizacao_gps_item.php", {
