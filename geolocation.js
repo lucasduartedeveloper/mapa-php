@@ -399,7 +399,7 @@ function onMapClick(e) {
            say("Você perdeu!"); 
      }
      }
-     else {
+     else if (reguas.length >= 1)  {
            desenharGrid();
      }
 }
