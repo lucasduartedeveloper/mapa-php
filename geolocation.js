@@ -746,9 +746,9 @@ function desenharGrid() {
     }
     
     gridIcon = L.icon({
-            iconUrl: createLabel("Fase 0"+faseAtual),
+            iconUrl: createLabel("Fase "+faseAtual),
             iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [120, 50], // point of the icon which will correspond to marker's location
+            iconAnchor:   [20+(v*20), 50], // point of the icon which will correspond to marker's location
      });
 
     gridMarker = L.marker([pos.lat, pos.lng],  {icon: gridIcon}).addTo(map);
@@ -794,7 +794,7 @@ function createLabel(text) {
     */
 
     context.save();
-    context.translate( canvas.width / 2, canvas.height / 2 );
+    //context.translate( canvas.width / 2, canvas.height / 2 );
     context.rotate( Math.PI / 2 );
     context.font = "20px 'VT323'";
     context.fillStyle = "#000"; // green
