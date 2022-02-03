@@ -602,6 +602,8 @@ function success(position) {
         lat : position.coords.latitude,
         lng : position.coords.longitude
     });
+
+    console.log(pos);
     
    var now = new Date().getTime();
    if (posAnterior) {
