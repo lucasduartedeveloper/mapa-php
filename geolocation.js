@@ -997,9 +997,10 @@ function validarGrid() {
         		stroke: false
 	   }).addTo(map);*/
 
+                  /*
                   console.log("---");
                   console.log(log1);
-                  console.log(log2);
+                  console.log(log2);*/
            } 
      } 
 
