@@ -923,8 +923,8 @@ function desenharGrid() {
     for (let k = -v; k <= v; k++) {
              for (let j = -v; j <= v; j++) {
                var obj = {
-                      lat: (parseFloat(pos.lat) - (a * k)).toFixed(14),
-                      lng: (parseFloat(pos.lng) - (d *  j)).toFixed(13)
+                      lat: parseFloat(pos.lat) - (a * k),
+                      lng: parseFloat(pos.lng) - (d *  j)
                };
 
                obj.circle = L.circle([
@@ -958,8 +958,8 @@ function validarGrid() {
      var pontos = 0;
      for (var k in reguas) {
           var pos = {
-                lat: reguas[k].latitude,
-                lng: reguas[k].longitude
+                lat: parseFloat(reguas[k].latitude),
+                lng: parseFloat(reguas[k].longitude)
           };
 
           /*
