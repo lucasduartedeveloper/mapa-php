@@ -751,7 +751,7 @@ function desenharGrid() {
             iconAnchor:   [20 + (5*w), 50], // point of the icon which will correspond to marker's location
      });
 
-    gridMarker = L.marker([pos.lat, pos.lng],  {icon: icon}).addTo(map);
+    gridMarker = L.marker([pos.lat, pos.lng],  {icon: gridIcon}).addTo(map);
 }
 
 function validarGrid() {
