@@ -115,8 +115,8 @@ catch (PDOException $e) {
 <div id="box5" class="box3">
     <p class="contador">REGRAS</p>
     <div class="chat-history">
-         <p class="contador"></p>
-         <p class="contador"></p>
+         <p class="contador">1. Completar todos os quadrados para passar de fase</p>
+         <p class="contador">2. ???</p>
          <p class="contador"></p>
     </div>
 </div>
