@@ -75,7 +75,7 @@ catch (PDOException $e) {
 </div>
 
 <div id="box2" class="box2">
-    <p id="nome" class="local">PONTOS GPS</p>
+    <p id="nome" class="local">PONTOS</p>
     <div id="teste1" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
     <div id="teste2" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -84,17 +84,7 @@ catch (PDOException $e) {
     </div>
     <div id="teste4" class="btn-group btn-group-toggle" data-toggle="buttons">
     </div>
-    <div>
-    <input id="camera" style="display: none;" type="file" accept="*/image" onchange="saveImage()" capture="camera">
-    <button hidden id="add" class="btn btn-outline-dark btn-sm">
-        <i class="bi bi-camera-fill"></i>
-    </button>
-    </div>
     <p id="horas"></p>
-    <button hidden id="target" type="button" class="btn btn-outline-dark btn-sm">
-    <i class="bi bi-geo-alt"></i>
-    Mudar
-    </button>
 </div>
 
 <div id="box3" class="box3">

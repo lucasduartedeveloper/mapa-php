@@ -18,7 +18,7 @@ var  reguas = [];
 var  itens = [];
 var grid = [];
 var cor = "#084B8A";
-var pontuacaoMinima = 9;
+var pontuacaoMinima = 4;
 
 var audio = new Audio();
 function play(file_path) {
@@ -701,8 +701,8 @@ function desenharGrid() {
      }
      grid = [];
 
-    for (let k = -v; k <= v; k++) {
-             for (let j = -v; j <= v; j++) {
+    for (let k = -v; k <= w; k++) {
+             for (let j = -v; j <= w; j++) {
                var obj = posicaoNoGrid({
                       lat: pos.lat - (a * k),
                       lng: pos.lng - (d *  j)
