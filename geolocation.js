@@ -388,9 +388,8 @@ function onMapClick(e) {
         cor: cor });
      }
 
-     console.log(grid.length);
      // PONTUAÇÃO MÁXIMA
-     if (grid.length == 15) {
+     if (reguas.length == 15) {
      if (validarGrid()) {
            say("Você ganhou!"); 
      }
