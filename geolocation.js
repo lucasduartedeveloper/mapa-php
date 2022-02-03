@@ -925,10 +925,10 @@ function desenharGrid() {
 
     for (let k = -v; k <= v; k++) {
              for (let j = -v; j <= v; j++) {
-               var obj = {
+               var obj = posicaoNoGrid({
                       lat: pos.lat - (a * k),
                       lng: pos.lng - (d *  j)
-               };
+               });
 
                obj.circle = L.circle([
 		obj.lat,
