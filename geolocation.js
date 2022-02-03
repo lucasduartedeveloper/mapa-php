@@ -18,6 +18,8 @@ var  reguas = [];
 var  itens = [];
 var grid = [];
 var cor = "#084B8A";
+
+var faseAtual = 1;
 var pontuacaoMinima = 4;
 
 var audio = new Audio();
@@ -371,12 +373,16 @@ function onMapClick(e) {
      // PONTUAÇÃO MÍNIMA
      if (reguas.length >= pontuacaoMinima) {
            if (!validarGrid()) {
+                 faseAtual = 1;
+                 pontuacaoMinima = 4;
                  $("#reset").click();
                  say("Você perdeu!"); 
            }
            else {
                 var raiz = Math.sqrt(pontuacaoMinima);
+                faseAtual += 1;
                 pontuacaoMinima = Math.pow(raiz+1, 2);
+                say("Você passou para a fase " + faseAtual);
            }
      }
      else if (reguas.length >= 1)  {
