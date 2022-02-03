@@ -960,12 +960,24 @@ function validarGrid() {
 
      var pontos = 0;
      for (var k in reguas) {
+          var pos = {
+                lat: reguas[k].latitude,
+                lng: reguas[k].longitude
+          };
+
+          L.circle([
+	pos.lat,
+	pos.lng
+               	], {
+               color: 'blue',
+	fillOpacity: 0.5,
+        	radius: 0.5,
+        	weight: 1,
+        	stroke: false
+           }).addTo(map);
+
            for (var m in grid) {
-                   var pos = {
-                        lat: reguas[k].latitude,
-                        lng: reguas[k].longitude
-                   };
-                  
+                   
                    var log1 = "lat: " + pos.lat + " | lat: " + grid[m].lat;
                    var log2 = "lng: " + pos.lng + " | lng: " + grid[m].lng;
  
