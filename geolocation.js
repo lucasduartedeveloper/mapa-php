@@ -144,10 +144,7 @@ function reload() {
         	// ---- Voldemort
         	desenharVoldemort();
                // ---- Grid de completar
-               desenharGrid({
-                   lat: reguas[reguas.length -1].latitude,
-                   lng: reguas[reguas.length -1].longitude
-               });
+               desenharGrid();
         }
         });
 
@@ -336,7 +333,7 @@ function onMapClick(e) {
                say("Pronto");
                reload();
                //play();
-               console.log(data);
+               //console.log(data);
         });
         }
      }
@@ -392,12 +389,13 @@ function onMapClick(e) {
      }
 
      // PONTUAÇÃO MÁXIMA
-    /*
-     if (reguas.length >= 15) {
-          $("#reset").click();
-          say("Você perdeu!"); 
-          say("Você ganhou!"); 
-     }*/
+     if (validarGrid()) {
+           say("Você ganhou!"); 
+     }
+     else {
+           $("#reset").click();
+           say("Você perdeu!"); 
+     }
 }
 
 map.on('click', onMapClick);
@@ -896,10 +894,15 @@ function desenharVoldemort() {
 }
 
 // Grid
-function desenharGrid(pos) {
+function desenharGrid() {
      var a = 0.000008993216088271083 * 5;
      var d = 0.000009956626094265175 * 5;
      var corGrid = "#084B8A";
+
+     var pos = {
+            lat: reguas[reguas.length -1].latitude,
+            lng: reguas[reguas.length -1].longitude
+     };
 
      for (var k in grid) {
            map.removeControl(grid[k].circle);
@@ -933,4 +936,30 @@ function desenharGrid(pos) {
                grid.push(obj);
              }
     }
+}
+
+function validarGrid() {
+       var a = 0.000008993216088271083 * 5;
+       var d = 0.000009956626094265175 * 5;
+
+       var pos = {
+              lat: reguas[reguas.length -1].latitude,
+              lng: reguas[reguas.length -1].longitude
+       };
+
+     var m = 0;
+     var pontos = 0;
+     for (let k = -2; k <= 2; k++) {
+             for (let j = -2; j <= 2; j++) {
+                   var lat = parseFloat(pos.lat) - (a * k);
+                   var lng = parseFloat(pos.lng) - (d *  j);
+
+                   if (grid[m].lat == lat && grid[m].lng == lng) {
+                          pontos += 1;
+                   }
+                   m += 1;
+             }
+     }
+
+     return pontos == 15;
 }
