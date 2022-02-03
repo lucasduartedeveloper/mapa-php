@@ -151,6 +151,9 @@ function reload() {
          var distancia = 0;
          var p = 0;
          for (var k in data) {
+               data[k].latitude = parseFloat(data[k].latitude);
+               data[k].longitude = parseFloat(data[k].longitude);
+
 	data[k].circle = L.circle([data[k].latitude, data[k].longitude], {
                               color: data[k].cor,
 		fillOpacity: 0,
@@ -175,9 +178,6 @@ function reload() {
                p = p + 1;
                }
         }
-
-        data[k].latitude = parseFloat(data[k].latitude);
-        data[k].longitude = parseFloat(data[k].longitude);
 
         reguas = data;
         if (reguas.length > 0) {
