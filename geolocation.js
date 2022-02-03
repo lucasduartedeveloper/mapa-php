@@ -968,13 +968,19 @@ function validarGrid() {
 
                    var lat = parseFloat(pos.lat);
                    var lng = parseFloat(pos.lng);
-                   
-                   console.log("lat: " + lat + " | lat: " + grid[m].lat);
-                   console.log("lng: " + lng + " | lng: " + grid[m].lng);
+                  
+                   var log1 = "lat: " + lat + " | lat: " + grid[m].lat;
+                   var log2 = "lng: " + lng + " | lng: " + grid[m].lng;
  
                    if (grid[m].lat == lat && grid[m].lng == lng) {
+                          log1 = " - " + log1;
+                          log2 = " - " + log2;
                           pontos += 1;
                    }
+
+                  console.log("---");
+                  console.log(log1);
+                  console.log(log2);
            } 
      } 
 
