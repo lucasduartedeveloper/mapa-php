@@ -736,7 +736,7 @@ function desenharGrid() {
                obj.rectangle = L.rectangle(obj.circle.getBounds(), {
                		color: corGrid, 
                		weight: 3,
-               		opacity: (k+j) == 0 ? 0.7 : 0.3 ,
+               		opacity: (k == 0) && (j == 0) ? 0.7 : 0.3 ,
                		fillOpacity: 0,
                		dashArray: "5"
                }).addTo(map);
