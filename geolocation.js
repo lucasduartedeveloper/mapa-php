@@ -376,7 +376,7 @@ function onMapClick(e) {
            }
            else {
                 var raiz = Math.sqrt(pontuacaoMinima);
-                pontuacaoMinima = Math.pow(raiz, 2);
+                pontuacaoMinima = Math.pow(raiz+1, 2);
            }
      }
      else if (reguas.length >= 1)  {
