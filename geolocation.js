@@ -389,12 +389,14 @@ function onMapClick(e) {
      }
 
      // PONTUAÇÃO MÁXIMA
+     if (grid.length == 15) {
      if (validarGrid()) {
            say("Você ganhou!"); 
      }
      else {
            $("#reset").click();
            say("Você perdeu!"); 
+     }
      }
 }
 
