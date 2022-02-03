@@ -683,11 +683,14 @@ function desenharVoldemort() {
      }
 }
 
+// Grid
 function par(num) {
      return Math.ceil((pontuacaoMinima + 1) % 2);
 }
 
-// Grid
+var gridIcon = false;
+var gridMarker = false;
+
 function desenharGrid() {
      var a = 0.000008993216088271083 * 5;
      var d = 0.000009956626094265175 * 5;
@@ -702,19 +705,15 @@ function desenharGrid() {
             lng: reguas[reguas.length -1].longitude
      };
 
+      if (grid.length > 0) {
+            map.removeControl(gridMarker);
+      }
+
      for (var k in grid) {
            map.removeControl(grid[k].circle);
            map.removeControl(grid[k].rectangle);
      }
      grid = [];
-
-     var icon = L.icon({
-            iconUrl: createLabel("Fase 0"+faseAtual),
-            iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
-     });
-
-    var marker = L.marker([pos.lat, pos.lng],  {icon: icon}).addTo(map);
 
     for (let k = -v; k <= w; k++) {
              for (let j = -v; j <= w; j++) {
@@ -745,6 +744,14 @@ function desenharGrid() {
                grid.push(obj);
              }
     }
+    
+    gridIcon = L.icon({
+            iconUrl: createLabel("Fase 0"+faseAtual),
+            iconSize:     [40, 100], // size of the icon
+            iconAnchor:   [20 + (5*w), 50], // point of the icon which will correspond to marker's location
+     });
+
+    gridMarker = L.marker([pos.lat, pos.lng],  {icon: icon}).addTo(map);
 }
 
 function validarGrid() {
@@ -789,7 +796,7 @@ function createLabel(text) {
     context.save();
     context.translate( canvas.width / 2, canvas.height / 2 );
     context.rotate( Math.PI / 2 );
-    context.font = "16px 'VT323'";
+    context.font = "20px 'VT323'";
     context.fillStyle = "#000"; // green
     context.textAlign = "center";
     context.fillText(text, 0, 0 );
