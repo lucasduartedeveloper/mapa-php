@@ -20,7 +20,8 @@ var grid = [];
 var cor = "#084B8A";
 
 var faseAtual = 1;
-var pontuacaoMinima = 4;
+var powerUps = 0;
+var pontuacaoMinima = [1,4, 9, 16, 25, 36, 49, 64, 81, 100, 121];
 
 var audio = new Audio();
 function play(file_path) {
@@ -317,11 +318,6 @@ function onMapClick(e) {
         .done(function(data) {
                say("Pronto");
                reload();
-               if (itens[id].id == 118) {
-                     pontuacaoMinima = 25;
-                     faseAtual = 4;
-                     desenharGrid();
-               }
         });
         }
      }
@@ -377,22 +373,22 @@ function onMapClick(e) {
 
      // PONTUAÇÃO MÍNIMA
      var de99 = itens.filter(x => x.id == 111)[0].lat != 0;
-     if (reguas.length >= pontuacaoMinima && !de99) {
+     if (reguas.length >= pontuacaoMinima[faseAtual + powerUps] && !de99) {
            if (!validarGrid()) {
                  faseAtual = 1;
-                 pontuacaoMinima = 4;
                  $("#reset").click();
                  say("Você perdeu!"); 
            }
-           else {
-                var raiz = Math.sqrt(pontuacaoMinima);
+           else {;
                 faseAtual += 1;
-                pontuacaoMinima = Math.pow(raiz+1, 2);
                 say("Você passou para a fase " + faseAtual);
            }
      }
      else if (reguas.length >= 1)  {
-           desenharGrid();
+          // Power UP: Skol
+          var deSkol = itens.filter(x => x.id == 118)[0].lat != 0;
+          powerUps = deSkol ? powerUps + 2 : powerUps;
+          desenharGrid();
      }
 }
 
@@ -691,7 +687,7 @@ function desenharVoldemort() {
 
 // Grid
 function par(num) {
-     return Math.ceil((pontuacaoMinima + 1) % 2);
+     return Math.ceil((num + 1) % 2);
 }
 
 var gridIcon = false;
@@ -702,9 +698,9 @@ function desenharGrid() {
      var d = 0.000009956626094265175 * 5;
      var corGrid = "#000000";
 
-      var raiz = Math.sqrt(pontuacaoMinima);
+      var raiz = Math.sqrt(pontuacaoMinima[faseAtual + powerUps]);
       var v = Math.floor(raiz / 2);
-      var w = v - par(pontuacaoMinima);
+      var w = v - par(pontuacaoMinima[faseAtual + powerUps]);
 
      var pos = {
             lat: reguas[reguas.length -1].latitude,
@@ -757,7 +753,7 @@ function desenharGrid() {
     //console.log(w);
 
     gridIcon = L.icon({
-            iconUrl: createLabel("Fase " + faseAtual.toString().padStart(2, "0")),
+            iconUrl: createLabel("Fase " + (faseAtual + powerUps).toString().padStart(2, "0")),
             iconSize:     [40, 100], // size of the icon
             iconAnchor:   [40, 50], // point of the icon which will correspond to marker's location
      });
