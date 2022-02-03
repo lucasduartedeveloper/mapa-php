@@ -381,13 +381,27 @@ function onMapClick(e) {
            }
            else {;
                 faseAtual += 1;
-                say("Você passou para a fase " + faseAtual);
+                say("Você passou para a fase " + faseAtual + powerUps);
            }
      }
      else if (reguas.length >= 1)  {
+          // Power UP: Chave
+          var deChave = itens.filter(x => x.id == 113)[0].lat != 0;
+          var soma = 0;
+          soma = deChave ? soma + 2 : soma;
+
           // Power UP: Skol
           var deSkol = itens.filter(x => x.id == 118)[0].lat != 0;
-          powerUps = deSkol ? powerUps + 2 : powerUps;
+          soma = deSkol ? soma + 2 : soma;
+
+          // Power UP: Academia
+          var deAcademia = itens.filter(x => x.id == 102)[0].lat != 0;
+          soma = deAcademia ? soma + 2 : soma;
+
+          // Power UP: ???
+          // ----
+
+          powerUps = soma;
           desenharGrid();
      }
 }
