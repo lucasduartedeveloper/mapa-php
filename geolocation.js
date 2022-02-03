@@ -714,7 +714,7 @@ function desenharGrid() {
             iconAnchor:   [20, 100], // point of the icon which will correspond to marker's location
             });
 
-    var marker = L.marker([pos.lat, pos.lng],  {icon: markerIcon}).addTo(map);
+    var marker = L.marker([pos.lat, pos.lng],  {icon: icon}).addTo(map);
 
     for (let k = -v; k <= w; k++) {
              for (let j = -v; j <= w; j++) {
