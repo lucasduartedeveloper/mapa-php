@@ -754,7 +754,7 @@ function validarGrid() {
          }
      } 
 
-     var erros = reguas.length - pontuacaoMinima;
+     var erros = reguas.length - pontos;
      //console.log(pontos);
      return erros <= 3;
 }
