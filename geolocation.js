@@ -748,7 +748,7 @@ function desenharGrid() {
     gridIcon = L.icon({
             iconUrl: createLabel("Fase 0"+faseAtual),
             iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [20+(v*100), 50], // point of the icon which will correspond to marker's location
+            iconAnchor:   [20+(v*40), 50], // point of the icon which will correspond to marker's location
      });
 
     gridMarker = L.marker([pos.lat, pos.lng],  {icon: gridIcon}).addTo(map);
