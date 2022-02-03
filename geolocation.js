@@ -715,6 +715,7 @@ function desenharGrid() {
      }
      grid = [];
 
+    var inicio = {};
     for (let k = -v; k <= w; k++) {
              for (let j = -v; j <= w; j++) {
                var obj = posicaoNoGrid({
@@ -742,16 +743,17 @@ function desenharGrid() {
                }).addTo(map);
 
                grid.push(obj);
+               inicio = (k == 0) && (j == 0) ? obj : inicio;
              }
     }
-    
+
     gridIcon = L.icon({
             iconUrl: createLabel("Fase 0"+faseAtual),
             iconSize:     [40, 100], // size of the icon
             iconAnchor:   [20 + (v*40), 50], // point of the icon which will correspond to marker's location
      });
 
-    gridMarker = L.marker([grid[0].lat, grid[0].lng],  {icon: gridIcon}).addTo(map);
+    gridMarker = L.marker([inicio.lat, inicio.lng],  {icon: gridIcon}).addTo(map);
 }
 
 function validarGrid() {
