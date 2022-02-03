@@ -24,7 +24,7 @@ var x = setInterval(function() {
   seconds = seconds.toString().padStart(2, "0");
 
   // Display the result
-  document.getElementById("horas").innerHTML = seconds;
+  document.getElementById("horas").innerHTML = hours+":"+minutes+":"+seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
