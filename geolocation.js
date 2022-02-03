@@ -66,7 +66,7 @@ function posicaoNoGrid(pos) {
 }
 
 function reload() {
-          console.log("reload: " + moment(new Date()).format('YYYY-MM-DD HH:mm:ss'));
+          //console.log("reload: " + moment(new Date()).format('YYYY-MM-DD HH:mm:ss'));
 
          $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
 
@@ -747,10 +747,13 @@ function desenharGrid() {
              }
     }
 
+    console.log(v);
+    console.log(w);
+
     gridIcon = L.icon({
             iconUrl: createLabel("Fase 0"+faseAtual),
             iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [20 + (v*20), 50], // point of the icon which will correspond to marker's location
+            iconAnchor:   [20 + (v*15), 50], // point of the icon which will correspond to marker's location
      });
 
     gridMarker = L.marker([inicio.lat, inicio.lng],  {icon: gridIcon}).addTo(map);
@@ -772,7 +775,7 @@ function validarGrid() {
      } 
 
      var erros = reguas.length - pontos;
-     console.log("erros: " + erros);
+     console.log("Erros: " + erros);
      return erros <= 3;
 }
 
