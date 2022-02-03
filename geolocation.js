@@ -988,10 +988,10 @@ function validarGrid() {
                    }
 
                    L.circle([
-		pos.lat,
-		pos.lng
+		grid[m].lat,
+		grid[m].lng
                		], {
-                              color: 'red',
+                              color: 'orange',
 		fillOpacity: 0.5,
         		radius: 0.5,
         		weight: 1,
