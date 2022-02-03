@@ -179,6 +179,12 @@ function reload() {
         }
 
         reguas = data;
+        if (reguas.length > 0) {
+               onMapClick({
+                      lat: reguas[0].latitude,
+                      lng: reguas[0].longitude
+               });
+        }
 
         firstpolyline = new L.Polyline(pointList, {
             color: cor,
@@ -358,7 +364,7 @@ function onMapClick(e) {
         lng: pos.lng,
         cor: cor })
        .done(function(data) {
-             reload();
+             //reload();
         });
      }
 
@@ -439,11 +445,6 @@ function motion(event){
     + event.accelerationIncludingGravity.z
   );
 }
-
-// SENSOR DE PROXIMIDADE
-window.addEventListener('userproximity', function(event) {
-  console.log(event);
-});
 
 // SENSOR DE LUZ
 var lightValue = 1000;
