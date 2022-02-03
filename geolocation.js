@@ -975,6 +975,17 @@ function validarGrid() {
                           pontos += 1;
                    }
 
+                   obj.circle = L.circle([
+		pos.lat,
+		pos.lng
+               		], {
+                              color: red,
+		fillOpacity: 0.5,
+        		radius: 0.5,
+        		weight: 1,
+        		stroke: false
+	   }).addTo(map);
+
                   console.log("---");
                   console.log(log1);
                   console.log(log2);
