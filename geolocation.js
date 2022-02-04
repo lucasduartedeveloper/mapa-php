@@ -804,24 +804,13 @@ function validarGrid() {
      return erros <= 3;
 }
 
+// NOME DA FASE
 function createLabel(text) {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
 
      canvas.width = 40;
      canvas.height = 100;
-	
-     /*
-     //draw a box around the canvas
-     context.beginPath(); // always start a new line with beginPath
-     context.lineWidth = 3;
-     context.moveTo( 0, 0 ); // start position
-     context.lineTo( canvas.width - 1, 0 );
-     context.lineTo( canvas.width - 1, canvas.height - 1 );
-     context.lineTo( 0, canvas.height - 1 );
-     context.lineTo( 0, 0 );
-     context.stroke(); // actually draw the line
-    */
 
     context.save();
     context.translate( canvas.width / 2, canvas.height / 2 );
@@ -831,6 +820,27 @@ function createLabel(text) {
     context.textAlign = "center";
     context.fillText(text, 0, 0 );
     context.restore();
+
+    return canvas.toDataURL();
+}
+
+// MEDIDOR DE VOLUME
+function createVolume() {
+     var canvas = document.createElement("canvas");
+     var context = canvas.getContext( '2d' );
+
+     canvas.width = 40;
+     canvas.height = 100;
+	
+     //draw a box around the canvas
+     context.beginPath(); // always start a new line with beginPath
+     context.lineWidth = 3;
+     context.moveTo( 0, 0 ); // start position
+     context.lineTo( canvas.width - 1, 0 );
+     context.lineTo( canvas.width - 1, canvas.height - 1 );
+     context.lineTo( 0, canvas.height - 1 );
+     context.lineTo( 0, 0 );
+     context.stroke(); // actually draw the line
 
     return canvas.toDataURL();
 }
@@ -867,7 +877,11 @@ if (navigator.getUserMedia) {
           }
 
           var average = values / length;
-          console.log("Volume: " + average);
+          //console.log("Volume: " + average);
+
+          if (average > 50) {
+                say("Que barulho foi esse?");
+          }
 
         } // end fn stream
     },
