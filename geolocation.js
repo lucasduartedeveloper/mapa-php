@@ -406,8 +406,9 @@ function onMapClick(e) {
           var deDinheiro = itens.filter(x => x.id == 114)[0].lat != 0;
           soma = deDinheiro ? soma + 2 : soma;
 
-          // Power UP: ???
-          // ----
+          // Power UP: Microfone
+          var deMicrofone = itens.filter(x => x.id == 120)[0].lat != 0;
+          soma = deMicrofone ? soma + 2 : soma;
 
           powerUps = soma;
           desenharGrid();
@@ -834,11 +835,8 @@ function createLabel(text) {
     return canvas.toDataURL();
 }
 
-/*
 var audioChunks;
-startRecord.onclick = e => {
-  startRecord.disabled = true;
-  stopRecord.disabled=false;
+function  recordAudio() {
   // This will prompt for permission if not allowed earlier
   navigator.mediaDevices.getUserMedia({audio:true})
     .then(stream => {
@@ -848,98 +846,19 @@ startRecord.onclick = e => {
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
           let blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
-          recordedAudio.src = URL.createObjectURL(blob);
-          recordedAudio.controls=true;
-          recordedAudio.autoplay=true;
-          audioDownload.href = recordedAudio.src;
-          audioDownload.download = 'mp3';
-          audioDownload.innerHTML = 'download';
+          //recordedAudio.src = URL.createObjectURL(blob);
+          //recordedAudio.controls=true;
+          //recordedAudio.autoplay=true;
+          //audioDownload.href = recordedAudio.src;
+          //audioDownload.download = 'mp3';
+          //audioDownload.innerHTML = 'download';
        }
       }
     rec.start();  
     })
     .catch(e=>console.log(e));
 }
-stopRecord.onclick = e => {
-  startRecord.disabled = false;
-  stopRecord.disabled=true;
+
+function stopRecording() {
   rec.stop();
-}*/
-
-/**
- * Create global accessible variables that will be modified later
- */
-var audioContext = null;
-var meter = null;
-var rafID = null;
-var mediaStreamSource = null;
-
-// Retrieve AudioContext with all the prefixes of the browsers
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-
-// Get an audio context
-audioContext = new AudioContext();
-
-/**
- * Callback triggered if the microphone permission is denied
- */
-function onMicrophoneDenied() {
-    alert('Stream generation failed.');
-}
-
-/**
- * Callback triggered if the access to the microphone is granted
- */
-function onMicrophoneGranted(stream) {
-    // Create an AudioNode from the stream.
-    mediaStreamSource = audioContext.createMediaStreamSource(stream);
-    // Create a new volume meter and connect it.
-    meter = createAudioMeter(audioContext);
-    mediaStreamSource.connect(meter);
-
-    // Trigger callback that shows the level of the "Volume Meter"
-    onLevelChange();
-}
-
-/**
- * This function is executed repeatedly
- */
-function onLevelChange(time) {
-    // check if we're currently clipping
-
-    if (meter.checkClipping()) {
-        console.warn(meter.volume);
-    } else {
-        console.log(meter.volume);
-    }
-
-    // set up the next callback
-    rafID = window.requestAnimationFrame(onLevelChange);
-}
-
-
-// Try to get access to the microphone
-try {
-
-    // Retrieve getUserMedia API with all the prefixes of the browsers
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
-    // Ask for an audio input
-    navigator.getUserMedia(
-        {
-            "audio": {
-                "mandatory": {
-                    "googEchoCancellation": "false",
-                    "googAutoGainControl": "false",
-                    "googNoiseSuppression": "false",
-                    "googHighpassFilter": "false"
-                },
-                "optional": []
-            },
-        },
-        onMicrophoneGranted,
-        onMicrophoneDenied
-    );
-} catch (e) {
-    alert('getUserMedia threw exception :' + e);
 }
