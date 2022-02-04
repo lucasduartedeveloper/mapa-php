@@ -879,7 +879,7 @@ if (navigator.getUserMedia) {
           var average = values / length;
           //console.log("Volume: " + average);
 
-          if (average > 50) {
+          if (average > 999) {
                 var m = Math.floor((Math.random() * grid.length));
                 var d = Math.floor((Math.random() * itens.length));
                 itemId = itens[d].m;
