@@ -843,9 +843,12 @@ function  recordAudio() {
       audioChunks = []; 
       rec = new MediaRecorder(stream);
       rec.ondataavailable = e => {
+        console.log("recording");
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
-          let blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
+          var blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
+          var audio = new Audio(URL.createObjectURL(blob));
+          audio.play();
           //recordedAudio.src = URL.createObjectURL(blob);
           //recordedAudio.controls=true;
           //recordedAudio.autoplay=true;
