@@ -882,7 +882,7 @@ if (navigator.getUserMedia) {
           if (average > 50) {
                 var m = Math.floor((Math.random() * grid.length));
                 var d = Math.floor((Math.random() * itens.length));
-                itemId = itens[k].m;
+                itemId = itens[d].m;
 
                 //console.log(m);
                 onMapClick({ latlng: {
