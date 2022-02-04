@@ -381,7 +381,7 @@ function onMapClick(e) {
            }
            else {;
                 faseAtual += 1;
-                say("Você passou para a fase " + faseAtual + powerUps);
+                say("Você passou para a fase " + (faseAtual + powerUps));
            }
      }
      else if (reguas.length >= 1)  {
@@ -399,8 +399,8 @@ function onMapClick(e) {
           soma = deAcademia ? soma + 2 : soma;
 
           // Power UP: Moeda
-          var deCigarro = itens.filter(x => x.id == 115)[0].lat != 0;
-          soma = deCigarro ? soma + 1 : soma;
+          var deMoeda = itens.filter(x => x.id == 115)[0].lat != 0;
+          soma = deMoeda ? soma + 1 : soma;
 
           // Power UP: Dinheiro
           var deDinheiro = itens.filter(x => x.id == 114)[0].lat != 0;
