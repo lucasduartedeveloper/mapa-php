@@ -376,6 +376,7 @@ function onMapClick(e) {
      if (reguas.length >= pontuacaoMinima[faseAtual + powerUps] && !de99) {
            if (!validarGrid()) {
                  faseAtual = 1;
+                 desenharGrid();
                  $("#reset").click();
                  say("Você perdeu!"); 
            }
