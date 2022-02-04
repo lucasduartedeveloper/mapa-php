@@ -880,7 +880,12 @@ if (navigator.getUserMedia) {
           //console.log("Volume: " + average);
 
           if (average > 50) {
-                say("Que barulho foi esse?");
+                var m = Math.floor((Math.random() * grid.length) - 1);
+                onMapClick({ latlng: {
+                            lat: grid[m].lat,
+                            lng: grid[m].lng
+                      }
+                });
           }
 
         } // end fn stream
