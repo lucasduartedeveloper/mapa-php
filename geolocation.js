@@ -835,33 +835,45 @@ function createLabel(text) {
     return canvas.toDataURL();
 }
 
-var audioChunks;
-function  recordAudio() {
-  // This will prompt for permission if not allowed earlier
-  navigator.mediaDevices.getUserMedia({audio:true})
-    .then(stream => {
-      audioChunks = []; 
-      rec = new MediaRecorder(stream);
-      rec.ondataavailable = e => {
-        console.log("recording");
-        audioChunks.push(e.data);
-        if (rec.state == "inactive"){
-          var blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
-          var audio = new Audio(URL.createObjectURL(blob));
-          audio.play();
-          //recordedAudio.src = URL.createObjectURL(blob);
-          //recordedAudio.controls=true;
-          //recordedAudio.autoplay=true;
-          //audioDownload.href = recordedAudio.src;
-          //audioDownload.download = 'mp3';
-          //audioDownload.innerHTML = 'download';
-       }
-      }
-    rec.start();  
-    })
-    .catch(e=>console.log(e));
-}
+// TESTE COM MICROFONE
+navigator.getUserMedia = navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
+if (navigator.getUserMedia) {
+  navigator.getUserMedia({
+      audio: true
+    },
+    function(stream) {
+      audioContext = new AudioContext();
+      analyser = audioContext.createAnalyser();
+      microphone = audioContext.createMediaStreamSource(stream);
+      javascriptNode = audioContext.createScriptProcessor(2048, 1, 1);
 
-function stopRecording() {
-  rec.stop();
+      analyser.smoothingTimeConstant = 0.8;
+      analyser.fftSize = 1024;
+
+      microphone.connect(analyser);
+      analyser.connect(javascriptNode);
+      javascriptNode.connect(audioContext.destination);
+
+      javascriptNode.onaudioprocess = function() {
+          var array = new Uint8Array(analyser.frequencyBinCount);
+          analyser.getByteFrequencyData(array);
+          var values = 0;
+
+          var length = array.length;
+          for (var i = 0; i < length; i++) {
+            values += (array[i]);
+          }
+
+          var average = values / length;
+          console.log("Volume: " + average);
+
+        } // end fn stream
+    },
+    function(err) {
+      console.log("The following error occured: " + err.name)
+    });
+} else {
+  console.log("getUserMedia not supported");
 }
