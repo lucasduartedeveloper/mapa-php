@@ -881,6 +881,7 @@ if (navigator.getUserMedia) {
 
           if (average > 50) {
                 var m = Math.floor((Math.random() * grid.length) - 1);
+                console.log(m);
                 onMapClick({ latlng: {
                             lat: grid[m].lat,
                             lng: grid[m].lng
