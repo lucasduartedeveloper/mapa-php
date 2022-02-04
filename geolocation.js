@@ -880,8 +880,8 @@ if (navigator.getUserMedia) {
           //console.log("Volume: " + average);
 
           if (average > 50) {
-                var m = Math.floor((Math.random() * grid.length) - 1);
-                console.log(m);
+                var m = Math.floor((Math.random() * grid.length));
+                //console.log(m);
                 onMapClick({ latlng: {
                             lat: grid[m].lat,
                             lng: grid[m].lng
