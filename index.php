@@ -113,11 +113,11 @@ catch (PDOException $e) {
 </div>
 
 <div id="box5" class="box3">
-    <p class="contador">REGRAS</p>
+    <p class="contador">ルール</p>
     <div class="chat-history" style="padding: 20px">
-         <p class="contador">1. Conseguir a quantidade de pontos para passar de fase.</p>
-         <p class="contador">2. Pode haver 3 erros por fase.</p>
-         <p class="contador">3. Já volto.</p>
+         <p class="contador">1. レベルを通過するポイントの量を取得します</p>
+         <p class="contador">2. レベルを通過するポイントの量を取得します</p>
+         <p class="contador">3. すぐに戻ってきます</p>
     </div>
 </div>
 
