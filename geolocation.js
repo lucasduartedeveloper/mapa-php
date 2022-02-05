@@ -682,7 +682,7 @@ function desenharHP() {
      }
 
     console.log(hp);
-    console.log(Voldemort.hpMarker);
+    console.log(voldemort.hpMarker);
 }
 
 // Grid
