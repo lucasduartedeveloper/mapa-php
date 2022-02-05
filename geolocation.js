@@ -655,56 +655,21 @@ function explodirArea(pos) {
 
 // Voldemort
 function desenharVoldemort() {
-     var x = 0.000008993216088271083;
-     var y = 0.000009956626094265175;
-
-     var luz = (lightValue + 100) / 1000;
-     var raio = x * 10;
-    
      var voldemort = itens.filter(x => x.id == 109)[0];
 
      if (voldemort.lat != 0) {
 
-     a = a != 0 ? a : voldemort.lat - reguas[0].latitude;
-     b = b != 0 ? b : voldemort.lng - reguas[0].longitude;
-     h = h != 0 ? h : Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+            hpIcon = L.icon({
+            iconUrl: createHP,
+            iconSize:     [40, 100], // size of the icon
+            iconAnchor:   [20, 0], // point of the icon which will correspond to marker's location
 
-     var sen = a/h;
-     var cos = b/h;
-
-    // -------------------
-     
-     var h2 = h * luz;
-     var a2 = h2 * sen;
-     var b2 = h2 * cos;
-
-     var pos = posicaoNoGrid({
-        lat : reguas[0].latitude + a2,
-        lng : reguas[0].longitude + b2
-     });
-     
-     markerLight.setRadius((h/((x+y)/2)) * luz);
-     
-     $.post("/ajax/localizacao_gps_item.php", {
-     lat: pos.lat,
-     lng: pos.lng,
-     id: 109,
-     data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
      });
 
-     // Game over
-     if (luz <= 0.1) {
-          $("#reset").click();
-          h = 0;
-          a = 0;
-          b = 0;
+     voldemortHP.
+     hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
      }
-
-     voldemort.marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-     voldemort.markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
-
-     }
-}
+}{
 
 // Grid
 function par(num) {
@@ -823,7 +788,7 @@ function createLabel(text) {
 }
 
 // HP 
-function createVolume() {
+function createHP() {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
 
@@ -832,12 +797,13 @@ function createVolume() {
 	
      //draw a box around the canvas
      context.beginPath(); // always start a new line with beginPath
+     context.strokeStyle = "#FF0000";
      context.lineWidth = 3;
      context.moveTo( 0, 0 ); // start position
-     context.lineTo( canvas.width - 1, 0 );
-     context.lineTo( canvas.width - 1, canvas.height - 1 );
-     context.lineTo( 0, canvas.height - 1 );
-     context.lineTo( 0, 0 );
+     context.lineTo(canvas.width , 0 );
+     //context.lineTo( canvas.width - 1, canvas.height - 1 );
+     //context.lineTo( 0, canvas.height - 1 );
+     //context.lineTo( 0, 0 );
      context.stroke(); // actually draw the line
 
     return canvas.toDataURL();
