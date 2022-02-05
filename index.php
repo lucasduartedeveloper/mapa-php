@@ -117,7 +117,8 @@ catch (PDOException $e) {
     <div class="chat-history" style="padding: 20px">
          <p class="contador">1. レベルを通過するポイントの量を取得します</p>
          <p class="contador">2. レベルを通過するポイントの量を取得します</p>
-         <p class="contador">3. すぐに戻ってきます</p>
+         <p class="contador">3. 戦いをやめなさい</p>
+         <p class="contador">4. すぐに戻ってきます</p>
     </div>
 </div>
 
