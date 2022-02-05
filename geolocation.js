@@ -674,13 +674,15 @@ function desenharHP() {
             iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
             });
 
-            hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon})
+            hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
+            /*
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
                  desenharHP();
             })
             .addTo(map);
+            */
      }
 }
 
