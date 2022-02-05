@@ -663,13 +663,12 @@ function desenharVoldemort() {
             iconUrl: createHP,
             iconSize:     [40, 100], // size of the icon
             iconAnchor:   [20, 0], // point of the icon which will correspond to marker's location
-
-     });
+            });
 
      voldemortHP.
      hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
      }
-}{
+}
 
 // Grid
 function par(num) {
