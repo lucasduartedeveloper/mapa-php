@@ -665,13 +665,13 @@ function desenharHP() {
      }
      if (voldemort.lat != 0  && hp > 0) {
 
-            var hpIcon = L.icon({
+            voldemort.hpMarker = L.marker([voldemort.lat, voldemort.lng],  { 
+            icon: L.icon({
             iconUrl: createHP(),
             iconSize:     [40, 50], // size of the icon
             iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
-            });
-
-            voldemort.hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon})
+            })
+            })
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
@@ -810,8 +810,8 @@ function createHP() {
      context.beginPath(); // always start a new line with beginPath
      context.strokeStyle = "#FF0000";
      context.lineWidth = 4;
-     context.moveTo( 0, 8 ); // start position
-     context.lineTo(40 - ((40 / 100) * hp) , 8 );
+     context.moveTo( 0, 16 ); // start position
+     context.lineTo(((40 / 100) * hp) , 16 );
      //context.lineTo( canvas.width - 1, canvas.height - 1 );
      //context.lineTo( 0, canvas.height - 1 );
      //context.lineTo( 0, 0 );
