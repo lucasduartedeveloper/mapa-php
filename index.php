@@ -104,7 +104,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">マップブラザーズ</p>
-    <p class="contador">v137.143.710 final*</p>
+    <p class="contador">v137.143.711 final*</p>
     <img id="front" class="front" src="/img/logo-v2.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 cm/s</p>
@@ -116,7 +116,7 @@ catch (PDOException $e) {
     <p class="contador">ルール</p>
     <div class="chat-history" style="padding: 20px">
          <p class="contador">1. レベルを通過するポイントの量を取得します</p>
-         <p class="contador">2.フェーズごとに3つのエラーが発生する可能性があります</p>
+         <p class="contador">2. フェーズごとに3つのエラーが発生する可能性があります</p>
          <p class="contador">3. 戦いをやめなさい</p>
          <p class="contador">4. すぐに戻ってきます</p>
     </div>
@@ -142,7 +142,7 @@ catch (PDOException $e) {
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
 <script src="/script.js?v=143"></script>
-<script src="/geolocation.js?v710"></script> 
+<script src="/geolocation.js?v711"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
