@@ -663,11 +663,8 @@ function desenharHP() {
 
      if (hpMarker) {
             map.removeControl(hpMarker);
-            console.log("remove");
      }
      if (voldemort.lat != 0  && hp > 0) {
-
-            console.log("add");
 
             hpMarker = L.marker([voldemort.lat, voldemort.lng],  { 
             icon: L.icon({
@@ -679,6 +676,7 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
+                 voldemort.bounce(2);
                  desenharHP();
             })
             .addTo(map);
