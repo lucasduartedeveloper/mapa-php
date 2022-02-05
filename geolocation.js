@@ -664,7 +664,7 @@ function desenharHP() {
             hpIcon = L.icon({
             iconUrl: createHP(),
             iconSize:     [40, 100], // size of the icon
-            iconAnchor:   [20, 0], // point of the icon which will correspond to marker's location
+            iconAnchor:   [20, 100], // point of the icon which will correspond to marker's location
             });
 
             hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
@@ -798,7 +798,7 @@ function createHP() {
      //draw a box around the canvas
      context.beginPath(); // always start a new line with beginPath
      context.strokeStyle = "#FF0000";
-     context.lineWidth = 3;
+     context.lineWidth = 4;
      context.moveTo( 0, 0 ); // start position
      context.lineTo(canvas.width , 0 );
      //context.lineTo( canvas.width - 1, canvas.height - 1 );
