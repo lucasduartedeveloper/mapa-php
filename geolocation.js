@@ -678,7 +678,14 @@ function desenharHP() {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
                  voldemort.marker.bounce(1);
-                 desenharHP();
+                 desenharHP()
+                 if (hp <= 0) {
+                       onMapClick({ type: "dblclick",
+                             latlng: {
+                                 lat: voldemort.lat,
+                                 lng: voldemort.lng }
+                       });
+                 }
             })
             .addTo(map);
 
