@@ -686,6 +686,7 @@ function desenharHP() {
                                  lng: voldemort.lng }
                        });
                        hp = 100;
+                       play("/audio/creature_dying.wav");
                  }
             })
             .addTo(map);
