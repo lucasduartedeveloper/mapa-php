@@ -821,9 +821,10 @@ function createHP() {
      context.strokeStyle = "#FF0000";
      context.lineWidth = 10;
      context.moveTo( 0, 5 ); // start position
-     context.lineTo(((40 / 100) * hp) , 10 );
+     context.lineTo(((40 / 100) * hp) , 5 );
      context.stroke(); // actually draw the line
 
+     context.beginPath(); // always start a new line with beginPath
      context.strokeStyle = "#000000";
      context.lineWidth = 2;
      context.moveTo( 0, 0 ); // start position
