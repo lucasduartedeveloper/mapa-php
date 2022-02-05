@@ -134,6 +134,8 @@ function reload() {
 
         // ---- Explosivo
         desenharControle();
+        // ---- Teste HP
+        desenharHP();
 
         if (reguas.length > 0) {
                onMapClick({latlng: {
@@ -654,7 +656,7 @@ function explodirArea(pos) {
 }
 
 // Voldemort
-function desenharVoldemort() {
+function desenharHP() {
      var voldemort = itens.filter(x => x.id == 109)[0];
 
      if (voldemort.lat != 0) {
@@ -664,8 +666,7 @@ function desenharVoldemort() {
             iconSize:     [40, 100], // size of the icon
             iconAnchor:   [20, 0], // point of the icon which will correspond to marker's location
             });
-
-     voldemortHP.
+.
      hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
      }
 }
