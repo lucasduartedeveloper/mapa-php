@@ -675,7 +675,7 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
-                 desenharHP();
+                 //desenharHP();
             })
             .addTo(map);
 
