@@ -27,14 +27,12 @@ var audio = new Audio();
 function play(file_path) {
    //return;
    file_path = file_path ? file_path : '/audio/game_notification.wav';
-   //file_path = file_path ? file_path : '/audio/missile.mp3';
-   audio.pause();
-   audio = new Audio(file_path);
-   audio.play(); 
-   //$("#coin").addClass("animate");
-   //setTimeout(function() {
-   //$("#coin").removeClass("animate");
-  //}, 2000);
+   var file = new File(file_path);
+   if (file.exists()) {
+        audio.pause();
+        audio = new Audio(file_path);
+        audio.play(); 
+   }
 }
 
 function posicaoNoGrid(pos) {
@@ -825,7 +823,7 @@ function createLabel(text) {
     return canvas.toDataURL();
 }
 
-// MEDIDOR DE VOLUME
+// HP 
 function createVolume() {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
