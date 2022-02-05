@@ -822,6 +822,7 @@ function createHP() {
      context.lineWidth = 10;
      context.moveTo( 0, 10 ); // start position
      context.lineTo(((40 / 100) * hp) , 10 );
+     context.stroke(); // actually draw the line
 
      context.strokeStyle = "#000000";
      context.lineWidth = 2;
