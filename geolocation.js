@@ -23,12 +23,18 @@ var faseAtual = 1;
 var powerUps = 0;
 var pontuacaoMinima = [1,4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 196, 225, 256];
 
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
 var audio = new Audio();
 function play(file_path) {
    //return;
    file_path = file_path ? file_path : '/audio/game_notification.wav';
-   var file = new File(file_path);
-   if (file.exists()) {
+   if (UrlExists(file_path)) {
         audio.pause();
         audio = new Audio(file_path);
         audio.play(); 
