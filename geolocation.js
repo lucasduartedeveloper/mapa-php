@@ -666,8 +666,8 @@ function desenharHP() {
             iconSize:     [40, 100], // size of the icon
             iconAnchor:   [20, 0], // point of the icon which will correspond to marker's location
             });
-.
-     hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
+
+            hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
      }
 }
 
