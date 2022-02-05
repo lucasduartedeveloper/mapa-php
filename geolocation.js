@@ -680,6 +680,9 @@ function desenharHP() {
             .addTo(map);
 
      }
+
+    console.log(hp);
+    console.log(Voldemort.hpMarker);
 }
 
 // Grid
@@ -809,9 +812,9 @@ function createHP() {
      //draw a box around the canvas
      context.beginPath(); // always start a new line with beginPath
      context.strokeStyle = "#FF0000";
-     context.lineWidth = 4;
-     context.moveTo( 0, 16 ); // start position
-     context.lineTo(((40 / 100) * hp) , 16 );
+     context.lineWidth = 10;
+     context.moveTo( 0, 10 ); // start position
+     context.lineTo(((40 / 100) * hp) , 10 );
      //context.lineTo( canvas.width - 1, canvas.height - 1 );
      //context.lineTo( 0, canvas.height - 1 );
      //context.lineTo( 0, 0 );
