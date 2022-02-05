@@ -831,7 +831,7 @@ function createHP() {
      context.lineTo( 40, 1 );
      context.lineTo( 40, 10 );
      context.lineTo( 1, 10 );
-     context.lineTo( 1, 0 );
+     context.lineTo( 1, 1 );
      context.stroke(); // actually draw the line
 
     return canvas.toDataURL();
