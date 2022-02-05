@@ -655,34 +655,30 @@ function explodirArea(pos) {
         play("/audio/explosion.mp3");
 }
 
-// Voldemort
-var hpIcon = false;
-var hpMarker = false;
+// Voldemort;
 var hp = 100;
 function desenharHP() {
      var voldemort = itens.filter(x => x.id == 109)[0];
 
-     if (hpMarker) {
-            map.removeControl(hpIcon);
-            map.removeControl(hpMarker);
+     if (voldemort.hpMarker) {
+            map.removeControl(voldemort.hpMarker);
      }
      if (voldemort.lat != 0) {
 
-            hpIcon = L.icon({
+            var hpIcon = L.icon({
             iconUrl: createHP(),
             iconSize:     [40, 50], // size of the icon
             iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
             });
 
-            hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
-            /*
+            voldemort.hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon})
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
                  desenharHP();
             })
             .addTo(map);
-            */
+
      }
 }
 
@@ -815,7 +811,7 @@ function createHP() {
      context.strokeStyle = "#FF0000";
      context.lineWidth = 4;
      context.moveTo( 0, 8 ); // start position
-     context.lineTo((canvas.width / 100 * hp) , 8 );
+     context.lineTo(((canvas.width / 100) * hp) , 8 );
      //context.lineTo( canvas.width - 1, canvas.height - 1 );
      //context.lineTo( 0, canvas.height - 1 );
      //context.lineTo( 0, 0 );
