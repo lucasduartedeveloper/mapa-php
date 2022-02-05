@@ -656,9 +656,16 @@ function explodirArea(pos) {
 }
 
 // Voldemort
+var hpIcon = false;
+var hpMarker = false;
+var hp = 100;
 function desenharHP() {
      var voldemort = itens.filter(x => x.id == 109)[0];
 
+     if (hpMarker) {
+            map.removeControl(hpIcon);
+            map.removeControl(hpMarker);
+     }
      if (voldemort.lat != 0) {
 
             hpIcon = L.icon({
@@ -667,7 +674,13 @@ function desenharHP() {
             iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
             });
 
-            hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon}).addTo(map);
+            hpMarker = L.marker([voldemort.lat, voldemort.lng],  {icon: hpIcon})
+            .on("click", function(e) {
+                 hp -= 10;
+                 play("/audio/getting_hit.wav");
+                 desenharHP();
+            })
+            .addTo(map);
      }
 }
 
@@ -799,8 +812,8 @@ function createHP() {
      context.beginPath(); // always start a new line with beginPath
      context.strokeStyle = "#FF0000";
      context.lineWidth = 4;
-     context.moveTo( 0, 4 ); // start position
-     context.lineTo(canvas.width , 0 );
+     context.moveTo( 0, 8 ); // start position
+     context.lineTo((canvas.width / 100 * hp) , 8 );
      //context.lineTo( canvas.width - 1, canvas.height - 1 );
      //context.lineTo( 0, canvas.height - 1 );
      //context.lineTo( 0, 0 );
