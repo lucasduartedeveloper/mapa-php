@@ -811,7 +811,7 @@ function createHP() {
      context.strokeStyle = "#FF0000";
      context.lineWidth = 4;
      context.moveTo( 0, 8 ); // start position
-     context.lineTo(((canvas.width / 100) * hp) , 8 );
+     context.lineTo(40 - ((40 / 100) * hp) , 8 );
      //context.lineTo( canvas.width - 1, canvas.height - 1 );
      //context.lineTo( 0, canvas.height - 1 );
      //context.lineTo( 0, 0 );
