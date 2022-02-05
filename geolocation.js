@@ -656,20 +656,24 @@ function explodirArea(pos) {
 }
 
 // Voldemort;
+var hpMarker = false;
 var hp = 100;
 function desenharHP() {
      var voldemort = itens.filter(x => x.id == 109)[0];
 
-     //if (voldemort.hpMarker) {
-            map.removeControl(voldemort.hpMarker);
-     //}
+     if (hpMarker) {
+            map.removeControl(hpMarker);
+            console.log("remove");
+     }
      if (voldemort.lat != 0  && hp > 0) {
 
-            voldemort.hpMarker = L.marker([voldemort.lat, voldemort.lng],  { 
+            console.log("add");
+
+            hpMarker = L.marker([voldemort.lat, voldemort.lng],  { 
             icon: L.icon({
             iconUrl: createHP(),
-            iconSize:     [40, 50], // size of the icon
-            iconAnchor:   [20, 50], // point of the icon which will correspond to marker's location
+            iconSize:     [40, 60], // size of the icon
+            iconAnchor:   [20, 60], // point of the icon which will correspond to marker's location
             })
             })
             .on("click", function(e) {
@@ -680,16 +684,12 @@ function desenharHP() {
             .addTo(map);
 
      }
-
-    console.log(hp);
-    console.log(voldemort.hpMarker);
 }
 
 // Grid
 function par(num) {
      return Math.ceil((num + 1) % 2);
 }
-
 var gridIcon = false;
 var gridMarker = false;
 
@@ -807,7 +807,7 @@ function createHP() {
      var context = canvas.getContext( '2d' );
 
      canvas.width = 40;
-     canvas.height = 100;
+     canvas.height = 60;
 	
      //draw a box around the canvas
      context.beginPath(); // always start a new line with beginPath
