@@ -660,9 +660,9 @@ var hp = 100;
 function desenharHP() {
      var voldemort = itens.filter(x => x.id == 109)[0];
 
-     if (voldemort.hpMarker) {
+     //if (voldemort.hpMarker) {
             map.removeControl(voldemort.hpMarker);
-     }
+     //}
      if (voldemort.lat != 0  && hp > 0) {
 
             voldemort.hpMarker = L.marker([voldemort.lat, voldemort.lng],  { 
@@ -675,7 +675,7 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
-                 //desenharHP();
+                 desenharHP();
             })
             .addTo(map);
 
