@@ -656,10 +656,11 @@ function explodirArea(pos) {
 }
 
 // Voldemort;
+var voldemort = false;
 var hpMarker = false;
 var hp = 100;
 function desenharHP() {
-     var voldemort = itens.filter(x => x.id == 109)[0];
+     voldemort = itens.filter(x => x.id == 109)[0];
 
      if (hpMarker) {
             map.removeControl(hpMarker);
@@ -676,7 +677,7 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
-                 voldemort.bounce(2);
+                 voldemort.bounce(1);
                  desenharHP();
             })
             .addTo(map);
