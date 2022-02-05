@@ -677,7 +677,7 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
-                 voldemort.bounce(1);
+                 voldemort.marker.bounce(1);
                  desenharHP();
             })
             .addTo(map);
