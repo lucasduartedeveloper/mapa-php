@@ -827,11 +827,11 @@ function createHP() {
      context.beginPath(); // always start a new line with beginPath
      context.strokeStyle = "#000000";
      context.lineWidth = 2;
-     context.moveTo( 0, 0 ); // start position
-     context.lineTo( 40, 0 );
+     context.moveTo( 1, 1 ); // start position
+     context.lineTo( 40, 1 );
      context.lineTo( 40, 10 );
-     context.lineTo( 0, 10 );
-     context.lineTo( 0, 0 );
+     context.lineTo( 1, 10 );
+     context.lineTo( 1, 0 );
      context.stroke(); // actually draw the line
 
     return canvas.toDataURL();
