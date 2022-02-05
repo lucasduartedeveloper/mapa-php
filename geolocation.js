@@ -662,7 +662,7 @@ function desenharHP() {
      if (voldemort.lat != 0) {
 
             hpIcon = L.icon({
-            iconUrl: createHP,
+            iconUrl: createHP,()
             iconSize:     [40, 100], // size of the icon
             iconAnchor:   [20, 0], // point of the icon which will correspond to marker's location
             });
