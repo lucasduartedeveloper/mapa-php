@@ -26,7 +26,7 @@ var pontuacaoMinima = [1,4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 196, 225, 
 var audio = new Audio();
 function play(file_path) {
 
-   file_path = file_path ? file_path != "" : '/audio/game_notification.wav';
+   file_path = file_path ? file_path : "/audio/game_notification.wav";
     audio.pause();
     audio = new Audio(file_path);
     audio.play(); 
@@ -663,7 +663,7 @@ function desenharHP() {
      if (voldemort.hpMarker) {
             map.removeControl(voldemort.hpMarker);
      }
-     if (voldemort.lat != 0) {
+     if (voldemort.lat != 0  && hp > 0) {
 
             var hpIcon = L.icon({
             iconUrl: createHP(),
