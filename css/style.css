@@ -28,6 +28,7 @@ html, body {
     height: 100%;
     background-color: #fff;
     opacity: 0.8;
+    transform: rotate3d(1, 0, 0, 60deg);
 }
 
 .box2{
