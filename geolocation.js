@@ -828,8 +828,8 @@ function createHP() {
      context.strokeStyle = "#000000";
      context.lineWidth = 2;
      context.moveTo( 1, 1 ); // start position
-     context.lineTo( 40, 1 );
-     context.lineTo( 40, 10 );
+     context.lineTo( 39, 1 );
+     context.lineTo( 39, 10 );
      context.lineTo( 1, 10 );
      context.lineTo( 1, 1 );
      context.stroke(); // actually draw the line
