@@ -179,7 +179,7 @@ label.btn.active{
     max-width: 150px;
     max-height: 150px;
     opacity: 0.7;
-    border-radius: 25%;
+    --border-radius: 25%;
 }
 
 line {

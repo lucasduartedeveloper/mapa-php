@@ -39,7 +39,7 @@ catch (PDOException $e) {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=139">
+<link rel="stylesheet" href="/css/style.css?v=140">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -103,7 +103,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">マップブラザーズ</p>
-    <p class="contador">v139.143.731 final*</p>
+    <p class="contador">v140.143.732 final*</p>
     <img id="front" class="front" src="/img/logo-v3.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 cm/s</p>
@@ -142,7 +142,7 @@ catch (PDOException $e) {
 
 <script src="/websocket.js?v=2"></script>
 <script src="/script.js?v=143"></script>
-<script src="/geolocation.js?v731"></script> 
+<script src="/geolocation.js?v732"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
