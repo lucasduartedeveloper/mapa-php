@@ -140,7 +140,7 @@ catch (PDOException $e) {
 
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
-<script src="/websocket.js?v=1"></script>
+<script src="/websocket.js?v=2"></script>
 <script src="/script.js?v=143"></script>
 <script src="/geolocation.js?v722"></script> 
 
