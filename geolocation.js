@@ -664,9 +664,10 @@ function explodirArea(pos) {
 // Voldemort;
 var voldemort = false;
 var hpMarker = false;
+var hp = 0
 function desenharHP() {
      voldemort = itens.filter(x => x.id == 109)[0];
-     var hp = voldemort.hp_atual;
+     hp = voldemort.hp_atual;
 
      if (hpMarker) {
             map.removeControl(hpMarker);
