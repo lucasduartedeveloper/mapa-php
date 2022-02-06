@@ -313,6 +313,7 @@ function onMapClick(e) {
         lng: pos.lng,
         id: itens[id].id,
         anotacao: anotacao,
+        hp_atual: 100,
         data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         })
         .done(function(data) {
@@ -334,6 +335,7 @@ function onMapClick(e) {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
+                    hp_atual: 100,
                     data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                })
                .done(function(data) {
@@ -456,6 +458,7 @@ $("#reset").click(function() {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
+                 hp_atual: 100,
                  data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
             }).done(function(data) {
                  if (k == itens.length -1) {
@@ -650,6 +653,7 @@ function explodirArea(pos) {
         lat: 0, 
         lng: 0,
         id: 98,
+        hp_atual: 100,
         data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         });
 
@@ -680,6 +684,15 @@ function desenharHP() {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
                  desenharHP()
+
+                 $.post("/ajax/localizacao_gps_item.php", {
+                      lat: voldemort.lat, 
+                      lng: voldemort.lng,
+                      id: 109,
+                      hp_atual: hp,
+                      data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
+                 }).done(function(data) { console.log(data); });
+
                  if (hp <= 0) {
                        onMapClick({ type: "dblclick",
                              latlng: {
@@ -689,13 +702,6 @@ function desenharHP() {
                        hp = 100;
                        play("/audio/creature_dying.wav");
                  }
-                 $.post("/ajax/localizacao_gps_item.php", {
-                      lat: voldemort.lat, 
-                      lng: voldemort.lng,
-                      id: 109,
-                      hp_atual: hp,
-                      data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
-                 }).done(function(data) { console.log(data); });
             })
             .addTo(map);
 
