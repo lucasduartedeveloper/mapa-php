@@ -693,7 +693,7 @@ function desenharHP() {
                       lat: voldemort.lat, 
                       lng: voldemort.lng,
                       id: 109,
-                      hp_atual: hp;
+                      hp_atual: hp,
                       data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                  }).done(function(data) { console.log(data); });
             })
