@@ -104,7 +104,7 @@ catch (PDOException $e) {
 <div id="box4" class="box3">
     <p class="contador">マップブラザーズ</p>
     <p class="contador">v139.143.731 final*</p>
-    <img id="front" class="front" src="/img/logo-v2.png"/>
+    <img id="front" class="front" src="/img/logo-v3.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 cm/s</p>
      <img id="line" class="line" src="/img/line-v2.png"/>
