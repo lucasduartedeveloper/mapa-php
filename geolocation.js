@@ -695,18 +695,16 @@ function desenharHP() {
                       play("/audio/getting_hit.wav");
                       reload();
                  });
-
-                 if (hp <= 0) {
-                       onMapClick({ type: "dblclick",
-                             latlng: {
-                                 lat: voldemort.lat,
-                                 lng: voldemort.lng }
-                       });
-                       play("/audio/creature_dying.wav");
-                 }
             })
             .addTo(map);
-
+     }
+     else if (hp <= 0) {
+            onMapClick({ type: "dblclick",
+                    latlng: {
+                            lat: voldemort.lat,
+                            lng: voldemort.lng }
+                    });
+            play("/audio/creature_dying.wav");
      }
 }
 
