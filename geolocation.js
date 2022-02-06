@@ -665,7 +665,7 @@ function explodirArea(pos) {
 var voldemort = false;
 var hpMarker = false;
 var hp = 0;
-wsCallback = reload;
+//wsCallback = reload;
 function desenharHP() {
      voldemort = itens.filter(x => x.id == 109)[0];
      hp = voldemort.hp_atual;
