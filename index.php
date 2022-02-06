@@ -103,7 +103,7 @@ catch (PDOException $e) {
 
 <div id="box4" class="box3">
     <p class="contador">マップブラザーズ</p>
-    <p class="contador">v139.143.721 final*</p>
+    <p class="contador">v139.143.722 final*</p>
     <img id="front" class="front" src="/img/logo-v2.png"/>
     <div hidden class="typing-wrapper"></div>
      <p  class="velocidade" class="contador">0 cm/s</p>
@@ -142,7 +142,7 @@ catch (PDOException $e) {
 
 <script src="/websocket.js?v=1"></script>
 <script src="/script.js?v=143"></script>
-<script src="/geolocation.js?v721"></script> 
+<script src="/geolocation.js?v722"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
