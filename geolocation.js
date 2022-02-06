@@ -336,7 +336,7 @@ function onMapClick(e) {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
-                    hp_atual: 100,
+                    hp_atual: 0,
                     data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                })
                .done(function(data) {
@@ -459,7 +459,7 @@ $("#reset").click(function() {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
-                 hp_atual: 100,
+                 hp_atual: 0,
                  data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
             }).done(function(data) {
                  if (k == itens.length -1) {
@@ -654,7 +654,7 @@ function explodirArea(pos) {
         lat: 0, 
         lng: 0,
         id: 98,
-        hp_atual: 100,
+        hp_atual: 0,
         data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         });
 
@@ -664,10 +664,9 @@ function explodirArea(pos) {
 // Voldemort;
 var voldemort = false;
 var hpMarker = false;
-var hp = 100;
 function desenharHP() {
      voldemort = itens.filter(x => x.id == 109)[0];
-     hp = voldemort.hp_atual;
+     var hp = voldemort.hp_atual;
 
      if (hpMarker) {
             map.removeControl(hpMarker);
@@ -683,8 +682,6 @@ function desenharHP() {
             })
             .on("click", function(e) {
                  hp -= 10;
-                 play("/audio/getting_hit.wav");
-                 desenharHP()
 
                  $.post("/ajax/localizacao_gps_item.php", {
                       lat: voldemort.lat, 
@@ -692,7 +689,10 @@ function desenharHP() {
                       id: 109,
                       hp_atual: hp,
                       data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
-                 }).done(function(data) { console.log(data); });
+                 }).done(function(data) { 
+                      play("/audio/getting_hit.wav");
+                      desenharHP()
+                 });
 
                  if (hp <= 0) {
                        onMapClick({ type: "dblclick",
@@ -700,7 +700,6 @@ function desenharHP() {
                                  lat: voldemort.lat,
                                  lng: voldemort.lng }
                        });
-                       hp = 100;
                        play("/audio/creature_dying.wav");
                  }
             })
