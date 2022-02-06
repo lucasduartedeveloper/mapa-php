@@ -1,6 +1,5 @@
 <?php include ('config/db.php')?>
 <?php include ('config/config.php')?>
-<?php include ('config/txt.php')?>
 
 <?php
 try {
