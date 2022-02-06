@@ -286,7 +286,7 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 var mapLocked = true;
 function onMapClick(e) {
-      ws.send("UPDATE"); // TESTE WEBSOCKET
+      //ws.send("UPDATE"); // TESTE WEBSOCKET
       var pos = posicaoNoGrid(e.latlng);
 
      var novaArea = true;
@@ -693,7 +693,7 @@ function desenharHP() {
                       data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                  }).done(function(data) { 
                       play("/audio/getting_hit.wav");
-                      desenharHP()
+                      reload();
                  });
 
                  if (hp <= 0) {
