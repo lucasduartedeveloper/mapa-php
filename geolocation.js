@@ -285,7 +285,7 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 var mapLocked = true;
 function onMapClick(e) {
-      ws.send("ping"); // TESTE WEBSOCKET
+      ws.send("UPDATE"); // TESTE WEBSOCKET
       var pos = posicaoNoGrid(e.latlng);
 
      var novaArea = true;
@@ -662,6 +662,7 @@ var hpMarker = false;
 var hp = 100;
 function desenharHP() {
      voldemort = itens.filter(x => x.id == 109)[0];
+     hp = voldemort.hp_atual;
 
      if (hpMarker) {
             map.removeControl(hpMarker);
@@ -678,7 +679,6 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
                  play("/audio/getting_hit.wav");
-                 //voldemort.marker.bounce(1);
                  desenharHP()
                  if (hp <= 0) {
                        onMapClick({ type: "dblclick",
@@ -689,6 +689,13 @@ function desenharHP() {
                        hp = 100;
                        play("/audio/creature_dying.wav");
                  }
+                 $.post("/ajax/localizacao_gps_item.php", {
+                      lat: voldemort.lat, 
+                      lng: voldemort.lng,
+                      id: 109,
+                      hp_atual: hp;
+                      data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
+                 }).done(function(data) { console.log(data); });
             })
             .addTo(map);
 
