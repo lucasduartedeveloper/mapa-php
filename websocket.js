@@ -1,6 +1,6 @@
-var HOST = location.origin.replace(/^http/, 'ws')
-var ws = new WebSocket(HOST);
+var host = "wss://mapa-ws.herokuapp.com";
+var ws = new WebSocket(host);
 
 ws.onmessage = (event) => {
-        console.log(event.data);
+        console.log("Server:" + event.data);
 };

@@ -285,6 +285,7 @@ $(document).on('click', ':radio[name="item"]', function() {
 
 var mapLocked = true;
 function onMapClick(e) {
+      ws.send("ping"); // TESTE WEBSOCKET
       var pos = posicaoNoGrid(e.latlng);
 
      var novaArea = true;
