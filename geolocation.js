@@ -104,6 +104,7 @@ function reload() {
        item.audio = data[k].audio;
        item.anotacao = data[k].anotacao;
        item.data_hora = data[k].data_hora;
+       item.hp_atual = data[k].hp_atual;
 
        var dragend = function (e) {
             //console.log(this);
