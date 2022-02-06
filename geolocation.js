@@ -698,7 +698,7 @@ function desenharHP() {
             })
             .addTo(map);
      }
-     else if (hp <= 0) {
+     else if (voldemort.lat != 0  && hp <= 0) {
             onMapClick({ type: "dblclick",
                     latlng: {
                             lat: voldemort.lat,
