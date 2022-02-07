@@ -26,7 +26,6 @@ $.ajax({
     beforeSend: function (xhr) {
         /* Authorization header */
         xhr.setRequestHeader("Authorization", "Bearer 02Bt2V6ID8LqsHOO6HyvGH-SCLbge8CHiLYROtMOjRAydDiv9eox0QqLErOKMSLEW24RTBoUjtjDo25qJnR28R8GUbB6s");
-        xhr.setRequestHeader("X-Mobile", "false");
     },
     success: function (data) {
          console.log(data); 
