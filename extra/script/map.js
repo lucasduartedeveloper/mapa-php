@@ -10,6 +10,23 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
+var markerIcon= L.icon({
+       iconUrl: "../img/marker.png",
+       iconSize:     [35, 40], // size of the icon
+       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker = L.marker([0, 0],  {icon: markerIcon}).addTo(map).bounce();
+
+var markerShadow = L.circle([0, 0], {
+        color: "#2E2E2E",
+        fillOpacity: 0.5,
+        radius: 2.25,
+        weight: 0,
+        stroke: true
+}).addTo(map);
+
 // Texto para audio
 var speaking = false;
 function say(text) {
@@ -182,6 +199,9 @@ function success(position) {
     });
 
     map.setView([posicao.lat, posicao.lng], 19);
+    marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
+    markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
+     
 }
 
 function error(error) {
