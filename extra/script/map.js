@@ -278,7 +278,7 @@ function carregarAudio(m) {
       $("#audio-wave").show();
 
       var click = function (e) {
-           carregarAudio(this.m);
+           playAudio(this.m);
       };
       var audioClick = click.bind(audios[m]);
       $("#audio-wave").click(audioClick);
