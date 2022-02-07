@@ -26,6 +26,19 @@ html, body {
     opacity: 1;
 }
 
+.btn-mic {
+   border: 1px solid black;
+   background-color: white;
+   color: black;
+}
+
+.btn-mic:hover {
+   border: 1px solid black;
+   background-color: black;
+   color: white;
+}
+
+
 .float-center{
    position: fixed;
    display: flex;

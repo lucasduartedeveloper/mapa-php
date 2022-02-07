@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/cars/css/style.css?v=5">
+<link rel="stylesheet" href="/cars/css/style.css?v=7">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -33,7 +33,7 @@
 <div id="map" class="box">
 </div>
 
-<button type="button" class="btn btn-outline-dark float-center">
+<button type="button" class="btn-mic float-center">
       <i class="bi bi-mic-fill"></i>
 </button>
 
