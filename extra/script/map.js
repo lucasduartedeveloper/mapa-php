@@ -64,7 +64,7 @@ var recorder;
 function recordAudio() {
      audioRecorder.requestDevice(function(rec) {
             recorder = rec;
-            recorder.start(); // Start recording
+            recorder.record(); // Start recording
      });
 }
 

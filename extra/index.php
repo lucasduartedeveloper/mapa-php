@@ -58,7 +58,7 @@
 <script src="/extra/script/github/audioRecord.js"></script>
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=47"></script> 
+<script src="/extra/script/map.js?v=48"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
