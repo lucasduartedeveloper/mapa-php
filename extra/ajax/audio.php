@@ -15,7 +15,7 @@ try {
     $stmt = $pdo->prepare($sql);
     //$stmt->execute();
 
-    echo "INSERT INTO extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho.",'base64';";
+    echo $sql;
   }
   else if (!empty($_GET["id"])) {
     $id = htmlspecialchars($_GET["id"]);
