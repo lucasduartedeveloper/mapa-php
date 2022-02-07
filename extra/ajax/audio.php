@@ -1,4 +1,4 @@
-<?php include ('../config/db.php')?>
+<?php include ('/config/db.php')?>
 <?php
 $sql ="";
 try {
