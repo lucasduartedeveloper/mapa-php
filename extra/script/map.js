@@ -38,6 +38,9 @@ function formatarAudio(buffer) {
        //console.log(array.length);
        //console.log(array);
        
+       var header = array.slice(37,40);
+       console.log(Strings.fromCharCode(header[0]);
+
        var tamanhoBloco = 100;
        var quantidade = Math.floor(array.length / tamanhoBloco);
        var novoArray = [];
