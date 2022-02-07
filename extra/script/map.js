@@ -10,39 +10,26 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
-// Teste REV.AI
-function postRevAI(audio) {
-$.ajax({
-    url: "https://api.rev.ai/speechtotext/v1/jobs",
-    method: "POST",
-    dataType: "json",
-    crossDomain: true,
-    contentType: "application/json; charset=utf-8",
-    data: JSON.stringify({
-       media_url : audio,
-       metadata : "Testando a API",
-       transcriber: "machine",
-       skip_diarization: false,
-       skip_punctuation: false,
-       remove_disfluencies: false,
-       filter_profanity: false,
-       speaker_channel_count: 1,
-       language: "en"
-    }),
-    cache: false,
-    beforeSend: function (xhr) {
-        /* Authorization header */
-        xhr.setRequestHeader("Authorization", "Bearer 029FowJO3lbw_js27FMtDQwUmspDdatLDFSJWJCej9sktFwh3-Ik42HJIK9Yk_rDKySiRDzx6j5uYDB9CjwFPh_HwktTg");
-    },
-    success: function (data) {
-         console.log(data); 
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-         console.log(jqXHR);
-         console.log(textStatus);
-         console.log(errorThrown);
-    }
-});
+// Enviar o áudio para o banco de dados
+var base64anterior = "";
+function postAudio(nome, base64) {
+      console.log("nome: " + nome);
+      console.log("base64: " + base64);
+      console.log("similaridade: " + compararStrings(base64anterior, base64) + "%");
+}
+
+// Comparar duas strings
+function compararStrings(a, b) {
+       var maior = a.length > b.length ? a : b;
+       var menor = a.length > b.length ? b : a;
+
+       var soma = 0;
+       for (var i = 0; i < maior.length; i++) {
+            if (maior.charAt(i)  == maior.charAt(i)) {
+                  soma++;
+            }
+       }
+       return maior.length / 100 * soma;
 }
 
 var audioChunks;
@@ -64,9 +51,9 @@ function recordAudio() {
           var reader = new FileReader();
           reader.readAsDataURL(blob); 
           reader.onloadend = function() {
-                var base64data = reader.result;                
-                console.log(base64data);
-                postRevAI(base64data);
+                var nome = prompt("Nome:","");
+                var base64data = reader.result;
+                postAudio(nome, base64data);
           }
 
           //recordedAudio.src = URL.createObjectURL(blob);
