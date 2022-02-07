@@ -70,7 +70,7 @@ function postAudio(nome, buffer, base64) {
              desenho: formatarAudio(buffer).toString(),
              base64: base64,
              }).done(function(data) { 
-                   console.log(data); 
+                   // PLIM 
       });
 }
 
@@ -230,3 +230,10 @@ const options = {
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options); 
+
+// Carregar atualizações
+function reload() {
+   $.getJSON("/extra/ajax/audio.php", function(data) {
+          console.log(data);
+      });
+}
