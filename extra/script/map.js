@@ -19,8 +19,8 @@ function postAudio(nome, buffer) {
       audioAnterior = formatarAudio(buffer);
 }
 
-// Comparar duas strings
-function compararStrings(a, b) {
+// Comparar dois audios
+function compararAudio(a, b) {
        var maior = a.length > b.length ? a : b;
        var menor = a.length > b.length ? b : a;
 
@@ -35,13 +35,13 @@ function compararStrings(a, b) {
 
 function formatarAudio(buffer) {
        var array = new Uint8Array(buffer);
-       //console.log(array.length);
+       console.log(array.length);
        //console.log(array);
        
        var wavHeader = array.slice(0, 44);
        //console.log(wavHeader);
-       var buf = new Buffer(array.slice(44));
-       var ar16 = new Uint16Array(buf.buffer, buf.byteOffset, buf.byteLength / Uint16Array.BYTES_PER_ELEMENT);
+       var ar16 = new Uint16Array(array.slice(44));
+       console.log(ar16.length);
 
        var tamanhoBloco = 100;
        var quantidade = Math.floor(ar16.length / tamanhoBloco);
