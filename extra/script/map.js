@@ -240,6 +240,8 @@ function reload() {
           }
 
           audios = data;
+          if (audios.length > 0) { };
+
           for (var k in audios) {
                var icon = L.icon({
                iconUrl: "../img/paper.png",
@@ -254,10 +256,16 @@ function reload() {
                };
                var audioClick = click.bind(audios[k]);
 
+              var dblClick = function (e) {
+                   excluirAudio(this.m);
+               };
+               var audioDblClick = click.bind(audios[k]);
+
               audios[k].marker = L.marker(
               [audios[k].latitude, audios[k].longitude],
               {icon: icon, draggable: true})
               .on("click", audioClick)
+              .on("dblclick", audioDblClick)
               .addTo(map);
 
               audios[k].markerShadow = L.circle(
@@ -289,12 +297,18 @@ function carregarAudio(m) {
 
 // Excluir áudio
 function excluirAudio(m) {
+    $.getJSON("/extra/ajax/audio.php?deleteId="+audios[m].id, function(data) {
+          map.removeControl(audios[m].marker);
+          map.removeControl(audios[m].markerShadow);
+          say("Você excluiu uma anotação.");
+    });
 }
 
 // Play áudio
 var audio = new Audio();
 function playAudio(m) {
-    $.getJSON("/extra/ajax/audio.php?id="+m, function(data) {
+    $.getJSON("/extra/ajax/audio.php?id="+audios[m].id, function(data) {
+         audio.stop();
          audio = new Audio(data[0].base64);
          audio.play();
     });

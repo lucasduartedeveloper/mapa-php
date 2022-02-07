@@ -28,6 +28,15 @@ try {
   
     echo json_encode($details);
   }
+  else if (!empty($_GET["deleteId"])) {
+    $id = htmlspecialchars($_GET["deleteId"]);
+    $sql = "DELETE FROM extra_audio WHERE id=".$id.";";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+  
+    echo $sql;
+  }
   else {
     $sql = "SELECT id,nome,latitude,longitude,desenho,data_hora FROM extra_audio;";
 
