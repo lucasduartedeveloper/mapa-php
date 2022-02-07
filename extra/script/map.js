@@ -34,14 +34,15 @@ function compararAudio(a, b) {
 }
 
 var array8 = [];
+var array16 = [];
 function formatarAudio(buffer) {
-       var array8 = new Uint8Array(buffer);
-       var array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
+       array8 = new Uint8Array(buffer);
+       array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
        var wavHeader = array8.slice(0, 44);
 
        //console.log(buffer);
        //console.log(array);
-       //console.log(ar16);
+       console.log(array8);
 
        var tamanhoBloco = 100;
        var quantidade = Math.floor(array8.length / tamanhoBloco);
