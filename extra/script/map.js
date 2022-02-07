@@ -39,7 +39,7 @@ function formatarAudio(buffer) {
        //console.log(array);
        
        var header = array.slice(37,40);
-       console.log(Strings.fromCharCode(header[0]);
+       console.log(String.fromCharCode(header[0]);
 
        var tamanhoBloco = 100;
        var quantidade = Math.floor(array.length / tamanhoBloco);
@@ -54,7 +54,7 @@ function formatarAudio(buffer) {
                   }
             }
 
-            novoArray.push(bloco / tamanhoBloco);
+            novoArray.push(Math.floor(bloco / tamanhoBloco));
        }
 
        return novoArray;
