@@ -72,13 +72,13 @@ $("#mic").on("click", function(e) {
           recording = true;
           $("#mic").addClass("active");
           $("#mic i").removeClass("bi-mic-mute-fill");
-          $("#mic i").addClass("bi-mute-fill");
+          $("#mic i").addClass("bi-mic-fill");
           recordAudio();
      }
      else {
           recording = false;
           $("#mic").removeClass("active");
-          $("#mic i").removeClass("bi-mute-fill");
+          $("#mic i").removeClass("bi-mic-fill");
           $("#mic i").addClass("bi-mic-mute-fill");
           rec.stop();
      }
