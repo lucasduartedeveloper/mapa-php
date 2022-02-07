@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=9">
+<link rel="stylesheet" href="/extra/css/style.css?v=10">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -34,7 +34,7 @@
 </div>
 
 <div id="audio-wave" class="audio-wave-box">
-     <canvas id="audio-wave"></canvas>
+     <canvas id="wave" class="audio-wave-canvas"></canvas>
 </div>
 
 <button id="mic" type="button" class="btn-mic float-center">

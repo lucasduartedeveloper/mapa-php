@@ -36,6 +36,9 @@ function compararStrings(a, b) {
 function formatarAudio(buffer) {
        var array = new Uint8Array(buffer);
        console.log(array.length);
+       
+       
+
        return array;
 }
 
