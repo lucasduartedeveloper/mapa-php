@@ -14,7 +14,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 var base64anterior = "xxx";
 function postAudio(nome, base64) {
       console.log("nome: " + nome);
-      console.log("base64: " + base64.substring(0,20));
+      console.log("base64: " + base64.substring(0,30);
       console.log("similaridade: " +
            compararStrings(
                  base64anterior, 
@@ -29,11 +29,11 @@ function compararStrings(a, b) {
 
        var soma = 0;
        for (var i = 0; i < menor.length; i++) {
-            if (maior.charAt(i)  == menor.charAt(i)) {
+            if (menor.charAt(i)  == maior.charAt(i)) {
                   soma++;
             }
        }
-       return menor.length / 100 * soma;
+       return (menor.length / 100) * soma;
 }
 
 var audioChunks;
