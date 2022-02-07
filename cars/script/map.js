@@ -20,7 +20,7 @@ $.ajax({
     data: {
        media_url : "https://www.rev.ai/FTC_Sample_1.mp3",
        metadata : "This is a sample submit jobs option" 
-    }
+    },
     cache: false,
     beforeSend: function (xhr) {
         /* Authorization header */
