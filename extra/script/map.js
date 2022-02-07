@@ -69,12 +69,12 @@ navigator.mediaDevices.getUserMedia({
     .then(function(stream) { 
 
           gumStream = stream;
-          input = audioContext.createMediaStreamSource(stream);
+          var input = audioContext.createMediaStreamSource(stream);
           recorder = new Recorder(input, {
                numChannels: 1
           }) 
 
-          recorder.record()
+          recorder.record();
     }).catch(function(err) { });
 }
 
