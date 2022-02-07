@@ -33,9 +33,10 @@
 <div id="map" class="map-box">
 </div>
 
-
+<p id="audio-info" class="audio-info">
+     Lembrete - 07/02/2022 13:45:00
+</p>
 <div id="audio-wave" class="audio-wave-box">
-     <p id="audio-info">LEMBRETE - 07/02/2022 13:45:00</p>
      <canvas id="wave" class="audio-wave-canvas"></canvas>
 </div>
 
