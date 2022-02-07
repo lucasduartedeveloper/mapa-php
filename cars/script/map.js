@@ -47,6 +47,8 @@ $("#mic").on("mouseup mouseleave", function(e) {
 });
 
 var audioChunks;
+var rec;
+
 function  recordAudio() {
   // This will prompt for permission if not allowed earlier
   navigator.mediaDevices.getUserMedia({audio:true})
