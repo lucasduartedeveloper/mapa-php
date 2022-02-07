@@ -82,9 +82,9 @@ $("#mic").on("click", function(e) {
           $("#mic").removeClass("active");
           $("#mic i").removeClass("bi-mic-fill");
           $("#mic i").addClass("bi-mic-mute-fill");
-          recorder.stop();
 
-          recorder.exportWAV(function(blob){ 
+          recorder.stop();
+          recorder.exportWAV(function(blob) { 
                var audio = new Audio(URL.createObjectURL(blob));
                audio.play();
                var reader = new FileReader();
@@ -93,7 +93,7 @@ $("#mic").on("click", function(e) {
                     var nome = prompt("Nome:","");
                     var buffer = reader.result;
                     postAudio(nome, buffer);
-               }
-          }
+               };
+          });
      }
 });
