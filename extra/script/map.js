@@ -67,13 +67,13 @@ function recordAudio() {
   navigator.mediaDevices.getUserMedia({audio:true})
     .then(stream => {
       audioChunks = []; 
-      rec = new MediaRecorder(stream);
+      rec = new MediaRecorder(stream, { mimeType: "audio/wav" });
       rec.ondataavailable = e => {
         //console.log("recording");
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
           var blob = new Blob(audioChunks, 
-          { mimeType: "audio/wav" });
+          { type: "audio/wav" });
           var audio = new Audio(URL.createObjectURL(blob));
           audio.play();
 
