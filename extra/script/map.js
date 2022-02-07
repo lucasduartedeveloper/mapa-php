@@ -287,8 +287,9 @@ function excluirAudio(m) {
 }
 
 // Play áudio
+var audio = new Audio();
 function playAudio(m) {
-    console.log(m);
+    
 }
 
 // Click no mapa

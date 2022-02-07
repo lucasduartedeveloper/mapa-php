@@ -33,10 +33,10 @@
 <div id="map" class="map-box">
 </div>
 
-<p id="audio-info" class="audio-info">
+<p id="audio-info"  style="display:nome;" class="audio-info">
      Lembrete - 07/02/2022 13:45:00
 </p>
-<div id="audio-wave" class="audio-wave-box">
+<div id="audio-wave" style="display:nome;" class="audio-wave-box">
      <canvas id="wave" class="audio-wave-canvas"></canvas>
 </div>
 
