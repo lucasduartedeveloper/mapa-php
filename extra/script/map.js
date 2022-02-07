@@ -11,11 +11,14 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 }).addTo(map);
 
 // Enviar o áudio para o banco de dados
-var base64anterior = "";
+var base64anterior = "xxx";
 function postAudio(nome, base64) {
       console.log("nome: " + nome);
       console.log("base64: " + base64);
-      console.log("similaridade: " + compararStrings(base64anterior, base64) + "%");
+      console.log("similaridade: " +
+           compararStrings(
+                 base64anterior.substring(0,10), 
+                 base64) + "%");
       base64anterior = base64;
 }
 
@@ -30,7 +33,7 @@ function compararStrings(a, b) {
                   soma++;
             }
        }
-       return maior.length / 100 * soma;
+       return menor.length / 100 * soma;
 }
 
 var audioChunks;
