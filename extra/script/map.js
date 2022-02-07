@@ -259,7 +259,7 @@ function reload() {
               var dblClick = function (e) {
                    excluirAudio(this.m);
                };
-               var audioDblClick = click.bind(audios[k]);
+               var audioDblClick = dblClick.bind(audios[k]);
 
               audios[k].marker = L.marker(
               [audios[k].latitude, audios[k].longitude],
