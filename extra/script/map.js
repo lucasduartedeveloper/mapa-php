@@ -248,11 +248,12 @@ function reload() {
                iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
                popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
                });
-
+              
+              audios[k].n = k;
               audios[k].marker = L.marker(
               [audios[k].latitude, audios[k].longitude],
               {icon: icon, draggable: true})
-              .on("click", (k) => carregarAudio(k))
+              .on("click", (e) => carregarAudio(e.target.n))
               .addTo(map);
 
               audios[k].markerShadow = L.circle(
@@ -269,6 +270,6 @@ function reload() {
 
 // Carregar áudio
 function carregarAudio(n) {
-      $("#audio-info").text(audios[k].nome + " - " + audios[k].data_hora);
-      desenharWave(audios[k].desenho.split(","));
+      $("#audio-info").text(audios[n].nome + " - " + audios[n].data_hora);
+      desenharWave(audios[n].desenho.split(","));
 }
