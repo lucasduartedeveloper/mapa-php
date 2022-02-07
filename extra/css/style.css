@@ -54,6 +54,7 @@ html, body {
 
 .audio-wave-box {
    position: fixed;
+   color: "#fff";
    background-color: black;
    display: flex;
    justify-content: center;
