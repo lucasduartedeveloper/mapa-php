@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/cars/css/style.css?v=3">
+<link rel="stylesheet" href="/cars/css/style.css?v=4">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -31,10 +31,11 @@
 <body>
 
 <div id="map" class="box">
-     <button type="button" class="btn btn-outline-dark float-right">
-          <i class="bi bi-mic-fill"></i>
-     </button>
 </div>
+
+<button type="button" class="btn btn-outline-dark float-right">
+      <i class="bi bi-mic-fill"></i>
+</button>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 

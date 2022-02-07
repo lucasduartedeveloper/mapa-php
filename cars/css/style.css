@@ -28,9 +28,13 @@ html, body {
 
 .float-right{
    position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    bottom: 10px !important;
-   right: 10px !important;
-   width: 60px !important;
-   height: 60px !important;
+   right: 40vw !important;
+   width: 20vw !important;
+   height: 20vw !important;
    border-radius: 50% !important;
+   z-index: 9999;
 }
