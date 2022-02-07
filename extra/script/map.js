@@ -75,8 +75,8 @@ function desenharWave(array) {
             context.beginPath(); // always start a new line with beginPath
             context.strokeStyle = "#FFFFFF";
             context.lineWidth = 5;
-            context.moveTo( 2.5+(k * 5), 30 ); // start position
-            context.lineTo( 2.5+(k * 5), 29 - array[k] );
+            context.moveTo( 2.5+(k * 5), 50 ); // start position
+            context.lineTo( 2.5+(k * 5), 50 - (1+ ((50 /65535) * array[k])) );
             context.stroke(); // actually draw the line
      }
      /*
