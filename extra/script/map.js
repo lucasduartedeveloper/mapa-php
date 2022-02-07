@@ -33,7 +33,7 @@ function compararStrings(a, b) {
                   soma++;
             }
        }
-       return (menor.length / 100) * soma;
+       return (100 / menor.length) * soma;
 }
 
 var audioChunks;
