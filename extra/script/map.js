@@ -275,8 +275,8 @@ function reload() {
 // Carregar áudio
 function carregarAudio(m) {
       $("#audio-info").show();
-      $("#audio-wave-box").show();
-      $("#audio-wave-box").click((m) => playAudio(m));
+      $("#audio-wave").show();
+      $("#audio-wave").click((m) => playAudio(m));
 
       $("#audio-info").text(audios[m].nome + " - " + audios[m].data_hora);
       desenharWave(audios[m].desenho.split(","));
@@ -288,13 +288,14 @@ function excluirAudio(m) {
 
 // Play áudio
 function playAudio(m) {
-    
+    console.log(m);
 }
 
 // Click no mapa
+map.on("click", mapClick);
 function mapClick(e) {
      $("#audio-info").hide();
-     $("#audio-wave-box").hide();
+     $("#audio-wave").hide();
 
     var pos = posicaoNoGrid({
          lat: e.latlng.lat,
