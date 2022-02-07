@@ -16,6 +16,7 @@ function postAudio(nome, base64) {
       console.log("nome: " + nome);
       console.log("base64: " + base64);
       console.log("similaridade: " + compararStrings(base64anterior, base64) + "%");
+      base64anterior = base64;
 }
 
 // Comparar duas strings
