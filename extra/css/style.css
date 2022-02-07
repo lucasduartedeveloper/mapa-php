@@ -44,7 +44,7 @@ html, body {
    justify-content: center;
    align-items: center;
    bottom: 10vw;
-   right: 40vw;
+   left: 40vw;
    width: 20vw;
    height: 20vw;
    border-radius: 50%;
@@ -59,7 +59,7 @@ html, body {
    justify-content: center;
    align-items: center;
    bottom: 40vw;
-   right: 40vw;
+   left: 20vw;
    width: 80vw;
    height: 20vw;
    border-radius: 10px;
