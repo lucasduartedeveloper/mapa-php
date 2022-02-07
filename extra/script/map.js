@@ -308,7 +308,7 @@ function excluirAudio(m) {
 var audio = new Audio();
 function playAudio(m) {
     $.getJSON("/extra/ajax/audio.php?id="+audios[m].id, function(data) {
-         audio.stop();
+         audio.pause();
          audio = new Audio(data[0].base64);
          audio.play();
     });
