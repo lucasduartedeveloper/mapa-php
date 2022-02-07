@@ -184,7 +184,7 @@ $("#mic").on("click", function(e) {
                     reader.onloadend = function() {
                           var base64 = reader.result;
                           postAudio(nome, buffer, base64);
-                    }
+                    };
                };
           });
      }
@@ -236,8 +236,8 @@ var audios = [];
 function reload() {
    $.getJSON("/extra/ajax/audio.php", function(data) {
           for (var k in audios) {
-               map.removeControl(audio[k].marker);
-               map.removeControl(audio[k].markerShadow);
+               map.removeControl(audios[k].marker);
+               map.removeControl(audios[k].markerShadow);
           }
 
           audios = data;
@@ -250,7 +250,7 @@ function reload() {
                });
 
               audios[k].marker = L.marker(
-              [audios[k].[k].latitude, audios[k].longitude],
+              [audios[k].latitude, audios[k].longitude],
               {icon: icon, draggable: true})
               .addTo(map);
 
