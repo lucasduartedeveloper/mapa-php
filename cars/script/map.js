@@ -11,7 +11,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 }).addTo(map);
 
 // Teste REV.AI
-function revAI() {
+function postRevAI(audio) {
 $.ajax({
     url: "https://api.rev.ai/speechtotext/v1/jobs",
     method: "POST",
@@ -19,13 +19,20 @@ $.ajax({
     crossDomain: true,
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify({
-       media_url : "https://www.rev.ai/FTC_Sample_1.mp3",
-       metadata : "This is a sample submit jobs option" 
+       media_url : audio,
+       metadata : "Testando a API",
+       transcriber: "machine",
+       skip_diarization: false,
+       skip_punctuation: false,
+       remove_disfluencies: false,
+       filter_profanity: false,
+       speaker_channel_count: 1,
+       language: "en"
     }),
     cache: false,
     beforeSend: function (xhr) {
         /* Authorization header */
-        xhr.setRequestHeader("Authorization", "Bearer 02Bt2V6ID8LqsHOO6HyvGH-SCLbge8CHiLYROtMOjRAydDiv9eox0QqLErOKMSLEW24RTBoUjtjDo25qJnR28R8GUbB6s");
+        xhr.setRequestHeader("Authorization", "Bearer 029FowJO3lbw_js27FMtDQwUmspDdatLDFSJWJCej9sktFwh3-Ik42HJIK9Yk_rDKySiRDzx6j5uYDB9CjwFPh_HwktTg");
     },
     success: function (data) {
          console.log(data); 
@@ -53,6 +60,9 @@ function recordAudio() {
           var blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
           var audio = new Audio(URL.createObjectURL(blob));
           audio.play();
+
+          postRevAI(URL.createObjectURL(blob));
+
           //recordedAudio.src = URL.createObjectURL(blob);
           //recordedAudio.controls=true;
           //recordedAudio.autoplay=true;
