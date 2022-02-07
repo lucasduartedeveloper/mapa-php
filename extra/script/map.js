@@ -36,31 +36,61 @@ function compararAudio(a, b) {
 var array8 = [];
 var array16 = [];
 function formatarAudio(buffer) {
-       array8 = Array.from(new Uint8Array(buffer));
+       array8 = new Uint8Array(buffer);
        array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
        var wavHeader = array8.slice(0, 44);
 
        //console.log(buffer);
        //console.log(array);
-       console.log(array8);
+       //console.log(array8);
 
-       var tamanhoBloco = 100;
-       var quantidade = Math.floor(array8.length / tamanhoBloco);
+       var tamanhoBloco = 500;
+       var quantidade = Math.floor(array16.length / tamanhoBloco);
        var novoArray = [];
 
        for (var i = 0; i <= quantidade; i++) {
             var bloco = 0;
             for (var j = 0; j < tamanhoBloco; j++) {
                   var m = (i * tamanhoBloco) + j;
-                  if ((m+1) <= array8.length) {
-                        bloco += array8[m];
+                  if ((m+1) <= array16.length) {
+                        bloco += array16[m];
                   }
             }
 
             novoArray.push(Math.floor(bloco / tamanhoBloco));
        }
 
+       desenharWave(novoArray);
        return novoArray;
+}
+
+function desenharWave(array) {
+     var canvas = document.getElementById("wave");
+     var context = canvas.getContext( '2d' );
+
+     canvas.width = 100;
+     canvas.height = 50;
+
+     for (var k = 0; k < array.length; k++) {
+            context.beginPath(); // always start a new line with beginPath
+            context.strokeStyle = "#FFFFFF";
+            context.lineWidth = 10;
+            context.moveTo( 5+(k * 10), 50 ); // start position
+            context.lineTo( 5+(k * 10), 49 - array[k] );
+            context.stroke(); // actually draw the line
+     }
+     /*
+     context.beginPath(); // always start a new line with beginPath
+     context.strokeStyle = "#000000";
+     context.lineWidth = 2;
+     context.moveTo( 1, 1 ); // start position
+     context.lineTo( 39, 1 );
+     context.lineTo( 39, 10 );
+     context.lineTo( 1, 10 );
+     context.lineTo( 1, 1 );
+     context.stroke(); // actually draw the line */
+
+     return canvas.toDataURL();
 }
 
 // Audio
