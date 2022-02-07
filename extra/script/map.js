@@ -37,9 +37,20 @@ function formatarAudio(buffer) {
        var array = new Uint8Array(buffer);
        console.log(array.length);
        
-       
+       var tamanhoBloco = 100;
+       var quantidade = Math.floor(array.length / tamanhoBloco);
+       var novoArray = [];
 
-       return array;
+       for (var i = 0; i < quantidade; i++) {
+            var bloco = 0;
+            for (var j = 0; j < tamanhoBloco; j++) {
+                  var m = (i * tamanhoBloco) + j;
+                 if (array.length < m) bloco += array[m];
+            }
+            novoArray.push(bloco / tamanhoBloco);
+       }
+
+       return novoArray;
 }
 
 var audioChunks;
