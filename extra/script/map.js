@@ -60,42 +60,12 @@ function formatarAudio(buffer) {
        return novoArray;
 }
 
-var audioChunks;
-var rec;
+var recorder;
 function recordAudio() {
-  // This will prompt for permission if not allowed earlier
-  navigator.mediaDevices.getUserMedia({audio:true})
-    .then(stream => {
-      audioChunks = []; 
-      rec = new MediaRecorder(stream, { mimeType: "audio/wav" });
-      rec.ondataavailable = e => {
-        //console.log("recording");
-        audioChunks.push(e.data);
-        if (rec.state == "inactive"){
-          var blob = new Blob(audioChunks, 
-          { type: "audio/wav" });
-          var audio = new Audio(URL.createObjectURL(blob));
-          audio.play();
-
-          var reader = new FileReader();
-          reader.readAsArrayBuffer(blob); 
-          reader.onloadend = function() {
-                var nome = prompt("Nome:","");
-                var buffer = reader.result;
-                postAudio(nome, buffer);
-          }
-
-          //recordedAudio.src = URL.createObjectURL(blob);
-          //recordedAudio.controls=true;
-          //recordedAudio.autoplay=true;
-          //audioDownload.href = recordedAudio.src;
-          //audioDownload.download = 'wav';
-          //audioDownload.innerHTML = 'download';
-       }
-      }
-    rec.start();  
-    })
-    .catch(e=>console.log(e));
+     audioRecorder.requestDevice(function(rec) {
+            recorder = rec;
+            recorder.start(); // Start recording
+     });
 }
 
 var recording = false;
@@ -112,6 +82,18 @@ $("#mic").on("click", function(e) {
           $("#mic").removeClass("active");
           $("#mic i").removeClass("bi-mic-fill");
           $("#mic i").addClass("bi-mic-mute-fill");
-          rec.stop();
+          recorder.stop();
+
+          recorder.exportWAV(function(blob){ 
+               var audio = new Audio(URL.createObjectURL(blob));
+               audio.play();
+               var reader = new FileReader();
+               reader.readAsArrayBuffer(blob); 
+               reader.onloadend = function() {
+                    var nome = prompt("Nome:","");
+                    var buffer = reader.result;
+                    postAudio(nome, buffer);
+               }
+          }
      }
 });
