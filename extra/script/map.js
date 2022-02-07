@@ -205,7 +205,6 @@ function success(position) {
 }
 
 function error(error) {
-  reload();
   switch(error.code)  {
     case error.PERMISSION_DENIED:
       console.log("Usuário rejeitou a solicitação de Geolocalização.");
@@ -275,6 +274,33 @@ function reload() {
 
 // Carregar áudio
 function carregarAudio(m) {
+      $("#audio-info").show();
+      $("#audio-wave-box").show();
+      $("#audio-wave-box").click((m) => playAudio(m));
+
       $("#audio-info").text(audios[m].nome + " - " + audios[m].data_hora);
       desenharWave(audios[m].desenho.split(","));
+}
+
+// Excluir áudio
+function excluirAudio(m) {
+}
+
+// Play áudio
+function playAudio(m) {
+    
+}
+
+// Click no mapa
+function mapClick(e) {
+     $("#audio-info").hide();
+     $("#audio-wave-box").hide();
+
+    var pos = posicaoNoGrid({
+         lat: e.latlng.lat,
+         lng: e.latlng.lng
+    });
+    posicao = pos;
+    marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 }
