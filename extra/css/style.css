@@ -55,6 +55,7 @@ html, body {
 .audio-info {
    position: fixed;
    bottom: 60vw;
+   font-size: 20px;
 }
 
 .audio-wave-box {
