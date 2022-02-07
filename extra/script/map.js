@@ -10,13 +10,51 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
+// Texto para audio
+var speaking = false;
+function say(text) {
+         if (!speaking) {
+              var msg = new SpeechSynthesisUtterance();
+              msg.text = text;
+              msg.onend = function(event) {
+                  speaking = false;
+              };
+              speaking = true;
+              window.speechSynthesis.speak(msg);
+        }
+}
+
+// Posição no mapa
+var posicao = { lat: 0, lng: 0 };
+function posicaoNoGrid(pos) {
+  var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
+
+  var a = 0.000008993216088271083 * 5;
+  var b = (inicio.lat - (pos.lat)) / a;
+  var c = Math.floor(b) + 0.5;
+
+  var d = 0.000009956626094265175 * 5;
+  var e = (inicio.lng - (pos.lng)) / d;
+  var f = Math.floor(e) + 0.5;
+
+  pos.lat = inicio.lat + ((a * c) * -1);
+  pos.lng = inicio.lng + ((d * f) * -1);
+
+  return pos;
+}
+
 // Enviar o áudio para o banco de dados
-var audioAnterior = "xxx";
 function postAudio(nome, buffer) {
-      console.log("nome: " + nome);
-      console.log("audio: " + formatarAudio(buffer));
-      console.log("similaridade: 0%");
-      audioAnterior = formatarAudio(buffer);
+
+      $.post("/ajax/localizacao_gps_item.php", {
+             nome: nome,
+             latitude: posicao.lat, 
+             longitude: posicao.lng,
+             desenho: formatarAudio(buffer),
+             base64: hp,
+             }).done(function(data) { 
+                   
+      });
 }
 
 // Comparar dois audios
@@ -54,7 +92,7 @@ function formatarAudio(buffer) {
             novoArray.push(Math.floor((100 / 65535) * (bloco / tamanhoBloco)));
        }
 
-       console.log(novoArray);
+       //console.log(novoArray);
        desenharWave(novoArray);
        return novoArray;
 }
@@ -99,6 +137,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }).catch(e=>console.log(e));
 }
 
+// Botão de gravação
 var recording = false;
 $("#mic").on("click", function(e) {
      if (!recording) {
@@ -122,17 +161,6 @@ $("#mic").on("click", function(e) {
                var reader = new FileReader();
                reader.readAsArrayBuffer(blob); 
                reader.onloadend = function() {
-                    /* Download teste
-                    var a = document.createElement("a");
-                    document.body.appendChild(a);
-                    a.style = "display: none";
-        
-                    url = window.URL.createObjectURL(blob);
-                    a.href = url;
-                    a.download = "teste.wav";
-                    a.click();
-                    window.URL.revokeObjectURL(url);*/
-
                     var nome = prompt("Nome:","");
                     var buffer = reader.result;
                     postAudio(nome, buffer);
@@ -140,3 +168,41 @@ $("#mic").on("click", function(e) {
           });
      }
 });
+
+// Localização melhor
+function success(position) {
+
+    posicao = posicaoNoGrid({
+        lat : position.coords.latitude,
+        lng : position.coords.longitude
+    });
+
+    map.setView([posicao.lat, posicao.lng], 19);
+}
+
+function error(error) {
+    reload();
+  switch(error.code)  {
+    case error.PERMISSION_DENIED:
+      console.log("Usuário rejeitou a solicitação de Geolocalização.");
+      setInterval(reload, 5000);
+      break;
+    case error.POSITION_UNAVAILABLE:
+      console.log("Localização indisponível.");
+      break;
+    case error.TIMEOUT:
+      console.log("A requisição expirou.");
+      break;
+    case error.UNKNOWN_ERROR:
+      console.log("Algum erro desconhecido aconteceu.");
+      break;
+    }
+}
+
+const options = {
+  enableHighAccuracy: true,
+  maximumAge: 0,
+  timeout: 5000
+};
+
+const watchID = navigator.geolocation.watchPosition(success, error, options); 
