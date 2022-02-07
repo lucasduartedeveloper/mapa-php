@@ -276,7 +276,12 @@ function reload() {
 function carregarAudio(m) {
       $("#audio-info").show();
       $("#audio-wave").show();
-      $("#audio-wave").click((m) => playAudio(m));
+
+      var click = function (e) {
+           carregarAudio(this.m);
+      };
+      var audioClick = click.bind(audios[m]);
+      $("#audio-wave").click(audioClick);
 
       $("#audio-info").text(audios[m].nome + " - " + audios[m].data_hora);
       desenharWave(audios[m].desenho.split(","));
@@ -289,7 +294,10 @@ function excluirAudio(m) {
 // Play áudio
 var audio = new Audio();
 function playAudio(m) {
-    
+    $.getJSON("/extra/ajax/audio.php?id="+m, function(data) {
+         
+         console.log(data);
+    });
 }
 
 // Click no mapa
