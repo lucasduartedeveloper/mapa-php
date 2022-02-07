@@ -68,15 +68,15 @@ function desenharWave(array) {
      var canvas = document.getElementById("wave");
      var context = canvas.getContext( '2d' );
 
-     canvas.width = 100;
+     canvas.width = 200;
      canvas.height = 50;
 
      for (var k = 0; k < array.length; k++) {
             context.beginPath(); // always start a new line with beginPath
             context.strokeStyle = "#FFFFFF";
-            context.lineWidth = 10;
-            context.moveTo( 5+(k * 10), 50 ); // start position
-            context.lineTo( 5+(k * 10), 49 - array[k] );
+            context.lineWidth = 5;
+            context.moveTo( 2.5+(k * 5), 30 ); // start position
+            context.lineTo( 2.5+(k * 5), 29 - array[k] );
             context.stroke(); // actually draw the line
      }
      /*
