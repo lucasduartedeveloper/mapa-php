@@ -29,7 +29,7 @@ try {
     echo json_encode($details);
   }
   else {
-    $sql = "SELECT id,nome,latitude,longitude,desenho FROM extra_audio;";
+    $sql = "SELECT id,nome,latitude,longitude,desenho,data_hora FROM extra_audio;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

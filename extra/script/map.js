@@ -232,8 +232,40 @@ const options = {
 const watchID = navigator.geolocation.watchPosition(success, error, options); 
 
 // Carregar atualizações
+var audios = [];
 function reload() {
    $.getJSON("/extra/ajax/audio.php", function(data) {
-          console.log(data);
+          for (var k in audios) {
+               map.removeControl(audio[k].marker);
+               map.removeControl(audio[k].markerShadow);
+          }
+
+          audios = data;
+          for (var k in audios) {
+               var icon = L.icon({
+               iconUrl: "../img/paper.png",
+               iconSize:     [35, 40], // size of the icon
+               iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
+               popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+               });
+
+              audios[k].marker = L.marker(
+              [audios[k].[k].latitude, audios[k].longitude],
+              {icon: icon, draggable: true})
+              .addTo(map);
+
+              audios[k].markerShadow = L.circle(
+              [audios[k].latitude, audios[k].longitude], {
+              color: "#581845",
+              fillOpacity: 0.5,
+        	radius: 2.5,
+        	weight: 1,
+        	stroke: false
+	}).addTo(map);
+          }
       });
+}
+
+// Carregar áudio
+function carregarAudio(id) {
 }
