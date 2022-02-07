@@ -44,16 +44,16 @@ function posicaoNoGrid(pos) {
 }
 
 // Enviar o áudio para o banco de dados
-function postAudio(nome, buffer) {
+function postAudio(nome, buffer, base64) {
 
-      $.post("/ajax/localizacao_gps_item.php", {
+      $.post("/extra/ajax/audio.php", {
              nome: nome,
              latitude: posicao.lat, 
              longitude: posicao.lng,
              desenho: formatarAudio(buffer),
-             base64: hp,
+             base64: base64,
              }).done(function(data) { 
-                   
+                   console.log(data); 
       });
 }
 
@@ -161,9 +161,13 @@ $("#mic").on("click", function(e) {
                var reader = new FileReader();
                reader.readAsArrayBuffer(blob); 
                reader.onloadend = function() {
-                    var nome = prompt("Nome:","");
                     var buffer = reader.result;
-                    postAudio(nome, buffer);
+                    var nome = prompt("Nome:","");
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function() {
+                          var base64 = reader.result;
+                          postAudio(nome, buffer, base64);
+                    }
                };
           });
      }

@@ -5,8 +5,13 @@ try {
  
   if (!empty($_POST["base64"])) {
 
-    $base64 = htmlspecialchars($_POST["hp_atual"]);
-    $sql = "INSERT audio_command (base64) VALUES (".$base64.");";
+    $nome = htmlspecialchars($_POST["nome"]);
+    $latitude = htmlspecialchars($_POST["latitude"]);
+    $longitude = htmlspecialchars($_POST["longitude"]);
+    $desenho = htmlspecialchars($_POST["desenho"]);
+    $base64 = htmlspecialchars($_POST["base64"]);
+
+    $sql = "INSERT extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho."','".$base64."');";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -17,7 +22,7 @@ try {
   else {
 
     $id = htmlspecialchars($_GET["id"]);
-    $sql = "SELECT * FROM audio_command WHERE id=".$id.";";
+    $sql = "SELECT * FROM extra_audio WHERE id=".$id.";";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
