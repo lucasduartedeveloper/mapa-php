@@ -14,7 +14,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 var audioAnterior = "xxx";
 function postAudio(nome, buffer) {
       console.log("nome: " + nome);
-      console.log("audio: " + formatarAudio(buffer);
+      console.log("audio: " + formatarAudio(buffer));
       console.log("similaridade: 0%");
       audioAnterior = formatarAudio(buffer);
 }
