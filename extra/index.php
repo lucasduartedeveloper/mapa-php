@@ -30,7 +30,11 @@
 </head>
 <body>
 
-<div id="map" class="box">
+<div id="map" class="map-box">
+</div>
+
+<div id="audio-wave" class="audio-wave-box">
+     <canvas id="audio-wave"></canvas>
 </div>
 
 <button id="mic" type="button" class="btn-mic float-center">
@@ -53,7 +57,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=25"></script> 
+<script src="/extra/script/map.js?v=26"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

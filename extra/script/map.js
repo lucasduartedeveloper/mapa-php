@@ -11,17 +11,12 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 }).addTo(map);
 
 // Enviar o áudio para o banco de dados
-var base64anterior = "xxx";
-function postAudio(nome, base64) {
+var audioAnterior = "xxx";
+function postAudio(nome, buffer) {
       console.log("nome: " + nome);
-      console.log("base64: " + base64.substring(0,30));
-      console.log("similaridade: " +
-           compararStrings(
-                 base64anterior, 
-                 base64) + "% " +
-                 base64anterior.length + "/" + base64.length
-            );
-      base64anterior = base64;
+      console.log("audio: " + formatarAudio(buffer);
+      console.log("similaridade: 0%",
+      audioAnterior = formatarAudio(buffer);
 }
 
 // Comparar duas strings
@@ -36,6 +31,11 @@ function compararStrings(a, b) {
             }
        }
        return (100 / menor.length) * soma;
+}
+
+function formatarAudio(buffer) {
+       var view = new Int32Array(buffer);
+       console.log(view.length);
 }
 
 var audioChunks;
@@ -55,11 +55,11 @@ function recordAudio() {
           audio.play();
 
           var reader = new FileReader();
-          reader.readAsDataURL(blob); 
+          reader.readAsArrayBuffer(blob); 
           reader.onloadend = function() {
                 var nome = prompt("Nome:","");
-                var base64data = reader.result;
-                postAudio(nome, base64data);
+                var buffer = reader.result;
+                postAudio(nome, buffer);
           }
 
           //recordedAudio.src = URL.createObjectURL(blob);
