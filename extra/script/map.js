@@ -39,18 +39,20 @@ function formatarAudio(buffer) {
        //console.log(array);
        
        var wavHeader = array.slice(0, 44);
-       console.log(wavHeader);
+       //console.log(wavHeader);
+       var buf = new Buffer(array.slice(44));
+       var ar16 = new Uint16Array(buf.buffer, buf.byteOffset, buf.byteLength / Uint16Array.BYTES_PER_ELEMENT);
 
        var tamanhoBloco = 100;
-       var quantidade = Math.floor(array.length / tamanhoBloco);
+       var quantidade = Math.floor(ar16.length / tamanhoBloco);
        var novoArray = [];
 
        for (var i = 0; i <= quantidade; i++) {
             var bloco = 0;
             for (var j = 0; j < tamanhoBloco; j++) {
                   var m = (i * tamanhoBloco) + j;
-                  if ((m+1) <= array.length) {
-                        bloco += array[m];
+                  if ((m+1) <= ar16.length) {
+                        bloco += ar16[m];
                   }
             }
 
