@@ -1,6 +1,7 @@
-<?php include ('/config/db.php')?>
+<?php include ("/config/db.php")?>
 <?php
 $sql ="";
+$echo = "teste";
 try {
  
   if (!empty($_POST["base64"])) {
@@ -17,7 +18,6 @@ try {
     //$stmt->execute();
 
     echo $sql;
-
   }
   else if (!empty($_GET["id"])) {
     $id = htmlspecialchars($_GET["id"]);
