@@ -33,7 +33,7 @@
 <div id="map" class="box">
 </div>
 
-<button type="button" class="btn-mic float-center">
+<button id="mic" type="button" class="btn-mic float-center">
       <i class="bi bi-mic-fill"></i>
 </button>
 
