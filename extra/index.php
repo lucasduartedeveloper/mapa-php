@@ -55,10 +55,11 @@
 
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
-<script src="/extra/script/github/audioRecord.js"></script>
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=48"></script> 
+<script src="/extra/script/map.js?v=49"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

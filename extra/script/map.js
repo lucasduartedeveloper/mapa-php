@@ -61,11 +61,21 @@ function formatarAudio(buffer) {
 }
 
 var recorder;
+var gumStream;
 function recordAudio() {
-     audioRecorder.requestDevice(function(rec) {
-            recorder = rec;
-            recorder.record(); // Start recording
-     });
+navigator.mediaDevices.getUserMedia({
+    audio: true,
+    video: false })
+    .then(function(stream) { 
+
+          gumStream = stream;
+          input = audioContext.createMediaStreamSource(stream);
+          recorder = new Recorder(input, {
+               numChannels: 1
+          }) 
+
+          recorder.record()
+    }).catch(function(err) { });
 }
 
 var recording = false;
@@ -84,6 +94,7 @@ $("#mic").on("click", function(e) {
           $("#mic i").addClass("bi-mic-mute-fill");
 
           recorder.stop();
+          gumStream.getAudioTracks()[0].stop();
           recorder.exportWAV(function(blob) { 
                var audio = new Audio(URL.createObjectURL(blob));
                audio.play();
