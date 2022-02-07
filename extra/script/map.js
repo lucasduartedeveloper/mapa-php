@@ -18,7 +18,9 @@ function postAudio(nome, base64) {
       console.log("similaridade: " +
            compararStrings(
                  base64anterior, 
-                 base64) + "%");
+                 base64) + "% " +
+                 base64anterior.length + "/" + base64.length
+            );
       base64anterior = base64;
 }
 
@@ -45,7 +47,7 @@ function recordAudio() {
       audioChunks = []; 
       rec = new MediaRecorder(stream);
       rec.ondataavailable = e => {
-        console.log("recording");
+        //console.log("recording");
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
           var blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
