@@ -61,7 +61,13 @@ function recordAudio() {
           var audio = new Audio(URL.createObjectURL(blob));
           audio.play();
 
-          postRevAI(URL.createObjectURL(blob));
+          var reader = new FileReader();
+          reader.readAsDataURL(blob); 
+          reader.onloadend = function() {
+                var base64data = reader.result;                
+                console.log(base64data);
+                postRevAI(base64data);
+          }
 
           //recordedAudio.src = URL.createObjectURL(blob);
           //recordedAudio.controls=true;
