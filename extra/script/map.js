@@ -46,7 +46,7 @@ function formatarAudio(buffer) {
             var bloco = 0;
             for (var j = 0; j < tamanhoBloco; j++) {
                   var m = (i * tamanhoBloco) + j;
-                 if (array.length < (m+1)) bloco += array[m];
+                  if (array.length < (m+1)) bloco += array[m];
             }
             novoArray.push(bloco / tamanhoBloco);
        }
@@ -66,7 +66,7 @@ function recordAudio() {
         //console.log("recording");
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
-          var blob = new Blob(audioChunks,{type:'audio/x-mpeg-3'});
+          var blob = new Blob(audioChunks,{type:'audio/wav'});
           var audio = new Audio(URL.createObjectURL(blob));
           audio.play();
 
@@ -82,7 +82,7 @@ function recordAudio() {
           //recordedAudio.controls=true;
           //recordedAudio.autoplay=true;
           //audioDownload.href = recordedAudio.src;
-          //audioDownload.download = 'mp3';
+          //audioDownload.download = 'wav';
           //audioDownload.innerHTML = 'download';
        }
       }
