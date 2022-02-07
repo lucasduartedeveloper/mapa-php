@@ -19,7 +19,7 @@ try {
     echo $sql;
 
   }
-  else {
+  else if (!empty($_GET["id"])) {
     $id = htmlspecialchars($_GET["id"]);
     $sql = "SELECT * FROM extra_audio WHERE id=".$id.";";
 
@@ -29,7 +29,16 @@ try {
     $details = $stmt->fetchAll(); 
   
     echo json_encode($details);
+  }
+  else {
+    $sql = "SELECT id,nome,latitude,longitude,desenho FROM extra_audio;";
 
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $rowCount = $stmt->rowCount();
+    $details = $stmt->fetchAll(); 
+
+    echo json_encode($details);
   }
 }
 catch (PDOException $e) {
