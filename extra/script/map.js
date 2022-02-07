@@ -107,6 +107,20 @@ $("#mic").on("click", function(e) {
                var reader = new FileReader();
                reader.readAsArrayBuffer(blob); 
                reader.onloadend = function() {
+
+// Download teste
+var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.style = "display: none";
+    return function (data, fileName) {
+        
+            url = window.URL.createObjectURL(blob);
+            a.href = url;
+            a.download = "teste.wav";
+            a.click();
+            window.URL.revokeObjectURL(url);
+    };
+
                     var nome = prompt("Nome:","");
                     var buffer = reader.result;
                     postAudio(nome, buffer);
