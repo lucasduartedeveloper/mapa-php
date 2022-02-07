@@ -249,11 +249,10 @@ function reload() {
                popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
                });
               
-              audios[k].n = k;
               audios[k].marker = L.marker(
               [audios[k].latitude, audios[k].longitude],
               {icon: icon, draggable: true})
-              .on("click", (e) => carregarAudio(e.target.n))
+              .on("click", (k) => carregarAudio(k))
               .addTo(map);
 
               audios[k].markerShadow = L.circle(
