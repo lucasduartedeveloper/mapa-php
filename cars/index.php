@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/css/style.css?v=1">
+<link rel="stylesheet" href="/cars/css/style.css?v=1">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -47,9 +47,9 @@
 
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
-<script src="/script/websocket.js?v=0"></script>
-<script src="/script/script.js?v=0"></script>
-<script src="/script/map.js?v=2"></script> 
+<script src="/cars/script/websocket.js?v=0"></script>
+<script src="/cars/script/script.js?v=0"></script>
+<script src="/cars/script/map.js?v=2"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
