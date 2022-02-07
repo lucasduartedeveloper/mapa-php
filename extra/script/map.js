@@ -36,7 +36,7 @@ function compararAudio(a, b) {
 var array8 = [];
 var array16 = [];
 function formatarAudio(buffer) {
-       array8 = new Uint8Array(buffer);
+       array8 = Array.from(new Uint8Array(buffer));
        array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
        var wavHeader = array8.slice(0, 44);
 
@@ -107,7 +107,7 @@ $("#mic").on("click", function(e) {
                var reader = new FileReader();
                reader.readAsArrayBuffer(blob); 
                reader.onloadend = function() {
-                    // Download teste
+                    /* Download teste
                     var a = document.createElement("a");
                     document.body.appendChild(a);
                     a.style = "display: none";
@@ -116,7 +116,7 @@ $("#mic").on("click", function(e) {
                     a.href = url;
                     a.download = "teste.wav";
                     a.click();
-                    window.URL.revokeObjectURL(url);
+                    window.URL.revokeObjectURL(url);*/
 
                     var nome = prompt("Nome:","");
                     var buffer = reader.result;
