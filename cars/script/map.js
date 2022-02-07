@@ -11,6 +11,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 }).addTo(map);
 
 // Teste REV.AI
+function revAI() {
 $.ajax({
     url: "https://api.rev.ai/speechtotext/v1/jobs",
     method: "POST",
@@ -28,7 +29,7 @@ $.ajax({
         xhr.setRequestHeader("X-Mobile", "false");
     },
     success: function (data) {
-         console.log(data);
+         console.log(data); 
     },
     error: function (jqXHR, textStatus, errorThrown) {
          console.log(jqXHR);
@@ -36,3 +37,4 @@ $.ajax({
          console.log(errorThrown);
     }
 });
+}
