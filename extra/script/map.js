@@ -36,6 +36,7 @@ function compararStrings(a, b) {
 function formatarAudio(buffer) {
        var array = new Uint8Array(buffer);
        console.log(array.length);
+       console.log(array);
        
        var tamanhoBloco = 100;
        var quantidade = Math.floor(array.length / tamanhoBloco);
@@ -45,7 +46,7 @@ function formatarAudio(buffer) {
             var bloco = 0;
             for (var j = 0; j < tamanhoBloco; j++) {
                   var m = (i * tamanhoBloco) + j;
-                 if (array.length < m) bloco += array[m];
+                 if (array.length < (m+1)) bloco += array[m];
             }
             novoArray.push(bloco / tamanhoBloco);
        }
