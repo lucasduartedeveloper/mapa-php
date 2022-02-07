@@ -68,7 +68,7 @@ function postAudio(nome, buffer, base64) {
              latitude: posicao.lat, 
              longitude: posicao.lng,
              desenho: formatarAudio(buffer).toString(),
-             base64: "base64",
+             base64: base64,
              }).done(function(data) { 
                    console.log(data); 
       });

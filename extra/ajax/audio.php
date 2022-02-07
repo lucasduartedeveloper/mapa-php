@@ -13,7 +13,7 @@ try {
     $sql = "INSERT INTO extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho."','".$base64."');";
 
     $stmt = $pdo->prepare($sql);
-    //$stmt->execute();
+    $stmt->execute();
 
     echo $sql;
   }
