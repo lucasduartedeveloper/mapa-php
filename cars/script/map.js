@@ -40,7 +40,7 @@ $.ajax({
 
 var audioChunks;
 var rec;
-function  recordAudio() {
+function recordAudio() {
   // This will prompt for permission if not allowed earlier
   navigator.mediaDevices.getUserMedia({audio:true})
     .then(stream => {
@@ -66,14 +66,20 @@ function  recordAudio() {
     .catch(e=>console.log(e));
 }
 
-function stopRecording() {
-  rec.stop();
-}
-
-$("#mic").on("mousedown", function(e) {
-     recordAudio();
-});
-
-$("#mic").on("mouseup mouseleave", function(e) {
-     stopRecording();
+var recording = false;
+$("#mic").on("click", function(e) {
+     if (!recording) {
+          recording = true;
+          $("#mic").addClass("active");
+          $("#mic i").removeClass("bi-mic-mute-fill");
+          $("#mic i").addClass("bi-mute-fill");
+          recordAudio();
+     }
+     else {
+          recording = false;
+          $("#mic").removeClass("active");
+          $("#mic i").removeClass("bi-mute-fill");
+          $("#mic i").addClass("bi-mic-mute-fill");
+          rec.stop();
+     }
 });

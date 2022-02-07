@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/cars/css/style.css?v=7">
+<link rel="stylesheet" href="/cars/css/style.css?v=8">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -34,7 +34,7 @@
 </div>
 
 <button id="mic" type="button" class="btn-mic float-center">
-      <i class="bi bi-mic-fill"></i>
+      <i class="bi bi-mic-mute-fill"></i>
 </button>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -53,7 +53,7 @@
 
 <script src="/cars/script/websocket.js?v=0"></script>
 <script src="/cars/script/script.js?v=0"></script>
-<script src="/cars/script/map.js?v=11"></script> 
+<script src="/cars/script/map.js?v=12"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
