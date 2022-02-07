@@ -35,10 +35,10 @@ function compararAudio(a, b) {
 
 function formatarAudio(buffer) {
        var array = new Uint8Array(buffer);
-       var ar16 = new Uint16Array(buffer).slice(22);
+       var ar16 = new Uint16Array(array.buffer, array.byteOffset, array.byteLength / 2).slice(22);
        var wavHeader = array.slice(0, 44);
 
-       console.log(buffer);
+       //console.log(buffer);
        //console.log(array);
        //console.log(ar16);
 
