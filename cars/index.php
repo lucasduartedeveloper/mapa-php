@@ -53,7 +53,7 @@
 
 <script src="/cars/script/websocket.js?v=0"></script>
 <script src="/cars/script/script.js?v=0"></script>
-<script src="/cars/script/map.js?v=10"></script> 
+<script src="/cars/script/map.js?v=11"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

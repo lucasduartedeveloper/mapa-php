@@ -38,17 +38,8 @@ $.ajax({
 });
 }
 
-$("#mic").on("mousedown", function(e) {
-     recordAudio();
-});
-
-$("#mic").on("mouseup mouseleave", function(e) {
-     stopRecording();
-});
-
 var audioChunks;
 var rec;
-
 function  recordAudio() {
   // This will prompt for permission if not allowed earlier
   navigator.mediaDevices.getUserMedia({audio:true})
@@ -78,3 +69,11 @@ function  recordAudio() {
 function stopRecording() {
   rec.stop();
 }
+
+$("#mic").on("mousedown", function(e) {
+     recordAudio();
+});
+
+$("#mic").on("mouseup mouseleave", function(e) {
+     stopRecording();
+});
