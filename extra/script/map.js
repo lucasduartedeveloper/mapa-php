@@ -38,8 +38,8 @@ function formatarAudio(buffer) {
        //console.log(array.length);
        //console.log(array);
        
-       var header = array.slice(37,40);
-       console.log(String.fromCharCode(header[0]);
+       var wavHeader = array.slice(37, 40);
+       console.log(wavHeader);
 
        var tamanhoBloco = 100;
        var quantidade = Math.floor(array.length / tamanhoBloco);
