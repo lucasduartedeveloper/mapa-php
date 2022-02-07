@@ -46,7 +46,8 @@ function formatarAudio(buffer) {
             var bloco = 0;
             for (var j = 0; j < tamanhoBloco; j++) {
                   var m = (i * tamanhoBloco) + j;
-                  console.log(array.length < (m+1));
+                  console.log(array.length);
+                  console.log(m+1);
                   if (array.length < (m+1)) {
                         bloco += array[m];
                   }
