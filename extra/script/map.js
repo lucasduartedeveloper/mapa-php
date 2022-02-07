@@ -38,7 +38,7 @@ function formatarAudio(buffer) {
        var ar16 = new Uint16Array(buffer).slice(22);
        //var wavHeader = array.slice(0, 44);
 
-       console.log(array);
+       //console.log(array);
        console.log(ar16);
 
        var tamanhoBloco = 100;
