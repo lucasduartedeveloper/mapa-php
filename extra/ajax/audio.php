@@ -14,13 +14,12 @@ try {
     $sql = "INSERT extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho."','".$base64."');";
 
     $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    //$stmt->execute();
 
     echo $sql;
 
   }
   else {
-
     $id = htmlspecialchars($_GET["id"]);
     $sql = "SELECT * FROM extra_audio WHERE id=".$id.";";
 

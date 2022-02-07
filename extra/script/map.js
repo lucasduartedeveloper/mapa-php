@@ -185,7 +185,7 @@ function success(position) {
 }
 
 function error(error) {
-    reload();
+  //reload();
   switch(error.code)  {
     case error.PERMISSION_DENIED:
       console.log("Usuário rejeitou a solicitação de Geolocalização.");
