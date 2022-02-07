@@ -15,7 +15,7 @@ var audioAnterior = "xxx";
 function postAudio(nome, buffer) {
       console.log("nome: " + nome);
       console.log("audio: " + formatarAudio(buffer);
-      console.log("similaridade: 0%",
+      console.log("similaridade: 0%");
       audioAnterior = formatarAudio(buffer);
 }
 
@@ -34,8 +34,9 @@ function compararStrings(a, b) {
 }
 
 function formatarAudio(buffer) {
-       var view = new Int32Array(buffer);
+       var array = new Int32Array(buffer);
        console.log(view.length);
+       return array;
 }
 
 var audioChunks;
