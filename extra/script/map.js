@@ -54,6 +54,7 @@ function formatarAudio(buffer) {
             novoArray.push(Math.floor((100 / 65535) * (bloco / tamanhoBloco)));
        }
 
+       console.log(novoArray);
        desenharWave(novoArray);
        return novoArray;
 }
@@ -69,7 +70,7 @@ function desenharWave(array) {
             context.beginPath(); // always start a new line with beginPath
             context.strokeStyle = "#FFFFFF";
             context.lineWidth = 5;
-            context.moveTo( 2.5+(k * 5), 49 ); // start position
+            context.moveTo( 2.5+(k * 5), 49 + ((100 - array[k])/2) ); // start position
             context.lineTo( 2.5+(k * 5), 50 - ((100 - array[k])/2) );
             context.stroke(); // actually draw the line
      }
