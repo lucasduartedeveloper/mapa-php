@@ -49,7 +49,7 @@
 
 <script src="/script/websocket.js?v=0"></script>
 <script src="/script/script.js?v=0"></script>
-<script src="/script/geolocation.js?v=2"></script> 
+<script src="/script/map.js?v=2"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
