@@ -47,9 +47,9 @@
 
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
-<script src="/websocket.js?v=0"></script>
-<script src="/script.js?v=0"></script>
-<script src="/geolocation.js?v=0"></script> 
+<script src="/script/websocket.js?v=0"></script>
+<script src="/script/script.js?v=0"></script>
+<script src="/script/geolocation.js?v=1"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
