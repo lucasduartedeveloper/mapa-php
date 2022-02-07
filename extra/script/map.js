@@ -60,8 +60,13 @@ function formatarAudio(buffer) {
        return novoArray;
 }
 
+// Audio
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext = new AudioContext();
 var recorder;
 var gumStream;
+var input;
+
 function recordAudio() {
 navigator.mediaDevices.getUserMedia({ audio: true })
     .then(stream => {
