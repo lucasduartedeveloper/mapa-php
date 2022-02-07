@@ -11,12 +11,12 @@ try {
     $desenho = htmlspecialchars($_POST["desenho"]);
     $base64 = htmlspecialchars($_POST["base64"]);
 
-    $sql = "INSERT extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho."','".$base64."');";
+    $sql = "INSERT INTO extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho."','".$base64."');";
 
     $stmt = $pdo->prepare($sql);
     //$stmt->execute();
 
-    echo $sql;
+    echo "INSERT INTO extra_audio (nome,latitude,longitude,desenho,base64) VALUES ('".$nome."','".$latitude."',''".$longitude."','".$desenho.",'base64';";
   }
   else if (!empty($_GET["id"])) {
     $id = htmlspecialchars($_GET["id"]);
