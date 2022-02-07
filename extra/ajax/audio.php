@@ -1,8 +1,7 @@
+<?php include ('../../config/db.php')?>
 <?php
 $sql ="";
 try {
-  include ("/config/db.php");
-
   if (!empty($_POST["base64"])) {
 
     $nome = htmlspecialchars($_POST["nome"]);
