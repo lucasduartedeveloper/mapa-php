@@ -189,7 +189,7 @@ function error(error) {
   switch(error.code)  {
     case error.PERMISSION_DENIED:
       console.log("Usuário rejeitou a solicitação de Geolocalização.");
-      setInterval(reload, 5000);
+      //setInterval(reload, 5000);
       break;
     case error.POSITION_UNAVAILABLE:
       console.log("Localização indisponível.");
