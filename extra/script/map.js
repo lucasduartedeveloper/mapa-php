@@ -60,17 +60,15 @@ function formatarAudio(buffer) {
        return novoArray;
 }
 
-var recorder;
-var gumStream;
 function recordAudio() {
 navigator.mediaDevices.getUserMedia({
     audio: true,
     video: false })
     .then(function(stream) { 
 
-          gumStream = stream;
+          window.gumStream = stream;
           var input = audioContext.createMediaStreamSource(stream);
-          recorder = new Recorder(input, {
+          window.recorder = new Recorder(input, {
                numChannels: 1
           }) 
 
