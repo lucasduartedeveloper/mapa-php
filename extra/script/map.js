@@ -38,7 +38,7 @@ function formatarAudio(buffer) {
        //console.log(array.length);
        //console.log(array);
        
-       var wavHeader = array.slice(37, 40);
+       var wavHeader = array.slice(0, 44);
        console.log(wavHeader);
 
        var tamanhoBloco = 100;
@@ -72,7 +72,8 @@ function recordAudio() {
         //console.log("recording");
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
-          var blob = new Blob(audioChunks,{type:'audio/wav'});
+          var blob = new Blob(audioChunks, 
+          { mimeType: "audio/wav" });
           var audio = new Audio(URL.createObjectURL(blob));
           audio.play();
 
