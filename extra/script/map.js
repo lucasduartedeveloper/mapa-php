@@ -25,8 +25,8 @@ function compararStrings(a, b) {
        var menor = a.length > b.length ? b : a;
 
        var soma = 0;
-       for (var i = 0; i < maior.length; i++) {
-            if (maior.charAt(i)  == maior.charAt(i)) {
+       for (var i = 0; i < menor.length; i++) {
+            if (maior.charAt(i)  == menor.charAt(i)) {
                   soma++;
             }
        }
