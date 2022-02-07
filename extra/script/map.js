@@ -118,7 +118,7 @@ function desenharWave(array) {
      var canvas = document.getElementById("wave");
      var context = canvas.getContext( '2d' );
 
-     canvas.width = 500;
+     canvas.width = 1000;
      canvas.height = 100;
 
      for (var k = 0; k < array.length; k++) {
@@ -252,6 +252,7 @@ function reload() {
               audios[k].marker = L.marker(
               [audios[k].latitude, audios[k].longitude],
               {icon: icon, draggable: true})
+              .on("click", (k) => carregarAudio(k))
               .addTo(map);
 
               audios[k].markerShadow = L.circle(
@@ -267,5 +268,7 @@ function reload() {
 }
 
 // Carregar áudio
-function carregarAudio(id) {
+function carregarAudio(n) {
+      $("#audio-info").text(audios[k].nome + " - " + audios[k].data_hora);
+      desenharWave(audios[k].desenho.split(","));
 }
