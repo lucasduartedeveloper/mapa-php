@@ -294,6 +294,8 @@ function playAudio(m) {
 // Click no mapa
 map.on("click", mapClick);
 function mapClick(e) {
+     reload();
+
      $("#audio-info").hide();
      $("#audio-wave").hide();
 
