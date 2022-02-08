@@ -340,6 +340,7 @@ function mapClick(e) {
 // Botão de gravação
 var recording = false;
 $(document).ready(function() {
+     console.log("ready");
      $("#mic").on("click", function(e) {
          if (!recording) {
               recording = true;
