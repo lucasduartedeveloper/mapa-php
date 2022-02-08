@@ -75,9 +75,9 @@ html, body {
 .version-info {
    position: fixed;
    bottom: 5vw;
-   font-size: 20px;
+   font-size: 15px;
    left: 10vw;
-   width: 90vw;
+   width: 30vw;
    text-align: left;
    z-index: 9999;
 }
