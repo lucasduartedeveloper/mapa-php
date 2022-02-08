@@ -366,7 +366,7 @@ $(document).ready(function() {
                    reader.readAsArrayBuffer(blob); 
                    reader.onloadend = function() {
                         var buffer = reader.result;
-                        var nome = prompt("Nome:","");
+                        var nome = prompt("Nome:","Sua anotação");
                         reader.readAsDataURL(blob);
                         reader.onloadend = function() {
                             var base64 = reader.result;
