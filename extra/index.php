@@ -33,7 +33,7 @@
 <div id="map" class="map-box">
 </div>
 
-<p id="owner-info" class="owner-info">
+<p id="owner-info" style="display:none;" class="owner-info">
      JUDITH<br>
      黒澤<br>
      LUIZA BIODERE
