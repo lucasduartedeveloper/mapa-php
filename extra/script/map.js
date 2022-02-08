@@ -73,6 +73,7 @@ function postAudio(nome, buffer, base64) {
                    audio.pause();
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play(); 
+                   reload();
       });
 }
 
