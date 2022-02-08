@@ -263,7 +263,7 @@ function carregarAudio(m) {
       var audioClick = click.bind(audios[m]);
       $("#audio-wave").click(audioClick);
 
-      $("#audio-info").text(audios[m].nome + " - " + audios[m].data_hora);
+      $("#audio-info").html(audios[m].nome + "<br>" + audios[m].data_hora);
       desenharWave(audios[m].desenho.split(","));
 }
 
