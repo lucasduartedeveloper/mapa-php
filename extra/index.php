@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=26">
+<link rel="stylesheet" href="/extra/css/style.css?v=27">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -60,7 +60,7 @@
 <img class="icone-v2" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      Death notes GPS<br>
-     v26.0.0.132
+     v27.0.0.132
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
