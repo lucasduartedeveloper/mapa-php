@@ -92,7 +92,7 @@ html, body {
    z-index: 9999;
 }
 
-.icone-v2{
+.icone-v3{
    position: fixed;
    bottom: 25vw;
    font-size: 20px;
@@ -146,6 +146,18 @@ html, body {
 .audio-wave-canvas {
      width: 90%;
      height: 90%;
+}
+
+@media only screen and (min-width: 800px) {
+  .float-center {
+      bottom: 10vh;
+  }
+  .float-right {
+      bottom: 20vh;
+  }
+  .icone-v3 {
+      top: 5vw;
+  }
 }
 
 /* Only the necessary CSS shown */
