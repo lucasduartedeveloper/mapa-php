@@ -341,7 +341,7 @@ function mapClick(e) {
 var recording = false;
 $(document).ready(function() {
      console.log("ready");
-     $("#mic").on("click", function(e) {
+     mic.click = function(e) {
          if (!recording) {
               recording = true;
               $("#mic").addClass("active");
@@ -373,12 +373,12 @@ $(document).ready(function() {
                   };
              });
          }
-     });
+     };
 
-     $("#reload").on("click", function (e) {
+     reload.click = function (e) {
              reload();
              audio.pause();
              audio = new Audio("../audio/game_notification.wav");
              audio.play();
-     });
+     };
 });
