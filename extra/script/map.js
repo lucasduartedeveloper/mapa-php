@@ -321,9 +321,10 @@ function excluirAudio(m) {
               
     for (var k = m; k < audios.length; k++) {
          $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {;
-              map.removeControl(audios[k].marker);
-              map.removeControl(audios[k].markerShadow);
           });
+
+          map.removeControl(audios[k].marker);
+          map.removeControl(audios[k].markerShadow);
 
           pointList.push(
                   new L.LatLng(
