@@ -34,7 +34,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     Developer<br>
+     Programmer<br>
      LUCAS DUARTE DE OLIVEIRA
 </p>
 <p id="owner-info" style="display:none;" class="owner-info">
