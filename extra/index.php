@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=16">
+<link rel="stylesheet" href="/extra/css/style.css?v=17">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -44,8 +44,12 @@
       <i class="bi bi-mic-mute-fill"></i>
 </button>
 
+<button id="reload" type="button" class="btn-reload float-right">
+      <i class="bi bi-joystick"></i>
+</button>
+
 <p id="version-info" class="version-info">
-     v16.0.0.110
+     v17.0.0.110
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
