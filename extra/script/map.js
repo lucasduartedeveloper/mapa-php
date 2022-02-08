@@ -330,7 +330,7 @@ function excluirAudio(m) {
 
     audios = audios.slice(m+1, audios.length);
 
-    for (var k = m+1; k < audios.length; k++) {
+    for (var k = 0; k < audios.length; k++) {
            pointList.push(
                   new L.LatLng(
                        audios[k].latitude,
