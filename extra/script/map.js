@@ -305,7 +305,9 @@ function carregarAudio(m) {
 
 // Excluir áudio
 function excluirAudio(m) {
+    console.log(m);
     $.getJSON("/extra/ajax/audio.php?deleteId="+audios[m].id, function(data) {
+          console.log("delete:" + m);
           map.removeControl(audios[m].marker);
           map.removeControl(audios[m].markerShadow);
           audio.pause();
