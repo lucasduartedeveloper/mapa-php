@@ -378,7 +378,7 @@ $(document).ready(function() {
      reload.click = function (e) {
              reload();
              audio.pause();
-             audio = new Audio("../audio/game_notification.wav");
+             audio = new Audio("../audio/creature_dying.wav");
              audio.play();
      };
 });
