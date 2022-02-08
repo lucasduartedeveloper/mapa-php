@@ -287,17 +287,13 @@ function carregarAudio(m) {
 // Excluir áudio
 function excluirAudio(m) {
 
+    var pointList = [];
     map.removeControl(wire);
-
-    audio.pause();
-    audio = new Audio("../audio/creature_dying.wav");
               
     for (var k = m; k < audios.length; k++) {
          $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {;
               map.removeControl(audios[k].marker);
               map.removeControl(audios[k].markerShadow);
-
-              audio.play();
           });
 
           pointList.push(
@@ -305,6 +301,10 @@ function excluirAudio(m) {
                        audios[k].latitude,
                        audios[k].longitude));
     }
+
+    audio.pause();
+    audio = new Audio("../audio/creature_dying.wav");
+    audio.play();
 
     wire = new L.Polyline(pointList, {
               color: '#8A0829',
@@ -353,6 +353,26 @@ function mudarAudio(m, e) {
                    new L.LatLng(
                    pos.lat, pos.lng));
       });
+
+      var pointList = [];
+      map.removeControl(wire);
+ 
+      for (var k in audios) {
+            pointList.push(
+                   new L.LatLng(
+                   audios[k].latitude,
+                   audios[k].longitude));
+      }
+
+      wire = new L.Polyline(pointList, {
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+     });
+     wire.addTo(map);
 }
 
 // Click no mapa
