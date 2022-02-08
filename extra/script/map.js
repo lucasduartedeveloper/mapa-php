@@ -385,6 +385,9 @@ $(document).ready(function() {
      });
 });
 
+// COMO JOGAR
+// ...
+
 // PROBLEMAS
 // Botão gravar [resolvido]
 // Botão passar a vez [resolvido]
