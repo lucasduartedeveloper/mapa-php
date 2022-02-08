@@ -382,8 +382,8 @@ function mudarAudio(m, e) {
                    new L.LatLng(
                    pos.lat, pos.lng));
 
-                   audios[k].latitude = pos.lat;
-                   audios[k].longitude = pos.lng;
+                   audios[m].latitude = pos.lat;
+                   audios[m].longitude = pos.lng;
       });
 
       var pointList = [];
