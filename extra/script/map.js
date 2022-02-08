@@ -19,7 +19,7 @@ var markerIcon= L.icon({
 
 var marker = L.marker([-23.373144526961156, -51.1591090466664],  {icon: markerIcon}).addTo(map).bounce();
 
-var markerShadow = L.circle([0, 0], {
+var markerShadow = L.circle([-23.373144526961156, -51.1591090466664], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -42,7 +42,7 @@ function say(text) {
 }
 
 // Posição no mapa
-var posicao = { lat: 0, lng: 0 };
+var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
 function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
 
@@ -333,7 +333,7 @@ function excluirAudio(m) {
                        audios[k].latitude,
                        audios[k].longitude));
     }
-   pointList.push(
+    pointList.push(
                    new L.LatLng(
                    posicao.lat,
                    posicao.lng));
