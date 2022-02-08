@@ -258,14 +258,14 @@ function reload() {
           }
 
           wire = new L.Polyline(pointList, {
-          color: '#8A0829',
-          weight: 3,
-          opacity: 0.5,
-          smoothFactor: 1,
-          dashArray: '5',
-          dashOffset: '0'
-        });
-        wire.addTo(map);
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+         });
+         wire.addTo(map);
       });
 }
 
@@ -286,17 +286,35 @@ function carregarAudio(m) {
 
 // Excluir áudio
 function excluirAudio(m) {
-    //console.log(m);
+
+    map.removeControl(wire);
+
+    audio.pause();
+    audio = new Audio("../audio/creature_dying.wav");
+              
     for (var k = m; k < audios.length; k++) {
-    $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {
-          //console.log("delete:" + k);
-          map.removeControl(audios[m].marker);
-          map.removeControl(audios[m].markerShadow);
-          audio.pause();
-          audio = new Audio("../audio/creature_dying.wav");
-          audio.play();
-    });
+         $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {;
+              map.removeControl(audios[k].marker);
+              map.removeControl(audios[k].markerShadow);
+
+              audio.play();
+          });
+
+          pointList.push(
+                  new L.LatLng(
+                       audios[k].latitude,
+                       audios[k].longitude));
     }
+
+    wire = new L.Polyline(pointList, {
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+     });
+     wire.addTo(map);
 }
 
 // Play áudio
