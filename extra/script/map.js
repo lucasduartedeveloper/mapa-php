@@ -414,8 +414,8 @@ function mapClick(e) {
               smoothFactor: 1,
               dashArray: '5',
               dashOffset: '0'
-   });
-   wire.addTo(map);
+    });
+    wire.addTo(map);
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
