@@ -208,6 +208,10 @@ function reload() {
           audios = data;
           if (audios.length > 0) { };
 
+          var pointList = [
+                new L.LatLng(posicao.lat, posicao.lng)
+          ];
+
           for (var k in audios) {
                var icon = L.icon({
                iconUrl: "/extra/img/ghost.png",
@@ -248,7 +252,22 @@ function reload() {
         	weight: 1,
         	stroke: false
 	}).addTo(map);
+
+              pointList.push(
+                  new L.LatLng(
+                       audios[k].latitude,
+                       audios[k].longitude));
           }
+
+          var wire = new L.Polyline(pointList, {
+            color: '#8A0829',
+            weight: 3,
+            opacity: 0.5,
+            smoothFactor: 1,
+            dashArray: '5',
+            dashOffset: '0'
+        });
+        wire.addTo(map);
       });
 }
 
