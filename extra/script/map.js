@@ -341,7 +341,7 @@ function mapClick(e) {
 var recording = false;
 $(document).ready(function() {
      //console.log("ready");
-     mic.click = function(e) {
+     $("#mic").click(function(e) {
          if (!recording) {
               recording = true;
               $("#mic").addClass("active");
@@ -373,18 +373,18 @@ $(document).ready(function() {
                   };
              });
          }
-     };
+     });
 
-     reload.click = function (e) {
+     $("#reload").click(function (e) {
              reload();
              audio.pause();
              audio = new Audio("../audio/creature_dying.wav");
              audio.play();
-     };
+     });
 });
 
 // PROBLEMAS
-// Botão gravar
-// Botão passar a vez
-// Excluir sem áudio
-// Efeito visual do áudio
+// Botão gravar [resolvido]
+// Botão passar a vez [resolvido]
+// Excluir está sem áudio
+// Efeito visual do áudio [resolvido]
