@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=34">
+<link rel="stylesheet" href="/extra/css/style.css?v=35">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -61,7 +61,7 @@
 <img class="icone-v2" src="/extra/icone-v3.png"/>
 <p id="version-info" class="version-info">
      FOUND AUDIOS & GPS LTDA<br>
-     v34.0.0.133
+     v35.0.0.133
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
