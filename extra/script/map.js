@@ -330,7 +330,7 @@ function excluirAudio(m) {
     }
 
     console.log(audios);
-    audios = audios.slice(0, m);l
+    audios = audios.slice(0, m);
     console.log(audios);
 
     pointList.push(
