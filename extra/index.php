@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=19">
+<link rel="stylesheet" href="/extra/css/style.css?v=20">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -50,7 +50,7 @@
 
 <p id="version-info" class="version-info">
      Acostamento<br>
-     v19.0.0.124
+     v20.0.0.124
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
