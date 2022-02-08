@@ -45,7 +45,7 @@
 </button>
 
 <p id="version-info" class="version-info">
-     v15.0.0.109
+     v16.0.0.109
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

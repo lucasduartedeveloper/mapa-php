@@ -54,21 +54,21 @@ html, body {
 
 .version-info {
    position: fixed;
-   bottom: 60vw;
-   font-size: 20px;
-   left: 10vw;
-   width: 80vw;
-   text-align: center;
-   z-index: 9999;
-}
-
-.audio-info {
-   position: fixed;
    bottom: 10vw;
    font-size: 20px;
    left: 10vw;
    width: 90vw;
    text-align: left;
+   z-index: 9999;
+}
+
+.audio-info {
+   position: fixed;
+   bottom: 60vw;
+   font-size: 20px;
+   left: 10vw;
+   width: 80vw;
+   text-align: center;
    z-index: 9999;
 }
 
