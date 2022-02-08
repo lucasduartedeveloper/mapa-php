@@ -168,16 +168,17 @@ function success(position) {
     var pointList = [];
     map.removeControl(wire);
  
+    pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
     for (var k in audios) {
            pointList.push(
                    new L.LatLng(
                    audios[k].latitude,
                    audios[k].longitude));
     }
-    pointList.push(
-                   new L.LatLng(
-                   posicao.lat,
-                   posicao.lng));
 
     wire = new L.Polyline(pointList, {
               color: '#8A0829',
@@ -235,6 +236,11 @@ function reload() {
           var pointList = [];
           if (wire) { map.removeControl(wire); };
 
+          pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
           for (var k in audios) {
                var icon = L.icon({
                iconUrl: "/extra/img/ghost.png",
@@ -282,11 +288,6 @@ function reload() {
                        audios[k].longitude));
           }
 
-         pointList.push(
-                   new L.LatLng(
-                   posicao.lat,
-                   posicao.lng));
-
           wire = new L.Polyline(pointList, {
               color: '#8A0829',
               weight: 3,
@@ -329,16 +330,17 @@ function excluirAudio(m) {
     }
 
     audios = audios.slice(0, m);l
+    pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
     for (var k = 0; k < audios.length; k++) {
            pointList.push(
                   new L.LatLng(
                        audios[k].latitude,
                        audios[k].longitude));
     }
-    pointList.push(
-                   new L.LatLng(
-                   posicao.lat,
-                   posicao.lng));
 
     audio.pause();
     audio = new Audio("../audio/creature_dying.wav");
@@ -398,16 +400,17 @@ function mudarAudio(m, e) {
       var pointList = [];
       map.removeControl(wire);
  
+      pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
       for (var k in audios) {
             pointList.push(
                    new L.LatLng(
                    audios[k].latitude,
                    audios[k].longitude));
       }
-     pointList.push(
-                   new L.LatLng(
-                   posicao.lat,
-                   posicao.lng));
 
       wire = new L.Polyline(pointList, {
               color: '#8A0829',
@@ -436,16 +439,17 @@ function mapClick(e) {
     var pointList = [];
     map.removeControl(wire);
  
+    pointList.push(
+                   new L.LatLng(
+                   pos.lat,
+                   pos.lng));
+
     for (var k in audios) {
            pointList.push(
                    new L.LatLng(
                    audios[k].latitude,
                    audios[k].longitude));
     }
-    pointList.push(
-                   new L.LatLng(
-                   pos.lat,
-                   pos.lng));
 
     wire = new L.Polyline(pointList, {
               color: '#8A0829',
