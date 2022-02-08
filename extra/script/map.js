@@ -333,7 +333,7 @@ function mudarAudio(m, e) {
        );
 
       $.post("/extra/ajax/audio.php", {
-             id: m,
+             id: audios[m].id,
              latitude: pos.lat, 
              longitude: pos.lng,
              }).done(function(data) { 
