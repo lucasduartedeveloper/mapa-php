@@ -198,6 +198,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 // Carregar atualizações
 var audios = [];
+var wire = false;
 function reload() {
    $.getJSON("/extra/ajax/audio.php", function(data) {
           for (var k in audios) {
@@ -206,11 +207,8 @@ function reload() {
           }
 
           audios = data;
-          if (audios.length > 0) { };
-
-          var pointList = [
-                new L.LatLng(posicao.lat, posicao.lng)
-          ];
+          var pointList = [];
+          if (wire) { map.removeControl(wire); };
 
           for (var k in audios) {
                var icon = L.icon({
@@ -259,13 +257,13 @@ function reload() {
                        audios[k].longitude));
           }
 
-          var wire = new L.Polyline(pointList, {
-            color: '#8A0829',
-            weight: 3,
-            opacity: 0.5,
-            smoothFactor: 1,
-            dashArray: '5',
-            dashOffset: '0'
+          wire = new L.Polyline(pointList, {
+          color: '#8A0829',
+          weight: 3,
+          opacity: 0.5,
+          smoothFactor: 1,
+          dashArray: '5',
+          dashOffset: '0'
         });
         wire.addTo(map);
       });
