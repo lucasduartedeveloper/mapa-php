@@ -321,15 +321,14 @@ function excluirAudio(m) {
     map.removeControl(wire);
               
     for (var k = 0; k <= m; k++) {
-         $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {;
+          $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {;
           });
 
           map.removeControl(audios[k].marker);
           map.removeControl(audios[k].markerShadow);
     }
 
-    audios = audios.slice(m+1, audios.length);
-
+    //audios = audios.slice(m+1, audios.length);
     for (var k = 0; k < audios.length; k++) {
            pointList.push(
                   new L.LatLng(
