@@ -383,7 +383,7 @@ $(document).ready(function() {
              //audio = new Audio("../audio/creature_dying.wav");
              //audio.play();
              
-             $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+posicao.latitude+"&lon="+posicao.longitude+"&format=json", function(data) {
+             $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+posicao.lat+"&lon="+posicao.lng+"&format=json", function(data) {
                    say("Estamos próximos à " + data.display_name);
              });
      });
