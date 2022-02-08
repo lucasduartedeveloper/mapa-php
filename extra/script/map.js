@@ -325,6 +325,7 @@ function mapClick(e) {
 
      $("#audio-info").hide();
      $("#audio-wave").hide();
+     $("#audio-wave").removeClass("playing");
 
     var pos = posicaoNoGrid({
          lat: e.latlng.lat,
