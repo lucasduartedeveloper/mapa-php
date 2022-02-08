@@ -164,6 +164,30 @@ function success(position) {
         lng : position.coords.longitude
     });
 
+    var pointList = [];
+    map.removeControl(wire);
+ 
+    for (var k in audios) {
+           pointList.push(
+                   new L.LatLng(
+                   audios[k].latitude,
+                   audios[k].longitude));
+    }
+    pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
+    wire = new L.Polyline(pointList, {
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+    });
+    wire.addTo(map);
+
     map.setView([posicao.lat, posicao.lng], 19);
     marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
     markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
