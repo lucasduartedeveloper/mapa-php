@@ -50,7 +50,7 @@
 
 <p id="version-info" class="version-info">
      Acostamento<br>
-     v20.0.0.127
+     v20.0.0.128
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -71,7 +71,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=127"></script> 
+<script src="/extra/script/map.js?v=128"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
