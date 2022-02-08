@@ -328,9 +328,9 @@ function playAudio(m) {
 
 // Mudar de lugar
 function mudarAudio(m, e) {
-       var pos = posicaoNoGrid({
-           e.target.getLatLng();
-       });
+       var pos = posicaoNoGrid(
+           e.target.getLatLng()
+       );
 
       $.post("/extra/ajax/audio.php", {
              id: m,
