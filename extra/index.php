@@ -34,7 +34,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     CADÊ AS PAREDES?
+     TEMPLATE DE NADA
 </p>
 <p id="owner-info" style="display:none;" class="owner-info">
      JUDITH<br>
@@ -57,9 +57,9 @@
       <i class="bi bi-joystick"></i>
 </button>
 
-<img class="icone-v2" src="/extra/icone-v2.png"/>
+<img class="icone-v2" src="/extra/icone-v3.png"/>
 <p id="version-info" class="version-info">
-     Death notes GPS<br>
+     Lost audios GPS<br>
      v27.0.0.132
 </p>
 
