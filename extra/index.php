@@ -34,6 +34,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
+     JUDITH<br>
      黒澤
 </p>
 
