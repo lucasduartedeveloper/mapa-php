@@ -325,12 +325,18 @@ function excluirAudio(m) {
 
           map.removeControl(audios[k].marker);
           map.removeControl(audios[k].markerShadow);
+    }
 
-          pointList.push(
+    for (var k = 0; k < (m-1); k++) {
+           pointList.push(
                   new L.LatLng(
                        audios[k].latitude,
                        audios[k].longitude));
     }
+   pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
 
     audio.pause();
     audio = new Audio("../audio/creature_dying.wav");
