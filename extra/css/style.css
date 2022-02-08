@@ -115,7 +115,7 @@ html, body {
 
 .audio-info {
    position: fixed;
-   bottom: 60vw;
+   bottom: 50vw;
    font-size: 20px;
    left: 10vw;
    width: 80vw;
@@ -123,12 +123,12 @@ html, body {
    z-index: 9999;
    border-radius: 10px;
    background-color: rgba(0,0,0,0.5);
-   color: "#fff";
+   color: #fff;
 }
 
 .audio-wave-box {
    position: fixed;
-   color: "#fff";
+   color: #fff;
    background-color: rgba(0,0,0,0.5);
    display: flex;
    justify-content: center;
