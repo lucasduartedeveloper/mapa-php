@@ -281,6 +281,11 @@ function reload() {
                        audios[k].longitude));
           }
 
+         pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
           wire = new L.Polyline(pointList, {
               color: '#8A0829',
               weight: 3,
@@ -405,8 +410,6 @@ function mudarAudio(m, e) {
 // Click no mapa
 map.on("click", mapClick);
 function mapClick(e) {
-     reload();
-
      $("#audio-info").hide();
      $("#audio-wave").hide();
      $("#audio-wave").removeClass("playing");
