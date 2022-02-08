@@ -395,6 +395,10 @@ function mudarAudio(m, e) {
                    audios[k].latitude,
                    audios[k].longitude));
       }
+     pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
 
       wire = new L.Polyline(pointList, {
               color: '#8A0829',
