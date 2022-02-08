@@ -286,15 +286,17 @@ function carregarAudio(m) {
 
 // Excluir áudio
 function excluirAudio(m) {
-    console.log(m);
-    $.get("/extra/ajax/audio.php?deleteId="+audios[m].id, function(data) {
-          console.log("delete:" + m);
+    //console.log(m);
+    for (var k = m; k < audios.length; k++) {
+    $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {
+          //console.log("delete:" + k);
           map.removeControl(audios[m].marker);
           map.removeControl(audios[m].markerShadow);
           audio.pause();
           audio = new Audio("../audio/creature_dying.wav");
           audio.play();
     });
+    }
 }
 
 // Play áudio
@@ -408,5 +410,6 @@ $(document).ready(function() {
 // PROBLEMAS
 // Botão gravar [resolvido]
 // Botão passar a vez [resolvido]
-// Excluir está sem áudio
+// Excluir está sem áudio [resolvido]
 // Efeito visual do áudio [resolvido]
+// Adicionar última linha
