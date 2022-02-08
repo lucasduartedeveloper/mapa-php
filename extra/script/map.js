@@ -156,42 +156,6 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }).catch(e=>console.log(e));
 }
 
-// Botão de gravação
-var recording = false;
-$("#mic").on("click", function(e) {
-     if (!recording) {
-          recording = true;
-          $("#mic").addClass("active");
-          $("#mic i").removeClass("bi-mic-mute-fill");
-          $("#mic i").addClass("bi-mic-fill");
-          recordAudio();
-     }
-     else {
-          recording = false;
-          $("#mic").removeClass("active");
-          $("#mic i").removeClass("bi-mic-fill");
-          $("#mic i").addClass("bi-mic-mute-fill");
-
-          recorder.stop();
-          gumStream.getAudioTracks()[0].stop();
-          recorder.exportWAV(function(blob) { 
-               var audio = new Audio(URL.createObjectURL(blob));
-               audio.play();
-               var reader = new FileReader();
-               reader.readAsArrayBuffer(blob); 
-               reader.onloadend = function() {
-                    var buffer = reader.result;
-                    var nome = prompt("Nome:","");
-                    reader.readAsDataURL(blob);
-                    reader.onloadend = function() {
-                          var base64 = reader.result;
-                          postAudio(nome, buffer, base64);
-                    };
-               };
-          });
-     }
-});
-
 // Localização melhor
 function success(position) {
 
@@ -368,7 +332,43 @@ function mapClick(e) {
 }
 
 // Atualizar 
+// Botão de gravação
+var recording = false;
 $(document).ready(function() {
+     $("#mic").on("click", function(e) {
+     if (!recording) {
+          recording = true;
+          $("#mic").addClass("active");
+          $("#mic i").removeClass("bi-mic-mute-fill");
+          $("#mic i").addClass("bi-mic-fill");
+          recordAudio();
+     }
+     else {
+          recording = false;
+          $("#mic").removeClass("active");
+          $("#mic i").removeClass("bi-mic-fill");
+          $("#mic i").addClass("bi-mic-mute-fill");
+
+          recorder.stop();
+          gumStream.getAudioTracks()[0].stop();
+          recorder.exportWAV(function(blob) { 
+               var audio = new Audio(URL.createObjectURL(blob));
+               audio.play();
+               var reader = new FileReader();
+               reader.readAsArrayBuffer(blob); 
+               reader.onloadend = function() {
+                    var buffer = reader.result;
+                    var nome = prompt("Nome:","");
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function() {
+                          var base64 = reader.result;
+                          postAudio(nome, buffer, base64);
+                    };
+               };
+          });
+     }
+     });
+
       $("#reload").click(function (e) {
              reload();
              audio.pause();

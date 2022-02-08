@@ -74,7 +74,7 @@ html, body {
 
 .version-info {
    position: fixed;
-   bottom: 10vw;
+   bottom: 5vw;
    font-size: 20px;
    left: 10vw;
    width: 90vw;

@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=17">
+<link rel="stylesheet" href="/extra/css/style.css?v=18">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -49,7 +49,8 @@
 </button>
 
 <p id="version-info" class="version-info">
-     v17.0.0.117
+     Acostamento<br>
+     v18.0.0.118
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -70,7 +71,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=117"></script> 
+<script src="/extra/script/map.js?v=118"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
