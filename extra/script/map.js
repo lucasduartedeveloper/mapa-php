@@ -264,7 +264,7 @@ function reload() {
                var audioDblClick = dblClick.bind(audios[k]);
 
                var dragEnd = function (e) {
-                   mudarAudio(this.m);
+                   mudarAudio(this.m, e);
                };
                var audioDragEnd = dragEnd.bind(audios[k]);
 
@@ -327,16 +327,24 @@ function playAudio(m) {
 }
 
 // Mudar de lugar
-function mudarAudio(m) {
+function mudarAudio(m, e) {
+       var pos = posicaoNoGrid({
+           e.target.getLatLng();
+       });
+
       $.post("/extra/ajax/audio.php", {
              id: m,
-             latitude: posicao.lat, 
-             longitude: posicao.lng,
+             latitude: pos.lat, 
+             longitude: pos.lng,
              }).done(function(data) { 
                    audio.pause();
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play();
-                   console.log(data);
+
+                   marker.setLatLng(new L.LatLng(
+                   pos.lat, pos.lng));
+                   markerShadow.setLatLng(new L.LatLng(
+                   pos.lat, pos.lng)
       });
 }
 
