@@ -381,10 +381,10 @@ function mudarAudio(m, e) {
                    audios[m].markerShadow.setLatLng(
                    new L.LatLng(
                    pos.lat, pos.lng));
-
-                   audios[m].latitude = pos.lat;
-                   audios[m].longitude = pos.lng;
       });
+
+      audios[m].latitude = pos.lat;
+      audios[m].longitude = pos.lng;
 
       var pointList = [];
       map.removeControl(wire);
