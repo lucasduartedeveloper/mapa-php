@@ -56,7 +56,7 @@
 
 <img class="icone-v2" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
-     Choradero<br>
+     Death notes GPS<br>
      v25.0.0.132
 </p>
 
