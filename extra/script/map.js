@@ -365,4 +365,4 @@ $(document).ready(function() {
              audio = new Audio("../audio/game_notification.wav");
              audio.play();
       });
-}
+});
