@@ -34,7 +34,8 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     TEMPLATE DE NADA
+     Developer<br>
+     LUCAS DUARTE DE OLIVEIRA
 </p>
 <p id="owner-info" style="display:none;" class="owner-info">
      JUDITH<br>
@@ -59,7 +60,7 @@
 
 <img class="icone-v2" src="/extra/icone-v3.png"/>
 <p id="version-info" class="version-info">
-     Lost audios GPS<br>
+     FOUND AUDIOS & GPS LTDA<br>
      v27.0.0.132
 </p>
 
