@@ -329,7 +329,10 @@ function excluirAudio(m) {
           map.removeControl(audios[k].markerShadow);
     }
 
+    console.log(audios);
     audios = audios.slice(0, m);l
+    console.log(audios);
+
     pointList.push(
                    new L.LatLng(
                    posicao.lat,
