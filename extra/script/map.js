@@ -70,7 +70,9 @@ function postAudio(nome, buffer, base64) {
              desenho: formatarAudio(buffer).toString(),
              base64: base64,
              }).done(function(data) { 
-                   // PLIM 
+                   audio.pause();
+                   audio = new Audio("../audio/game_notification.mp3");
+                   audio.play(); 
       });
 }
 
@@ -312,6 +314,19 @@ function playAudio(m) {
          audio = new Audio(data[0].base64);
          audio.play();
     });
+}
+
+// Mudar de lugar
+function mudarAudio(m) {
+      $.post("/extra/ajax/audio.php", {
+             id: m,
+             latitude: posicao.lat, 
+             longitude: posicao.lng,
+             }).done(function(data) { 
+                   audio.pause();
+                   audio = new Audio("../audio/game_notification.mp3");
+                   audio.play();
+      });
 }
 
 // Click no mapa
