@@ -352,6 +352,9 @@ function mudarAudio(m, e) {
                    audios[m].markerShadow.setLatLng(
                    new L.LatLng(
                    pos.lat, pos.lng));
+
+                   audios[k].latitude = pos.lat;
+                   audios[k].longitude = pos.lng;
       });
 
       var pointList = [];
@@ -389,6 +392,31 @@ function mapClick(e) {
          lng: e.latlng.lng
     });
     posicao = pos;
+
+    var pointList = [];
+    map.removeControl(wire);
+ 
+    for (var k in audios) {
+           pointList.push(
+                   new L.LatLng(
+                   audios[k].latitude,
+                   audios[k].longitude));
+    }
+    pointList.push(
+                   new L.LatLng(
+                   pos.lat,
+                   pos.lng));
+
+    wire = new L.Polyline(pointList, {
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+   });
+   wire.addTo(map);
+
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 }
@@ -450,4 +478,5 @@ $(document).ready(function() {
 // Botão passar a vez [resolvido]
 // Excluir está sem áudio [resolvido]
 // Efeito visual do áudio [resolvido]
-// Adicionar última linha
+// Adicionar última linha [resolvido]
+// Criar uma função para redesenhar a linha
