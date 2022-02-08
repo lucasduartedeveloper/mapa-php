@@ -61,7 +61,7 @@
 <img class="icone-v2" src="/extra/icone-v3.png"/>
 <p id="version-info" class="version-info">
      FOUND AUDIOS & GPS LTDA<br>
-     v33.0.0.132
+     v33.0.0.133
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -82,7 +82,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=132"></script> 
+<script src="/extra/script/map.js?v=133"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
