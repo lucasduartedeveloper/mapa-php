@@ -71,7 +71,7 @@ function postAudio(nome, buffer, base64) {
              base64: base64,
              }).done(function(data) { 
                    audio.pause();
-                   audio = new Audio("../audio/game_notification.mp3");
+                   audio = new Audio("../audio/game_notification.wav");
                    audio.play(); 
       });
 }
@@ -263,11 +263,17 @@ function reload() {
                };
                var audioDblClick = dblClick.bind(audios[k]);
 
+               var dragEnd = function (e) {
+                   mudarAudio(this.m);
+               };
+               var audioDragEnd = dragEnd.bind(audios[k]);
+
               audios[k].marker = L.marker(
               [audios[k].latitude, audios[k].longitude],
               {icon: icon, draggable: true})
               .on("click", audioClick)
               .on("dblclick", audioDblClick)
+              .on("dragend", audioDragEnd)
               .addTo(map);
 
               audios[k].markerShadow = L.circle(
@@ -302,7 +308,9 @@ function excluirAudio(m) {
     $.getJSON("/extra/ajax/audio.php?deleteId="+audios[m].id, function(data) {
           map.removeControl(audios[m].marker);
           map.removeControl(audios[m].markerShadow);
-          say("Você excluiu uma anotação.");
+          audio.pause();
+          audio = new Audio("../audio/creature_dying.wav");
+          audio.play();
     });
 }
 
@@ -324,8 +332,9 @@ function mudarAudio(m) {
              longitude: posicao.lng,
              }).done(function(data) { 
                    audio.pause();
-                   audio = new Audio("../audio/game_notification.mp3");
+                   audio = new Audio("../audio/game_notification.wav");
                    audio.play();
+                   console.log(data);
       });
 }
 

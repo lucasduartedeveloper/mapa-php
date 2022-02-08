@@ -17,7 +17,21 @@ try {
 
     echo $sql;
   }
+  else if (!empty($_POST["id"])) {
+
+    $id = htmlspecialchars($_POST["id"]);
+    $latitude = htmlspecialchars($_POST["latitude"]);
+    $longitude = htmlspecialchars($_POST["longitude"]);
+    
+    $sql = "UPDATE extra_audio SET latitude='".$latitude."', longitude='".$longitude."' WHERE id=".$id.";";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    echo $sql;
+  }
   else if (!empty($_GET["id"])) {
+
     $id = htmlspecialchars($_GET["id"]);
     $sql = "SELECT * FROM extra_audio WHERE id=".$id.";";
 

@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=14">
+<link rel="stylesheet" href="/extra/css/style.css?v=15">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -44,6 +44,10 @@
       <i class="bi bi-mic-mute-fill"></i>
 </button>
 
+<p id="version-info" class="version-info">
+     v15.0.0.109
+</p>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -62,7 +66,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=106"></script> 
+<script src="/extra/script/map.js?v=109"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
