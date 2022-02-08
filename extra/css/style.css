@@ -59,6 +59,8 @@ html, body {
    left: 50vw;
    width: 25vw;
    height: 25vw;
+   max-width: 25vh;
+   max-height: 25vh;
    border-radius: 50%;
    z-index: 9999;
    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
