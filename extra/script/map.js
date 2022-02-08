@@ -287,7 +287,7 @@ function playAudio(m) {
          audio.pause();
          audio = new Audio(data[0].base64);
          $("#audio-wave").addClass("playing");
-         audio.ended = function() {
+         audio.onended = function() {
               $("#audio-wave").removeClass("playing");
          };
          audio.play();
@@ -382,3 +382,9 @@ $(document).ready(function() {
              audio.play();
      };
 });
+
+// PROBLEMAS
+// Botão gravar
+// Botão passar a vez
+// Excluir sem áudio
+// Efeito visual do áudio
