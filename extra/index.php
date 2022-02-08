@@ -33,6 +33,10 @@
 <div id="map" class="map-box">
 </div>
 
+<p id="owner-info"  style="display:none;" class="owner-info">
+     ヘリコプター
+</p>
+
 <p id="audio-info"  style="display:none;" class="audio-info">
      Lembrete - 07/02/2022 13:45:00
 </p>
