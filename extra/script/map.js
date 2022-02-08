@@ -344,6 +344,7 @@ function excluirAudio(m) {
                        audios[k].latitude,
                        audios[k].longitude));
     }
+    console.log(pointList);
 
     audio.pause();
     audio = new Audio("../audio/creature_dying.wav");
