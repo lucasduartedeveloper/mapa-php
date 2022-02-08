@@ -45,7 +45,7 @@
 </button>
 
 <p id="version-info" class="version-info">
-     v16.0.0.109
+     v16.0.0.110
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -66,7 +66,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 <script src="/extra/script/script.js?v=0"></script>
-<script src="/extra/script/map.js?v=109"></script> 
+<script src="/extra/script/map.js?v=110"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
