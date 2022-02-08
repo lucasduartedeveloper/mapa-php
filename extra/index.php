@@ -33,7 +33,7 @@
 <div id="map" class="map-box">
 </div>
 
-<p id="owner-info" style="display:none;" class="owner-info">
+<p id="owner-info" class="owner-info">
      CADÊ AS PAREDES?
 </p>
 <p id="owner-info" style="display:none;" class="owner-info">
