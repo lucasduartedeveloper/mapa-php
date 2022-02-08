@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/style.css?v=24">
+<link rel="stylesheet" href="/extra/css/style.css?v=25">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -54,10 +54,10 @@
       <i class="bi bi-joystick"></i>
 </button>
 
-<img class="icone-v2" src="/extra/img/icone-v2.png"/>
+<img class="icone-v2" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      Choradero<br>
-     v24.0.0.132
+     v25.0.0.132
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
