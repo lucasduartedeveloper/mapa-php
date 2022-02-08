@@ -35,7 +35,8 @@
 
 <p id="owner-info" class="owner-info">
      JUDITH<br>
-     黒澤
+     黒澤<br>
+     BIODERE
 </p>
 
 <p id="audio-info"  style="display:none;" class="audio-info">
