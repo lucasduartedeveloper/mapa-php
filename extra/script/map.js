@@ -1,5 +1,5 @@
 // Create the map
-var map = L.map('map').setView([-23.373144526961156, -51.1591090466664], 19);
+var map = L.map('map').setView([-23.373144526961156, -51.159208612927344], 19);
 
 var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -17,9 +17,9 @@ var markerIcon= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker = L.marker([-23.373144526961156, -51.1591090466664],  {icon: markerIcon}).addTo(map).bounce();
+var marker = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon}).addTo(map).bounce();
 
-var markerShadow = L.circle([-23.373144526961156, -51.1591090466664], {
+var markerShadow = L.circle([-23.373144526961156, -51.159208612927344], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -53,9 +53,9 @@ var markerIcon2= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([-23.373144526961156, -51.15930817918829],  {icon: markerIcon2}).addTo(map).bounce();
+var marker2 = L.marker([ -23.373009628719835, -51.159756227362536],  {icon: markerIcon2}).addTo(map).bounce();
 
-var markerShadow2 = L.circle([-23.373144526961156, -51.15930817918829], {
+var markerShadow2 = L.circle([ -23.373009628719835, -51.159756227362536], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -71,9 +71,9 @@ var markerIcon3= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker3 = L.marker([-23.373099560880718, -51.15955709484065],  {icon: markerIcon3}).addTo(map).bounce();
+var marker3 = L.marker([-23.373009628719835, -51.15985579362348],  {icon: markerIcon3}).addTo(map).bounce();
 
-var markerShadow3 = L.circle([-23.373099560880718, -51.15955709484065], {
+var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
