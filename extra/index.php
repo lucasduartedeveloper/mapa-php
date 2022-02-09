@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
 <link rel="stylesheet" href="/extra/css/dark-osm.css">
-<link rel="stylesheet" href="/extra/css/style.css?v=42">
+<link rel="stylesheet" href="/extra/css/style.css?v=43">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -38,11 +38,6 @@
      Programmer<br>
      LUCAS DUARTE DE OLIVEIRA
 </p>
-<p id="owner-info" style="display:none;" class="owner-info">
-     JUDITH<br>
-     黒澤<br>
-     LUIZA BIODERE
-</p>
 
 <p id="audio-info"  style="display:none;" class="audio-info">
      Lembrete - 07/02/2022 13:45:00
@@ -59,10 +54,14 @@
       <i class="bi bi-joystick"></i>
 </button>
 
-<img class="icone-v3" src="/extra/icone-v3.png"/>
+<button id="player" type="button" class="btn-player float-top-right">
+      <i class="bi bi-people-fill"></i>
+</button>
+
+<img class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
-     FOUND AUDIOS & GPS LTDA<br>
-     v42.0.1.170
+     GPS MAL ASSOMBRADO<br>
+     v43.0.1.170
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
