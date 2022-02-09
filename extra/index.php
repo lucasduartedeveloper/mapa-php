@@ -83,7 +83,7 @@
 
 <script src="/extra/script/websocket.js?v=0"></script>
 
-<script src="/extra/script/login.js?v=0"></script> 
+<script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=165"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
