@@ -46,7 +46,7 @@ var markerShadow1 = L.circle([-23.373054594800273, -51.159806010493], {
 }).addTo(map);
 
 // Teste
-var markerIcon2= L.icon({
+var markerIcon2 = L.icon({
        iconUrl: "../img/marker-unlocked.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
@@ -64,7 +64,7 @@ var markerShadow2 = L.circle([ -23.373009628719835, -51.159756227362536], {
 }).addTo(map);
 
 //Teste
-var markerIcon3= L.icon({
+var markerIcon3 = L.icon({
        iconUrl: "../img/marker-z.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
@@ -81,6 +81,15 @@ var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
         stroke: true
 }).addTo(map);
 
+// Teste
+var playerId = 0;
+var players = [ 
+    { marker: marker0, markerShadow: markerShadow0 },
+    { marker: marker1, markerShadow: markerShadow1 },
+    { marker: marker2, markerShadow: markerShadow2 },
+    { marker: marker3, markerShadow: markerShadow3 }
+];
+
 // Texto para audio
 var speaking = false;
 function say(text) {
@@ -94,15 +103,6 @@ function say(text) {
               window.speechSynthesis.speak(msg);
         }
 }
-
-// Teste
-var playerId = 0;
-var players = [ 
-    { marker: marker0, markerShadow: markerShadow0 },
-    { marker: marker1, markerShadow: markerShadow1 },
-    { marker: marker2, markerShadow: markerShadow2 },
-    { marker: marker3, markerShadow: markerShadow3 }
-];
 
 // Posição no mapa
 var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
