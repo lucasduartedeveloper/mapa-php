@@ -61,7 +61,7 @@
 <img class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      GPS MAL ASSOMBRADO<br>
-     v46.0.1.172
+     v46.0.1.173
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -83,7 +83,7 @@
 <script src="/extra/script/websocket.js?v=0"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=172"></script> 
+<script src="/extra/script/map.js?v=173"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
