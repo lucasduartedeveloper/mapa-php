@@ -53,7 +53,7 @@ var markerIcon2= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([ -23.373009628719835, -51.159208612927344],  {icon: markerIcon2}).addTo(map).bounce();
+var marker2 = L.marker([ -23.373009628719835, -51.159756227362536],  {icon: markerIcon2}).addTo(map).bounce();
 
 var markerShadow2 = L.circle([ -23.373009628719835, -51.159756227362536], {
         color: "#2E2E2E",
