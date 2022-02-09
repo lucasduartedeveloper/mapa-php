@@ -47,15 +47,15 @@ var markerShadow1 = L.circle([-23.373054594800273, -51.159806010493], {
 
 // Teste
 var markerIcon2= L.icon({
-       iconUrl: "../img/marker-c.png",
+       iconUrl: "../img/marker-unlocked.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([-23.3731894930416, -51.15900948040546],  {icon: markerIcon2}).addTo(map).bounce();
+var marker2 = L.marker([-23.373144526961156, -51.15930817918829],  {icon: markerIcon2}).addTo(map).bounce();
 
-var markerShadow2 = L.circle([-23.3731894930416, -51.15900948040546], {
+var markerShadow2 = L.circle([-23.373144526961156, -51.15930817918829], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
