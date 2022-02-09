@@ -6,7 +6,5 @@ $(document).ready(function() {
           cor = prompt("1 - Azul, 2 - Preto, 3 -Amarelo, 4 - Roxo","");
           myStorage.setItem("cor", cor);
      }
-
-     
 });
 
