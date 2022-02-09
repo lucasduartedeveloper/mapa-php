@@ -97,12 +97,7 @@ function say(text) {
 
 // Teste
 var playerId = 0;
-var players[
-    { marker: marker0, markerShadow: markerShadow0 },
-    { marker: marker1, markerShadow: markerShadow1 },
-    { marker: marker2, markerShadow: markerShadow2 },
-    { marker: marker3, markerShadow: markerShadow3 }
-];
+var players[ { marker: marker0, markerShadow: markerShadow0 }, { marker: marker1, markerShadow: markerShadow1 }, { marker: marker2, markerShadow: markerShadow2 }, { marker: marker3, markerShadow: markerShadow3 } ];
 
 // Posição no mapa
 var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
@@ -385,7 +380,7 @@ function excluirAudio(m) {
     map.removeControl(wire);
               
     for (var k = m; k < audios.length; k++) {
-          $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {;
+          $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {
           });
 
           map.removeControl(audios[k].marker);
