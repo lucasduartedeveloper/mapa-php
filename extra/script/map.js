@@ -10,16 +10,16 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
-var markerIcon= L.icon({
+var markerIcon4 = L.icon({
        iconUrl: "../img/marker.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon}).addTo(map).bounce();
+var marker4 = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon}).addTo(map).bounce();
 
-var markerShadow = L.circle([-23.373144526961156, -51.159208612927344], {
+var markerShadow4 = L.circle([-23.373144526961156, -51.159208612927344], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -94,6 +94,15 @@ function say(text) {
               window.speechSynthesis.speak(msg);
         }
 }
+
+// Teste
+var playerId = 0;
+var players[
+    { marker: marker0, markerShadow: markerShadow0 },
+    { marker: marker1, markerShadow: markerShadow1 },
+    { marker: marker2, markerShadow: markerShadow2 },
+    { marker: marker3, markerShadow: markerShadow3 }
+];
 
 // Posição no mapa
 var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
@@ -245,8 +254,8 @@ function success(position) {
     wire.addTo(map);
 
     map.setView([posicao.lat, posicao.lng], 19);
-    marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
-    markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
+    players[playerId].marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
+    players[playerId].markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
      
 }
 
@@ -519,8 +528,8 @@ function mapClick(e) {
     });
     wire.addTo(map);
 
-    marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 }
 
 // Atualizar 
