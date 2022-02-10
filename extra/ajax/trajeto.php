@@ -2,7 +2,7 @@
 <?php
 $sql ="";
 try {
-  if (!empty($_POST["playerId"])) {
+  if (isset($_POST["playerId"])  ) {
 
     $playerId = htmlspecialchars($_POST["playerId"]);
     $latitude = htmlspecialchars($_POST["latitude"]);
@@ -15,7 +15,7 @@ try {
 
     echo $sql;
   }
-  else if (!empty($_GET["playerId"])) {
+  else if (isset($_GET["playerId"])) {
 
     $playerId = htmlspecialchars($_GET["playerId"]);
     $sql = "SELECT * FROM extra_trajeto WHERE playerId=".$id.";";
@@ -27,7 +27,7 @@ try {
   
     echo json_encode($details);
   }
-  else if (!empty($_GET["deletePlayerId"])) {
+  else if (isset($_GET["deletePlayerId"])) {
     $id = htmlspecialchars($_GET["deleteId"]);
     $sql = "DELETE FROM extra_trajeto WHERE playerId=".$id.";";
 
