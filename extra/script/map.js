@@ -338,10 +338,10 @@ function reload() {
             //console.log(data);
 
              trajetos = [
-                 data.filter(d => parseInt(d.playerId) == 0), 
-                 data.filter(d => parseInt(d.playerId) == 1), 
-                 data.filter(d => parseInt(d.playerId) == 2), 
-                 data.filter(d => parseInt(d.playerId) == 3)
+                 data.filter(d => parseInt(d.playerid) == 0), 
+                 data.filter(d => parseInt(d.playerid) == 1), 
+                 data.filter(d => parseInt(d.playerid) == 2), 
+                 data.filter(d => parseInt(d.playerid) == 3)
              ];
 
              for (var m = 0; m < 4; m++) {
