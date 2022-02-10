@@ -539,6 +539,7 @@ function mudarAudio(m, e) {
 function excluirTrajeto(playerId) {
 
       $.get("/extra/ajax/trajetos.php?deletePlayerId="+playerId, function(data) {
+           console.log(data);
            reload();
            // Websocket
            ws.send("JUPS,"+playerId);
