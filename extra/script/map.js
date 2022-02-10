@@ -578,6 +578,11 @@ $(document).ready(function() {
                    say("Estamos próximos à " + data.display_name);
              });
      });
+
+     ("#player").click(function (e) {
+             playerId = playerId < 4 ? playerId += 1 : 0;
+             mapClick({ latlng: posicao });
+     });
 });
 
 // COMO JOGAR
