@@ -96,7 +96,7 @@ var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
 
 // Teste
 var playerId = localStorage.getItem("playerId") ? 
-     localStorage.getItem("playerId") : 0;
+    parseInt(localStorage.getItem("playerId")) : 0;
 var players = [ 
     { marker: marker0, markerShadow: markerShadow0 },
     { marker: marker1, markerShadow: markerShadow1 },
@@ -597,3 +597,4 @@ $(document).ready(function() {
 // Efeito visual do áudio [resolvido]
 // Adicionar última linha [resolvido]
 // Criar uma função para redesenhar a linha
+// Salvar o trajeto de cada marcador
