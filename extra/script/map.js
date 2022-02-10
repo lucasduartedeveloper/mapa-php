@@ -580,8 +580,13 @@ $(document).ready(function() {
              playerId = playerId < 3 ? playerId += 1 : 0;
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
+                 posicao = players[playerId].marker.getLatLng();
                  mapClick({ latlng: posicao });
                  localStorage.setItem("playerId", playerId);
+                 map.setView([
+                       posicao.lat,
+                       posicao.lng
+                 ], 19);
              }, 1000);
      });
 
