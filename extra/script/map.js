@@ -721,8 +721,7 @@ $(document).ready(function() {
 
      // VR TESTE
      var video = document.getElementById("video");
-     var stream = await navigator
-     .mediaDevices
+     var stream = navigator.mediaDevices
      .getUserMedia({ video: true, audio: false })
      .then((stream) => {
            video.srcObject = stream;
