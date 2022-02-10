@@ -742,6 +742,8 @@ $(document).ready(function() {
          img.onload = function(){
               context.drawImage(img, 0, 0); // Or at whatever offset you like
          };
+         img.width = 10;
+         img.height = 10;
          img.src = "/extra/img/ghost.png";
 
          for (var k in audios) {
