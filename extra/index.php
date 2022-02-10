@@ -62,7 +62,7 @@
       <i class="bi bi-door-closed-fill"></i>
 </button>
 
-<button id="camera" type="button" class="btn-camera float-top3-right">
+<button id="camera" type="button" class="btn-camera float-top3-right" data-toggle="modal" data-target=".bd-example-modal-lg">
       <i class="bi bi-camera-fill"></i>
 </button>
 
@@ -92,6 +92,15 @@
 
 <script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=224"></script> 
+
+<!-- Large modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <canvas id="camera-canvas"></canvas>
+    </div>
+  </div>
+</div>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
