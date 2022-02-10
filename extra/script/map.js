@@ -602,6 +602,24 @@ function mapClick(e) {
                    audio.pause();
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play();
+
+                   if (players[playerId].line) {
+                      map.removeControl(players[playerId].line);
+                   }
+                   players[playerId].pointList.push(
+                      new L.LatLng(
+                         pos.lat, pos.lng));
+
+                   players[playerId].line = 
+                   new L.Polyline(players[playerId].pointList, {
+                      color: players[playerId].color,
+                      weight: 3,
+                      opacity: 0.5,
+                      smoothFactor: 1,
+                      dashArray: '0',
+                      dashOffset: '0'
+                   });
+                   players[playerId].line.addTo(map);
                    
                    // Websocket
                    ws.send("JUPS,"+playerId);
