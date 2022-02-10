@@ -722,10 +722,7 @@ $(document).ready(function() {
      // VR TESTE
      var video = document.getElementById("video");
      var stream = navigator.mediaDevices
-     .getUserMedia({ video: 
-          facingMode: {
-          exact: 'environment'
-          }, audio: false })
+     .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
      .then((stream) => {
            video.srcObject = stream;
      });
