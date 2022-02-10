@@ -101,18 +101,22 @@ var playerId = localStorage.getItem("playerId") ?
 var players = [ 
     { marker: marker0, 
       markerShadow: markerShadow0,
+      color: "azul",
       color: "#3758b3",
       pointList: [] },
     { marker: marker1, 
       markerShadow: markerShadow1,
       color: "#a83275",
+      color: "roxo",
       pointList: [] },
     { marker: marker2, 
       markerShadow: markerShadow2,
+      color: "amarelo",
       color: "#b39e37",
       pointList: [] },
     { marker: marker3,
       markerShadow: markerShadow3,
+      color: "preto",
       color: "#1c1e21",
       pointList: [] }
 ];
@@ -538,7 +542,10 @@ function mudarAudio(m, e) {
 // Enviar o áudio para o banco de dados
 function excluirTrajeto(playerId) {
       $.get("/extra/ajax/trajeto.php?deletePlayerId="+playerId, function(data) {
-           console.log(data);
+           //console.log(data)
+           audio.pause();
+           new Audio("../audio/game_over.mp3");
+           audio.play();
            reload();
            // Websocket
            ws.send("JUPS,"+playerId);
