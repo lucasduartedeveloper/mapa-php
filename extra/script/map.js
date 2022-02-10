@@ -334,7 +334,9 @@ function reload() {
       });
 
      // Atualizar marcadores
-     $.getJSON("/extra/ajax/audio.php", function(data) {
+     $.getJSON("/extra/ajax/trajeto.php", function(data) {
+            console.log(data);
+
              trajetos = [
                  data.filter(d => d.playerId == 0), 
                  data.filter(d => d.playerId == 1), 
@@ -345,8 +347,8 @@ function reload() {
              for (var m = 0; m < 4; m++) {
                   if (trajetos[m][0].length > 0) {
                       var latlng = [
-                           trajetos[m].latitude,
-                           trajetos[m].longitude
+                           trajetos[m][0].latitude,
+                           trajetos[m][0].longitude
                       ];
                       players[m][0].marker.setLatLng(latlng);
                       players[m][0].markerShadow.setLatLng(latlng);
