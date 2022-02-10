@@ -726,7 +726,7 @@ $(document).ready(function() {
          camera.begin();
          // Draw stuff
          camera.end();
-     }, 250);
+     }, 2000);
 });
 
 // COMO JOGAR
