@@ -647,7 +647,7 @@ $(document).ready(function() {
 });
 
 // COMO JOGAR
-// ...
+// ....
 
 // PROBLEMAS
 // Botão gravar [resolvido]
@@ -656,4 +656,7 @@ $(document).ready(function() {
 // Efeito visual do áudio [resolvido]
 // Adicionar última linha [resolvido]
 // Criar uma função para redesenhar a linha
-// Salvar o trajeto de cada marcador
+// Salvar o trajeto de cada marcador [resolvido]
+// Desenhar o trajeto de cada marcador
+// Poder mudar o nome no marcador
+// Poder excluir o trajeto

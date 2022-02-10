@@ -28,8 +28,8 @@ try {
     echo json_encode($details);
   }
   else if (isset($_GET["deletePlayerId"])) {
-    $id = htmlspecialchars($_GET["deleteId"]);
-    $sql = "DELETE FROM extra_trajeto WHERE playerId=".$id.";";
+    $playerId = htmlspecialchars($_GET["deleteId"]);
+    $sql = "DELETE FROM extra_trajeto WHERE playerId=".$playerId.";";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
