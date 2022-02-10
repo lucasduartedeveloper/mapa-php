@@ -232,7 +232,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 
 // Localização melhor
 function success(position) {
-   if (gps) {
+   if (GPS) {
         posicao = posicaoNoGrid({
              lat : position.coords.latitude,
              lng : position.coords.longitude
@@ -598,8 +598,8 @@ $(document).ready(function() {
      });
 
      $("#reload").click(function (e) {
-             gps = !gps;
-             if (gps) {
+             GPS = !GPS;
+             if (GPS) {
                   $("#reload").removeClass("active");
              }
              else {
