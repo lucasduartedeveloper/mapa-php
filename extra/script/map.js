@@ -718,6 +718,15 @@ $(document).ready(function() {
             reload();
         }
      };
+
+     setInterval(function() {
+         const canvas = document.getElementById("canvas-camera");
+         const context = this.canvas.getContext("2d");
+         const camera = new Camera(context);
+         camera.begin();
+         // Draw stuff
+         camera.end();
+     }, 250);
 });
 
 // COMO JOGAR
