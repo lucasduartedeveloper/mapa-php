@@ -222,41 +222,11 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 
 // Localização melhor
 function success(position) {
-
     posicao = posicaoNoGrid({
         lat : position.coords.latitude,
         lng : position.coords.longitude
     });
-
-    var pointList = [];
-    map.removeControl(wire);
- 
-    pointList.push(
-                   new L.LatLng(
-                   posicao.lat,
-                   posicao.lng));
-
-    for (var k in audios) {
-           pointList.push(
-                   new L.LatLng(
-                   audios[k].latitude,
-                   audios[k].longitude));
-    }
-
-    wire = new L.Polyline(pointList, {
-              color: '#8A0829',
-              weight: 3,
-              opacity: 0.5,
-              smoothFactor: 1,
-              dashArray: '5',
-              dashOffset: '0'
-    });
-    wire.addTo(map);
-
-    map.setView([posicao.lat, posicao.lng], 19);
-    players[playerId].marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
-    players[playerId].markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
-     
+    mapClick({ latlng: posicao });     
 }
 
 function error(error) {
@@ -361,6 +331,11 @@ function reload() {
          });
          wire.addTo(map);
       });
+
+     // Atualizar marcadores
+     $.getJSON("/extra/ajax/audio.php", function(data) {
+             
+     });
 }
 
 // Carregar áudio
@@ -530,6 +505,16 @@ function mapClick(e) {
 
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+
+    $.post("/extra/ajax/trajeto.php", {
+             playerId: playerId,
+             latitude: pos.lat, 
+             longitude: pos.lng,
+             }).done(function(data) { 
+                   audio.pause();
+                   audio = new Audio("../audio/game_notification.wav");
+                   audio.play();
+    });
 }
 
 // Atualizar 
