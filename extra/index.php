@@ -61,7 +61,7 @@
 <img class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v46.0.1.183
+     v46.0.1.184
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -83,7 +83,7 @@
 <script src="/extra/script/websocket.js?v=0"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=183"></script> 
+<script src="/extra/script/map.js?v=184"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
