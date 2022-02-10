@@ -14,7 +14,7 @@ try {
     $stmt->execute();
 
     echo $sql;
-  
+  }
   else if (!empty($_GET["playerId"])) {
 
     $playerId = htmlspecialchars($_GET["playerId"]);
