@@ -544,7 +544,7 @@ function excluirTrajeto(playerId) {
       $.get("/extra/ajax/trajeto.php?deletePlayerId="+playerId, function(data) {
            //console.log(data)
            audio.pause();
-           new Audio("../audio/game_over.mp3");
+           audio = new Audio("../audio/game_over.mp3");
            audio.play();
            reload();
            // Websocket
