@@ -30,7 +30,7 @@ var markerIcon0 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker0 = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon0}).addTo(map).bounce();
+var marker0 = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon0}).addTo(map);
 
 var markerShadow0 = L.circle([-23.373144526961156, -51.159208612927344], {
         color: "#2E2E2E",
@@ -48,7 +48,7 @@ var markerIcon1= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker1 = L.marker([-23.373054594800273, -51.159806010493],  {icon: markerIcon1}).addTo(map).bounce();
+var marker1 = L.marker([-23.373054594800273, -51.159806010493],  {icon: markerIcon1}).addTo(map);
 
 var markerShadow1 = L.circle([-23.373054594800273, -51.159806010493], {
         color: "#2E2E2E",
@@ -66,7 +66,7 @@ var markerIcon2 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([ -23.373009628719835, -51.159756227362536],  {icon: markerIcon2}).addTo(map).bounce();
+var marker2 = L.marker([ -23.373009628719835, -51.159756227362536],  {icon: markerIcon2}).addTo(map);
 
 var markerShadow2 = L.circle([ -23.373009628719835, -51.159756227362536], {
         color: "#2E2E2E",
@@ -84,7 +84,7 @@ var markerIcon3 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker3 = L.marker([-23.373009628719835, -51.15985579362348],  {icon: markerIcon3}).addTo(map).bounce();
+var marker3 = L.marker([-23.373009628719835, -51.15985579362348],  {icon: markerIcon3}).addTo(map);
 
 var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
         color: "#2E2E2E",
@@ -584,6 +584,10 @@ $(document).ready(function() {
              playerId = playerId < 3 ? playerId += 1 : 0;
              mapClick({ latlng: posicao });
              localStorage.setItem("playerId", playerId);
+     });
+
+     $("#update").click(function (e) {
+             location.reload();
      });
 });
 
