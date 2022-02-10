@@ -521,6 +521,7 @@ function mapClick(e) {
              latitude: pos.lat, 
              longitude: pos.lng,
              }).done(function(data) { 
+                   console.log(data);
                    audio.pause();
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play();
@@ -577,8 +578,11 @@ $(document).ready(function() {
 
      $("#player").click(function (e) {
              playerId = playerId < 3 ? playerId += 1 : 0;
-             mapClick({ latlng: posicao });
-             localStorage.setItem("playerId", playerId);
+             map.setView([-23.373144526961156, -51.159208612927344], 15);
+             setTimeout(function() {
+                 mapClick({ latlng: posicao });
+                 localStorage.setItem("playerId", playerId);
+             }, 1000);
      });
 
      $("#update").click(function (e) {
