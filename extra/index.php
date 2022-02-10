@@ -58,10 +58,14 @@
       <i class="bi bi-people-fill"></i>
 </button>
 
+<button id="delete" type="button" class="btn-delete float-top2-right">
+      <i class="bi bi-door-closed-fill"></i>
+</button>
+
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v48.1.1.206
+     v48.1.1.207
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -83,7 +87,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=206"></script> 
+<script src="/extra/script/map.js?v=207"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
