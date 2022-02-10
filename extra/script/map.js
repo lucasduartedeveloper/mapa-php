@@ -731,7 +731,7 @@ $(document).ready(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
          context.drawImage(video, 0, 0, canvas.width, canvas.height);
-     }, 2000);
+     }, 250);
 });
 
 // COMO JOGAR
