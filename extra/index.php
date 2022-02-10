@@ -98,8 +98,8 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
-       <video id="video" width="320" height="240" autoplay></video>
-        <canvas width="320" height="240" id="camera-canvas"></canvas>
+       <video id="video" width="240" height="240" autoplay></video>
+        <canvas width="240" height="240" id="camera-canvas"></canvas>
       </div>
     </div>
   </div>
