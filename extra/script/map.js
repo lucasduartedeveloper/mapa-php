@@ -579,7 +579,7 @@ $(document).ready(function() {
              });
      });
 
-     ("#player").click(function (e) {
+     $("#player").click(function (e) {
              playerId = playerId < 4 ? playerId += 1 : 0;
              mapClick({ latlng: posicao });
      });
