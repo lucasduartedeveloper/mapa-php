@@ -144,6 +144,8 @@ function postAudio(nome, buffer, base64) {
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play(); 
                    reload();
+                   // Websocket
+                   ws.send("JUPS,"+playerId);
       });
 }
 
@@ -391,6 +393,8 @@ function excluirAudio(m) {
           map.removeControl(audios[k].marker);
           map.removeControl(audios[k].markerShadow);
     }
+    // Websocket
+    ws.send("JUPS,"+playerId);
 
     console.log(audios);
     audios = audios.slice(0, m);
@@ -459,6 +463,9 @@ function mudarAudio(m, e) {
                    audios[m].markerShadow.setLatLng(
                    new L.LatLng(
                    pos.lat, pos.lng));
+
+                   // Websocket
+                   ws.send("JUPS,"+playerId);
       });
 
       audios[m].latitude = pos.lat;
@@ -540,6 +547,9 @@ function mapClick(e) {
                    audio.pause();
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play();
+                   
+                   // Websocket
+                   ws.send("JUPS,"+playerId);
     });
 }
 
@@ -615,6 +625,14 @@ $(document).ready(function() {
      $("#update").click(function (e) {
              location.reload();
      });
+
+     ws.onmessage = (event) => {
+        var msg = event.data.split();
+        console.log(msg);
+        if (msg[0] == "JUPS" && msg[1] != playerId) {
+            reload();
+        }
+     };
 });
 
 // COMO JOGAR

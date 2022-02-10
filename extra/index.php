@@ -61,7 +61,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v46.0.1.202
+     v46.1.1.203
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -80,10 +80,10 @@
 
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
-<script src="/extra/script/websocket.js?v=0"></script>
+<script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=202"></script> 
+<script src="/extra/script/map.js?v=203"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
