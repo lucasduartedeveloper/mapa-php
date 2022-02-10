@@ -42,7 +42,7 @@ var markerShadow0 = L.circle([-23.373144526961156, -51.159208612927344], {
 
 // Teste
 var markerIcon1= L.icon({
-       iconUrl: "../img/marker.png",
+       iconUrl: "../img/marker-b.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
