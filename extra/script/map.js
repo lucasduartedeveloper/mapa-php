@@ -335,23 +335,23 @@ function reload() {
 
      // Atualizar marcadores
      $.getJSON("/extra/ajax/trajeto.php", function(data) {
-            console.log(data);
+            //console.log(data);
 
              trajetos = [
-                 data.filter(d => d.playerId == 0), 
-                 data.filter(d => d.playerId == 1), 
-                 data.filter(d => d.playerId == 2), 
-                 data.filter(d => d.playerId == 3)
+                 data.filter(d => parseInt(d.playerId) == 0), 
+                 data.filter(d => parseInt(d.playerId) == 1), 
+                 data.filter(d => parseInt(d.playerId) == 2), 
+                 data.filter(d => parseInt(d.playerId) == 3)
              ];
 
              for (var m = 0; m < 4; m++) {
-                  if (trajetos[m][0].length > 0) {
+                  if (trajetos[m,0].length > 0) {
                       var latlng = [
-                           trajetos[m][0].latitude,
-                           trajetos[m][0].longitude
+                           trajetos[m,0].latitude,
+                           trajetos[m,0].longitude
                       ];
-                      players[m][0].marker.setLatLng(latlng);
-                      players[m][0].markerShadow.setLatLng(latlng);
+                      players[m,0].marker.setLatLng(latlng);
+                      players[m,0].markerShadow.setLatLng(latlng);
                   }
              }
      });
@@ -530,7 +530,7 @@ function mapClick(e) {
              latitude: pos.lat, 
              longitude: pos.lng,
              }).done(function(data) { 
-                   console.log(data);
+                   //console.log(data);
                    audio.pause();
                    audio = new Audio("../audio/game_notification.wav");
                    audio.play();
