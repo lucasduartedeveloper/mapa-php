@@ -24,7 +24,7 @@ function say(text) {
         }
 }
 var markerIcon0 = L.icon({
-       iconUrl: "../img/marker.png",
+       iconUrl: "/extra/img/goku.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
