@@ -62,10 +62,14 @@
       <i class="bi bi-door-closed-fill"></i>
 </button>
 
+<button id="camera" type="button" class="btn-camera float-top3-right">
+      <i class="bi bi-camera-fill"></i>
+</button>
+
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v50.1.1.223
+     v50.1.1.224
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -87,7 +91,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=223"></script> 
+<script src="/extra/script/map.js?v=224"></script> 
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
