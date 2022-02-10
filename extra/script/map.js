@@ -10,58 +10,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
-var markerIcon0 = L.icon({
-       iconUrl: "../img/marker.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-});
-
-var marker0 = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon}).addTo(map).bounce();
-
-var markerShadow0 = L.circle([-23.373144526961156, -51.159208612927344], {
-        color: "#2E2E2E",
-        fillOpacity: 0.5,
-        radius: 2.25,
-        weight: 0,
-        stroke: true
-}).addTo(map);
-
-// Teste
-var markerIcon1= L.icon({
-       iconUrl: "../img/marker-b.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-});
-
 var marker1 = L.marker([-23.373054594800273, -51.159806010493],  {icon: markerIcon1}).addTo(map).bounce();
-
-var markerShadow1 = L.circle([-23.373054594800273, -51.159806010493], {
-        color: "#2E2E2E",
-        fillOpacity: 0.5,
-        radius: 2.25,
-        weight: 0,
-        stroke: true
-}).addTo(map);
-
-// Teste
-var markerIcon2 = L.icon({
-       iconUrl: "../img/marker-unlocked.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
-});
-
-var marker2 = L.marker([ -23.373009628719835, -51.159756227362536],  {icon: markerIcon2}).addTo(map).bounce();
-
-var markerShadow2 = L.circle([ -23.373009628719835, -51.159756227362536], {
-        color: "#2E2E2E",
-        fillOpacity: 0.5,
-        radius: 2.25,
-        weight: 0,
-        stroke: true
-}).addTo(map);
 
 //Teste
 var markerIcon3 = L.icon({
@@ -84,9 +33,6 @@ var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
 // Teste
 var playerId = 0;
 var players = [ 
-    { marker: marker0, markerShadow: markerShadow0 },
-    { marker: marker1, markerShadow: markerShadow1 },
-    { marker: marker2, markerShadow: markerShadow2 },
     { marker: marker3, markerShadow: markerShadow3 }
 ];
 
