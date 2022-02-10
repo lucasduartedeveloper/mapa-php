@@ -105,6 +105,12 @@ var players = [
 ];
 trajetos = [];
 
+for (var m = 0; m < 4; m++) {
+    if(m != playerId) {
+         players[m].marker.setOpacity(0.3);
+    }
+}
+
 // Posição no mapa
 var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
 function posicaoNoGrid(pos) {
@@ -587,6 +593,12 @@ $(document).ready(function() {
 
      $("#player").click(function (e) {
              playerId = playerId < 3 ? playerId += 1 : 0;
+             for (var m = 0; m < 4; m++) {
+                 if(m != playerId) {
+                     players[m].marker.setOpacity(0.3);
+                 }
+             }
+
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
                  posicao = players[playerId].marker.getLatLng();
