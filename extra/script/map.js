@@ -719,13 +719,13 @@ $(document).ready(function() {
         }
      };
 
+     var video = document.getElementById("video");
+     var stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+     video.srcObject = stream;
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
-         var camera = new Camera(context);
-         camera.begin();
-         // Draw stuff
-         camera.end();
+         context.drawImage(video, 0, 0, canvas.width, canvas.height);
      }, 2000);
 });
 

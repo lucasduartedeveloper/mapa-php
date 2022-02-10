@@ -69,7 +69,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v52.1.1.229
+     v52.1.1.230
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -92,14 +92,15 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=229"></script> 
+<script src="/extra/script/map.js?v=230"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <canvas width="200px" height="100px" id="camera-canvas"></canvas>
+       <video id="video" width="320" height="240" autoplay></video>
+        <canvas width="320" height="240" id="camera-canvas"></canvas>
       </div>
     </div>
   </div>
