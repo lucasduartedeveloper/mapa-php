@@ -347,8 +347,8 @@ function reload() {
              for (var m = 0; m < 4; m++) {
                   if (trajetos[m].length > 0) {
                       var latlng = [
-                           trajetos[m,0].latitude,
-                           trajetos[m,0].longitude
+                           trajetos[m][0].latitude,
+                           trajetos[m][0].longitude
                       ];
                       players[m].marker.setLatLng(latlng);
                       players[m].markerShadow.setLatLng(latlng);
