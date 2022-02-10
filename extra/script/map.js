@@ -101,19 +101,19 @@ var playerId = localStorage.getItem("playerId") ?
 var players = [ 
     { marker: marker0, 
       markerShadow: markerShadow0,
-      color: "#ccc",
+      color: "#3758b3",
       pointList: [] },
     { marker: marker1, 
       markerShadow: markerShadow1,
-      color: "#ccc",
+      color: "#a83275",
       pointList: [] },
     { marker: marker2, 
       markerShadow: markerShadow2,
-      color: "#ccc",
+      color: "#b39e37",
       pointList: [] },
     { marker: marker3,
       markerShadow: markerShadow3,
-      color: "#ccc",
+      color: "#1c1e21",
       pointList: [] }
 ];
 trajetos = [];
