@@ -8,7 +8,7 @@ try {
     $latitude = htmlspecialchars($_POST["latitude"]);
     $longitude = htmlspecialchars($_POST["longitude"]);
 
-    $sql = "INSERT INTO extra_audio (playerId,latitude,longitude) VALUES ('".$playerId."','".$latitude."','".$longitude."');";
+    $sql = "INSERT INTO extra_audio (playerId,latitude,longitude) VALUES (".$playerId.",'".$latitude."','".$longitude."');";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

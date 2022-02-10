@@ -103,6 +103,7 @@ var players = [
     { marker: marker2, markerShadow: markerShadow2 },
     { marker: marker3, markerShadow: markerShadow3 }
 ];
+trajetos = [];
 
 // Posição no mapa
 var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
@@ -334,7 +335,16 @@ function reload() {
 
      // Atualizar marcadores
      $.getJSON("/extra/ajax/audio.php", function(data) {
-             
+             trajetos = [
+                 data.filter(d => d.playerId == 0), 
+                 data.filter(d => d.playerId == 1), 
+                 data.filter(d => d.playerId == 2), 
+                 data.filter(d => d.playerId == 3)
+             ];
+
+             for (var m = 0; m < 4; m++) {
+                  
+             }
      });
 }
 
