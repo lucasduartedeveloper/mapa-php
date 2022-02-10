@@ -99,10 +99,22 @@ var GPS = true;
 var playerId = localStorage.getItem("playerId") ? 
     parseInt(localStorage.getItem("playerId")) : 0;
 var players = [ 
-    { marker: marker0, markerShadow: markerShadow0 },
-    { marker: marker1, markerShadow: markerShadow1 },
-    { marker: marker2, markerShadow: markerShadow2 },
-    { marker: marker3, markerShadow: markerShadow3 }
+    { marker: marker0, 
+      markerShadow: markerShadow0,
+      color: "#ccc",
+      pointList: [] },
+    { marker: marker1, 
+      markerShadow: markerShadow1,
+      color: "#ccc",
+      pointList: [] },
+    { marker: marker2, 
+      markerShadow: markerShadow2,
+      color: "#ccc",
+      pointList: [] },
+    { marker: marker3,
+      markerShadow: markerShadow3,
+      color: "#ccc",
+      pointList: [] }
 ];
 trajetos = [];
 
@@ -364,7 +376,30 @@ function reload() {
                       players[m].marker.setLatLng(latlng);
                       players[m].markerShadow.setLatLng(latlng);
                   }
-             }
+
+                  if (players[m].line) {
+                      map.removeControl(players[m].line);
+                  }
+                  players[m].pointList = [];
+
+                  for (var k in trajetos[m]) {
+                  players[m].pointList.push(
+                      new L.LatLng(
+                      trajetos[m][k].latitude,
+                      trajetos[m][k].longitude));
+                  }
+
+                  players[m].line = 
+                  new L.Polyline(players[m].pointList, {
+                      color: players[m].color,
+                      weight: 3,
+                      opacity: 0.5,
+                      smoothFactor: 1,
+                      dashArray: '0',
+                      dashOffset: '0'
+                 });
+                 players[m].line.addTo(map);
+           }
      });
 }
 
