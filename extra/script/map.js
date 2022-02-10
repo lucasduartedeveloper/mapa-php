@@ -95,7 +95,8 @@ var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
 }).addTo(map);
 
 // Teste
-var playerId = 0;
+var playerId = localStorage.getItem("playerId") ? 
+      ;localStorage.getItem("playerId") : 0;
 var players = [ 
     { marker: marker0, markerShadow: markerShadow0 },
     { marker: marker1, markerShadow: markerShadow1 },
@@ -582,6 +583,7 @@ $(document).ready(function() {
      $("#player").click(function (e) {
              playerId = playerId < 4 ? playerId += 1 : 0;
              mapClick({ latlng: posicao });
+             localStorage.setItem("playerId", playerId);
      });
 });
 
