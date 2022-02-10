@@ -720,7 +720,7 @@ $(document).ready(function() {
      };
 
      setInterval(function() {
-         var canvas = document.getElementById("canvas-camera");
+         var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
          var camera = new Camera(context);
          camera.begin();
