@@ -598,6 +598,7 @@ $(document).ready(function() {
                      players[m].marker.setOpacity(0.3);
                  }
              }
+             players[playerId].marker.setOpacity(1);
 
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
