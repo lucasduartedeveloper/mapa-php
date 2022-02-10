@@ -535,6 +535,16 @@ function mudarAudio(m, e) {
      wire.addTo(map);
 }
 
+// Enviar o áudio para o banco de dados
+function excluirTrajeto(playerId) {
+
+      $.get("/extra/ajax/trajetos.php?deletePlayerId="+playerId, function(data) {
+           reload();
+           // Websocket
+           ws.send("JUPS,"+playerId);
+      });
+}
+
 // Click no mapa
 map.on("click", mapClick);
 function mapClick(e) {
@@ -670,6 +680,10 @@ $(document).ready(function() {
 
      $("#update").click(function (e) {
              location.reload();
+     });
+
+     $("#delete").click(function (e) {
+             excluirTrajeto(playerId);
      });
 
      ws.onmessage = (event) => {
