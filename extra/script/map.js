@@ -721,8 +721,8 @@ $(document).ready(function() {
 
      // VR TESTE
      var video = document.getElementById("video");
-     var stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-     video.srcObject = stream;
+     //var stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+     //video.srcObject = stream;
 
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
