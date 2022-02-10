@@ -20,22 +20,6 @@ var markerIcon3 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker3 = L.marker([-23.373009628719835, -51.15985579362348],  {icon: markerIcon3}).addTo(map).bounce();
-
-var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
-        color: "#2E2E2E",
-        fillOpacity: 0.5,
-        radius: 2.25,
-        weight: 0,
-        stroke: true
-}).addTo(map);
-
-// Teste
-var playerId = 0;
-var players = [ 
-    { marker: marker3, markerShadow: markerShadow3 }
-];
-
 // Texto para audio
 var speaking = false;
 function say(text) {
@@ -200,8 +184,8 @@ function success(position) {
     wire.addTo(map);
 
     map.setView([posicao.lat, posicao.lng], 19);
-    players[playerId].marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
-    players[playerId].markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
+    //players[playerId].marker.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
+    //players[playerId].markerShadow.setLatLng(new L.LatLng(posicao.lat, posicao.lng));
      
 }
 
@@ -474,8 +458,8 @@ function mapClick(e) {
     });
     wire.addTo(map);
 
-    players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    //players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    //players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 }
 
 // Atualizar 
