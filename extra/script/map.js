@@ -247,7 +247,13 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 }
 
 // Localização melhor
+var lastPosition = false;
+var newPosition = false;
 function success(position) {
+   
+   lastPosition = newPosition;
+   newPosition = position;
+
    if (GPS) {
         posicao = posicaoNoGrid({
              lat : position.coords.latitude,
@@ -731,6 +737,16 @@ $(document).ready(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
          context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+         var img = new Image;
+         img.onload = function(){
+              context.drawImage(img, 0, 0); // Or at whatever offset you like
+         };
+         img.src = "/extra/img/ghost.png";
+
+         for (var k in audios) {
+              
+         }
      }, 250);
 });
 
