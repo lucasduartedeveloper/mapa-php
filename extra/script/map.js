@@ -627,7 +627,7 @@ $(document).ready(function() {
      });
 
      ws.onmessage = (event) => {
-        var msg = event.data.split();
+        var msg = event.data.split(",");
         console.log(msg);
         if (msg[0] == "JUPS" && msg[1] != playerId) {
             reload();
