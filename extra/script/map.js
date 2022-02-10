@@ -343,7 +343,14 @@ function reload() {
              ];
 
              for (var m = 0; m < 4; m++) {
-                  
+                  if (trajetos[m][0].length > 0) {
+                      var latlng = [
+                           trajetos[m].latitude,
+                           trajetos[m].longitude
+                      ];
+                      players[m][0].marker.setLatLng(latlng);
+                      players[m][0].markerShadow.setLatLng(latlng);
+                  }
              }
      });
 }
