@@ -350,8 +350,8 @@ function reload() {
                            trajetos[m,0].latitude,
                            trajetos[m,0].longitude
                       ];
-                      players[m,0].marker.setLatLng(latlng);
-                      players[m,0].markerShadow.setLatLng(latlng);
+                      players[m].marker.setLatLng(latlng);
+                      players[m].markerShadow.setLatLng(latlng);
                   }
              }
      });
