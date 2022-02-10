@@ -97,11 +97,9 @@
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-body">
-       <div style="display:nome">
-            <video id="video" width="240" height="240" autoplay></video>
-        </div>
-        <canvas width="240" height="320" id="camera-canvas"></canvas>
-    </div>
+          <video style="display:none" id="video" width="240" height="240" autoplay></video>
+          <canvas width="240" height="320" id="camera-canvas"></canvas>
+       </div>
   </div>
 </div>
 
