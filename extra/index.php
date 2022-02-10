@@ -62,7 +62,7 @@
       <i class="bi bi-door-closed-fill"></i>
 </button>
 
-<button id="camera" type="button" class="btn-camera float-top3-right" data-toggle="modal" data-target=".bd-example-modal-lg">
+<button id="camera" type="button" class="btn-camera float-top3-right" data-toggle="modal" data-target="#cameraModal">
       <i class="bi bi-camera-fill"></i>
 </button>
 
@@ -93,11 +93,23 @@
 <script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=224"></script> 
 
-<!-- Large modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+<!-- Modal -->
+<div style="z-index: 10000" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <canvas id="camera-canvas"></canvas>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Camera</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <canvas id"camera-canvas"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Enviar no WhatsApp</button>
+      </div>
     </div>
   </div>
 </div>
