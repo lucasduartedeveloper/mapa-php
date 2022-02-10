@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
 <link rel="stylesheet" href="/extra/css/dark-osm.css">
-<link rel="stylesheet" href="/extra/css/style.css?v=47">
+<link rel="stylesheet" href="/extra/css/style.css?v=48">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -61,7 +61,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v47.1.1.206
+     v48.1.1.206
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
