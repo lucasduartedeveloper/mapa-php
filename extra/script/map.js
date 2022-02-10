@@ -95,6 +95,7 @@ var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
 }).addTo(map);
 
 // Teste
+var GPS = true;
 var playerId = localStorage.getItem("playerId") ? 
     parseInt(localStorage.getItem("playerId")) : 0;
 var players = [ 
@@ -107,7 +108,7 @@ trajetos = [];
 
 for (var m = 0; m < 4; m++) {
     if(m != playerId) {
-         players[m].marker.setOpacity(0.3);
+         players[m].marker.setOpacity(0.5);
     }
 }
 
@@ -231,11 +232,13 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 
 // Localização melhor
 function success(position) {
-    posicao = posicaoNoGrid({
-        lat : position.coords.latitude,
-        lng : position.coords.longitude
-    });
-    mapClick({ latlng: posicao });     
+   if (gps) {
+        posicao = posicaoNoGrid({
+             lat : position.coords.latitude,
+             lng : position.coords.longitude
+        });
+        mapClick({ latlng: posicao });
+    }
 }
 
 function error(error) {
@@ -595,6 +598,14 @@ $(document).ready(function() {
      });
 
      $("#reload").click(function (e) {
+             gps = !gps;
+             if (gps) {
+                  $("#reload").removeClass("active");
+             }
+             else {
+                  $("#reload"). addClass("active");
+             }
+
              reload();
              $.getJSON("https://nominatim.openstreetmap.org/reverse?lat="+posicao.lat+"&lon="+posicao.lng+"&format=json", function(data) {
                    say("Estamos próximos à " + data.display_name);
@@ -605,7 +616,7 @@ $(document).ready(function() {
              playerId = playerId < 3 ? playerId += 1 : 0;
              for (var m = 0; m < 4; m++) {
                  if(m != playerId) {
-                     players[m].marker.setOpacity(0.3);
+                     players[m].marker.setOpacity(0.5);
                  }
              }
              players[playerId].marker.setOpacity(1);
@@ -628,7 +639,7 @@ $(document).ready(function() {
 
      ws.onmessage = (event) => {
         var msg = event.data.split(",");
-        console.log(msg);
+        //console.log(msg);
         if (msg[0] == "JUPS" && msg[1] != playerId) {
             reload();
         }
