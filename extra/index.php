@@ -16,12 +16,12 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<link rel="stylesheet" href="/extra/css/dark-osm.css">
-<link rel="stylesheet" href="/extra/css/style.css?v=51">
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="/extra/css/dark-osm.css">
+<link rel="stylesheet" href="/extra/css/style.css?v=52">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -69,7 +69,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      JUPS<br>
-     v51.1.1.224
+     v52.1.1.224
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -94,7 +94,7 @@
 <script src="/extra/script/map.js?v=224"></script> 
 
 <!-- Modal -->
-<div style="z-index: 10000" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">

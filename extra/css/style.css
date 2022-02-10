@@ -247,3 +247,7 @@ html, body {
       top: 5vw;
   }
 }
+
+.modal-backdrop {
+    z-index: 10000;
+}
