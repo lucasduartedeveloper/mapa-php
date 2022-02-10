@@ -720,9 +720,9 @@ $(document).ready(function() {
      };
 
      setInterval(function() {
-         const canvas = document.getElementById("canvas-camera");
-         const context = this.canvas.getContext("2d");
-         const camera = new Camera(context);
+         var canvas = document.getElementById("canvas-camera");
+         var context = canvas.getContext("2d");
+         var camera = new Camera(context);
          camera.begin();
          // Draw stuff
          camera.end();
