@@ -162,7 +162,7 @@ function postAudio(nome, buffer, base64) {
                    audio.play(); 
                    reload();
                    // Websocket
-                   ws.send("JUPS,"+playerId);
+                   ws.send("JUPS|"+playerId);
       });
 }
 
@@ -442,7 +442,7 @@ function excluirAudio(m) {
           map.removeControl(audios[k].markerShadow);
     }
     // Websocket
-    ws.send("JUPS,"+playerId);
+    ws.send("JUPS|"+playerId);
 
     console.log(audios);
     audios = audios.slice(0, m);
@@ -513,7 +513,7 @@ function mudarAudio(m, e) {
                    pos.lat, pos.lng));
 
                    // Websocket
-                   ws.send("JUPS,"+playerId);
+                   ws.send("JUPS|"+playerId);
       });
 
       audios[m].latitude = pos.lat;
@@ -554,7 +554,7 @@ function excluirTrajeto(playerId) {
            audio.play();
            reload();
            // Websocket
-           ws.send("JUPS,"+playerId);
+           ws.send("JUPS|"+playerId);
       });
 }
 
@@ -628,7 +628,7 @@ function mapClick(e) {
                    players[playerId].line.addTo(map);
                    
                    // Websocket
-                   ws.send("JUPS,"+playerId);
+                   ws.send("JUPS|"+playerId);
     });
 }
 
@@ -718,10 +718,10 @@ $(document).ready(function() {
      });
 
      ws.onmessage = (event) => {
-        var msg = event.data.split(",");
-        //console.log(msg);
+        var msg = event.data.split("|");
         if (msg[0] == "JUPS" && msg[1] != playerId) {
             reload();
+            console.log(msg);
         }
      };
 
@@ -732,22 +732,19 @@ $(document).ready(function() {
      .then((stream) => {
            videoBack.srcObject = stream;
      });
-     /*
-     navigator.mediaDevices
-     .getUserMedia({ video: { facingMode: "user" } }, audio: false })
-     .then((stream) => {
-           videoFront.srcObject = stream;
-     });*/
 
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
-         context.drawImage(videoBack, 0, 0, 120, 120);
-         context.drawImage(videoFront, 120, 0, 120, 120);
+         context.drawImage(video, 0, 0, 120, 120);
 
-         for (var k in audios) {
-              
-         }
+         // ENVIAR
+         var cnv = document.createElement("canvas");
+         var ctx = canvas.getContext("2d");
+         ctx.drawImage(video, 0, 0, 120, 120);
+         
+         // Websocket
+         ws.send("JUPS|"+playerId+"|"+cnv.toDataURL("image/png"));
      }, 250);
 });
 
