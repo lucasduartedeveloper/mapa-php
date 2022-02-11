@@ -751,17 +751,17 @@ $(document).ready(function() {
 
          // CAMERAS
          for(var k in players) {
-              var linha = k < 2 ? 0 : 1;
-              var coluna = k == 0 || k== 2 ? 0 : 1;
               var img = document.createElement("img");
+              img.linha = k < 2 ? 0 : 1;
+              img.coluna = k == 0 || k== 2 ? 0 : 1;
 
               img.onload = function() {
                   context.drawImage(
                         this,
-                        linha * 120, 
-                        coluna * 120,
-                        (linha+1) * 120, 
-                        (coluna+1) *  120);
+                        this.linha * 120, 
+                        this.coluna * 120,
+                        (this.linha+1) * 120, 
+                        (this.coluna+1) *  120);
               };
               img.src = players[k].camera;
          }
