@@ -727,11 +727,13 @@ $(document).ready(function() {
 
      // VR TESTE
      var video = document.getElementById("video");
-     navigator.mediaDevices
-     .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
-     .then((stream) => {
-           video.srcObject = stream;
-     });
+     if (navigator.mediaDevices) {
+          navigator.mediaDevices
+          .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
+          .then((stream) => {
+               video.srcObject = stream;
+          });
+     }
 
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
