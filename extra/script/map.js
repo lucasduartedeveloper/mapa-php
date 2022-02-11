@@ -438,14 +438,6 @@ function reload() {
                  });
                  players[m].line.addTo(map);
            }
-           
-           if (trajetos[playerId].length > 0) {
-              var pos = { latlng: {
-                 lat: trajetos[playerId][0].latitude,
-                 lng: trajetos[playerId][0].longitude
-              }};
-              mapClick(pos);
-           }
      });
 }
 
@@ -872,6 +864,11 @@ $(document).ready(function() {
 
     $("#cameraModal").on("hidden.bs.modal", function () {
         cameraView = false;
+        // Websocket
+        ws.send("JUPS|"+playerId+"|"+
+        players[playerId].icon);
+        players[playerId].camera = 
+        players[playerId].icon;
     });
 });
 
