@@ -751,7 +751,7 @@ $(document).ready(function() {
 
          // CAMERAS
          for(var k in players) {
-              var linha = k < 3 ? 0 : 1;
+              var linha = k < 2 ? 0 : 1;
               var coluna = k == 0 || k== 2 ? 0 : 1;
               console.log(linha + " - " + coluna);
 
