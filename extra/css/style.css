@@ -86,13 +86,13 @@ html, body {
    color: white;
 }
 
-.btn-historia {
+.btn-anotacoes {
    border: 2px solid black;
    background-color: white;
    color: black;
 }
 
-.btn-historia:hover {
+.btn-anotacoes:hover {
    border: 2px solid black;
    background-color: black;
    color: white;

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <link rel="stylesheet" href="/extra/css/dark-osm.css">
-<link rel="stylesheet" href="/extra/css/style.css?v=63">
+<link rel="stylesheet" href="/extra/css/style.css?v=64">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -61,18 +61,18 @@
       <i class="bi bi-scissors"></i>
 </button>
 
-<button id="camera" type="button" class="btn-camera float-top4-right" data-toggle="modal" data-target="#historiaModal">
-      <i class="bi bi-card-checklist"></i>
+<button id="camera" type="button" class="btn-camera float-top3-right" data-toggle="modal" data-target="#cameraModal">
+      <i class="bi bi-camera-reels-fill"></i>
 </button>
 
-<button id="camera" type="button" class="btn-camera float-top4-right" data-toggle="modal" data-target="#Modal">
-      <i class="bi bi-camera-reels-fill"></i>
+<button id="anotacoes" type="button" class="btn-anotacoes float-top4-right" data-toggle="modal" data-target="#anotacoesModal">
+      <i class="bi bi-card-checklist"></i>
 </button>
 
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v63.1.1.303
+     v64.1.1.303
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -107,7 +107,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="historiaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="anotacoesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
