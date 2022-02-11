@@ -235,6 +235,12 @@ html, body {
      height: 90%;
 }
 
+.modal-body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
 @media only screen and (min-width: 800px) {
   .float-center {
       left: 70vw;
