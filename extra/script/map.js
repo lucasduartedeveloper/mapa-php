@@ -690,8 +690,8 @@ $(document).ready(function() {
 
      $("#player").click(function (e) {
              // Websocket
-             ws.send("JUPS|"+playerId+"|");
-             players[playerId].camera = "";
+             ws.send("JUPS|"+playerId+"|###");
+             players[playerId].camera = "###";
 
              playerId = playerId < 3 ? playerId += 1 : 0;
              for (var m = 0; m < 4; m++) {
