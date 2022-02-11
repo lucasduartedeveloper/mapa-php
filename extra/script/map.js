@@ -427,6 +427,13 @@ function reload() {
                  });
                  players[m].line.addTo(map);
            }
+           
+           if (trajetos[m].length > 0) {
+              mapClick({ latlng:
+                 lat: trajetos[playerId][0].latitude,
+                 lng: trajetos[playerId][0].longitude
+              });
+           }
      });
 }
 
@@ -732,7 +739,7 @@ $(document).ready(function() {
                  }
              }
              players[playerId].marker.setOpacity(1);
-             say("Você mudou para " +players[playerId].name);
+             say("Você selecionou " +players[playerId].name);
 
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
@@ -826,7 +833,7 @@ $(document).ready(function() {
                       imgNv.onload = function() {
                       context.drawImage(
                         this,
-                        this.linha * 120 + (40 + (this.linha * 4)), 
+                        this.linha * 120 + (30 + (this.linha * 4)), 
                         this.coluna * 120 + (this.coluna * 4),
                         100, 
                         30); }
