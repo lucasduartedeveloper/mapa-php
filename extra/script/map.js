@@ -377,7 +377,7 @@ function reload() {
                       iconUrl: createLabel("Nv. " + audios[k].desenho.split(",").length, "#f00"),
                       iconSize:     [100, 30], // size of the icon
                       iconAnchor:   [50, 70]
-              })).addTo(map);
+              }})).addTo(map);
 
               pointList.push(
                   new L.LatLng(
