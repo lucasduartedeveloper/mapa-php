@@ -829,7 +829,7 @@ $(document).ready(function() {
                         this.linha * 120 + (40 + (this.linha * 4)), 
                         this.coluna * 120 + (this.coluna * 4),
                         100, 
-                        100); }
+                        30); }
                      imgNv.src = 
                      createLabel(
                      "Nv. " + trajetos[img.k].length);
