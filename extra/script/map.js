@@ -741,18 +741,22 @@ $(document).ready(function() {
          // ENVIAR
          var cnv = document.createElement("canvas");
          var ctx = canvas.getContext("2d");
-         ctx.drawImage(video, 0, 0, 120, 120);
+         //ctx.drawImage(video, 0, 0, 120, 120);
 
          // Websocket
          var dataUrl = cnv.toDataURL("image/png");
          ws.send("JUPS|"+playerId+"|"+dataUrl);
          players[playerId].camera == dataUrl;
+         console.log(players);
 
          // CAMERAS
          for(var k in players) {
               if (players[k].camera) {
                    var linha = k < 3 ? 0 : 1;
                    var coluna = k == 0 || k== 2 ? 0 : 1;
+
+                   console.log(linha + " - " + coluna);
+
                    context.drawImage(
                    players[k].camera,
                         linha * 120, 
