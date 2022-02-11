@@ -757,7 +757,6 @@ $(document).ready(function() {
 
               var img = document.createElement("img");
               img.onload = function() {
-                  console.log(img.src);
                   context.drawImage(
                         img,
                         linha * 120, 
@@ -765,6 +764,7 @@ $(document).ready(function() {
                         120, 120);
               };
               img.src = players[k].camera;
+              console.log(img.src);
          }
      }, 5000);
 });
