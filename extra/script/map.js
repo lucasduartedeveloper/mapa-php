@@ -721,7 +721,8 @@ $(document).ready(function() {
         var msg = event.data.split("|");
         if (msg[0] == "JUPS" && msg[1] != playerId) {
             reload();
-            console.log(msg);
+            //console.log(msg);
+            players[parseInt(msg[1])].camera = msg[2];
         }
      };
 
@@ -736,15 +737,29 @@ $(document).ready(function() {
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
-         context.drawImage(video, 0, 0, 120, 120);
 
          // ENVIAR
          var cnv = document.createElement("canvas");
          var ctx = canvas.getContext("2d");
          ctx.drawImage(video, 0, 0, 120, 120);
-         
+
          // Websocket
-         ws.send("JUPS|"+playerId+"|"+cnv.toDataURL("image/png"));
+         var dataUrl = cnv.toDataURL("image/png");
+         ws.send("JUPS|"+playerId+"|"+dataUrl);
+         players[playerId].camera ==dataUrl;
+
+         // CAMERAS
+         for(var k in players) {
+              if (players[k].camera) {
+                   var linha = k < 3 ? 0 : 1;
+                   var coluna = k == 0 || k== 2 ? 0 : 1;
+                   context.drawImage(
+                   players[k].camera,
+                        linha * 120, 
+                        coluna * 120,
+                        120, 120);
+              }
+         }
      }, 250);
 });
 
