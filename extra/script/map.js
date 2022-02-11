@@ -818,6 +818,8 @@ $(document).ready(function() {
                       120, 120);
 
                       var imgNv = document.createElement("img");
+                      imgNv.width = 100;
+                      imgNv.height = 40;
                       imgNv.linha = k < 2 ? 0 : 1;
                       imgNv.coluna = k == 0 || k== 2 ? 0 : 1;
 
@@ -825,7 +827,7 @@ $(document).ready(function() {
                       context.drawImage(
                         this,
                         this.linha * 120 + (40 + (this.linha * 4)), 
-                        this.coluna * 120 + (40 +(this.coluna * 4)),
+                        this.coluna * 120 + (this.coluna * 4),
                         100, 
                         100); }
                      imgNv.src = 
