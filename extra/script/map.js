@@ -762,6 +762,8 @@ $(document).ready(function() {
         }
      };
 
+     //mapClick({ latlng: posicao });
+
      // VR TESTE
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
@@ -806,13 +808,31 @@ $(document).ready(function() {
               img.linha = k < 2 ? 0 : 1;
               img.coluna = k == 0 || k== 2 ? 0 : 1;
               img.style.objectFit = "cover";
+              img.k = k;
 
               img.onload = function() {
                   if (this.src.includes("sprites")) {
                       context.clearRect(
                       this.linha * 120 + (this.linha * 4),
                       this.coluna * 120 + (this.coluna * 4),
-                      120, 120); }
+                      120, 120);
+
+                      var imgNv = document.createElement("img");
+                      imgNv.linha = k < 2 ? 0 : 1;
+                      imgNv.coluna = k == 0 || k== 2 ? 0 : 1;
+
+                      imgNv.onload = function() {
+                      context.drawImage(
+                        this,
+                        this.linha * 120 + (40 + (this.linha * 4)), 
+                        this.coluna * 120 + (40 +(this.coluna * 4)),
+                        100, 
+                        this.src.includes("sprites") ?
+                        100); }
+                     imgNv.src = 
+                     createLabel(
+                     "Nv. " + trajetos[img.k].length);
+                  }
                   context.drawImage(
                         this,
                         this.linha * 120 + (this.linha * 4), 
