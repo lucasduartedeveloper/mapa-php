@@ -507,7 +507,7 @@ function excluirAudio(m) {
     console.log(pointList);
 
     audio.pause();
-    audio = new Audio("../audio/creature_dying.wav");
+    audio = new Audio("../audio/sfx_victory.mp3");
     audio.play();
 
     wire = new L.Polyline(pointList, {
