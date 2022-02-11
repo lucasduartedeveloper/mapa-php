@@ -68,7 +68,7 @@ var markerIcon2 = L.icon({
 
 var marker2 = L.marker([-23.370806290778205,  -51.15607227570766],  {icon: markerIcon2}).addTo(map);
 
-var markerShadow2 = L.circle(-23.370806290778205,  -51.15607227570766], {
+var markerShadow2 = L.circle([-23.370806290778205,  -51.15607227570766], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
