@@ -94,6 +94,15 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
         stroke: true
 }).addTo(map);
 
+//Teste nível
+var markerLevel = L.marker([0,  0], {
+     icon: L.icon({
+       iconUrl: createLabel("Lv. 0"),
+       iconSize:     [100, 30], // size of the icon
+       iconAnchor:   [50, 70]
+})}).addTo(map);
+
+
 // Teste
 var GPS = false;
 var playerId = localStorage.getItem("playerId") ? 
@@ -104,28 +113,28 @@ var players = [
       name: "Espadachim",
       icon: "/extra/img/sprites/tile058.png",
       camera: "/extra/img/sprites/tile058.png",
-      color: "#3758b3",
+      color: "#1c1e21",
       pointList: [] },
     { marker: marker1, 
       markerShadow: markerShadow1,
       name: "Arqueira",
       icon: "/extra/img/sprites/tile004.png",
       camera: "/extra/img/sprites/tile004.png",
-      color: "#a83275",
+      color: "#b39e37",
       pointList: [] },
     { marker: marker2, 
       markerShadow: markerShadow2,
       name: "Samurai",
       icon: "/extra/img/sprites/tile055.png",
       camera: "/extra/img/sprites/tile055.png",
-      color: "#b39e37",
+      color: "#a83275",
       pointList: [] },
     { marker: marker3,
       markerShadow: markerShadow3,
-      name: "Bruxa",
+      name: "Guerreira",
       icon: "/extra/img/sprites/tile009.png",
       camera: "/extra/img/sprites/tile009.png",
-      color: "#1c1e21",
+      color: "#3758b3",
       pointList: [] }
 ];
 trajetos = [];
@@ -606,6 +615,13 @@ function mapClick(e) {
 
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    markerLevel.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    markerLevel.setIcon(
+       L.icon({
+          iconUrl: createLabel("Lv. " + trajetos[playerId].length),
+          iconSize:     [100, 30], // size of the icon
+          iconAnchor:   [50, 70]
+       }));
 
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
@@ -786,7 +802,7 @@ $(document).ready(function() {
               img.style.objectFit = "cover";
 
               img.onload = function() {
-                  if (this.src.includes("marker")) {
+                  if (this.src.includes("sprites")) {
                       context.clearRect(
                       this.linha * 120 + (this.linha * 4),
                       this.coluna * 120 + (this.coluna * 4),
@@ -795,9 +811,9 @@ $(document).ready(function() {
                         this,
                         this.linha * 120 + (this.linha * 4), 
                         this.coluna * 120 + (this.coluna * 4),
-                        this.src.includes("marker") ?
+                        this.src.includes("sprites") ?
                         40 : 120, 
-                        this.src.includes("marker") ?
+                        this.src.includes("sprites") ?
                         40 : 120);
               };
               img.src = players[k].camera;
@@ -805,9 +821,24 @@ $(document).ready(function() {
      }, 500);
 });
 
-// Recortar sprite
-function recortarSprite() {
-    
+// Nível
+function createLabel(text) {
+     var canvas = document.createElement("canvas");
+     var context = canvas.getContext( '2d' );
+
+     canvas.width = 100;
+     canvas.height = 30;
+
+    context.save();
+    //context.translate( canvas.width / 2, canvas.height / 2 );
+    //context.rotate( -(Math.PI / 2) );
+    context.font = "20px 'VT323'";
+    context.fillStyle = "#000"; // green
+    context.textAlign = "center";
+    context.fillText(text, 0, 0);
+    context.restore();
+
+    return canvas.toDataURL();
 }
 
 // COMO JOGAR
