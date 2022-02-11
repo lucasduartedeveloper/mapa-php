@@ -95,9 +95,9 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
 }).addTo(map);
 
 //Teste nível
-var markerLevel = L.marker([0,  0], {
+var markerNv = L.marker([0,  0], {
      icon: L.icon({
-       iconUrl: createLabel("Lv. 0"),
+       iconUrl: createLabel("Nv. 0"),
        iconSize:     [100, 30], // size of the icon
        iconAnchor:   [50, 70]
 })}).addTo(map);
@@ -615,10 +615,10 @@ function mapClick(e) {
 
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    markerLevel.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    markerLevel.setIcon(
+    markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    markerNv.setIcon(
        L.icon({
-          iconUrl: createLabel("Lv. " + trajetos[playerId].length),
+          iconUrl: createLabel("Nv. " + trajetos[playerId].length),
           iconSize:     [100, 30], // size of the icon
           iconAnchor:   [50, 70]
        }));
