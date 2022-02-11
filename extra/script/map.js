@@ -644,6 +644,11 @@ function mapClick(e) {
                    });
                    players[playerId].line.addTo(map);
                    
+                   // ----
+                   trajetos[playerId].push({ 
+                      latitude: pos.lat,
+                      longitude: pos.lng
+                   }];
                    markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
                    markerNv.setIcon(
                    L.icon({
