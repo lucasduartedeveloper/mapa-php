@@ -747,24 +747,22 @@ $(document).ready(function() {
          var dataUrl = cnv.toDataURL("image/png");
          ws.send("JUPS|"+playerId+"|"+dataUrl);
          players[playerId].camera = dataUrl;
-         console.log(players);
+         //console.log(players);
 
          // CAMERAS
          for(var k in players) {
               var linha = k < 2 ? 0 : 1;
               var coluna = k == 0 || k== 2 ? 0 : 1;
-              console.log(linha + " - " + coluna);
-
               var img = document.createElement("img");
+
               img.onload = function() {
                   context.drawImage(
-                        img,
+                        this,
                         linha * 120, 
                         coluna * 120,
                         120, 120);
               };
               img.src = players[k].camera;
-              console.log(img.src);
          }
      }, 5000);
 });
