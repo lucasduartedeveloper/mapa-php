@@ -820,8 +820,8 @@ $(document).ready(function() {
                       var imgNv = document.createElement("img");
                       imgNv.width = 100;
                       imgNv.height = 40;
-                      imgNv.linha = k < 2 ? 0 : 1;
-                      imgNv.coluna = k == 0 || k== 2 ? 0 : 1;
+                      imgNv.linha = img.linha;
+                      imgNv.coluna = img.coluna;
 
                       imgNv.onload = function() {
                       context.drawImage(
