@@ -741,19 +741,11 @@ $(document).ready(function() {
          
          context.beginPath(); // always start a new line with beginPath
          context.strokeStyle = "#000000";
-         context.lineWidth = 2;
-         context.moveTo(1, 1); // start position
-         context.lineTo(1, 245);
-         context.moveTo(1, 245); // start position
-         context.lineTo(245, 245);
-         context.moveTo(245, 245); // start position
-         context.lineTo(245, 1);
-         context.moveTo(245, 1); // start position
-         context.lineTo(1, 1);
-         context.moveTo(1, 123); // start position
-         context.lineTo(245, 123);
-         context.moveTo(123, 1); // start position
-         context.lineTo(123, 245);
+         context.lineWidth = 4;
+         context.moveTo(0, 122); // start position
+         context.lineTo(244, 122);
+         context.moveTo(122, 0); // start position
+         context.lineTo(122, 244);
          context.stroke(); // actually draw the line
 
          // ENVIAR
