@@ -732,11 +732,12 @@ $(document).ready(function() {
      .then((stream) => {
            videoBack.srcObject = stream;
      });
+     /*
      navigator.mediaDevices
      .getUserMedia({ video: { facingMode: "user" } }, audio: false })
      .then((stream) => {
            videoFront.srcObject = stream;
-     });
+     });*/
 
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
