@@ -730,7 +730,7 @@ $(document).ready(function() {
      navigator.mediaDevices
      .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
      .then((stream) => {
-           videoBack.srcObject = stream;
+           video.srcObject = stream;
      });
 
      setInterval(function() {
