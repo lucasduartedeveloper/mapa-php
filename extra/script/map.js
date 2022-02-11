@@ -370,6 +370,15 @@ function reload() {
         	stroke: false
 	}).addTo(map);
 
+              audios[k].markerNv = L.marker(
+              [audios[k].latitude, audios[k].longitude],
+              { icon: 
+                   L.icon({
+                      iconUrl: createLabel("Nv. " + audios[k].desenho.split(",").length, "#f00"),
+                      iconSize:     [100, 30], // size of the icon
+                      iconAnchor:   [50, 70]
+              })).addTo(map);
+
               pointList.push(
                   new L.LatLng(
                        audios[k].latitude,
@@ -468,6 +477,7 @@ function excluirAudio(m) {
 
           map.removeControl(audios[k].marker);
           map.removeControl(audios[k].markerShadow);
+          map.removeControl(audios[k].markerNv);
     }
     // Websocket
     ws.send("JUPS|"+playerId);
@@ -537,6 +547,9 @@ function mudarAudio(m, e) {
                    new L.LatLng(
                    pos.lat, pos.lng));
                    audios[m].markerShadow.setLatLng(
+                   new L.LatLng(
+                   pos.lat, pos.lng));
+                   audios[m].markerNv.setLatLng(
                    new L.LatLng(
                    pos.lat, pos.lng));
 
@@ -873,7 +886,7 @@ $(document).ready(function() {
 });
 
 // Nível
-function createLabel(text) {
+function createLabel(text, color = "#000") {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
 
@@ -884,7 +897,7 @@ function createLabel(text) {
     context.translate( canvas.width / 2, canvas.height / 2 );
     //context.rotate( -(Math.PI / 2) );
     context.font = "20px 'VT323'";
-    context.fillStyle = "#000"; // green
+    context.fillStyle = color; // green
     context.textAlign = "center";
     context.fillText(text, 0, 0);
     context.restore();
