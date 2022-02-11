@@ -752,16 +752,13 @@ $(document).ready(function() {
          // CAMERAS
          for(var k in players) {
               var img = document.createElement("img");
+              img.width = 120;
+              img.height = 120;
               img.linha = k < 2 ? 0 : 1;
               img.coluna = k == 0 || k== 2 ? 0 : 1;
+              img.style.objectFit = "cover";
 
               img.onload = function() {
-                  console.log("---");
-                  console.log(this.linha * 120);
-                  console.log(this.coluna * 120);
-                  console.log((this.linha+1)  * 120);
-                  console.log((this.coluna+1) * 120);
-
                   context.drawImage(
                         this,
                         this.linha * 120, 
@@ -771,7 +768,7 @@ $(document).ready(function() {
               };
               img.src = players[k].camera;
          }
-     }, 5000);
+     }, 250);
 });
 
 // COMO JOGAR
