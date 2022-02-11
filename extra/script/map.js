@@ -313,11 +313,14 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 var audios = [];
 var wire = false;
 var cameraView = false;
+var dragging = false;
 function reload() {
+   if (dragging) { return; }
    $.getJSON("/extra/ajax/audio.php", function(data) {
           for (var k in audios) {
                map.removeControl(audios[k].marker);
                map.removeControl(audios[k].markerShadow);
+               map.removeControl(audios[k].markerNv);
           }
 
           audios = data;
@@ -348,6 +351,11 @@ function reload() {
                };
                var audioDblClick = dblClick.bind(audios[k]);
 
+               var dragStart = function (e) {
+                   dragging = true;
+               };
+               var audioDragStart = dragStart.bind(audios[k]);
+
                var dragEnd = function (e) {
                    mudarAudio(this.m, e);
                };
@@ -359,6 +367,7 @@ function reload() {
               .on("click", audioClick)
               .on("dblclick", audioDblClick)
               .on("dragend", audioDragEnd)
+              .on("dragstart", audioDragStart)
               .addTo(map);
 
               audios[k].markerShadow = L.circle(
@@ -468,6 +477,7 @@ function carregarAudio(m) {
 // Excluir áudio
 function excluirAudio(m) {
 
+    // Comparar o Nv
     if(audios[m].desenho.split(",").length > trajetos[playerId].length) {
         audio.pause();
         audio = new Audio("../audio/game_over.mp3");
@@ -562,6 +572,8 @@ function mudarAudio(m, e) {
 
                    // Websocket
                    ws.send("JUPS|"+playerId);
+
+                   dragging = false;
       });
 
       audios[m].latitude = pos.lat;
