@@ -95,13 +95,12 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
 }).addTo(map);
 
 //Teste nível
-var markerNv = L.marker([0,  0], {
-     icon: L.icon({
-       iconUrl: createLabel("Nv. 0"),
-       iconSize:     [100, 30], // size of the icon
-       iconAnchor:   [50, 70]
-})}).addTo(map);
-
+var nvIcon = 
+      L.icon({
+         iconUrl: createLabel("Nv. 0"),
+         iconSize:     [100, 30], // size of the icon
+         iconAnchor:   [50, 70]
+ });
 
 // Teste
 var GPS = false;
@@ -110,6 +109,7 @@ var playerId = localStorage.getItem("playerId") ?
 var players = [ 
     { marker: marker0, 
       markerShadow: markerShadow0,
+      markerNv: L.marker([-23.37062642645644,  -51.15587314318577], { icon: nvIcon })}).addTo(map),
       name: "Espadachim",
       icon: "/extra/img/sprites/tile058.png",
       camera: "/extra/img/sprites/tile058.png",
@@ -117,6 +117,7 @@ var players = [
       pointList: [] },
     { marker: marker1, 
       markerShadow: markerShadow1,
+      markerNv: L.marker([-23.370806290778205,  -51.15567401066389], { icon: nvIcon })}).addTo(map),
       name: "Arqueira",
       icon: "/extra/img/sprites/tile004.png",
       camera: "/extra/img/sprites/tile004.png",
@@ -124,6 +125,7 @@ var players = [
       pointList: [] },
     { marker: marker2, 
       markerShadow: markerShadow2,
+      markerNv: L.marker([-23.370806290778205,  -51.15607227570766], { icon: nvIcon })}).addTo(map),
       name: "Samurai",
       icon: "/extra/img/sprites/tile055.png",
       camera: "/extra/img/sprites/tile055.png",
@@ -131,6 +133,7 @@ var players = [
       pointList: [] },
     { marker: marker3,
       markerShadow: markerShadow3,
+      markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon })}).addTo(map),
       name: "Guerreira",
       icon: "/extra/img/sprites/tile009.png",
       camera: "/extra/img/sprites/tile009.png",
@@ -309,6 +312,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 // Carregar atualizações
 var audios = [];
 var wire = false;
+var cameraView = false;
 function reload() {
    $.getJSON("/extra/ajax/audio.php", function(data) {
           for (var k in audios) {
@@ -657,8 +661,8 @@ function mapClick(e) {
                       latitude: pos.lat,
                       longitude: pos.lng
                    });
-                   markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
-                   markerNv.setIcon(
+                   players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
+                   players[playerId].markerNv.setIcon(
                    L.icon({
                       iconUrl: createLabel("Nv. " + trajetos[playerId].length),
                       iconSize:     [100, 30], // size of the icon
@@ -779,7 +783,9 @@ $(document).ready(function() {
                video.srcObject = stream;
           });
      }
+
      setInterval(function() {
+         if (cameraView) {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
          
@@ -849,8 +855,17 @@ $(document).ready(function() {
                         40 : 120);
               };
               img.src = players[k].camera;
+              }
          }
-     }, 50000);
+     }, 500);
+
+    $("#cameraModal").on("shown.bs.modal", function () {
+        cameraView = true;
+    });
+
+    $("#cameraModal").on("hidden.bs.modal", function () {
+        cameraView = false;
+    });
 });
 
 // Nível
