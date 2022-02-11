@@ -468,9 +468,16 @@ function carregarAudio(m) {
 // Excluir áudio
 function excluirAudio(m) {
 
+    if(audios[m].desenho split(",").length > trajetos[playerId].length) {
+        audio.pause();
+        audio = new Audio("../audio/game_over.mp3");
+        audio.play();
+        return;
+    }
+
     var pointList = [];
     map.removeControl(wire);
-              
+
     for (var k = m; k < audios.length; k++) {
           $.get("/extra/ajax/audio.php?deleteId="+audios[k].id, function(data) {
           });
