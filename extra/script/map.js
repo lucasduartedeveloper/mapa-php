@@ -827,7 +827,6 @@ $(document).ready(function() {
                         this.linha * 120 + (40 + (this.linha * 4)), 
                         this.coluna * 120 + (40 +(this.coluna * 4)),
                         100, 
-                        this.src.includes("sprites") ?
                         100); }
                      imgNv.src = 
                      createLabel(
