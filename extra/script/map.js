@@ -766,12 +766,12 @@ $(document).ready(function() {
                         this,
                         this.linha * 120, 
                         this.coluna * 120,
-                        (this.linha+1) * 120, 
-                        (this.coluna+1) *  120);
+                        120, 
+                        120);
               };
               img.src = players[k].camera;
          }
-     }, 500);
+     }, 5000);
 });
 
 // COMO JOGAR
