@@ -49,7 +49,7 @@
       <i class="bi bi-mic-mute-fill"></i>
 </button>
 
-<button id="reload" type="button" class="btn-reload float-right">
+<button id="reload" type="button" class="btn-reload float-right active">
       <i class="bi bi-joystick"></i>
 </button>
 
