@@ -27,61 +27,61 @@ html, body {
 }
 
 .btn-mic {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: white;
    color: black;
 }
 
 .btn-mic.active {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: black;
    color: white;
 }
 
 .btn-reload {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: white;
    color: black;
 }
 
 .btn-reload.active {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: black;
    color: white;
 }
 
 .btn-player {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: white;
    color: black;
 }
 
 .btn-player:hover {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: black;
    color: white;
 }
 
 .btn-delete {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: white;
    color: black;
 }
 
 .btn-delete:hover {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: black;
    color: white;
 }
 
 .btn-camera {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: white;
    color: black;
 }
 
 .btn-camera:hover {
-   border: 1px solid black;
+   border: 2px solid black;
    background-color: black;
    color: white;
 }

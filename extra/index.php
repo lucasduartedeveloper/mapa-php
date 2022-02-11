@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <link rel="stylesheet" href="/extra/css/dark-osm.css">
-<link rel="stylesheet" href="/extra/css/style.css?v=59">
+<link rel="stylesheet" href="/extra/css/style.css?v=60">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -58,17 +58,17 @@
 </button>
 
 <button id="delete" type="button" class="btn-delete float-top2-right">
-      <i class="bi bi-door-closed-fill"></i>
+      <i class="bi bi-scissors"></i>
 </button>
 
 <button id="camera" type="button" class="btn-camera float-top3-right" data-toggle="modal" data-target="#cameraModal">
-      <i class="bi bi-camera-fill"></i>
+      <i class="bi bi-camera-reels-fill"></i>
 </button>
 
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      XXX<br>
-     v59.1.1.277
+     v60.1.1.277
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
