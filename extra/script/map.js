@@ -24,7 +24,7 @@ function say(text) {
         }
 }
 var markerIcon0 = L.icon({
-       iconUrl: "../img/marker.png",
+       iconUrl: "/img/sprites/tile058.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -42,7 +42,7 @@ var markerShadow0 = L.circle([-23.37062642645644,  -51.15587314318577], {
 
 // Teste
 var markerIcon1= L.icon({
-       iconUrl: "../img/marker-b.png",
+       iconUrl: "/img/sprites/tile004.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -60,7 +60,7 @@ var markerShadow1 = L.circle([-23.370806290778205,  -51.15567401066389], {
 
 // Teste
 var markerIcon2 = L.icon({
-       iconUrl: "../img/marker-unlocked.png",
+       iconUrl: "/img/sprites/tile055.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -78,7 +78,7 @@ var markerShadow2 = L.circle([-23.370806290778205,  -51.15607227570766], {
 
 //Teste
 var markerIcon3 = L.icon({
-       iconUrl: "../img/marker-z.png",
+       iconUrl: "/img/sprites/tile009.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -710,7 +710,7 @@ $(document).ready(function() {
                  }
              }
              players[playerId].marker.setOpacity(1);
-             say("Você mudou para o marcador " +players[playerId].name);
+             say("Você mudou para " +players[playerId].name);
 
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
@@ -804,6 +804,11 @@ $(document).ready(function() {
          }
      }, 500);
 });
+
+// Recortar sprite
+function recortarSprite() {
+    
+}
 
 // COMO JOGAR
 // ....
