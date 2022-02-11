@@ -429,10 +429,11 @@ function reload() {
            }
            
            if (trajetos[playerId].length > 0) {
-              mapClick({ latlng: {
+              var pos = { latlng: {
                  lat: trajetos[playerId][0].latitude,
                  lng: trajetos[playerId][0].longitude
-              }});
+              }};
+              mapClick(pos);
            }
      });
 }
@@ -769,8 +770,6 @@ $(document).ready(function() {
         }
      };
 
-     //mapClick({ latlng: posicao });
-
      // VR TESTE
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
@@ -780,7 +779,6 @@ $(document).ready(function() {
                video.srcObject = stream;
           });
      }
-
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
@@ -852,7 +850,7 @@ $(document).ready(function() {
               };
               img.src = players[k].camera;
          }
-     }, 500);
+     }, 50000);
 });
 
 // Nível
