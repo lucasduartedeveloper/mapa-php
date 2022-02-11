@@ -615,13 +615,6 @@ function mapClick(e) {
 
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    markerNv.setIcon(
-       L.icon({
-          iconUrl: createLabel("Nv. " + trajetos[playerId].length),
-          iconSize:     [100, 30], // size of the icon
-          iconAnchor:   [50, 70]
-       }));
 
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
@@ -651,6 +644,14 @@ function mapClick(e) {
                    });
                    players[playerId].line.addTo(map);
                    
+                   markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
+                   markerNv.setIcon(
+                   L.icon({
+                      iconUrl: createLabel("Nv. " + trajetos[playerId].length),
+                      iconSize:     [100, 30], // size of the icon
+                      iconAnchor:   [50, 70]
+                   }));
+
                    // Websocket
                    ws.send("JUPS|"+playerId);
     });
