@@ -35,7 +35,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     XXX
+     LOST
 </p>
 
 <p id="audio-info"  style="display:none;" class="audio-info">
@@ -67,7 +67,7 @@
 
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
-     XXX<br>
+     LOST<br>
      v60.1.1.277
 </p>
 
