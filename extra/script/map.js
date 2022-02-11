@@ -428,7 +428,7 @@ function reload() {
                  players[m].line.addTo(map);
            }
            
-           if (trajetos[m].length > 0) {
+           if (trajetos[playerId].length > 0) {
               mapClick({ latlng:
                  lat: trajetos[playerId][0].latitude,
                  lng: trajetos[playerId][0].longitude
