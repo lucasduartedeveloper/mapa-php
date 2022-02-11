@@ -741,7 +741,7 @@ $(document).ready(function() {
          // ENVIAR
          var cnv = document.createElement("canvas");
          var ctx = canvas.getContext("2d");
-         //ctx.drawImage(video, 0, 0, 120, 120);
+         ctx.drawImage(video, 0, 0, 120, 120);
 
          // Websocket
          var dataUrl = cnv.toDataURL("image/png");
@@ -753,13 +753,15 @@ $(document).ready(function() {
               var linha = k < 3 ? 0 : 1;
               var coluna = k == 0 || k== 2 ? 0 : 1;
 
-              if (players[k].camera) {
-                   context.drawImage(
-                   players[k].camera,
+              var img = html.createElement(img);
+              img.onload = function() {
+                  context.drawImage(
+                        img,
                         linha * 120, 
                         coluna * 120,
                         120, 120);
-              }
+              };
+              img.src = players[k].camera;
          }
      }, 500);
 });
