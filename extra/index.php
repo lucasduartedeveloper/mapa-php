@@ -68,7 +68,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      LOST<br>
-     v60.1.1.277
+     v60.1.1.278
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -90,7 +90,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=277"></script> 
+<script src="/extra/script/map.js?v=278"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">

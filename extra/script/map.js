@@ -710,6 +710,7 @@ $(document).ready(function() {
                  }
              }
              players[playerId].marker.setOpacity(1);
+             say("Você mudou para o marcador " +players[k].name);
 
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
