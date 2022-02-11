@@ -244,7 +244,9 @@ html, body {
 #camera-canvas {
      border: 4px solid black;
      border-radius: 10px;
-     background-color: #ccc;
+     background-color: #e5e5f7;
+     opacity: 0.8;
+     background: linear-gradient(135deg, #abacb855 25%, transparent 25%) -8px 0/ 16px 16px, linear-gradient(225deg, #abacb8 25%, transparent 25%) -8px 0/ 16px 16px, linear-gradient(315deg, #abacb855 25%, transparent 25%) 0px 0/ 16px 16px, linear-gradient(45deg, #abacb8 25%, #e5e5f7 25%) 0px 0/ 16px 16px;
      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 

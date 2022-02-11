@@ -752,7 +752,6 @@ $(document).ready(function() {
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
-         //context.clearRect(0, 0, canvas.width, canvas.height);
          
          context.beginPath(); // always start a new line with beginPath
          context.strokeStyle = "#000000";
@@ -786,6 +785,11 @@ $(document).ready(function() {
               img.style.objectFit = "cover";
 
               img.onload = function() {
+                  if (this.src.includes("marker")) {
+                      context.clearRect(
+                      this.linha * 120 + (this.linha * 4),
+                      this.coluna * 120 + (this.coluna * 4),
+                      120, 120); }
                   context.drawImage(
                         this,
                         this.linha * 120 + (this.linha * 4), 
