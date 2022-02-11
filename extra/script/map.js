@@ -727,17 +727,24 @@ $(document).ready(function() {
 
      // VR TESTE
      var video = document.getElementById("video");
-     var stream = navigator.mediaDevices
+     navigator.mediaDevices
      .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
      .then((stream) => {
-           video.srcObject = stream;
+           videoBack.srcObject = stream;
+     });
+     navigator.mediaDevices
+     .getUserMedia({ video: { facingMode: "user" } }, audio: false })
+     .then((stream) => {
+           videoFront.srcObject = stream;
      });
 
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
-         context.drawImage(video, 0, 0, canvas.width, canvas.height);
+         context.drawImage(videoBack, 0, 0, 120, 120);
+         context.drawImage(videoFront, 120, 0, 120, 120);
 
+         /*
          var img = new Image;
          img.onload = function(){
               context.drawImage(img, 0, 0); // Or at whatever offset you like
@@ -745,6 +752,7 @@ $(document).ready(function() {
          img.width = 10;
          img.height = 10;
          img.src = "/extra/img/ghost.png";
+         */
 
          for (var k in audios) {
               
