@@ -746,17 +746,14 @@ $(document).ready(function() {
          // Websocket
          var dataUrl = cnv.toDataURL("image/png");
          ws.send("JUPS|"+playerId+"|"+dataUrl);
-         players[playerId].camera == dataUrl;
-         console.log(players);
+         players[playerId].camera = dataUrl;
 
          // CAMERAS
          for(var k in players) {
+              var linha = k < 3 ? 0 : 1;
+              var coluna = k == 0 || k== 2 ? 0 : 1;
+
               if (players[k].camera) {
-                   var linha = k < 3 ? 0 : 1;
-                   var coluna = k == 0 || k== 2 ? 0 : 1;
-
-                   console.log(linha + " - " + coluna);
-
                    context.drawImage(
                    players[k].camera,
                         linha * 120, 
@@ -764,7 +761,7 @@ $(document).ready(function() {
                         120, 120);
               }
          }
-     }, 5000);
+     }, 500);
 });
 
 // COMO JOGAR
