@@ -756,6 +756,11 @@ $(document).ready(function() {
               img.coluna = k == 0 || k== 2 ? 0 : 1;
 
               img.onload = function() {
+                  console.log(this.linha * 120);
+                  console.log(this.coluna * 120);
+                  console.log((this.linha+1)  * 120);
+                  console.log((this.coluna+1) * 120);
+
                   context.drawImage(
                         this,
                         this.linha * 120, 
