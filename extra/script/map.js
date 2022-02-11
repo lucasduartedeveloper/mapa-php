@@ -1,5 +1,5 @@
 // Create the map
-var map = L.map('map').setView([-23.373144526961156, -51.159208612927344], 19);
+var map = L.map('map').setView([-23.37062642645644,  -51.15587314318577], 19);
 
 var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -30,9 +30,9 @@ var markerIcon0 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker0 = L.marker([-23.373144526961156, -51.159208612927344],  {icon: markerIcon0}).addTo(map);
+var marker0 = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon0}).addTo(map);
 
-var markerShadow0 = L.circle([-23.373144526961156, -51.159208612927344], {
+var markerShadow0 = L.circle([-23.37062642645644,  -51.15587314318577], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -48,9 +48,9 @@ var markerIcon1= L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker1 = L.marker([-23.373054594800273, -51.159806010493],  {icon: markerIcon1}).addTo(map);
+var marker1 = L.marker([-23.370806290778205,  -51.15567401066389],  {icon: markerIcon1}).addTo(map);
 
-var markerShadow1 = L.circle([-23.373054594800273, -51.159806010493], {
+var markerShadow1 = L.circle([-23.370806290778205,  -51.15567401066389], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -66,9 +66,9 @@ var markerIcon2 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker2 = L.marker([ -23.373009628719835, -51.159756227362536],  {icon: markerIcon2}).addTo(map);
+var marker2 = L.marker([-23.370806290778205,  -51.15607227570766],  {icon: markerIcon2}).addTo(map);
 
-var markerShadow2 = L.circle([ -23.373009628719835, -51.159756227362536], {
+var markerShadow2 = L.circle(-23.370806290778205,  -51.15607227570766], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -84,9 +84,9 @@ var markerIcon3 = L.icon({
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-var marker3 = L.marker([-23.373009628719835, -51.15985579362348],  {icon: markerIcon3}).addTo(map);
+var marker3 = L.marker([-23.37098615509997,  -51.15587314318577],  {icon: markerIcon3}).addTo(map);
 
-var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
+var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -95,7 +95,7 @@ var markerShadow3 = L.circle([-23.373009628719835, -51.15985579362348], {
 }).addTo(map);
 
 // Teste
-var GPS = true;
+var GPS = false;
 var playerId = localStorage.getItem("playerId") ? 
     parseInt(localStorage.getItem("playerId")) : 0;
 var players = [ 
@@ -137,7 +137,7 @@ for (var m = 0; m < 4; m++) {
 }
 
 // Posição no mapa
-var posicao = { lat: -23.373144526961156, lng: -51.1591090466664 };
+var posicao = { lat: -23.37062642645644, lng: -51.15587314318577 };
 function posicaoNoGrid(pos) {
   var inicio = { lat: -23.36026174491471, lng: -51.15455389022828 };
 

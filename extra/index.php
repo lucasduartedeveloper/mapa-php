@@ -35,7 +35,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     UM TÍTULO
+     XXX
 </p>
 
 <p id="audio-info"  style="display:none;" class="audio-info">
@@ -67,8 +67,8 @@
 
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
-     APLICATIVO ALEATÓRIO<br>
-     v59.1.1.275
+     XXX<br>
+     v59.1.1.276
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -90,7 +90,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=275"></script> 
+<script src="/extra/script/map.js?v=276"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
