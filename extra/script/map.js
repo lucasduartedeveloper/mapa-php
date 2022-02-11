@@ -752,6 +752,7 @@ $(document).ready(function() {
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
+         context.clearRect(0, 0, canvas.width, canvas.height);
          
          context.beginPath(); // always start a new line with beginPath
          context.strokeStyle = "#000000";
@@ -789,8 +790,10 @@ $(document).ready(function() {
                         this,
                         this.linha * 120 + (this.linha * 4), 
                         this.coluna * 120 + (this.coluna * 4),
-                        120, 
-                        120);
+                        this.src.includes("marker") ?
+                        20 : 120, 
+                        this.src.includes("marker") ?
+                        20 : 120);
               };
               img.src = players[k].camera;
          }
