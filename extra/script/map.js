@@ -406,6 +406,13 @@ function reload() {
                       ];
                       players[m].marker.setLatLng(latlng);
                       players[m].markerShadow.setLatLng(latlng);
+                      players[m].markerNv.setLatLng(latlng);
+                      players[playerId].markerNv.setIcon(
+                      L.icon({
+                          iconUrl: createLabel("Nv. " + trajetos[m].length),
+                          iconSize:     [100, 30], // size of the icon
+                          iconAnchor:   [50, 70]
+                      }));
                   }
 
                   if (players[m].line) {
