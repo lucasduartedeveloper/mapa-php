@@ -429,10 +429,10 @@ function reload() {
            }
            
            if (trajetos[playerId].length > 0) {
-              mapClick({ latlng:
+              mapClick({ latlng: {
                  lat: trajetos[playerId][0].latitude,
                  lng: trajetos[playerId][0].longitude
-              });
+              }});
            }
      });
 }
