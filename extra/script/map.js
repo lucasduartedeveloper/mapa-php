@@ -764,8 +764,8 @@ $(document).ready(function() {
               img.onload = function() {
                   context.drawImage(
                         this,
-                        this.linha * 120, 
-                        this.coluna * 120,
+                        this.linha * 120 + (2 + (this.linha * 2)), 
+                        this.coluna * 120 + (2 + (this.coluna * 2)),
                         120, 
                         120);
               };
