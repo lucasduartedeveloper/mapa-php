@@ -102,21 +102,29 @@ var players = [
     { marker: marker0, 
       markerShadow: markerShadow0,
       name: "azul",
+      icon: "../img/marker.png",
+      camera: "../img/marker.png",
       color: "#3758b3",
       pointList: [] },
     { marker: marker1, 
       markerShadow: markerShadow1,
       name: "roxo",
+      icon: "../img/marker-b.png",
+      camera: "../img/marker-b.png",
       color: "#a83275",
       pointList: [] },
     { marker: marker2, 
       markerShadow: markerShadow2,
       name: "amarelo",
+      icon: "../img/marker-unlocked.png",
+      camera: "../img/marker-unlocked.png",
       color: "#b39e37",
       pointList: [] },
     { marker: marker3,
       markerShadow: markerShadow3,
       name: "preto",
+      icon: "../img/marker-z.png",
+      camera: "../img/marker-z.png",
       color: "#1c1e21",
       pointList: [] }
 ];
@@ -690,8 +698,10 @@ $(document).ready(function() {
 
      $("#player").click(function (e) {
              // Websocket
-             ws.send("JUPS|"+playerId+"|###");
-             players[playerId].camera = "###";
+             ws.send("JUPS|"+playerId+"|"+
+             players[playerId].icon);
+             players[playerId].camera = 
+             players[playerId].icon;
 
              playerId = playerId < 3 ? playerId += 1 : 0;
              for (var m = 0; m < 4; m++) {
