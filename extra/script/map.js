@@ -740,7 +740,7 @@ $(document).ready(function() {
 
          // ENVIAR
          var cnv = document.createElement("canvas");
-         var ctx = canvas.getContext("2d");
+         var ctx = cnv.getContext("2d");
          ctx.drawImage(video, 0, 0, 120, 120);
 
          // Websocket
@@ -753,7 +753,7 @@ $(document).ready(function() {
               var linha = k < 3 ? 0 : 1;
               var coluna = k == 0 || k== 2 ? 0 : 1;
 
-              var img = html.createElement(img);
+              var img = document.createElement("img");
               img.onload = function() {
                   context.drawImage(
                         img,
