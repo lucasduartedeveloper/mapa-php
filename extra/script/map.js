@@ -721,7 +721,6 @@ $(document).ready(function() {
         var msg = event.data.split("|");
         if (msg[0] == "JUPS" && msg[1] != playerId) {
             reload();
-            console.log(msg);
             players[parseInt(msg[1])].camera = msg[2];
         }
      };
@@ -740,14 +739,16 @@ $(document).ready(function() {
 
          // ENVIAR
          var cnv = document.createElement("canvas");
+         cnv.width = 120;
+         cnv.height = 120;
          var ctx = cnv.getContext("2d");
+
          ctx.drawImage(video, 0, 0, 120, 120);
 
          // Websocket
          var dataUrl = cnv.toDataURL("image/png");
          ws.send("JUPS|"+playerId+"|"+dataUrl);
          players[playerId].camera = dataUrl;
-         //console.log(players);
 
          // CAMERAS
          for(var k in players) {
@@ -768,7 +769,7 @@ $(document).ready(function() {
               };
               img.src = players[k].camera;
          }
-     }, 250);
+     }, 500);
 });
 
 // COMO JOGAR
