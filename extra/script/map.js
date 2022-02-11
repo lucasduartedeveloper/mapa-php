@@ -738,6 +738,23 @@ $(document).ready(function() {
      setInterval(function() {
          var canvas = document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
+         
+         context.beginPath(); // always start a new line with beginPath
+         context.strokeStyle = "#000000";
+         context.lineWidth = 2;
+         context.moveTo(1, 1); // start position
+         context.lineTo(1, 245);
+         context.moveTo(1, 245); // start position
+         context.lineTo(245, 245);
+         context.moveTo(245, 245); // start position
+         context.lineTo(245, 1);
+         context.moveTo(245, 1); // start position
+         context.lineTo(1, 1);
+         context.moveTo(1, 123); // start position
+         context.lineTo(245, 123);
+         context.moveTo(123, 1); // start position
+         context.lineTo(123, 245);
+         context.stroke(); // actually draw the line
 
          // ENVIAR
          var cnv = document.createElement("canvas");
