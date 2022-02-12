@@ -760,7 +760,7 @@ $(document).ready(function() {
              GPS = !GPS;
              if (GPS) {
                   $("#reload").removeClass("active");
-                  $("#left,#right,#right,#down").hide();
+                  $("#left,#up,#right,#down").hide();
              }
              else {
                   $("#reload"). addClass("active");
