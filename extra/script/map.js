@@ -753,9 +753,11 @@ $(document).ready(function() {
              GPS = !GPS;
              if (GPS) {
                   $("#reload").removeClass("active");
+                  $("#left,#right,#right,#down").hide();
              }
              else {
                   $("#reload"). addClass("active");
+                  $("#left,#right,#right,#down").show();
              }
 
              reload();
@@ -914,7 +916,7 @@ $(document).ready(function() {
         mapClick({
              latlng: {
                   lat: posicao.lat,
-                  lng: posicao.lng - d
+                  lng: posicao.lng -+d
         }});        
     });
     $("#up").click(function(){
@@ -930,7 +932,7 @@ $(document).ready(function() {
         mapClick({
              latlng: {
                   lat: posicao.lat,
-                  lng: posicao.lng + d
+                  lng: posicao.lng - d
         }});        
     });
     $("#down").click(function(){
