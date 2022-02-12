@@ -1006,7 +1006,8 @@ $(document).ready(function() {
     // --------
     var a = 0.000008993216088271083 * 5;
     var d = 0.000009956626094265175 * 5;
-    var clickInterval = function() { };
+
+    window.clickInterval = function() { };
     $("#left,#up,#right,#down").on("mouseup",
        function() {
            clearInterval(clickInterval);
