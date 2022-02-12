@@ -906,20 +906,40 @@ $(document).ready(function() {
         players[playerId].icon;
     });
 
+    var a = 0.000008993216088271083 * 5;
+    var d = 0.000009956626094265175 * 5;
+  
     $("#left").click(function(){
         console.log("left");
+        mapClick({
+             latlng: {
+                  posicao.lat,
+                  posicao.lng - d
+        }});        
     });
-
     $("#up").click(function(){
         console.log("up");
+        mapClick({
+             latlng: {
+                  posicao.lat - a,
+                  posicao.lng
+        }});        
     });
-
     $("#right").click(function(){
         console.log("right");
+        mapClick({
+             latlng: {
+                  posicao.lat,
+                  posicao.lng + d
+        }});        
     });
-
     $("#down").click(function(){
         console.log("down");
+        mapClick({
+             latlng: {
+                  posicao.lat + a,
+                  posicao.lng
+        }});        
     });
 });
 
