@@ -465,11 +465,11 @@ function reload() {
 
                            if (x > 0 && y == 0)
                                players[m].icon = players[m].iconLeft;
-                           else if (x == 0 && y > 0)
+                           else if (x == 0 && y < 0)
                                players[m].icon = players[m].iconUp;
                            else if (x < 0 && y == 0)
                                players[m].icon = players[m].iconRight;
-                           else if (x == 0 && y < 0)
+                           else if (x == 0 && y > 0)
                                players[m].icon = players[m].iconDown;
 
                            players[m].marker.setIcon(
@@ -754,13 +754,13 @@ function mapClick(e) {
                            if (x > 0 && y == 0)
                                players[playerId].icon =
                                players[playerId].iconLeft;
-                           else if (x == 0 && y > 0)
+                           else if (x == 0 && y < 0)
                                players[playerId].icon =
                                players[playerId].iconUp;
                            else if (x < 0 && y == 0)
                                players[playerId].icon = 
                                players[playerId].iconRight;
-                           else if (x == 0 && y < 0)
+                           else if (x == 0 && y > 0)
                                players[playerId].icon = 
                                players[playerId].iconDown;
 
