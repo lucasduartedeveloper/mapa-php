@@ -285,7 +285,7 @@ html, body {
    left: 5vw;
    width: 40vw;
    text-align: left;
-   z-index: 9999;
+   z-index: 8000;
 }
 
 .server-info {
@@ -295,7 +295,7 @@ html, body {
    left: 5vw;
    width: 40vw;
    text-align: left;
-   z-index: 9999;
+   z-index: 8000;
 }
 
 .audio-info {

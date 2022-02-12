@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=77">
+<link rel="stylesheet" href="/extra/css/style.css?v=78">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -85,7 +85,7 @@
 
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v77.1.1.355
+     v78.1.1.355
 </p>
 
 <button id="left" type="button" class="btn-left">
