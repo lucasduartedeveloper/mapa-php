@@ -693,7 +693,7 @@ function mapClick(e) {
                       longitude: pos.lng
                    });
 
-                  var nv = 999 / trajetos[playerId].length;
+                  var nv = trajetos[playerId].length;
 
                    players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
                    players[playerId].markerNv.setIcon(
@@ -904,6 +904,22 @@ $(document).ready(function() {
         players[playerId].icon);
         players[playerId].camera = 
         players[playerId].icon;
+    });
+
+    $("#left").click(function(){
+        console.log("left");
+    });
+
+    $("#up").click(function(){
+        console.log("up");
+    });
+
+    $("#right").click(function(){
+        console.log("right");
+    });
+
+    $("#down").click(function(){
+        console.log("down");
     });
 });
 
