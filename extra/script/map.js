@@ -913,32 +913,32 @@ $(document).ready(function() {
         console.log("left");
         mapClick({
              latlng: {
-                  posicao.lat,
-                  posicao.lng - d
+                  lat: posicao.lat,
+                  lng: posicao.lng - d
         }});        
     });
     $("#up").click(function(){
         console.log("up");
         mapClick({
              latlng: {
-                  posicao.lat - a,
-                  posicao.lng
+                  lat: posicao.lat - a,
+                  lng: posicao.lng
         }});        
     });
     $("#right").click(function(){
         console.log("right");
         mapClick({
              latlng: {
-                  posicao.lat,
-                  posicao.lng + d
+                  lat: posicao.lat,
+                  lng: posicao.lng + d
         }});        
     });
     $("#down").click(function(){
         console.log("down");
         mapClick({
              latlng: {
-                  posicao.lat + a,
-                  posicao.lng
+                  lat: posicao.lat + a,
+                  lng: posicao.lng
         }});        
     });
 });
