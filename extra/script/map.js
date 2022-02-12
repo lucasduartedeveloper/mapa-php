@@ -465,7 +465,7 @@ function reload() {
                                    iconUrl: players[m].icon,
                                    iconSize:     [35, 40],
                                    iconAnchor:   [17.5, 40]
-                               });
+                               }));
                            );
                       }
                   }
