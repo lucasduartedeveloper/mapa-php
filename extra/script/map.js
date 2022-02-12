@@ -679,7 +679,7 @@ function mapClick(e) {
                    players[playerId].line = 
                    new L.Polyline(players[playerId].pointList, {
                       color: players[playerId].color,
-                      weight: 3,
+                      weight: 5,
                       opacity: 0.5,
                       smoothFactor: 1,
                       dashArray: '0',
@@ -916,14 +916,14 @@ $(document).ready(function() {
         mapClick({
              latlng: {
                   lat: posicao.lat,
-                  lng: posicao.lng -+d
+                  lng: posicao.lng +d
         }});        
     });
     $("#up").click(function(){
         console.log("up");
         mapClick({
              latlng: {
-                  lat: posicao.lat - a,
+                  lat: posicao.lat + a,
                   lng: posicao.lng
         }});        
     });
@@ -939,7 +939,7 @@ $(document).ready(function() {
         console.log("down");
         mapClick({
              latlng: {
-                  lat: posicao.lat + a,
+                  lat: posicao.lat - a,
                   lng: posicao.lng
         }});        
     });
