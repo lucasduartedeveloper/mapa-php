@@ -764,7 +764,7 @@ $(document).ready(function() {
              }
              else {
                   $("#reload"). addClass("active");
-                  $("#left,#right,#right,#down").show();
+                  $("#left,#up,#right,#down").show();
              }
 
              reload();
