@@ -448,7 +448,7 @@ function reload() {
                   players[m].line = 
                   new L.Polyline(players[m].pointList, {
                       color: players[m].color,
-                      weight: 3,
+                      weight: 5,
                       opacity: 0.5,
                       smoothFactor: 1,
                       dashArray: '0',
@@ -913,35 +913,43 @@ $(document).ready(function() {
   
     $("#left").click(function(){
         console.log("left");
-        mapClick({
-             latlng: {
-                  lat: posicao.lat,
-                  lng: posicao.lng +d
-        }});        
-    });
-    $("#up").click(function(){
-        console.log("up");
-        mapClick({
-             latlng: {
-                  lat: posicao.lat + a,
-                  lng: posicao.lng
-        }});        
-    });
-    $("#right").click(function(){
-        console.log("right");
-        mapClick({
+        var pos = {
              latlng: {
                   lat: posicao.lat,
                   lng: posicao.lng - d
-        }});        
+        }};
+        mapClick(pos);
+        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+    });
+    $("#up").click(function(){
+        console.log("up");
+        var pos = {
+             latlng: {
+                  lat: posicao.lat + a,
+                  lng: posicao.lng
+        }};
+        mapClick(pos);
+        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+    });
+    $("#right").click(function(){
+        console.log("right");
+        var pos = {
+             latlng: {
+                  lat: posicao.lat,
+                  lng: posicao.lng + d
+        }};
+        mapClick(pos);
+        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
     });
     $("#down").click(function(){
         console.log("down");
-        mapClick({
+        var pos = {
              latlng: {
                   lat: posicao.lat - a,
                   lng: posicao.lng
-        }});        
+        }};
+        mapClick(pos);
+        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
     });
 });
 
