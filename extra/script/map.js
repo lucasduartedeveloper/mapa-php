@@ -735,7 +735,7 @@ function mapClick(e) {
                    players[playerId].line.addTo(map);
                    
                    // ----
-                   trajetos[playerId].push({ 
+                   trajetos[playerId].unshift({ 
                       latitude: pos.lat,
                       longitude: pos.lng
                    });
