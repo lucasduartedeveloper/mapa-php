@@ -459,6 +459,14 @@ function reload() {
                                players[m].icon = players[m].iconRight;
                            else if (x == 0 && y > 0)
                                players[m].icon = players[m].iconDown;
+
+                           player[m].marker.setIcon(
+                               L.icon({
+                                   iconUrl: players[m].icon,
+                                   iconSize:     [35, 40],
+                                   iconAnchor:   [17.5, 40]
+                               });
+                           );
                       }
                   }
 
