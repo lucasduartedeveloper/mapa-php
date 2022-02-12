@@ -709,6 +709,18 @@ function mapClick(e) {
 
     for (var m in trajetos) {
        for (var k in trajetos[m]) {
+           console.log(" --- " + players[playerId].name + " --- ");
+           console.log(" --- " + pos.lat + " --- ");
+           console.log(" --- " + pos.lng + " --- ");
+           console.log(" --- " + players[m].name + " --- ");
+           console.log(" --- " + trajetos[m][k].latitude + " --- ");
+           console.log(" --- " + trajetos[m][k].longitude + " --- ");
+           console.log(" --- " + (
+                trajetos[m][k].latitude ==  pos.lat && 
+                trajetos[m][k].longitude ==  pos.lng && 
+                m != playerId
+           ) + " --- ");
+
            if (trajetos[m][k].latitude ==  pos.lat && 
                 trajetos[m][k].longitude ==  pos.lng && 
                 m != playerId) {
@@ -758,8 +770,6 @@ function mapClick(e) {
                            var y = 
                            parseFloat(trajetos[playerId][1].latitude) - 
                            parseFloat(trajetos[playerId][0].latitude);
-
-                           console.log(x);
 
                            if (x > 0 && y == 0)
                                players[playerId].icon =
