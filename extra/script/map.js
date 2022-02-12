@@ -692,10 +692,13 @@ function mapClick(e) {
                       latitude: pos.lat,
                       longitude: pos.lng
                    });
+
+                  var nv = 999 / trajetos[playerId].length;
+
                    players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
                    players[playerId].markerNv.setIcon(
                    L.icon({
-                      iconUrl: createLabel("Nv. " + trajetos[playerId].length),
+                      iconUrl: createLabel("Nv. " + nv),
                       iconSize:     [100, 30], // size of the icon
                       iconAnchor:   [50, 70]
                    }));
@@ -924,17 +927,7 @@ function createLabel(text, color = "#000") {
     return canvas.toDataURL();
 }
 
-// COMO JOGAR
-// ....
-
-// PROBLEMAS
-// Botão gravar [resolvido]
-// Botão passar a vez [resolvido]
-// Excluir está sem áudio [resolvido]
-// Efeito visual do áudio [resolvido]
-// Adicionar última linha [resolvido]
-// Criar uma função para redesenhar a linha
-// Salvar o trajeto de cada marcador [resolvido]
-// Desenhar o trajeto de cada marcador
-// Poder mudar o nome no marcador
-// Poder excluir o trajeto
+// Função para indentificar se um tile no mapa é rua ou calçada
+// Desenhar uma máscara sobre o tile com o Leaflet
+// Recortar o tile
+// Contar os pixels da cor necessária

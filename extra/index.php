@@ -69,6 +69,8 @@
       <i class="bi bi-card-checklist"></i>
 </button>
 
+<div id="joyDiv" style="width:200px;height:200px;margin-bottom:20px;"></div>
+
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      LOST RPG<br>
@@ -96,6 +98,8 @@
 <script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=310"></script> 
 
+<script src="joy.min.js"></script>
+
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -112,8 +116,9 @@
     <div class="modal-content">
       <div class="modal-body">
          ANOTAÇÕES:
-         <br><br>- Incluir o nível do inimigo sendo a duração do áudio;
+         <br><br>- [concluído] Incluir o nível do inimigo sendo a duração do áudio;
          <br>- Corrigir as informações na visualização da câmera;
+         <br>- 
       </div>
     </div>
   </div>
