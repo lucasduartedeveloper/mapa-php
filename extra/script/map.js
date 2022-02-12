@@ -113,9 +113,9 @@ var players = [
       name: "Espadachim",
       icon: "/extra/img/sprites/tile058.png",
       iconLeft: "/extra/img/sprites/tile069.png",
-      iconUp: "/extra/img/sprites/tile058.png",
+      iconUp: "/extra/img/sprites/tile094.png",
       iconRight: "/extra/img/sprites/tile081.png",
-      iconDown: "/extra/img/sprites/tile094.png",
+      iconDown: "/extra/img/sprites/tile058.png",
       camera: "/extra/img/sprites/tile058.png",
       color: "#1c1e21",
       pointList: [] },
@@ -124,6 +124,10 @@ var players = [
       markerNv: L.marker([-23.370806290778205,  -51.15567401066389], { icon: nvIcon }).addTo(map),
       name: "Arqueira",
       icon: "/extra/img/sprites/tile004.png",
+      iconLeft: "/extra/img/sprites/tile016.png",
+      iconUp: "/extra/img/sprites/tile040.png",
+      iconRight: "/extra/img/sprites/tile028.png",
+      iconDown: "/extra/img/sprites/tile004.png",
       camera: "/extra/img/sprites/tile004.png",
       color: "#b39e37",
       pointList: [] },
@@ -132,6 +136,10 @@ var players = [
       markerNv: L.marker([-23.370806290778205,  -51.15607227570766], { icon: nvIcon }).addTo(map),
       name: "Samurai",
       icon: "/extra/img/sprites/tile055.png",
+      iconLeft: "/extra/img/sprites/tile067.png",
+      iconUp: "/extra/img/sprites/tile091.png",
+      iconRight: "/extra/img/sprites/tile079.png",
+      iconDown: "/extra/img/sprites/tile055.png",
       camera: "/extra/img/sprites/tile055.png",
       color: "#a83275",
       pointList: [] },
@@ -139,8 +147,12 @@ var players = [
       markerShadow: markerShadow3,
       markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
       name: "Guerreira",
-      icon: "/extra/img/sprites/tile009.png",
-      camera: "/extra/img/sprites/tile009.png",
+      icon: "/extra/img/sprites/tile010.png",
+      iconLeft: "/extra/img/sprites/tile022.png",
+      iconUp: "/extra/img/sprites/tile046.png",
+      iconRight: "/extra/img/sprites/tile034.png",
+      iconDown: "/extra/img/sprites/tile010.png",
+      camera: "/extra/img/sprites/tile010.png",
       color: "#3758b3",
       pointList: [] }
 ];
@@ -443,7 +455,7 @@ function reload() {
                           iconAnchor:   [50, 70]
                       }));
                       
-                      if (trajetos[m].length > 1 && playerId == 0) {
+                      if (trajetos[m].length > 1) {
                            var x = 
                            parseFloat(trajetos[m][1].longitude) - 
                            parseFloat(trajetos[m][0].longitude);
@@ -729,8 +741,7 @@ function mapClick(e) {
                       longitude: pos.lng
                    });
 
-                  if (trajetos[playerId].length > 1 
-                      && playerId == 0) {
+                  if (trajetos[playerId].length > 1) {
                            var x = 
                            parseFloat(trajetos[playerId][1].longitude) - 
                            parseFloat(trajetos[playerId][0].longitude);
