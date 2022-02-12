@@ -332,7 +332,7 @@ var cameraView = false;
 var dragging = false;
 function reload() {
    if (dragging) { return; }
-   $("#loading").on("show");
+   $("#loading").show();
    $.getJSON("/extra/ajax/audio.php", function(data) {
           for (var k in audios) {
                map.removeControl(audios[k].marker);
@@ -514,7 +514,7 @@ function reload() {
                  });
                  players[m].line.addTo(map);
            }
-          $("#loading").on("show");
+          $("#loading").hide();
      });
 }
 
