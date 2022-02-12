@@ -1070,8 +1070,8 @@ function calcularColisoes() {
                 m != playerId
            ) + " --- ");*/
 
-           if (trajetos[m][k].latitude ==  pos.lat && 
-                trajetos[m][k].longitude ==  pos.lng && 
+           if (trajetos[m][k].latitude ==  posicao.lat && 
+                trajetos[m][k].longitude ==  posicao.lng && 
                 m != playerId) {
                     excluirTrajeto(m);
            }
