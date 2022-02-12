@@ -85,7 +85,7 @@
 
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v76.1.1.354
+     v76.1.1.355
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -123,7 +123,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=354"></script> 
+<script src="/extra/script/map.js?v=355"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
