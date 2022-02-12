@@ -988,7 +988,7 @@ $(document).ready(function() {
               img.src = players[k].camera;
               }
          }
-     }, 500);
+     }, 250);
 
     $("#cameraModal").on("shown.bs.modal", function () {
         cameraView = true;
@@ -1006,7 +1006,12 @@ $(document).ready(function() {
     // --------
     var a = 0.000008993216088271083 * 5;
     var d = 0.000009956626094265175 * 5;
-    var clickTimeout = function() {};
+    var clickInterval = function() { };
+    $("#left,#up,#right,#down").on("mouseup",
+       function() {
+           clearInterval(clickInterval);
+       }
+    );
   
     $("#left").on("mousedown", function(){
         //console.log("left");
@@ -1017,9 +1022,11 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-        clickTimeout = setTimeout(function() {
+
+        clearInterval(clickInterval);
+        clickInterval = setInterval(function() {
             $("#left").trigger("mousedown");
-        }, 1000);
+        }, 500);
     });
     $("#up").on("mousedown", function(){
         //console.log("up");
@@ -1030,9 +1037,11 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-        clickTimeout = setTimeout(function() {
+
+        clearInterval(clickInterval);
+        clickInterval = setInterval(function() {
             $("#up").trigger("mousedown");
-        }, 1000);
+        }, 500);
     });
     $("#right").on("mousedown", function(){
         //console.log("right");
@@ -1043,9 +1052,11 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-        clickTimeout = setTimeout(function() {
+
+        clearInterval(clickInterval);
+        clickInterval = setInterval(function() {
             $("#right").trigger("mousedown");
-        }, 1000);
+        }, 500);
     });
     $("#down").on("mousedown", function(){
         //console.log("down");
@@ -1056,9 +1067,11 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-        clickTimeout = setTimeout(function() {
+
+        clearInterval(clickInterval);
+        clickInterval = setInterval(function() {
             $("#down").trigger("mousedown");
-        }, 1000);
+        }, 500);
     });
 });
 
