@@ -442,9 +442,8 @@ function reload() {
                           iconSize:     [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
-
                       
-                      if (trajetos[m].length > 1 && m == playerId) {
+                      if (trajetos[m].length > 1 && playerId == 0) {
                            var x = 
                            parseFloat(trajetos[m][1].longitude) - 
                            parseFloat(trajetos[m][0].longitude);
@@ -452,16 +451,13 @@ function reload() {
                            parseFloat(trajetos[m][1].latitude) - 
                            parseFloat(trajetos[m][0].latitude);
 
-                           console.log(x);
-                           console.log(y);
-
-                           if (x < 0 && y == 0)
+                           if (x > 0 && y == 0)
                                players[m].icon = players[m].iconLeft;
-                           else if (x == 0 && y < 0)
-                               players[m].icon = players[m].iconUp;
-                           else if (x > 0 && y == 0)
-                               players[m].icon = players[m].iconRight;
                            else if (x == 0 && y > 0)
+                               players[m].icon = players[m].iconUp;
+                           else if (x < 0 && y == 0)
+                               players[m].icon = players[m].iconRight;
+                           else if (x == 0 && y < 0)
                                players[m].icon = players[m].iconDown;
 
                            players[m].marker.setIcon(
@@ -732,6 +728,32 @@ function mapClick(e) {
                       latitude: pos.lat,
                       longitude: pos.lng
                    });
+
+                  if (trajetos[playerId].length > 1 
+                      && playerId == 0) {
+                           var x = 
+                           parseFloat(trajetos[playerId][1].longitude) - 
+                           parseFloat(trajetos[playerId][0].longitude);
+                           var y = 
+                           parseFloat(trajetos[playerId][1].latitude) - 
+                           parseFloat(trajetos[playerId][0].latitude);
+
+                           if (x > 0 && y == 0)
+                               players[playerId].icon = players[playerId].iconLeft;
+                           else if (x == 0 && y > 0)
+                               players[playerId].icon = players[playerId].iconUp;
+                           else if (x < 0 && y == 0)
+                               players[playerId].icon = players[playerId].iconRight;
+                           else if (x == 0 && y < 0)
+                               players[playerId].icon = players[playerId].iconDown;
+
+                           players[playerId].marker.setIcon(
+                               L.icon({
+                                   iconUrl: players[playerId].icon,
+                                   iconSize:     [35, 40],
+                                   iconAnchor:   [17.5, 40]
+                               }));
+                      }
 
                   var nv = trajetos[playerId].length;
 
