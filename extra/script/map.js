@@ -709,8 +709,8 @@ function mapClick(e) {
 
     for (var m in trajetos) {
        for (var k in trajetos[m]) {
-           if (trajetos[m][k].latitude ==  pos.lat
-                trajetos[m][k].longitude ==  pos.lng
+           if (trajetos[m][k].latitude ==  pos.lat && 
+                trajetos[m][k].longitude ==  pos.lng && 
                 m != playerId) {
                     excluir trajeto(m);
            }
