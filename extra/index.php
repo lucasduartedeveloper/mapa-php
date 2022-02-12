@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=74">
+<link rel="stylesheet" href="/extra/css/style.css?v=75">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,6 +37,9 @@
     <p>
     LOADING...
     </p>
+</div>
+
+<div id="click-block">
 </div>
 
 <p id="owner-info" class="owner-info">
@@ -77,7 +80,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v74.1.1.349
+     v75.1.1.350
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -115,7 +118,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=349"></script> 
+<script src="/extra/script/map.js?v=350"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">

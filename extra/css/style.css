@@ -44,6 +44,21 @@ html, body {
     z-index: 15000;
 }
 
+#click-block{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 45vw;
+    bottom: 0vw;
+    background-color: #000;
+    color: white;
+    opacity: 0.1;
+    z-index: 9000;
+}
+
 .btn-left:hover,
 .btn-up:hover,
 .btn-right:hover,
