@@ -97,7 +97,7 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
 //Teste nível
 var nvIcon = 
       L.icon({
-         iconUrl: createLabel("Nv. 0"),
+         iconUrl: createLabel("Nv. 1"),
          iconSize:     [100, 30], // size of the icon
          iconAnchor:   [50, 70]
  });
@@ -336,7 +336,6 @@ function reload() {
           for (var k in audios) {
                map.removeControl(audios[k].marker);
                map.removeControl(audios[k].markerShadow);
-               map.removeControl(audios[k].markerNv);
           }
 
           audios = data;
@@ -707,29 +706,6 @@ function mapClick(e) {
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
-    for (var m in trajetos) {
-       for (var k in trajetos[m]) {
-           /*
-           console.log(" --- " + players[playerId].name + " --- ");
-           console.log(" --- " + pos.lat + " --- ");
-           console.log(" --- " + pos.lng + " --- ");
-           console.log(" --- " + players[m].name + " --- ");
-           console.log(" --- " + trajetos[m][k].latitude + " --- ");
-           console.log(" --- " + trajetos[m][k].longitude + " --- ");
-           console.log(" --- " + (
-                trajetos[m][k].latitude ==  pos.lat && 
-                trajetos[m][k].longitude ==  pos.lng && 
-                m != playerId
-           ) + " --- ");*/
-
-           if (trajetos[m][k].latitude ==  pos.lat && 
-                trajetos[m][k].longitude ==  pos.lng && 
-                m != playerId) {
-                    excluirTrajeto(m);
-           }
-       }
-    }
-
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
              latitude: pos.lat, 
@@ -803,6 +779,7 @@ function mapClick(e) {
                       iconAnchor:   [50, 70]
                    }));
 
+                   calcularColisoes();
                    // Websocket
                    ws.send("JUPS|"+playerId);
     });
@@ -1074,6 +1051,32 @@ function createLabel(text, color = "#000") {
     context.restore();
 
     return canvas.toDataURL();
+}
+
+//  colisões
+function calcularColisoes() {
+    for (var m in trajetos) {
+       for (var k in trajetos[m]) {
+           /*
+           console.log(" --- " + players[playerId].name + " --- ");
+           console.log(" --- " + pos.lat + " --- ");
+           console.log(" --- " + pos.lng + " --- ");
+           console.log(" --- " + players[m].name + " --- ");
+           console.log(" --- " + trajetos[m][k].latitude + " --- ");
+           console.log(" --- " + trajetos[m][k].longitude + " --- ");
+           console.log(" --- " + (
+                trajetos[m][k].latitude ==  pos.lat && 
+                trajetos[m][k].longitude ==  pos.lng && 
+                m != playerId
+           ) + " --- ");*/
+
+           if (trajetos[m][k].latitude ==  pos.lat && 
+                trajetos[m][k].longitude ==  pos.lng && 
+                m != playerId) {
+                    excluirTrajeto(m);
+           }
+       }
+    }
 }
 
 // Função para indentificar se um tile no mapa é rua ou calçada
