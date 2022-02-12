@@ -707,6 +707,16 @@ function mapClick(e) {
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
+    for (var m in trajetos) {
+       for (var k in trajetos[m]) {
+           if (trajetos[m][k].latitude ==  pos.lat
+                trajetos[m][k].longitude ==  pos.lng
+                m != playerId) {
+                    excluir trajeto(m);
+           }
+       }
+    }
+
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
              latitude: pos.lat, 
