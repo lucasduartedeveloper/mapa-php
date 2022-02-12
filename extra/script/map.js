@@ -998,6 +998,9 @@ $(document).ready(function() {
         players[playerId].icon;
     });
 
+   $("#loading").on("hide");
+
+    // --------
     var a = 0.000008993216088271083 * 5;
     var d = 0.000009956626094265175 * 5;
   

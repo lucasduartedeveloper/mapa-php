@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=72">
+<link rel="stylesheet" href="/extra/css/style.css?v=73">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,6 +31,12 @@
 <body>
 
 <div id="map" class="map-box">
+</div>
+
+<div id="loading">
+    <p>
+    LOADING...
+    </p>
 </div>
 
 <p id="owner-info" class="owner-info">
@@ -71,7 +77,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v72.1.1.345
+     v73.1.1.345
 </p>
 
 <button id="left" type="button" class="btn-left">
