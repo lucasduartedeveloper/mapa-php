@@ -460,7 +460,7 @@ function reload() {
                            else if (x == 0 && y > 0)
                                players[m].icon = players[m].iconDown;
 
-                           player[m].marker.setIcon(
+                           players[m].marker.setIcon(
                                L.icon({
                                    iconUrl: players[m].icon,
                                    iconSize:     [35, 40],
