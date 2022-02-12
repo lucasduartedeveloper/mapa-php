@@ -1006,9 +1006,10 @@ $(document).ready(function() {
     // --------
     var a = 0.000008993216088271083 * 5;
     var d = 0.000009956626094265175 * 5;
+    var clickTimeout = function() {};
   
-    $("#left").click(function(){
-        console.log("left");
+    $("#left").on("mousedown", function(){
+        //console.log("left");
         var pos = {
              latlng: {
                   lat: posicao.lat,
@@ -1016,9 +1017,12 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+        clickTimeout = setTimeout(function() {
+            $("#left").trigger("mousedown");
+        }, 1000);
     });
-    $("#up").click(function(){
-        console.log("up");
+    $("#up").on("mousedown", function(){
+        //console.log("up");
         var pos = {
              latlng: {
                   lat: posicao.lat + a,
@@ -1026,9 +1030,12 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+        clickTimeout = setTimeout(function() {
+            $("#up").trigger("mousedown");
+        }, 1000);
     });
-    $("#right").click(function(){
-        console.log("right");
+    $("#right").on("mousedown", function(){
+        //console.log("right");
         var pos = {
              latlng: {
                   lat: posicao.lat,
@@ -1036,9 +1043,12 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+        clickTimeout = setTimeout(function() {
+            $("#right").trigger("mousedown");
+        }, 1000);
     });
-    $("#down").click(function(){
-        console.log("down");
+    $("#down").on("mousedown", function(){
+        //console.log("down");
         var pos = {
              latlng: {
                   lat: posicao.lat - a,
@@ -1046,6 +1056,9 @@ $(document).ready(function() {
         }};
         mapClick(pos);
         map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+        clickTimeout = setTimeout(function() {
+            $("#down").trigger("mousedown");
+        }, 1000);
     });
 });
 

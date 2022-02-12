@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=75">
+<link rel="stylesheet" href="/extra/css/style.css?v=76">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,7 +35,7 @@
 
 <div id="loading">
     <p>
-    LOADING...
+    LOADING GAME...
     </p>
 </div>
 
@@ -73,14 +73,19 @@
       <i class="bi bi-camera-reels-fill"></i>
 </button>
 
-<button id="anotacoes" type="button" class="btn-anotacoes float-top4" data-toggle="modal" data-target="#anotacoesModal">
+<button id="anotacoes" type="button" class="btn-anotacoes float-top4-right" data-toggle="modal" data-target="#anotacoesModal">
       <i class="bi bi-card-checklist"></i>
 </button>
 
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
+
+<p id="server-info" class="server-info">
+     ONLINE
+</p>
+
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v75.1.1.350
+     v76.1.1.352
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -118,7 +123,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=350"></script> 
+<script src="/extra/script/map.js?v=352"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
