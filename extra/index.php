@@ -124,6 +124,11 @@
   </div>
 </div>
 
+<script type="text/javascript">
+// Create JoyStick object into the DIV 'joyDiv'
+var joy = new JoyStick('joyDiv');
+</script>
+
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
 
