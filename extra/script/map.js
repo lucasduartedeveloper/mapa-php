@@ -453,32 +453,41 @@ function reload() {
                           iconSize:     [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
-                      
-                      if (trajetos[m].length > 1) {
-                           var x = 
-                           parseFloat(trajetos[m][1].longitude) - 
-                           parseFloat(trajetos[m][0].longitude);
-                           var y = 
-                           parseFloat(trajetos[m][1].latitude) - 
-                           parseFloat(trajetos[m][0].latitude);
+                   }
+                   else {
+                      //players[m].markerNv.setLatLng(latlng);
+                      players[m].markerNv.setIcon(
+                      L.icon({
+                          iconUrl: createLabel("Nv. 1"),
+                          iconSize:     [100, 30], // size of the icon
+                          iconAnchor:   [50, 70]
+                      }));
+                   }
 
-                           if (x > 0 && y == 0)
-                               players[m].icon = players[m].iconLeft;
-                           else if (x == 0 && y < 0)
-                               players[m].icon = players[m].iconUp;
-                           else if (x < 0 && y == 0)
-                               players[m].icon = players[m].iconRight;
-                           else if (x == 0 && y > 0)
-                               players[m].icon = players[m].iconDown;
+                   if (trajetos[m].length > 1) {
+                      var x = 
+                      parseFloat(trajetos[m][1].longitude) - 
+                      parseFloat(trajetos[m][0].longitude);
+                      var y = 
+                      parseFloat(trajetos[m][1].latitude) - 
+                      parseFloat(trajetos[m][0].latitude);
 
-                           players[m].marker.setIcon(
-                               L.icon({
-                                   iconUrl: players[m].icon,
-                                   iconSize:     [35, 40],
-                                   iconAnchor:   [17.5, 40]
-                               }));
+                      if (x > 0 && y == 0)
+                           players[m].icon = players[m].iconLeft;
+                      else if (x == 0 && y < 0)
+                           players[m].icon = players[m].iconUp;
+                      else if (x < 0 && y == 0)
+                           players[m].icon = players[m].iconRight;
+                       else if (x == 0 && y > 0)
+                           players[m].icon = players[m].iconDown;
+
+                       players[m].marker.setIcon(
+                           L.icon({
+                               iconUrl: players[m].icon,
+                               iconSize:     [35, 40],
+                               iconAnchor:   [17.5, 40]
+                        }));
                       }
-                  }
 
                   if (players[m].line) {
                       map.removeControl(players[m].line);
