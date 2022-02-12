@@ -712,9 +712,9 @@ function mapClick(e) {
              longitude: pos.lng,
              }).done(function(data) { 
                    //console.log(data);
-                   audio.pause();
-                   audio = new Audio("../audio/footsteps.mp3");
-                   audio.play();
+                   //audio.pause();
+                   //audio = new Audio("../audio/footsteps.mp3");
+                   //audio.play();
 
                    if (players[playerId].line) {
                       map.removeControl(players[playerId].line);
@@ -735,7 +735,7 @@ function mapClick(e) {
                    players[playerId].line.addTo(map);
                    
                    // ----
-                   trajetos[playerId].unshift({ 
+                   trajetos[playerId].push({ 
                       latitude: pos.lat,
                       longitude: pos.lng
                    });
