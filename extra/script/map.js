@@ -416,6 +416,13 @@ function reload() {
                  data.filter(d => parseInt(d.playerid) == 3)
              ];
 
+             if (trajetos[playerId].length > 0) {
+                 posicao = {
+                     lat: trajetos[playerId][0].latitude,
+                     lng: trajetos[playerId][0].longitude
+                 };
+             }
+
              for (var m = 0; m < 4; m++) {
                   if (trajetos[m].length > 0) {
                       var latlng = [
@@ -666,7 +673,7 @@ function mapClick(e) {
              }).done(function(data) { 
                    //console.log(data);
                    audio.pause();
-                   audio = new Audio("../audio/game_notification.wav");
+                   audio = new Audio("../audio/footsteps.mp3");
                    audio.play();
 
                    if (players[playerId].line) {
