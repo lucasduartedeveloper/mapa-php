@@ -418,8 +418,8 @@ function reload() {
 
              if (trajetos[playerId].length > 0) {
                  posicao = {
-                     lat: trajetos[playerId][0].latitude,
-                     lng: trajetos[playerId][0].longitude
+                     lat: parseFloattrajetos[playerId][0].latitude),
+                     lng: parseFloat(trajetos[playerId][0].longitude)
                  };
              }
 
