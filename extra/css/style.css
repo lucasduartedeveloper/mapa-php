@@ -12,6 +12,10 @@ html, body {
     height: 100%;
     font-size: 30px;
     font-weight: 400 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .map-box{

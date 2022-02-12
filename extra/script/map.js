@@ -332,7 +332,7 @@ var cameraView = false;
 var dragging = false;
 function reload() {
    if (dragging) { return; }
-   $("#loading").show();
+   //$("#loading").show();
    $.getJSON("/extra/ajax/audio.php", function(data) {
           for (var k in audios) {
                map.removeControl(audios[k].marker);
@@ -956,6 +956,7 @@ $(document).ready(function() {
                       this.coluna * 120 + (this.coluna * 4),
                       120, 120);
 
+                      /*
                       var imgNv = document.createElement("img");
                       imgNv.width = 100;
                       imgNv.height = 40;
@@ -971,7 +972,7 @@ $(document).ready(function() {
                         30); }
                      imgNv.src = 
                      createLabel(
-                     "Nv. " + trajetos[img.k].length);
+                     "Nv. " + trajetos[img.k].length);*/
                   }
                   context.drawImage(
                         this,
