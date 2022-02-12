@@ -261,7 +261,7 @@ html, body {
 
 .audio-info {
    position: fixed;
-   bottom: 55vw;
+   top: 20vw;
    font-size: 20px;
    left: 10vw;
    width: 80vw;
@@ -279,7 +279,7 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-   bottom: 40vw;
+   top: 35vw;
    left: 10vw;
    width: 80vw;
    height: 20vw;
