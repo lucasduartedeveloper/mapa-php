@@ -336,6 +336,7 @@ function reload() {
           for (var k in audios) {
                map.removeControl(audios[k].marker);
                map.removeControl(audios[k].markerShadow);
+               map.removeControl(audios[k].markerNv);
           }
 
           audios = data;
