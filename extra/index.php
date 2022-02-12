@@ -71,7 +71,7 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 <p id="version-info" class="version-info">
      LOST RPG<br>
-     v71.1.1.318
+     v71.1.1.319
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -109,7 +109,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=318"></script> 
+<script src="/extra/script/map.js?v=319"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
