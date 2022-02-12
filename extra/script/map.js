@@ -860,7 +860,7 @@ $(document).ready(function() {
      $("#player").click(function (e) {
              // Websocket
              ws.send("JUPS|"+playerId+"|"+
-             players[playerId].icon);
+             players[playerId].iconDown);
              players[playerId].camera = 
              players[playerId].iconDown;
 
