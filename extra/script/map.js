@@ -514,7 +514,9 @@ function reload() {
                  });
                  players[m].line.addTo(map);
            }
-          $("#loading").hide();
+           if (innerWidth < innerHeight) {
+               $("#loading").hide();
+           }
      });
 }
 
