@@ -445,10 +445,12 @@ function reload() {
 
                       
                       if (trajetos[m].length > 1 && m == playerId) {
-                           var x = trajetos[m][1].longitude - 
-                           trajetos[m][0].longitude;
-                           var y = trajetos[m][1].latitude - 
-                           trajetos[m][0].latitude;
+                           var x = 
+                           parseFloat(trajetos[m][1].longitude) - 
+                           parseFloat(trajetos[m][0].longitude);
+                           var y = 
+                           parseFloat(trajetos[m][1].latitude) - 
+                           parseFloat(trajetos[m][0].latitude);
                            if (x < 0 && y == 0)
                                players[m].icon = players[m].iconLeft;
                            else if (x == 0 && y < 0)
