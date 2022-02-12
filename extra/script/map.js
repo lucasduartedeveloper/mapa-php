@@ -738,14 +738,20 @@ function mapClick(e) {
                            parseFloat(trajetos[playerId][1].latitude) - 
                            parseFloat(trajetos[playerId][0].latitude);
 
+                           console.log(x);
+
                            if (x > 0 && y == 0)
-                               players[playerId].icon = players[playerId].iconLeft;
+                               players[playerId].icon =
+                               players[playerId].iconLeft;
                            else if (x == 0 && y > 0)
-                               players[playerId].icon = players[playerId].iconUp;
+                               players[playerId].icon =
+                               players[playerId].iconUp;
                            else if (x < 0 && y == 0)
-                               players[playerId].icon = players[playerId].iconRight;
+                               players[playerId].icon = 
+                               players[playerId].iconRight;
                            else if (x == 0 && y < 0)
-                               players[playerId].icon = players[playerId].iconDown;
+                               players[playerId].icon = 
+                               players[playerId].iconDown;
 
                            players[playerId].marker.setIcon(
                                L.icon({
@@ -755,7 +761,7 @@ function mapClick(e) {
                                }));
                       }
 
-                  var nv = trajetos[playerId].length;
+                   var nv = trajetos[playerId].length;
 
                    players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
                    players[playerId].markerNv.setIcon(
