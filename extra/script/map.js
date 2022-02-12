@@ -112,6 +112,10 @@ var players = [
       markerNv: L.marker([-23.37062642645644,  -51.15587314318577], { icon: nvIcon }).addTo(map),
       name: "Espadachim",
       icon: "/extra/img/sprites/tile058.png",
+      iconLeft: "/extra/img/sprites/tile069.png",
+      iconUp: "/extra/img/sprites/tile058.png",
+      iconRight: "/extra/img/sprites/tile081.png",
+      iconDown: "/extra/img/sprites/tile094.png",
       camera: "/extra/img/sprites/tile058.png",
       color: "#1c1e21",
       pointList: [] },
@@ -438,6 +442,22 @@ function reload() {
                           iconSize:     [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
+
+                      
+                      if (trajetos[m].length > 1 && m == playerId) {
+                           var x = trajetos[m][1].longitude - 
+                           trajetos[m][0].longitude;
+                           var y = trajetos[m][1].latitude - 
+                           trajetos[m][0].latitude;
+                           if (x < 0 && y == 0)
+                               players[m].icon = players[m].iconLeft;
+                           else if (x == 0 && y < 0)
+                               players[m].icon = players[m].iconUp;
+                           else if (x > 0 && y == 0)
+                               players[m].icon = players[m].iconRight;
+                           else if (x == 0 && y > 0)
+                               players[m].icon = players[m].iconDown;
+                      }
                   }
 
                   if (players[m].line) {
