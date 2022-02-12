@@ -451,6 +451,10 @@ function reload() {
                            var y = 
                            parseFloat(trajetos[m][1].latitude) - 
                            parseFloat(trajetos[m][0].latitude);
+
+                           console.log(x);
+                           console.log(y);
+
                            if (x < 0 && y == 0)
                                players[m].icon = players[m].iconLeft;
                            else if (x == 0 && y < 0)
