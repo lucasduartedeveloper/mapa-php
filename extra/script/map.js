@@ -862,7 +862,7 @@ $(document).ready(function() {
              ws.send("JUPS|"+playerId+"|"+
              players[playerId].icon);
              players[playerId].camera = 
-             players[playerId].icon;
+             players[playerId].iconDown;
 
              playerId = playerId < 3 ? playerId += 1 : 0;
              for (var m = 0; m < 4; m++) {
