@@ -709,6 +709,7 @@ function mapClick(e) {
 
     for (var m in trajetos) {
        for (var k in trajetos[m]) {
+           /*
            console.log(" --- " + players[playerId].name + " --- ");
            console.log(" --- " + pos.lat + " --- ");
            console.log(" --- " + pos.lng + " --- ");
@@ -719,7 +720,7 @@ function mapClick(e) {
                 trajetos[m][k].latitude ==  pos.lat && 
                 trajetos[m][k].longitude ==  pos.lng && 
                 m != playerId
-           ) + " --- ");
+           ) + " --- ");*/
 
            if (trajetos[m][k].latitude ==  pos.lat && 
                 trajetos[m][k].longitude ==  pos.lng && 
@@ -879,7 +880,10 @@ $(document).ready(function() {
                  }
              }
              players[playerId].marker.setOpacity(1);
-             say("Você selecionou " +players[playerId].name);
+             //say("Você selecionou " +players[playerId].name);
+             audio.pause();
+             audio = new Audio("../audio/game_notification.wav");
+             audio.play();
 
              map.setView([-23.373144526961156, -51.159208612927344], 15);
              setTimeout(function() {
@@ -890,7 +894,7 @@ $(document).ready(function() {
                        posicao.lat,
                        posicao.lng
                  ], 19);
-             }, 1000);
+             }, 500);
      });
 
      $("#update").click(function (e) {
