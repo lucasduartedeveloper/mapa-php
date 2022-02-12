@@ -712,7 +712,7 @@ function mapClick(e) {
            if (trajetos[m][k].latitude ==  pos.lat && 
                 trajetos[m][k].longitude ==  pos.lng && 
                 m != playerId) {
-                    excluir trajeto(m);
+                    excluirTrajeto(m);
            }
        }
     }
