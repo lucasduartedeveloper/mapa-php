@@ -985,7 +985,7 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng - d
              }};
-             angulo += 5 * (180/Math.PI);
+             angulo += 0.5 * (180/Math.PI);
              break;
          case "up":
              pos = {
@@ -1002,7 +1002,7 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng + d
              }};
-             angulo -= 5 *(180/Math.PI);
+             angulo -= 0.5 *(180/Math.PI);
              break;
          case "down":
              pos = {
