@@ -1100,6 +1100,26 @@ function calcularColisoes() {
     }
 }
 
+function centralizarNaPista() {
+     var canvas = document.createElement("canvas");
+     var context = canvas.getContext( '2d' );
+     var map = document.getElementById("map");
+      
+     canvas.width = 100;
+     canvas.height = 100;
+;
+     var width = map.width;
+     var height = map.height;
+
+     context.save();
+     context.translate(50, 50);
+     context.drawImage(map, -(width / 2), -(height / 2),
+         width, height);
+     context.restore();
+
+     return canvas.toDataURL();
+}
+
 // Função para indentificar se um tile no mapa é rua ou calçada
 // Desenhar uma máscara sobre o tile com o Leaflet
 // Recortar o tile
