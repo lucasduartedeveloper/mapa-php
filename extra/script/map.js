@@ -952,21 +952,20 @@ $(document).ready(function() {
     });
 
     // --------
-    var a = 0.000008993216088271083 * 5;
-    var d = 0.000009956626094265175 * 5;
+    window.a = 0.000008993216088271083 * 5;
+    window.d = 0.000009956626094265175 * 5;
     window.angulo = 0;
 
     window.clickInterval = function() { };
-    $("#left,#up,#right,#down").on("mouseup",
+    $("#left,#up,#right,#down").on("mouseup touchend",
        function() {
            console.log("clear: " + $(e.target).parent().attr("id"));
            clearInterval(clickInterval);
        }
     );
 
-    $("#left,#up,#right,#down").on("mousedown",
+    $("#left,#up,#right,#down").on("mousedown touchstart",
        function(e) {
-            console.log($(e.target).parent().attr("id"));
             //clearInterval(clickInterval);
             clickInterval = setInterval(function() {
                  console.log($(e.target).parent().attr("id"));
