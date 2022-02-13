@@ -954,6 +954,7 @@ $(document).ready(function() {
     // --------
     var a = 0.000008993216088271083 * 5;
     var d = 0.000009956626094265175 * 5;
+    window.angulo = 0;
 
     window.clickInterval = function() { };
     $("#left,#up,#right,#down").on("mouseup",
@@ -961,68 +962,54 @@ $(document).ready(function() {
            clearInterval(clickInterval);
        }
     );
-  
-    $("#left").on("mousedown", function(){
-        //console.log("left");
-        var pos = {
+
+    $("#left,#up,#right,#down").on("mousedown",
+       function(e) {
+            clearInterval(clickInterval);
+            clickInterval = setInterval(function() {
+                 reposicionarCarro($(e.target).parent().attr("id"));
+            }, 1000);
+       }
+    );
+});
+
+// Reposicionar o carro
+function reposicionarCarro(dir) {
+    var pos;
+    switch (dir) {
+         case "left":
+             pos = {
              latlng: {
                   lat: posicao.lat,
                   lng: posicao.lng - d
-        }};
-        mapClick(pos);
-        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-
-        clearInterval(clickInterval);
-        clickInterval = setInterval(function() {
-            $("#left").trigger("mousedown");
-        }, 500);
-    });
-    $("#up").on("mousedown", function(){
-        //console.log("up");
-        var pos = {
+             }};
+             break;
+         case "up":
+             pos = {
              latlng: {
                   lat: posicao.lat + a,
                   lng: posicao.lng
-        }};
-        mapClick(pos);
-        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-
-        clearInterval(clickInterval);
-        clickInterval = setInterval(function() {
-            $("#up").trigger("mousedown");
-        }, 500);
-    });
-    $("#right").on("mousedown", function(){
-        //console.log("right");
-        var pos = {
+             }};
+             break;
+         case "right":
+             pos = {
              latlng: {
                   lat: posicao.lat,
                   lng: posicao.lng + d
-        }};
-        mapClick(pos);
-        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
-
-        clearInterval(clickInterval);
-        clickInterval = setInterval(function() {
-            $("#right").trigger("mousedown");
-        }, 500);
-    });
-    $("#down").on("mousedown", function(){
-        //console.log("down");
-        var pos = {
+             }};
+             break;
+         case "down":
+             pos = {
              latlng: {
                   lat: posicao.lat - a,
                   lng: posicao.lng
-        }};
-        mapClick(pos);
-        map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+             }};
+             break;
+    }
 
-        clearInterval(clickInterval);
-        clickInterval = setInterval(function() {
-            $("#down").trigger("mousedown");
-        }, 500);
-    });
-});
+    mapClick(pos);
+    map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+}
 
 // Nível
 function createLabel(text, color = "#000") {
@@ -1044,7 +1031,7 @@ function createLabel(text, color = "#000") {
     return canvas.toDataURL();
 }
 
-// 
+//
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
     var a = Math.asin(senA);
