@@ -24,7 +24,7 @@ function say(text) {
         }
 }
 var markerIcon0 = L.icon({
-       iconUrl: "/extra/img/vehicles/Audi.png",
+       iconUrl: "/extra/img/vehicles/audi.png",
        iconSize:     [40, 40], 
        iconAnchor:   [20, 20]
 });
@@ -41,7 +41,7 @@ var markerShadow0 = L.circle([-23.37062642645644,  -51.15587314318577], {
 
 // Teste
 var markerIcon1= L.icon({
-       iconUrl: "/extra/img/vehicles/Black_viper.png",
+       iconUrl: "/extra/img/vehicles/black_viper.png",
        iconSize:     [40, 40], 
        iconAnchor:   [20, 20]
 });
@@ -58,7 +58,7 @@ var markerShadow1 = L.circle([-23.370806290778205,  -51.15567401066389], {
 
 // Teste
 var markerIcon2 = L.icon({
-       iconUrl: "/extra/img/vehicles/Police.png",
+       iconUrl: "/extra/img/vehicles/police.png",
        iconSize:     [40, 40], 
        iconAnchor:   [20, 20]
 });
@@ -93,7 +93,7 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
 //Teste nível
 var nvIcon = 
       L.icon({
-         iconUrl: createLabel("Nv. 1"),
+         iconUrl: createLabel("0 km"),
          iconSize:     [100, 30], // size of the icon
          iconAnchor:   [50, 70]
  });
@@ -106,49 +106,33 @@ var players = [
     { marker: marker0, 
       markerShadow: markerShadow0,
       markerNv: L.marker([-23.37062642645644,  -51.15587314318577], { icon: nvIcon }).addTo(map),
-      name: "Espadachim",
-      icon: "/extra/img/sprites/tile058.png",
-      iconLeft: "/extra/img/sprites/tile069.png",
-      iconUp: "/extra/img/sprites/tile094.png",
-      iconRight: "/extra/img/sprites/tile081.png",
-      iconDown: "/extra/img/sprites/tile058.png",
-      camera: "/extra/img/sprites/tile058.png",
+      name: "Audi",
+      icon: "/extra/img/vehicles/audi.png",
+      camera: "/extra/img/vehicles/audi.png",
       color: "#1c1e21",
       pointList: [] },
     { marker: marker1, 
       markerShadow: markerShadow1,
       markerNv: L.marker([-23.370806290778205,  -51.15567401066389], { icon: nvIcon }).addTo(map),
-      name: "Arqueira",
-      icon: "/extra/img/sprites/tile004.png",
-      iconLeft: "/extra/img/sprites/tile016.png",
-      iconUp: "/extra/img/sprites/tile040.png",
-      iconRight: "/extra/img/sprites/tile028.png",
-      iconDown: "/extra/img/sprites/tile004.png",
-      camera: "/extra/img/sprites/tile004.png",
+      name: "Black Viper",
+      icon: "/extra/img/vehicles/black_viper.png",
+      camera: "/extra/img/vehicles/black_viper.png",
       color: "#b39e37",
       pointList: [] },
     { marker: marker2, 
       markerShadow: markerShadow2,
       markerNv: L.marker([-23.370806290778205,  -51.15607227570766], { icon: nvIcon }).addTo(map),
-      name: "Samurai",
-      icon: "/extra/img/sprites/tile055.png",
-      iconLeft: "/extra/img/sprites/tile067.png",
-      iconUp: "/extra/img/sprites/tile091.png",
-      iconRight: "/extra/img/sprites/tile079.png",
-      iconDown: "/extra/img/sprites/tile055.png",
-      camera: "/extra/img/sprites/tile055.png",
+      name: "Police",
+      icon: "/extra/img/vehicles/police.png",
+      camera: "/extra/img/vehicles/police.png",
       color: "#a83275",
       pointList: [] },
     { marker: marker3,
       markerShadow: markerShadow3,
       markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
-      name: "Guerreira",
-      icon: "/extra/img/sprites/tile010.png",
-      iconLeft: "/extra/img/sprites/tile022.png",
-      iconUp: "/extra/img/sprites/tile046.png",
-      iconRight: "/extra/img/sprites/tile034.png",
-      iconDown: "/extra/img/sprites/tile010.png",
-      camera: "/extra/img/sprites/tile010.png",
+      name: "Taxi",
+      icon: "/extra/img/vehicles/taxi.png",
+      camera: "/extra/img/vehicles/taxi.png",
       color: "#3758b3",
       pointList: [] }
 ];
@@ -447,7 +431,7 @@ function reload() {
                       players[m].markerNv.setLatLng(latlng);
                       players[m].markerNv.setIcon(
                       L.icon({
-                          iconUrl: createLabel("Nv. " + trajetos[m].length),
+                          iconUrl: createLabel(trajetos[m].length + " km"),
                           iconSize:     [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
@@ -456,7 +440,7 @@ function reload() {
                       //players[m].markerNv.setLatLng(latlng);
                       players[m].markerNv.setIcon(
                       L.icon({
-                          iconUrl: createLabel("Nv. 1"),
+                          iconUrl: createLabel("0 km"),
                           iconSize:     [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
@@ -471,19 +455,19 @@ function reload() {
                       parseFloat(trajetos[m][0].latitude);
 
                       if (x > 0 && y == 0)
-                           players[m].icon = players[m].iconLeft;
+                           players[m].icon = players[m].icon;
                       else if (x == 0 && y < 0)
-                           players[m].icon = players[m].iconUp;
+                           players[m].icon = players[m].icon;
                       else if (x < 0 && y == 0)
-                           players[m].icon = players[m].iconRight;
+                           players[m].icon = players[m].icon;
                        else if (x == 0 && y > 0)
-                           players[m].icon = players[m].iconDown;
+                           players[m].icon = players[m].icon;
 
                        players[m].marker.setIcon(
                            L.icon({
                                iconUrl: players[m].icon,
-                               iconSize:     [35, 40],
-                               iconAnchor:   [17.5, 40]
+                               iconSize:     [40, 40],
+                               iconAnchor:   [20, 20]
                         }));
                       }
 
@@ -774,8 +758,8 @@ function mapClick(e) {
                            players[playerId].marker.setIcon(
                                L.icon({
                                    iconUrl: players[playerId].icon,
-                                   iconSize:     [35, 40],
-                                   iconAnchor:   [17.5, 40]
+                                   iconSize:     [40, 40],
+                                   iconAnchor:   [20, 20]
                                }));
                       }
 
