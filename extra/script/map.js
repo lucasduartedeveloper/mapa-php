@@ -466,7 +466,7 @@ function reload() {
                       img.width = 256;
                       img.height = 256;
                       img.onload = function() {
-                           var icon = rotateImage(this, img.a);
+                           var icon = rotateImage(this, this.a);
                            players[this.m].marker.setIcon(
                            L.icon({
                               iconUrl: icon,
