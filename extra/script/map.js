@@ -965,8 +965,10 @@ $(document).ready(function() {
 
     $("#left,#up,#right,#down").on("mousedown",
        function(e) {
+            console.log($(e.target).parent().attr("id"));
             clearInterval(clickInterval);
             clickInterval = setInterval(function() {
+                 console.log($(e.target).parent().attr("id"));
                  reposicionarCarro($(e.target).parent().attr("id"));
             }, 1000);
        }
