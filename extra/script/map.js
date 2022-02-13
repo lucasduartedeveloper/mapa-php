@@ -461,13 +461,12 @@ function reload() {
 
                       var a = calcularAngulo(co, ca, h);
                       var img = new Image();
+                      img.a = a;
                       img.m = m;
                       img.width = 256;
                       img.height = 256;
                       img.onload = function() {
-                           console.log(this.m);
-                           console.log(this.src);
-                           var icon = rotateImage(img, a);
+                           var icon = rotateImage(this, img.a);
                            players[this.m].marker.setIcon(
                            L.icon({
                               iconUrl: icon,
@@ -475,7 +474,6 @@ function reload() {
                               iconAnchor:   [20, 20]
                            }));
                       }
-                      console.log(players[m].icon);
                       img.src = players[m].icon;
                   }
 
