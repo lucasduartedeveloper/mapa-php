@@ -1068,9 +1068,9 @@ function rotateImage(img, angle) {
      var height = img.height;
 
      context.save();
-     //context.translate(canvas.width / 2, canvas.height / 2);
-     context.rotate(angle);
-     context.drawImage(img, 0, 0, 
+     context.translate(width / 2, height / 2);
+     context.rotate(-angle);
+     context.drawImage(img, width / 2, height / 2
          width, height);
      context.restore();
 
