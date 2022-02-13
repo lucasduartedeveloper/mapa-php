@@ -742,6 +742,8 @@ function mapClick(e) {
 
                            var a = calcularAngulo(co, ca, h);
                            var img = new Image();
+                           img.width = 256;
+                           img.height = 256;
                            img.onload = function() {
                                 var icon = rotateImage(img, a);
                                 players[playerId].marker.setIcon(
