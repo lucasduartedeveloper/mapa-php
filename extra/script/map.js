@@ -1071,7 +1071,7 @@ function calcularAngulo(co, ca, h) {
     return Math.asin(senA); 
 }
 
-async function loadImage(imageUrl) {
+function loadImage(imageUrl) {
     var img = new Image();
     var imageLoadPromise = new Promise(resolve => {
         img.onload = resolve;
