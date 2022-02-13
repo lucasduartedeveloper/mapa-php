@@ -1066,9 +1066,10 @@ function createLabel(text, color = "#000") {
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
     var a = Math.asin(senA);
-    console.log(a);
-    console.log(co);
-    console.log(ca);
+    console.log("-------------");
+    console.log("a: " + a);
+    console.log("co: " + co);
+    console.log("ca: " + ca);
     return a;
 }
 
