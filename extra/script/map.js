@@ -959,6 +959,7 @@ $(document).ready(function() {
     window.clickInterval = function() { };
     $("#left,#up,#right,#down").on("mouseup",
        function() {
+           console.log("clear: " + $(e.target).parent().attr("id"));
            clearInterval(clickInterval);
        }
     );
@@ -966,7 +967,7 @@ $(document).ready(function() {
     $("#left,#up,#right,#down").on("mousedown",
        function(e) {
             console.log($(e.target).parent().attr("id"));
-            clearInterval(clickInterval);
+            //clearInterval(clickInterval);
             clickInterval = setInterval(function() {
                  console.log($(e.target).parent().attr("id"));
                  reposicionarCarro($(e.target).parent().attr("id"));
