@@ -682,84 +682,77 @@ function mapClick(e) {
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
-    //console.log("mapclick");
+    if (players[playerId].line) {
+            map.removeControl(players[playerId].line);
+    }
+    players[playerId].pointList.unshift(
+    new L.LatLng(
+         pos.lat, pos.lng));
+
+    players[playerId].line = 
+    new L.Polyline(players[playerId].pointList, {
+         color: players[playerId].color,
+         weight: 5,
+         opacity: 0.5,
+         smoothFactor: 1,
+         dashArray: '0',
+         dashOffset: '0'
+    });
+    players[playerId].line.addTo(map);
+                   
+    // ----
+    trajetos[playerId].unshift({ 
+         latitude: pos.lat,
+         longitude: pos.lng
+    });
+
+    if (trajetos[playerId].length > 1) {
+          var co = 
+          parseFloat(trajetos[playerId][1].longitude) - 
+          parseFloat(trajetos[playerId][0].longitude);
+          var ca = 
+          parseFloat(trajetos[playerId][1].latitude) - 
+          parseFloat(trajetos[playerId][0].latitude);
+
+          var h = 
+          Math.sqrt(
+          Math.pow(co, 2) +
+          Math.pow(ca, 2));
+
+          var a = calcularAngulo(co, ca, h);
+          var img = new Image();
+          img.width = 256;
+          img.height = 256;
+          img.onload = function() {
+                 var icon = rotateImage(img, a);
+                 players[playerId].marker.setIcon(
+                        L.icon({
+                               iconUrl: icon,
+                               iconSize:     [40, 40],
+                               iconAnchor:   [20, 20]
+                        }));
+                  }
+          img.src = players[playerId].icon;
+    }
+
+    var nv = trajetos[playerId].length;
+
+    players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    players[playerId].markerNv.setIcon(
+    L.icon({
+         iconUrl: createLabel(nv + " km"),
+         iconSize:     [100, 30], // size of the icon
+         iconAnchor:   [50, 70]
+    }));
+
+    //calcularColisoes();
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
              latitude: pos.lat, 
              longitude: pos.lng,
              }).done(function(data) { 
-                   //console.log(data);
-                   //audio.pause();
-                   //audio = new Audio("../audio/footsteps.mp3");
-                   //audio.play();
-
-                   if (players[playerId].line) {
-                      map.removeControl(players[playerId].line);
-                   }
-                   players[playerId].pointList.unshift(
-                      new L.LatLng(
-                         pos.lat, pos.lng));
-
-                   players[playerId].line = 
-                   new L.Polyline(players[playerId].pointList, {
-                      color: players[playerId].color,
-                      weight: 5,
-                      opacity: 0.5,
-                      smoothFactor: 1,
-                      dashArray: '0',
-                      dashOffset: '0'
-                   });
-                   players[playerId].line.addTo(map);
-                   
-                   // ----
-                   trajetos[playerId].unshift({ 
-                      latitude: pos.lat,
-                      longitude: pos.lng
-                   });
-
-                  if (trajetos[playerId].length > 1) {
-                           var co = 
-                           parseFloat(trajetos[playerId][1].longitude) - 
-                           parseFloat(trajetos[playerId][0].longitude);
-                           var ca = 
-                           parseFloat(trajetos[playerId][1].latitude) - 
-                           parseFloat(trajetos[playerId][0].latitude);
-
-                           var h = 
-                           Math.sqrt(
-                           Math.pow(co, 2) +
-                           Math.pow(ca, 2));
-
-                           var a = calcularAngulo(co, ca, h);
-                           var img = new Image();
-                           img.width = 256;
-                           img.height = 256;
-                           img.onload = function() {
-                                var icon = rotateImage(img, a);
-                                players[playerId].marker.setIcon(
-                                L.icon({
-                                   iconUrl: icon,
-                                   iconSize:     [40, 40],
-                                   iconAnchor:   [20, 20]
-                                }));
-                           }
-                           img.src = players[playerId].icon;
-                      }
-
-                   var nv = trajetos[playerId].length;
-
-                   players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
-                   players[playerId].markerNv.setIcon(
-                   L.icon({
-                      iconUrl: createLabel(nv + " km"),
-                      iconSize:     [100, 30], // size of the icon
-                      iconAnchor:   [50, 70]
-                   }));
-
-                   calcularColisoes();
                    // Websocket
                    ws.send("JUPS|"+playerId);
-                   //console.log("mapclick_end");
     });
 }
 
