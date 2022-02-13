@@ -1,8 +1,15 @@
 var host = "wss://mapa-ws.herokuapp.com/";
-var ws = new WebSocket(host);
+var wsh = new WebSocket(host);
 
-var wsCallback = function(e) {};
-ws.onmessage = (event) => {
-        console.log("Server: " + event.data);
-        wsCallback(event);
+var ws = {
+      send: function (e) {
+           console.log(e);
+           console.log(wsh);
+           wsh.send(e);
+      },
+      onmessage: function (e) { }
+};
+
+wsh.onmessage = function(e) {
+     ws.onmessage(e);
 };

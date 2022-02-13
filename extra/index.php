@@ -120,7 +120,7 @@
 
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
-<script src="/extra/script/websocket.js?v=1"></script>
+<script src="/extra/script/websocket.js?v=2"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=425"></script> 
