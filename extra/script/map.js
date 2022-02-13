@@ -1072,15 +1072,13 @@ function calcularAngulo(co, ca, h) {
 }
 
 async function loadImage(imageUrl) {
-    var img = new Image();
-    var promise = new Promise(resolve => {
-        img.onload = resolve;
+    var promiseImage = new Promise(resolve => {
+        var img = new Image();
+        img.onload = () => resolve(img);
         img.src = imageUrl;
     });
 
-    await promise;
-    console.log("image loaded");
-    return img.toDataUrl();
+    return await promiseImage(imageUrl);
 }
 
 function rotateImage(url, angle) {
