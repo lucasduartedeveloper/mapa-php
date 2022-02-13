@@ -1078,7 +1078,7 @@ async function loadImage(imageUrl) {
         img.src = imageUrl;
     });
 
-    return await promiseImage(imageUrl);
+    return await promiseImage;
 }
 
 function rotateImage(url, angle) {
