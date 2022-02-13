@@ -25,9 +25,8 @@ function say(text) {
 }
 var markerIcon0 = L.icon({
        iconUrl: "/extra/img/vehicles/Audi.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+       iconSize:     [40, 40], 
+       iconAnchor:   [20, 20]
 });
 
 var marker0 = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon0}).addTo(map);
@@ -43,9 +42,8 @@ var markerShadow0 = L.circle([-23.37062642645644,  -51.15587314318577], {
 // Teste
 var markerIcon1= L.icon({
        iconUrl: "/extra/img/vehicles/Black_viper.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+       iconSize:     [40, 40], 
+       iconAnchor:   [20, 20]
 });
 
 var marker1 = L.marker([-23.370806290778205,  -51.15567401066389],  {icon: markerIcon1}).addTo(map);
@@ -61,9 +59,8 @@ var markerShadow1 = L.circle([-23.370806290778205,  -51.15567401066389], {
 // Teste
 var markerIcon2 = L.icon({
        iconUrl: "/extra/img/vehicles/Police.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+       iconSize:     [40, 40], 
+       iconAnchor:   [20, 20]
 });
 
 var marker2 = L.marker([-23.370806290778205,  -51.15607227570766],  {icon: markerIcon2}).addTo(map);
@@ -79,9 +76,8 @@ var markerShadow2 = L.circle([-23.370806290778205,  -51.15607227570766], {
 //Teste
 var markerIcon3 = L.icon({
        iconUrl: "/extra/img/vehicles/taxi.png",
-       iconSize:     [35, 40], // size of the icon
-       iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-       popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+       iconSize:     [40, 40], 
+       iconAnchor:   [20, 20]
 });
 
 var marker3 = L.marker([-23.37098615509997,  -51.15587314318577],  {icon: markerIcon3}).addTo(map);
