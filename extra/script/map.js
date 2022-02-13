@@ -1061,21 +1061,18 @@ function rotateImage(img, angle) {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
 
-     $("#loading").append(img);
-
      canvas.width = 256;
      canvas.height = 256;
-
-     var x = canvas.width / 2;
-     var y = canvas.height / 2;
+;
      var width = img.width;
      var height = img.height;
 
-     context.translate(x, y);
+     context.save();
+     context.translate(canvas.width / 2, canvas.height / 2);
+     context.drawImage(img, -width / 2, -img / 2, 
+         width, height);
      context.rotate(angle);
-     context.drawImage(img, -width / 2, -img / 2, width, height);
-     context.rotate(-angle);
-     context.translate(-x, -y);
+     context.restore();
 
      return canvas.toDataURL();
 }
