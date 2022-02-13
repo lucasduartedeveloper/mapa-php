@@ -474,7 +474,7 @@ function reload() {
                            }));
                       }
                       console.log(players[m].icon);
-                      img.src = players[m].icon;
+                      img.src = players[img.m].icon;
                   }
 
                   if (players[m].line) {
@@ -1069,8 +1069,8 @@ function calcularAngulo(co, ca, h) {
     var senA = co/h;
     var a = Math.asin(senA);
     a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
-    a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 + a : a;
-    a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 + a : a;
+    a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
+    a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
 
     console.log("-------------");
     console.log("a: " + a);
