@@ -1061,7 +1061,7 @@ function rotateImage(img, angle) {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
 
-     $("#loading").appendChild(img);
+     $("#loading").append(img);
 
      canvas.width = 256;
      canvas.height = 256;
