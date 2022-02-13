@@ -314,7 +314,6 @@ function reload() {
    if (dragging) { return; }
    //$("#loading").show();
    $.getJSON("/extra/ajax/audio.php", function(data) {
-          //console.log("reload");
           for (var k in audios) {
                map.removeControl(audios[k].marker);
                map.removeControl(audios[k].markerShadow);
@@ -332,10 +331,9 @@ function reload() {
 
           for (var k in audios) {
                var icon = L.icon({
-               iconUrl: "/extra/img/ghost.png",
-               iconSize:     [35, 40], // size of the icon
-               iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
-               popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
+                   iconUrl: "/extra/img/ghost.png",
+                   iconSize:     [35, 40],
+                   iconAnchor:   [17.5, 40]
                });
                
               audios[k].m = k;
@@ -370,11 +368,11 @@ function reload() {
 
               audios[k].markerShadow = L.circle(
               [audios[k].latitude, audios[k].longitude], {
-              color: "#581845",
-              fillOpacity: 0.5,
-        	radius: 2.5,
-        	weight: 1,
-        	stroke: false
+                  color: "#581845",
+                  fillOpacity: 0.5,
+                  radius: 2.5,
+        	    weight: 1,
+        	    stroke: false
 	}).addTo(map);
 
               audios[k].markerNv = L.marker(
@@ -405,8 +403,6 @@ function reload() {
 
      // Atualizar marcadores
      $.getJSON("/extra/ajax/trajeto.php", function(data) {
-            //console.log(data);
-
              trajetos = [
                  data.filter(d => parseInt(d.playerid) == 0), 
                  data.filter(d => parseInt(d.playerid) == 1), 
@@ -433,7 +429,7 @@ function reload() {
                       players[m].markerNv.setIcon(
                       L.icon({
                           iconUrl: createLabel(trajetos[m].length + " km"),
-                          iconSize:     [100, 30], // size of the icon
+                          iconSize:   [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
                    }
