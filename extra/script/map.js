@@ -986,6 +986,9 @@ function reposicionarCarro(dir) {
                   lng: posicao.lng - d
              }};
              angulo += 0.5 * (180/Math.PI);
+             angulo = 
+                 angulo <= (2 * (180/Math.PI)) ?
+                 angulo : 0;
              break;
          case "up":
              pos = {
@@ -1002,7 +1005,10 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng + d
              }};
-             angulo -= 0.5 *(180/Math.PI);
+             angulo -= 0.5 * (180/Math.PI);
+             angulo = 
+                 angulo < 0 ?
+                 (2*(180/Math.PI)) : angulo;
              break;
          case "down":
              pos = {
@@ -1013,8 +1019,8 @@ function reposicionarCarro(dir) {
              mapClick(pos);
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
              break;
-        console.log(angulo); 
     }
+    console.log(angulo); 
 
     var img = new Image();
     img.width = 256;
