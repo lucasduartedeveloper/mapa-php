@@ -751,12 +751,14 @@ function mapClick(e) {
                            Math.pow(ca, 2));
 
                            var a = calcularAngulo(co, ca, h);
+                           console.log(a);
+
                            var img = new Image();
                            img.width = 256;
                            img.height = 256;
                            img.onload = function() {
                                 var icon = rotateImage(img, a);
-                                players[playerId].marker.setIcon(
+                                players[m].marker.setIcon(
                                 L.icon({
                                    iconUrl: icon,
                                    iconSize:     [40, 40],
