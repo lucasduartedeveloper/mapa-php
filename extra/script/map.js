@@ -1073,14 +1073,14 @@ function calcularAngulo(co, ca, h) {
 
 async function loadImage(imageUrl) {
     var img = new Image();
-    var imageLoadPromise = new Promise(resolve => {
+    var promise = new Promise(resolve => {
         img.onload = resolve;
         img.src = imageUrl;
     });
 
-    await imageLoadPromise;
+    await promise;
     console.log("image loaded");
-    return img;
+    return img.toDataUrl();
 }
 
 function rotateImage(url, angle) {
@@ -1090,7 +1090,7 @@ function rotateImage(url, angle) {
      canvas.width = 256;
      canvas.height = 256;
 
-     var image = await loadImage(url);
+     var image = loadImage(url);
 
      var x = canvas.width / 2;
      var y = canvas.height / 2;
