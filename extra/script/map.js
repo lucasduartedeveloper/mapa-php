@@ -862,8 +862,8 @@ $(document).ready(function() {
 
      ws.onmessage = (event) => {
         var msg = event.data.split("|");
-        if (msg[0] == "JUPS" && msg[1] != playerId) {
-            console.log(msg);
+        console.log(msg);
+        if (msg[0] == "JUPS" && parseInt(msg[1]) != playerId) {
             reload();
             players[parseInt(msg[1])].camera = msg[2];
         }
