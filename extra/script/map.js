@@ -472,8 +472,9 @@ function reload() {
                               iconSize:     [40, 40],
                               iconAnchor:   [20, 20]
                            }));
-                       }
-                       img.src = players[m].icon;
+                      }
+                      console.log(players[m].icon);
+                      img.src = players[m].icon;
                   }
 
                   if (players[m].line) {
