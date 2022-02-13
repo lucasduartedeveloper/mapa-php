@@ -740,11 +740,13 @@ function mapClick(e) {
                            Math.pow(co, 2) +
                            Math.pow(ca, 2));
 
-                           console.log(calcularAngulo(co, ca, h));
+                           var a = calcularAngulo(co, ca, h);
+                           var icon = rotateImage(
+                                 players[playerId].icon, a);
 
                            players[playerId].marker.setIcon(
                                L.icon({
-                                   iconUrl: players[playerId].icon,
+                                   iconUrl: icon,
                                    iconSize:     [40, 40],
                                    iconAnchor:   [20, 20]
                                }));
@@ -1071,9 +1073,9 @@ function calcularAngulo(co, ca, h) {
 
 function rotateImage(url, angle) {
      var img = document.createElement("img");
-     
-
-    return img.toDataURL();
+     img.src = url;
+     img style.transform = "rotate("+angle+")";     
+     return img.toDataURL();
 }
 
 //  colisões
