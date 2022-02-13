@@ -465,6 +465,7 @@ function reload() {
                       img.width = 256;
                       img.height = 256;
                       img.onload = function() {
+                           console.log(this.m);
                            var icon = rotateImage(img, a);
                            players[this.m].marker.setIcon(
                            L.icon({
@@ -474,7 +475,7 @@ function reload() {
                            }));
                       }
                       console.log(players[m].icon);
-                      img.src = players[img.m].icon;
+                      img.src = players[m].icon;
                   }
 
                   if (players[m].line) {
