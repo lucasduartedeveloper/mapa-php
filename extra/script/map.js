@@ -472,6 +472,7 @@ function reload() {
                               iconAnchor:   [20, 20]
                            }));
                        }
+                       img.src = players[m].icon;
                   }
 
                   if (players[m].line) {
@@ -751,9 +752,6 @@ function mapClick(e) {
                            Math.pow(ca, 2));
 
                            var a = calcularAngulo(co, ca, h);
-                           console.log(a * (180 / Math.PI));
-                           console.log((a * (180 / Math.PI)) * 2);
-
                            var img = new Image();
                            img.width = 256;
                            img.height = 256;
@@ -1067,7 +1065,11 @@ function createLabel(text, color = "#000") {
 // 
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
-    return Math.asin(senA); 
+    var a = Math.asin(senA);
+    console.log(a);
+    console.log(co);
+    console.log(ca);
+    return a;
 }
 
 function rotateImage(img, angle) {

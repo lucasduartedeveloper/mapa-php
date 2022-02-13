@@ -43,7 +43,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     LOST RPG
+     PARADOS E FURIOSOS
 </p>
 
 <p id="audio-info"  style="display:none;" class="audio-info">
@@ -84,8 +84,8 @@
 </p>
 
 <p id="version-info" class="version-info">
-     LOST RPG<br>
-     v78.1.1.403
+     PARADOS E FURIOSOS<br>
+     v78.1.1.404
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -123,7 +123,7 @@
 <script src="/extra/script/websocket.js?v=1"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=403"></script> 
+<script src="/extra/script/map.js?v=404"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
