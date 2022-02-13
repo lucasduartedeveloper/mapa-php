@@ -768,7 +768,7 @@ function mapClick(e) {
                    players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
                    players[playerId].markerNv.setIcon(
                    L.icon({
-                      iconUrl: createLabel("Nv. " + nv),
+                      iconUrl: createLabel(nv + " km"),
                       iconSize:     [100, 30], // size of the icon
                       iconAnchor:   [50, 70]
                    }));
