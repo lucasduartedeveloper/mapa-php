@@ -1013,6 +1013,7 @@ function reposicionarCarro(dir) {
              mapClick(pos);
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
              break;
+        console.log(angulo); 
     }
 
     var img = new Image();
