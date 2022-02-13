@@ -744,16 +744,16 @@ function mapClick(e) {
 
                            if (x > 0 && y == 0)
                                players[playerId].icon =
-                               players[playerId].iconLeft;
+                               players[playerId].icon;
                            else if (x == 0 && y < 0)
                                players[playerId].icon =
-                               players[playerId].iconUp;
+                               players[playerId].icon;
                            else if (x < 0 && y == 0)
                                players[playerId].icon = 
-                               players[playerId].iconRight;
+                               players[playerId].icon;
                            else if (x == 0 && y > 0)
                                players[playerId].icon = 
-                               players[playerId].iconDown;
+                               players[playerId].icon;
 
                            players[playerId].marker.setIcon(
                                L.icon({
