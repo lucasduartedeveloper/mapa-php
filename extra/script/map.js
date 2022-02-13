@@ -447,21 +447,14 @@ function reload() {
                    }
 
                    if (trajetos[m].length > 1) {
-                      var x = 
+                      var co = 
                       parseFloat(trajetos[m][1].longitude) - 
                       parseFloat(trajetos[m][0].longitude);
-                      var y = 
+                      var ca = 
                       parseFloat(trajetos[m][1].latitude) - 
                       parseFloat(trajetos[m][0].latitude);
 
-                      if (x > 0 && y == 0)
-                           players[m].icon = players[m].icon;
-                      else if (x == 0 && y < 0)
-                           players[m].icon = players[m].icon;
-                      else if (x < 0 && y == 0)
-                           players[m].icon = players[m].icon;
-                       else if (x == 0 && y > 0)
-                           players[m].icon = players[m].icon;
+                      
 
                        players[m].marker.setIcon(
                            L.icon({
@@ -555,7 +548,7 @@ function excluirAudio(m) {
                        audios[k].latitude,
                        audios[k].longitude));
     }
-    console.log(pointList);
+    //console.log(pointList);
 
     audio.pause();
     audio = new Audio("../audio/sfx_victory.mp3");
@@ -735,25 +728,19 @@ function mapClick(e) {
                    });
 
                   if (trajetos[playerId].length > 1) {
-                           var x = 
+                           var co = 
                            parseFloat(trajetos[playerId][1].longitude) - 
                            parseFloat(trajetos[playerId][0].longitude);
-                           var y = 
+                           var ca = 
                            parseFloat(trajetos[playerId][1].latitude) - 
                            parseFloat(trajetos[playerId][0].latitude);
 
-                           if (x > 0 && y == 0)
-                               players[playerId].icon =
-                               players[playerId].icon;
-                           else if (x == 0 && y < 0)
-                               players[playerId].icon =
-                               players[playerId].icon;
-                           else if (x < 0 && y == 0)
-                               players[playerId].icon = 
-                               players[playerId].icon;
-                           else if (x == 0 && y > 0)
-                               players[playerId].icon = 
-                               players[playerId].icon;
+                           var h = 
+                           Math.sqrt(
+                           Math.pow(co, 2) +
+                           Math.pow(ca, 2));
+
+                           console.log(calcularAngulo(co, ca, h));
 
                            players[playerId].marker.setIcon(
                                L.icon({
@@ -1074,6 +1061,19 @@ function createLabel(text, color = "#000") {
     context.restore();
 
     return canvas.toDataURL();
+}
+
+// 
+function calcularAngulo(co, ca, h) {
+    var senA = co/h;
+    return Math.asin(senA) * (180 / Math.PI); 
+}
+
+function rotateImage(url, angle) {
+     var img = document.createElement("img");
+     
+
+    return img.toDataURL();
 }
 
 //  colisões
