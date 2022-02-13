@@ -958,7 +958,7 @@ $(document).ready(function() {
 
     window.clickInterval = function() { };
     $("#left,#up,#right,#down").on("mouseup touchend",
-       function() {
+       function(e) {
            console.log("clear: " + $(e.target).parent().attr("id"));
            clearInterval(clickInterval);
        }
@@ -970,7 +970,7 @@ $(document).ready(function() {
             clickInterval = setInterval(function() {
                  console.log($(e.target).parent().attr("id"));
                  reposicionarCarro($(e.target).parent().attr("id"));
-            }, 1000);
+            }, 500);
        }
     );
 });
