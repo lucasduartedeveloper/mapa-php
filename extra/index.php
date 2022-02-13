@@ -85,7 +85,7 @@
 
 <p id="version-info" class="version-info">
      P & F<br>
-     v78.1.1.425
+     v78.2.1.425
 </p>
 
 <button id="left" type="button" class="btn-left">
