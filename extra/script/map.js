@@ -1068,10 +1068,10 @@ function rotateImage(img, angle) {
      var height = img.height;
 
      context.save();
-     context.translate(canvas.width / 2, canvas.height / 2);
+     //context.translate(canvas.width / 2, canvas.height / 2);
      context.drawImage(img, -width / 2, -img / 2, 
          width, height);
-     context.rotate(angle);
+     //context.rotate(angle);
      context.restore();
 
      return canvas.toDataURL();
