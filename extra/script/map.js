@@ -752,7 +752,7 @@ function mapClick(e) {
 
                            var a = calcularAngulo(co, ca, h);
                            console.log(a * (180 / Math.PI));
-                           console.log((a * (180 / Math.PI))) * 2)
+                           console.log((a * (180 / Math.PI))) * 2);
 
                            var img = new Image();
                            img.width = 256;
