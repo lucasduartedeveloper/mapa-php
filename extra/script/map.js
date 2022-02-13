@@ -930,24 +930,6 @@ $(document).ready(function() {
                       this.linha * 120 + (this.linha * 4),
                       this.coluna * 120 + (this.coluna * 4),
                       120, 120);
-
-                      /*
-                      var imgNv = document.createElement("img");
-                      imgNv.width = 100;
-                      imgNv.height = 40;
-                      imgNv.linha = img.linha;
-                      imgNv.coluna = img.coluna;
-
-                      imgNv.onload = function() {
-                      context.drawImage(
-                        this,
-                        this.linha * 120 + (30 + (this.linha * 4)), 
-                        this.coluna * 120 + (this.coluna * 4),
-                        100, 
-                        30); }
-                     imgNv.src = 
-                     createLabel(
-                     "Nv. " + trajetos[img.k].length);*/
                   }
                   context.drawImage(
                         this,
@@ -957,7 +939,7 @@ $(document).ready(function() {
                         40 : 120, 
                         this.src.includes("vehicles") ?
                         40 : 120);
-              };
+                  }
               img.src = players[k].camera;
               }
          }
@@ -1078,6 +1060,8 @@ function calcularAngulo(co, ca, h) {
 function rotateImage(img, angle) {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
+
+     $("#loading").appendChild(img);
 
      canvas.width = 256;
      canvas.height = 256;
