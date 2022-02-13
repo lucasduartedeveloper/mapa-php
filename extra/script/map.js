@@ -24,7 +24,7 @@ function say(text) {
         }
 }
 var markerIcon0 = L.icon({
-       iconUrl: "/extra/img/sprites/tile058.png",
+       iconUrl: "/extra/img/vehicles/Audi.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -42,7 +42,7 @@ var markerShadow0 = L.circle([-23.37062642645644,  -51.15587314318577], {
 
 // Teste
 var markerIcon1= L.icon({
-       iconUrl: "/extra/img/sprites/tile004.png",
+       iconUrl: "/extra/img/vehicles/Black_viper.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -60,7 +60,7 @@ var markerShadow1 = L.circle([-23.370806290778205,  -51.15567401066389], {
 
 // Teste
 var markerIcon2 = L.icon({
-       iconUrl: "/extra/img/sprites/tile055.png",
+       iconUrl: "/extra/img/vehicles/Police.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
@@ -78,7 +78,7 @@ var markerShadow2 = L.circle([-23.370806290778205,  -51.15607227570766], {
 
 //Teste
 var markerIcon3 = L.icon({
-       iconUrl: "/extra/img/sprites/tile009.png",
+       iconUrl: "/extra/img/vehicles/taxi.png",
        iconSize:     [35, 40], // size of the icon
        iconAnchor:   [17.5, 40], // point of the icon which will correspond to marker's location
        popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
