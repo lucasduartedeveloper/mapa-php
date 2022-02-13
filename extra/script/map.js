@@ -314,7 +314,7 @@ function reload() {
    if (dragging) { return; }
    //$("#loading").show();
    $.getJSON("/extra/ajax/audio.php", function(data) {
-          console.log("reload");
+          //console.log("reload");
           for (var k in audios) {
                map.removeControl(audios[k].marker);
                map.removeControl(audios[k].markerShadow);
@@ -547,9 +547,9 @@ function excluirAudio(m) {
     // Websocket
     ws.send("JUPS|"+playerId);
 
-    console.log(audios);
+    //console.log(audios);
     audios = audios.slice(0, m);
-    console.log(audios);
+    //console.log(audios);
 
     pointList.push(
                    new L.LatLng(
@@ -682,7 +682,7 @@ function mapClick(e) {
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
-    console.log("mapclick");
+    //console.log("mapclick");
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
              latitude: pos.lat, 
@@ -759,7 +759,7 @@ function mapClick(e) {
                    calcularColisoes();
                    // Websocket
                    ws.send("JUPS|"+playerId);
-                   console.log("mapclick_end");
+                   //console.log("mapclick_end");
     });
 }
 
@@ -862,7 +862,7 @@ $(document).ready(function() {
 
      ws.onmessage = (event) => {
         var msg = event.data.split("|");
-        console.log(msg);
+        //console.log(msg);
         if (msg[0] == "JUPS" && parseInt(msg[1]) != playerId) {
             reload();
             players[parseInt(msg[1])].camera = msg[2];
@@ -904,7 +904,7 @@ $(document).ready(function() {
          // Websocket
          var dataUrl = cnv.toDataURL("image/png");
          ws.send("JUPS|"+playerId+"|"+dataUrl);
-         console.log(playerId);
+         //console.log(playerId);
          players[playerId].camera = dataUrl;
 
          // CAMERAS
