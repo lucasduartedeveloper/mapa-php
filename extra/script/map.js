@@ -719,7 +719,7 @@ function mapClick(e) {
                    if (players[playerId].line) {
                       map.removeControl(players[playerId].line);
                    }
-                   players[playerId].pointList.push(
+                   players[playerId].pointList.unshift(
                       new L.LatLng(
                          pos.lat, pos.lng));
 
@@ -1071,11 +1071,6 @@ function calcularAngulo(co, ca, h) {
     a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
     a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
-
-    console.log("-------------");
-    console.log("a: " + a);
-    console.log("co: " + co);
-    console.log("ca: " + ca);
     return a;
 }
 
