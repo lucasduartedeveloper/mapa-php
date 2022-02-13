@@ -678,34 +678,10 @@ function mapClick(e) {
     });
     posicao = pos;
 
-    var pointList = [];
-    map.removeControl(wire);
- 
-    pointList.push(
-                   new L.LatLng(
-                   pos.lat,
-                   pos.lng));
-
-    for (var k in audios) {
-           pointList.push(
-                   new L.LatLng(
-                   audios[k].latitude,
-                   audios[k].longitude));
-    }
-
-    wire = new L.Polyline(pointList, {
-              color: '#8A0829',
-              weight: 3,
-              opacity: 0.5,
-              smoothFactor: 1,
-              dashArray: '5',
-              dashOffset: '0'
-    });
-    wire.addTo(map);
-
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
+    console.log(pos);
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
              latitude: pos.lat, 
@@ -782,6 +758,7 @@ function mapClick(e) {
                    calcularColisoes();
                    // Websocket
                    ws.send("JUPS|"+playerId);
+                   console.log(pos);
     });
 }
 
