@@ -985,6 +985,7 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng - d
              }};
+             angulo -= 10 *(180/Math.PI);
              break;
          case "up":
              pos = {
@@ -993,12 +994,15 @@ function reposicionarCarro(dir) {
                   lng: posicao.lng
              }};
              break;
+             mapClick(pos);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
          case "right":
              pos = {
              latlng: {
                   lat: posicao.lat,
                   lng: posicao.lng + d
              }};
+             angulo += 10 *(180/Math.PI);
              break;
          case "down":
              pos = {
@@ -1006,11 +1010,24 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat - a,
                   lng: posicao.lng
              }};
+             mapClick(pos);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
              break;
     }
 
-    mapClick(pos);
-    map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+    var img = new Image();
+    img.width = 256;
+    img.height = 256;
+    img.onload = function() {
+        var icon = rotateImage(img, angulo);
+        players[playerId].marker.setIcon(
+            L.icon({
+                 iconUrl: icon,
+                 iconSize:     [40, 40],
+                 iconAnchor:   [20, 20]
+            }));
+    }
+    img.src = players[playerId].icon;
 }
 
 // Nível
