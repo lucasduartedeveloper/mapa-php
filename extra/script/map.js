@@ -970,7 +970,7 @@ $(document).ready(function() {
             //clearInterval(clickInterval);
             clickInterval = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
-            }, 500);
+            }, 100);
        }
     );
 });
