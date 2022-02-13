@@ -966,7 +966,9 @@ $(document).ready(function() {
 
     $("#left,#up,#right,#down").on("mousedown touchstart",
        function(e) {
+            reposicionarCarro($(e.target).parent().attr("id"))
             //clearInterval(clickInterval);
+
             clickInterval = setInterval(function() {
                  console.log($(e.target).parent().attr("id"));
                  reposicionarCarro($(e.target).parent().attr("id"));
@@ -985,7 +987,7 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng - d
              }};
-             angulo -= 10 *(180/Math.PI);
+             angulo += 5 * (180/Math.PI);
              break;
          case "up":
              pos = {
@@ -993,16 +995,16 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat + a,
                   lng: posicao.lng
              }};
-             break;
              mapClick(pos);
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+             break;
          case "right":
              pos = {
              latlng: {
                   lat: posicao.lat,
                   lng: posicao.lng + d
              }};
-             angulo += 10 *(180/Math.PI);
+             angulo -= 5 *(180/Math.PI);
              break;
          case "down":
              pos = {
