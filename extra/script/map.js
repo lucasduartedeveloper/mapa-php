@@ -1071,14 +1071,12 @@ function calcularAngulo(co, ca, h) {
     return Math.asin(senA); 
 }
 
-async function loadImage(imageUrl) {
-    var promiseImage = new Promise(resolve => {
-        var img = new Image();
-        img.onload = () => resolve(img);
-        img.src = imageUrl;
-    });
-
-    return await promiseImage;
+function loadImage(url) {
+     return new Promise((resolve) => {
+          const e = new Image();
+          e.onload = () => { resolve(e); };
+          e.src = url;
+     });
 }
 
 function rotateImage(url, angle) {
@@ -1088,7 +1086,10 @@ function rotateImage(url, angle) {
      canvas.width = 256;
      canvas.height = 256;
 
-     var image = loadImage(url);
+     var image;
+     loadImage(url).then(function (e) {
+           image = e;
+     });
 
      var x = canvas.width / 2;
      var y = canvas.height / 2;
