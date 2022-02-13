@@ -966,11 +966,9 @@ $(document).ready(function() {
 
     $("#left,#up,#right,#down").on("mousedown touchstart",
        function(e) {
-            reposicionarCarro($(e.target).parent().attr("id"))
+            console.log("start: " + $(e.target).parent().attr("id"));
             //clearInterval(clickInterval);
-
             clickInterval = setInterval(function() {
-                 console.log($(e.target).parent().attr("id"));
                  reposicionarCarro($(e.target).parent().attr("id"));
             }, 500);
        }
