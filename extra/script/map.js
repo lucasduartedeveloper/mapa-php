@@ -314,6 +314,7 @@ function reload() {
    if (dragging) { return; }
    //$("#loading").show();
    $.getJSON("/extra/ajax/audio.php", function(data) {
+          console.log("reload");
           for (var k in audios) {
                map.removeControl(audios[k].marker);
                map.removeControl(audios[k].markerShadow);
@@ -681,7 +682,7 @@ function mapClick(e) {
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
-    console.log(pos);
+    console.log("mapclick");
     $.post("/extra/ajax/trajeto.php", {
              playerId: playerId,
              latitude: pos.lat, 
@@ -758,7 +759,7 @@ function mapClick(e) {
                    calcularColisoes();
                    // Websocket
                    ws.send("JUPS|"+playerId);
-                   console.log(pos);
+                   console.log("mapclick_end");
     });
 }
 
