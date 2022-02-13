@@ -1074,7 +1074,7 @@ function calcularAngulo(co, ca, h) {
 function rotateImage(url, angle) {
      var img = document.createElement("img");
      img.src = url;
-     img style.transform = "rotate("+angle+")";     
+     img.style.transform = "rotate("+angle+")";     
      return img.toDataURL();
 }
 
