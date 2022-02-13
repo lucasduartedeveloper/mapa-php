@@ -932,7 +932,7 @@ $(document).ready(function() {
               img.k = k;
 
               img.onload = function() {
-                  if (this.src.includes("sprites")) {
+                  if (this.src.includes("vehicles")) {
                       context.clearRect(
                       this.linha * 120 + (this.linha * 4),
                       this.coluna * 120 + (this.coluna * 4),
@@ -960,9 +960,9 @@ $(document).ready(function() {
                         this,
                         this.linha * 120 + (this.linha * 4), 
                         this.coluna * 120 + (this.coluna * 4),
-                        this.src.includes("sprites") ?
+                        this.src.includes("vehicles") ?
                         40 : 120, 
-                        this.src.includes("sprites") ?
+                        this.src.includes("vehicles") ?
                         40 : 120);
               };
               img.src = players[k].camera;
