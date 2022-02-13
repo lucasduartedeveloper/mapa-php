@@ -454,15 +454,25 @@ function reload() {
                       parseFloat(trajetos[m][1].latitude) - 
                       parseFloat(trajetos[m][0].latitude);
 
-                      
+                      var h = 
+                      Math.sqrt(
+                      Math.pow(co, 2) +
+                      Math.pow(ca, 2));
 
-                       players[m].marker.setIcon(
+                      var a = calcularAngulo(co, ca, h);
+                      var img = new Image();
+                      img.width = 256;
+                      img.height = 256;
+                      img.onload = function() {
+                           var icon = rotateImage(img, a);
+                           players[playerId].marker.setIcon(
                            L.icon({
-                               iconUrl: players[m].icon,
-                               iconSize:     [40, 40],
-                               iconAnchor:   [20, 20]
-                        }));
-                      }
+                              iconUrl: icon,
+                              iconSize:     [40, 40],
+                              iconAnchor:   [20, 20]
+                           }));
+                       }
+                  }
 
                   if (players[m].line) {
                       map.removeControl(players[m].line);
