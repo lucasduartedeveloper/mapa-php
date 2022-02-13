@@ -465,7 +465,7 @@ function reload() {
                       img.height = 256;
                       img.onload = function() {
                            var icon = rotateImage(img, a);
-                           players[playerId].marker.setIcon(
+                           players[m].marker.setIcon(
                            L.icon({
                               iconUrl: icon,
                               iconSize:     [40, 40],
@@ -758,7 +758,7 @@ function mapClick(e) {
                            img.height = 256;
                            img.onload = function() {
                                 var icon = rotateImage(img, a);
-                                players[m].marker.setIcon(
+                                players[playerId].marker.setIcon(
                                 L.icon({
                                    iconUrl: icon,
                                    iconSize:     [40, 40],
