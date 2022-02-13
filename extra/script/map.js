@@ -904,6 +904,7 @@ $(document).ready(function() {
          // Websocket
          var dataUrl = cnv.toDataURL("image/png");
          ws.send("JUPS|"+playerId+"|"+dataUrl);
+         console.log(playerId);
          players[playerId].camera = dataUrl;
 
          // CAMERAS
