@@ -1068,14 +1068,43 @@ function createLabel(text, color = "#000") {
 // 
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
-    return Math.asin(senA) * (180 / Math.PI); 
+    return Math.asin(senA); 
+}
+
+async function loadImage(imageUrl) {
+    let img;
+    const imageLoadPromise = new Promise(resolve => {
+        img = new Image();
+        img.onload = resolve;
+        img.src = imageUrl;
+    });
+
+    await imageLoadPromise;
+    console.log("image loaded");
+    return img;
 }
 
 function rotateImage(url, angle) {
-     var img = document.createElement("img");
-     img.src = url;
-     img.style.transform = "rotate("+angle+")";     
-     return img.toDataURL();
+     var canvas = document.createElement("canvas");
+     var context = canvas.getContext( '2d' );
+
+     canvas.width = 256;
+     canvas.height = 256;
+
+     var image = loadImage(url);
+
+     var x = canvas.width / 2;
+     var y = canvas.height / 2;
+     var width = image.width;
+     var height = image.height;
+
+     context.translate(x, y);
+     context.rotate(angle);
+     context.drawImage(image, -width / 2, -height / 2, width, height);
+     context.rotate(-angle);
+     context.translate(-x, -y);
+
+     return canvas.toDataURL();
 }
 
 //  colisões
