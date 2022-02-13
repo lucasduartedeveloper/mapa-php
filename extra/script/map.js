@@ -741,15 +741,17 @@ function mapClick(e) {
                            Math.pow(ca, 2));
 
                            var a = calcularAngulo(co, ca, h);
-                           var icon = rotateImage(
-                                 players[playerId].icon, a);
-
-                           players[playerId].marker.setIcon(
-                               L.icon({
+                           var img = new Image();
+                           img.onload = function() {
+                                var icon = rotateImage(img, a);
+                                players[playerId].marker.setIcon(
+                                L.icon({
                                    iconUrl: icon,
                                    iconSize:     [40, 40],
                                    iconAnchor:   [20, 20]
-                               }));
+                                }));
+                           }
+                           img.src = players[playerId].icon;
                       }
 
                    var nv = trajetos[playerId].length;
@@ -1071,25 +1073,12 @@ function calcularAngulo(co, ca, h) {
     return Math.asin(senA); 
 }
 
-function loadImage(url) {
-     return new Promise((resolve) => {
-          const e = new Image();
-          e.onload = () => { resolve(e); };
-          e.src = url;
-     });
-}
-
-function rotateImage(url, angle) {
+function rotateImage(img, angle) {
      var canvas = document.createElement("canvas");
      var context = canvas.getContext( '2d' );
 
      canvas.width = 256;
      canvas.height = 256;
-
-     var image;
-     loadImage(url).then(function (e) {
-           image = e;
-     });
 
      var x = canvas.width / 2;
      var y = canvas.height / 2;
