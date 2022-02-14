@@ -1200,7 +1200,8 @@ function centralizarNaRota(pos) {
               (wayPoint == steps[k].way_points[0] &&
                wayPoint == steps[k].way_points[1])) {
               say(traduzirInstrucao(steps[k].instruction));
-              steps[k].instruction = "";
+              if (!speaking)
+                  steps[k].instruction = "";
               break;
          }
     }
@@ -1226,9 +1227,9 @@ var traducao = [
     ["Turn right onto", "Entre à direita em" ],
     ["Turn sharp left onto", "Entre à esquerda em" ],
     ["Turn sharp right onto", "Entre à direita em" ],
-    ["Arrive at", "Chegue em" ],
-    ["on the left", "à esquerda" ],
-    ["on the right", "à direita" ]
+    ["Arrive at", "Chegamos em" ],
+    ["on the left", "seu destino fica à esquerda" ],
+    ["on the right", "seu destino fica à direita" ]
 ];
 function traduzirInstrucao(texto) {
    for (var k in traducao) {
