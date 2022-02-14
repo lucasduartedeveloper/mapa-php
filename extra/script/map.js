@@ -994,7 +994,10 @@ $(document).ready(function() {
 
     $("#up").on("mousedown touchstart",
        function(e) {
-            if (intervalA) clearInterval(intervalA);
+            if (intervalA) {
+                clearInterval(intervalA); 
+                intervalA = false;
+            }
             else 
             intervalA = setInterval(function() {
                  reposicionarCarro($(e.target).attr("id"));
@@ -1004,7 +1007,10 @@ $(document).ready(function() {
 
     $("#down").on("mousedown touchstart",
        function(e) {
-            if (intervalC) clearInterval(intervalC);
+            if (intervalC) {
+                 clearInterval(intervalC);
+                 intervalC = false;
+            }
             else
             intervalC = setInterval(function() {
                  reposicionarCarro($(e.target).attr("id"));
