@@ -1207,8 +1207,9 @@ function centralizarNaRota(pos) {
     }
 }
 
-// Tradução openrouteservice
+// Tradução 
 var traducao = [
+    ["Continue straight onto", "Continue reto em" ],
     ["Head west on", "Siga leste em" ],
     ["Head north on", "Siga norte em" ],
     ["Head northwest on", "Siga nordeste em" ],
