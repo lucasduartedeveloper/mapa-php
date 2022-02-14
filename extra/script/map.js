@@ -975,18 +975,16 @@ $(document).ready(function() {
 
     window.intervalA = false;
     window.intervalB = false;
+    window.intervalC = false;
 
     $("#left,#right").on("mouseup touchend",
        function(e) {
-           //console.log("clear: " + $(e.target).parent().attr("id"));
-           //velocidade = 0;
            clearInterval(intervalB);
        }
     );
 
     $("#left,#right").on("mousedown touchstart",
        function(e) {
-            //console.log("start: " + $(e.target).parent().attr("id"));
             if (intervalB) clearInterval(intervalB);
             intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
@@ -994,11 +992,21 @@ $(document).ready(function() {
        }
     );
 
-    $("#up,#down").on("mousedown touchstart",
+    $("#up").on("mousedown touchstart",
        function(e) {
-            //console.log("start: " + $(e.target).parent().attr("id"));
             if (intervalA) clearInterval(intervalA);
+            else 
             intervalA = setInterval(function() {
+                 reposicionarCarro($(e.target).attr("id"));
+            }, 100);
+       }
+    );
+
+    $("#down").on("mousedown touchstart",
+       function(e) {
+            if (intervalC) clearInterval(intervalC);
+            else
+            intervalC = setInterval(function() {
                  reposicionarCarro($(e.target).attr("id"));
             }, 100);
        }
@@ -1027,6 +1035,12 @@ function reposicionarCarro(dir) {
                  angulo : 0;
              break;
          case "up":
+             if (velocidade == 0) {
+                 audio.pause();
+                 audio =
+                 new Audio("/extra/audio/car-ignition.wav");
+                 audio.play();
+             }
              velocidade += 0.1;
              velocidade =
                   velocidade <= velocidadeMaxima ?
@@ -1042,6 +1056,12 @@ function reposicionarCarro(dir) {
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
+             if (velocidade > 0) {
+                 audio.pause();
+                 audio =
+                 new Audio("/extra/audio/car-brakes-screeching.wav");
+                 audio.play();
+             }
              velocidade -= 0.5;
              velocidade = 
                   velocidade >= -(velocidadeMaxima) ?
