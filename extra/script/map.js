@@ -676,6 +676,7 @@ function mapClick(e) {
          lng: e.latlng.lng
     });
     posicao = pos;
+    centralizarNaRota(pos);
 
     var pointList = [];
     if (wire) { map.removeControl(wire); };
@@ -1143,29 +1144,11 @@ function calcularColisoes() {
     }
 }
 
-function centralizarNaPista() {
-     var canvas = document.createElement("canvas");
-     var context = canvas.getContext( '2d' );
-     var map = document.getElementById("map");
-      
-     canvas.width = 100;
-     canvas.height = 100;
-;
-     var width = map.width;
-     var height = map.height;
-
-     context.save();
-     context.translate(50, 50);
-     context.drawImage(map, -(width / 2), -(height / 2),
-         width, height);
-     context.restore();
-
-     return canvas.toDataURL();
-}
-
 // Download das direções
 var routeAPI = "https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf62483d56a869468743b6a4abd4af7da6e12a";
 var routeLine = false;
+var route = [];
+var steps = []; 
 
 function calcularRota(start, end) {
     $.getJSON( 
@@ -1177,11 +1160,9 @@ function calcularRota(start, end) {
             map.removeControl(routeLine);
         }
 
-        var route = data.features[0].geometry.coordinates;
-        var steps = data.features[0].properties.segments[0].steps;
+        route = data.features[0].geometry.coordinates;
+        steps = data.features[0].properties.segments[0].steps;
         var routePointList = [];
-
-        say(traduzirInstrucao(steps[0].instruction));
 
         for (var k in route) {
             routePointList.push(
@@ -1201,6 +1182,26 @@ function calcularRota(start, end) {
     });
 }
 
+function centralizarNaRota(pos) {
+    var wayPoint = 0;
+    var a = new L.LatLng(pos.lat, pos.lng);
+    var distance = 0;
+    for (var k in route) {
+         var b =  new L.LatLng(route[k][1], route[k][0]);
+         if (a.distanceTo(b) > distance) {
+              distance = a.distanceTo(b);
+              wayPoint = k;
+         }
+    }
+
+    console.log(wayPoint);
+    for (var k in steps) {
+         if (wayPoint < steps[k].way_points[0]) {
+              say(traduzirInstrucao(steps[k].instruction));
+         }
+    }
+}
+
 // Tradução openrouteservice
 var traducao = [
     ["Head west on", "Siga leste em" ],
@@ -1210,12 +1211,15 @@ var traducao = [
     ["Enter the roundabout and take the 2nd exit onto",
      "Entre na rotatória e pegue a segunda saída para" ],
     ["Turn left on", "Entre à esquerda em" ],
-    ["Turn right on", "Entre à direita em" ]
+    ["Turn right on", "Entre à direita em" ],
+    ["Arrive at", "Chegue em" ],
+    ["on the left", "à esquerda" ],
+    ["on the right", "à direita" ]
 ]
 function traduzirInstrucao(texto) {
    for (var k in traducao) {
         if (texto.includes(traducao[k][0]))
-            return texto.replace(traducao[k][0], 
+            texto = texto.replace(traducao[k][0], 
                  traducao[k][1]);
    }
    return texto;
