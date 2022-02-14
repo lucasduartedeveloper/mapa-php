@@ -1073,8 +1073,8 @@ function calcularPosicao() {
     var ca = Math.cos(angulo) * h;
     var pos = {
           latlng: {
-          lat: posicao.lat + co,
-          lng: posicao.lng + ca
+          lat: posicao.lat + ca,
+          lng: posicao.lng + co
     }}
     return pos;
 }
