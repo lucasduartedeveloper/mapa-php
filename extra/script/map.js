@@ -1011,8 +1011,8 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng - d
              }};
-             mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+             //mapClick(pos);
+             //map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              angulo += 0.5 * (180/Math.PI);
              angulo = 
                  angulo <= (2 * (180/Math.PI)) ?
@@ -1033,8 +1033,8 @@ function reposicionarCarro(dir) {
                   lat: posicao.lat,
                   lng: posicao.lng + d
              }};
-             mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+             //mapClick(pos);
+             //map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              angulo -= 0.5 * (180/Math.PI);
              angulo = 
                  angulo < 0 ?
@@ -1050,9 +1050,9 @@ function reposicionarCarro(dir) {
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
     }
-    //console.log(angulo); 
+    console.log(angulo); 
 
-    return;
+    //return;
     var img = new Image();
     img.width = 256;
     img.height = 256;
