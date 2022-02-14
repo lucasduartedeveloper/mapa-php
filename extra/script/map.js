@@ -1150,12 +1150,15 @@ function calcularRota(start, end) {
             map.removeControl(routeLine);
         }
 
-        var obj = data.features[0].geometry.coordinates;
+        var route = data.features[0].geometry.coordinates;
+        var steps = data.features[0].segments[0].steps;
         var routePointList = [];
 
-        for (var k in obj) {
+        say(steps[0].instruction);
+
+        for (var k in route) {
             routePointList.push(
-            new L.LatLng(obj[k][1], obj[k][0]));
+            new L.LatLng(route[k][1], route[k][0]));
         }    
 
         routeLine = 
