@@ -89,7 +89,7 @@
 
 <p id="version-info" class="version-info">
      P & F<br>
-     v78.3.1.442
+     v78.3.1.443
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -127,7 +127,7 @@
 <script src="/extra/script/websocket.js?v=3"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=442"></script> 
+<script src="/extra/script/map.js?v=443"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
