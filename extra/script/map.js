@@ -276,6 +276,7 @@ function success(position) {
              lng : position.coords.longitude
         });
         mapClick({ latlng: posicao });
+        map.setView([ posicao.lat, posicao.lng ], 17);
     }
 }
 
