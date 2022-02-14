@@ -1155,7 +1155,7 @@ function calcularRota(start, end) {
 
         for (var k in obj) {
             routePointList.push(
-            new L.LatLng(obj[1], obj[0]));
+            new L.LatLng(obj[k][1], obj[k][0]));
         }    
 
         routeLine = 
