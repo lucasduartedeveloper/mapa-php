@@ -962,6 +962,15 @@ $(document).ready(function() {
             }, 100);
        }
     );
+
+    $("#rota").click(function() {
+        if (audios.length > 0) {
+            calcularRota(
+                posicao.lat + "," + posicao.lng, 
+                audios[0].latitude + "," + audios[0].longitude
+            );
+        }
+    });
 });
 
 // Reposicionar o carro
@@ -1125,6 +1134,16 @@ function centralizarNaPista() {
      context.restore();
 
      return canvas.toDataURL();
+}
+
+// Download das direções
+var routeAPI = "https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf62483d56a869468743b6a4abd4af7da6e12a"
+function calcularRota(start, end) {
+    $.getJSON( 
+    routeAPI + "&start=" + start + "&end=" +end, 
+    function(data) {
+        console.log(data);
+    });
 }
 
 // Função para indentificar se um tile no mapa é rua ou calçada
