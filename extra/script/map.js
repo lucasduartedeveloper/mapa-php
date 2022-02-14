@@ -25,8 +25,8 @@ function say(text) {
 }
 var markerIcon0 = L.icon({
        iconUrl: "/extra/img/vehicles/audi.png",
-       iconSize:     [20, 20], 
-       iconAnchor:   [10, 10]
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
 });
 
 var marker0 = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon0}).addTo(map);
@@ -42,8 +42,8 @@ var markerShadow0 = L.circle([-23.37062642645644,  -51.15587314318577], {
 // Teste
 var markerIcon1= L.icon({
        iconUrl: "/extra/img/vehicles/black_viper.png",
-       iconSize:     [20, 20], 
-       iconAnchor:   [10, 10]
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
 });
 
 var marker1 = L.marker([-23.370806290778205,  -51.15567401066389],  {icon: markerIcon1}).addTo(map);
@@ -59,8 +59,8 @@ var markerShadow1 = L.circle([-23.370806290778205,  -51.15567401066389], {
 // Teste
 var markerIcon2 = L.icon({
        iconUrl: "/extra/img/vehicles/police.png",
-       iconSize:     [20, 20], 
-       iconAnchor:   [10, 10]
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
 });
 
 var marker2 = L.marker([-23.370806290778205,  -51.15607227570766],  {icon: markerIcon2}).addTo(map);
@@ -76,8 +76,8 @@ var markerShadow2 = L.circle([-23.370806290778205,  -51.15607227570766], {
 //Teste
 var markerIcon3 = L.icon({
        iconUrl: "/extra/img/vehicles/taxi.png",
-       iconSize:     [20, 20], 
-       iconAnchor:   [10, 10]
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
 });
 
 var marker3 = L.marker([-23.37098615509997,  -51.15587314318577],  {icon: markerIcon3}).addTo(map);
@@ -379,8 +379,8 @@ function reload() {
                            players[this.m].marker.setIcon(
                            L.icon({
                               iconUrl: icon,
-                              iconSize:     [20, 20],
-                              iconAnchor:   [10, 10]
+                              iconSize:     [30, 30],
+                              iconAnchor:   [15, 15]
                            }));
                       }
                       img.src = players[m].icon;
@@ -430,8 +430,8 @@ function reload() {
           for (var k in audios) {
                var icon = L.icon({
                    iconUrl: "/extra/img/ghost.png",
-                   iconSize:     [20, 20],
-                   iconAnchor:   [10, 20]
+                   iconSize:     [30, 30],
+                   iconAnchor:   [15, 20]
                });
                
               audios[k].m = k;
@@ -752,8 +752,8 @@ function mapClick(e) {
                  players[playerId].marker.setIcon(
                         L.icon({
                                iconUrl: icon,
-                               iconSize:     [20, 20],
-                               iconAnchor:   [10, 10]
+                               iconSize:     [30, 30],
+                               iconAnchor:   [15, 15]
                         }));
                   }
           img.src = players[playerId].icon;
@@ -1063,8 +1063,8 @@ function reposicionarCarro(dir) {
         players[playerId].marker.setIcon(
             L.icon({
                  iconUrl: icon,
-                 iconSize:     [20, 20],
-                 iconAnchor:   [10, 10]
+                 iconSize:     [30, 30],
+                 iconAnchor:   [15, 15]
             }));
     }
     img.src = players[playerId].icon;

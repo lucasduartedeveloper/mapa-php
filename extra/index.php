@@ -88,7 +88,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v82.3.1.488
+     v82.3.1.489
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -126,7 +126,7 @@
 <script src="/extra/script/websocket.js?v=3"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=488"></script> 
+<script src="/extra/script/map.js?v=489"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
