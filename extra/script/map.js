@@ -1207,10 +1207,18 @@ function centralizarNaRota(pos) {
 var traducao = [
     ["Head west on", "Siga leste em" ],
     ["Head north on", "Siga norte em" ],
+    ["Head northwest on", "Siga nordeste em" ],
+    ["Head northeast on", "Siga noroeste em" ],
     ["Head east on", "Siga oeste em" ],
     ["Head south on", "Siga sul em" ],
+    ["Head southwest on", "Siga sudeste em" ],
+    ["Head southeast on", "Siga sudoeste em" ],
+    ["Enter the roundabout and take the 1st exit onto",
+     "Entre na rotatória e pegue a primeira saída para" ],
     ["Enter the roundabout and take the 2nd exit onto",
      "Entre na rotatória e pegue a segunda saída para" ],
+    ["Enter the roundabout and take the 3rd exit onto",
+     "Entre na rotatória e pegue a terceira saída para" ],
     ["Turn left onto", "Entre à esquerda em" ],
     ["Turn right onto", "Entre à direita em" ],
     ["Turn sharp left onto", "Entre à esquerda em" ],
@@ -1218,7 +1226,7 @@ var traducao = [
     ["Arrive at", "Chegue em" ],
     ["on the left", "à esquerda" ],
     ["on the right", "à direita" ]
-]
+];
 function traduzirInstrucao(texto) {
    for (var k in traducao) {
         if (texto.includes(traducao[k][0]))
