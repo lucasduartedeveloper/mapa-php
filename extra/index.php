@@ -96,7 +96,7 @@
 </button>
 
 <button id="up" type="button" class="btn-up">
-      <i class="bi bi-arrow-up"></i>
+      D
 </button>
 
 <button id="right" type="button" class="btn-right">
@@ -104,7 +104,7 @@
 </button>
 
 <button id="down" type="button" class="btn-down">
-      <i class="bi bi-arrow-down"></i>
+      R
 </button>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
