@@ -88,7 +88,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v82.3.1.500 final
+     v82.3.1.500 meio final
 </p>
 
 <button id="left" type="button" class="btn-left">
