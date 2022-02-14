@@ -400,7 +400,7 @@ function reload() {
                   players[m].line = 
                   new L.Polyline(players[m].pointList, {
                       color: players[m].color,
-                      weight: 5,
+                      weight: 3,
                       opacity: 0.5,
                       smoothFactor: 1,
                       dashArray: '0',
@@ -714,7 +714,7 @@ function mapClick(e) {
     players[playerId].line = 
     new L.Polyline(players[playerId].pointList, {
          color: players[playerId].color,
-         weight: 5,
+         weight: 3,
          opacity: 0.5,
          smoothFactor: 1,
          dashArray: '0',
