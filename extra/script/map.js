@@ -1002,16 +1002,22 @@ $(document).ready(function() {
 });
 
 // Reposicionar o carro
+var velocidade = 0;
+var velocidadeMaxima = 3;
 function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
-         case "left":;
+         case "left":
              angulo += 5 * (Math.PI/180);
              angulo = 
                  angulo <= (360*(Math.PI/180)) ?
                  angulo : 0;
              break;
          case "up":
+             velocidade += 0.1;
+             velocidade =
+                  velocidade <= velocidadeMaxima ?
+                  velocidade : velocidadeMaxima;
              pos = calcularPosicao();
              mapClick(pos);
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
@@ -1023,6 +1029,13 @@ function reposicionarCarro(dir) {
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
+             velocidade -= 0.2;
+             velocidade = 
+                  velocidade >= -(velocidadeMaxima/2) ?
+                  velocidade : -(velocidadeMaxima/2);
+             pos = calcularPosicao();
+             mapClick(pos);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17
              break;
     }
     console.log(angulo); 
@@ -1043,8 +1056,6 @@ function reposicionarCarro(dir) {
     }
     img.src = players[playerId].icon;
 }
-
-
 
 // Nível
 function createLabel(text, color = "#000") {
@@ -1068,7 +1079,7 @@ function createLabel(text, color = "#000") {
 
 // Acelerador
 function calcularPosicao() {
-    var h = 0.000009956626094265175 * 5;
+    var h = (0.000009956626094265175 * 5) * velocidade;
     var co = Math.sin(angulo*-1) * h;
     var ca = Math.cos(angulo*-1) * h;
     var pos = {
