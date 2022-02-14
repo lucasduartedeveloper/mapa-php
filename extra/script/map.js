@@ -174,7 +174,7 @@ function postAudio(nome, buffer, base64) {
              base64: base64,
              }).done(function(data) { 
                    audio.pause();
-                   audio = new Audio("../audio/game_notification.wav");
+                   audio = new Audio("/extra/audio/game_notification.wav");
                    audio.play(); 
                    reload();
                    // Websocket
@@ -429,7 +429,7 @@ function reload() {
 
           for (var k in audios) {
                var icon = L.icon({
-                   iconUrl: "/img/marker.png",
+                   iconUrl: "/extra/img/marker.png",
                    iconSize:     [30, 30],
                    iconAnchor:   [15, 30]
                });
@@ -526,7 +526,7 @@ function excluirAudio(m) {
     // Comparar o Nv
     if(audios[m].desenho.split(",").length > trajetos[playerId].length) {
         audio.pause();
-        audio = new Audio("../audio/game_over.mp3");
+        audio = new Audio("/extra/audio/game_over.mp3");
         audio.play();
         return;
     }
@@ -563,7 +563,7 @@ function excluirAudio(m) {
     //console.log(pointList);
 
     audio.pause();
-    audio = new Audio("../audio/sfx_victory.mp3");
+    audio = new Audio("/extra/audio/sfx_victory.mp3");
     audio.play();
 
     wire = new L.Polyline(pointList, {
@@ -603,7 +603,7 @@ function mudarAudio(m, e) {
              longitude: pos.lng,
              }).done(function(data) { 
                    audio.pause();
-                   audio = new Audio("../audio/game_notification.wav");
+                   audio = new Audio("/extra/audio/game_notification.wav");
                    audio.play();
 
                    audios[m].marker.setLatLng(
@@ -656,7 +656,7 @@ function excluirTrajeto(playerId) {
       $.get("/extra/ajax/trajeto.php?deletePlayerId="+playerId, function(data) {
            //console.log(data)
            audio.pause();
-           audio = new Audio("../audio/game_over.mp3");
+           audio = new Audio("/extra/audio/game_over.mp3");
            audio.play();
            reload();
            // Websocket
@@ -854,7 +854,7 @@ $(document).ready(function() {
              players[playerId].marker.setOpacity(1);
              //say("Você selecionou " +players[playerId].name);
              audio.pause();
-             audio = new Audio("../audio/game_notification.wav");
+             audio = new Audio("/extra/audio/game_notification.wav");
              audio.play();
 
              map.setView([-23.373144526961156, -51.159208612927344], 15);
