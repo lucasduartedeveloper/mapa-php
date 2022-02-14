@@ -1181,7 +1181,7 @@ function calcularRota(start, end) {
         var steps = data.features[0].properties.segments[0].steps;
         var routePointList = [];
 
-        say(steps[0].instruction);
+        say(traduzirInstrucao(steps[0].instruction));
 
         for (var k in route) {
             routePointList.push(
@@ -1201,7 +1201,19 @@ function calcularRota(start, end) {
     });
 }
 
-// Função para indentificar se um tile no mapa é rua ou calçada
-// Desenhar uma máscara sobre o tile com o Leaflet
-// Recortar o tile
-// Contar os pixels da cor necessária
+// Tradução openrouteservice
+var traducao = [
+    ["Head west on", "Continue leste em" ],
+    ["Enter the roundabout and take the 2nd exit onto",
+     "Entre na rotatória e pegue a segunda saída para" ],
+    ["Turn left on", "Entre à esquerda em" ],
+    ["Turn right on", "Entre à direita em" ]
+]
+function traduzirInstrucao(texto) {
+   for (var k in traducao) {
+        if (texto.includes(traducao[k][0]))
+            return texto.replace(traducao[k][0], 
+                 traducao[k][1]);
+   }
+   return texto;
+}
