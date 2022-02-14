@@ -429,9 +429,9 @@ function reload() {
 
           for (var k in audios) {
                var icon = L.icon({
-                   iconUrl: "/extra/img/ghost.png",
-                   iconSize:     [30, 30],
-                   iconAnchor:   [15, 20]
+                   iconUrl: "/img/marker.png",
+                   iconSize:     [20, 30],
+                   iconAnchor:   [15, 30]
                });
                
               audios[k].m = k;
@@ -477,7 +477,7 @@ function reload() {
               [audios[k].latitude, audios[k].longitude],
               { icon: 
                    L.icon({
-                      iconUrl: createLabel("Nv. " + audios[k].desenho.split(",").length, "#f00"),
+                      iconUrl: createLabel("Destino", "#f00"),
                       iconSize:     [100, 30], // size of the icon
                       iconAnchor:   [50, 70]
               })}).addTo(map);
