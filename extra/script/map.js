@@ -1050,7 +1050,7 @@ function reposicionarCarro(dir) {
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
     }
-    console.log(angulo); 
+    //console.log(angulo); 
 
     return;
     var img = new Image();
@@ -1185,10 +1185,10 @@ function calcularRota(start, end) {
 function centralizarNaRota(pos) {
     var wayPoint = 0;
     var a = new L.LatLng(pos.lat, pos.lng);
-    var distance = 0;
+    var distance = 9999999;
     for (var k in route) {
          var b =  new L.LatLng(route[k][1], route[k][0]);
-         if (a.distanceTo(b) > distance) {
+         if (a.distanceTo(b) < distance) {
               distance = a.distanceTo(b);
               wayPoint = k;
          }
