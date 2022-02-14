@@ -1000,6 +1000,7 @@ $(document).ready(function() {
                  console.log(intervalA);
                  clearInterval(intervalA); 
                  intervalA = false;
+                 velocidade = 0;
             }
             else {
                  $("#up").addClass("active");
@@ -1073,7 +1074,7 @@ function reposicionarCarro(dir) {
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
-             if (velocidade > 0) {
+             if (velocidade != 0) {
                  audio.pause();
                  audio =
                  new Audio("/extra/audio/car-brakes-screeching.wav");
