@@ -966,8 +966,8 @@ $(document).ready(function() {
     $("#rota").click(function() {
         if (audios.length > 0) {
             calcularRota(
-                posicao.lat + "," + posicao.lng, 
-                audios[0].latitude + "," + audios[0].longitude
+                posicao.lng + "," + posicao.lat, 
+                audios[0].longitude + "," + audios[0].latitude
             );
         }
     });
