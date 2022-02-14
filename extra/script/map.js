@@ -1013,7 +1013,7 @@ function reposicionarCarro(dir) {
              }};
              //mapClick(pos);
              //map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
-             angulo += 0.5 * (Math.PI/180);
+             angulo += 5 * (Math.PI/180);
              angulo = 
                  angulo <= (360*(Math.PI/180)) ?
                  angulo : 0;
@@ -1035,7 +1035,7 @@ function reposicionarCarro(dir) {
              }};
              //mapClick(pos);
              //map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
-             angulo -= 0.5 * (Math.PI/180);
+             angulo -= 5 * (Math.PI/180);
              angulo = 
                  angulo < 0 ?
                  (360*(Math.PI/180)) : angulo;
