@@ -1054,10 +1054,11 @@ function reposicionarCarro(dir) {
 
     //return;
     var img = new Image();
+    img.angulo = angulo;
     img.width = 256;
     img.height = 256;
     img.onload = function() {
-        var icon = rotateImage(img, angulo);
+        var icon = rotateImage(this, this.angulo);
         players[playerId].marker.setIcon(
             L.icon({
                  iconUrl: icon,
