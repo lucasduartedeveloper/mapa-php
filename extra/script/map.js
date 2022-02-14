@@ -665,6 +665,7 @@ function excluirTrajeto(playerId) {
 }
 
 // Click no mapa
+var dataHoraUltimaPosicao = 0;
 map.on("click", mapClick);
 function mapClick(e) {
      $("#audio-info").hide();
