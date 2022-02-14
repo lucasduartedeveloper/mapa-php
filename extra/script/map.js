@@ -676,6 +676,31 @@ function mapClick(e) {
     });
     posicao = pos;
 
+    var pointList = [];
+    if (wire) { map.removeControl(wire); };
+
+    pointList.push(
+        new L.LatLng(
+        posicao.lat,
+        posicao.lng));
+
+    for (var k in audios) {
+        pointList.push(
+             new L.LatLng(
+             audios[k].latitude,
+             audios[k].longitude));
+     }
+
+     wire = new L.Polyline(pointList, {
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+    });
+    wire.addTo(map);
+
     players[playerId].marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 
