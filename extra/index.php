@@ -88,19 +88,19 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v82.3.1.484
+     v82.3.1.485
 </p>
 
 <button id="left" type="button" class="btn-left">
       <i class="bi bi-arrow-left"></i>
 </button>
 
-<button id="up" type="button" class="btn-up">
-      D
-</button>
-
 <button id="right" type="button" class="btn-right">
       <i class="bi bi-arrow-right"></i>
+</button>
+
+<button id="up" type="button" class="btn-up">
+      D
 </button>
 
 <button id="down" type="button" class="btn-down">
@@ -126,7 +126,7 @@
 <script src="/extra/script/websocket.js?v=3"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=484"></script> 
+<script src="/extra/script/map.js?v=485"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">

@@ -973,21 +973,33 @@ $(document).ready(function() {
     window.d = 0.000009956626094265175 * 5;
     window.angulo = 0;
 
-    window.clickInterval = false;
+    window.intervalA = false;
+    window.intervalB = false;
+
     $("#left,#up,#right,#down").on("mouseup touchend",
        function(e) {
            //console.log("clear: " + $(e.target).parent().attr("id"));
            velocidade = 0;
-           clearInterval(clickInterval);
+           clearInterval(intervalB);
        }
     );
 
-    $("#left,#up,#right,#down").on("mousedown touchstart",
+    $("#left,#right").on("mousedown touchstart",
        function(e) {
             //console.log("start: " + $(e.target).parent().attr("id"));
-            if (clickInterval) clearInterval(clickInterval);
-            clickInterval = setInterval(function() {
+            if (intervalB) clearInterval(intervalB);
+            intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
+            }, 100);
+       }
+    );
+
+    $("#up,#down").on("mousedown touchstart",
+       function(e) {
+            //console.log("start: " + $(e.target).parent().attr("id"));
+            if (intervalA) clearInterval(intervalA);
+            intervalA = setInterval(function() {
+                 reposicionarCarro($(e.target).attr("id"));
             }, 100);
        }
     );
