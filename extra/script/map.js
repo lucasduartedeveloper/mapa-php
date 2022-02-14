@@ -430,7 +430,7 @@ function reload() {
           for (var k in audios) {
                var icon = L.icon({
                    iconUrl: "/img/marker.png",
-                   iconSize:     [20, 30],
+                   iconSize:     [30, 30],
                    iconAnchor:   [15, 30]
                });
                
