@@ -1035,7 +1035,7 @@ function reposicionarCarro(dir) {
                   velocidade : -(velocidadeMaxima/2);
              pos = calcularPosicao();
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
     }
     console.log(angulo); 
