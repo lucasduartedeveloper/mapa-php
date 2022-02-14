@@ -977,13 +977,13 @@ $(document).ready(function() {
     window.intervalB = false;
     window.intervalC = false;
 
-    $("#left,#right").on("mouseup touchend",
+    $("#left,#right").on("touchend",
        function(e) {
            clearInterval(intervalB);
        }
     );
 
-    $("#left,#right").on("mousedown touchstart",
+    $("#left,#right").on("touchstart",
        function(e) {
             if (intervalB) clearInterval(intervalB);
             intervalB = setInterval(function() {
@@ -992,7 +992,7 @@ $(document).ready(function() {
        }
     );
 
-    $("#up").on("mousedown touchstart",
+    $("#up").on("touchstart",
        function(e) {
             if (intervalA) {
                  console.log(intervalA);
@@ -1008,7 +1008,7 @@ $(document).ready(function() {
        }
     );
 
-    $("#down").on("mousedown touchstart",
+    $("#down").on("touchstart",
        function(e) {
             if (intervalC) {
                  console.log(intervalC);
