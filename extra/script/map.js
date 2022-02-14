@@ -1,5 +1,5 @@
 // Create the map
-var map = L.map('map').setView([-23.37062642645644,  -51.15587314318577], 19);
+var map = L.map('map').setView([-23.37062642645644,  -51.15587314318577], 17);
 
 var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -863,7 +863,7 @@ $(document).ready(function() {
                  map.setView([
                        posicao.lat,
                        posicao.lng
-                 ], 19);
+                 ], 17);
              }, 500);
      });
 
@@ -1010,7 +1010,7 @@ function reposicionarCarro(dir) {
                   lng: posicao.lng - d
              }};
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              angulo += 0.5 * (180/Math.PI);
              angulo = 
                  angulo <= (2 * (180/Math.PI)) ?
@@ -1023,7 +1023,7 @@ function reposicionarCarro(dir) {
                   lng: posicao.lng
              }};
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
          case "right":
              pos = {
@@ -1032,7 +1032,7 @@ function reposicionarCarro(dir) {
                   lng: posicao.lng + d
              }};
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              angulo -= 0.5 * (180/Math.PI);
              angulo = 
                  angulo < 0 ?
@@ -1045,7 +1045,7 @@ function reposicionarCarro(dir) {
                   lng: posicao.lng
              }};
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 19);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
     }
     console.log(angulo); 
