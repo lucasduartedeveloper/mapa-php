@@ -311,96 +311,7 @@ var wire = false;
 var cameraView = false;
 var dragging = false;
 function reload() {
-   if (dragging) { return; }
-   //$("#loading").show();
-   $.getJSON("/extra/ajax/audio.php", function(data) {
-          for (var k in audios) {
-               map.removeControl(audios[k].marker);
-               map.removeControl(audios[k].markerShadow);
-               map.removeControl(audios[k].markerNv);
-          }
-
-          audios = data;
-          var pointList = [];
-          if (wire) { map.removeControl(wire); };
-
-          pointList.push(
-                   new L.LatLng(
-                   posicao.lat,
-                   posicao.lng));
-
-          for (var k in audios) {
-               var icon = L.icon({
-                   iconUrl: "/extra/img/ghost.png",
-                   iconSize:     [35, 40],
-                   iconAnchor:   [17.5, 40]
-               });
-               
-              audios[k].m = k;
-              var click = function (e) {
-                   carregarAudio(this.m);
-               };
-               var audioClick = click.bind(audios[k]);
-
-              var dblClick = function (e) {
-                   excluirAudio(this.m);
-               };
-               var audioDblClick = dblClick.bind(audios[k]);
-
-               var dragStart = function (e) {
-                   dragging = true;
-               };
-               var audioDragStart = dragStart.bind(audios[k]);
-
-               var dragEnd = function (e) {
-                   mudarAudio(this.m, e);
-               };
-               var audioDragEnd = dragEnd.bind(audios[k]);
-
-              audios[k].marker = L.marker(
-              [audios[k].latitude, audios[k].longitude],
-              {icon: icon, draggable: true})
-              .on("click", audioClick)
-              .on("dblclick", audioDblClick)
-              .on("dragend", audioDragEnd)
-              .on("dragstart", audioDragStart)
-              .addTo(map);
-
-              audios[k].markerShadow = L.circle(
-              [audios[k].latitude, audios[k].longitude], {
-                  color: "#581845",
-                  fillOpacity: 0.5,
-                  radius: 2.5,
-        	    weight: 1,
-        	    stroke: false
-	}).addTo(map);
-
-              audios[k].markerNv = L.marker(
-              [audios[k].latitude, audios[k].longitude],
-              { icon: 
-                   L.icon({
-                      iconUrl: createLabel("Nv. " + audios[k].desenho.split(",").length, "#f00"),
-                      iconSize:     [100, 30], // size of the icon
-                      iconAnchor:   [50, 70]
-              })}).addTo(map);
-
-              pointList.push(
-                  new L.LatLng(
-                       audios[k].latitude,
-                       audios[k].longitude));
-          }
-
-          wire = new L.Polyline(pointList, {
-              color: '#8A0829',
-              weight: 3,
-              opacity: 0.5,
-              smoothFactor: 1,
-              dashArray: '5',
-              dashOffset: '0'
-         });
-         wire.addTo(map);
-      });
-
+     if (dragging) { return; }
      // Atualizar marcadores
      $.getJSON("/extra/ajax/trajeto.php", function(data) {
              trajetos = [
@@ -497,9 +408,99 @@ function reload() {
                  });
                  players[m].line.addTo(map);
            }
-           if (innerWidth < innerHeight) {
-               $("#loading").hide();
-           }
+
+   // Carregar audios
+   $.getJSON("/extra/ajax/audio.php", function(data) {
+          for (var k in audios) {
+               map.removeControl(audios[k].marker);
+               map.removeControl(audios[k].markerShadow);
+               map.removeControl(audios[k].markerNv);
+          }
+
+          audios = data;
+          var pointList = [];
+          if (wire) { map.removeControl(wire); };
+
+          pointList.push(
+                   new L.LatLng(
+                   posicao.lat,
+                   posicao.lng));
+
+          for (var k in audios) {
+               var icon = L.icon({
+                   iconUrl: "/extra/img/ghost.png",
+                   iconSize:     [35, 40],
+                   iconAnchor:   [17.5, 40]
+               });
+               
+              audios[k].m = k;
+              var click = function (e) {
+                   carregarAudio(this.m);
+               };
+               var audioClick = click.bind(audios[k]);
+
+              var dblClick = function (e) {
+                   excluirAudio(this.m);
+               };
+               var audioDblClick = dblClick.bind(audios[k]);
+
+               var dragStart = function (e) {
+                   dragging = true;
+               };
+               var audioDragStart = dragStart.bind(audios[k]);
+
+               var dragEnd = function (e) {
+                   mudarAudio(this.m, e);
+               };
+               var audioDragEnd = dragEnd.bind(audios[k]);
+
+              audios[k].marker = L.marker(
+              [audios[k].latitude, audios[k].longitude],
+              {icon: icon, draggable: true})
+              .on("click", audioClick)
+              .on("dblclick", audioDblClick)
+              .on("dragend", audioDragEnd)
+              .on("dragstart", audioDragStart)
+              .addTo(map);
+
+              audios[k].markerShadow = L.circle(
+              [audios[k].latitude, audios[k].longitude], {
+                  color: "#581845",
+                  fillOpacity: 0.5,
+                  radius: 2.5,
+        	    weight: 1,
+        	    stroke: false
+	}).addTo(map);
+
+              audios[k].markerNv = L.marker(
+              [audios[k].latitude, audios[k].longitude],
+              { icon: 
+                   L.icon({
+                      iconUrl: createLabel("Nv. " + audios[k].desenho.split(",").length, "#f00"),
+                      iconSize:     [100, 30], // size of the icon
+                      iconAnchor:   [50, 70]
+              })}).addTo(map);
+
+              pointList.push(
+                  new L.LatLng(
+                       audios[k].latitude,
+                       audios[k].longitude));
+          }
+
+          wire = new L.Polyline(pointList, {
+              color: '#8A0829',
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+         });
+         wire.addTo(map);
+         
+              if (innerWidth < innerHeight) {
+                   $("#loading").hide();
+              }
+         });
      });
 }
 
