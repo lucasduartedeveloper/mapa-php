@@ -973,7 +973,7 @@ $(document).ready(function() {
     window.d = 0.000009956626094265175 * 5;
     window.angulo = 0;
 
-    window.clickInterval = function() { };
+    window.clickInterval = false;
     $("#left,#up,#right,#down").on("mouseup touchend",
        function(e) {
            console.log("clear: " + $(e.target).parent().attr("id"));
@@ -984,7 +984,7 @@ $(document).ready(function() {
     $("#left,#up,#right,#down").on("mousedown touchstart",
        function(e) {
             console.log("start: " + $(e.target).parent().attr("id"));
-            //clearInterval(clickInterval);
+            if (clickInterval) clearInterval(clickInterval);
             clickInterval = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
             }, 100);
@@ -1198,6 +1198,7 @@ function centralizarNaRota(pos) {
     for (var k in steps) {
          if (wayPoint < steps[k].way_points[0]) {
               say(traduzirInstrucao(steps[k].instruction));
+              steps[k].instruction = "";
          }
     }
 }
@@ -1210,8 +1211,8 @@ var traducao = [
     ["Head south on", "Siga sul em" ],
     ["Enter the roundabout and take the 2nd exit onto",
      "Entre na rotatória e pegue a segunda saída para" ],
-    ["Turn left on", "Entre à esquerda em" ],
-    ["Turn right on", "Entre à direita em" ],
+    ["Turn left onto", "Entre à esquerda em" ],
+    ["Turn right onto", "Entre à direita em" ],
     ["Arrive at", "Chegue em" ],
     ["on the left", "à esquerda" ],
     ["on the right", "à direita" ]
