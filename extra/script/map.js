@@ -1,5 +1,5 @@
 // Create the map
-var map = L.map('map').setView([-23.37062642645644,  -51.15587314318577], 17);
+var map = L.map('map').setView([-23.37062642645644,  -51.15587314318577], 18);
 
 var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -276,7 +276,7 @@ function success(position) {
              lng : position.coords.longitude
         });
         mapClick({ latlng: posicao });
-        map.setView([ posicao.lat, posicao.lng ], 17);
+        map.setView([ posicao.lat, posicao.lng ], 18);
     }
 }
 
@@ -865,7 +865,7 @@ $(document).ready(function() {
                  map.setView([
                        posicao.lat,
                        posicao.lng
-                 ], 17);
+                 ], 18);
              }, 500);
      });
 
@@ -1033,7 +1033,7 @@ function reposicionarCarro(dir) {
                   velocidade : velocidadeMaxima;
              pos = calcularPosicao();
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
              break;
          case "right":;
              angulo -= 20 * (Math.PI/180);
@@ -1048,7 +1048,7 @@ function reposicionarCarro(dir) {
                   velocidade : -(velocidadeMaxima);
              pos = calcularPosicao();
              mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
              break;
     }
     console.log(angulo); 
