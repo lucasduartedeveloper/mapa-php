@@ -1069,8 +1069,8 @@ function createLabel(text, color = "#000") {
 // Acelerador
 function calcularPosicao() {
     var h = 0.000009956626094265175 * 5;
-    var co = Math.sin(angulo) * h;
-    var ca = Math.cos(angulo) * h;
+    var co = Math.sin(angulo*-1) * h;
+    var ca = Math.cos(angulo*-1) * h;
     var pos = {
           latlng: {
           lat: posicao.lat + ca,
