@@ -1191,8 +1191,8 @@ function centralizarNaRota(pos) {
          if (a.distanceTo(b) < distance) {
               distance = a.distanceTo(b);
               wayPoint = k;
-         }
-    }
+         } }
+    distance = 9999999;
 
     console.log(wayPoint);
     for (var k in steps) {
