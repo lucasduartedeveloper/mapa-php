@@ -995,11 +995,13 @@ $(document).ready(function() {
     $("#up").on("touchstart",
        function(e) {
             if (intervalA) {
+                 $("#up").removeClass("active");
                  console.log(intervalA);
                  clearInterval(intervalA); 
                  intervalA = false;
             }
             else {
+                 $("#up").addClass("active");
                  console.log(intervalA);
                  intervalA = setInterval(function() {
                  reposicionarCarro("up");
@@ -1011,11 +1013,13 @@ $(document).ready(function() {
     $("#down").on("touchstart",
        function(e) {
             if (intervalC) {
+                 $("#down").removeClass("active");
                  console.log(intervalC);
                  clearInterval(intervalC);
                  intervalC = false;
             }
             else {
+                 $("#down").addClass("active");
                  console.log(intervalC);
                  intervalC = setInterval(function() {
                  reposicionarCarro("down");

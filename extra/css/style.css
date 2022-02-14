@@ -59,10 +59,20 @@ html, body {
     z-index: 9000;
 }
 
+.btn-up.active {
+   border: 2px solid black;
+   background-color: #034f84;
+   color: white;
+}
+
+.btn-down.active {
+   border: 2px solid black;
+   background-color: #618685;
+   color: white;
+}
+
 .btn-left:hover,
-.btn-up:hover,
 .btn-right:hover,
-.btn-down:hover,
 .btn-anotacoes:hover ,
 .btn-camera:hover,
 .btn-delete:hover,
