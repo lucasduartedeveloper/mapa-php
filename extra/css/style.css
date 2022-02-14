@@ -280,7 +280,7 @@ html, body {
 
 .version-info {
    position: fixed;
-   bottom: 0vw;
+   bottom: 20vw;
    font-size: 15px;
    left: 5vw;
    width: 40vw;
