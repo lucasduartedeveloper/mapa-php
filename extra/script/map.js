@@ -14,12 +14,12 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 var speaking = false;
 function say(text) {
          if (!speaking) {
+              speaking = true;
               var msg = new SpeechSynthesisUtterance();
               msg.text = text;
               msg.onend = function(event) {
                   speaking = false;
               };
-              speaking = true;
               window.speechSynthesis.speak(msg);
         }
 }
@@ -1200,7 +1200,7 @@ function centralizarNaRota(pos) {
               (wayPoint == steps[k].way_points[0] &&
                wayPoint == steps[k].way_points[1])) {
               say(traduzirInstrucao(steps[k].instruction));
-              if (!speaking)
+              if (speaking)
                   steps[k].instruction = "";
               break;
          }
