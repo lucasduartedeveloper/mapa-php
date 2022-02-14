@@ -976,14 +976,14 @@ $(document).ready(function() {
     window.clickInterval = false;
     $("#left,#up,#right,#down").on("mouseup touchend",
        function(e) {
-           console.log("clear: " + $(e.target).parent().attr("id"));
+           //console.log("clear: " + $(e.target).parent().attr("id"));
            clearInterval(clickInterval);
        }
     );
 
     $("#left,#up,#right,#down").on("mousedown touchstart",
        function(e) {
-            console.log("start: " + $(e.target).parent().attr("id"));
+            //console.log("start: " + $(e.target).parent().attr("id"));
             if (clickInterval) clearInterval(clickInterval);
             clickInterval = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
@@ -1192,7 +1192,6 @@ function centralizarNaRota(pos) {
               distance = a.distanceTo(b);
               wayPoint = k;
          } }
-    distance = 9999999;
 
     console.log(wayPoint);
     for (var k in steps) {
