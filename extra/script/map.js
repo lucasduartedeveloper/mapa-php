@@ -1003,12 +1003,12 @@ $(document).ready(function() {
 
 // Reposicionar o carro
 var velocidade = 0;
-var velocidadeMaxima = 3;
+var velocidadeMaxima = 5;
 function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
          case "left":
-             angulo += 5 * (Math.PI/180);
+             angulo += 20 * (Math.PI/180);
              angulo = 
                  angulo <= (360*(Math.PI/180)) ?
                  angulo : 0;
@@ -1023,13 +1023,13 @@ function reposicionarCarro(dir) {
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
          case "right":;
-             angulo -= 5 * (Math.PI/180);
+             angulo -= 20 * (Math.PI/180);
              angulo = 
                  angulo < 0 ?
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
-             velocidade -= 0.2;
+             velocidade -= 0.5;
              velocidade = 
                   velocidade >= -(velocidadeMaxima/2) ?
                   velocidade : -(velocidadeMaxima/2);
