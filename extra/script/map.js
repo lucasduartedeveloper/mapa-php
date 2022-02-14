@@ -995,26 +995,32 @@ $(document).ready(function() {
     $("#up").on("mousedown touchstart",
        function(e) {
             if (intervalA) {
-                clearInterval(intervalA); 
-                intervalA = false;
+                 console.log(intervalA);
+                 clearInterval(intervalA); 
+                 intervalA = false;
             }
-            else 
-            intervalA = setInterval(function() {
-                 reposicionarCarro($(e.target).attr("id"));
-            }, 100);
+            else {
+                 console.log(intervalA);
+                 intervalA = setInterval(function() {
+                 reposicionarCarro("up");
+                 }, 100);
+            }
        }
     );
 
     $("#down").on("mousedown touchstart",
        function(e) {
             if (intervalC) {
+                 console.log(intervalC);
                  clearInterval(intervalC);
                  intervalC = false;
             }
-            else
-            intervalC = setInterval(function() {
-                 reposicionarCarro($(e.target).attr("id"));
-            }, 100);
+            else {
+                 console.log(intervalC);
+                 intervalC = setInterval(function() {
+                 reposicionarCarro("down");
+                 }, 100);
+            }
        }
     );
 
