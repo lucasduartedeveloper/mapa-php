@@ -43,7 +43,7 @@
 </div>
 
 <p id="owner-info" class="owner-info">
-     PARADOS E FURIOSOS
+     GPS RACERS
 </p>
 
 <p id="audio-info"  style="display:none;" class="audio-info">
