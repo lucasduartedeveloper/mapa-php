@@ -1005,52 +1005,27 @@ $(document).ready(function() {
 function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
-         case "left":
-             pos = {
-             latlng: {
-                  lat: posicao.lat,
-                  lng: posicao.lng - d
-             }};
-             //mapClick(pos);
-             //map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+         case "left":;
              angulo += 5 * (Math.PI/180);
              angulo = 
                  angulo <= (360*(Math.PI/180)) ?
                  angulo : 0;
              break;
          case "up":
-             pos = {
-             latlng: {
-                  lat: posicao.lat + a,
-                  lng: posicao.lng
-             }};
-             mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+             pos = calcularPosicao();
              break;
-         case "right":
-             pos = {
-             latlng: {
-                  lat: posicao.lat,
-                  lng: posicao.lng + d
-             }};
-             //mapClick(pos);
-             //map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
+         case "right":;
              angulo -= 5 * (Math.PI/180);
              angulo = 
                  angulo < 0 ?
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
-             pos = {
-             latlng: {
-                  lat: posicao.lat - a,
-                  lng: posicao.lng
-             }};
-             mapClick(pos);
-             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
     }
     console.log(angulo); 
+    mapClick(pos);
+    map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
 
     //return;
     var img = new Image();
@@ -1068,6 +1043,8 @@ function reposicionarCarro(dir) {
     }
     img.src = players[playerId].icon;
 }
+
+
 
 // Nível
 function createLabel(text, color = "#000") {
@@ -1089,7 +1066,20 @@ function createLabel(text, color = "#000") {
     return canvas.toDataURL();
 }
 
-//
+// Acelerador
+function calcularPosicao() {
+    var h = 0.000009956626094265175 * 5;
+    var co = Math.sin(angulo) * h;
+    var ca = Math.cos(angulo) * h;
+    var pos = {
+          latlng: {
+          lat: posicao.lat + co,
+          lng: posicao.lng + ca
+    }}
+    return pos;
+}
+
+// 
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
     var a = Math.asin(senA);
