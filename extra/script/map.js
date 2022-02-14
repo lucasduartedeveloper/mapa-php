@@ -1213,6 +1213,8 @@ var traducao = [
      "Entre na rotatória e pegue a segunda saída para" ],
     ["Turn left onto", "Entre à esquerda em" ],
     ["Turn right onto", "Entre à direita em" ],
+    ["Turn sharp left onto", "Entre à esquerda em" ],
+    ["Turn sharp right onto", "Entre à direita em" ],
     ["Arrive at", "Chegue em" ],
     ["on the left", "à esquerda" ],
     ["on the right", "à direita" ]
