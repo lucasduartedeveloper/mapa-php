@@ -988,7 +988,7 @@ $(document).ready(function() {
             if (intervalB) clearInterval(intervalB);
             intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
-            }, 100);
+            }, 200);
        }
     );
 
@@ -1005,7 +1005,7 @@ $(document).ready(function() {
                  console.log(intervalA);
                  intervalA = setInterval(function() {
                  reposicionarCarro("up");
-                 }, 100);
+                 }, 200);
             }
        }
     );
@@ -1023,7 +1023,7 @@ $(document).ready(function() {
                  console.log(intervalC);
                  intervalC = setInterval(function() {
                  reposicionarCarro("down");
-                 }, 100);
+                 }, 200);
             }
        }
     );
@@ -1045,7 +1045,7 @@ function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
          case "left":
-             angulo += 20 * (Math.PI/180);
+             angulo += 10 * (Math.PI/180);
              angulo = 
                  angulo <= (360*(Math.PI/180)) ?
                  angulo : 0;
@@ -1057,7 +1057,7 @@ function reposicionarCarro(dir) {
                  new Audio("/extra/audio/car-ignition.wav");
                  audio.play();
              }
-             velocidade += 0.1;
+             velocidade += 0.2;
              velocidade =
                   velocidade <= velocidadeMaxima ?
                   velocidade : velocidadeMaxima;
@@ -1066,7 +1066,7 @@ function reposicionarCarro(dir) {
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
              break;
          case "right":;
-             angulo -= 20 * (Math.PI/180);
+             angulo -= 10 * (Math.PI/180);
              angulo = 
                  angulo < 0 ?
                  (360*(Math.PI/180)) : angulo;
