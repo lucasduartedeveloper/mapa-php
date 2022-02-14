@@ -976,10 +976,10 @@ $(document).ready(function() {
     window.intervalA = false;
     window.intervalB = false;
 
-    $("#left,#up,#right,#down").on("mouseup touchend",
+    $("#left,#right").on("mouseup touchend",
        function(e) {
            //console.log("clear: " + $(e.target).parent().attr("id"));
-           velocidade = 0;
+           //velocidade = 0;
            clearInterval(intervalB);
        }
     );
