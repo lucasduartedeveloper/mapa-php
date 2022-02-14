@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=78">
+<link rel="stylesheet" href="/extra/css/style.css?v=79">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -89,7 +89,7 @@
 
 <p id="version-info" class="version-info">
      P & F<br>
-     v78.3.1.483
+     v79.3.1.483
 </p>
 
 <button id="left" type="button" class="btn-left">

@@ -93,7 +93,7 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-   bottom: 20vw;
+   bottom: 10vw;
    left: 15vw;
    width: 13vw;
    height: 13vw;
@@ -112,8 +112,8 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-   bottom: 30vw;
-   left: 25vw;
+   bottom: 10vw;
+   left: 45vw;
    width: 13vw;
    height: 13vw;
    max-width: 10vh;
@@ -131,8 +131,8 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-   bottom: 20vw;
-   left: 35vw;
+   bottom: 10vw;
+   left: 30vw;
    width: 13vw;
    height: 13vw;
    max-width: 10vh;
@@ -151,7 +151,7 @@ html, body {
    justify-content: center;
    align-items: center;
    bottom: 10vw;
-   left: 25vw;
+   left: 60vw;
    width: 13vw;
    height: 13vw;
    max-width: 10vh;
@@ -166,10 +166,10 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-   bottom: 10vw;
+   bottom: 40vw;
    left: 50vw;
-   width: 25vw;
-   height: 25vw;
+   width: 15vw;
+   height: 15vw;
    max-width: 25vh;
    max-height: 25vh;
    border-radius: 50%;
