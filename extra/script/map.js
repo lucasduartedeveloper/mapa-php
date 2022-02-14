@@ -1203,7 +1203,10 @@ function calcularRota(start, end) {
 
 // Tradução openrouteservice
 var traducao = [
-    ["Head west on", "Continue leste em" ],
+    ["Head west on", "Siga leste em" ],
+    ["Head north on", "Siga norte em" ],
+    ["Head east on", "Siga oeste em" ],
+    ["Head south on", "Siga sul em" ],
     ["Enter the roundabout and take the 2nd exit onto",
      "Entre na rotatória e pegue a segunda saída para" ],
     ["Turn left on", "Entre à esquerda em" ],
