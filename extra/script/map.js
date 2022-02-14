@@ -1013,6 +1013,8 @@ function reposicionarCarro(dir) {
              break;
          case "up":
              pos = calcularPosicao();
+             mapClick(pos);
+             map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
              break;
          case "right":;
              angulo -= 5 * (Math.PI/180);
@@ -1024,8 +1026,6 @@ function reposicionarCarro(dir) {
              break;
     }
     console.log(angulo); 
-    mapClick(pos);
-    map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
 
     //return;
     var img = new Image();
