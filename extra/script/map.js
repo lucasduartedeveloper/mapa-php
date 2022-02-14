@@ -1016,7 +1016,7 @@ $(document).ready(function() {
 
 // Reposicionar o carro
 var velocidade = 0;
-var velocidadeMaxima = 2;
+var velocidadeMaxima = 1;
 function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
@@ -1044,8 +1044,8 @@ function reposicionarCarro(dir) {
          case "down":
              velocidade -= 0.5;
              velocidade = 
-                  velocidade >= -(velocidadeMaxima/2) ?
-                  velocidade : -(velocidadeMaxima/2);
+                  velocidade >= -(velocidadeMaxima) ?
+                  velocidade : -(velocidadeMaxima);
              pos = calcularPosicao();
              mapClick(pos);
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 17);
