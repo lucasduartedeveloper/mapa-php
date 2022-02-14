@@ -1065,7 +1065,7 @@ function reposicionarCarro(dir) {
              mapClick(pos);
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
              break;
-         case "right":;
+         case "right":
              angulo -= 10 * (Math.PI/180);
              angulo = 
                  angulo < 0 ?
