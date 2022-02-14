@@ -498,8 +498,8 @@ function reload() {
          });
          wire.addTo(map);
          
-              if (innerWidth < innerHeight) {
-                   $("#up,#left,#right,#down").hide();
+              if (innerWidth > innerHeight) {
+                   $("#up,#left,#right,#down,#click-block").hide();
               }
               $("#loading").hide();
          });
