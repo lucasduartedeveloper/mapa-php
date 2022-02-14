@@ -499,8 +499,9 @@ function reload() {
          wire.addTo(map);
          
               if (innerWidth < innerHeight) {
-                   $("#loading").hide();
+                   $("#up,#left,#right,#down").hide();
               }
+              $("#loading").hide();
          });
      });
 }
