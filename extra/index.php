@@ -78,7 +78,7 @@
 </button>
 
 <button id="rota" type="button" class="btn-anotacoes float-top4-right">
-      <i class="bi bi-arrow-through-heart-fill"></i>
+      <i class="bi bi-123"></i>
 </button>
 
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
@@ -89,7 +89,7 @@
 
 <p id="version-info" class="version-info">
      P & F<br>
-     v78.3.1.448
+     v78.3.1.449
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -127,7 +127,7 @@
 <script src="/extra/script/websocket.js?v=3"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=448"></script> 
+<script src="/extra/script/map.js?v=449"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
