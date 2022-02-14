@@ -1196,9 +1196,10 @@ function centralizarNaRota(pos) {
 
     console.log(wayPoint);
     for (var k in steps) {
-         if (wayPoint < steps[k].way_points[0]) {
+         if (wayPoint < steps[k].way_points[1]) {
               say(traduzirInstrucao(steps[k].instruction));
               steps[k].instruction = "";
+              break;
          }
     }
 }
