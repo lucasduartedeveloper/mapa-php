@@ -1151,7 +1151,7 @@ function calcularRota(start, end) {
         }
 
         var route = data.features[0].geometry.coordinates;
-        var steps = data.features[0].segments[0].steps;
+        var steps = data.features[0].properties.segments[0].steps;
         var routePointList = [];
 
         say(steps[0].instruction);
