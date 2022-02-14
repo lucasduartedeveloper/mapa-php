@@ -1137,12 +1137,37 @@ function centralizarNaPista() {
 }
 
 // Download das direções
-var routeAPI = "https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf62483d56a869468743b6a4abd4af7da6e12a"
+var routeAPI = "https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf62483d56a869468743b6a4abd4af7da6e12a";
+var routeLine = false;
+
 function calcularRota(start, end) {
     $.getJSON( 
     routeAPI + "&start=" + start + "&end=" +end, 
     function(data) {
         console.log(data);
+
+        if (routeLine) {
+            map.removeControl(routeLine);
+        }
+
+        var obj = data.features[0].geometry.coordinates;
+        var routePointList = [];
+
+        for (var k in obj) {
+            routePointList.push(
+            new L.LatLng(obj[1], obj[0]));
+        }    
+
+        routeLine = 
+            new L.Polyline(routePointList, {
+              color: players[playerId].color,
+              weight: 3,
+              opacity: 0.5,
+              smoothFactor: 1,
+              dashArray: '5',
+              dashOffset: '0'
+        });
+        routeLine.addTo(map);
     });
 }
 
