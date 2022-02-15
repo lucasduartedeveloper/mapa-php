@@ -695,7 +695,7 @@ function mapClick(e) {
            e.latlng.lng));
        var tempo = now - dhPosAnterior;
 
-       var velocidadeReal = Math.floor((distancia * 1000) / (tempo / (60000 * 60)));
+       var velocidadeReal = Math.floor((distancia * 1000) / (tempo * (60000 * 60)));
 
        console.log("dist: " + distancia);
        console.log("tempo: " + tempo);
@@ -1271,7 +1271,7 @@ function calcularRota(start, end) {
     $.getJSON( 
     routeAPI + "&start=" + start + "&end=" +end, 
     function(data) {
-        console.log(data);
+        //console.log(data);
 
         if (routeLine) {
             map.removeControl(routeLine);
@@ -1310,7 +1310,7 @@ function centralizarNaRota(pos) {
               wayPoint = k;
          } }
 
-    console.log(wayPoint);
+    //console.log(wayPoint);
     for (var k in steps) {
          if ((wayPoint >= steps[k].way_points[0] &&
                wayPoint < steps[k].way_points[1]) ||
