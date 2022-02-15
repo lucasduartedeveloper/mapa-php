@@ -1,22 +1,23 @@
 var host = "wss://mapa-ws.herokuapp.com/";
-var wsh = new WebSocket(host);
+var wsh = null;
 
 var ws = {
-      start: function (e) {
+      start: function () {
+           wsh = new WebSocket(host);
+           wsh.onopen = function (e) {                
+                $("#server-info p").text("CONNECTED");
+           };
            wsh.onclose = function(e) {
-                wsh = null;
-                wsh = new WebSocket(host);
-           }
+                $("#server-info p").text("DISCONNECTED");
+                ws.start();
+           };
            wsh.onmessage = function(e) {
                 ws.onmessage(e);
            };
       },
       send: function (e) {
            //console.log(e);
-           //console.log(wsh);
-           if (wsh.readyState != 1) { 
-               ws.start();
-           }
+           console.log(wsh);
            wsh.send(e);
       },
       onmessage: function (e) { },

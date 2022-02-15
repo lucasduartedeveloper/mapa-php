@@ -84,11 +84,11 @@
 <img id="update" class="icone-v3" src="/extra/icone-v2.png"/>
 
 <p id="server-info" class="server-info">
-     ONLINE
+     CONNECTING...
 </p>
 
 <p id="version-info" class="version-info">
-     v85.4.1.550
+     v85.5.1.550
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -123,7 +123,7 @@
 
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
-<script src="/extra/script/websocket.js?v=4"></script>
+<script src="/extra/script/websocket.js?v=5"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=550"></script> 
