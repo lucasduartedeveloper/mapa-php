@@ -993,6 +993,13 @@ $(document).ready(function() {
        }
     );
 
+    var audio0 = 
+    new Audio("/extra/audio/car-ignition_0.wav");
+    var audio1 =
+    new Audio("/extra/audio/car-ignition_1.wav");
+    var audio2 =
+    new Audio("/extra/audio/car-ignition_2.wav");
+
     $("#up").on("touchstart",
        function(e) {
             if (intervalA) {
@@ -1001,29 +1008,18 @@ $(document).ready(function() {
                  clearInterval(intervalA); 
                  intervalA = false;
                  velocidade = 0;
-                 audio.pause();
-                 audio =
-                 new Audio("/extra/audio/car-ignition_2.wav");
-                 audio.play();
+                 audio2.play();
             }
             else {
-                 audio.pause();
-                 audio =
-                 new Audio("/extra/audio/car-ignition_0.wav");
-                 audio.onended = function () {
-                          audio.pause();
-                          audio =
-                          new Audio("/extra/audio/car-ignition_1.wav");
-                          audio.loop = true;
-                          audio.play();
-
+                 audio0.onended = function () {
+                          audio2.play();
                           $("#up").addClass("active");
                           console.log(intervalA);
                           intervalA = setInterval(function() {
                                    reposicionarCarro("up");
                            }, 200);
                  }
-                audio.play();
+                audio0.play();
             }
        }
     );
