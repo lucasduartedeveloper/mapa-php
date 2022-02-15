@@ -642,7 +642,7 @@ function excluirTrajeto(playerId) {
       $.get("/extra/ajax/trajeto.php?deletePlayerId="+playerId, function(data) {
            //console.log(data)
            audio.pause();
-           audio = new Audio("/extra/audio/game_over.mp3");
+           audio = new Audio("/extra/audio/scissors.wav");
            audio.play();
            reload();
            // Websocket
@@ -922,10 +922,11 @@ $(document).ready(function() {
           .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
           .then((stream) => {
                video.srcObject = stream;
+               /*
                var track = stream.getVideoTracks()[0];
                track.applyConstraints({
                     advanced: [{torch: true}]
-               });
+               });*/
           });
      }
 
