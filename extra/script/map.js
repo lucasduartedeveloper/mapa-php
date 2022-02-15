@@ -695,7 +695,7 @@ function mapClick(e) {
            e.latlng.lng));
        var tempo = now - dhPosAnterior;
 
-       var velocidadeReal = Math.floor((distancia * 1000) / (tempo * (60000 * 60)));
+       var velocidadeReal = Math.floor(((distancia * 1000) / (tempo / 1000)) * 3600);
 
        console.log("dist: " + distancia);
        console.log("tempo: " + tempo);
