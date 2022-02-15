@@ -1091,7 +1091,7 @@ var d = 0.000009956626094265175 * 5;
 
 var angulo = 0;
 var velocidade = 0;
-var velocidadeMaxima = 1;
+var velocidadeMaxima = 120000;
 
 function reposicionarCarro(dir) {
     var pos;
@@ -1103,7 +1103,7 @@ function reposicionarCarro(dir) {
                  angulo : 0;
              break;
          case "up":
-             velocidade += 0.1;
+             velocidade += 0.5;
              velocidade =
                   velocidade <= velocidadeMaxima ?
                   velocidade : velocidadeMaxima;
@@ -1129,7 +1129,7 @@ function reposicionarCarro(dir) {
                       angulo < 0 ?
                       (360*(Math.PI/180)) : angulo;
              }
-             velocidade -= 0.1;
+             velocidade -= 0.5;
              velocidade = 
                   velocidade >= -(velocidadeMaxima) ?
                   velocidade : -(velocidadeMaxima);
@@ -1189,8 +1189,13 @@ function createLabel(text, color = "#000") {
 }
 
 // Acelerador
+var dhAnterior = new Date().getTime();
 function calcularPosicao() {
-    var h = ((a+d/2)/4) * velocidade;
+    var now = new Date().getTime();
+    var tempo = now - dhAnterior;
+    var m = (velocidade / (tempo / 1000));
+
+    var h = ((a+d/2)/5) * m;
     var co = Math.sin(angulo*-1) * h;
     var ca = Math.cos(angulo*-1) * h;
     var pos = {
@@ -1198,6 +1203,8 @@ function calcularPosicao() {
           lat: posicao.lat + ca,
           lng: posicao.lng + co
     }}
+
+    dhAnterior = new Date().getTime();
     return pos;
 }
 
