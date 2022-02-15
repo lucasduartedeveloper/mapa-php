@@ -340,7 +340,7 @@ function reload() {
                       players[m].markerNv.setLatLng(latlng);
                       players[m].markerNv.setIcon(
                       L.icon({
-                          iconUrl: createLabel(trajetos[m].length + " km"),
+                          iconUrl: createLabel(players[m].name),
                           iconSize:   [100, 30], // size of the icon
                           iconAnchor:   [50, 70]
                       }));
@@ -794,7 +794,7 @@ function mapClick(e) {
     players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerNv.setIcon(
     L.icon({
-         iconUrl: createLabel(velocidadeReal.toFixed(0) + " km/h"),
+         iconUrl: createLabel(velocidadeReal + " km/h"),
          iconSize:     [100, 30], // size of the icon
          iconAnchor:   [50, 70]
     }));
