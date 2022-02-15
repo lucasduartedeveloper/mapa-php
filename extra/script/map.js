@@ -1001,12 +1001,12 @@ $(document).ready(function() {
                  clearInterval(intervalA); 
                  intervalA = false;
                  velocidade = 0;
-            }
-            else {
                  audio.pause();
                  audio =
                  new Audio("/extra/audio/car-ignition_2.wav");
                  audio.play();
+            }
+            else {
                  $("#up").addClass("active");
                  console.log(intervalA);
                  intervalA = setInterval(function() {
