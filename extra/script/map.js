@@ -1007,10 +1007,22 @@ $(document).ready(function() {
                  audio.play();
             }
             else {
-                 $("#up").addClass("active");
-                 console.log(intervalA);
-                 intervalA = setInterval(function() {
-                 reposicionarCarro("up");
+                 audio.pause();
+                 audio =
+                 new Audio("/extra/audio/car-ignition_0.wav");
+                 audio.onended = function () {
+                          audio.pause();
+                          audio =
+                          new Audio("/extra/audio/car-ignition_1.wav");
+                          audio.loop = true;
+                          audio.play();
+
+                          $("#up").addClass("active");
+                          console.log(intervalA);
+                          intervalA = setInterval(function() {
+                          reposicionarCarro("up");
+                     }}
+                     audio.play();
                  }, 200);
             }
        }
@@ -1057,18 +1069,6 @@ function reposicionarCarro(dir) {
                  angulo : 0;
              break;
          case "up":
-             if (velocidade == 0) {
-                 audio.pause();
-                 audio =
-                 new Audio("/extra/audio/car-ignition_0.wav");
-                 audio.play();
-             }
-             if (velocidade >= 0) {
-                 audio.pause();
-                 audio =
-                 new Audio("/extra/audio/car-ignition_1.wav");
-                 audio.play();
-             }
              velocidade += 0.2;
              velocidade =
                   velocidade <= velocidadeMaxima ?
