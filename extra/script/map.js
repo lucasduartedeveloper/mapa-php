@@ -1193,7 +1193,7 @@ var dhAnterior = new Date().getTime();
 function calcularPosicao() {
     var now = new Date().getTime();
     var tempo = now - dhAnterior;
-    var m = (velocidade / (tempo / 1000));
+    var distancia = (velocidade * ((tempo / 1000) * 3.6));
 
     var h = ((a+d/2)/5) * m;
     var co = Math.sin(angulo*-1) * h;
