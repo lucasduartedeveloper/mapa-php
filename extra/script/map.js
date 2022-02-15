@@ -693,6 +693,16 @@ function mapClick(e) {
 
            posAnterior = new L.LatLng(pos.lat, pos.lng);
            dhPosAnterior = now;
+
+           players[playerId].markerNv
+           .setLatLng(new L.LatLng(pos.lat, pos.lng));
+           players[playerId].markerNv
+          .setIcon(
+               L.icon({
+               iconUrl: createLabel(velocidadeReal + " km/h"),
+               iconSize:     [100, 30], // size of the icon
+               iconAnchor:   [50, 70]
+          }));
     }
     else if (tempo > 500) {
        posAnterior = new L.LatLng(
@@ -700,16 +710,6 @@ function mapClick(e) {
               e.latlng.lng);
        dhPosAnterior = now;
     }
-
-    players[playerId].markerNv
-    .setLatLng(new L.LatLng(pos.lat, pos.lng));
-    players[playerId].markerNv
-    .setIcon(
-    L.icon({
-         iconUrl: createLabel(velocidadeReal + " km/h"),
-         iconSize:     [100, 30], // size of the icon
-         iconAnchor:   [50, 70]
-    }));
     // -- Final do cálculo de velocidade
 
     var pointList = [];
