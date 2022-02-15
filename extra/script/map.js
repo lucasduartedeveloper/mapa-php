@@ -1091,7 +1091,7 @@ var d = 0.000009956626094265175 * 5;
 
 var angulo = 0;
 var velocidade = 0;
-var velocidadeMaxima = (80 * 1000) / 3.6;
+var velocidadeMaxima = 2;
 
 function reposicionarCarro(dir) {
     var pos;
@@ -1191,11 +1191,12 @@ function createLabel(text, color = "#000") {
 // Acelerador
 var dhAnterior = new Date().getTime();
 function calcularPosicao() {
+    /*
     var now = new Date().getTime();
     var tempo = now - dhAnterior;
-    var m = (velocidade / (tempo / 1000));
+    var m = (velocidade / (tempo / 1000));*/
 
-    var h = ((a+d/2)/5) * m;
+    var h = ((a+d/2)/5) * velocidade;
     var co = Math.sin(angulo*-1) * h;
     var ca = Math.cos(angulo*-1) * h;
     var pos = {
