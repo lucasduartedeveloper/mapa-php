@@ -677,7 +677,7 @@ function mapClick(e) {
      var tempo = now - dhPosAnterior;
      ws.tempo += tempo;
 
-     if (posAnterior && ws.tempo > 500) {
+     if (posAnterior && tempo > 500) {
            var distancia = posAnterior
            .distanceTo(new L.LatLng(
                 e.latlng.lat, 
@@ -693,6 +693,7 @@ function mapClick(e) {
 
            posAnterior = new L.LatLng(pos.lat, pos.lng);
            dhPosAnterior = now;
+           tempo = 0;
     }
     else {
        posAnterior = new L.LatLng(
