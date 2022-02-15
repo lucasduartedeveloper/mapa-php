@@ -672,24 +672,27 @@ function mapClick(e) {
      posicao = pos;
      centralizarNaRota(pos);
 
+     var velocidadeReal = 0;
      var now = new Date().getTime();
-     if (posAnterior) {
-       var distancia = posAnterior
-       .distanceTo(new L.LatLng(
-           e.latlng.lat, 
-           e.latlng.lng));
-       var tempo = now - dhPosAnterior;
-       ws.tempo += tempo;
+     var tempo = now - dhPosAnterior;
+     ws.tempo += tempo;
 
-       var velocidadeReal = Math.floor((distancia / (tempo / 1000)) * 3.6);
+     if (posAnterior && ws.tempo > 500) {
+           var distancia = posAnterior
+           .distanceTo(new L.LatLng(
+                e.latlng.lat, 
+                e.latlng.lng));
 
-       /*
-       console.log("dist: " + distancia);
-       console.log("tempo: " + tempo);
-       console.log("vel: " + velocidadeReal);*/
+           velocidadeReal = 
+           Math.floor((distancia / (tempo / 1000)) * 3.6);
 
-       posAnterior = new L.LatLng(pos.lat, pos.lng);
-       dhPosAnterior = now;
+           /*
+           console.log("dist: " + distancia);
+           console.log("tempo: " + tempo);
+           console.log("vel: " + velocidadeReal);*/
+
+           posAnterior = new L.LatLng(pos.lat, pos.lng);
+           dhPosAnterior = now;
     }
     else {
        posAnterior = new L.LatLng(
@@ -697,6 +700,16 @@ function mapClick(e) {
               e.latlng.lng);
        dhPosAnterior = now;
     }
+
+    players[playerId].markerNv
+    .setLatLng(new L.LatLng(pos.lat, pos.lng));
+    players[playerId].markerNv
+    .setIcon(
+    L.icon({
+         iconUrl: createLabel(velocidadeReal + " km/h"),
+         iconSize:     [100, 30], // size of the icon
+         iconAnchor:   [50, 70]
+    }));
     // -- Final do cálculo de velocidade
 
     var pointList = [];
@@ -781,14 +794,6 @@ function mapClick(e) {
     }
 
     var nv = trajetos[playerId].length;
-
-    players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    players[playerId].markerNv.setIcon(
-    L.icon({
-         iconUrl: createLabel(velocidadeReal + " km/h"),
-         iconSize:     [100, 30], // size of the icon
-         iconAnchor:   [50, 70]
-    }));
 
     //calcularColisoes();
     $.post("/extra/ajax/trajeto.php", {
@@ -1318,6 +1323,8 @@ function centralizarNaRota(pos) {
 // Tradução 
 var traducao = [
     ["Continue straight onto", "Continue reto em" ],
+    ["Keep left onto", "Continue à esquerda em" ],
+    ["Keep right onto", "Continue à direita em" ],
     ["Head west on", "Siga leste em" ],
     ["Head north on", "Siga norte em" ],
     ["Head northwest on", "Siga nordeste em" ],
