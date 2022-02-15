@@ -322,7 +322,8 @@ function reload() {
                  data.filter(d => parseInt(d.playerid) == 3)
              ];
 
-             if (trajetos[playerId].length > 0) {
+             if (trajetos[playerId].length > 0 &&
+                 (!intervalA && !intervalB)) {
                  posicao = {
                      lat: parseFloat(trajetos[playerId][0].latitude),
                      lng: parseFloat(trajetos[playerId][0].longitude)
@@ -1024,6 +1025,7 @@ $(document).ready(function() {
        function(e) {
             window.turning = $(e.target).parent().attr("id");
             if (intervalB) clearInterval(intervalB);
+            intervalB = false;
             intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
             }, 50);
