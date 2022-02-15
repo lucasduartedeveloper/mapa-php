@@ -1121,7 +1121,19 @@ function reposicionarCarro(dir) {
     img.height = 256;
 
     img.onload = function() {
-        var icon = rotateImage(this, angulo);
+        var anguloCarro = angulo;
+        if (window.turning == "left" && dir == "down") {
+                 anguloCarro -= 30 * (Math.PI/180);
+                 anguloCarro = 
+                     anguloCarro <= (360*(Math.PI/180)) ?
+                     anguloCarro : 0;
+        } else if (window.turning == "right" && dir == "down") {
+                 anguloCarro += 30 * (Math.PI/180);
+                 anguloCarro = 
+                      anguloCarro < 0 ?
+                      (360*(Math.PI/180)) : anguloCarro;
+        }
+        var icon = rotateImage(this, anguloCarro);
         players[playerId].marker.setIcon(
             L.icon({
                  iconUrl: icon,
