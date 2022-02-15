@@ -1056,7 +1056,7 @@ $(document).ready(function() {
                              reposicionarCarro("up");
                        }, 50);
                  }
-                 map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
+                 map.setView([ posicao.lat, posicao.lng ], 18);
                  audio0.play();
             }
        }
