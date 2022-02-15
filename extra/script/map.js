@@ -1038,9 +1038,10 @@ $(document).ready(function() {
     var audio4 =
     new Audio("/extra/audio/car-horn.wav");
 
-    $("#horn").on("touchstart", function(e) {
+    $("#horn").on("touchstart",
+        function(e) {
         audio4.play();
-    }
+    });
 
     $("#up").on("touchstart",
        function(e) {
