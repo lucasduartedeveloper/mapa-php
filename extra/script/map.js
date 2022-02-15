@@ -1096,7 +1096,7 @@ var d = 0.000009956626094265175 * 5;
 
 var angulo = 0;
 var velocidade = 0;
-var velocidadeMaxima = 2;
+var velocidadeMaxima = 1;
 
 function reposicionarCarro(dir) {
     var pos;
