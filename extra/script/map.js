@@ -975,6 +975,7 @@ $(document).ready(function() {
     });
 
     // --------
+    window.turning = "no";
     window.intervalA = false;
     window.intervalB = false;
     window.intervalC = false;
@@ -982,11 +983,13 @@ $(document).ready(function() {
     $("#left,#right").on("touchend",
        function(e) {
            clearInterval(intervalB);
+           window.turning = "no";
        }
     );
 
     $("#left,#right").on("touchstart",
        function(e) {
+            window.turning = $(e.target).parent().attr("id");
             if (intervalB) clearInterval(intervalB);
             intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
@@ -1091,12 +1094,12 @@ function reposicionarCarro(dir) {
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
-             if (dir == "left") {
+             if (window.turning == "left") {
                  angulo += 30 * (Math.PI/180);
                  angulo = 
                      angulo <= (360*(Math.PI/180)) ?
                      angulo : 0;
-             } else if (dir == "right") {
+             } else if (window.turning == "right") {
                  angulo -= 30 * (Math.PI/180);
                  angulo = 
                       angulo < 0 ?
