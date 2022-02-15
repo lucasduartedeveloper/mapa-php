@@ -1009,6 +1009,7 @@ $(document).ready(function() {
                  clearInterval(intervalA); 
                  intervalA = false;
                  velocidade = 0;
+                 audio1.pause();
                  audio2.play();
             }
             else {
