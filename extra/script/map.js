@@ -1003,6 +1003,10 @@ $(document).ready(function() {
                  velocidade = 0;
             }
             else {
+                 audio.pause();
+                 audio =
+                 new Audio("/extra/audio/car-ignition_2.wav");
+                 audio.play();
                  $("#up").addClass("active");
                  console.log(intervalA);
                  intervalA = setInterval(function() {
@@ -1056,7 +1060,13 @@ function reposicionarCarro(dir) {
              if (velocidade == 0) {
                  audio.pause();
                  audio =
-                 new Audio("/extra/audio/car-ignition.wav");
+                 new Audio("/extra/audio/car-ignition_0.wav");
+                 audio.play();
+             }
+             if (velocidade >= 0) {
+                 audio.pause();
+                 audio =
+                 new Audio("/extra/audio/car-ignition_1.wav");
                  audio.play();
              }
              velocidade += 0.2;
