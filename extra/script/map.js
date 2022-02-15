@@ -1014,12 +1014,12 @@ $(document).ready(function() {
             }
             else {
                  audio0.onended = function () {
-                          audio1.play();
-                          $("#up").addClass("active");
-                          console.log(intervalA);
-                          intervalA = setInterval(function() {
-                                   reposicionarCarro("up");
-                           }, 200);
+                       audio1.play();
+                       $("#up").addClass("active");
+                       console.log(intervalA);
+                       intervalA = setInterval(function() {
+                             reposicionarCarro("up");
+                       }, 200);
                  }
                 audio0.play();
             }

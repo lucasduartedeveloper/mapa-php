@@ -100,11 +100,11 @@
 </button>
 
 <button id="up" type="button" class="btn-up">
-      D
+      <i class="bi bi-grip-horizontal"></i>
 </button>
 
 <button id="down" type="button" class="btn-down">
-      R
+      <i class="bi bi-grip-horizontal"></i>
 </button>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
