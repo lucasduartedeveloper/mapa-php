@@ -697,9 +697,9 @@ function mapClick(e) {
 
        var velocidadeReal = Math.floor((distancia * 1000) / (tempo / (60000 * 60)));
 
-       console.log(distancia);
-       console.log(tempo);
-       console.log(velocidadeReal);
+       console.log("dist: " + distancia);
+       console.log("tempo: " + tempo);
+       console.log("vel: " + velocidadeReal);
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
@@ -1039,7 +1039,7 @@ $(document).ready(function() {
        function(e) {
             if (intervalA) {
                  $("#up").removeClass("active");
-                 console.log(intervalA);
+                 //console.log(intervalA);
                  clearInterval(intervalA); 
                  intervalA = false;
                  velocidade = 0;
@@ -1050,7 +1050,7 @@ $(document).ready(function() {
                  audio0.onended = function () {
                        audio1.play();
                        $("#up").addClass("active");
-                       console.log(intervalA);
+                       //console.log(intervalA);
                        intervalA = setInterval(function() {
                              reposicionarCarro("up");
                        }, 100);
@@ -1064,14 +1064,14 @@ $(document).ready(function() {
        function(e) {
             if (intervalC) {
                  $("#down").removeClass("active");
-                 console.log(intervalC);
+                 //console.log(intervalC);
                  clearInterval(intervalC);
                  intervalC = false;
             }
             else {
                  audio3.play();
                  $("#down").addClass("active");
-                 console.log(intervalC);
+                 //console.log(intervalC);
                  intervalC = setInterval(function() {
                  reposicionarCarro("down");
                  }, 100);
