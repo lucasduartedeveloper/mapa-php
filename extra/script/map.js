@@ -517,15 +517,6 @@ function carregarAudio(m) {
 
 // Excluir áudio
 function excluirAudio(m) {
-
-    // Comparar o Nv
-    if(audios[m].desenho.split(",").length > trajetos[playerId].length) {
-        audio.pause();
-        audio = new Audio("/extra/audio/game_over.mp3");
-        audio.play();
-        return;
-    }
-
     var pointList = [];
     map.removeControl(wire);
 
