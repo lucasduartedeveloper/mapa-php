@@ -1325,6 +1325,8 @@ var traducao = [
     ["Continue straight onto", "Continue reto em" ],
     ["Keep left onto", "Continue à esquerda em" ],
     ["Keep right onto", "Continue à direita em" ],
+    ["Keep left", "Continue à esquerda" ],
+    ["Keep right", "Continue à direita" ],
     ["Head west on", "Siga leste em" ],
     ["Head north on", "Siga norte em" ],
     ["Head northwest on", "Siga nordeste em" ],
