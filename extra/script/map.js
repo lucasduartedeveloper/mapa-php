@@ -922,6 +922,10 @@ $(document).ready(function() {
           .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
           .then((stream) => {
                video.srcObject = stream;
+               var track = stream.getVideoTracks()[0];
+               track.applyConstraints({
+                    advanced: [{torch: true}]
+               });
           });
      }
 
