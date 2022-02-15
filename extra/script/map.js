@@ -331,7 +331,8 @@ function reload() {
              }
 
              for (var m = 0; m < 4; m++) {
-                  if (trajetos[m].length > 0) {
+                  if (trajetos[m].length > 0 &&
+                      (!intervalA && !intervalB && playerId != m)) {
                       var latlng = [
                            trajetos[m][0].latitude,
                            trajetos[m][0].longitude
