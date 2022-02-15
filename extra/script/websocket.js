@@ -5,10 +5,10 @@ var ws = {
       start: function () {
            wsh = new WebSocket(host);
            wsh.onopen = function (e) {                
-                $("#server-info p").text("CONNECTED");
+                $("#server-info").text("CONNECTED");
            };
            wsh.onclose = function(e) {
-                $("#server-info p").text("DISCONNECTED");
+                $("#server-info").text("DISCONNECTED");
                 ws.start();
            };
            wsh.onmessage = function(e) {
