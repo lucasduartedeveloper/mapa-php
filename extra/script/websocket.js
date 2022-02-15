@@ -18,7 +18,7 @@ var ws = {
       send: function (e) {
            //console.log(e);
            //console.log(wsh);
-           wsh.send(msg);
+           wsh.send(e);
       },
       onmessage: function (e) { },
       tempo: 0

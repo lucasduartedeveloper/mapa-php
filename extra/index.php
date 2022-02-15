@@ -88,7 +88,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v85.7.1.550
+     v85.8.1.550
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -123,7 +123,7 @@
 
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
-<script src="/extra/script/websocket.js?v=7"></script>
+<script src="/extra/script/websocket.js?v=8"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
 <script src="/extra/script/map.js?v=550"></script> 
