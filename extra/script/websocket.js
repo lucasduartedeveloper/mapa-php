@@ -7,6 +7,9 @@ var ws = {
            //console.log(wsh);
            if (wsh.readyState != 1) { 
                wsh = new WebSocket(host);
+               wsh.onmessage = function(e) {
+                      ws.onmessage(e);
+               };
            }
            wsh.send(e);
       },
@@ -15,5 +18,5 @@ var ws = {
 };
 
 wsh.onmessage = function(e) {
-     ws.onmessage(e);
+      ws.onmessage(e);
 };
