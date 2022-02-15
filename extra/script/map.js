@@ -1021,9 +1021,9 @@ $(document).ready(function() {
                           console.log(intervalA);
                           intervalA = setInterval(function() {
                           reposicionarCarro("up");
-                     }}
-                     audio.play();
+                     }
                  }, 200);
+                audio.play();
             }
        }
     );
