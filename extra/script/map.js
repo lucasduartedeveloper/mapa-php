@@ -975,10 +975,6 @@ $(document).ready(function() {
     });
 
     // --------
-    window.a = 0.000008993216088271083 * 5;
-    window.d = 0.000009956626094265175 * 5;
-    window.angulo = 0;
-
     window.intervalA = false;
     window.intervalB = false;
     window.intervalC = false;
@@ -1063,8 +1059,13 @@ $(document).ready(function() {
 });
 
 // Reposicionar o carro
+var a = 0.000008993216088271083 * 5;
+var d = 0.000009956626094265175 * 5;
+
+var angulo = 0;
 var velocidade = 0;
 var velocidadeMaxima = 2;
+
 function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
@@ -1090,6 +1091,17 @@ function reposicionarCarro(dir) {
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
+             if (dir == "left") {
+                 angulo += 30 * (Math.PI/180);
+                 angulo = 
+                     angulo <= (360*(Math.PI/180)) ?
+                     angulo : 0;
+             } else if (dir == "right") {
+                 angulo -= 30 * (Math.PI/180);
+                 angulo = 
+                      angulo < 0 ?
+                      (360*(Math.PI/180)) : angulo;
+             }
              velocidade -= 0.5;
              velocidade = 
                   velocidade >= -(velocidadeMaxima) ?
@@ -1100,14 +1112,13 @@ function reposicionarCarro(dir) {
              break;
     }
     //console.log(angulo); 
-
     //return;
     var img = new Image();
-    img.angulo = angulo;
     img.width = 256;
     img.height = 256;
+
     img.onload = function() {
-        var icon = rotateImage(this, this.angulo);
+        var icon = rotateImage(this, angulo);
         players[playerId].marker.setIcon(
             L.icon({
                  iconUrl: icon,
