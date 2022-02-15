@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=86">
+<link rel="stylesheet" href="/extra/css/style.css?v=87">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -96,7 +96,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v86.8.1.554
+     v87.8.1.555
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -136,7 +136,7 @@
 <script src="/extra/script/websocket.js?v=8"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=554"></script> 
+<script src="/extra/script/map.js?v=555"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
