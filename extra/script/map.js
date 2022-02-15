@@ -990,7 +990,7 @@ $(document).ready(function() {
             if (intervalB) clearInterval(intervalB);
             intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
-            }, 200);
+            }, 100);
        }
     );
 
@@ -1043,7 +1043,7 @@ $(document).ready(function() {
                  console.log(intervalC);
                  intervalC = setInterval(function() {
                  reposicionarCarro("down");
-                 }, 200);
+                 }, 100);
             }
        }
     );
