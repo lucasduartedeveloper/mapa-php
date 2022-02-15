@@ -1022,7 +1022,7 @@ $(document).ready(function() {
             if (intervalB) clearInterval(intervalB);
             intervalB = setInterval(function() {
                  reposicionarCarro($(e.target).parent().attr("id"));
-            }, 100);
+            }, 50);
        }
     );
 
@@ -1054,7 +1054,7 @@ $(document).ready(function() {
                        //console.log(intervalA);
                        intervalA = setInterval(function() {
                              reposicionarCarro("up");
-                       }, 100);
+                       }, 50);
                  }
                 audio0.play();
             }
@@ -1075,7 +1075,7 @@ $(document).ready(function() {
                  //console.log(intervalC);
                  intervalC = setInterval(function() {
                  reposicionarCarro("down");
-                 }, 100);
+                 }, 50);
             }
        }
     );
@@ -1134,7 +1134,7 @@ function reposicionarCarro(dir) {
                       angulo < 0 ?
                       (360*(Math.PI/180)) : angulo;
              }
-             velocidade -= 0.5;
+             velocidade -= 0.1;
              velocidade = 
                   velocidade >= -(velocidadeMaxima) ?
                   velocidade : -(velocidadeMaxima);
@@ -1195,7 +1195,7 @@ function createLabel(text, color = "#000") {
 
 // Acelerador
 function calcularPosicao() {
-    var h = ((a+d/2)/2) * velocidade;
+    var h = ((a+d/2)/4) * velocidade;
     var co = Math.sin(angulo*-1) * h;
     var ca = Math.cos(angulo*-1) * h;
     var pos = {
