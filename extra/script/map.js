@@ -666,7 +666,6 @@ function excluirTrajeto(playerId) {
 }
 
 // Click no mapa
-var velocidadeReal = 0;
 var posAnterior = false;
 var dhPosAnterior = new Date().getTime();
 
@@ -676,6 +675,18 @@ function mapClick(e) {
      $("#audio-wave").hide();
      $("#audio-wave").removeClass("playing");
 
+     /*
+     var pos = posicaoNoGrid({
+         lat: e.latlng.lat,
+         lng: e.latlng.lng
+     });*/
+     var pos ={
+         lat: e.latlng.lat,
+         lng: e.latlng.lng
+     };
+     posicao = pos;
+     centralizarNaRota(pos);
+
      var now = new Date().getTime();
      if (posAnterior) {
        var distancia = posAnterior
@@ -683,7 +694,7 @@ function mapClick(e) {
            e.latlng.lat, 
            e.latlng.lng));
        var tempo = now - dhPosAnterior;
-       
+
        var velocidadeReal = Math.floor((distancia * 1000) / (tempo / (60000 * 60)));
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
@@ -695,18 +706,7 @@ function mapClick(e) {
               e.latlng.lng);
        dhPosAnterior = now;
     }
-
-    /*
-    var pos = posicaoNoGrid({
-         lat: e.latlng.lat,
-         lng: e.latlng.lng
-    });*/
-    var pos ={
-         lat: e.latlng.lat,
-         lng: e.latlng.lng
-    };
-    posicao = pos;
-    centralizarNaRota(pos);
+    // -- Final do cálculo de velocidade
 
     var pointList = [];
     if (wire) { map.removeControl(wire); };
