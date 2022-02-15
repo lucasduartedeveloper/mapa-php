@@ -697,9 +697,10 @@ function mapClick(e) {
 
        var velocidadeReal = Math.floor((distancia / (tempo / 1000)) * 3.6);
 
+       /*
        console.log("dist: " + distancia);
        console.log("tempo: " + tempo);
-       console.log("vel: " + velocidadeReal);
+       console.log("vel: " + velocidadeReal);*/
 
        posAnterior = new L.LatLng(pos.lat, pos.lng);
        dhPosAnterior = now;
@@ -1107,7 +1108,7 @@ function reposicionarCarro(dir) {
                  angulo : 0;
              break;
          case "up":
-             velocidade += 0.2;
+             velocidade += 0.1;
              velocidade =
                   velocidade <= velocidadeMaxima ?
                   velocidade : velocidadeMaxima;
@@ -1194,7 +1195,7 @@ function createLabel(text, color = "#000") {
 
 // Acelerador
 function calcularPosicao() {
-    var h = (0.000009956626094265175 * 5) * velocidade;
+    var h = ((a+d/2)/2) * velocidade;
     var co = Math.sin(angulo*-1) * h;
     var ca = Math.cos(angulo*-1) * h;
     var pos = {
