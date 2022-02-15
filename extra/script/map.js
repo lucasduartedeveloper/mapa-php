@@ -930,7 +930,7 @@ $(document).ready(function() {
                          track.applyConstraints({
                          advanced: [{torch: true}]
                     });
-               }
+               });
           });
      }
 
