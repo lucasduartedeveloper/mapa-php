@@ -88,7 +88,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v85.8.1.550
+     v85.8.1.551
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -123,10 +123,12 @@
 
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
+<script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
+
 <script src="/extra/script/websocket.js?v=8"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=550"></script> 
+<script src="/extra/script/map.js?v=551"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
