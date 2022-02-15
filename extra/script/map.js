@@ -672,10 +672,15 @@ function mapClick(e) {
      $("#audio-wave").hide();
      $("#audio-wave").removeClass("playing");
 
+    /*
     var pos = posicaoNoGrid({
          lat: e.latlng.lat,
          lng: e.latlng.lng
-    });
+    });*/
+    var pos ={
+         lat: e.latlng.lat,
+         lng: e.latlng.lng
+    };
     posicao = pos;
     centralizarNaRota(pos);
 
