@@ -549,7 +549,7 @@ function excluirAudio(m) {
     //console.log(pointList);
 
     audio.pause();
-    audio = new Audio("/extra/audio/sfx_victory.mp3");
+    audio = new Audio("/extra/audio/sfx_victory.wav");
     audio.play();
 
     wire = new L.Polyline(pointList, {
@@ -1035,6 +1035,12 @@ $(document).ready(function() {
     new Audio("/extra/audio/car-ignition_2.wav");
     var audio3 =
     new Audio("/extra/audio/car-brakes-screeching.wav");
+    var audio4 =
+    new Audio("/extra/audio/car-horn.wav");
+
+    $("#horn").on("touchstart", function(e) {
+        audio4.play();
+    }
 
     $("#up").on("touchstart",
        function(e) {

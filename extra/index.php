@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=85">
+<link rel="stylesheet" href="/extra/css/style.css?v=86">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -57,6 +57,14 @@
       <i class="bi bi-mic-mute-fill"></i>
 </button>
 
+<button id="horn" type="button" class="btn-horn float-center-2">
+      <i class="fa-solid fa-bullhorn"></i>
+</button>
+
+<button id="lights" type="button" class="btn-lights float-center-3">
+      <i class="fa-regular fa-lightbulb"></i>
+</button>
+
 <button id="reload" type="button" class="btn-reload float-right active">
       <i class="bi bi-joystick"></i>
 </button>
@@ -88,7 +96,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v85.8.1.552
+     v86.8.1.553
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -128,7 +136,7 @@
 <script src="/extra/script/websocket.js?v=8"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=552"></script> 
+<script src="/extra/script/map.js?v=553"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
