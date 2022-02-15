@@ -666,11 +666,35 @@ function excluirTrajeto(playerId) {
 }
 
 // Click no mapa
+var velocidadeReal = 0;
+var posAnterior = false;
+var dhPosAnterior = new Date().getTime();
+
 map.on("click", mapClick);
 function mapClick(e) {
      $("#audio-info").hide();
      $("#audio-wave").hide();
      $("#audio-wave").removeClass("playing");
+
+     var now = new Date().getTime();
+     if (posAnterior) {
+       var distancia = posAnterior
+       .distanceTo(new L.LatLng(
+           e.latlng.lat, 
+           e.latlng.lng));
+       var tempo = now - dhPosAnterior;
+       
+       var velocidadeReal = Math.floor((distancia * 1000) / (tempo / (60000 * 60)));
+
+       posAnterior = new L.LatLng(pos.lat, pos.lng);
+       dhPosAnterior = now;
+    }
+    else {
+       posAnterior = new L.LatLng(
+              e.latlng.lat,
+              e.latlng.lng);
+       dhPosAnterior = now;
+    }
 
     /*
     var pos = posicaoNoGrid({
@@ -770,7 +794,7 @@ function mapClick(e) {
     players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerNv.setIcon(
     L.icon({
-         iconUrl: createLabel(nv + " km/h"),
+         iconUrl: createLabel(velocidadeReal + " km/h"),
          iconSize:     [100, 30], // size of the icon
          iconAnchor:   [50, 70]
     }));
