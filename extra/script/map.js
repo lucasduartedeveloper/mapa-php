@@ -794,7 +794,7 @@ function mapClick(e) {
     players[playerId].markerNv.setLatLng(new L.LatLng(pos.lat, pos.lng));
     players[playerId].markerNv.setIcon(
     L.icon({
-         iconUrl: createLabel(velocidadeReal + " km/h"),
+         iconUrl: createLabel(velocidadeReal.toFixed(0) + " km/h"),
          iconSize:     [100, 30], // size of the icon
          iconAnchor:   [50, 70]
     }));
