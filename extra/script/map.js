@@ -1020,9 +1020,9 @@ $(document).ready(function() {
                           $("#up").addClass("active");
                           console.log(intervalA);
                           intervalA = setInterval(function() {
-                          reposicionarCarro("up");
-                     }
-                 }, 200);
+                                   reposicionarCarro("up");
+                           }, 200);
+                 }
                 audio.play();
             }
        }
