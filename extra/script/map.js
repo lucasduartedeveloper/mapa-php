@@ -1005,6 +1005,8 @@ $(document).ready(function() {
     audio1.loop = true;
     var audio2 =
     new Audio("/extra/audio/car-ignition_2.wav");
+    var audio3 =
+    new Audio("/extra/audio/car-brakes-screeching.wav");
 
     $("#up").on("touchstart",
        function(e) {
@@ -1040,6 +1042,7 @@ $(document).ready(function() {
                  intervalC = false;
             }
             else {
+                 audio3.play();
                  $("#down").addClass("active");
                  console.log(intervalC);
                  intervalC = setInterval(function() {
@@ -1087,12 +1090,6 @@ function reposicionarCarro(dir) {
                  (360*(Math.PI/180)) : angulo;
              break;
          case "down":
-             if (velocidade != 0) {
-                 audio.pause();
-                 audio =
-                 new Audio("/extra/audio/car-brakes-screeching.wav");
-                 audio.play();
-             }
              velocidade -= 0.5;
              velocidade = 
                   velocidade >= -(velocidadeMaxima) ?
@@ -1102,7 +1099,7 @@ function reposicionarCarro(dir) {
              map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
              break;
     }
-    console.log(angulo); 
+    //console.log(angulo); 
 
     //return;
     var img = new Image();
