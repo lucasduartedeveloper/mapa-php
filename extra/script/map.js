@@ -1026,7 +1026,7 @@ $(document).ready(function() {
                        console.log(intervalA);
                        intervalA = setInterval(function() {
                              reposicionarCarro("up");
-                       }, 200);
+                       }, 100);
                  }
                 audio0.play();
             }
@@ -1064,7 +1064,7 @@ $(document).ready(function() {
 
 // Reposicionar o carro
 var velocidade = 0;
-var velocidadeMaxima = 1;
+var velocidadeMaxima = 2;
 function reposicionarCarro(dir) {
     var pos;
     switch (dir) {
