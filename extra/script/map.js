@@ -693,9 +693,8 @@ function mapClick(e) {
 
            posAnterior = new L.LatLng(pos.lat, pos.lng);
            dhPosAnterior = now;
-           tempo = 0;
     }
-    else {
+    else if (tempo > 500) {
        posAnterior = new L.LatLng(
               e.latlng.lat,
               e.latlng.lng);
