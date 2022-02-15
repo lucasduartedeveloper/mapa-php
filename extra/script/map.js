@@ -997,6 +997,7 @@ $(document).ready(function() {
     new Audio("/extra/audio/car-ignition_0.wav");
     var audio1 =
     new Audio("/extra/audio/car-ignition_1.wav");
+    audio1.loop = true;
     var audio2 =
     new Audio("/extra/audio/car-ignition_2.wav");
 
@@ -1012,7 +1013,7 @@ $(document).ready(function() {
             }
             else {
                  audio0.onended = function () {
-                          audio2.play();
+                          audio1.play();
                           $("#up").addClass("active");
                           console.log(intervalA);
                           intervalA = setInterval(function() {
