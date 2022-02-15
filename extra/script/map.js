@@ -694,6 +694,7 @@ function mapClick(e) {
            e.latlng.lat, 
            e.latlng.lng));
        var tempo = now - dhPosAnterior;
+       ws.tempo += tempo;
 
        var velocidadeReal = Math.floor((distancia / (tempo / 1000)) * 3.6);
 
@@ -810,8 +811,11 @@ function mapClick(e) {
              latitude: pos.lat, 
              longitude: pos.lng,
              }).done(function(data) { 
-                   // Websocket
-                   ws.send("JUPS|"+playerId);
+                   if (ws.tempo > 1000) {
+                       // Websocket
+                        ws.send("JUPS|"+playerId);
+                        ws.tempo = 0;
+                   }
     });
 }
 

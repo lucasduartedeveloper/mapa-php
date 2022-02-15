@@ -10,7 +10,8 @@ var ws = {
            }
            wsh.send(e);
       },
-      onmessage: function (e) { }
+      onmessage: function (e) { },
+      tempo: 0
 };
 
 wsh.onmessage = function(e) {
