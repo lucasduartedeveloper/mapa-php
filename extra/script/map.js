@@ -332,7 +332,7 @@ function reload() {
 
              for (var m = 0; m < 4; m++) {
                   if (trajetos[m].length > 0 &&
-                      (!intervalA && !intervalB && playerId != m)) {
+                      (playerId != m || (!intervalA && !intervalB))) {
                       var latlng = [
                            trajetos[m][0].latitude,
                            trajetos[m][0].longitude
@@ -347,17 +347,9 @@ function reload() {
                           iconAnchor:   [50, 70]
                       }));
                    }
-                   else {
-                      //players[m].markerNv.setLatLng(latlng);
-                      players[m].markerNv.setIcon(
-                      L.icon({
-                          iconUrl: createLabel("0 km"),
-                          iconSize:     [100, 30], // size of the icon
-                          iconAnchor:   [50, 70]
-                      }));
-                   }
 
-                   if (trajetos[m].length > 1) {
+                   if (trajetos[m].length > 1 &&
+                      (playerId != m || (!intervalA && !intervalB))) {
                       var co = 
                       parseFloat(trajetos[m][1].longitude) - 
                       parseFloat(trajetos[m][0].longitude);
