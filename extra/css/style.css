@@ -71,7 +71,7 @@ html, body {
    color: white;
 }
 
-.btn-key:hover,,
+.btn-key:hover,
 .btn-horn:hover,
 .btn-lights:hover,
 .btn-left:hover,
@@ -344,7 +344,7 @@ html, body {
 
 .version-info {
    position: fixed;
-   bottom: 0vw;
+   bottom: 0px;
    font-size: 15px;
    left: 5vw;
    width: 40vw;
@@ -354,7 +354,7 @@ html, body {
 
 .server-info {
    position: fixed;
-   bottom: 0vw;
+   bottom: 0px;
    font-size: 15px;
    left: 30vw;
    width: 40vw;
