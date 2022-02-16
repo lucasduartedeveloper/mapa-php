@@ -32,7 +32,7 @@
 
 
 <p>
-     ASSINATURAS
+     O ASSALTO
 </p>
 
 <canvas id="signature">
@@ -40,7 +40,7 @@
 </canvas>
 
 <p id="version-info">
-     v1.0.4
+     v1.0.5
 </p>
 <p id="server-info">
      CONNECTING...
@@ -66,7 +66,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/signature.js?v=4"></script>
+<script src="script/signature.js?v=5"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
