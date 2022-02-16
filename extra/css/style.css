@@ -419,6 +419,9 @@ html, body {
 }
 
 @media only screen and (min-width: 800px) {
+  button[class^='btn-'] {
+      display: none;
+  }
   .float-center {
       left: 70vw;
       bottom: 10vh;
@@ -446,15 +449,13 @@ html, body {
   }
   .float-top3-right {
       bottom: 65vh;
+      display: block;
   }
   .float-top4-right {
       bottom: 85vh;
   }
   .icone-v3 {
       top: 5vw;
-  }
-  .btn-* {
-      display: none;
   }
 }
 
