@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#signature").jqScribble({
-         width: 300, height: 200
+         width: 30, height: 20
     });
     $("#signature").on("touchend", function(e) {
          var dataUrl = signature.toDataURL();

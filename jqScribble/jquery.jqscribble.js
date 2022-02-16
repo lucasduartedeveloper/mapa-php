@@ -92,7 +92,7 @@ function BasicCanvasSave(imageData){window.open(imageData,'jqScribble Image');}
     //These are the default settings if none are specified.
     var settings = {
         width:                  300,
-        height:                 200,
+        height:                 250,
         backgroundImage:        false,
         backgroundImageX:       0,
         backgroundImageY:       0,
