@@ -11,7 +11,7 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: #283747;
+    background-color: #1B2631;
     color: white;
 }
 
@@ -37,6 +37,7 @@ html, body {
     height: 200px;
     border: 2px black solid;
     border-radius: 10px;
+    background-color: #fff;
 }
 
 #buttons {
