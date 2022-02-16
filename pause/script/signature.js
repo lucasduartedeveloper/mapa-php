@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $("#signature").jqScribble({
+    $("#signature").jqScribble();
+    $("#signature").data('jqScribble').update({
          width: 300, height: 200
     });
     $("#signature").on("touchend", function(e) {
