@@ -48,7 +48,7 @@
 </div>
 
 <p id="version-info">
-     v8.1.22
+     v8.1.23
 </p>
 <p id="server-info">
      CONNECTING...
@@ -78,7 +78,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/signature.js?v=22"></script>
+<script src="script/signature.js?v=23"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

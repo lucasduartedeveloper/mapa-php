@@ -1,6 +1,7 @@
 var playerId = new Date().getTime();
-var audio0 = new Audio("audio/game_notication.wav");
-var audio1 = new Audio("audio/game_over.wav");
+var audio0 = new Audio("audio/game_notification.wav");
+var audio1 = new Audio("audio/sfx_victory.wav");
+var audio2 = new Audio("audio/game_over.wav");
 
 $(document).ready(function() {
     $("#signature").jqScribble();
@@ -23,11 +24,11 @@ $(document).ready(function() {
                  });
             }
             else if (msg[2] == "LIKE") {
-                 audio0.play();
+                 audio1.play();
             }
             else if (msg[2] == "DISLIKE") {
                  $("#signature").data('jqScribble').clear();
-                 audio1.play();
+                 audio2.play();
             }
         }
     };
