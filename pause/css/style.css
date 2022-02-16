@@ -23,14 +23,17 @@ html, body {
     height: 100px;
     display: flex;
     justify-content: stretch;
-    align-items: stretch;
     flex-direction: row;
 }
 
 #btn-like {
-
+   display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 #btn-dislike {
-
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
