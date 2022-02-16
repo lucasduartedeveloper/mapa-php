@@ -40,7 +40,7 @@
 </canvas>
 
 <p id="version-info">
-     v1.1.10
+     v1.1.11
 </p>
 <p id="server-info">
      CONNECTING...
@@ -66,7 +66,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/signature.js?v=10"></script>
+<script src="script/signature.js?v=11"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
