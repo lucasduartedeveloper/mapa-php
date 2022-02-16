@@ -31,7 +31,7 @@
 <body>
 
 <p>
-     OBJETO
+     OBJETIVO
 </p>
 
 <canvas id="signature" width=300 height=200>
