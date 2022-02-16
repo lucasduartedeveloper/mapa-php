@@ -11,7 +11,7 @@ $(document).ready(function() {
         if (msg[0] == "PAUSE") {
              console.log(msg[1]);
              $("#signature").update({
-                   bacgroundImage: msg[1]
+                   backgroundImage: msg[1]
              });
         }
     };

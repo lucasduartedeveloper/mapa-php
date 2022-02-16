@@ -16,7 +16,7 @@ var ws = {
            };
       },
       send: function (e) {
-           //console.log(e);
+           console.log(e);
            //console.log(wsh);
            wsh.send(e);
       },
