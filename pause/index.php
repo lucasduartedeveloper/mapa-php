@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -40,15 +40,15 @@
 
 <div class="buttons">
       <button class="btn-like">
-           <i class="fa-solid fa-thumbs-up"></i>
+           <i class="fa-solid fa-thumbs-up"></i>Like
       </button>
       <button class="btn-dislike">
-           <i class="fa-solid fa-thumbs-up"></i>
+           <i class="fa-solid fa-thumbs-down"></i>Dislike
       </button>
 </div>
 
 <p id="version-info">
-     v2.1.19
+     v3.1.19
 </p>
 <p id="server-info">
      CONNECTING...
