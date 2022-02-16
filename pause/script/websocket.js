@@ -16,11 +16,12 @@ var ws = {
            };
       },
       send: function (e) {
-           //console.log(e);
-           //console.log(wsh);
            wsh.send(e);
       },
       onmessage: function (e) { },
+      kill: function() {
+           wsh = null;
+      },
       tempo: 0
 };
 ws.start();

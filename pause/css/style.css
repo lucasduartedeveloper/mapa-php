@@ -12,6 +12,19 @@ html, body {
     flex-direction: column;
 }
 
+#restart {
+    font-family: 'VT323', monospace !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 400 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #signature {
     width: 300px;
     height: 200px;

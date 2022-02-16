@@ -48,15 +48,23 @@
 </div>
 
 <p id="version-info">
-     v8.1.23
-</p>
-<p id="server-info">
+     v8.2.26
+     <br>
+     <span id="server-info">
      CONNECTING...
+     </span>
 </p>
+
 <p id="player-info">
      <i class="fa-solid fa-user"></i>&nbsp;
      <span id="player-id"></span>
 </p>
+
+<div style="display:none" id="restart">
+     <i class="fa-solid fa-arrow-rotate-left"></i>
+     <br>
+     <span id="restart-msg">#restart-msg</span>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -77,8 +85,8 @@
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<script src="script/websocket.js?v=1"></script>
-<script src="script/signature.js?v=23"></script>
+<script src="script/websocket.js?v=2"></script>
+<script src="script/signature.js?v=26"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

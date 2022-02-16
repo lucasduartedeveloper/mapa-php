@@ -25,10 +25,14 @@ $(document).ready(function() {
             }
             else if (msg[2] == "LIKE") {
                  audio1.play();
+                 $("#restart-msg").text("NÃO");
+                 $("#restart").show();
             }
             else if (msg[2] == "DISLIKE") {
                  $("#signature").data('jqScribble').clear();
                  audio2.play();
+                 $("#restart-msg").text("SIM");
+                 $("#restart").show();
             }
         }
     };
