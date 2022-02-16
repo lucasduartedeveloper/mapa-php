@@ -922,15 +922,6 @@ $(document).ready(function() {
           .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
           .then((stream) => {
                video.srcObject = stream;
-               var track = stream.getVideoTracks()[0];
- 
-               var imageCapture = new ImageCapture(track)
-               var photoCapabilities = imageCapture.
-               getPhotoCapabilities().then(() => {
-                         track.applyConstraints({
-                         advanced: [{torch: true}]
-                    });
-               });
           });
      }
 
@@ -1041,6 +1032,19 @@ $(document).ready(function() {
     new Audio("/extra/audio/car-brakes-screeching.wav");
     var audio4 =
     new Audio("/extra/audio/car-horn.wav");
+
+    var lights = false;
+    $("#lights").on("touchstart", function(e) {
+        lights = !lights;
+        var track = stream.getVideoTracks()[0];
+        var imageCapture = new ImageCapture(track);
+        var photoCapabilities = imageCapture.
+              getPhotoCapabilities().then(() => {
+                     track.applyConstraints({
+                     advanced: [{torch: lights}]
+              });
+        });
+    }
 
     $("#horn").on("touchstart",
         function(e) {
