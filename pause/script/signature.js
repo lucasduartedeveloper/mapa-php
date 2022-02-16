@@ -39,7 +39,7 @@ $(document).ready(function() {
         }
     };
 
-    $("#signature").dblclick(function() {
+    $("#signature").on("dblclick", function() {
        $("#signature").data('jqScribble').clear();
        $("#signature").trigger("touchend");
     });
