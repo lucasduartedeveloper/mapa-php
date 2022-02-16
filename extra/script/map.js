@@ -1032,6 +1032,8 @@ $(document).ready(function() {
     new Audio("/extra/audio/car-brakes-screeching.wav");
     var audio4 =
     new Audio("/extra/audio/car-horn.wav");
+    var audio5 =
+    new Audio("/extra/audio/car-lock.wav");
 
     var lights = false;
     $("#lights").on("touchstart", function(e) {
@@ -1049,6 +1051,11 @@ $(document).ready(function() {
     $("#horn").on("touchstart",
         function(e) {
         audio4.play();
+    });
+
+    $("#key").click(
+        function(e) {
+        audio5.play();
     });
 
     $("#up").on("touchstart",
