@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=2">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -39,11 +39,16 @@
 </canvas>
 
 <div class="buttons">
-
+      <button class="btn-like">
+           <i class="fa-solid fa-thumbs-up"></i>
+      </button>
+      <button class="btn-dislike">
+           <i class="fa-solid fa-thumbs-up"></i>
+      </button>
 </div>
 
 <p id="version-info">
-     v1.1.18
+     v2.1.19
 </p>
 <p id="server-info">
      CONNECTING...
@@ -69,7 +74,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/signature.js?v=18"></script>
+<script src="script/signature.js?v=19"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

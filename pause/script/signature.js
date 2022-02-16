@@ -1,7 +1,6 @@
 var playerId = new Date().getTime();
 
 $(document).ready(function() {
-    console.log(playerId); 
 
     $("#signature").jqScribble();
     $("#signature").data('jqScribble').update({
@@ -9,14 +8,14 @@ $(document).ready(function() {
     });
     $("#signature").on("touchend", function(e) {
          var dataUrl = signature.toDataURL();
-         ws.send("PAUSE|"+dataUrl);
+         ws.send("PAUSE|"+playerId+"|"+dataUrl);
     });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "PAUSE") {
-             //console.log(msg[1]);
+        if (msg[0] == "PAUSE" && playerId != msg[1]) {
+
              $("#signature").data('jqScribble').update({
-                   backgroundImage: msg[1],
+                   backgroundImage: msg[2],
                    width: 300, height: 200
              });
         }

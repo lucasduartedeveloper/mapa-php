@@ -17,3 +17,12 @@ html, body {
     height: 200px;
     border: 2px black solid;
 }
+
+#buttons {
+    width: 300px
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
