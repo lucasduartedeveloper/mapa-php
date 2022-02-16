@@ -344,7 +344,7 @@ html, body {
 
 .version-info {
    position: fixed;
-   bottom: 5vw;
+   bottom: 0vw;
    font-size: 15px;
    left: 5vw;
    width: 40vw;
@@ -354,7 +354,7 @@ html, body {
 
 .server-info {
    position: fixed;
-   bottom: 5vw;
+   bottom: 0vw;
    font-size: 15px;
    left: 30vw;
    width: 40vw;
