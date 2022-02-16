@@ -146,12 +146,16 @@ function BasicCanvasSave(imageData){window.open(imageData,'jqScribble Image');}
 
         $.extend(settings, options);
 
+        console.log(canvas.height);
+
         if(noparent)
         {
             width = $elm.parent().width();
             height = $elm.parent().height();
         }
         else $elm.append(canvas);
+
+        console.log(canvas.height);
 
         if(width < 2)width = settings.width;
         if(height < 2)height = settings.height;
