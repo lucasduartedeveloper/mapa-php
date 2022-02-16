@@ -3,7 +3,7 @@ $(document).ready(function() {
          width: 300, height: 200
     });
     $("#signature").on("touchend", function(e) {
-         var dataUrl = $("#signature").toDataURL();
+         var dataUrl = signature.toDataURL();
          ws.send("PAUSE|"+dataUrl);
     });
     ws.onmessage(function(e) {
