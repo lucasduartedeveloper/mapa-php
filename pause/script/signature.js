@@ -1,3 +1,5 @@
-$(doxument).ready(function() {
-    $("#signature").jqScribble();
+$(document).ready(function() {
+    $("#signature").jqScribble({
+         width: 300, height: 200
+    });
 });

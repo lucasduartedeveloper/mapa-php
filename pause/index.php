@@ -40,7 +40,7 @@
 </canvas>
 
 <p id="version-info">
-     v1.0.3
+     v1.0.4
 </p>
 <p id="server-info">
      CONNECTING...
@@ -48,8 +48,8 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="script/jquery.jqscribble.js" type="text/javascript"></script>
-<script src="script/jqscribble/jqscribble.extrabrushes.js" type="text/javascript"></script>
+<script src="/jqScribble/jquery.jqscribble.js" type="text/javascript"></script>
+<script src="/jqScribble/jqscribble.extrabrushes.js" type="text/javascript"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
@@ -66,7 +66,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/signature.js?v=3"></script>
+<script src="script/signature.js?v=4"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
