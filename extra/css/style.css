@@ -422,6 +422,9 @@ html, body {
   button[class^='btn-'] {
       display: none;
   }
+  .btn-camera {
+      display: block;
+  }
   .float-center {
       left: 70vw;
       bottom: 10vh;
@@ -449,7 +452,6 @@ html, body {
   }
   .float-top3-right {
       bottom: 65vh;
-      display: block;
   }
   .float-top4-right {
       bottom: 85vh;
