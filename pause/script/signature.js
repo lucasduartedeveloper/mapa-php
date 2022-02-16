@@ -26,12 +26,14 @@ $(document).ready(function() {
             else if (msg[2] == "LIKE") {
                  audio1.play();
                  $("#restart-msg").text("SIM");
+                 $("#restart").css("background-color", "#405d27");
                  $("#restart").show();
             }
             else if (msg[2] == "DISLIKE") {
                  $("#signature").data('jqScribble').clear();
                  audio2.play();
                  $("#restart-msg").text("NÃO");
+                 $("#restart").css("background-color", "#c94c4c");
                  $("#restart").show();
             }
         }
@@ -42,6 +44,9 @@ $(document).ready(function() {
     });
     $("#btn-dislike").click(function() {
         ws.send("PAUSE|"+playerId+"|DISLIKE");
+    });
+    $("#restart").click(function() {
+         location.reload();
     });   
     $("#player-id").text(playerId);
 });
