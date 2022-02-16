@@ -35,12 +35,12 @@
      O ASSALTO
 </p>
 
-<canvas id="signature">
+<canvas id="signature" width=300 height=200>
      
 </canvas>
 
 <p id="version-info">
-     v1.1.13
+     v1.1.14
 </p>
 <p id="server-info">
      CONNECTING...
@@ -66,7 +66,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/signature.js?v=13"></script>
+<script src="script/signature.js?v=14"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
