@@ -1044,7 +1044,7 @@ $(document).ready(function() {
                      advanced: [{torch: lights}]
               });
         });
-    }
+    });
 
     $("#horn").on("touchstart",
         function(e) {
