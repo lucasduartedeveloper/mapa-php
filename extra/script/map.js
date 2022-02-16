@@ -1053,7 +1053,7 @@ $(document).ready(function() {
         audio4.play();
     });
 
-    $("#key").click(
+    $("#key").on("touchstart",
         function(e) {
         audio5.play();
     });
