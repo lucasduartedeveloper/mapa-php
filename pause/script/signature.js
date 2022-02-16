@@ -39,6 +39,10 @@ $(document).ready(function() {
         }
     };
 
+    $("#signature").dblclick(function() {
+       $("#signature").data('jqScribble').clear();
+       $("#signature").trigger("touchend");
+    });
     $("#btn-like").click(function() {
         ws.send("PAUSE|"+playerId+"|LIKE");
     });

@@ -19,9 +19,6 @@ var ws = {
            wsh.send(e);
       },
       onmessage: function (e) { },
-      kill: function() {
-           wsh = null;
-      },
       tempo: 0
 };
 ws.start();
