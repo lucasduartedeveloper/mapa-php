@@ -7,7 +7,7 @@ $(document).ready(function() {
          ws.send("PAUSE|"+dataUrl);
     });
     ws.onmessage = function(e) {
-        var msg = e.split("|");
+        var msg = e.data.split("|");
         if (msg[0] == "PAUSE") {
              console.log(msg[1]);
              $("#signature").update({
