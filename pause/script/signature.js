@@ -1,5 +1,6 @@
 var playerId = new Date().getTime();
 var audio0 = new Audio("audio/game_notication.wav");
+var audio1 = new Audio("audio/game_over.wav");
 
 $(document).ready(function() {
     $("#signature").jqScribble();
@@ -17,7 +18,7 @@ $(document).ready(function() {
 
             if (msg[2] == "CANVAS") {
                   $("#signature").data('jqScribble').update({
-                        backgroundImage: msg[2],
+                        backgroundImage: msg[3],
                         width: 300, height: 200
                  });
             }
@@ -26,7 +27,7 @@ $(document).ready(function() {
             }
             else if (msg[2] == "DISLIKE") {
                  $("#signature").data('jqScribble').clear();
-                 audio0.play();
+                 audio1.play();
             }
         }
     };
