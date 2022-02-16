@@ -23,8 +23,9 @@ html, body {
     width: 300px
     height: 100px;
     display: flex;
-    justify-content: stretch;
+    justify-content: space-between;;
     flex-direction: row;
+    padding: 10px;
 }
 
 #btn-like {
@@ -33,8 +34,9 @@ html, body {
     flex-direction: row;
     background-color: #405d27;
     color: white;
-    border: 0px;
+    border: 2px solid #000;
     border-radius: 10px;
+    padding: 10px;
 }
 
 #btn-dislike {
@@ -43,6 +45,7 @@ html, body {
     flex-direction: row;
     background-color: #c94c4c;
     color: white;
-    border: 0px;
+    border: 2px solid #000;
     border-radius: 10px;
+    padding: 10px;
 }
