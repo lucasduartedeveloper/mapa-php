@@ -1,6 +1,7 @@
 var playerId = new Date().getTime();
 
 $(document).ready(function() {
+    $("#player-id").text(playerId);
 
     $("#signature").jqScribble();
     $("#signature").data('jqScribble').update({

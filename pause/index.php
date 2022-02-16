@@ -48,10 +48,14 @@
 </div>
 
 <p id="version-info">
-     v8.1.19
+     v8.1.20
 </p>
 <p id="server-info">
      CONNECTING...
+</p>
+<p id="player-info">
+     <i class="fa-solid fa-user"></i>&nbsp;
+     <span id="player-id"></span>
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -74,7 +78,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/signature.js?v=19"></script>
+<script src="script/signature.js?v=20"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
