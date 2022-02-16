@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -48,7 +48,7 @@
 </div>
 
 <p id="version-info">
-     v9.2.28
+     v10.2.29
      <br>
      <span id="server-info">
      CONNECTING...
@@ -61,9 +61,9 @@
 </p>
 
 <div style="display:none" id="restart">
-     <i class="fa-solid fa-arrow-rotate-left"></i>
-     <br>
      <span id="restart-msg">#restart-msg</span>
+     <br>
+     <i class="fa-solid fa-arrow-rotate-left"></i>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -86,7 +86,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=2"></script>
-<script src="script/signature.js?v=28"></script>
+<script src="script/signature.js?v=29"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
