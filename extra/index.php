@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="/extra/css/style.css?v=87">
+<link rel="stylesheet" href="/extra/css/style.css?v=88">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -65,6 +65,10 @@
       <i class="fa-regular fa-lightbulb"></i>
 </button>
 
+<button id="key" type="button" class="btn-key float-center-3">
+      <i class="fa-solid fa-key"></i>
+</button>
+
 <button id="reload" type="button" class="btn-reload float-right active">
       <i class="bi bi-joystick"></i>
 </button>
@@ -96,7 +100,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v87.8.1.559
+     v88.8.1.559
 </p>
 
 <button id="left" type="button" class="btn-left">

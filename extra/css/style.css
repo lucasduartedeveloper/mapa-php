@@ -71,6 +71,7 @@ html, body {
    color: white;
 }
 
+.btn-key:hover,,
 .btn-horn:hover,
 .btn-lights:hover,
 .btn-left:hover,
@@ -86,6 +87,7 @@ html, body {
    color: white;
 }
 
+.btn-key,
 .btn-horn,
 .btn-lights,
 .btn-anotacoes,
@@ -197,7 +199,7 @@ html, body {
    justify-content: center;
    align-items: center;
    bottom: 30vw;
-   left: 40vw;
+   left: 45vw;
    width: 15vw;
    height: 15vw;
    max-width: 25vh;
@@ -213,7 +215,23 @@ html, body {
    justify-content: center;
    align-items: center;
    bottom: 30vw;
-   left: 20vw;
+   left: 30vw;
+   width: 15vw;
+   height: 15vw;
+   max-width: 25vh;
+   max-height: 25vh;
+   border-radius: 50%;
+   z-index: 9999;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.float-center-4 {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   bottom: 30vw;
+   left: 15vw;
    width: 15vw;
    height: 15vw;
    max-width: 25vh;
@@ -326,7 +344,7 @@ html, body {
 
 .version-info {
    position: fixed;
-   bottom: 20vw;
+   bottom: 5vw;
    font-size: 15px;
    left: 5vw;
    width: 40vw;
@@ -336,9 +354,9 @@ html, body {
 
 .server-info {
    position: fixed;
-   bottom: 25vw;
+   bottom: 5vw;
    font-size: 15px;
-   left: 5vw;
+   left: 30vw;
    width: 40vw;
    text-align: left;
    z-index: 8000;
