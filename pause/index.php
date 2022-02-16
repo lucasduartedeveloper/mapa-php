@@ -30,14 +30,17 @@
 </head>
 <body>
 
-
 <p>
-     O ASSALTO
+     OBJETO
 </p>
 
 <canvas id="signature" width=300 height=200>
      
 </canvas>
+
+<div class="buttons">
+
+</div>
 
 <p id="version-info">
      v1.1.17
