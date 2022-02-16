@@ -1036,7 +1036,7 @@ $(document).ready(function() {
     var lights = false;
     $("#lights").on("touchstart", function(e) {
         lights = !lights;
-        var track = stream.getVideoTracks()[0];
+        var track = video.srcObject.getVideoTracks()[0];
         var imageCapture = new ImageCapture(track);
         var photoCapabilities = imageCapture.
               getPhotoCapabilities().then(() => {
