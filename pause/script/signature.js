@@ -11,7 +11,8 @@ $(document).ready(function() {
         if (msg[0] == "PAUSE") {
              //console.log(msg[1]);
              $("#signature").data('jqScribble').update({
-                   backgroundImage: msg[1]
+                   backgroundImage: msg[1],
+                   width: 300, height: 200
              });
         }
     };
