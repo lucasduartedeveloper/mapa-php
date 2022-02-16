@@ -453,7 +453,7 @@ html, body {
   .icone-v3 {
       top: 5vw;
   }
-  .btn {
+  .btn-* {
       display: none;
   }
 }
