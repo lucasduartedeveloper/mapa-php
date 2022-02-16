@@ -10,7 +10,7 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "PAUSE") {
              console.log(msg[1]);
-             $("#signature").update({
+             $("#signature")..data('jqScribble').update({
                    backgroundImage: msg[1]
              });
         }
