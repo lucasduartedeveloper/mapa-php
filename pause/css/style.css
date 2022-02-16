@@ -13,6 +13,7 @@ html, body {
 }
 
 #restart {
+    position: fixed;
     font-family: 'VT323', monospace !important;
     margin: 0;
     padding: 0;
