@@ -9,6 +9,7 @@ $(document).ready(function() {
     ws.onmessage(function(e) {
         var msg = e.split("|");
         if (msg[0] == "PAUSE") {
+             console.log(msg[1]);
              $("#signature").update({
                    bacgroundImage: msg[1]
              });
