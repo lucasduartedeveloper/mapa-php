@@ -457,7 +457,10 @@ html, body {
       bottom: 85vh;
   }
   .icone-v3 {
-      top: 5vw;
+      top: 5vh;
+      right: 5vh;
+      width: 5vh;
+      height: 5vh;
   }
 }
 
