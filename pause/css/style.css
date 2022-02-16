@@ -30,10 +30,14 @@ html, body {
    display: flex;
     justify-content: space-around;
     flex-direction: row;
+    background-color: #405d27;
+    color: white;
 }
 
 #btn-dislike {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    background-color: #c94c4c;
+    color: white;
 }

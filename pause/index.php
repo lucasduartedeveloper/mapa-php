@@ -40,10 +40,10 @@
 
 <div id="buttons">
       <button id="btn-like">
-           <i class="fa-solid fa-thumbs-up"></i>Like
+           <i class="fa-solid fa-circle-check"></i>
       </button>
       <button id="btn-dislike">
-           <i class="fa-solid fa-thumbs-down"></i>Dislike
+           <i class="fa-solid fa-circle-xmark"></i>
       </button>
 </div>
 
