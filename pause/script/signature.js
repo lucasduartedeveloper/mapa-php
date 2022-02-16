@@ -6,7 +6,7 @@ $(document).ready(function() {
          var dataUrl = signature.toDataURL();
          ws.send("PAUSE|"+dataUrl);
     });
-    ws.onmessage(function(e) {
+    ws.onmessage = function(e) {
         var msg = e.split("|");
         if (msg[0] == "PAUSE") {
              console.log(msg[1]);
@@ -14,5 +14,5 @@ $(document).ready(function() {
                    bacgroundImage: msg[1]
              });
         }
-    });
+    };
 });
