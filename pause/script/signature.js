@@ -3,7 +3,7 @@ var audio1 = new Audio("audio/sfx_victory.wav");
 var audio2 = new Audio("audio/game_over.wav");
 
 var playerId = new Date().getTime();
-var playerCount = 0;
+var playerList = [];
 
 var touchCount = 0;
 var titles = [
@@ -56,13 +56,15 @@ $(document).ready(function() {
                  $("#restart").show();
             }
             else if (msg[2] == "ADD") {
-                 playerCount += 1;
-                 ws.send("PAUSE|"+playerId+"|ADD");
-                 $("#player-count").text("+"+playerCount);
+                 if (!playerList.includes(msg[1])) {
+                      playerList.push(msg[1]);
+                      ws.send("PAUSE|"+playerId+"|ADD");
+                      $("#player-count").text("+"+playerList.length);
+                 }
             }
             else if (msg[2] == "REMOVE") {
-                 playerCount -= 1;
-                 $("#player-count").text("+"+playerCount);
+                 playerList = playerList.filter((e) => e != msg[1]);
+                 $("#player-count").text("+"+playerList.length);
             }
         }
     };
