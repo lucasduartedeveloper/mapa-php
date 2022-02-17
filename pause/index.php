@@ -26,6 +26,8 @@
 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+<meta name="a.validate.02" content="WKgSkzwneGzHvL1ObyKbJ7IScw9n5526TP6K" />
+
 <title></title>
 </head>
 <body>
