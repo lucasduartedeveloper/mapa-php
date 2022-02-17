@@ -57,6 +57,11 @@ $(document).ready(function() {
             }
             else if (msg[2] == "ADD") {
                  playerCount += 1;
+                 ws.send("PAUSE|"+playerId+"|ADD");
+                 $("#player-count").text("+"+playerCount);
+            }
+            else if (msg[2] == "REMOVE") {
+                 playerCount -= 1;
                  $("#player-count").text("+"+playerCount);
             }
         }
@@ -80,6 +85,6 @@ $(document).ready(function() {
     $(window).bind("beforeunload", function() { 
         ws.send("PAUSE|"+playerId+"|REMOVE");
     });
-    //ws.send("PAUSE|"+playerId+"|ADD");
+    ws.send("PAUSE|"+playerId+"|ADD");
     $("#player-id").text(playerId);
 });
