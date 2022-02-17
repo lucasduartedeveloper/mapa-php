@@ -26,7 +26,7 @@ $(document).ready(function() {
          ws.send("PAUSE|"+playerId+"|CANVAS|"+dataUrl);
          touchCount += 1;
          touchCount = 
-            touchCount > ((titles.length*2)-2) ? :
+            touchCount > ((titles.length*2)-2) ?
             0 : touchCount;
          $("#title").text(titles[touchCount/2]);
     });
