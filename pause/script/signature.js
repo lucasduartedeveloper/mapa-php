@@ -5,6 +5,15 @@ var audio2 = new Audio("audio/game_over.wav");
 var playerId = new Date().getTime();
 var playerCount = 0;
 
+var touchCount = 0;
+var titles = [
+    "ALÁ, TA DESENHANDO",
+    "TÁ DESENHANDO MAIS?",
+    "IMPOSSÍVEL ISSO",
+    "ENTÃO DESENHA",
+    "E EU NÃO FAÇO NADA?"
+];
+
 $(document).ready(function() {
     $("#signature").jqScribble();
     $("#signature").data('jqScribble').update({
@@ -13,6 +22,8 @@ $(document).ready(function() {
     $("#signature").on("touchend", function(e) {
          var dataUrl = signature.toDataURL();
          ws.send("PAUSE|"+playerId+"|CANVAS|"+dataUrl);
+         touchCount += 1;
+         $("#title").text(titles[touchCount]);
     });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");

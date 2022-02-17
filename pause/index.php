@@ -32,7 +32,7 @@
 
 <p>
      <img id="logo" src="webapp/android-chrome-192x192.png"/>
-     DESENHE AGORA
+     <span id="title">DESENHE AGORA</span>
 </p>
 
 <canvas id="signature" width=300 height=200>
@@ -48,7 +48,7 @@
 </div>
 
 <p id="version-info">
-     v27.3.35
+     v27.3.36
      <br>
      <span id="server-info">
      CONNECTING...
@@ -88,7 +88,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=3"></script>
-<script src="script/signature.js?v=35"></script>
+<script src="script/signature.js?v=36"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
