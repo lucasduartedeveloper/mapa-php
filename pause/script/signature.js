@@ -53,6 +53,7 @@ $(document).ready(function() {
                  audio2.play();
                  $("#restart-msg").text("NÃO");
                  $("#restart").css("background-color", "#c94c4c");
+                 ws.send("PAUSE|"+playerId+"|REMOVE");
                  $("#restart").show();
             }
             else if (msg[2] == "ADD") {
