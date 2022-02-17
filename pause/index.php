@@ -32,6 +32,8 @@
 </head>
 <body>
 
+<script type="text/javascript" data-adel="atag" src="//acscdn.com/script/atg.js" czid="0zhw3yznem"></script>
+
 <p>
      <img id="logo" src="webapp/android-chrome-192x192.png"/>
      <span id="title">DESENHE AGORA</span>
