@@ -31,7 +31,7 @@
 <body>
 
 <p>
-     OBJETIVO
+     DESENHE AGORA
 </p>
 
 <canvas id="signature" width=300 height=200>
