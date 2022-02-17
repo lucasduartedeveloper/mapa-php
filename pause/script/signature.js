@@ -2,7 +2,7 @@ var audio0 = new Audio("audio/game_notification.wav");
 var audio1 = new Audio("audio/sfx_victory.wav");
 var audio2 = new Audio("audio/game_over.wav");
 
-var playerId = new Date().getTime();
+var playerId = "000"
 var playerList = [];
 
 var touchCount = 0;
@@ -90,8 +90,7 @@ $(document).ready(function() {
     $(window).bind("beforeunload", function() { 
         ws.send("PAUSE|"+playerId+"|REMOVE");
     });
-    setTimeout(function() {
-         ws.send("PAUSE|"+playerId+"|ADD");
-    }, 500);
+    playerId = new Date().getTime();
+    ws.send("PAUSE|"+playerId+"|ADD");
     $("#player-id").text(playerId);
 });
