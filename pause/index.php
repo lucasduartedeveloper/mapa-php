@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=21">
+<link rel="stylesheet" href="css/style.css?v=22">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,6 +31,7 @@
 <body>
 
 <p>
+     <img id="logo" src="webapp/android-chrome-192x192.png"/>
      DESENHE AGORA
 </p>
 
@@ -48,7 +49,7 @@
 </div>
 
 <p id="version-info">
-     v21.3.32
+     v22.3.32
      <br>
      <span id="server-info">
      CONNECTING...
