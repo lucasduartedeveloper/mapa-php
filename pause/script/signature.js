@@ -12,7 +12,8 @@ var titles = [
     "TÁ DESENHANDO MAIS?",
     "IMPOSSÍVEL ISSO",
     "ENTÃO DESENHA",
-    "E EU NÃO FAÇO NADA?"
+    "E EU NÃO FAÇO NADA?",
+    "CASE-SE COMIGO"
 ];
 
 $(document).ready(function() {
@@ -24,6 +25,9 @@ $(document).ready(function() {
          var dataUrl = signature.toDataURL();
          ws.send("PAUSE|"+playerId+"|CANVAS|"+dataUrl);
          touchCount += 1;
+         touchCount = 
+            touchCount > (titles.length-1) ? :
+            0 : touchCount;
          $("#title").text(titles[touchCount]);
     });
     ws.onmessage = function(e) {
