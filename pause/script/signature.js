@@ -58,8 +58,11 @@ $(document).ready(function() {
             }
             else if (msg[2] == "ADD") {
                  if (!playerList.includes(msg[1])) {
+                      var dataUrl = signature.toDataURL();
                       playerList.push(msg[1]);
                       ws.send("PAUSE|"+playerId+"|ADD");
+                      ws.send("PAUSE|"+playerId+
+                      "|CANVAS|"+dataUrl);
                       $("#player-count").text("+"+playerList.length);
                  }
             }
