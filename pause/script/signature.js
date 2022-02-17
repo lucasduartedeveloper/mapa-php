@@ -1,8 +1,8 @@
-var playerId = new Date().getTime();
 var audio0 = new Audio("audio/game_notification.wav");
 var audio1 = new Audio("audio/sfx_victory.wav");
 var audio2 = new Audio("audio/game_over.wav");
 
+var playerId = new Date().getTime();
 var playerCount = 0;
 
 $(document).ready(function() {
@@ -63,6 +63,6 @@ $(document).ready(function() {
     $(window).bind("beforeunload", function() { 
         ws.send("PAUSE|"+playerId+"|REMOVE");
     });
-    ws.send("PAUSE|"+playerId+"|ADD");
+    //ws.send("PAUSE|"+playerId+"|ADD");
     $("#player-id").text(playerId);
 });
