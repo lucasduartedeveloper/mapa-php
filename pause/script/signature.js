@@ -13,7 +13,7 @@ var titles = [
     "IMPOSSÍVEL ISSO",
     "ENTÃO DESENHA",
     "E EU NÃO FAÇO NADA?",
-    "CASE-SE COMIGO"
+    "CASE-SE COMIGO!"
 ];
 
 $(document).ready(function() {
@@ -27,7 +27,7 @@ $(document).ready(function() {
          touchCount += 1;
          touchCount = 
             touchCount > ((titles.length*2)-2) ?
-            0 : touchCount;
+            touchCount : touchCount;
          $("#title").text(titles[touchCount/2]);
     });
     ws.onmessage = function(e) {
