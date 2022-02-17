@@ -31,6 +31,7 @@ $(document).ready(function() {
                         backgroundImage: msg[3],
                         width: 300, height: 200
                  });
+                 audio0.play();
             }
             else if (msg[2] == "LIKE") {
                  audio1.play();
@@ -98,4 +99,6 @@ $(document).ready(function() {
 function confirmarContagem() {
     playerList = [];
     ws.send("PAUSE|"+playerId+"|ONLINE");  
+    $("#player-count").text("+"+playerList.length);
+    audio0.play();
 }
