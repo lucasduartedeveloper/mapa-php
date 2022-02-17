@@ -6,16 +6,15 @@ var playerId = new Date().getTime();
 var playerList = [];
 
 var touchCount = 0;
-var titles = [
-    "DESENHE AGORA",
-    "VISH, DESENHOU MESMO",
+var titles = [ "DESENHE AGORA" ];
+/*    "VISH, DESENHOU MESMO",
     "ALÁ, TA DESENHANDO...",
     "TÁ DESENHANDO MAIS?",
     "IMPOSSÍVEL ISSO",
     "ENTÃO DESENHA",
     "E EU NÃO FAÇO NADA?",
     "CASE-SE COMIGO!"
-];
+];*/
 
 $(document).ready(function() {
     $("#signature").jqScribble();
@@ -27,7 +26,7 @@ $(document).ready(function() {
          ws.send("PAUSE|"+playerId+"|CANVAS|"+dataUrl);
          touchCount += 1;
          touchCount = 
-            touchCount > ((titles.length*2)-2) ?
+            touchCount >= ((titles.length*2)-2) ?
             touchCount : touchCount;
          $("#title").text(titles[touchCount/2]);
     });
