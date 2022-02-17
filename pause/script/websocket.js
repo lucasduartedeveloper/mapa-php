@@ -13,6 +13,8 @@ var ws = {
                 for (var k in messagesWaiting) {
                      wsh.send(messagesWaiting[k]);
                 }
+                console.log("messagesWaiting:");
+                console.log(messagesWaiting);
                 messagesWaiting = [];
            };
            wsh.onclose = function(e) {
