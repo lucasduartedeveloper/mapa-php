@@ -36,7 +36,6 @@
 </p>
 
 <canvas id="signature" width=300 height=200>
-     
 </canvas>
 
 <div id="buttons">
@@ -59,6 +58,7 @@
 <p id="player-info">
      <i class="fa-solid fa-user"></i>&nbsp;
      <span id="player-id"></span>
+     <span id="player-count">+0</span>
 </p>
 
 <div style="display:none" id="restart">
