@@ -2,19 +2,10 @@ var audio0 = new Audio("audio/game_notification.wav");
 var audio1 = new Audio("audio/sfx_victory.wav");
 var audio2 = new Audio("audio/game_over.wav");
 
-var playerId = "000"
-var playerList = [];
-
 var touchCount = 0;
-var titles = [ "DESENHE AGORA" ];
-/*    "VISH, DESENHOU MESMO",
-    "ALÁ, TA DESENHANDO...",
-    "TÁ DESENHANDO MAIS?",
-    "IMPOSSÍVEL ISSO",
-    "ENTÃO DESENHA",
-    "E EU NÃO FAÇO NADA?",
-    "CASE-SE COMIGO!"
-];*/
+var titles = [ "WEBSOCKETS" ];
+var playerId = "000";
+var playerList = [];
 
 $(document).ready(function() {
     $("#signature").jqScribble();
@@ -69,12 +60,20 @@ $(document).ready(function() {
                  playerList = playerList.filter((e) => e != msg[1]);
                  $("#player-count").text("+"+playerList.length);
             }
+            else if (msg[2] == "ONLINE") {
+                 if (!playerList.includes(msg[1])) {
+                      playerList.push(msg[1]);
+                      ws.send("PAUSE|"+playerId+"|ONLINE");
+                      $("#player-count").text("+"+playerList.length);
+                 }
+            }
         }
     };
 
     $("#player-info").click(function() {
        $("#signature").data('jqScribble').clear();
        $("#signature").trigger("touchend");
+       confirmarContagem();
     });
     $("#btn-like").click(function() {
         ws.send("PAUSE|"+playerId+"|LIKE");
@@ -94,3 +93,9 @@ $(document).ready(function() {
     ws.send("PAUSE|"+playerId+"|ADD");
     $("#player-id").text(playerId);
 });
+
+// Confirmar conexões
+function confirmarContagem() {
+    playerList = [];
+    ws.send("PAUSE|"+playerId+"|ONLINE");  
+}
