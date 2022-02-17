@@ -59,7 +59,6 @@
      <i class="fa-solid fa-user"></i>&nbsp;
      <span id="player-id"></span>
      <br>
-     <i class="fa-solid fa-user"></i>&nbsp;
      <span id="player-count">+0</span>
 </p>
 
