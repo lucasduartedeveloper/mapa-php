@@ -91,6 +91,8 @@ $(document).ready(function() {
     $(window).bind("beforeunload", function() { 
         ws.send("PAUSE|"+playerId+"|REMOVE");
     });
-    ws.send("PAUSE|"+playerId+"|ADD");
+    setTimeout(function() {
+         ws.send("PAUSE|"+playerId+"|ADD");
+    }, 500);
     $("#player-id").text(playerId);
 });
