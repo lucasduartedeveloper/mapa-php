@@ -31,7 +31,7 @@ var ws = {
                wsh.send(e);
                messagesSent.push(e);
            }
-           else { messagesWaiting.push(e.data); }
+           else { messagesWaiting.push(e); }
       },
       onmessage: function (e) { },
       tempo: 0
