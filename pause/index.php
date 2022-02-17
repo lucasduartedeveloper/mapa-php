@@ -52,7 +52,7 @@
 </div>
 
 <p id="version-info">
-     v27.4.48
+     v27.5.48
      <br>
      <span id="server-info">
      CONNECTING...
@@ -91,7 +91,7 @@
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<script src="script/websocket.js?v=4"></script>
+<script src="script/websocket.js?v=5"></script>
 <script src="script/signature.js?v=48"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>

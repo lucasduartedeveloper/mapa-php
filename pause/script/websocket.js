@@ -2,6 +2,8 @@ var host = "wss://mapa-ws.herokuapp.com/";
 var wsh = null;
 
 var messagesWaiting = [];
+var messagesSent = [];
+var messagesReceived = [];
 
 var ws = {
       start: function () {
@@ -19,11 +21,13 @@ var ws = {
            };
            wsh.onmessage = function(e) {
                 ws.onmessage(e);
+                messagesReceived.push(e.data);
            };
       },
       send: function (e) {
            if (wsh.readyState == 1) {
                wsh.send(e);
+               messagesSent.push(e.data);
            }
            else { messagesWaiting.push(e.data); }
       },
