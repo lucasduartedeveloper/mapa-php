@@ -3,6 +3,8 @@ var audio0 = new Audio("audio/game_notification.wav");
 var audio1 = new Audio("audio/sfx_victory.wav");
 var audio2 = new Audio("audio/game_over.wav");
 
+var playerCount = 0;
+
 $(document).ready(function() {
     $("#signature").jqScribble();
     $("#signature").data('jqScribble').update({
@@ -36,6 +38,10 @@ $(document).ready(function() {
                  $("#restart").css("background-color", "#c94c4c");
                  $("#restart").show();
             }
+            else if (msg[2] == "ADD") {
+                 playerCount += 1;
+                 $("#player-count").text("+"+playerCount);
+            }
         }
     };
 
@@ -51,6 +57,12 @@ $(document).ready(function() {
     });
     $("#restart").click(function() {
          location.reload();
-    });   
+    }); 
+
+    // Player ID
+    $(window).bind("beforeunload", function() { 
+        ws.send("PAUSE|"+playerId+"|REMOVE");
+    });
+    ws.send("PAUSE|"+playerId+"|ADD");
     $("#player-id").text(playerId);
 });
