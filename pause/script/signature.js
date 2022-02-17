@@ -91,6 +91,8 @@ $(document).ready(function() {
         ws.send("PAUSE|"+playerId+"|REMOVE");
     });
     playerId = new Date().getTime();
+    console.log("PAUSE|"+playerId+"|ADD");
     ws.send("PAUSE|"+playerId+"|ADD");
+    console.log("PAUSE|"+playerId+"|ADD");
     $("#player-id").text(playerId);
 });
