@@ -8,7 +8,8 @@ var playerCount = 0;
 var touchCount = 0;
 var titles = [
     "DESENHE AGORA",
-    "ALÁ, TA DESENHANDO",
+    "DESENHOU MESMO",
+    "ALÁ, TA DESENHANDO...",
     "TÁ DESENHANDO MAIS?",
     "IMPOSSÍVEL ISSO",
     "ENTÃO DESENHA",
