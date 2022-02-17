@@ -26,7 +26,7 @@ $(document).ready(function() {
             else if (msg[2] == "LIKE") {
                  audio1.play();
                  $("#restart-msg").text("SIM");
-                 $("#restart").css("background-color", "#405d27");
+                 $("#restart").css("background-color", "#36486b");
                  $("#restart").show();
             }
             else if (msg[2] == "DISLIKE") {
