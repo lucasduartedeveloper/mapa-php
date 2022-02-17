@@ -72,6 +72,7 @@ $(document).ready(function() {
     };
 
     $("#player-info").click(function() {
+       audio0.play();
        $("#signature").data('jqScribble').clear();
        $("#signature").trigger("touchend");
        confirmarContagem();
@@ -98,7 +99,6 @@ $(document).ready(function() {
 // Confirmar conexões
 function confirmarContagem() {
     playerList = [];
-    ws.send("PAUSE|"+playerId+"|ONLINE");  
     $("#player-count").text("+"+playerList.length);
-    audio0.play();
+    ws.send("PAUSE|"+playerId+"|ONLINE"); 
 }
