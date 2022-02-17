@@ -62,11 +62,7 @@ $(document).ready(function() {
                  $("#player-count").text("+"+playerList.length);
             }
             else if (msg[2] == "ONLINE") {
-                 if (!playerList.includes(msg[1])) {
-                      playerList.push(msg[1]);
-                      ws.send("PAUSE|"+playerId+"|ONLINE");
-                      $("#player-count").text("+"+playerList.length);
-                 }
+                 ws.send("PAUSE|"+playerId+"|ADD");
             }
         }
     };
