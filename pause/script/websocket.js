@@ -27,7 +27,7 @@ var ws = {
       send: function (e) {
            if (wsh.readyState == 1) {
                wsh.send(e);
-               messagesSent.push(e.data);
+               messagesSent.push(e);
            }
            else { messagesWaiting.push(e.data); }
       },
