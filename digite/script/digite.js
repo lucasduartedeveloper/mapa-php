@@ -5,12 +5,7 @@ var audio3 = new Audio("audio/getting_hit.wav");
 var audio4 = new Audio("audio/creature_dying.wav");
 
 var words = [
-   "BOLA DE FOGO",
-   "BOLA DE ÁGUA",
-   "BOLA DE DINOSSAURO",
-   "VOADORA DE GELO",
-   "SOCO DA FLORESTA",
-   "AMOR FORÇADO"
+   "GOLPE"
 ];
 
 var word = getRandomWord();
@@ -26,6 +21,9 @@ $(document).ready(function() {
                  points += 1;
                  audio3.play();
             }
+            else if (msg[2] == "GAME_OVER") {
+                 gameOver();
+            }
         }
     };
 
@@ -39,8 +37,7 @@ $(document).ready(function() {
                ws.send("DIGITE|"+playerId+"|ADD_POINT");
          }
          else {
-              audio2.play();
-              $("input").val("");
+              gameOver();
          }
     });
 
@@ -71,4 +68,13 @@ function drawBoard(typed = "") {
 function getRandomWord() {
     var n = Math.floor(Math.random() * words.length);
     return words[n];
+}
+
+function gameOver() {
+    audio2.play();
+    $("#restart-msg").text("GAME OVER");
+    $("#restart").css("background-color",
+    "#c94c4c");
+    $("input").val("");
+    $("#restart").show();
 }
