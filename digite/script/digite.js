@@ -5,7 +5,8 @@ var audio3 = new Audio("audio/getting_hit.wav");
 var audio4 = new Audio("audio/creature_dying.wav");
 
 var words = [
-   "GOLPE"
+   "GOLPE",
+   "PODER DE FOGO"
 ];
 
 var word = getRandomWord();
