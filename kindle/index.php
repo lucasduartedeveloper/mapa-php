@@ -20,7 +20,7 @@
      <script src="websocket.js" />
      </head>
      <body>
-         <p id="update-est">0</p>
+         <p id="update-test">0</p>
          <p id="server-info">CONNECTING...</p>
      </body>
 </html>
