@@ -10,7 +10,6 @@
                 height: 100%;
          }
      </style>
-     <script src="websocket.js" />
      <script>
           var updated = 0;
           setInterval(function() {
@@ -18,9 +17,10 @@
                 updateTest.innerText = updated;
           }, 250);
      </script>
+     <script src="websocket.js" />
      </head>
      <body>
-         <p id="update-test">0</p>
+         <p id="update-est">0</p>
          <p id="server-info">CONNECTING...</p>
      </body>
 </html>
