@@ -85,7 +85,7 @@ function getRandomWord() {
 }
 
 function gameWin() {
-    audio4.play();
+    audio1.play();
     $("#restart-msg").text("VITÓRIA");
     $("#restart").css("background-color",
     "#36486b");
