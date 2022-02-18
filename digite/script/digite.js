@@ -91,12 +91,11 @@ function getRandomWord() {
 }
 
 function setDamage(dmg) {
-    damage = dmg;
-    audio3.pause();
-    audio3.play();
-
     $("#fire").addClass("animate");
     setTimeout(function() {
+         damage = dmg;
+         audio3.pause();
+         audio3.play();
          $("#fire").removeClass("animate");
          var width = 96 - Math.floor((96 / enemyHP) * damage);
          $("#hp-value").css("width", width+"px");
