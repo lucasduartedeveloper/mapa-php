@@ -6,7 +6,10 @@ var audio4 = new Audio("audio/creature_dying.wav");
 
 var words = [
    { name: "GOLPE", damage: 1 },
-   { name: "FOGO", damage: 2 }
+   { name: "FOGO", damage: 2 },
+   { name: "CHAMAS", damage: 2 },
+   { name: "LABAREDA", damage: 2 },
+   { name: "FOGARÉU", damage: 2 }
 ];
 
 var word = getRandomWord();
@@ -69,16 +72,17 @@ $(document).ready(function() {
 
 function drawBoard(typed = "") {
     var html = "";
-    for (var k = 0; k < word.name.length; k++) {
+    var word = scrambleWord();
+    for (var k = 0; k < word.length; k++) {
          if (k < typed.length &&
-             typed.charAt(k) == word.name.charAt(k)) {     
+             typed.charAt(k) == word.charAt(k)) {     
                 html += '<div class="letter correct">'+
-                word.name.charAt(k)+
+                word.charAt(k)+
                 '</div>';
          }
          else {
              html += '<div class="letter">'+
-             word.name.charAt(k)+
+             word.charAt(k)+
              '</div>';
          }
     }
@@ -88,6 +92,21 @@ function drawBoard(typed = "") {
 function getRandomWord() {
     var n = Math.floor(Math.random() * words.length);
     return words[n];
+}
+
+function scrambleWord() {
+    var wordScrambled = word.name;
+    for (var k = 0; k < word.name.length; k++) {
+          var n = Math.floor(Math.random() *
+          word.name.length);
+          var c1 = wordScrambled.charAt(0);
+          var c2 = wordScrambled.charAt(n);
+          var split = wordScrambled.split("");
+          split[0] = c2;
+          split[n] = c1;
+          wordScrambled = split.join("");
+    }
+    return wordScrambled;
 }
 
 function setDamage(dmg) {
