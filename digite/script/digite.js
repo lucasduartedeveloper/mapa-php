@@ -5,8 +5,8 @@ var audio3 = new Audio("audio/getting_hit.wav");
 var audio4 = new Audio("audio/creature_dying.wav");
 
 var words = [
-   "GOLPE",
-   "PODER DE FOGO"
+   { name: "GOLPE", damage: 1 },
+   { name: "PODER DE FOGO", damage: 2 }
 ];
 
 var word = getRandomWord();
@@ -20,8 +20,14 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "DIGITE" &&
             playerId != msg[1]) {
-            if (msg[2] == "ADD_DAMAGE") {
-                 addDamage();
+            if (msg[2] == "GET_DAMAGE") {
+                 ws.send("DIGITE|"+
+                      playerId+
+                      "|SET_DAMAGE|"+
+                      damage);
+            }
+            else if (msg[2] == "SET_DAMAGE") {
+                 setDamage(parseInt(msg[3]));
             }
             else if (msg[2] == "GAME_OVER") {
                  gameOver();
@@ -30,15 +36,17 @@ $(document).ready(function() {
     };
 
     $("#btn-done").on("click", function() {
-         if ($("input").val().toUpperCase() == word) {
+         if ($("input").val().toUpperCase() == word.name) {
                audio3.play();
                word = getRandomWord();
                drawBoard();
                $("input").val("");
                $("input").focus();
 
-               ws.send("DIGITE|"+playerId+"|ADD_DAMAGE");
-               addDamage();
+               ws.send("DIGITE|"+
+                     playerId+
+                     "|SET_DAMAGE|"+);
+              setDamage(damage + word.damage);
          }
          else {
               gameOver();
@@ -52,20 +60,21 @@ $(document).ready(function() {
         drawBoard($("input").val().toUpperCase());
     });
     drawBoard();
+    ws.send("DIGITE|"+playerId+"|GET_DAMAGE");
 });
 
 function drawBoard(typed = "") {
     var html = "";
-    for (var k = 0; k < word.length; k++) {
+    for (var k = 0; k < word.name.length; k++) {
          if (k < typed.length &&
-             typed.charAt(k) == word.charAt(k)) {     
+             typed.charAt(k) == word.name.charAt(k)) {     
                 html += '<div class="letter correct">'+
-                word.charAt(k)+
+                word.name.charAt(k)+
                 '</div>';
          }
          else {
              html += '<div class="letter">'+
-             word.charAt(k)+
+             word.name.charAt(k)+
              '</div>';
          }
     }
@@ -77,8 +86,8 @@ function getRandomWord() {
     return words[n];
 }
 
-function addDamage() {
-    damage += 1;
+function setDamage(dmg) {
+    damage = dmg;
     audio3.pause();
     audio3.play();
     var width = 96 - Math.floor((96 / enemyHP) * damage);
