@@ -40,7 +40,7 @@
 </div>
 
 <div id="type-area"> 
-     <input type="text">
+     <input style="text-transform:uppercase" type="text">
      <button id="btn-done">
            <i class="fa-solid fa-check"></i>
      </button>

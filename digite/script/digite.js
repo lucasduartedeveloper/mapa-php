@@ -27,8 +27,14 @@ $(document).ready(function() {
               $("input").val("");
          }
     });
+
+    $("input").on("input", function() {
+        $("input").val();
+    });
     drawBoard();
 });
+
+
 
 function drawBoard() {
     var html = "";
