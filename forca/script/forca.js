@@ -5,9 +5,9 @@ $(document).ready(function() {
 
     var html = "";
     for (var k = 0; k < word.length; k++) {
-         html += '<span class="letter">'+
+         html += '<div class="letter">'+
          word.charAt(k)+
-         '</span>';
+         '</div>';
     }
     $("#board").html(html);
 });
