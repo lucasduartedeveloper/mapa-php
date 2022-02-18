@@ -19,7 +19,7 @@
                 .innerText = updated;
           }, 250);
      </script>
-     <script src="websocket.js?v=0"/>
+     <!-- <script src="websocket.js?v=0"/> -->
      </head>
      <body>
          <p id="update-test">0</p>
