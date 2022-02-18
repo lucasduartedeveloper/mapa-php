@@ -35,6 +35,14 @@ html, body {
 #board {
     width: 300px;
     height: 200px;
+    border: 1px black solid;
+    background-color: #0583F4;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.letter {
+    width: 20px;
+    height: 20px;
     border: 2px black solid;
     border-radius: 10px;
     background-color: #fff;
