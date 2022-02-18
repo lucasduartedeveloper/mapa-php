@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -40,7 +40,7 @@
 </div>
 
 <p id="version-info">
-     v3.0.4
+     v4.0.4
      <br>
      <span id="server-info">
      CONNECTING...
