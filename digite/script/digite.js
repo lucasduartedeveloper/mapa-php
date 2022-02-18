@@ -51,6 +51,9 @@ $(document).ready(function() {
          }
          else {
               gameOver();
+              ws.send("DIGITE|"+
+                     playerId+
+                     "|GAME_OVER");
          }
     });
 
