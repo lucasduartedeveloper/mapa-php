@@ -103,7 +103,7 @@ function setDamage(dmg) {
          if (damage >= enemyHP) {
               gameWin();
          }
-    }, 500);
+    }, 1000);
 }
 
 function gameWin() {
