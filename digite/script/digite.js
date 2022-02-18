@@ -98,7 +98,7 @@ function setDamage(dmg) {
     $("#fire").addClass("animate");
     setTimeout(function() {
          $("#fire").removeClass("animate");
-    }, 1000);
+    }, 500);
 
     var width = 96 - Math.floor((96 / enemyHP) * damage);
     $("#hp-value").css("width", width+"px");
