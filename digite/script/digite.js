@@ -75,9 +75,9 @@ function drawBoard(typed = "") {
     var scrambledWord = scrambleWord();
     for (var k = 0; k < word.name.length; k++) {
          if (k < typed.length &&
-             typed.charAt(k) == scrambledWord.charAt(k)) {     
+             typed.charAt(k) == word.name.charAt(k)) {     
                 html += '<div class="letter correct">'+
-                word.charAt(k)+
+                scrambledWord.charAt(k)+
                 '</div>';
          }
          else {
