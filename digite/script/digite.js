@@ -1,3 +1,7 @@
+var audio0 = new Audio("audio/game_notification.wav");
+var audio1 = new Audio("audio/sfx_victory.wav");
+var audio2 = new Audio("audio/game_over.wav");
+
 var words = [
    "CACHORRO",
    "GATO",
@@ -10,10 +14,14 @@ var words = [
 var word = getRandomWord();
 
 $(document).ready(function() {
-    $("btn-done").on("click", function() {
+    $("#btn-done").on("click", function() {
          if ($("input").val() == word) {
-               getRandomWord();
+               audio0.play();
+               word = getRandomWord();
                drawBoard();
+         }
+         else {
+              audio2.play();
          }
     });
     drawBoard();
