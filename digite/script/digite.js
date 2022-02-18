@@ -11,7 +11,7 @@ var words = [
 var word = getRandomWord();
 var playerId = new Date().getTime();
 
-var enemyHP = 100;
+var enemyHP = 5;
 var damage = 0;
 
 $(document).ready(function() {
