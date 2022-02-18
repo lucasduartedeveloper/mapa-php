@@ -49,7 +49,7 @@ html, body {
     display: flex;
      justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 270px;
     flex-direction: row;
     flex-wrap: wrap;
 }
