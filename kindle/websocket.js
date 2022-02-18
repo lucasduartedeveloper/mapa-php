@@ -18,7 +18,6 @@ var ws = {
                 messagesWaiting = [];
            };
            wsh.onclose = function(e) {
-                serverInfo
                 document
                 .getElementById("server-info")
                 .innerText = "DISCONNECTED";
