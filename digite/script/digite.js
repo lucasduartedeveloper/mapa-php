@@ -19,6 +19,8 @@ $(document).ready(function() {
                audio0.play();
                word = getRandomWord();
                drawBoard();
+               $("input").val("");
+               $("input").focus();
          }
          else {
               audio2.play();
