@@ -11,7 +11,7 @@ var words = [
 var word = getRandomWord();
 var playerId = new Date().getTime();
 
-var enemyHP = 5;
+var enemyHP = 10;
 var damage = 0;
 
 $(document).ready(function() {
@@ -20,11 +20,7 @@ $(document).ready(function() {
         if (msg[0] == "DIGITE" &&
             playerId != msg[1]) {
             if (msg[2] == "ADD_DAMAGE") {
-                 damage += 1;
-                 audio3.play();
-                 if (damage == enemyHP) {
-                      gameWin();
-                 }
+                 addDamage();
             }
             else if (msg[2] == "GAME_OVER") {
                  gameOver();
@@ -41,11 +37,7 @@ $(document).ready(function() {
                $("input").focus();
 
                ws.send("DIGITE|"+playerId+"|ADD_DAMAGE");
-               damage += 1;
-               audio3.play();
-               if (damage == enemyHP) {
-                     gameWin();
-               }
+               addDamage();
          }
          else {
               gameOver();
@@ -82,6 +74,16 @@ function drawBoard(typed = "") {
 function getRandomWord() {
     var n = Math.floor(Math.random() * words.length);
     return words[n];
+}
+
+function addDamage() {
+    damage += 1;
+    audio3.play();
+    var width = 96 - Math.floor((enemyHP / 96) * damage);
+    $("#hp-value").css("width", width+"px");
+    if (damage == enemyHP) {
+         gameWin();
+    }
 }
 
 function gameWin() {
