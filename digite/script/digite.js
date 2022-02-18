@@ -43,10 +43,11 @@ $(document).ready(function() {
                $("input").val("");
                $("input").focus();
 
+               setDamage(damage + word.damage);
                ws.send("DIGITE|"+
                      playerId+
-                     "|SET_DAMAGE|"+);
-              setDamage(damage + word.damage);
+                     "|SET_DAMAGE|"+
+                     damage);
          }
          else {
               gameOver();
