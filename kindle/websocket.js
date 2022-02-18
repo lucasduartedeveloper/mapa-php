@@ -9,14 +9,19 @@ var ws = {
       start: function () {
            wsh = new WebSocket(host);
            wsh.onopen = function (e) {                
-                serverInfo.innerText = "CONNECTED";
+                document
+                .getElementId("update-test")
+                .innerText = "CONNECTED";
                 for (var k in messagesWaiting) {
                      wsh.send(messagesWaiting[k]);
                 }
                 messagesWaiting = [];
            };
            wsh.onclose = function(e) {
-                serverInfo.innerText = "DISCONNECTED";
+                serverInfo
+                document
+                .getElementId("update-test")
+                .innerText = "DISCONNECTED";
                 ws.start();
            };
            wsh.onmessage = function(e) {

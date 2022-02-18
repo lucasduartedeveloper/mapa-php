@@ -14,13 +14,15 @@
           var updated = 0;
           setInterval(function() {
                 updated += 1;
-                updateTest.innerText = updated;
+                document
+                .getElementId("update-test")
+                .innerText = updated;
           }, 250);
      </script>
      <script src="websocket.js" />
      </head>
      <body>
-         <p id="updateTest">0</p>
-         <p id="serverInfo">CONNECTING...</p>
+         <p id="update-test">0</p>
+         <p id="server-info">CONNECTING...</p>
      </body>
 </html>
