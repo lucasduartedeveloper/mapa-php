@@ -16,7 +16,7 @@
                 updated += 1;
                 document
                 .getElementById("update-test")
-                .innerHtml = updated;
+                .innerText = updated;
           }, 250);
      </script>
      </head>
