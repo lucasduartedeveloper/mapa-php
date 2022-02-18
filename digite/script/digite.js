@@ -10,16 +10,21 @@ var words = [
 
 var word = getRandomWord();
 var playerId = new Date().getTime();
-var points = 0;
+
+var enemyHP = 100;
+var damage = 0;
 
 $(document).ready(function() {
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "DIGITE" &&
             playerId != msg[1]) {
-            if (msg[2] == "ADD_POINT") {
-                 points += 1;
+            if (msg[2] == "ADD_DAMAGE") {
+                 damage += 1;
                  audio3.play();
+                 if (damage == enemyHP) {
+                      gameWin();
+                 }
             }
             else if (msg[2] == "GAME_OVER") {
                  gameOver();
@@ -34,13 +39,22 @@ $(document).ready(function() {
                drawBoard();
                $("input").val("");
                $("input").focus();
-               ws.send("DIGITE|"+playerId+"|ADD_POINT");
+
+               ws.send("DIGITE|"+playerId+"|ADD_DAMAGE");
+               damage += 1;
+               audio3.play();
+               if (damage == enemyHP) {
+                     gameWin();
+               }
          }
          else {
               gameOver();
          }
     });
 
+    $("#restart").click(function() {
+         location.reload();
+    }); 
     $("input").on("input", function() {
         drawBoard($("input").val().toUpperCase());
     });
@@ -68,6 +82,15 @@ function drawBoard(typed = "") {
 function getRandomWord() {
     var n = Math.floor(Math.random() * words.length);
     return words[n];
+}
+
+function gameWin() {
+    audio4.play();
+    $("#restart-msg").text("VITÓRIA");
+    $("#restart").css("background-color",
+    "#36486b");
+    $("input").val("");
+    $("#restart").show();
 }
 
 function gameOver() {
