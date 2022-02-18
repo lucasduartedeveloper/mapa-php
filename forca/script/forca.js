@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     var html = "";
     for (var k = 0; k < word.length; k++) {
-         html = '<span class="letter">'+
+         html += '<span class="letter">'+
          word.charAt(k)+
          '</span>';
     }

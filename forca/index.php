@@ -36,8 +36,8 @@
      <span id="title">FORCA</span>
 </p>
 
-<canvas id="board"> 
-</canvas>
+<div id="board"> 
+</div>
 
 <p id="version-info">
      v0
@@ -77,7 +77,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/forca.js?v=2"></script>
+<script src="script/forca.js?v=3"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
