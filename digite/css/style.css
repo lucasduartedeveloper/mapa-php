@@ -106,7 +106,7 @@ html, body {
 }
 
 #hp-container {
-    width: 100px
+    width: 100px;
     height: 10px;
     border: 2px black solid;
 }
