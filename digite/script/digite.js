@@ -6,7 +6,7 @@ var audio4 = new Audio("audio/creature_dying.wav");
 
 var words = [
    { name: "GOLPE", damage: 1 },
-   { name: "PODER DE FOGO", damage: 2 }
+   { name: "FOGO", damage: 2 }
 ];
 
 var word = getRandomWord();
