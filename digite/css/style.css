@@ -106,13 +106,13 @@ html, body {
 }
 
 #hp-container {
-    width: 200px;
+    width: 100px;
     height: 10px;
-    border: 4px black solid;
+    border: 2px black solid;
 }
 
 #hp-value {
-   width: 200px;
-   height: 10px;
+   width: 96px;
+   height: 6px;
    background-color: #f00;
 }
