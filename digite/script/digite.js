@@ -24,7 +24,7 @@ $(document).ready(function() {
          if ($("input").val().toUpperCase() == word) {
                audio0.play();
                word = getRandomWord();
-               drawBoard(word);
+               drawBoard();
                $("input").val("");
                $("input").focus();
          }
@@ -35,22 +35,25 @@ $(document).ready(function() {
     });
 
     $("input").on("input", function() {
-        var len = $("input").val().toUpperCase().length;
-        if (word.startsWith($("input").val().toUpperCase())) {
-             drawBoard(word.substring(len-1));
-        }
+        drawBoard($("input").val().toUpperCase());
     });
     drawBoard();
 });
 
-
-
-function drawBoard(word) {
+function drawBoard(typed = "") {
     var html = "";
     for (var k = 0; k < word.length; k++) {
-         html += '<div class="letter">'+
-         word.charAt(k)+
-         '</div>';
+         if (k < typed.length &&
+             typed.charAt(k) == word.charAt(k)) {     
+                html += '<div class="letter correct">'+
+                word.charAt(k)+
+                '</div>';
+         }
+         else {
+             html += '<div class="letter">'+
+             word.charAt(k)+
+             '</div>';
+         }
     }
     $("#board-center").html(html);
 }
