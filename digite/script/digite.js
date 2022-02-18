@@ -13,6 +13,8 @@ var words = [
 ];
 
 var word = getRandomWord();
+var scrambledWord= scrambleWord();
+
 var playerId = new Date().getTime();
 
 var enemyHP = 10;
@@ -42,6 +44,7 @@ $(document).ready(function() {
          if ($("input").val().toUpperCase() == word.name) {
                audio3.play();
                word = getRandomWord();
+               scrambledWord= scrambleWord();
                drawBoard();
                $("input").val("");
                $("input").focus();
@@ -72,7 +75,6 @@ $(document).ready(function() {
 
 function drawBoard(typed = "") {
     var html = "";
-    var scrambledWord = scrambleWord();
     for (var k = 0; k < word.name.length; k++) {
          if (k < typed.length &&
              typed.charAt(k) == word.name.charAt(k)) {     
