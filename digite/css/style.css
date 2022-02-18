@@ -11,8 +11,8 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: #0583F4;
-    color: black;
+    background-color: #2B2A32;
+    color: white;
 }
 
 #restart {
@@ -41,19 +41,21 @@ html, body {
     width: 300px;
     height: 200px;
     border: 1px black solid;
-    background-color: #0583F4;
+    border-radius: 5px;
+    background-color: #212026;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .letter {
     width: 50px;
     height: 50px;
-    border: 2px black solid;
+    border: 1px black solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    background-color: #fff;
+    border-radius: 5px;
+    color: white;
+    background-color: #2B2A32;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
