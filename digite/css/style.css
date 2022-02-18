@@ -126,6 +126,9 @@ html, body {
    margin-top: -50px;
    margin-left: -150px;
    transform: rotate(-90deg);
+}
+
+#fire.animate {
    animation: myAnim 1s linear 0s 1 normal forwards;
 }
 

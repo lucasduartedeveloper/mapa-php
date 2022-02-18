@@ -94,6 +94,12 @@ function setDamage(dmg) {
     damage = dmg;
     audio3.pause();
     audio3.play();
+
+    $("#fire").addClass("animate");
+    setTimeout(function() {
+         $("#fire").removeClass("animate");
+    }, 1000);
+
     var width = 96 - Math.floor((96 / enemyHP) * damage);
     $("#hp-value").css("width", width+"px");
     if (damage >= enemyHP) {
