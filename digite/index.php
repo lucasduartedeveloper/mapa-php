@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=27">
+<link rel="stylesheet" href="css/style.css?v=28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -50,12 +50,12 @@
 <div id="type-area"> 
      <input style="text-transform:uppercase" type="text">
      <button id="btn-done">
-           <i class="fa-solid fa-check"></i>
+           <i class="fa-solid fa-wand-sparkles"></i>
      </button>
 </div>
 
 <p id="version-info">
-     v27.0.35
+     v28.0.35
      <br>
      <span id="server-info">
      CONNECTING...
