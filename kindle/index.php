@@ -3,7 +3,12 @@
      <head>
      <title>v0</title>
      <style>
-
+         html, body {
+                font-size: 30px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+         }
      </style>
      <script>
           var updated = 0;
