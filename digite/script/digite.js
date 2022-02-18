@@ -96,7 +96,7 @@ function setDamage(dmg) {
     audio3.play();
     var width = 96 - Math.floor((96 / enemyHP) * damage);
     $("#hp-value").css("width", width+"px");
-    if (damage == enemyHP) {
+    if (damage >= enemyHP) {
          gameWin();
     }
 }
