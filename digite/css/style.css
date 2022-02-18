@@ -123,25 +123,24 @@ html, body {
    position: absolute;
    display: block;
    margin-top: -50px;
-   margin-left: -100px;
-   transform: rotate(-90deg);
-   animation: myAnim 2s ease 0s infinite normal forwards;
-   
+   margin-left: -150px;
+   transform: rotate(-90deg);,
+   animation: myAnim 2s liner 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
   0% {
     opacity: 0.25;
-    margin-left: -100px;
+    margin-left: -150px;
   }
 
   50% {
     opacity: 0.5;
-    margin-left: -50px;
+    margin-left: -100px;
   }
 
   100% {
     opacity: 1;
-    margin-left: 0px;
+    margin-left: -50px;
   }
 }
