@@ -104,3 +104,15 @@ html, body {
     margin-top: -5px;
     margin-left: 10px;
 }
+
+#hp-container {
+    width: 100px
+    height: 10px;
+    border: 2px black solid;
+}
+
+#hp-value {
+   width: 100px
+   height: 10px;
+   background-color: #f00;
+}

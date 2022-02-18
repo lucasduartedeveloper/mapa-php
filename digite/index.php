@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -29,6 +29,11 @@
 <title></title>
 </head>
 <body>
+
+<div id="hp-container"> 
+    <div id="hp-value"> 
+    </div>
+</div>
 
 <p>
      <img id="logo" src="webapp/android-chrome-192x192.png"/>
@@ -49,7 +54,7 @@
 </div>
 
 <p id="version-info">
-     v12.0.23
+     v13.0.23
      <br>
      <span id="server-info">
      CONNECTING...
