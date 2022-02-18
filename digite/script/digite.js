@@ -22,6 +22,7 @@ $(document).ready(function() {
          }
          else {
               audio2.play();
+              $("input").val("");
          }
     });
     drawBoard();
