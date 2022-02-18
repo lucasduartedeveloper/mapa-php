@@ -98,13 +98,12 @@ function setDamage(dmg) {
     $("#fire").addClass("animate");
     setTimeout(function() {
          $("#fire").removeClass("animate");
+         var width = 96 - Math.floor((96 / enemyHP) * damage);
+         $("#hp-value").css("width", width+"px");
+         if (damage >= enemyHP) {
+              gameWin();
+         }
     }, 500);
-
-    var width = 96 - Math.floor((96 / enemyHP) * damage);
-    $("#hp-value").css("width", width+"px");
-    if (damage >= enemyHP) {
-         gameWin();
-    }
 }
 
 function gameWin() {
