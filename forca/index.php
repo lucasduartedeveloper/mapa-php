@@ -40,7 +40,7 @@
 </div>
 
 <p id="version-info">
-     v0
+     v3.0.4
      <br>
      <span id="server-info">
      CONNECTING...
