@@ -15,7 +15,7 @@ var word = getRandomWord();
 
 $(document).ready(function() {
     $("#btn-done").on("click", function() {
-         if ($("input").val() == word) {
+         if ($("input").val().toUpperCase() == word) {
                audio0.play();
                word = getRandomWord();
                drawBoard();
