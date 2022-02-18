@@ -72,17 +72,17 @@ $(document).ready(function() {
 
 function drawBoard(typed = "") {
     var html = "";
-    var word = scrambleWord();
-    for (var k = 0; k < word.length; k++) {
+    var scrambledWord = scrambleWord();
+    for (var k = 0; k < word.name.length; k++) {
          if (k < typed.length &&
-             typed.charAt(k) == word.charAt(k)) {     
+             typed.charAt(k) == scrambledWord.charAt(k)) {     
                 html += '<div class="letter correct">'+
                 word.charAt(k)+
                 '</div>';
          }
          else {
              html += '<div class="letter">'+
-             word.charAt(k)+
+             scrambledWord.charAt(k)+
              '</div>';
          }
     }
