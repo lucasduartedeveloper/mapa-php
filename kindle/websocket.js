@@ -10,7 +10,7 @@ var ws = {
            wsh = new WebSocket(host);
            wsh.onopen = function (e) {                
                 document
-                .getElementId("update-test")
+                .getElementId("server-info")
                 .innerText = "CONNECTED";
                 for (var k in messagesWaiting) {
                      wsh.send(messagesWaiting[k]);
@@ -20,7 +20,7 @@ var ws = {
            wsh.onclose = function(e) {
                 serverInfo
                 document
-                .getElementId("update-test")
+                .getElementId("server-info")
                 .innerText = "DISCONNECTED";
                 ws.start();
            };
