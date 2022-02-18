@@ -141,12 +141,12 @@ html, body {
 @keyframes myAnim {
   0% {
     opacity: 0.25;
-    margin-top: 225px;
-    margin-left: 125px;
+    margin-top: 250px;
+    margin-left: 150px;
   }
   100% {
     opacity: 1;
     margin-top: -30px;
-    margin-left: 0px;
+    margin-left: 10px;
   }
 }
