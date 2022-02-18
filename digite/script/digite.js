@@ -79,7 +79,7 @@ function getRandomWord() {
 function addDamage() {
     damage += 1;
     audio3.play();
-    var width = 96 - Math.floor((enemyHP / 96) * damage);
+    var width = 96 - Math.floor((96 / enemyHP) * damage);
     $("#hp-value").css("width", width+"px");
     if (damage == enemyHP) {
          gameWin();
