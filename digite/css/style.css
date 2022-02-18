@@ -122,10 +122,11 @@ html, body {
    height: 80px;
    position: absolute;
    display: block;
+   opacity: 0;
    margin-top: -50px;
    margin-left: -150px;
    transform: rotate(-90deg);
-   animation: myAnim 2s linear 0s 1 normal forwards;
+   animation: myAnim 1s linear 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
