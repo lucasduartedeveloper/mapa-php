@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,6 +37,8 @@
 </p>
 
 <div id="board"> 
+     <div id="board-center">
+     </div>
 </div>
 
 <div id="type-area"> 
@@ -47,7 +49,7 @@
 </div>
 
 <p id="version-info">
-     v8.0.13
+     v10.0.15
      <br>
      <span id="server-info">
      CONNECTING...
@@ -77,7 +79,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/digite.js?v=13"></script>
+<script src="script/digite.js?v=15"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

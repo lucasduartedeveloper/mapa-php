@@ -8,7 +8,13 @@ var words = [
    "JACARÉ",
    "FLAMINGO",
    "DINOSSAURO",
-   "MISERICÓRDIA"
+   "MISERICÓRDIA",
+   "LANCHE",
+   "CAFÉ",
+   "CIGARRO",
+   "CARRO",
+   "MOTO",
+   "BICICLETA"
 ];
 
 var word = getRandomWord();
@@ -43,7 +49,7 @@ function drawBoard() {
          word.charAt(k)+
          '</div>';
     }
-    $("#board").html(html);
+    $("#board-center").html(html);
 }
 
 function getRandomWord() {
