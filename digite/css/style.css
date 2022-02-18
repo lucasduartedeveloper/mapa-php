@@ -124,7 +124,7 @@ html, body {
    display: block;
    margin-top: -50px;
    margin-left: -150px;
-   transform: rotate(-90deg);,
+   transform: rotate(-90deg);
    animation: myAnim 2s linear 0s 1 normal forwards;
 }
 
