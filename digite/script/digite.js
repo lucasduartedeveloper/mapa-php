@@ -10,7 +10,7 @@ var words = [
 var word = getRandomWord();
 
 $(document).ready(function() {
-    $("input").on("input", function() {
+    $("btn-done").on("click", function() {
          if ($("input").val() == word) {
                getRandomWord();
                drawBoard();

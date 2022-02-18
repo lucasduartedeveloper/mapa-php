@@ -38,21 +38,20 @@
 
 <div id="board"> 
 </div>
-<input type="text">
+
+<div id="type-area"> 
+     <input type="text">
+     <button id="btn-done">
+           <i class="fa-solid fa-check"></i>
+     </button>
+</div>
 
 <p id="version-info">
-     v7.0.8
+     v7.0.9
      <br>
      <span id="server-info">
      CONNECTING...
      </span>
-</p>
-
-<p id="player-info">
-     <i class="fa-solid fa-user"></i>&nbsp;
-     <span id="player-id"></span>
-     <br>
-     <span id="player-count">+0</span>
 </p>
 
 <div style="display:none" id="restart">
@@ -78,7 +77,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/digite.js?v=8"></script>
+<script src="script/digite.js?v=9"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
