@@ -15,7 +15,7 @@
           setInterval(function() {
                 updated += 1;
                 document
-                .getElementId("update-test")
+                .getElementById("update-test")
                 .innerText = updated;
           }, 250);
      </script>
