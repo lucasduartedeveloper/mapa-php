@@ -12,7 +12,6 @@
          }
          img {
                max-width: 40%;
-               max-height: 40%;
          }
      </style>
      <script>
