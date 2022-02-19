@@ -23,15 +23,15 @@ $(document).ready(function() {
          // ENVIAR
          var cnv = document.createElement("canvas");
          cnv.width = 300;
-         cnv.height = 200;
+         cnv.height = 300;
          var ctx = cnv.getContext("2d");
 
-         ctx.drawImage(video, 0, 0, 300, 200);
+         ctx.drawImage(video, 0, 0, 300, 300);
          var dataUrl = cnv.toDataURL("image/png");
 
          var img = document.createElement("img");
          img.width = 300;
-         img.height = 200;
+         img.height = 300;
          img.style.objectFit = "cover";
 
          // Gravar no banco de dados
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
          img.onload = function() {
               context.drawImage(
-              this, 0, 0, 300, 200); 
+              this, 0, 0, 300, 300); 
          };
          img.src = dataUrl;
      }, 1000);

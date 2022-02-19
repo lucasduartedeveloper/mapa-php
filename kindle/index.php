@@ -22,6 +22,8 @@
                .getElementById("frame-data")
                .src = data[0].base64;
           }
+          xhttp.open("GET", 
+          "/camera/ajax/camera.php?cameraId=0");
 
           var updated = 0;
           setInterval(function() {
@@ -32,8 +34,6 @@
                 .innerText = updated;
 
                 // Send a request
-                xhttp.open("GET", 
-                "/camera/ajax/camera.php?cameraId=0");
                 xhttp.send();
 
           }, 1000);
@@ -42,7 +42,7 @@
      </head>
      <body>
          <p id="update-test">0</p>
-         <img width=300 height=200 id="frame-data" />
+         <img width=300 height=300 id="frame-data" />
          <p id="server-info">CONNECTING...</p>
    
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>

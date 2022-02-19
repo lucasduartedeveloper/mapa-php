@@ -36,8 +36,8 @@
      <span id="title">???</span>
 </p>
 
-<video style="display:none" id="video" width="300" height="200" autoplay></video>
-<canvas width="300" height="200" id="camera-canvas"></canvas>
+<video style="display:none" id="video" width="300" height="300" autoplay></video>
+<canvas width="300" height="300" id="camera-canvas"></canvas>
 
 <p id="version-info">
      v0.1.4
