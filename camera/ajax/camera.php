@@ -17,7 +17,7 @@ try {
   else if (isset($_GET["cameraId"])) {
 
     $cameraId = htmlspecialchars($_GET["cameraId"]);
-    $sql = "SELECT * FROM camera_frame WHERE cameraId=".$cameraId.";";
+    $sql = "SELECT * FROM camera_frame WHERE cameraId=".$cameraId." ORDER BY data_hora DESC LIMIT 1;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
