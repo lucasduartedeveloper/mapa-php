@@ -12,31 +12,31 @@
          }
      </style>
      <script>
-          // Create an XMLHttpRequest object
-          var xhttp = new XMLHttpRequest();
-
-          // Define a callback function
-          xhttp.onload = function() {
-               var data = JSON.parse(this.responseText);
-               document
-               .getElementById("frame-data")
-               .src = data[0].base64;
-          }
-          xhttp.open("GET", 
-          "/camera/ajax/camera.php?cameraId=0");
 
           var updated = 0;
           setInterval(function() {
-
                 updated += 1;
                 document
                 .getElementById("update-test")
                 .innerText = updated;
 
-                // Send a request
-                xhttp.send();
+               // Create an XMLHttpRequest object
+               var xhttp = new XMLHttpRequest();
 
+               // Define a callback function
+               xhttp.onload = function() {
+                    var data = JSON.parse(this.responseText);
+                    document
+                   .getElementById("frame-data")
+                   .src = data[0].base64;
+               }
+
+                // Send a request
+                xhttp.open("GET", 
+               "/camera/ajax/camera.php?cameraId=0");
+                xhttp.send();
           }, 1000);
+
      </script>
      <!-- <script src="websocket.js?v=2"></script> -->
      </head>
