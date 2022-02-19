@@ -8,7 +8,7 @@ try {
     $base64 = htmlspecialchars($_POST["base64"]);
 
     $sql = "DELETE FROM camera_frame 
-WHERE data_hora < (now() + '2 hours 40 minutes'::interval);";
+WHERE data_hora < (now() - '20 minutes'::interval);";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
