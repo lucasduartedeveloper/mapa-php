@@ -42,7 +42,7 @@ $(document).ready(function() {
          }
 
          // overwrite original image
-         ctx.putImageData(imgData, x, y);
+         ctx.putImageData(imgData, 0, 0);
          var dataUrl = cnv.toDataURL("image/png");
 
          var img = document.createElement("img");
