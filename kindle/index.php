@@ -10,6 +10,10 @@
                 width: 100%;
                 height: 100%;
          }
+         img {
+               max-width: 40%;
+               max-height: 40%;
+         }
      </style>
      <script>
           var updated = 0;
