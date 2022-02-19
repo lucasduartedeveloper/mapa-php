@@ -38,7 +38,7 @@
      </head>
      <body>
          <p id="update-test">0</p>
-         <img id="frame-data" />
+         <img width=300 height=200 id="frame-data" />
          <p id="server-info">CONNECTING...</p>
    
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
