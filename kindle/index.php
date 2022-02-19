@@ -22,7 +22,7 @@
           }
 
           // Send a request
-          xhttp.open("GET", "/camera/ajax/camera.php");
+          xhttp.open("GET", "/camera/ajax/camera.php?cameraId=0");
           xhttp.send();
 
           var updated = 0;
