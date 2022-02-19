@@ -32,7 +32,7 @@
 
                 // Send a request
                 xhttp.open("GET", 
-               "/camera/ajax/camera.php?cameraId=0");
+               "/camera/ajax/camera.php");
                 xhttp.send();
           }, 1000);
 
@@ -41,7 +41,12 @@
      </head>
      <body>
          <p id="update-test">0</p>
-         <img width=400 height=400 id="frame-data" />
+
+         <img width=400 height=400 id="camera0-data" />
+         <img width=400 height=400 id="camera1-data" />
+         <img width=400 height=400 id="camera2-data" />
+         <img width=400 height=400 id="camera3-data" />
+
          <p id="server-info">CONNECTING...</p>
    
          <script src="//cdn.jsdelivr.net/npm/eruda"></script>
