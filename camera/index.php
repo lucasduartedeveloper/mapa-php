@@ -41,10 +41,6 @@
 
 <p id="version-info">
      v4.1.14
-     <br>
-     <span id="server-info">
-     CONNECTING...
-     </span>
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
