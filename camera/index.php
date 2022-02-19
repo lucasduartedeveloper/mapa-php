@@ -47,12 +47,6 @@
      </span>
 </p>
 
-<div style="display:none" id="restart">
-     <span id="restart-msg">#restart-msg</span>
-     <br>
-     <i class="fa-solid fa-arrow-rotate-left"></i>
-</div>
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
