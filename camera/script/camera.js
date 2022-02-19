@@ -35,7 +35,7 @@ $(document).ready(function() {
          img.style.objectFit = "cover";
 
          // Gravar no banco de dados
-         saveImage(cameraId, base64);
+         saveFrame(cameraId, base64);
 
          img.onload = function() {
               context.drawImage(
