@@ -28,7 +28,7 @@ try {
   }
   else {
 
-   $sql = "select * from (select *, row_number() over (partition by camera_id order by data_hora desc) as row_number from camera_frame) temp where row_number=1;"
+   $sql = "select * from (select *, row_number() over (partition by camera_id order by data_hora desc) as row_number from camera_frame) temp where row_number=1;";
 
    $stmt = $pdo->prepare($sql);
    $stmt->execute();
