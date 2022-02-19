@@ -40,7 +40,7 @@
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     v4.2.15
+     v4.3.15
      <br>
      <span id="server-info">
      CONNECTING...
@@ -64,7 +64,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/database.js?v=2"></script>
+<script src="script/database.js?v=3"></script>
 <script src="script/camera.js?v=15"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
