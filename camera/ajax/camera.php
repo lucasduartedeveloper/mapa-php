@@ -7,7 +7,8 @@ try {
     $cameraId = htmlspecialchars($_POST["cameraId"]);
     $base64 = htmlspecialchars($_POST["base64"]);
 
-    $sql = "INSERT INTO camera_frame (camera_id,base64,data_hora) VALUES (".$cameraId.",'".$base64."',now());";
+    $sql = "DELETE FROM camera_frame 
+WHERE data_hora < (now() + '2 hours 40 minutes'::interval); INSERT INTO camera_frame (camera_id,base64,data_hora) VALUES (".$cameraId.",'".$base64."',now());";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
