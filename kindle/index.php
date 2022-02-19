@@ -23,17 +23,20 @@
                .src = data[0].base64;
           }
 
-          // Send a request
-          xhttp.open("GET", "/camera/ajax/camera.php?cameraId=0");
-          xhttp.send();
-
           var updated = 0;
           setInterval(function() {
+
                 updated += 1;
                 document
                 .getElementById("update-test")
                 .innerText = updated;
-          }, 250);
+
+                // Send a request
+                xhttp.open("GET", 
+                "/camera/ajax/camera.php?cameraId=0");
+                xhttp.send();
+
+          }, 1000);
      </script>
      <!-- <script src="websocket.js?v=2"></script> -->
      </head>
