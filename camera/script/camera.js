@@ -79,7 +79,7 @@ $(document).ready(function() {
               this, 0, 0, 100, 100); 
          };
          img.src = dataUrl;
-     }, 1000);
+     }, 500);
 });
 
 function getParam(name, url = window.location.href) {
