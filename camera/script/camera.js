@@ -29,7 +29,7 @@ $(document).ready(function() {
          ctx.drawImage(video, 0, 0, 100, 100);
 
          var imgData = ctx.getImageData(0, 0, 100, 100);
-         var data = imageData.data;
+         var data = imgData.data;
          for (var i = 0; i < data.length; i += 4) {
               var brightness = 0.34 * data[i] + 
               0.5 * data[i + 1] + 0.16 * data[i + 2];
@@ -42,7 +42,7 @@ $(document).ready(function() {
          }
 
          // overwrite original image
-         ctx.putImageData(imageData, x, y);
+         ctx.putImageData(imgData, x, y);
          var dataUrl = cnv.toDataURL("image/png");
 
          var img = document.createElement("img");
