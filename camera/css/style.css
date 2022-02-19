@@ -30,6 +30,7 @@ html, body {
     flex-direction: column;
     background-color: #fff;
     color: white;
+    user-select:none;
 }
 
 #camera-canvas {
