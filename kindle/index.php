@@ -40,5 +40,8 @@
          <p id="update-test">0</p>
          <img id="frame-data" />
          <p id="server-info">CONNECTING...</p>
+   
+         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+         <script>eruda.init();</script>
      </body>
 </html>
