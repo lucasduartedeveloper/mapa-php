@@ -25,9 +25,11 @@
                // Define a callback function
                xhttp.onload = function() {
                     var data = JSON.parse(this.responseText);
-                    document
-                   .getElementById("frame-data")
-                   .src = data[0].base64;
+                    for (var k in data) {
+                         document
+                         .getElementById("camera"+k"-data")
+                         .src = data[k].base64;
+                   }
                }
 
                 // Send a request
