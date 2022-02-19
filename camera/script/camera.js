@@ -4,8 +4,10 @@ var audio2 = new Audio("audio/game_over.wav");
 var audio3 = new Audio("audio/getting_hit.wav");
 var audio4 = new Audio("audio/creature_dying.wav");
 
-var cameraId = 0;
+var cameraId = parseInt(getParam("cameraId"));
 $(document).ready(function() {
+     $("#title").text("CAMERA: " + cameraId);
+
      // VR TESTE
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
@@ -60,3 +62,12 @@ $(document).ready(function() {
          img.src = dataUrl;
      }, 1000);
 });
+
+function getParam(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}

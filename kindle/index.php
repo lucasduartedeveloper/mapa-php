@@ -37,7 +37,6 @@
                "/camera/ajax/camera.php");
                 xhttp.send();
           }, 1000);
-
      </script>
      <!-- <script src="websocket.js?v=2"></script> -->
      </head>
