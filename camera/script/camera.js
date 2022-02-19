@@ -8,10 +8,10 @@ var cameraId = parseInt(getParam("cameraId"));
 cameraId = isNaN(cameraId) ? 0 : cameraId;
 
 $(document).ready(function() {
-     $("#title").text("CAMERA: " + cameraId);
+     $("#title").text("CÂMERA: " + cameraId);
      $("#title").on("touchstart", function(e) {
          cameraId += 1;
-         $("#title").text("CAMERA: " + cameraId);
+         $("#title").text("CÂMERA: " + cameraId);
      });
 
      var lights = false;
