@@ -4,6 +4,7 @@ var audio2 = new Audio("audio/game_over.wav");
 var audio3 = new Audio("audio/getting_hit.wav");
 var audio4 = new Audio("audio/creature_dying.wav");
 
+var cameraId = 0;
 $(document).ready(function() {
      // VR TESTE
      var video = document.getElementById("video");
@@ -33,10 +34,13 @@ $(document).ready(function() {
          img.height = 200;
          img.style.objectFit = "cover";
 
+         // Gravar no banco de dados
+         saveImage(cameraId, base64);
+
          img.onload = function() {
               context.drawImage(
               this, 0, 0, 300, 200); 
          };
          img.src = dataUrl;
-     }, 250);
+     }, 1000);
 });
