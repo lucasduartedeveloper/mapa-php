@@ -20,7 +20,7 @@
                var data = JSON.parse(this.responseText);
                document
                .getElementById("frame-data")
-               .innerText = data[0].base64;
+               .src = data[0].base64;
           }
 
           // Send a request
