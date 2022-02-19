@@ -7,7 +7,7 @@ try {
     $cameraId = htmlspecialchars($_POST["cameraId"]);
     $base64 = htmlspecialchars($_POST["base64"]);
 
-    $sql = "INSERT INTO camera_frame (camera_id,image) VALUES (".$cameraId.",'".$base64."');";
+    $sql = "INSERT INTO camera_frame (camera_id,base64) VALUES (".$cameraId.",'".$base64."');";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
