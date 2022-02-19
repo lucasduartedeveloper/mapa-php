@@ -5,8 +5,27 @@ var audio3 = new Audio("audio/getting_hit.wav");
 var audio4 = new Audio("audio/creature_dying.wav");
 
 var cameraId = parseInt(getParam("cameraId"));
+cameraId = isNaN(cameraId) ? 0 : cameraId;
+
 $(document).ready(function() {
      $("#title").text("CAMERA: " + cameraId);
+     $("#title").on("touchstart", function(e) {
+         cameraId += 1;
+         $("#title").text("CAMERA: " + cameraId);
+     });
+
+     var lights = false;
+     $("#logo").on("touchstart", function(e) {
+         lights = !lights;
+         var track = video.srcObject.getVideoTracks()[0];
+         var imageCapture = new ImageCapture(track);
+         var photoCapabilities = imageCapture.
+              getPhotoCapabilities().then(() => {
+                     track.applyConstraints({
+                     advanced: [{torch: lights}]
+              });
+         });
+     });
 
      // VR TESTE
      var video = document.getElementById("video");
