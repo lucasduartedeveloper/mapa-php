@@ -27,7 +27,7 @@
                     var data = JSON.parse(this.responseText);
                     for (var k = 0; k < data.length; k++) {
                          document
-                         .getElementById("camera"+k"-data")
+                         .getElementById("camera"+k+"-data")
                          .src = data[k].base64;
                    }
                }
