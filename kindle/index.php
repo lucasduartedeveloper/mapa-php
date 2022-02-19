@@ -16,9 +16,10 @@
 
           // Define a callback function
           xhttp.onload = function() {
+               var data = JSON.parse(this.responseText);
                document
                .getElementById("frame-data")
-               .innerText = this.responseText;
+               .innerText = data[0].base64;
           }
 
           // Send a request
@@ -37,7 +38,7 @@
      </head>
      <body>
          <p id="update-test">0</p>
-         <p id="frame-data"></p>
+         <img id="frame-data" />
          <p id="server-info">CONNECTING...</p>
      </body>
 </html>
