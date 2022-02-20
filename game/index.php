@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,12 +31,18 @@
 <body>
 
 <img class="heart beat" src="img/heart.png" />
-<img class="gear spin" src="img/gear.png" />
-<img class="gear spin-reverse" src="img/gear.png" />
-<img class="gear spin" src="img/gear.png" />
+<img id="gear-0" 
+         class="gear spin" 
+         src="img/gear.png" />
+<img id="gear-1" 
+         class="gear spin-reverse" 
+         src="img/gear.png" />
+<img id="gear-2" 
+         class="gear spin" 
+         src="img/gear.png" />
 
 <p id="version-info">
-     v9.0.0
+     v10.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -66,7 +72,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/game.js?v=0"></script>
+<script src="script/game.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
