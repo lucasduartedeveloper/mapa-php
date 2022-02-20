@@ -52,7 +52,7 @@ $(document).ready(function() {
                       JSON.stringify(gears));
          for (var k in gears) {
               if (gears[k].pageX >= 0) {
-                   audio.stop();
+                   audio.pause();
                    $(".heart").removeClass("beat");
               }
          }

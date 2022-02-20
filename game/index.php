@@ -53,7 +53,7 @@
 </div>
 
 <p id="version-info">
-     v16.5.20
+     v16.5.21
      <br>
      <span id="server-info">
      CONNECTING...
@@ -83,7 +83,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=5"></script>
-<script src="script/game.js?v=20"></script>
+<script src="script/game.js?v=21"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
