@@ -56,10 +56,10 @@ html, body {
 
 @keyframes spin-reverse {
     from {
-        transform:rotate(-15deg);
+        transform:rotate(-10deg);
     }
     to {
-        transform:rotate(-375deg);
+        transform:rotate(-370deg);
     }
 }
 
