@@ -29,7 +29,7 @@ var ws = {
            if (wsh.readyState == 1) {
                wsh.send(e);
                messagesSent.push(
-                     e.split("|").slice(0,3).join("|"));
+                     e.split("|").slice(0,4).join("|"));
            }
            else { messagesWaiting.push(e); }
       },
