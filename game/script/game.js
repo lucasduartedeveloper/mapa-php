@@ -83,3 +83,4 @@ $(document).ready(function() {
     ws.send("HEART|"+playerId+"|GET_GEARS");
 });
 
+

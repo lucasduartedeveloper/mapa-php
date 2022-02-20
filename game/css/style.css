@@ -83,14 +83,14 @@ html, body {
   box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
 } 
 
-.spin {
+.gear.placed.spin {
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
 
-.spin-reverse {
+.gear.placed.spin-reverse {
   animation-name: spin-reverse;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
