@@ -1,6 +1,10 @@
 var audio = new Audio("audio/heart-beat.wav");
 audio.loop = true;
 
+var music = false;
+var musicStream = new Audio();
+var musicStreamList = [];
+
 var gears = [
     { id: "gear-0", pageX: 0, pageY: 0 },
     { id: "gear-1",pageX: 0, pageY: 0 },
@@ -12,25 +16,30 @@ var selected = gears[0];
 var playing = false;
 
 $(document).ready(function() {
+   var jqxhr = $.getJSON("ajax/jpfm.json", function(data) {
+        musicStreamList =data;
+   });
+
+   $("#music-info").on("dblclick", function() {
+        music = !music;
+        if (music) {
+            $("#music-info").text("MUSIC: ON");
+        }
+        else {
+            $("#music-info").text("MUSIC: OFF");
+        }
+   });
+
     audio.play();
-
-    // this will disable right-click on all images
-    $("body").on("contextmenu",function(e){
-         return false;
-    });
-
     $(".gear").on("touchstart", function(e) {
          playing = true;
-         //console.log(e.target.id);
-         selected = gears.filter((g) => g.id == e.target.id)[0];
-         //console.log(selected);
+         selected = gears.filter((g) => g.id == e.target.id)[0];;
 
          $("#"+selected.id).removeClass("placed");
          selected.pageX = 
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
                e.originalEvent.touches[0].pageY;
-         //console.log(selected);
     });
     
     $(".gear").on("touchmove", function(e) {
@@ -38,7 +47,6 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
                e.originalEvent.touches[0].pageY;
-         //console.log(selected);
          
          $("#"+selected.id)
                .css("left", (selected.pageX-25)+"px");
