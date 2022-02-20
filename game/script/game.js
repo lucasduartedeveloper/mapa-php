@@ -25,7 +25,7 @@ $(document).ready(function() {
          selected = gears.filter((g) => g.id == e.target.id)[0];
          //console.log(selected);
 
-         $("#"+selected.id).removeClass("spin");
+         $("#"+gears[k].id).removeClass("placed");
          selected.pageX = 
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
@@ -53,7 +53,7 @@ $(document).ready(function() {
               if (gears[k].pageX >= 0) {
                    audio.pause();
                    $(".heart").removeClass("beat");
-                   $("#"+gears[k].id).removeClass("spin");
+                   $("#"+gears[k].id).removeClass("placed");
               }
          }
     });
