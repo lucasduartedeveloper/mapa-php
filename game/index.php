@@ -42,13 +42,13 @@
          <div class="gear-place"></div>
     </div>
     <img id="gear-0" 
-         class="gear spin" 
+         class="gear placed spin" 
          src="img/gear.png" />
     <img id="gear-1" 
-         class="gear spin-reverse" 
+         class="gear placed spin-reverse" 
          src="img/gear.png" />
     <img id="gear-2" 
-         class="gear spin" 
+         class="gear placed spin" 
          src="img/gear.png" />
 </div>
 
