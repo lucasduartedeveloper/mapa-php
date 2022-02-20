@@ -114,17 +114,17 @@ function setGears() {
                 $(".heart").removeClass("beat");
                 $("#"+gears[k].id).removeClass("placed");
                 $("#"+gears[k].id)
-               .css("left", (gears[k].pageX-25)+"px");
-               $("#"+gears[k].id)
-               .css("top", (gears[k].pageY-25)+"px");
+                .css("left", (gears[k].pageX-25)+"px");
+                $("#"+gears[k].id)
+                .css("top", (gears[k].pageY-25)+"px");
 
-               music = true;
-               $("#music-info").trigger("click");
+                music = true;
+                $("#music-info").trigger("dbclick");
          }
         else { 
-               $("#"+gears[k].id).addClass("placed");
-               $("#"+gears[k].id).css("left","");
-               $("#"+gears[k].id).css("top","");
+                $("#"+gears[k].id).addClass("placed");
+                $("#"+gears[k].id).css("left","");
+                $("#"+gears[k].id).css("top","");
          }
     }
     if ($(".placed").length == 3) {
@@ -132,6 +132,6 @@ function setGears() {
          $(".heart").addClass("beat");
 
          music = false;
-         $("#music-info").trigger("click");
+         $("#music-info").trigger("dbclick");
     }
 }
