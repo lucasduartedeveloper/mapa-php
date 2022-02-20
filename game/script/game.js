@@ -10,7 +10,7 @@ $(document).ready(function() {
     $(".gear").on("touchstart", function(e) {
          playing = true;
          console.log(e.target.id);
-         selected = gears.filter((e) => e.id == e.target.id);
+         selected = gears.filter((g) => g.id == e.target.id);
          console.log(selected);
 
          selected.pageX = 
@@ -30,9 +30,9 @@ $(document).ready(function() {
          $("#"+selected.id)
                .css("position", "absolute");
          $("#"+selected.id)
-               .css("left", selected.pageX+"px");
+               .css("left", (selected.pageX-25)+"px");
          $("#"+selected.id)
-               .css("top", selected.pageY+"px");
+               .css("top", (selected.pageY-25)+"px");
     });
 });
 
