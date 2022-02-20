@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <link rel="stylesheet" href="css/normalizee.css">
-<link rel="stylesheet" href="css/style.css?v=41">
+<link rel="stylesheet" href="css/style.css?v=42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -42,19 +42,16 @@
     <div class="gear-place-container">
          <div class="gear-place"></div>
     </div>
-    <img id="gear-0" 
-         class="gear placed spin-reverse" 
-         src="img/gear.png" />
-    <img id="gear-1" 
-         class="gear placed spin" 
-         src="img/gear.png" />
-    <img id="gear-2" 
-         class="gear placed spin" 
-         src="img/gear.png" />
+    <div id="gear-0" 
+         class="gear placed spin-reverse"/>
+    <div id="gear-1" 
+         class="gear placed spin"/>
+    <div id="gear-2" 
+         class="gear placed spin"/>
 </div>
 
 <p id="version-info">
-     v41.5.29
+     v42.5.29
      <br>
      <span id="server-info">
      CONNECTING...
