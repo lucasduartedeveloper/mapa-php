@@ -1,4 +1,4 @@
-var gears = ]
+var gears = [
     { id: "gear-0", pageX: 0, pageY: 0 },
     { id: "gear-1",pageX: 0, pageY: 0 },
     { id: "gear-2",pageX: 0, pageY: 0 }
@@ -26,6 +26,13 @@ $(document).ready(function() {
          selected.pageY = 
                e.originalEvent.touches[0].pageY;
          console.log(selected);
+         
+         $("#"+selected.id)
+               .css("position", "fixed");
+         $("#"+selected.id)
+               .css("left", selected.pageX+"x");
+         $("#"+selected.id)
+               .css("top", selected.pageY+"x");
     });
 });
 
