@@ -58,6 +58,7 @@ $(document).ready(function() {
             else if (msg[2] == "SET_GEARS") {
                  gears = JSON.parse(msg[3]);
                  for (var k in gears) {
+                    if (gears[k].pageX == 0) break;
                     $("#"+gears[k].id)
                        .css("position", "absolute");
                     $("#"+gears[k].id)
