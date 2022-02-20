@@ -22,7 +22,7 @@ var ws = {
            wsh.onmessage = function(e) {
                 ws.onmessage(e);
                 messagesReceived.push(
-                     e.data.split("|").slice(0,3).join("|"));
+                     e.data.split("|").slice(0,4).join("|"));
            };
       },
       send: function (e) {

@@ -16,15 +16,15 @@ $(document).ready(function() {
 
     $(".gear").on("touchstart", function(e) {
          playing = true;
-         console.log(e.target.id);
+         //console.log(e.target.id);
          selected = gears.filter((g) => g.id == e.target.id)[0];
-         console.log(selected);
+         //console.log(selected);
 
          selected.pageX = 
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
                e.originalEvent.touches[0].pageY;
-         console.log(selected);
+         //console.log(selected);
     });
     
     $(".gear").on("touchmove", function(e) {
@@ -32,7 +32,7 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
                e.originalEvent.touches[0].pageY;
-         console.log(selected);
+         //console.log(selected);
          
          $("#"+selected.id)
                .css("position", "absolute");
