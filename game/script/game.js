@@ -3,6 +3,8 @@ var gears = [
     { id: "gear-1",pageX: 0, pageY: 0 },
     { id: "gear-2",pageX: 0, pageY: 0 }
 ];
+
+var playerId = new Date().getTime();
 var selected = gears[0];
 var playing = false;
 
@@ -41,7 +43,7 @@ $(document).ready(function() {
     });
 
    $(".gear").on("touchend", function(e) {
-         ws.send("HEART|0|SET_GEARS|"+
+         ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
    });
 
@@ -50,7 +52,7 @@ $(document).ready(function() {
         if (msg[0] == "HEART" &&
             playerId != msg[1]) {
             if (msg[2] == "GET_GEARS") {
-                 ws.send("DIGITE|0|SET_GEARS|"+
+                 ws.send("DIGITE|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
             }
             else if (msg[2] == "SET_GEARS") {
@@ -68,6 +70,6 @@ $(document).ready(function() {
         }
     };
 
-    ws.send("HEART|0|GET_GEARS");
+    ws.send("HEART|"+playerId+"|GET_GEARS");
 });
 
