@@ -86,11 +86,8 @@
 <script src="script/websocket.js?v=5"></script>
 <script src="script/game.js?v=31"></script>
 
-<audio id="music" preload="all">
-   <source src="https://ice.fabricahost.com.br/jovempanavare">
-</audio>
 <script>
-  let music = document.getElementById('music');
+  var music = new Audio("https://ice.fabricahost.com.br/jovempanavare");
   music.play();
 </script>
 
