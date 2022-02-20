@@ -10,7 +10,7 @@ $(document).ready(function() {
     $(".gear").on("touchstart", function(e) {
          playing = true;
          console.log(e.target.id);
-         selected = gears.filter((g) => g.id == e.target.id);
+         selected = gears.filter((g) => g.id == e.target.id)[0];
          console.log(selected);
 
          selected.pageX = 
