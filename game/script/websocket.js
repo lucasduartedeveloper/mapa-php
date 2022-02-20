@@ -36,6 +36,4 @@ var ws = {
       onmessage: function (e) { },
       tempo: 0
 };
-$(document).ready(function() {
-      ws.start();
-});
+ws.start();
