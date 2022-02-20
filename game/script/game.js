@@ -25,7 +25,7 @@ $(document).ready(function() {
          selected = gears.filter((g) => g.id == e.target.id)[0];
          //console.log(selected);
 
-         $("#"+gears[k].id).removeClass("placed");
+         $("#"+selected.id).removeClass("placed");
          selected.pageX = 
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
@@ -70,7 +70,7 @@ $(document).ready(function() {
                  gears = JSON.parse(msg[3]);
                  for (var k in gears) {
                     if (gears[k].pageX == 0) break;
-                    $("#"+gears[k].id).removeClass("spin");
+                    $("#"+gears[k].id).removeClass("placed");
                     $("#"+gears[k].id)
                        .css("left", (gears[k].pageX-25)+"px");
                     $("#"+gears[k].id)
