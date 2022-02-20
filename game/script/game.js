@@ -49,11 +49,23 @@ $(document).ready(function() {
    $(".gear").on("touchend", function(e) {
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
+
+         var offset = $(".gears").offset();
+         var x1 = offset.left;
+         var x2 = offset.left + 150;
+         var y1 = offset.top;
+         var y2 = offset.top + 50;
          for (var k in gears) {
-              if (gears[k].pageX > 0) {
+              if (!(gears[k].pageX >= x1 &&
+                   gears[k].pageX <= x2 &&
+                   gears[k].pageY <= y1 &&
+                   gears[k].pageY <= y2)) {
+                   
                    audio.pause();
                    $(".heart").removeClass("beat");
-                   $("#"+gears[k].id).removeClass("placed");
+              }
+              else { 
+                   $("#"+gears[k].id).addClass("placed");
               }
          }
     });
