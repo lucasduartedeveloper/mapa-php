@@ -86,6 +86,14 @@
 <script src="script/websocket.js?v=5"></script>
 <script src="script/game.js?v=31"></script>
 
+<audio id="music" preload="all">
+   <source src="https://ice.fabricahost.com.br/jovempanavare">
+</audio>
+<script>
+  let music = document.getElementById('music');
+  music.play();
+</script>
+
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
 
