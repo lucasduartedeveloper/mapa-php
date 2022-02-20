@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -32,11 +32,11 @@
 
 <img class="heart beat" src="img/heart.png" />
 <img class="gear spin" src="img/gear.png" />
-<img class="gear spin" src="img/gear.png" />
+<img class="gear spin-reverse" src="img/gear.png" />
 <img class="gear spin" src="img/gear.png" />
 
 <p id="version-info">
-     v6.0.0
+     v7.0.0
      <br>
      <span id="server-info">
      CONNECTING...
