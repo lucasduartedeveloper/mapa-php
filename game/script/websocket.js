@@ -5,6 +5,7 @@ var messagesWaiting = [];
 var messagesSent = [];
 var messagesReceived = [];
 
+$(document).ready(function() {
 var ws = {
       start: function () {
            wsh = new WebSocket(host);
@@ -37,3 +38,4 @@ var ws = {
       tempo: 0
 };
 ws.start();
+});
