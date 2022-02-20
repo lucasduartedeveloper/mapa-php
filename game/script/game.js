@@ -58,11 +58,11 @@ $(document).ready(function() {
             else if (msg[2] == "SET_GEARS") {
                  gears = JSON.parse(msg[3]);
                  for (var k in gears) {
-                    $("#"+gears[k])
+                    $("#"+gears[k].id)
                        .css("position", "absolute");
-                    $("#"+gears[k])
+                    $("#"+gears[k].id)
                        .css("left", (selected.pageX-25)+"px");
-                    $("#"+gears[k])
+                    $("#"+gears[k].id)
                        .css("top", (selected.pageY-25)+"px");
                  }
             }
