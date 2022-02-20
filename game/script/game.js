@@ -93,4 +93,8 @@ function setGears() {
                 $("#"+gears[k].id).css("top","");
          }
     }
+    if ($(".placed").length == 3) {
+         audio.play();
+         $(".heart").addClass("beat");
+    }
 }
