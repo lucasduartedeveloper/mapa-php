@@ -23,22 +23,20 @@ html, body {
 } 
 
 .gear {
-  /*position: absolute;*/
+  position: absolute;
   width: 50px;
   height: 50px;
   margin: -2px;
   filter: invert(100%);
 } 
 
-/*
-.gear:nth-of-type(1) {
-  margin-left: -92px;
+.gear.spin:nth-of-type(1) {
+  margin-left: -100px;
 }
 
-.gear:nth-of-type(3) {
-  margin-left: 92px;
+.gear.spin:nth-of-type(3) {
+  margin-left: 100px;
 }
-*/
 
 .gear-place-container {
   position: absolute;
@@ -52,11 +50,11 @@ html, body {
 } 
 
 .gear-place-container:nth-of-type(1) {
-  margin-left: -96px;
+  margin-left: -94px;
 }
 
 .gear-place-container:nth-of-type(3) {
-  margin-left: 96px;
+  margin-left: 94px;
 }
 
 .gear-place {
