@@ -50,9 +50,7 @@ $(document).ready(function() {
         if (msg[0] == "HEART" &&
             playerId != msg[1]) {
             if (msg[2] == "GET_GEARS") {
-                 ws.send("DIGITE|"+
-                      playerId+
-                      "|SET_GEARS|"+
+                 ws.send("DIGITE|0|SET_GEARS|"+
                       JSON.stringify(gears));
             }
             else if (msg[2] == "SET_GEARS") {
