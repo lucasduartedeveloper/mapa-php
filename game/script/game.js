@@ -57,15 +57,14 @@ $(document).ready(function() {
             }
             else if (msg[2] == "SET_GEARS") {
                  gears = JSON.parse(msg[3]);
-                 
-                 var temp = selected;
-                 selected = gears[0];
-                 $(".gear").trigger("touchmove");
-                 selected = gears[1];
-                 $(".gear").trigger("touchmove");
-                 selected = gears[2];
-                 $(".gear").trigger("touchmove");
-                 selected = temp;
+                 for (var k in gears) {
+                    $("#"+gears[k])
+                       .css("position", "absolute");
+                    $("#"+gears[k])
+                       .css("left", (selected.pageX-25)+"px");
+                    $("#"+gears[k])
+                       .css("top", (selected.pageY-25)+"px");
+                 }
             }
         }
     };
