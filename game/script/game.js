@@ -17,17 +17,7 @@ var selected = gears[0];
 var playing = false;
 
 $(document).ready(function() {
-   $("#music-info").on("dblclick", function() {
-        music = !music;
-        if (music) {
-            $("#music-info").trigger("click");
-        }
-        else {
-            $("#music-info").text("MUSIC: OFF");
-            musicStream.pause();
-        }
-   });
-
+   $("#music-info").on("dblclick", toggleMusic});
    $("#music-info").on("click", function() {
         if (music) {
             musicStreamId += 1;
@@ -119,7 +109,7 @@ function setGears() {
                 .css("top", (gears[k].pageY-25)+"px");
 
                 music = true;
-                $("#music-info").trigger("dbclick");
+                toggleMusic();
          }
         else { 
                 $("#"+gears[k].id).addClass("placed");
@@ -132,6 +122,17 @@ function setGears() {
          $(".heart").addClass("beat");
 
          music = false;
-         $("#music-info").trigger("dbclick");
+         toggleMusic();
+    }
+}
+
+function toggleMusic() {
+    music = !music;
+    if (music) {
+         $("#music-info").trigger("click");
+    }
+    else {
+         $("#music-info").text("MUSIC: OFF");
+         musicStream.pause();
     }
 }
