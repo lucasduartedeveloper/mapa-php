@@ -80,7 +80,8 @@ function setGears() {
           if (!(gears[k].pageX >= x1 &&
                 gears[k].pageX <= x2 &&
                 gears[k].pageY >= y1 &&
-                gears[k].pageY <= y2)) {
+                gears[k].pageY <= y2) &&
+                gears[k].pageX > 0) {
                    
                 audio.pause();
                 $(".heart").removeClass("beat");
