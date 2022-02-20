@@ -58,7 +58,7 @@
 </div>
 
 <p id="version-info">
-     v46.5.33
+     v46.5.34
      <br>
      <span id="server-info">
      CONNECTING...
@@ -88,13 +88,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=5"></script>
-<script src="script/game.js?v=33"></script>
-
-<script>
-    var jqxhr = $.getJSON("ajax/jpfm.json", function(data) {
-        console.log(data);
-    });
-</script>
+<script src="script/game.js?v=34"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

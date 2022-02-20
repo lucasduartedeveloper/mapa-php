@@ -62,7 +62,9 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageY;
     });
     
-    $(".gear").on("mousemove", function(e) {
+    $(document.body).on("mousemove", function(e) {
+         if (!playing) return false;
+
          selected.pageX = 
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
@@ -75,6 +77,7 @@ $(document).ready(function() {
     });
 
    $(".gear").on("mouseup", function(e) {
+         playing = false;
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
          setGears();
