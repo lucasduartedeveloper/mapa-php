@@ -40,6 +40,14 @@ html, body {
   margin: -2px;
 } 
 
+.gear-place-container:nth-of-type(1) {
+  margin-left: -54px;
+}
+
+.gear-place-container:nth-of-type(3) {
+  margin-left: 54px;
+}
+
 .gear-place {
   width: 5px;
   height: 5px;
