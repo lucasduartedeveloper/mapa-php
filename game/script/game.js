@@ -17,7 +17,7 @@ var selected = gears[0];
 var playing = false;
 
 $(document).ready(function() {
-   $("#music-info").on("dblclick", toggleMusic});
+   $("#music-info").on("dblclick", toggleMusic);
    $("#music-info").on("click", function() {
         if (music) {
             musicStreamId += 1;
