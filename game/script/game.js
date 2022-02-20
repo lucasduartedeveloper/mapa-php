@@ -49,25 +49,7 @@ $(document).ready(function() {
    $(".gear").on("touchend", function(e) {
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
-
-         var offset = $(".gears").offset();
-         var x1 = offset.left;
-         var x2 = offset.left + 150;
-         var y1 = offset.top;
-         var y2 = offset.top + 50;
-         for (var k in gears) {
-              if (!(gears[k].pageX >= x1 &&
-                   gears[k].pageX <= x2 &&
-                   gears[k].pageY <= y1 &&
-                   gears[k].pageY <= y2)) {
-                   
-                   audio.pause();
-                   $(".heart").removeClass("beat");
-              }
-              else { 
-                   $("#"+gears[k].id).addClass("placed");
-              }
-         }
+         setGears();
     });
 
     ws.onmessage = function(e) {
@@ -80,14 +62,7 @@ $(document).ready(function() {
             }
             else if (msg[2] == "SET_GEARS") {
                  gears = JSON.parse(msg[3]);
-                 for (var k in gears) {
-                    if (gears[k].pageX == 0) break;
-                    $("#"+gears[k].id).removeClass("placed");
-                    $("#"+gears[k].id)
-                       .css("left", (gears[k].pageX-25)+"px");
-                    $("#"+gears[k].id)
-                       .css("top", (gears[k].pageY-25)+"px");
-                 }
+                 setGears();
             }
         }
     };
@@ -95,4 +70,26 @@ $(document).ready(function() {
     ws.send("HEART|"+playerId+"|GET_GEARS");
 });
 
-
+function setGears() {
+     var offset = $(".gears").offset();
+     var x1 = offset.left;
+     var x2 = offset.left + 150;
+     var y1 = offset.top;
+     var y2 = offset.top + 50;
+     for (var k in gears) {
+          if (!(gears[k].pageX >= x1 &&
+                gears[k].pageX <= x2 &&
+                gears[k].pageY >= y1 &&
+                gears[k].pageY <= y2)) {
+                   
+                audio.pause();
+                $(".heart").removeClass("beat");
+                $("#"+gears[k].id).removeClass("placed");
+          }
+          else { 
+                $("#"+gears[k].id).addClass("placed");
+                $("#"+gears[k].id).css("left","");
+                $("#"+gears[k].id).css("top","");
+         }
+    }
+}
