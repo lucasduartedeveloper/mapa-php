@@ -30,15 +30,15 @@ html, body {
 } 
 
 .gear.spin:nth-of-type(1) {
-  margin-left: -94px;
-}
-
-.gear.spin:nth-of-type(2) {
   margin-left: 0px;
 }
 
+.gear.spin:nth-of-type(2) {
+  margin-left: 50px;
+}
+
 .gear.spin:nth-of-type(3) {
-  margin-left: 94px;
+  margin-left: 100px;
 }
 
 .gear-place-container {
@@ -52,11 +52,15 @@ html, body {
 } 
 
 .gear-place-container:nth-of-type(1) {
-  margin-left: -94px;
+  margin-left: 0px;
+}
+
+.gear-place-container:nth-of-type(2) {
+  margin-left: 50px;
 }
 
 .gear-place-container:nth-of-type(3) {
-  margin-left: 94px;
+  margin-left: 100px;
 }
 
 .gear-place {
@@ -69,8 +73,8 @@ html, body {
 .gears {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   flex-direction: row;
   width: 150px;
   height: 50px;
