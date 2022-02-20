@@ -51,7 +51,7 @@ $(document).ready(function() {
    });
 
     audio.play();
-    $(".gear").on("mousedown", function(e) {
+    $(".gear").on("touchstart", function(e) {
          playing = true;
          selected = gears.filter((g) => g.id == e.target.id)[0];;
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageY;
     });
     
-    $(document.body).on("mousemove", function(e) {
+    $(".gear").on("touchmove", function(e) {
          if (!playing) return false;
 
          selected.pageX = 
@@ -76,7 +76,7 @@ $(document).ready(function() {
                .css("top", (selected.pageY-25)+"px");
     });
 
-   $(".gear").on("mouseup", function(e) {
+   $(".gear").on("touchend", function(e) {
          playing = false;
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
