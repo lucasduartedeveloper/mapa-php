@@ -50,7 +50,7 @@ $(document).ready(function() {
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
          for (var k in gears) {
-              if (gears[k].pageX >= 0) {
+              if (gears[k].pageX > 0) {
                    audio.pause();
                    $(".heart").removeClass("beat");
                    $("#"+gears[k].id).removeClass("placed");
