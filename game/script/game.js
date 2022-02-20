@@ -3,6 +3,7 @@ audio.loop = true;
 
 var music = false;
 var musicStream = new Audio();
+var musicStreamId = 0;
 var musicStreamList = [];
 
 var gears = [
@@ -23,15 +24,34 @@ $(document).ready(function() {
    $("#music-info").on("dblclick", function() {
         music = !music;
         if (music) {
-            $("#music-info").text("MUSIC: ON");
+            $("#music-info").trigger("click");
         }
         else {
             $("#music-info").text("MUSIC: OFF");
+            musicStream.pause();
+        }
+   });
+
+   $("#music-info").on("click", function() {
+        if (music) {
+            musicStreamId += 1;
+            musicStreamId = 
+                musicStreamId < musicStreamList.length ?
+                musicStreamId : 0; 
+
+            musicStream.pause();
+            musicStream = new Audio(
+                musicStreamList[musicStreamId].streamingUrl);
+            musicStream.play();
+
+            $("#music-info").text("MUSIC: " +
+                musicStreamList[musicStreamId].dial + " - " +
+                musicStreamList[musicStreamId].name);
         }
    });
 
     audio.play();
-    $(".gear").on("touchstart", function(e) {
+    $(".gear").on("mousedown", function(e) {
          playing = true;
          selected = gears.filter((g) => g.id == e.target.id)[0];;
 
@@ -42,7 +62,7 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageY;
     });
     
-    $(".gear").on("touchmove", function(e) {
+    $(".gear").on("mousemove", function(e) {
          selected.pageX = 
                e.originalEvent.touches[0].pageX;
          selected.pageY = 
@@ -54,7 +74,7 @@ $(document).ready(function() {
                .css("top", (selected.pageY-25)+"px");
     });
 
-   $(".gear").on("touchend", function(e) {
+   $(".gear").on("mouseup", function(e) {
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
          setGears();
