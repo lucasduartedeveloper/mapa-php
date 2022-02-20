@@ -7,6 +7,11 @@ var selected = gears[0];
 var playing = false;
 
 $(document).ready(function() {
+    // this will disable right-click on all images
+    $("body").on("contextmenu",function(e){
+         return false;
+    });
+
     $(".gear").on("touchstart", function(e) {
          playing = true;
          console.log(e.target.id);
