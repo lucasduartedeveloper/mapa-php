@@ -42,7 +42,7 @@
          src="img/gear.png" />
 
 <p id="version-info">
-     v10.2.16
+     v10.2.17
      <br>
      <span id="server-info">
      CONNECTING...
@@ -72,7 +72,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=2"></script>
-<script src="script/game.js?v=16"></script>
+<script src="script/game.js?v=17"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

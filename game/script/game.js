@@ -62,9 +62,9 @@ $(document).ready(function() {
                     $("#"+gears[k].id)
                        .css("position", "absolute");
                     $("#"+gears[k].id)
-                       .css("left", (selected.pageX-25)+"px");
+                       .css("left", (gears[k].pageX-25)+"px");
                     $("#"+gears[k].id)
-                       .css("top", (selected.pageY-25)+"px");
+                       .css("top", (gears[k].pageY-25)+"px");
                  }
             }
         }
