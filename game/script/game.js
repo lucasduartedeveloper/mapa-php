@@ -118,18 +118,20 @@ function setGears() {
                $("#"+gears[k].id)
                .css("top", (gears[k].pageY-25)+"px");
 
-               music = false;
-               $("#music-info").text("MUSIC: OFF");
-               musicStream.pause();
+               music = true;
+               $("#music-info").trigger("click");
          }
         else { 
-                $("#"+gears[k].id).addClass("placed");
-                $("#"+gears[k].id).css("left","");
-                $("#"+gears[k].id).css("top","");
+               $("#"+gears[k].id).addClass("placed");
+               $("#"+gears[k].id).css("left","");
+               $("#"+gears[k].id).css("top","");
          }
     }
     if ($(".placed").length == 3) {
          audio.play();
          $(".heart").addClass("beat");
+
+         music = false;
+         $("#music-info").trigger("click");
     }
 }
