@@ -34,11 +34,11 @@ html, body {
 }
 
 .gear.spin:nth-of-type(2) {
-  left: -50px;
+  left: 50px;
 }
 
 .gear.spin:nth-of-type(3) {
-  left: -100px;
+  left: 100px;
 }
 
 .gear-place-container {
@@ -56,11 +56,11 @@ html, body {
 }
 
 .gear-place-container:nth-of-type(2) {
-  left: -50px;
+  left: 50px;
 }
 
 .gear-place-container:nth-of-type(3) {
-  left: -100px;
+  left: 100px;
 }
 
 .gear-place {
@@ -72,10 +72,6 @@ html, body {
 
 .gears {
   margin-top: 20px;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: row;
   width: 150px;
   height: 50px;
   border: 2px solid black;
