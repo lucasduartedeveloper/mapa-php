@@ -30,9 +30,9 @@ $(document).ready(function() {
          $("#"+selected.id)
                .css("position", "absolute");
          $("#"+selected.id)
-               .css("left", selected.pageX+"x");
+               .css("left", selected.pageX+"px");
          $("#"+selected.id)
-               .css("top", selected.pageY+"x");
+               .css("top", selected.pageY+"px");
     });
 });
 
