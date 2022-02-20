@@ -36,7 +36,7 @@ html, body {
   height: 50px;
   border: 2px solid black;
   border-radius: 5px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
 } 
 
 .spin {
