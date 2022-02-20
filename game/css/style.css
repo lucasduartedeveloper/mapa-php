@@ -30,15 +30,15 @@ html, body {
 } 
 
 .gear.placed:nth-of-type(1) {
-  margin-left: -94px;
-}
-
-.gear.placed:nth-of-type(2) {
   margin-left: 0px;
 }
 
-.gear.placed:nth-of-type(3) {
+.gear.placed:nth-of-type(2) {
   margin-left: 94px;
+}
+
+.gear.placed:nth-of-type(3) {
+  margin-left: -94px;
 }
 
 .gear-place-container {
@@ -52,7 +52,7 @@ html, body {
 } 
 
 .gear-place-container:nth-of-type(1) {
-  margin-left: -94px;
+  margin-left: 94px;
 }
 
 .gear-place-container:nth-of-type(2) {
@@ -60,7 +60,7 @@ html, body {
 }
 
 .gear-place-container:nth-of-type(3) {
-  margin-left: 94px;
+  margin-left: -94px;
 }
 
 .gear-place {
