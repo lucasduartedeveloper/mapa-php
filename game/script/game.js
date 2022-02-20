@@ -39,5 +39,37 @@ $(document).ready(function() {
          $("#"+selected.id)
                .css("top", (selected.pageY-25)+"px");
     });
+
+   $(".gear").on("touchend", function(e) {
+         ws.send("HEART|0|SET_GEARS|"+
+                      JSON.stringify(gears));
+   });
+
+    ws.onmessage = function(e) {
+        var msg = e.data.split("|");
+        if (msg[0] == "HEART" &&
+            playerId != msg[1]) {
+            if (msg[2] == "GET_GEARS") {
+                 ws.send("DIGITE|"+
+                      playerId+
+                      "|SET_GEARS|"+
+                      JSON.stringify(gears));
+            }
+            else if (msg[2] == "SET_GEARS") {
+                 gears = JSON.parse(msg[3]);
+                 
+                 var temp = selected;
+                 selected = gears[0];
+                 $(".gear").trigger("touchmove");
+                 selected = gears[1];
+                 $(".gear").trigger("touchmove");
+                 selected = gears[2];
+                 $(".gear").trigger("touchmove");
+                 selected = temp;
+            }
+        }
+    };
+
+    ws.send("HEART|0|GET_GEARS");
 });
 
