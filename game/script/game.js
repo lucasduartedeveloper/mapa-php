@@ -51,8 +51,10 @@ $(document).ready(function() {
          ws.send("HEART|"+playerId+"|SET_GEARS|"+
                       JSON.stringify(gears));
          for (var k in gears) {
-              if (gears[k].pageX >= 0) 
-                   $(".heart").removeClass("beat");;
+              if (gears[k].pageX >= 0) {
+                   audio.stop();
+                   $(".heart").removeClass("beat");
+              }
          }
     });
 
