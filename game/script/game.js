@@ -17,10 +17,6 @@ var selected = gears[0];
 var playing = false;
 
 $(document).ready(function() {
-   var jqxhr = $.getJSON("ajax/jpfm.json", function(data) {
-        musicStreamList =data;
-   });
-
    $("#music-info").on("dblclick", function() {
         music = !music;
         if (music) {
