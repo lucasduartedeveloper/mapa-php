@@ -28,7 +28,7 @@ $(document).ready(function() {
          console.log(selected);
          
          $("#"+selected.id)
-               .css("position", "fixed");
+               .css("position", "absolute");
          $("#"+selected.id)
                .css("left", selected.pageX+"x");
          $("#"+selected.id)
