@@ -1,3 +1,6 @@
+var audio = new Audio("audio/heart-beat.wav");
+audio.loop = true;
+
 var gears = [
     { id: "gear-0", pageX: 0, pageY: 0 },
     { id: "gear-1",pageX: 0, pageY: 0 },
@@ -9,6 +12,8 @@ var selected = gears[0];
 var playing = false;
 
 $(document).ready(function() {
+    audio.play();
+
     // this will disable right-click on all images
     $("body").on("contextmenu",function(e){
          return false;
