@@ -43,10 +43,10 @@
          <div class="gear-place"></div>
     </div>
     <div id="gear-0" 
-         class="gear placed spin-reverse">
+         class="gear placed spin">
     </div>
     <div id="gear-1" 
-         class="gear placed spin">
+         class="gear placed spin-reverse">
     </div>
     <div id="gear-2" 
          class="gear placed spin">
