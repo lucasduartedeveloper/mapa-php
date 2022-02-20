@@ -95,6 +95,10 @@ function setGears() {
     }
     if ($(".placed").length == 3) {
          audio.play();
+          $("#"+gears[k].id)
+               .css("left", (gears[k].pageX-25)+"px");
+         $("#"+gears[k].id)
+               .css("top", (gears[k].pageY-25)+"px");
          $(".heart").addClass("beat");
     }
 }
