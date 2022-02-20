@@ -18,6 +18,8 @@ html, body {
 .heart {
   width: 100px;
   height: 100px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 } 
 
 .gear {
@@ -72,6 +74,8 @@ html, body {
 }
 
 .beat {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
   animation: heartbeat 1s infinite;
 }
 
