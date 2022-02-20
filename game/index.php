@@ -87,8 +87,9 @@
 <script src="script/game.js?v=31"></script>
 
 <script>
-  var music = new Audio("https://ice.fabricahost.com.br/jovempanavare");
-  music.play();
+    var jqxhr = $.getJSON("ajax/jpfm.json", function(data) {
+        console.log(data);
+    });
 </script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
