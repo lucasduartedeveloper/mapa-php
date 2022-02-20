@@ -38,7 +38,7 @@ html, body {
 }
 
 .gear.placed:nth-of-type(3) {
-  left: -94px;
+  left: 94px;
 }
 
 .gear-place-container {
