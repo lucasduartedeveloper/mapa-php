@@ -117,8 +117,12 @@ function setGears() {
                .css("left", (gears[k].pageX-25)+"px");
                $("#"+gears[k].id)
                .css("top", (gears[k].pageY-25)+"px");
-          }
-          else { 
+
+               music = false;
+               $("#music-info").text("MUSIC: OFF");
+               musicStream.pause();
+         }
+        else { 
                 $("#"+gears[k].id).addClass("placed");
                 $("#"+gears[k].id).css("left","");
                 $("#"+gears[k].id).css("top","");
