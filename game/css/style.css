@@ -24,11 +24,9 @@ html, body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; 
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  width: 104px;
+  height: 104px;
   margin: -2px;
-  -webkit-filter: brightness(0); /* Safari 6.0 - 9.0 */
-  filter: brightness(0);
 } 
 
 .heart {
