@@ -77,7 +77,7 @@ $(document).ready(function() {
               $("#mic i").addClass("bi-mic-fill");
               recordAudio();
 
-             recordingInterval = 
+              recordingInterval = 
                  setInterval(function() {
                       recorder.stop();
                       gumStream.getAudioTracks()[0]
@@ -99,6 +99,7 @@ $(document).ready(function() {
                                desenharWave(
                                      formatarAudio(buffer));
                                };
+                              recordAudio();
                          };
                    });
               }, 1000);
