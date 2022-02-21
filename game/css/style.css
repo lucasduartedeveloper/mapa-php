@@ -15,18 +15,20 @@ html, body {
     color: white;
 }
 
-.heart-border {
+div.heart-border {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-image: url("../img/heart.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; 
-  background-size: cover;
   width: 104px;
   height: 104px;
-  margin: -2px;
+} 
+
+img.heart-border {
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  -webkit-filter: brightness(0); /* Safari 6.0 - 9.0 */
+  filter: brightness(0);
 } 
 
 .heart {
