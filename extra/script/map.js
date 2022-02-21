@@ -1034,6 +1034,9 @@ $(document).ready(function() {
     new Audio("/extra/audio/car-horn.wav");
     var audio5 =
     new Audio("/extra/audio/car-lock.wav");
+    var audio6 =
+    new Audio("/extra/audio/police.wav");
+    audio6.loop = true;
 
     var lights = false;
     $("#lights").on("touchstart", function(e) {
@@ -1071,6 +1074,7 @@ $(document).ready(function() {
             }
             else {
                  audio0.onended = function () {
+                       if (playerId) audio6.play();
                        audio1.play();
                        $("#up").addClass("active");
                        //console.log(intervalA);
