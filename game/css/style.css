@@ -15,6 +15,15 @@ html, body {
     color: white;
 }
 
+.heart-border {
+  background-image: url("../img/heart.png");
+  width: 100px;
+  height: 100px;
+  margin: -2px;
+  -webkit-filter: brightness(0); /* Safari 6.0 - 9.0 */
+  filter: brightness(0);
+} 
+
 .heart {
   width: 100px;
   height: 100px;

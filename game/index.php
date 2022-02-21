@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=50">
+<link rel="stylesheet" href="css/style.css?v=51">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,7 +35,9 @@
     MUSIC: OFF
 </p>
 
-<img class="heart beat" src="img/heart.png" />
+<div class="heart-border">
+    <img class="heart beat"/>
+</div>
 <div class="gears">
     <div class="gear-place-container">
          <div class="gear-place"></div>
@@ -58,7 +60,7 @@
 </div>
 
 <p id="version-info">
-     v50.5.41.1
+     v51.5.41.1
      <br>
      <span id="server-info">
      CONNECTING...
