@@ -93,9 +93,12 @@ $(document).ready(function() {
                         reader.onloadend = function() {
                             var base64 = reader.result;
                             //postAudio(nome, buffer, base64);
+                            desenharWave(
+                                 formatarAudio(buffer));
                         };
                   };
              });
          }
      });
 });
+

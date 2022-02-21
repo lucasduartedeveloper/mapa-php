@@ -26,3 +26,8 @@ html, body {
    background-color: white;
    color: black;
 }
+
+.wave {
+  width: 90vw;
+  height: 100px;
+}

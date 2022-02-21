@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=0">
+<link rel="stylesheet" href="css/style.css?v=1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,8 +35,11 @@
       <i class="bi bi-mic-mute-fill"></i>
 </button>
 
+<canvas class="wave">
+</canvas>
+
 <p id="version-info">
-     v0.0.0
+     v1.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -68,7 +71,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/talking-bot.js?v=0"></script>
+<script src="script/talking-bot.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
