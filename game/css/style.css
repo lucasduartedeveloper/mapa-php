@@ -18,8 +18,8 @@ html, body {
 .heart {
   width: 100px;
   height: 100px;
-  -webkit-filter: grayscale(100%), drop-shadow(0 0 0.75rem crimson); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%), drop-shadow(0 0 0.75rem crimson);
+  -webkit-filter: grayscale(100%) drop-shadow(0 0 0.75rem crimson); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%)  drop-shadow(0 0 0.75rem crimson);
 } 
 
 .gear {
@@ -103,8 +103,8 @@ html, body {
 }
 
 .beat {
-  -webkit-filter: grayscale(0%),drop-shadow(0 0 0.75rem crimson); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%),drop-shadow(0 0 0.75rem crimson);
+  -webkit-filter: grayscale(0%) drop-shadow(0 0 0.75rem crimson); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%) drop-shadow(0 0 0.75rem crimson);
   animation: heartbeat 1s infinite;
 }
 
