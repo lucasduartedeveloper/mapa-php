@@ -35,7 +35,7 @@ function desenharWave(array) {
             context.strokeStyle = "#FFFFFF";
             context.lineWidth = 5;
             context.moveTo( 2.5+(k * 5),  99- ((100 - array[k])/2) ); // start position
-            context.lineTo( 2.5+(k * 5), ((100 - array[k])/2) );
+            context.lineTo( 2.5+(k * 10), ((100 - array[k])/2) );
             context.stroke(); // actually draw the line
      }
 
