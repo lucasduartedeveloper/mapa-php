@@ -64,7 +64,6 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 }
 
 var recordingInterval = false;
-function save
 
 // Botão de gravação
 var recording = false;
