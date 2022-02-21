@@ -90,16 +90,16 @@ $(document).ready(function() {
                           var reader = new FileReader();
                           reader.readAsArrayBuffer(blob); 
                           reader.onloadend = function() {
-                          var buffer = reader.result;
-                          reader.readAsDataURL(blob);
-                          reader.onloadend = function() {
-                                var base64 = reader.result;
+                                var buffer = reader.result;
+                                reader.readAsDataURL(blob);
+                                reader.onloadend = function() {
+                                      var base64 = reader.result;
                                
-                               //postAudio(nome, buffer, base64);
-                               desenharWave(
-                                     formatarAudio(buffer));
+                                     //postAudio(nome, buffer, base64);
+                                     desenharWave(
+                                           formatarAudio(buffer));
+                                     recordAudio();
                                };
-                              recordAudio();
                          };
                    });
               }, 1000);
@@ -110,7 +110,7 @@ $(document).ready(function() {
               $("#mic i").removeClass("bi-mic-fill");
               $("#mic i").addClass("bi-mic-mute-fill");
 
-              clearInterval(recordingInterva);l
+              clearInterval(recordingInterval);
          }
      });
 });
