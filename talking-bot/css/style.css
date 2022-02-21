@@ -1,0 +1,171 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    font-family: 'VT323', monospace !important;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-weight: 400 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #2B2A32;
+    color: white;
+}
+
+div.heart-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+} 
+
+img.heart-border {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  -webkit-filter: brightness(0); /* Safari 6.0 - 9.0 */
+  filter: brightness(0);
+} 
+
+.heart {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+} 
+
+.gear {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/gear.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+  filter: invert(100%);
+} 
+
+.gear.placed:nth-of-type(1n) {
+  margin-left: 0px;
+}
+
+.gear.placed:nth-of-type(2n) {
+  margin-left: 94px;
+}
+
+.gear.placed:nth-of-type(3n) {
+  margin-left: -94px;
+}
+
+.gear-place-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+} 
+
+.gear-place-container:nth-of-type(1n) {
+  margin-left: 94px;
+}
+
+.gear-place-container:nth-of-type(2n) {
+  margin-left: 0px;
+}
+
+.gear-place-container:nth-of-type(3n) {
+  margin-left: -94px;
+}
+
+.gear-place {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+} 
+
+.gears {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+} 
+
+.gear.placed.spin {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+.gear.placed.spin-reverse {
+  animation-name: spin-reverse;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+.beat {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    from {
+        transform:rotate(-12deg);
+    }
+    to {
+        transform:rotate(-372deg);
+    }
+}
+
+@keyframes heartbeat {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}

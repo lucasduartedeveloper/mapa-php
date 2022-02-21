@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=56">
+<link rel="stylesheet" href="css/style.css?v=0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,37 +31,12 @@
 </head>
 <body>
 
-<p id="music-info">
-    MUSIC: OFF
-</p>
-
-<div class="heart-border">
-    <img class="heart-border beat" src="img/heart.png"/>
-    <img class="heart beat" src="img/heart.png"/>
-</div>
-<div class="gears">
-    <div class="gear-place-container">
-         <div class="gear-place"></div>
-    </div>
-    <div class="gear-place-container">
-         <div class="gear-place"></div>
-    </div>
-    <div class="gear-place-container">
-         <div class="gear-place"></div>
-    </div>
-    <div id="gear-0" 
-         class="gear placed spin">
-    </div>
-    <div id="gear-1" 
-         class="gear placed spin-reverse">
-    </div>
-    <div id="gear-2" 
-         class="gear placed spin">
-    </div>
-</div>
+<button id="mic" type="button" class="btn-mic float-center">
+      <i class="bi bi-mic-mute-fill"></i>
+</button>
 
 <p id="version-info">
-     v56.5.43.1
+     v0.0.0
      <br>
      <span id="server-info">
      CONNECTING...
@@ -90,16 +65,10 @@
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<script src="script/websocket.js?v=5"></script>
-<script src="script/game.js?v=43"></script>
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
-<script>
-    var jqxhr = $.getJSON("ajax/jpfm.json?v=1",
-    function(data) {
-        musicStreamList =data;
-   });
-
-</script>
+<script src="script/websocket.js?v=0"></script>
+<script src="script/talking-bot.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
