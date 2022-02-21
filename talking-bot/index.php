@@ -35,7 +35,7 @@
       <i class="bi bi-mic-mute-fill"></i>
 </button>
 
-<canvas class="wave">
+<canvas id="wave" class="wave">
 </canvas>
 
 <p id="version-info">
