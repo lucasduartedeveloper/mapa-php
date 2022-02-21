@@ -16,7 +16,13 @@ html, body {
 }
 
 .heart-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-image: url("../img/heart.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; 
   width: 100px;
   height: 100px;
   margin: -2px;
