@@ -101,7 +101,7 @@ function setGears() {
                 gears[k].pageX > 0) {
                    
                 audio.pause();
-                $(".heart-border").addClass("beat");
+                $(".heart-border").removeClass("beat");
                 $(".heart").removeClass("beat");
                 $("#"+gears[k].id).removeClass("placed");
                 $("#"+gears[k].id)
