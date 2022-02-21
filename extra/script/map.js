@@ -1074,7 +1074,7 @@ $(document).ready(function() {
             }
             else {
                  audio0.onended = function () {
-                       if (playerId) audio6.play();
+                       if (playerId == 2) audio6.play();
                        audio1.play();
                        $("#up").addClass("active");
                        //console.log(intervalA);
