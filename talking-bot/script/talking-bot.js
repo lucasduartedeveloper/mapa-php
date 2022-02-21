@@ -3,7 +3,7 @@ function formatarAudio(buffer) {
        var array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
        var wavHeader = array8.slice(0, 44);
 
-       var tamanhoBloco = 500;
+       var tamanhoBloco = 100;
        var quantidade = Math.floor(array16.length / tamanhoBloco);
        var novoArray = [];
 
@@ -63,6 +63,9 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }).catch(e=>console.log(e));
 }
 
+var recordingInterval = false;
+function save
+
 // Botão de gravação
 var recording = false;
 $(document).ready(function() {
@@ -73,6 +76,32 @@ $(document).ready(function() {
               $("#mic i").removeClass("bi-mic-mute-fill");
               $("#mic i").addClass("bi-mic-fill");
               recordAudio();
+
+             recordingInterval = 
+                 setInterval(function() {
+                      recorder.stop();
+                      gumStream.getAudioTracks()[0]
+                      .stop();
+                      recorder.exportWAV(function(blob) { 
+                           var audio = 
+                                 new Audio(URL
+                                 .createObjectURL(blob));
+                          audio.play();
+                          var reader = new FileReader();
+                          reader.readAsArrayBuffer(blob); 
+                          reader.onloadend = function() {
+                          var buffer = reader.result;
+                          reader.readAsDataURL(blob);
+                          reader.onloadend = function() {
+                                var base64 = reader.result;
+                               
+                               //postAudio(nome, buffer, base64);
+                               desenharWave(
+                                     formatarAudio(buffer));
+                               };
+                         };
+                   });
+              }, 1000);
          }
         else {
               recording = false;
@@ -80,24 +109,7 @@ $(document).ready(function() {
               $("#mic i").removeClass("bi-mic-fill");
               $("#mic i").addClass("bi-mic-mute-fill");
 
-              recorder.stop();
-              gumStream.getAudioTracks()[0].stop();
-              recorder.exportWAV(function(blob) { 
-                   var audio = new Audio(URL.createObjectURL(blob));
-                  audio.play();
-                   var reader = new FileReader();
-                   reader.readAsArrayBuffer(blob); 
-                   reader.onloadend = function() {
-                        var buffer = reader.result;
-                        reader.readAsDataURL(blob);
-                        reader.onloadend = function() {
-                            var base64 = reader.result;
-                            //postAudio(nome, buffer, base64);
-                            desenharWave(
-                                 formatarAudio(buffer));
-                        };
-                  };
-             });
+              clearInterval(recordingInterva);l
          }
      });
 });
