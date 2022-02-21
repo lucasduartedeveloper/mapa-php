@@ -23,6 +23,7 @@ html, body {
   background-image: url("../img/heart.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; 
+  background-size: cover;
   width: 100px;
   height: 100px;
   margin: -2px;
