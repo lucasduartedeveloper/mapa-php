@@ -61,7 +61,7 @@
 </div>
 
 <p id="version-info">
-     v55.5.42.1
+     v55.5.43.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -91,7 +91,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=5"></script>
-<script src="script/game.js?v=42"></script>
+<script src="script/game.js?v=43"></script>
 
 <script>
     var jqxhr = $.getJSON("ajax/jpfm.json?v=1",
