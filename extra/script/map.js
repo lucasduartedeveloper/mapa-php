@@ -1070,6 +1070,7 @@ $(document).ready(function() {
                  intervalA = false;
                  velocidade = 0;
                  audio1.pause();
+                 audio6.pause();
                  audio2.play();
             }
             else {
