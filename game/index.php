@@ -36,7 +36,7 @@
 </p>
 
 <div class="heart-border">
-    <img class="heart-border" src="img/heart.png"/>
+    <img class="heart-border beat" src="img/heart.png"/>
     <img class="heart beat" src="img/heart.png"/>
 </div>
 <div class="gears">
@@ -61,7 +61,7 @@
 </div>
 
 <p id="version-info">
-     v55.5.41.1
+     v55.5.42.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -91,7 +91,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=5"></script>
-<script src="script/game.js?v=41"></script>
+<script src="script/game.js?v=42"></script>
 
 <script>
     var jqxhr = $.getJSON("ajax/jpfm.json?v=1",

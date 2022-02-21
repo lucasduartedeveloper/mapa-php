@@ -101,6 +101,7 @@ function setGears() {
                 gears[k].pageX > 0) {
                    
                 audio.pause();
+                $(".heart-border").addClass("beat");
                 $(".heart").removeClass("beat");
                 $("#"+gears[k].id).removeClass("placed");
                 $("#"+gears[k].id)
@@ -119,6 +120,7 @@ function setGears() {
     }
     if ($(".placed").length == 3) {
          audio.play();
+         $(".heart-border").addClass("beat");
          $(".heart").addClass("beat");
 
          music = false;
