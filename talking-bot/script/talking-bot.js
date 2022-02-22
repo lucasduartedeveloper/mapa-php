@@ -49,10 +49,15 @@ function desenharWave(array) {
         context.beginPath(); // always start a new line with beginPath
         context.strokeStyle = "#FFFFFF";
         context.lineWidth = 5;
-        context.moveTo(2.5+((k * 2) * 5), 50); // start position
-        context.lineTo(2.5+((k *2) * 5), 49);
-        //context.moveTo( 2.5+((k * 2) * 5),  99- ((100 - array[k])/2) ); // start position
-        //context.lineTo( 2.5+((k *2) * 5), ((100 - array[k])/2) );
+
+        // start position
+        context.moveTo(2.5+((k * 2) * 5), 
+            50 - array[k].somaPos
+        ); 
+        context.lineTo(2.5+((k *2) * 5), 
+            50 - array[k].somaNeg
+        );
+
         context.stroke(); // actually draw the line
     }
 
