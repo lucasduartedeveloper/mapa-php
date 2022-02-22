@@ -28,7 +28,7 @@ function formatarAudio(buffer) {
             somaPos: Math.floor(
             (100 / 32767) * (somaPos / tamanhoBloco)),
             somaNeg: Math.floor(
-            (100 / 32768) * (somaPos / tamanhoBloco)),
+            (100 / 32768) * (somaNeg / tamanhoBloco)),
         });
     }
 
