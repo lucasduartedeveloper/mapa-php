@@ -36,29 +36,8 @@ function desenharWave(array) {
         context.beginPath(); // always start a new line with beginPath
         context.strokeStyle = "#FFFFFF";
         context.lineWidth = 5;
-        context.moveTo( 2.5+((k * 2) * 5)),  99- ((100 - array[k])/2) ); // start position
-        context.lineTo( 2.5+((k *2) * 5)), ((100 - array[k])/2) );
-        context.stroke(); // actually draw the line
-    }
-
-    return canvas.toDataURL();
-}
-
-function desenharWaveEmFormaDeArvore(array) {
-    var canvas = document.getElementById("wave");
-    var context = canvas.getContext( '2d' );
-
-    canvas.width = 200;
-    canvas.height = 200;
-
-    for (var k = 0; k < array.length; k++) {
-        // always start a new line with beginPath
-        context.beginPath();
-        context.strokeStyle = "#FFFFFF";
-        context.lineWidth = 5;
-        // start position
-        context.moveTo( 2.5+(k * 5),  99- ((100 - array[k])/2) );
-        context.lineTo( 2.5+(k * 5), ((100 - array[k])/2) );
+        context.moveTo( 2.5+((k * 2) * 5),  99- ((100 - array[k])/2) ); // start position
+        context.lineTo( 2.5+((k *2) * 5), ((100 - array[k])/2) );
         context.stroke(); // actually draw the line
     }
 
