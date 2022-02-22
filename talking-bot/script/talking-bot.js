@@ -115,7 +115,7 @@ $(document).ready(function() {
             $("#mic i").addClass("bi-mic-mute-fill");
            
             clearInterval(recordInterval);
-            recorder.stop();
+            recorder.pause();
         }
     });
 
