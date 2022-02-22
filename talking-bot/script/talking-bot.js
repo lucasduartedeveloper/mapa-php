@@ -2,9 +2,9 @@ function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
     var array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
     var wavHeader = array8.slice(0, 44);
-    console.log(wavHeader);
+    //console.log(wavHeader);
 
-    var tamanhoBloco = array16.length / 1000;
+    var tamanhoBloco = Math.floor(array16.length / 1000);
     var quantidade = Math.floor(array16.length / tamanhoBloco);
     var novoArray = [];
 
@@ -22,8 +22,8 @@ function formatarAudio(buffer) {
         (100 / 65535) * (bloco / tamanhoBloco)));
     }
 
-    console.log(array16);
-    console.log(novoArray);
+    //console.log(array16);
+    //console.log(novoArray);
     desenharWave(novoArray);
     return novoArray;
 }
