@@ -17,8 +17,8 @@ function formatarAudio(buffer) {
 		}
 
 		novoArray
-		.push(Math.floor((100 / 65535) 
-		* (bloco / tamanhoBloco)));
+		.push(Math.floor(
+		(100 / 65535) * (bloco / tamanhoBloco)));
 	}
 
 	desenharWave(novoArray);
