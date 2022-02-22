@@ -31,10 +31,6 @@
 </head>
 <body>
 
-<p>
-     ALARME DE ZUMBIS
-</p>
-
 <canvas id="wave" class="wave">
 </canvas>
 
