@@ -1,7 +1,7 @@
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
     var buffer = array8.buffer;
-    var array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
+    var array16 = new Int16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
     var wavHeader = array8.slice(0, 44);
     //console.log(wavHeader);
 
@@ -10,17 +10,26 @@ function formatarAudio(buffer) {
     var novoArray = [];
 
     for (var i = 0; i <= quantidade; i++) {
-        var bloco = 0;
+        var somaPos = 0;
+        var somaNeg = 0;
         for (var j = 0; j < tamanhoBloco; j++) {
             var m = (i * tamanhoBloco) + j;
             if ((m+1) <= array16.length) {
-                bloco += array16[m];
+                if (array16[m] > 0) {
+                    somaPos += array16[m];
+                }
+                else {
+                    somaNeg += array16[m];
+                }
             }
         }
-
         novoArray
-        .push(Math.floor(
-        (100 / 65535) * (bloco / tamanhoBloco)));
+        .push({ 
+            somaPos: Math.floor(
+            (100 / 32767) * (somaPos / tamanhoBloco)),
+            somaNeg: Math.floor(
+            (100 / 32768) * (somaPos / tamanhoBloco)),
+        });
     }
 
     //console.log(array16);
@@ -40,8 +49,10 @@ function desenharWave(array) {
         context.beginPath(); // always start a new line with beginPath
         context.strokeStyle = "#FFFFFF";
         context.lineWidth = 5;
-        context.moveTo( 2.5+((k * 2) * 5),  99- ((100 - array[k])/2) ); // start position
-        context.lineTo( 2.5+((k *2) * 5), ((100 - array[k])/2) );
+        context.moveTo(2.5+((k * 2) * 5), 50); // start position
+        context.lineTo(2.5+((k *2) * 5), 49);
+        //context.moveTo( 2.5+((k * 2) * 5),  99- ((100 - array[k])/2) ); // start position
+        //context.lineTo( 2.5+((k *2) * 5), ((100 - array[k])/2) );
         context.stroke(); // actually draw the line
     }
 
