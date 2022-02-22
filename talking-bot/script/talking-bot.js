@@ -33,7 +33,7 @@ function formatarAudio(buffer) {
     }
 
     //console.log(array16);
-    //console.log(novoArray);
+    console.log(novoArray);
     desenharWave(novoArray);
     return novoArray;
 }
