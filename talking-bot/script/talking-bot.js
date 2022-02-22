@@ -1,5 +1,6 @@
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
+    var buffer = array8.buffer;
     var array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
     var wavHeader = array8.slice(0, 44);
     //console.log(wavHeader);
