@@ -52,10 +52,10 @@ function desenharWave(array) {
 
         // start position
         context.moveTo(2.5+((k * 2) * 5), 
-            51 - array[k].somaPos
+            50 - (array[k].somaPos + 3)
         ); 
         context.lineTo(2.5+((k *2) * 5), 
-            48 - array[k].somaNeg
+            50 + (array[k].somaNeg - 4)
         );
 
         context.stroke(); // actually draw the line
