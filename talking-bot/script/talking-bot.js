@@ -99,6 +99,7 @@ $(document).ready(function() {
             $("#mic i").removeClass("bi-mic-mute-fill");
             $("#mic i").addClass("bi-mic-fill");    
             
+            alarm.pause();
             audio.onended = function() {
                 recordAudio();
                 recordInterval =
