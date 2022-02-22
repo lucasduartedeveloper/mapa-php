@@ -84,6 +84,8 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }).catch(e=>console.log(e));
 }
 
+var recordInterval = false;
+
 // Botão de gravação
 var recording = false;
 $(document).ready(function() {
@@ -93,15 +95,21 @@ $(document).ready(function() {
             $("#mic").addClass("active");
             $("#mic i").removeClass("bi-mic-mute-fill");
             $("#mic i").addClass("bi-mic-fill");    
+            
             recordAudio();
+            recordInterval =
+            setInterval(function () {
+                 saveRecording();
+            }, 1000);
         }
         else {
             recording = false;
             $("#mic").removeClass("active");
             $("#mic i").removeClass("bi-mic-fill");
-
             $("#mic i").addClass("bi-mic-mute-fill");
-            saveRecording();
+           
+            clearInterval(recordInterval);
+            recorder.stop();
         }
     });
 
@@ -136,9 +144,9 @@ function saveRecording() {
                 //postAudio(nome, buffer, base64);
                 desenharWave(
                     formatarAudio(buffer));
-                //recordAudio();
-                window.location.href =
-                    base64;
+                recordAudio();
+                //window.location.href =
+                //    base64;
             };
         };
     });
