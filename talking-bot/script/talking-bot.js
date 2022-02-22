@@ -1,4 +1,5 @@
 var audio = new Audio("audio/phone-lock.wav");
+var alarm = new Audio("audio/battleship-alarm.wav");
 
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
@@ -145,12 +146,23 @@ function saveRecording() {
             reader.onloadend = function() {
                 var base64 = reader.result;
                 //postAudio(nome, buffer, base64);
-                desenharWave(
-                    formatarAudio(buffer));
+                var audio = formatarAudio(buffer)
+                desenharWave(audio);
                 recordAudio();
+                
                 //window.location.href =
                 //    base64;
             };
         };
     });
+}
+
+function teste(audio) {
+    for (var k in audio) {
+        if (audio[k].somaPos > 10 ||
+             audio[k].somaNeg > 10) {
+             alarm.play();
+             $("#mic").click();
+        }
+    }
 }
