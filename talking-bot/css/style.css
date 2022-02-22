@@ -15,12 +15,14 @@ html, body {
     color: white;
 }
 
+.btn-file:hover,
 .btn-mic.active {
     border: 2px solid black;
     background-color: black;
     color: white;
 }
 
+.btn-file,
 .btn-mic {
     border: 2px solid black;
     background-color: white;

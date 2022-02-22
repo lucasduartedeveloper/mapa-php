@@ -85,6 +85,15 @@ $(document).ready(function() {
             saveRecording();
         }
     });
+
+    var fileSelector = document.getElementById("file-selector");
+    fileSelector.addEventListener("change", (e) => {
+        var fileList = e.target.files;
+        console.log(fileList);
+    });
+    $("#file").click({
+        $("#file-selector").click();
+    });
 });
 
 function saveRecording() {
