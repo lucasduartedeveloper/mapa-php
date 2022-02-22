@@ -38,8 +38,11 @@
     <button id="mic" type="button" class="btn">
         <i class="bi bi-mic-mute-fill"></i>
     </button>
+    <button id="file" type="button" class="btn">
+        <i class="bi bi-file-fill"></i>
+    </button>
 </div>
-<input type="file" id="file-selector">
+<input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
      v5.0.22

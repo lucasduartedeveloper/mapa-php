@@ -86,9 +86,15 @@ $(document).ready(function() {
         }
     });
 
-    var fileSelector = document.getElementById("file-selector");
-    fileSelector.addEventListener("change", (e) => {
-        console.log(e);
+    $("#file").click(function() { $("#file-selector").click(); });
+    $("#file-selector").on("change", function (e) {
+        var reader = new FileReader();
+        reader.readAsArrayBuffer(e.target.file); 
+        reader.onloadend = function() {
+            var buffer = reader.result;
+            desenharWave(
+                formatarAudio(buffer));
+        };
     });
 });
 
@@ -104,7 +110,7 @@ function saveRecording() {
         var reader = new FileReader();
         reader.readAsArrayBuffer(blob); 
         reader.onloadend = function() {
-        var buffer = reader.result;
+            var buffer = reader.result;
             reader.readAsDataURL(blob);
             reader.onloadend = function() {
                 var base64 = reader.result;
