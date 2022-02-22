@@ -142,7 +142,7 @@ function saveRecording() {
     var audio = 
         new Audio(URL
         .createObjectURL(blob));
-        audio.play();
+        //audio.play();
         var reader = new FileReader();
         reader.readAsArrayBuffer(blob); 
         reader.onloadend = function() {
