@@ -99,12 +99,14 @@ $(document).ready(function() {
             $("#mic i").removeClass("bi-mic-mute-fill");
             $("#mic i").addClass("bi-mic-fill");    
             
+            audio.onend = function() {
+                recordAudio();
+                recordInterval =
+                setInterval(function () {
+                    saveRecording();
+                }, 1000);
+            };
             audio.play();
-            recordAudio();
-            recordInterval =
-            setInterval(function () {
-                 saveRecording();
-            }, 1000);
         }
         else {
             recording = false;
@@ -160,7 +162,7 @@ function saveRecording() {
 function teste(audio) {
     for (var k in audio) {
         if (audio[k].somaPos > 10 ||
-             audio[k].somaNeg > 10) {
+             audio[k].somaNeg < -10) {
              alarm.play();
              $("#mic").click();
         }
