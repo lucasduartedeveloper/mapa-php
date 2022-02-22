@@ -80,9 +80,9 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         gumStream = stream;
         input = audioContext
             .createMediaStreamSource(stream);
-        recorder = new Recorder(input, {
+        recorder =  new Recorder(input, {
             numChannels: 1
-        }) ;
+        });
     recorder.record();
     }).catch(e=>console.log(e));
 }
@@ -115,7 +115,7 @@ $(document).ready(function() {
             $("#mic i").addClass("bi-mic-mute-fill");
            
             clearInterval(recordInterval);
-            recorder.pause();
+            recorder.stop();
         }
     });
 
