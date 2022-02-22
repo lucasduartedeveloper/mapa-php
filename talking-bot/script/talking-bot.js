@@ -91,7 +91,7 @@ $(document).ready(function() {
         var fileList = e.target.files;
         console.log(fileList);
     });
-    $("#file").click({
+    $("#file").click(function() {
         $("#file-selector").click();
     });
 });
