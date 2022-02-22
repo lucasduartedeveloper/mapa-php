@@ -4,7 +4,7 @@ function formatarAudio(buffer) {
     var wavHeader = array8.slice(0, 44);
     console.log(wavHeader);
 
-    var tamanhoBloco = 250;
+    var tamanhoBloco = array16.length / 1000;
     var quantidade = Math.floor(array16.length / tamanhoBloco);
     var novoArray = [];
 
