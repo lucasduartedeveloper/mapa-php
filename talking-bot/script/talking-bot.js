@@ -150,7 +150,7 @@ function saveRecording() {
                 var base64 = reader.result;
                 var audio = formatarAudio(buffer)
                 desenharWave(audio);
-                teste(audio);
+                //teste(audio);
                 recordAudio();
                 
                 //window.location.href =
