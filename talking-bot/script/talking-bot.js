@@ -22,6 +22,7 @@ function formatarAudio(buffer) {
         (100 / 65535) * (bloco / tamanhoBloco)));
     }
 
+    console.log(array16);
     console.log(novoArray);
     desenharWave(novoArray);
     return novoArray;
