@@ -55,7 +55,7 @@ function desenharWave(array) {
             50 - (array[k].somaPos + 3)
         ); 
         context.lineTo(2.5+((k *2) * 5), 
-            50 + (array[k].somaNeg - 4)
+            50 - (array[k].somaNeg - 4)
         );
 
         context.stroke(); // actually draw the line

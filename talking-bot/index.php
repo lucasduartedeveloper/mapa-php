@@ -45,7 +45,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v5.0.40
+     v5.0.41
      <br>
      <span id="server-info">
      CONNECTING...
@@ -71,7 +71,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/talking-bot.js?v=40"></script>
+<script src="script/talking-bot.js?v=41"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
