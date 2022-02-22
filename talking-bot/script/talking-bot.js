@@ -89,7 +89,7 @@ $(document).ready(function() {
     $("#file").click(function() { $("#file-selector").click(); });
     $("#file-selector").on("change", function (e) {
         var reader = new FileReader();
-        reader.readAsArrayBuffer(e.target.file); 
+        reader.readAsArrayBuffer(e.target.files[0]); 
         reader.onloadend = function() {
             var buffer = reader.result;
             desenharWave(
