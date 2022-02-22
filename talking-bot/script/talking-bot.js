@@ -64,8 +64,8 @@ function desenharWave(array) {
         context.stroke(); // actually draw the line
     }
 
-    $("#wave").removeClass(".animated.leftIn");
-    $("#wave").addClass(".animated.leftIn");
+    $("#wave").removeClass("animated left-in");
+    $("#wave").addClass("animated left-in");
     return canvas.toDataURL();
 }
 

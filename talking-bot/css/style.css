@@ -32,11 +32,11 @@ html, body {
     height: 100px;
 }
 
-@-webkit-keyframes leftIn { 
+@-webkit-keyframes left-in { 
     0% { -webkit-transform: translateX(-100%); opacity: 1; }
     100% { -webkit-transform: translateX(0%); opacity: 1; }
 } 
-@keyframes leftIn { 
+@keyframes left-in { 
     0% { transform: translateX(-100%); opacity: 0; } 
     100% { transform: translateX(0%); opacity: 1; } 
 } 
@@ -46,11 +46,11 @@ animated {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-.leftIn { 
-    -webkit-animation-name: leftIn; 
-    animation-name: leftIn; 
+.left-in { 
+    -webkit-animation-name: left-in; 
+    animation-name: left-in; 
 } 
-.animated.leftIn { 
+.animated.left-in { 
     -webkit-animation-duration: 1s; 
     animation-duration: 1s; 
 }
