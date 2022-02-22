@@ -87,10 +87,10 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }).catch(e=>console.log(e));
 }
 
+var recording = false;
 var recordInterval = false;
 
 // Botão de gravação
-var recording = false;
 $(document).ready(function() {
     $("#mic").click(function(e) {
         if (!recording) {
@@ -99,7 +99,7 @@ $(document).ready(function() {
             $("#mic i").removeClass("bi-mic-mute-fill");
             $("#mic i").addClass("bi-mic-fill");    
             
-            audio.onend = function() {
+            audio.onended = function() {
                 recordAudio();
                 recordInterval =
                 setInterval(function () {
@@ -147,7 +147,6 @@ function saveRecording() {
             reader.readAsDataURL(blob);
             reader.onloadend = function() {
                 var base64 = reader.result;
-                //postAudio(nome, buffer, base64);
                 var audio = formatarAudio(buffer)
                 desenharWave(audio);
                 teste(audio);
