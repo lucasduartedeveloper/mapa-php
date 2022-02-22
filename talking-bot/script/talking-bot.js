@@ -1,3 +1,5 @@
+var audio = new Audio("audio/phone-lock.wav");
+
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
     var buffer = array8.buffer;
@@ -96,6 +98,7 @@ $(document).ready(function() {
             $("#mic i").removeClass("bi-mic-mute-fill");
             $("#mic i").addClass("bi-mic-fill");    
             
+            audio.play();
             recordAudio();
             recordInterval =
             setInterval(function () {
