@@ -88,8 +88,7 @@ $(document).ready(function() {
 
     var fileSelector = document.getElementById("file-selector");
     fileSelector.addEventListener("change", (e) => {
-        var fileList = e.target.files;
-        console.log(fileList);
+        console.log(e);
     });
     $("#file").click(function() {
         $("#file-selector").click();
