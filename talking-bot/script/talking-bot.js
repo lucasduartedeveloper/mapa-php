@@ -127,6 +127,8 @@ function saveRecording() {
                 desenharWave(
                     formatarAudio(buffer));
                 //recordAudio();
+                window.location.href =
+                    base64;
             };
         };
     });
