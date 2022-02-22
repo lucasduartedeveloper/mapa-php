@@ -30,7 +30,7 @@ function desenharWave(array) {
     var canvas = document.getElementById("wave");
     var context = canvas.getContext( '2d' );
 
-    canvas.width = 1000;
+    canvas.width = 5000;
     canvas.height = 100;
 
     for (var k = 0; k < array.length; k++) {
