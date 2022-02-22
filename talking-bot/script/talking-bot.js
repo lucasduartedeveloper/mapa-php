@@ -150,6 +150,7 @@ function saveRecording() {
                 //postAudio(nome, buffer, base64);
                 var audio = formatarAudio(buffer)
                 desenharWave(audio);
+                teste(audio);
                 recordAudio();
                 
                 //window.location.href =
