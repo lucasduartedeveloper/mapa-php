@@ -29,15 +29,15 @@ function desenharWave(array) {
     var canvas = document.getElementById("wave");
     var context = canvas.getContext( '2d' );
 
-    canvas.width = 200;
-    canvas.height = 200;
+    canvas.width = 1000;
+    canvas.height = 100;
 
     for (var k = 0; k < array.length; k++) {
         context.beginPath(); // always start a new line with beginPath
         context.strokeStyle = "#FFFFFF";
         context.lineWidth = 5;
-        context.moveTo( 2.5+(k * 5),  99- ((100 - array[k])/2) ); // start position
-        context.lineTo( 2.5+(k * 5), ((100 - array[k])/2) );
+        context.moveTo( 2.5+((k * 2) * 5)),  99- ((100 - array[k])/2) ); // start position
+        context.lineTo( 2.5+((k *2) * 5)), ((100 - array[k])/2) );
         context.stroke(); // actually draw the line
     }
 
