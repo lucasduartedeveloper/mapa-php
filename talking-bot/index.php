@@ -39,7 +39,7 @@
         <i class="bi bi-mic-mute-fill"></i>
     </button>
 </div>
-<input style="display:none" type="file" id="file-selector">
+<input type="file" id="file-selector">
 
 <p id="version-info">
      v5.0.22
