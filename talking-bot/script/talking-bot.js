@@ -4,7 +4,7 @@ function formatarAudio(buffer) {
     var wavHeader = array8.slice(0, 44);
     console.log(wavHeader);
 
-    var tamanhoBloco = 250;
+    var tamanhoBloco = 500;
     var quantidade = Math.floor(array16.length / tamanhoBloco);
     var novoArray = [];
 
@@ -22,6 +22,7 @@ function formatarAudio(buffer) {
         (100 / 65535) * (bloco / tamanhoBloco)));
     }
 
+    console.log(novoArray);
     desenharWave(novoArray);
     return novoArray;
 }
@@ -30,7 +31,7 @@ function desenharWave(array) {
     var canvas = document.getElementById("wave");
     var context = canvas.getContext( '2d' );
 
-    canvas.width = 5000;
+    canvas.width = 2500;
     canvas.height = 100;
 
     for (var k = 0; k < array.length; k++) {
