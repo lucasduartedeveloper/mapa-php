@@ -33,11 +33,11 @@ html, body {
 }
 
 @-webkit-keyframes leftIn { 
-    0% { -webkit-transform: translateX(100%); opacity: 1; }
+    0% { -webkit-transform: translateX(-100%); opacity: 1; }
     100% { -webkit-transform: translateX(0%); opacity: 1; }
 } 
 @keyframes leftIn { 
-    0% { transform: translateX(100%); opacity: 0; } 
+    0% { transform: translateX(-100%); opacity: 0; } 
     100% { transform: translateX(0%); opacity: 1; } 
 } 
 animated {
@@ -47,8 +47,8 @@ animated {
     animation-fill-mode: both;
 }
 .leftIn { 
-    -webkit-animation-name: rightIn; 
-    animation-name: rightIn; 
+    -webkit-animation-name: leftIn; 
+    animation-name: leftIn; 
 } 
 .animated.leftIn { 
     -webkit-animation-duration: 1s; 
