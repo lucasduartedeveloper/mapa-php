@@ -3,7 +3,7 @@ function formatarAudio(buffer) {
     var array16 = new Uint16Array(buffer, buffer.byteOffset, buffer.byteLength / 2).slice(22);
     var wavHeader = array8.slice(0, 44);
 
-    var tamanhoBloco = 100;
+    var tamanhoBloco = 500;
     var quantidade = Math.floor(array16.length / tamanhoBloco);
     var novoArray = [];
 
@@ -29,8 +29,8 @@ function desenharWave(array) {
     var canvas = document.getElementById("wave");
     var context = canvas.getContext( '2d' );
 
-    canvas.width = 1000;
-    canvas.height = 100;
+    canvas.width = 200;
+    canvas.height = 200;
 
     for (var k = 0; k < array.length; k++) {
         context.beginPath(); // always start a new line with beginPath
