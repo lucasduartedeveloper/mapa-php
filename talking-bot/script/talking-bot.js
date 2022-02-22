@@ -90,9 +90,6 @@ $(document).ready(function() {
     fileSelector.addEventListener("change", (e) => {
         console.log(e);
     });
-    $("#file").click(function() {
-        $("#file-selector").click();
-    });
 });
 
 function saveRecording() {

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -34,18 +34,15 @@
 <canvas id="wave" class="wave">
 </canvas>
 
-<input style="display:none" type="file" id="file-selector">
 <div>
-    <button id="mic" type="button" class="btn-mic">
+    <button id="mic" type="button" class="btn">
         <i class="bi bi-mic-mute-fill"></i>
     </button>
-    <button id="file" type="button" class="btn-file">
-        <i class="fa-solid fa-file"></i>
-    </button>
 </div>
+<input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v4.0.21
+     v5.0.22
      <br>
      <span id="server-info">
      CONNECTING...
@@ -71,7 +68,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/talking-bot.js?v=21"></script>
+<script src="script/talking-bot.js?v=22"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
