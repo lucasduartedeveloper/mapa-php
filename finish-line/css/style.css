@@ -16,7 +16,7 @@ html, body {
 }
 
 .finish-line {
-   width: 50vw;
+   width: 100px;
    height: 100vh;
    justify-content: center;
    align-items: center;
