@@ -76,10 +76,10 @@ $(document).ready(function() {
          if (!playing) return false;
 
          console.log(e.target);
-         console.log($(e.target).id);
+         console.log($(e.target)[0].id);
          console.log($(e.target).length);
 
-         if ($(e.target).id == "blue") {
+         if ($(e.target)[0].id == "blue") {
                blueX = 
                e.originalEvent.touches[0].pageX;
                blueY = 
@@ -90,7 +90,7 @@ $(document).ready(function() {
                .css("top", (blueY-25)+"px");
          }
 
-         if ($(e.target).id == "red") {
+         if ($(e.target)[0].id == "red") {
                redX = 
                e.originalEvent.touches[0].pageX;
                redY = 
