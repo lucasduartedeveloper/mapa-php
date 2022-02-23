@@ -89,11 +89,11 @@ $(document).ready(function() {
          var lineOffset = $(".finish-line").offset();
          if (lineOffset.top < blueY &&
               lineOffset.top > redY) {
-               $("html,body").css("background-color","#700");
+               $("html,body").css("background-color","#007");
          }
          else if (lineOffset.top < redY &&
               lineOffset.top > blueY) {
-               $("html,body").css("background-color","007");
+               $("html,body").css("background-color","700");
          }
     });
 
