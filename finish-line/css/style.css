@@ -37,3 +37,8 @@ html, body {
    width: 20px;
    height: 20px;
 }
+
+#timer {
+   position: fixed;
+   top: 10%;
+}
