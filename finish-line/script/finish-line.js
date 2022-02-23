@@ -75,13 +75,10 @@ $(document).ready(function() {
     $("#blue,#red").on("touchmove", function(e) {
          if (!playing) return false;
 
-         console.log($(e.target));
-         console.log(e.target);
-
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target[0]).id == "red" ? 0 : 1;
          
-         if (blue == 0 || $(e.target).length == 2) {
+         if (blue == 0) {
                blueX = 
                e.originalEvent.touches[blue].pageX;
                blueY = 
@@ -92,7 +89,7 @@ $(document).ready(function() {
                .css("top", (blueY-25)+"px");
          }
 
-         if (red == 0 || $(e.target).length == 2) {
+         if (red == 0) {
                redX = 
                e.originalEvent.touches[red].pageX;
                redY = 
