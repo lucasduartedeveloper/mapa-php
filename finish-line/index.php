@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -31,6 +31,7 @@
 </head>
 <body>
 
+<p id="title">CORRIDA DE DEDO</p>
 <p id="timer">5</p>
 
 <div class="finish-line">
@@ -40,7 +41,7 @@
 <div id="red"></div>
 
 <p style="display:none" id="version-info">
-     v10.0.30
+     v11.0.30
      <br>
      <span id="server-info">
      CONNECTING...

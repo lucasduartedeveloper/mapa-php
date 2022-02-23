@@ -38,6 +38,12 @@ html, body {
    height: 20px;
 }
 
+#title {
+   position: fixed;
+   top: 10%;
+   font-size: 40px;
+}
+
 #timer {
    position: fixed;
    top: 20%;

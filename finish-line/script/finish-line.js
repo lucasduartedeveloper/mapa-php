@@ -96,7 +96,8 @@ $(document).ready(function() {
                $("html,body").css("background-color","#007");
          }
          else {
-               $("html,body").css("background-color","#2B2A32");
+               $("html,body")
+                .css("background-color","#2B2A32");
          }
     });
 
