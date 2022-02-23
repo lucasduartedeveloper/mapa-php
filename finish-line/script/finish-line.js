@@ -40,6 +40,8 @@ $(document).ready(function() {
     var playing = false;
     var blueX = 0;
     var blueY = 0;
+    var redX = 0;
+    var redY = 0;
 
     $(document).on("touchstart", function(e) {
          playing = true;
@@ -48,6 +50,19 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageX;
          blueY = 
                e.originalEvent.touches[0].pageY;
+         $("#blue")
+               .css("left", (blueX-25)+"px");
+         $("#blue")
+               .css("top", (blueY-25)+"px");
+
+         redX = 
+               e.originalEvent.touches[1].pageX;
+         redY = 
+               e.originalEvent.touches[1].pageY;
+         $("#red")
+               .css("left", (redX-25)+"px");
+         $("#red")
+               .css("top", (redY-25)+"px");
     });
     
     $(document).on("touchmove", function(e) {
@@ -57,11 +72,19 @@ $(document).ready(function() {
                e.originalEvent.touches[0].pageX;
          blueY = 
                e.originalEvent.touches[0].pageY;
-
          $("#blue")
                .css("left", (blueX-25)+"px");
          $("#blue")
                .css("top", (blueY-25)+"px");
+
+         redX = 
+               e.originalEvent.touches[1].pageX;
+         redY = 
+               e.originalEvent.touches[1].pageY;
+         $("#red")
+               .css("left", (redX-25)+"px");
+         $("#red")
+               .css("top", (redY-25)+"px");
     });
 
    $(document).on("touchend", function(e) {
