@@ -16,7 +16,7 @@ $(document).ready(function() {
          }
     }
 
-    var timer = 11;
+    var timer = 6;
     var timerInterval = false;
     $("#timer").click(function() {
          if (timerInterval)
@@ -25,7 +25,7 @@ $(document).ready(function() {
                timer -=1;
                if (timer == 0) {
                     clearInterval(timerInterval);
-                    timer = 11;
+                    timer = 6;
                     audio.play();
                     say("GO!");
                     $("#timer").text("GO!");
@@ -34,7 +34,7 @@ $(document).ready(function() {
                    say(timer.toString());
                    $("#timer").text(timer.toString());
                }
-         }, 3000);
+         }, 5000);
     });
 });
 
