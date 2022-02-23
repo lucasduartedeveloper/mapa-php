@@ -43,7 +43,7 @@ $(document).ready(function() {
     var redX = 0;
     var redY = 0;
 
-    $(document).on("touchstart", function(e) {
+    $("#blue,#red").on("touchstart", function(e) {
          playing = true;
 
          blueX = 
