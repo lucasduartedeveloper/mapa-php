@@ -21,7 +21,9 @@ html, body {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   overdlow: hidden;
+   overflow: hidden;
+   justify-content: center;
+   align-items: center;
 }
 
 .black {
