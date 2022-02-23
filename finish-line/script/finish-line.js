@@ -91,7 +91,7 @@ $(document).ready(function() {
               lineOffset.top > redY) {
                $("html,body").css("background-color","#700");
          }
-         if (lineOffset.top < redY &&
+         else if (lineOffset.top < redY &&
               lineOffset.top > blueY) {
                $("html,body").css("background-color","007");
          }
