@@ -16,7 +16,7 @@ $(document).ready(function() {
          }
     }
 
-    var timer = 1000001;
+    var timer = 11;
     var timerInterval = false;
     $("#timer").click(function() {
          if (timerInterval)
@@ -25,7 +25,7 @@ $(document).ready(function() {
                timer -=1;
                if (timer == 0) {
                     clearInterval(timerInterval);
-                    timer = 1000001;
+                    timer = 11;
                     audio.play();
                     say("GO!");
                     $("#timer").text("GO!");
@@ -44,7 +44,9 @@ function say(text) {
          if (!speaking) {
               speaking = true;
               var msg = new SpeechSynthesisUtterance();
-              msg.lang = "ja-JP";
+              //msg.lang = "pt-BR";
+              msg.lang = "en-US";
+              //msg.lang = "ja-JP";
               msg.text = text;
               msg.onend = function(event) {
                   speaking = false;
