@@ -18,6 +18,7 @@ html, body {
 .finish-line {
    width: 100vw;
    height: 100px;
+   display: flex;
    flex-direction: row;
    flex-wrap: wrap;
    overdlow: hidden;
