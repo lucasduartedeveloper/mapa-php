@@ -93,7 +93,7 @@ $(document).ready(function() {
          }
          else if (lineOffset.top < redY &&
               lineOffset.top > blueY) {
-               $("html,body").css("background-color","700");
+               $("html,body").css("background-color","#700");
          }
     });
 
