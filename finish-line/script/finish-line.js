@@ -87,11 +87,13 @@ $(document).ready(function() {
                .css("top", (redY-25)+"px");
 
          var lineOffset = $(".finish-line").offset();
-         if (lineOffset.top < blueY) {
-               $("html,body").css("background-color","blue");
+         if (lineOffset.top < blueY &&
+              lineOffset.top > redY) {
+               $("html,body").css("background-color","#c00");
          }
-         if (lineOffset.top < redY) {
-               $("html,body").css("background-color","red");
+         if (lineOffset.top < redY &&
+              lineOffset.top > blueY) {
+               $("html,body").css("background-color","00c");
          }
     });
 
