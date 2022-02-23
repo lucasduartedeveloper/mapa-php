@@ -79,11 +79,14 @@ $(document).ready(function() {
          console.log($(e.target)[0].id);
          console.log($(e.target).length);
 
+         var blue = $(e.target)[0].id == "blue" ? 0 : 1;
+         var red = $(e.target)[0].id == "red" ? 0 : 1;
+
          if ($(e.target)[0].id == "blue") {
                blueX = 
-               e.originalEvent.touches[0].pageX;
+               e.originalEvent.touches[blue].pageX;
                blueY = 
-               e.originalEvent.touches[0].pageY;
+               e.originalEvent.touches[blue].pageY;
                $("#blue")
                .css("left", (blueX-25)+"px");
                $("#blue")
@@ -92,9 +95,9 @@ $(document).ready(function() {
 
          if ($(e.target)[0].id == "red") {
                redX = 
-               e.originalEvent.touches[0].pageX;
+               e.originalEvent.touches[red].pageX;
                redY = 
-               e.originalEvent.touches[0].pageY;
+               e.originalEvent.touches[red].pageY;
                $("#red")
                .css("left", (redX-25)+"px");
                $("#red")
