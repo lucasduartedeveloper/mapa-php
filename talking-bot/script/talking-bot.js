@@ -65,7 +65,10 @@ function desenharWave(array) {
     }
 
     $("#wave").removeClass("animated left-in");
-    $("#wave").addClass("animated left-in");
+    var wave = $("#wave").clone(true);           
+
+    $("#wave").before(wave);
+    $(".wave:last").addClass("animated left-in");
     return canvas.toDataURL();
 }
 
