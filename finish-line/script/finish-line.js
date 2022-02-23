@@ -17,6 +17,8 @@ $(document).ready(function() {
     var timer = 6;
     var timerInterval = false;
     $("#timer").click(function() {
+         if (timerInterval)
+            clearInterval(timerInterval);
          timerInterval = setInterval(function() {
                timer -=1;
                if (timer == 0) {
