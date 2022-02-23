@@ -24,9 +24,9 @@ $(document).ready(function() {
                if (timer == 0) {
                     clearInterval(timerInterval);
                     timer = 5;
-                    
+                    say("GO!");
                }
-         }, 1000);
+         }, 3000);
     });
 });
 
