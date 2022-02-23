@@ -46,21 +46,22 @@ $(document).ready(function() {
     $("#blue,#red").on("touchstart", function(e) {
          playing = true;
 
-         console.log(e.target);
+         var blue = e.target[0].id == "blue" ? 0 : 1;
+         var red = e.target[0].id == "red" ? 0 : 1;
 
          blueX = 
-               e.originalEvent.touches[0].pageX;
+               e.originalEvent.touches[blue].pageX;
          blueY = 
-               e.originalEvent.touches[0].pageY;
+               e.originalEvent.touches[blue].pageY;
          $("#blue")
                .css("left", (blueX-25)+"px");
          $("#blue")
                .css("top", (blueY-25)+"px");
 
          redX = 
-               e.originalEvent.touches[1].pageX;
+               e.originalEvent.touches[red].pageX;
          redY = 
-               e.originalEvent.touches[1].pageY;
+               e.originalEvent.touches[red].pageY;
          $("#red")
                .css("left", (redX-25)+"px");
          $("#red")
@@ -70,20 +71,22 @@ $(document).ready(function() {
     $("#blue,#red").on("touchmove", function(e) {
          if (!playing) return false;
 
+         var blue = e.target[0].id == "blue" ? 0 : 1;
+         var red = e.target[0].id == "red" ? 0 : 1;
          
          blueX = 
-               e.originalEvent.touches[0].pageX;
+               e.originalEvent.touches[blue].pageX;
          blueY = 
-               e.originalEvent.touches[0].pageY;
+               e.originalEvent.touches[blue].pageY;
          $("#blue")
                .css("left", (blueX-25)+"px");
          $("#blue")
                .css("top", (blueY-25)+"px");
 
          redX = 
-               e.originalEvent.touches[1].pageX;
+               e.originalEvent.touches[red].pageX;
          redY = 
-               e.originalEvent.touches[1].pageY;
+               e.originalEvent.touches[red].pageY;
          $("#red")
                .css("left", (redX-25)+"px");
          $("#red")
