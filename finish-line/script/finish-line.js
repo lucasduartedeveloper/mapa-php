@@ -1,3 +1,5 @@
+var audio = new Audio("audio/gun-shot.wav");
+
 // Botão de gravação
 $(document).ready(function() {
     var divBlack = "<div class=\"black\"></div>";
@@ -24,6 +26,7 @@ $(document).ready(function() {
                if (timer == 0) {
                     clearInterval(timerInterval);
                     timer = 6;
+                    audio.play();
                     say("GO!");
                     $("#timer").text("GO!");
                }
