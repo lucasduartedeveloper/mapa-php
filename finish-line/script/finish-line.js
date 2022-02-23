@@ -84,7 +84,7 @@ $(document).ready(function() {
                e.originalEvent.touches[1].pageX;
          redY = 
                e.originalEvent.touches[1].pageY;
-i         $("#red")
+         $("#red")
                .css("left", (redX-25)+"px");
          $("#red")
                .css("top", (redY-25)+"px");
