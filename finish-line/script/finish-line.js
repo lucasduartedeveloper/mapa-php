@@ -76,13 +76,10 @@ $(document).ready(function() {
          if (!playing) return false;
 
          console.log(e.target);
-         console.log($(e.target));
+         console.log($(e.target).id);
          console.log($(e.target).length);
 
-         var blue = $(e.target)[0].id == "blue" ? 0 : 1;
-         var red = $(e.target[0]).id == "red" ? 0 : 1;
-
-         if ($(e.target)[0].id == "blue") {
+         if ($(e.target).id == "blue") {
                blueX = 
                e.originalEvent.touches[0].pageX;
                blueY = 
@@ -93,7 +90,7 @@ $(document).ready(function() {
                .css("top", (blueY-25)+"px");
          }
 
-         if ($(e.target[0]).id == "red") {
+         if ($(e.target).id == "red") {
                redX = 
                e.originalEvent.touches[0].pageX;
                redY = 
