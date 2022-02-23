@@ -13,4 +13,31 @@ $(document).ready(function() {
                    divWhite + divBlack));
          }
     }
+
+    var timer = 3;
+    var timerInterval = false;
+    $("#timer").click(function() {
+         timerInterval = setInterval(function() {
+               timer -=1;
+               say(timer.toString());
+               $("#timer").text(timer.toString());
+               if (timer == 0) {
+                    clearInterval(timerInterval);
+               }
+         }, 1000);
+    });
 });
+
+// Texto para audio
+var speaking = false;
+function say(text) {
+         if (!speaking) {
+              speaking = true;
+              var msg = new SpeechSynthesisUtterance();
+              msg.text = text;
+              msg.onend = function(event) {
+                  speaking = false;
+              };
+              window.speechSynthesis.speak(msg);
+        }
+}
