@@ -19,12 +19,15 @@ $(document).ready(function() {
     $("#timer").click(function() {
          timerInterval = setInterval(function() {
                timer -=1;
-               say(timer.toString());
-               $("#timer").text(timer.toString());
                if (timer == 0) {
                     clearInterval(timerInterval);
                     timer = 5;
                     say("GO!");
+                    $("#timer").text("GO!");
+               }
+               else {
+                   say(timer.toString());
+                   $("#timer").text(timer.toString());
                }
          }, 3000);
     });
