@@ -68,7 +68,8 @@ function desenharWave(array) {
     var wave = $("#wave").clone(true);           
 
     $("#wave").before(wave);
-    $(".wave:last").addClass("animated left-in");
+    $(".wave:last").remove();
+    $("#wave").addClass("animated left-in");
     return canvas.toDataURL();
 }
 
@@ -119,7 +120,7 @@ $(document).ready(function() {
             $("#mic").removeClass("active");
             $("#mic i").removeClass("bi-mic-fill");
             $("#mic i").addClass("bi-mic-mute-fill");
-           
+            
             clearInterval(recordInterval);
             recorder.stop();
         }
