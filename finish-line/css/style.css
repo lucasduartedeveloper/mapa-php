@@ -16,8 +16,8 @@ html, body {
 }
 
 .finish-line {
-   width: 100px;
-   height: 100vh;
+   width: 100vw;
+   height: 100px;
    justify-content: center;
    align-items: center;
    flex-direction: row;
