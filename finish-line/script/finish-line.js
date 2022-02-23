@@ -75,6 +75,8 @@ $(document).ready(function() {
     $("#blue,#red").on("touchmove", function(e) {
          if (!playing) return false;
 
+         console.log($(e.target));
+
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target[0]).id == "red" ? 0 : 1;
          
