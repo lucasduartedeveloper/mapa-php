@@ -46,9 +46,10 @@ $(document).ready(function() {
     $("#blue,#red").on("touchstart", function(e) {
          playing = true;
 
-         var blue = e.target[0].id == "blue" ? 0 : 1;
-         var red = e.target[0].id == "red" ? 0 : 1;
+         var blue = $(e.target)[0].id == "blue" ? 0 : 1;
+         var red = $(e.target)[0].id == "red" ? 0 : 1;
 
+         if (blue == 0 || $(e.target).length == 2) {
          blueX = 
                e.originalEvent.touches[blue].pageX;
          blueY = 
@@ -57,7 +58,9 @@ $(document).ready(function() {
                .css("left", (blueX-25)+"px");
          $("#blue")
                .css("top", (blueY-25)+"px");
+         }
 
+         if (red == 0 || $(e.target).length == 2) {
          redX = 
                e.originalEvent.touches[red].pageX;
          redY = 
@@ -66,6 +69,7 @@ $(document).ready(function() {
                .css("left", (redX-25)+"px");
          $("#red")
                .css("top", (redY-25)+"px");
+         }
     });
     
     $("#blue,#red").on("touchmove", function(e) {
@@ -74,6 +78,7 @@ $(document).ready(function() {
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target[0]).id == "red" ? 0 : 1;
          
+         if (blue == 0 || $(e.target).length == 2) {
          blueX = 
                e.originalEvent.touches[blue].pageX;
          blueY = 
@@ -82,7 +87,9 @@ $(document).ready(function() {
                .css("left", (blueX-25)+"px");
          $("#blue")
                .css("top", (blueY-25)+"px");
+         }
 
+         if (red == 0 || $(e.target).length == 2) {
          redX = 
                e.originalEvent.touches[red].pageX;
          redY = 
@@ -91,6 +98,7 @@ $(document).ready(function() {
                .css("left", (redX-25)+"px");
          $("#red")
                .css("top", (redY-25)+"px");
+         }
 
          var lineOffset = $(".finish-line").offset();
          if (lineOffset.top < blueY &&
