@@ -28,12 +28,12 @@ html, body {
 
 .black {
    background: #000;
-   width: 25px;
-   height: 25px;
+   width: 20px;
+   height: 20px;
 }
 
 .white {
    background: #fff;
-   width: 25px;
-   height: 25px;
+   width: 20px;
+   height: 20px;
 }
