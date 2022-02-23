@@ -14,7 +14,7 @@ $(document).ready(function() {
          }
     }
 
-    var timer = 3;
+    var timer = 5;
     var timerInterval = false;
     $("#timer").click(function() {
          timerInterval = setInterval(function() {
@@ -23,6 +23,8 @@ $(document).ready(function() {
                $("#timer").text(timer.toString());
                if (timer == 0) {
                     clearInterval(timerInterval);
+                    timer = 5;
+                    
                }
          }, 1000);
     });
@@ -34,6 +36,7 @@ function say(text) {
          if (!speaking) {
               speaking = true;
               var msg = new SpeechSynthesisUtterance();
+              msg.lang = "en-US";
               msg.text = text;
               msg.onend = function(event) {
                   speaking = false;

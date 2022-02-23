@@ -41,4 +41,5 @@ html, body {
 #timer {
    position: fixed;
    top: 10%;
+   font-size: 40px;
 }
