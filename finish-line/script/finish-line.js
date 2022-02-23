@@ -65,7 +65,7 @@ $(document).ready(function() {
                .css("top", (redY-25)+"px");
     });
     
-    $(document).on("touchmove", function(e) {
+    $("#blue,#red").on("touchmove", function(e) {
          if (!playing) return false;
 
          blueX = 
@@ -85,9 +85,17 @@ $(document).ready(function() {
                .css("left", (redX-25)+"px");
          $("#red")
                .css("top", (redY-25)+"px");
+
+         var lineOffset = $(".finish-line").offset();
+         if (lineOffset.top < blueY) {
+               $("html,body").css("background-color","blue");
+         }
+         if (lineOffset.top < redY) {
+               $("html,body").css("background-color","red");
+         }
     });
 
-   $(document).on("touchend", function(e) {
+   $("#blue,#red").on("touchend", function(e) {
          playing = false;
     });
 });
