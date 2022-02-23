@@ -8,9 +8,9 @@ $(document).ready(function() {
          for (var k = 0; k < width; k++) {
               $(".finish-line").html(
               $(".finish-line").html() +
-                   c % 2 == 0 ? 
+                   (c % 2 == 0 ? 
                    divBlack + divWhite :
-                   divWhite + divBlack);
+                   divWhite + divBlack));
          }
     }
 });
