@@ -81,23 +81,23 @@ $(document).ready(function() {
 
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target[0]).id == "red" ? 0 : 1;
-         
-         if (blue == 0) {
+
+         if ($(e.target)[0].id == "blue") {
                blueX = 
-               e.originalEvent.touches[blue].pageX;
+               e.originalEvent.touches[0].pageX;
                blueY = 
-               e.originalEvent.touches[blue].pageY;
+               e.originalEvent.touches[0].pageY;
                $("#blue")
                .css("left", (blueX-25)+"px");
                $("#blue")
                .css("top", (blueY-25)+"px");
          }
 
-         if (red == 0) {
+         if ($(e.target[0]).id == "red") {
                redX = 
-               e.originalEvent.touches[red].pageX;
+               e.originalEvent.touches[0].pageX;
                redY = 
-               e.originalEvent.touches[red].pageY;
+               e.originalEvent.touches[0].pageY;
                $("#red")
                .css("left", (redX-25)+"px");
                $("#red")
