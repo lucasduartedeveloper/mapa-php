@@ -49,6 +49,7 @@ html, body {
    background: blue;
    width: 50px;
    height: 50px;
+   border-radius: 50%;
 }
 
 #red {
@@ -56,4 +57,5 @@ html, body {
    background: red;
    width: 50px;
    height: 50px;
+   border-radius: 50%;
 }
