@@ -37,43 +37,44 @@ $(document).ready(function() {
          }, 5000);
     });
 
-    var playing = false;
+    var redPlaying = false;
+    var bluePlaying = false;
     var blueX = 0;
     var blueY = 0;
     var redX = 0;
     var redY = 0;
 
     $("#blue,#red").on("touchstart", function(e) {
-         playing = true;
-
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target)[0].id == "red" ? 0 : 1;
 
          if (blue == 0 || $(e.target).length == 2) {
-         blueX = 
+               bluePlaying = true;
+               blueX = 
                e.originalEvent.touches[blue].pageX;
-         blueY = 
+               blueY = 
                e.originalEvent.touches[blue].pageY;
-         $("#blue")
+               $("#blue")
                .css("left", (blueX-25)+"px");
-         $("#blue")
+               $("#blue")
                .css("top", (blueY-25)+"px");
          }
 
          if (red == 0 || $(e.target).length == 2) {
-         redX = 
+               redPlaying = true;
+               redX = 
                e.originalEvent.touches[red].pageX;
-         redY = 
+               redY = 
                e.originalEvent.touches[red].pageY;
-         $("#red")
+               $("#red")
                .css("left", (redX-25)+"px");
-         $("#red")
+               $("#red")
                .css("top", (redY-25)+"px");
          }
     });
     
     $("#blue,#red").on("touchmove", function(e) {
-         if (!playing) return false;
+         if (!bluePlaying && !redPlaying) return false;
 
          console.log(e.target);
          console.log($(e.target)[0].id);
@@ -105,6 +106,10 @@ $(document).ready(function() {
                $("#red")
                .css("top", (redY-25)+"px");
          }
+    });
+
+   $("#blue,#red").on("touchend", function(e) {
+        
 
          var lineOffset = $(".finish-line").offset();
          if (lineOffset.top < blueY &&
@@ -119,10 +124,6 @@ $(document).ready(function() {
                $("html,body")
                 .css("background-color","#2B2A32");
          }
-    });
-
-   $("#blue,#red").on("touchend", function(e) {
-         playing = false;
     });
 });
 
