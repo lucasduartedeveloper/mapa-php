@@ -36,6 +36,32 @@ $(document).ready(function() {
                }
          }, 5000);
     });
+
+    var playing = false;
+    var blueX = 0;
+    var blueY = 0;
+
+    $(document).on("touchstart", function(e) {
+         playing = true;
+
+         blueX = 
+               e.originalEvent.touches[0].pageX;
+         blueY = 
+               e.originalEvent.touches[0].pageY;
+    });
+    
+    $(document).on("touchmove", function(e) {
+         if (!playing) return false;
+
+         $("#blue")
+               .css("left", (blueX-25)+"px");
+         $("#blue")
+               .css("top", (blueY-25)+"px");
+    });
+
+   $(document).on("touchend", function(e) {
+         playing = false;
+    });
 });
 
 // Texto para audio

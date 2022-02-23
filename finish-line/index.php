@@ -36,8 +36,11 @@
 <div class="finish-line">
 </div>
 
+<div id="blue"></div>
+<div id="red"></div>
+
 <p style="display:none" id="version-info">
-     v5.0.17
+     v5.0.18
      <br>
      <span id="server-info">
      CONNECTING...
@@ -63,7 +66,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/finish-line.js?v=17"></script>
+<script src="script/finish-line.js?v=18"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
