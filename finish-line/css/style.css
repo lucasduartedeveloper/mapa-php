@@ -56,8 +56,8 @@ html, body {
    width: 50px;
    height: 50px;
    left: 20px;
-   bottom: 20px; as 
-   border-radius: 50%;
+   bottom: 20px; 
+   --border-radius: 50%;
 }
 
 #red {
