@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<p id="timer">3</p>
+<p id="timer">5</p>
 
 <div class="finish-line">
 </div>
