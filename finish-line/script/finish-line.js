@@ -95,6 +95,9 @@ $(document).ready(function() {
               lineOffset.top > blueY) {
                $("html,body").css("background-color","#007");
          }
+         else {
+               $("html,body").css("background-color","#2B2A32");
+         }
     });
 
    $("#blue,#red").on("touchend", function(e) {
