@@ -16,7 +16,7 @@ $(document).ready(function() {
          }
     }
 
-    var timer = 6;
+    var timer = 1000001;
     var timerInterval = false;
     $("#timer").click(function() {
          if (timerInterval)
@@ -25,7 +25,7 @@ $(document).ready(function() {
                timer -=1;
                if (timer == 0) {
                     clearInterval(timerInterval);
-                    timer = 6;
+                    timer = 1000001;
                     audio.play();
                     say("GO!");
                     $("#timer").text("GO!");
