@@ -14,14 +14,14 @@ $(document).ready(function() {
          }
     }
 
-    var timer = 5;
+    var timer = 6;
     var timerInterval = false;
     $("#timer").click(function() {
          timerInterval = setInterval(function() {
                timer -=1;
                if (timer == 0) {
                     clearInterval(timerInterval);
-                    timer = 5;
+                    timer = 6;
                     say("GO!");
                     $("#timer").text("GO!");
                }
