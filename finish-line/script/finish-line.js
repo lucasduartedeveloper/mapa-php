@@ -76,29 +76,30 @@ $(document).ready(function() {
          if (!playing) return false;
 
          console.log($(e.target));
+         console.log(e.target);
 
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target[0]).id == "red" ? 0 : 1;
          
          if (blue == 0 || $(e.target).length == 2) {
-         blueX = 
+               blueX = 
                e.originalEvent.touches[blue].pageX;
-         blueY = 
+               blueY = 
                e.originalEvent.touches[blue].pageY;
-         $("#blue")
+               $("#blue")
                .css("left", (blueX-25)+"px");
-         $("#blue")
+               $("#blue")
                .css("top", (blueY-25)+"px");
          }
 
          if (red == 0 || $(e.target).length == 2) {
-         redX = 
+               redX = 
                e.originalEvent.touches[red].pageX;
-         redY = 
+               redY = 
                e.originalEvent.touches[red].pageY;
-         $("#red")
+               $("#red")
                .css("left", (redX-25)+"px");
-         $("#red")
+               $("#red")
                .css("top", (redY-25)+"px");
          }
 
