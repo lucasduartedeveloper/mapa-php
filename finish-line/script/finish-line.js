@@ -53,6 +53,11 @@ $(document).ready(function() {
     $(document).on("touchmove", function(e) {
          if (!playing) return false;
 
+         blueX = 
+               e.originalEvent.touches[0].pageX;
+         blueY = 
+               e.originalEvent.touches[0].pageY;
+
          $("#blue")
                .css("left", (blueX-25)+"px");
          $("#blue")
