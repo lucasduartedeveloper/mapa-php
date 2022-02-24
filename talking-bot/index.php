@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=18">
+<link rel="stylesheet" href="css/style.css?v=19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<p>NÃO SE MOVA</p>
+<p id="title">NÃO SE MOVA</p>
 
 <p id="acc">
 </p>
@@ -50,7 +50,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v18.0.19
+     v19.0.19
      <br>
      <span id="server-info">
      CONNECTING...
