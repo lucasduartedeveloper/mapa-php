@@ -13,6 +13,10 @@ html, body {
     text-align: center;
     background-color: #2B2A32;
     color: white;
+    background: url(img/eye.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .finish-line {
