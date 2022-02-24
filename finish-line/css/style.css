@@ -58,7 +58,7 @@ html, body {
    border: 2px solid black;
    color: black;
    position: fixed;
-   background: #fff;
+   --background: #fff;
    font-size: 50px;
    width: 50px;
    height: 50px;
@@ -86,7 +86,7 @@ html, body {
    border: 2px solid black;
    color: black;
    position: fixed;
-   background: #fff;
+   --background: #fff;
    font-size: 50px;
    width: 50px;
    height: 50px;
