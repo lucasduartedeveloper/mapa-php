@@ -51,6 +51,7 @@ html, body {
 }
 
 #blue {
+   background-color: rgba(0,0,0,0);
    background: url(img/eye.png);
    background-repeat: no-repeat;
    background-position: center;
@@ -79,6 +80,7 @@ html, body {
 }
 
 #red {
+   background-color: rgba(0,0,0,0);
    background: url(img/eye.png);
    background-repeat: no-repeat;
    background-position: center;
