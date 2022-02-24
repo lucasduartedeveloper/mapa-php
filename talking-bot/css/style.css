@@ -49,18 +49,19 @@ html, body {
 #title {
     position: fixed;
     top: 10px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #mic {
     position: fixed;
-    right: 10px
+    right: 10px;
     bottom: 10px;
 }
 
 #version-info {
+    text-align: left;
     position: fixed;
-    left: 10px
+    left: 10px;
     bottom: 10px;
 }
 
