@@ -50,7 +50,7 @@ function desenharWave(array) {
 
     for (var k = 0; k < array.length; k++) {
         context.beginPath(); // always start a new line with beginPath
-        context.strokeStyle = "#FFFFFF";
+        context.strokeStyle = "#000";
         context.lineWidth = 5;
 
         // start position
@@ -189,8 +189,8 @@ var accZ = 0;
 function alarme(audio) {
     var play = false;
     for (var k in audio) {
-        if (audio[k].somaPos > 10 ||
-             audio[k].somaNeg < -10) {
+        if (audio[k].somaPos > 3 ||
+             audio[k].somaNeg < -3) {
              play = true;
         }
     }
