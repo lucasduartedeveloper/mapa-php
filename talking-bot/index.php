@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=21">
+<link rel="stylesheet" href="css/style.css?v=22">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<p id="title">NÃO SE MOVA</p>
+<p id="title">OQUE É ISSO?</p>
 
 <p id="acc">
 </p>
@@ -43,14 +43,14 @@
     <button id="mic" type="button" class="btn">
         <i class="bi bi-mic-mute-fill"></i>
     </button>
-    <button id="file" type="button" class="btn">
+    <button style="display:none;" id="file" type="button" class="btn">
         <i class="fa-regular fa-file-audio"></i>
     </button>
 </div>
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v21.0.27
+     v22.0.27
      <br>
      <span id="server-info">
      CONNECTING...

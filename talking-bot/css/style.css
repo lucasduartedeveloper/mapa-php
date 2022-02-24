@@ -47,7 +47,21 @@ html, body {
 }
 
 #title {
+    position: fixed;
+    top: 10px;
     font-size: 50px;
+}
+
+#mic {
+    position: fixed;
+    right: 10px
+    bottom: 10px;
+}
+
+#version-info {
+    position: fixed;
+    left: 10px
+    bottom: 10px;
 }
 
 @-webkit-keyframes left-in { 
