@@ -172,7 +172,7 @@ $(document).ready(function() {
        { description: "Dois reais", 
          image: "../img/2.jpg" }
    ];
-   $("html,body").click(function() {
+   $("html,body").on("touchstart", function() {
        nota += 1;
        nota = nota < notas.length ? nota : 0;
        $("html,body")
