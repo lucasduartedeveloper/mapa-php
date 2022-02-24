@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" href="css/style.css?v=19">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
