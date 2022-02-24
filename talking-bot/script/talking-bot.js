@@ -154,6 +154,31 @@ $(document).ready(function() {
        accY = acc.y && acc.y.toFixed(3);
        accZ = acc.z && acc.z.toFixed(3);
    }
+
+   var nota = 1;
+   var notas = [
+       { description: "Duzentos reais", 
+         image: "../img/200.jpg" },
+       { description: "Cem reais", 
+         image: "../img/100.jpg" },
+       { description: "Cinquenta reais", 
+         image: "../img/50.jpg" },
+       { description: "Vinte reais", 
+         image: "../img/20.jpg" },
+       { description: "Dez reais", 
+         image: "../img/10.jpg" },
+       { description: "Cinco reais", 
+         image: "../img/5.jpg" },
+       { description: "Dois reais", 
+         image: "../img/2.jpg" }
+   ];
+   $("html,body").click(function() {
+       nota += 1;
+       nota = nota < notas.length ? nota : 0;
+       $("html,body")
+       .css("background-image",
+       notas[nota].image);
+   });
 });
 
 function saveRecording() {
