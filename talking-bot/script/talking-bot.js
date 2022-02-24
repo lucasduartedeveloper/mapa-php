@@ -175,6 +175,7 @@ $(document).ready(function() {
    $("#title").on("touchstart", function() {
        nota += 1;
        nota = nota < notas.length ? nota : 0;
+       console.log(notas[nota].image);
        $("html,body")
        .css("background-image",
        notas[nota].image);
