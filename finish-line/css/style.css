@@ -55,6 +55,7 @@ html, body {
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;
+   background-size: cover;
    border: 2px solid black;
    color: black;
    position: fixed;
@@ -83,6 +84,7 @@ html, body {
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;
+   background-size: cover;
    border: 2px solid black;
    color: black;
    position: fixed;
