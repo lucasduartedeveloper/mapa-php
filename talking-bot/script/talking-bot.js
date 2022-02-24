@@ -158,19 +158,19 @@ $(document).ready(function() {
    var nota = 1;
    var notas = [
        { description: "Duzentos reais", 
-         image: "../img/200.jpg" },
+         image: "img/200.jpg" },
        { description: "Cem reais", 
-         image: "../img/100.jpg" },
+         image: "img/100.jpg" },
        { description: "Cinquenta reais", 
-         image: "../img/50.jpg" },
+         image: "img/50.jpg" },
        { description: "Vinte reais", 
-         image: "../img/20.jpg" },
+         image: "img/20.jpg" },
        { description: "Dez reais", 
-         image: "../img/10.jpg" },
+         image: "img/10.jpg" },
        { description: "Cinco reais", 
-         image: "../img/5.jpg" },
+         image: "img/5.jpg" },
        { description: "Dois reais", 
-         image: "../img/2.jpg" }
+         image: "img/2.jpg" }
    ];
    $("#title").on("touchstart", function() {
        nota += 1;
