@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<p>ALARME CONFUSO</p>
+<p>NÃO SE MOVA</p>
 
 <p id="acc">
 </p>
