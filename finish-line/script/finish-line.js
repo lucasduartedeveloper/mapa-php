@@ -109,8 +109,6 @@ $(document).ready(function() {
     });
 
    $("#blue,#red").on("touchend", function(e) {
-        
-
          var lineOffset = $(".finish-line").offset();
          if (lineOffset.top < blueY &&
               lineOffset.top > redY) {
@@ -124,6 +122,11 @@ $(document).ready(function() {
                $("html,body")
                 .css("background-color","#2B2A32");
          }
+    });
+
+    $("i").on("touchstart touchmove touchend",
+        function(e) {
+        $(e.target).parent().trigger(e.type);
     });
 });
 
