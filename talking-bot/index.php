@@ -34,8 +34,8 @@
 <p id="acc">
 </p>
 
-<div id="wave" class="wave">
-</div>
+<canvas id="wave" class="wave">
+</canvas>
 
 <div>
     <button id="mic" type="button" class="btn">
