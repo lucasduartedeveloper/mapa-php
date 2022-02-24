@@ -135,10 +135,10 @@ $(document).ready(function() {
 
     if ('DeviceMotionEvent' in window) {
         var onDeviceMotion = function (e) {
+             $("#acc").html("");
              accHandler(e.acceleration);
              accHandler(e.accelerationIncludingGravity);
              rotHandler(e.rotationRate);
-             $("#acc").html("");
         }
         window
         .addEventListener('devicemotion',
