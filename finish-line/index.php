@@ -37,8 +37,20 @@
 <div class="finish-line">
 </div>
 
-<div id="blue"></div>
-<div id="red"></div>
+<div id="blue" 
+style=
+"background-image: url(img/eye.png); 
+ background-position: center;
+ background-size: cover;"
+>
+</div>
+<div id="red" 
+style=
+"background-image: url(img/eye.png); 
+ background-position: center;
+ background-size: cover;"
+>
+</div>
 
 <p style="display:none" id="version-info">
      v41.0.50
