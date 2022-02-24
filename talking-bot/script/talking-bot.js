@@ -149,7 +149,7 @@ $(document).ready(function() {
        info = xyz.replace("X", acc.x && acc.x.toFixed(3));
        info = info.replace("Y", acc.y && acc.y.toFixed(3));
        info = info.replace("Z", acc.z && acc.z.toFixed(3));
-       $("#acc").html(info);
+       $("#acc").html(info + $("#acc").html());
    }
 
    function rotHandler(rot) {
@@ -157,7 +157,7 @@ $(document).ready(function() {
        info = xyz.replace("X", rot.alpha && rot.alpha.toFixed(3));
        info = info.replace("Y", rot.beta && rot.beta.toFixed(3));
        info = info.replace("Z", rot.gamma && rot.gamma.toFixed(3));
-       $("#acc").html(info);
+       $("#acc").html(info + $("#acc").html());
    }
 });
 
