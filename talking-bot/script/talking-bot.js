@@ -178,7 +178,7 @@ $(document).ready(function() {
        console.log(notas[nota].image);
        $("html,body")
        .css("background-image",
-       notas[nota].image);
+       "url("+notas[nota].image+")");
    });
 });
 
