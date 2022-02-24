@@ -51,10 +51,10 @@ html, body {
 }
 
 #blue {
-   background-image: url(img/eye.png) !important;
-   background-repeat: no-repeat !important;
-   background-position: center !important;
-   background-size: cover !important;
+   background: url(img/eye.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
    border: 2px solid black;
    color: black;
    position: fixed;
@@ -79,10 +79,10 @@ html, body {
 }
 
 #red {
-   background-image: url(img/eye.png) !important;
-   background-repeat: no-repeat !important;
-   background-position: center !important;
-   background-size: cover !important;
+   background: url(img/eye.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
    border: 2px solid black;
    color: black;
    position: fixed;
