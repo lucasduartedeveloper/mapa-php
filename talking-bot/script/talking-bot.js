@@ -132,6 +132,33 @@ $(document).ready(function() {
                 formatarAudio(buffer));
         };
     });
+
+    if ('DeviceMotionEvent' in window) {
+        var onDeviceMotion = function (eventData) {
+             accHandler(eventData.acceleration);
+             accHandler(eventData.accelerationIncludingGravity);
+             rotationHandler(eventData.rotationRate);
+             intervalHandler(eventData.interval);
+        }
+       window.addEventListener('devicemotion',
+onDeviceMotion, false);
+   }
+
+   function accHandler(acc) {
+       var info, xyz = "[X, Y, Z]";
+       info = xyz.replace("X", acc.x && acc.x.toFixed(3));
+       info = info.replace("Y", acc.y && acc.y.toFixed(3));
+       info = info.replace("Z", acc.z && acc.z.toFixed(3));
+       console.log(info);
+   }
+
+   function rotationHandler(rot) {
+       var info, xyz = "[X, Y, Z]";
+       info = xyz.replace("X", rot.alpha && rot.alpha.toFixed(3));
+       info = info.replace("Y", rot.beta && rot.beta.toFixed(3));
+       info = info.replace("Z", rot.gamma && rot.gamma.toFixed(3));
+       console.log(info);
+   }
 });
 
 function saveRecording() {

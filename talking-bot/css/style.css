@@ -32,6 +32,12 @@ html, body {
     height: 100px;
 }
 
+.walls {
+    width: 100px;
+    height: 400px;
+    border: 2px solid white;
+}
+
 @-webkit-keyframes left-in { 
     0% { -webkit-transform: translateX(-100%); opacity: 1; }
     100% { -webkit-transform: translateX(0%); opacity: 1; }
