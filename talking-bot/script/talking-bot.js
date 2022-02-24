@@ -138,6 +138,7 @@ $(document).ready(function() {
              accHandler(e.acceleration);
              accHandler(e.accelerationIncludingGravity);
              rotHandler(e.rotationRate);
+             $("#acc").html("");
         }
         window
         .addEventListener('devicemotion',
