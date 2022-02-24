@@ -194,7 +194,7 @@ function alarme(audio) {
              play = true;
         }
     }
-    play = accX != 0 || accY != 0;
+    play = accX != 0 || accY != 0 || play;
     if (play) {
         $("#mic").click();
         alarm.play();
