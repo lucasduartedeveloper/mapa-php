@@ -51,7 +51,7 @@ html, body {
 }
 
 #blue {
-   background-img: url("img/eye.png");
+   background-image: url("img/eye.png");
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;
@@ -79,7 +79,7 @@ html, body {
 }
 
 #red {
-   background-img: url("img/eye.png");
+   background-image: url("img/eye.png");
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=25">
+<link rel="stylesheet" href="css/style.css?v=26">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -37,15 +37,11 @@
 <div class="finish-line">
 </div>
 
-<div id="blue">
-     .
-</div>
-<div id="red">
-     .
-</div>
+<div id="blue"></div>
+<div id="red"></div>
 
 <p style="display:none" id="version-info">
-     v25.0.50
+     v26.0.50
      <br>
      <span id="server-info">
      CONNECTING...
