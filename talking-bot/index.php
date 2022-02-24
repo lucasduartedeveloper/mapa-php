@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<p id="title">OQUE É ISSO?</p>
+<p id="title">SENSORES</p>
 
 <p id="acc">
 </p>
