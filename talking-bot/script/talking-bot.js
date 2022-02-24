@@ -143,10 +143,6 @@ $(document).ready(function() {
         onDeviceMotion, false);
    }
 
-   var accX = 0;
-   var accY = 0;
-   var accZ = 0;
-
    function accHandler(acc) {
        var info, xyz = "[X, Y, Z]<br>";
        info = xyz.replace("X", acc.x && acc.x.toFixed(3));
@@ -185,6 +181,10 @@ function saveRecording() {
         };
     });
 }
+
+var accX = 0;
+var accY = 0;
+var accZ = 0;
 
 function alarme(audio) {
     var play = false;
