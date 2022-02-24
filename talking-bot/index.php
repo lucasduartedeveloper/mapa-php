@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<p id="title">SENSORES</p>
+<p id="title">ANTI-FURTO</p>
 
 <p id="acc">
 </p>
