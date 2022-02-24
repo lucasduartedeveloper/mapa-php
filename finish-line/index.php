@@ -38,14 +38,14 @@
 </div>
 
 <div id="blue">
-     <i class="bi bi-circle-fill"></i>
+     .
 </div>
 <div id="red">
-     <i class="bi bi-circle-fill"></i>
+     .
 </div>
 
 <p style="display:none" id="version-info">
-     v16.0.49
+     v16.0.50
      <br>
      <span id="server-info">
      CONNECTING...
@@ -71,7 +71,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/finish-line.js?v=49"></script>
+<script src="script/finish-line.js?v=50"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
