@@ -143,6 +143,10 @@ $(document).ready(function() {
         onDeviceMotion, false);
    }
 
+   var accX = 0;
+   var accY = 0;
+   var accZ = 0;
+
    function accHandler(acc) {
        var info, xyz = "[X, Y, Z]<br>";
        info = xyz.replace("X", acc.x && acc.x.toFixed(3));
@@ -169,23 +173,26 @@ function saveRecording() {
             reader.onloadend = function() {
                 var base64 = reader.result;
                 var audio = formatarAudio(buffer)
+
                 desenharWave(audio);
-                //teste(audio);
+                alarme(audio);
                 recordAudio();
-                
-                //window.location.href =
-                //    base64;
             };
         };
     });
 }
 
-function teste(audio) {
+function alarme(audio) {
+    var play = false;
     for (var k in audio) {
         if (audio[k].somaPos > 10 ||
              audio[k].somaNeg < -10) {
-             alarm.play();
-             $("#mic").click();
+             play = true;
         }
+    }
+    play = accX != 0 || accY != 0;
+    if (play) {
+        $("#mic").click();
+        alarm.play();
     }
 }
