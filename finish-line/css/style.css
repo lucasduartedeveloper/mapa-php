@@ -52,7 +52,7 @@ html, body {
 
 #blue {
    border: 2px solid black;
-   color: block;
+   color: black;
    position: fixed;
    background: blue;
    width: 50px;
@@ -70,7 +70,7 @@ html, body {
 
 #red {
    border: 2px solid black;
-   color: block;
+   color: black;
    position: fixed;
    background: red;
    width: 50px;
