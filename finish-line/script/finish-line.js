@@ -134,17 +134,20 @@ $(document).ready(function() {
                 .css("background-color","#2B2A32");
          }
          
-         //if (!bluePlaying && !redPlaying) {
+         if (startTime) {
                blueTime = blueTime - startTime;
                redTime = redTime - startTime;
-               startTime = 0;
                
                $("#time1").text(
                  (blueTime/1000).toFixed(3)+"s");
                $("#time2").text(
                  (redTime/1000).toFixed(3)+"s");
                $("#result").show();
-         //}
+
+               startTime = 0;
+               blueTime = 0;
+               redTime = 0;
+         }
     });
 
     $("i").on("touchstart touchmove touchend",
