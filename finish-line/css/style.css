@@ -107,13 +107,26 @@ html, body {
 }
 
 #result {
-   width: 100%
+   width: 100%;
    position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   bottom: 20%;
+   font-size: 30px;
+}
+
+.result-line {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: row;
    text-align: center;
-   bottom: 40%;
-   font-size: 30px;
+}
+
+.result-line img {
+   width: 30px;
+   width: 30px;
 }
