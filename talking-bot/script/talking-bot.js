@@ -226,7 +226,7 @@ function alarme(audio) {
         }
     }
     play = 
-        (p(Math.abs(accX) + 
+        ((Math.abs(accX) + 
          Math.abs(accY) + 
          Math.abs(accZ)) > 12) ||
         play;
