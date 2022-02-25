@@ -99,12 +99,9 @@ $(document).ready(function() {
                $("#blue")
                .css("top", (blueY-25)+"px");
 
-               bluePlaying = false;
-               blueTime = new Date().getTime();
-
-               if (lineOffset.top > redY) {
-                    redPlaying = false;
-                    redTime = new Date().getTime();
+               if (lineOffset.top > blueY) {
+                    bluePlaying = false;
+                    blueTime = new Date().getTime();
                }
          }
 
@@ -119,9 +116,9 @@ $(document).ready(function() {
                $("#red")
                .css("top", (redY-25)+"px");
 
-               if (lineOffset.top > blueY) {
-                    bluePlaying = false;
-                    blueTime = new Date().getTime();
+               if (lineOffset.top > redY) {
+                    redPlaying = false;
+                    redTime = new Date().getTime();
                }
          }
     });
