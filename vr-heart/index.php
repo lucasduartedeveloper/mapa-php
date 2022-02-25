@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -34,7 +34,7 @@
 <canvas width="200" height="200" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     v0.0.3
+     v1.0.3
      <br>
      <span id="server-info">
      CONNECTING...
