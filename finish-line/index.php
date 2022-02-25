@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=45">
+<link rel="stylesheet" href="css/style.css?v=46">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -53,18 +53,18 @@ style=
 <p id="result">
     <span class="result-line">
         1# 
-         <img src="/img/eye-right.png" id="1st" />
+         <img src="img/eye-right.png" id="1st" />
          <span  id="time1">0.000s</span>
     </span>
     <span class="result-line">
          2# 
-         <img src="/img/eye-left.png" id="2st" />
+         <img src="img/eye-left.png" id="2st" />
          <span id="time2">0.000 s</span>
     </span>
 </p>
 
 <p style="display:none" id="version-info">
-     v45.0.50
+     v46.0.50
      <br>
      <span id="server-info">
      CONNECTING...
