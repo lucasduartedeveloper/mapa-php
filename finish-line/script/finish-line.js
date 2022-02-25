@@ -117,13 +117,11 @@ $(document).ready(function() {
 
    $("#blue,#red").on("touchend", function(e) {
          var lineOffset = $(".finish-line").offset();
-         if (lineOffset.top < blueY &&
-              lineOffset.top > redY) {
+         if (lineOffset.top < blueY) {
                bluePlaying = false;
                blueTime = new Date().getTime();
          }
-         if (lineOffset.top < redY &&
-              lineOffset.top > blueY) {
+         if (lineOffset.top < redY) {
                redPlaying = false;
                redTime = new Date().getTime();
          }
