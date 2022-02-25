@@ -226,9 +226,9 @@ function alarme(audio) {
         }
     }
     play = 
-        ((Math.abs(accX) + 
+        (p(Math.abs(accX) + 
          Math.abs(accY) + 
-         Math.abs(accZ)) > 15) ||
+         Math.abs(accZ)) > 12) ||
         play;
     if (play) {
         $("#mic").click();
