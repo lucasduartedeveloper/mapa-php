@@ -225,7 +225,10 @@ function alarme(audio) {
              play = true;
         }
     }
-    play = accX != 0 || accY != 0 || play;
+    play = 
+        (Math.abs(accX)) > 1 ||
+        (Math.abs(accY)) > 1 || 
+        play;
     if (play) {
         $("#mic").click();
         alarm.play();
