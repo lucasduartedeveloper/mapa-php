@@ -34,7 +34,7 @@
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     v0.0.0
+     v0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -59,7 +59,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/database.js?v=0"></script>
-<script src="script/camera.js?v=0"></script>
+<script src="script/camera.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

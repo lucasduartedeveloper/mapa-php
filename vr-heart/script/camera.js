@@ -57,6 +57,7 @@ $(document).ready(function() {
 
          // overwrite original image
          ctx.putImageData(imgData, 0, 0);
+         var dataUrl = cnv.toDataUrl();
 
          var img = document.createElement("img");
          img.width = 100;
