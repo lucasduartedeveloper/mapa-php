@@ -120,21 +120,15 @@ $(document).ready(function() {
          if (lineOffset.top < blueY &&
               lineOffset.top > redY) {
                bluePlaying = false;
-               $("html,body").css("background-color","#700");
                blueTime = new Date().getTime();
          }
-         else if (lineOffset.top < redY &&
+         if (lineOffset.top < redY &&
               lineOffset.top > blueY) {
                redPlaying = false;
-               $("html,body").css("background-color","#007");
                redTime = new Date().getTime();
          }
-         else {
-               $("html,body")
-                .css("background-color","#2B2A32");
-         }
          
-         if (startTime) {
+         if (startTime && !bluePlaying && !redPlaying) {
                blueTime = blueTime - startTime;
                redTime = redTime - startTime;
                
