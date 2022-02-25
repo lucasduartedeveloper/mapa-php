@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=41">
+<link rel="stylesheet" href="css/style.css?v=42">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -39,21 +39,19 @@
 
 <div id="blue" 
 style=
-"background-image: url(img/eye.png); 
- background-position: center;
+ "background-position: center;
  background-size: cover;"
 >
 </div>
 <div id="red" 
 style=
-"background-image: url(img/eye.png); 
- background-position: center;
+"background-position: center;
  background-size: cover;"
 >
 </div>
 
 <p style="display:none" id="version-info">
-     v41.0.50
+     v42.0.50
      <br>
      <span id="server-info">
      CONNECTING...
