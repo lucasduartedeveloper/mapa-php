@@ -220,8 +220,8 @@ var accZ = 0;
 function alarme(audio) {
     var play = false;
     for (var k in audio) {
-        if (audio[k].somaPos > 3 ||
-             audio[k].somaNeg < -3) {
+        if (audio[k].somaPos > 5 ||
+             audio[k].somaNeg < -5) {
              play = true;
         }
     }
