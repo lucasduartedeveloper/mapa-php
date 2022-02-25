@@ -56,7 +56,7 @@ $(document).ready(function() {
          var red = $(e.target)[0].id == "red" ? 0 : 1;
 
          if (blue == 0 || $(e.target).length == 2) {
-               bluePlaying = true;
+               bluePlaying = true && startTime;
                blueX = 
                e.originalEvent.touches[blue].pageX;
                blueY = 
@@ -68,7 +68,7 @@ $(document).ready(function() {
          }
 
          if (red == 0 || $(e.target).length == 2) {
-               redPlaying = true;
+               redPlaying = true && startTime;
                redX = 
                e.originalEvent.touches[red].pageX;
                redY = 
@@ -137,6 +137,7 @@ $(document).ready(function() {
          //if (!bluePlaying && !redPlaying) {
                blueTime = blueTime - startTime;
                redTime = redTime - startTime;
+               startTime = 0;
                
                $("#time1").text(
                  (blueTime/1000).toFixed(3)+"s");
