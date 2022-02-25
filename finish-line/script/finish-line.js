@@ -128,7 +128,7 @@ $(document).ready(function() {
                redTime = new Date().getTime();
          }
          
-         if (startTime && !bluePlaying && !redPlaying) {
+         if (startTime && (!bluePlaying && !redPlaying)) {
                blueTime = blueTime - startTime;
                redTime = redTime - startTime;
                
