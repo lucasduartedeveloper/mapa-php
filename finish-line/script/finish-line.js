@@ -114,11 +114,11 @@ $(document).ready(function() {
 
    $("#blue,#red").on("touchend", function(e) {
          var lineOffset = $(".finish-line").offset();
-         if (lineOffset.top < blueY) {
+         if (lineOffset.top > blueY) {
                bluePlaying = false;
                blueTime = new Date().getTime();
          }
-         if (lineOffset.top < redY) {
+         if (lineOffset.top > redY) {
                redPlaying = false;
                redTime = new Date().getTime();
          }
@@ -137,11 +137,6 @@ $(document).ready(function() {
                blueTime = 0;
                redTime = 0;
          }
-    });
-
-    $("i").on("touchstart touchmove touchend",
-        function(e) {
-        $(e.target).parent().trigger(e.type);
     });
 });
 
