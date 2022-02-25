@@ -52,6 +52,7 @@ $(document).ready(function() {
     var redY = 0;
 
     $("#blue,#red").on("touchstart", function(e) {
+         if (!startTime) return false;
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target)[0].id == "red" ? 0 : 1;
 
@@ -68,7 +69,7 @@ $(document).ready(function() {
          }
 
          if (red == 0 || $(e.target).length == 2) {
-               redPlaying = true && startTime;
+               redPlaying = true;
                redX = 
                e.originalEvent.touches[red].pageX;
                redY = 
