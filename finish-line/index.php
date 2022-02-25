@@ -50,21 +50,19 @@ style=
 >
 </div>
 
-<p id="result">
+<p style="display:none;" id="result">
     <span class="result-line">
-        1# 
          <img src="img/eye-right.png" id="1st" />
          <span  id="time1">0.000s</span>
     </span>
     <span class="result-line">
-         2# 
          <img src="img/eye-left.png" id="2st" />
          <span id="time2">0.000s</span>
     </span>
 </p>
 
 <p style="display:none" id="version-info">
-     v48.0.51
+     v48.0.52
      <br>
      <span id="server-info">
      CONNECTING...
@@ -90,7 +88,7 @@ style=
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/finish-line.js?v=51"></script>
+<script src="script/finish-line.js?v=52"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

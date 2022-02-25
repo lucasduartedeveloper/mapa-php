@@ -23,6 +23,7 @@ $(document).ready(function() {
     var timer = 6;
     var timerInterval = false;
     $("#timer").click(function() {
+         $("#result").hide();
          if (timerInterval)
             clearInterval(timerInterval);
          timerInterval = setInterval(function() {
@@ -141,6 +142,7 @@ $(document).ready(function() {
                  (blueTime/1000).toFixed(3)+"s");
                $("#time2").text(
                  (redTime/1000).toFixed(3)+"s");
+               $("#result").show();
          }
     });
 
