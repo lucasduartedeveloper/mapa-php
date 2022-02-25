@@ -16,6 +16,10 @@ $(document).ready(function() {
          }
     }
 
+    var startTime = 0;
+    var redTime = 0;
+    var blueTime = 0;
+
     var timer = 6;
     var timerInterval = false;
     $("#timer").click(function() {
@@ -27,6 +31,8 @@ $(document).ready(function() {
                     clearInterval(timerInterval);
                     timer = 6;
                     audio.play();
+                    
+                    var startTime = new Date().getTime();
                     say("GO!");
                     $("#timer").text("GO!");
                }
@@ -113,15 +119,18 @@ $(document).ready(function() {
          if (lineOffset.top < blueY &&
               lineOffset.top > redY) {
                $("html,body").css("background-color","#700");
+              var redTime = new Date().getTime();
          }
          else if (lineOffset.top < redY &&
               lineOffset.top > blueY) {
                $("html,body").css("background-color","#007");
+               var blueTime = new Date().getTime();
          }
          else {
                $("html,body")
                 .css("background-color","#2B2A32");
          }
+         
     });
 
     $("i").on("touchstart touchmove touchend",

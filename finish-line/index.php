@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=43">
+<link rel="stylesheet" href="css/style.css?v=44">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -50,8 +50,21 @@ style=
 >
 </div>
 
+<p id="result">
+    <span>
+        1# 
+         <img id="1st"></img>
+         <span  id="time1">0.000s</span>
+    </span>
+    <span>
+         2# 
+         <img id="2st"></img>
+         <span id="time2">0.000 s</span>
+    </span>
+</p>
+
 <p style="display:none" id="version-info">
-     v43.0.50
+     v44.0.50
      <br>
      <span id="server-info">
      CONNECTING...
