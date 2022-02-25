@@ -107,7 +107,7 @@ html, body {
 }
 
 #result {
-   width: 100%;
+   width: 80%;
    position: fixed;
    display: flex;
    justify-content: center;
@@ -120,13 +120,15 @@ html, body {
 
 .result-line {
    display: flex;
-   justify-content: center;
-   align-items: center;
+   justify-content: left;
+   align-items: left;
    flex-direction: row;
    text-align: center;
 }
 
 .result-line img {
    width: 30px;
-   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   border: 2px solid black;
 }
