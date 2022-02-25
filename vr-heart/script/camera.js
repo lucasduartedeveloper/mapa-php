@@ -42,7 +42,7 @@ $(document).ready(function() {
 
          ctx.drawImage(video, 0, 0, 200, 200);
 
-         var imgData = ctx.getImageData(0, 0, 100, 100);
+         var imgData = ctx.getImageData(0, 0, 200, 200);
          var data = imgData.data;
          for (var i = 0; i < data.length; i += 4) {
               var brightness = 0.34 * data[i] + 
