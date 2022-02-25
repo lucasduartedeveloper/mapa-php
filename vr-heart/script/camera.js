@@ -66,7 +66,7 @@ $(document).ready(function() {
 
          img.onload = function() {
               context.drawImage(
-              this, 0, 0, 100, 100); 
+              this, 0, 0, 200, 200); 
          };
          img.src = dataUrl;
      }, 500);
