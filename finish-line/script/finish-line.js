@@ -118,19 +118,30 @@ $(document).ready(function() {
          var lineOffset = $(".finish-line").offset();
          if (lineOffset.top < blueY &&
               lineOffset.top > redY) {
+               bluePlaying = false;
                $("html,body").css("background-color","#700");
-              var redTime = new Date().getTime();
+               blueTime = new Date().getTime();
          }
          else if (lineOffset.top < redY &&
               lineOffset.top > blueY) {
+               redPlaying = false;
                $("html,body").css("background-color","#007");
-               var blueTime = new Date().getTime();
+               redTime = new Date().getTime();
          }
          else {
                $("html,body")
                 .css("background-color","#2B2A32");
          }
          
+         if (!bluePlaying && !redPlaying) {
+               blueTime = blueTime - startTime;
+               redTime = redTime - startTime;
+               
+               $("#time1").text(
+                 (blueTime/1000).toFixed(3)+"s");
+               $("#time2").text(
+                 (redTime/1000).toFixed(3)+"s");
+         }
     });
 
     $("i").on("touchstart touchmove touchend",

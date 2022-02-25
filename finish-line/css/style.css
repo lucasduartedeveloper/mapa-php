@@ -55,7 +55,7 @@ html, body {
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   border: 2px solid black;
+   border: 2px solid #000;
    color: black;
    position: fixed;
    --background: #fff;
@@ -83,7 +83,7 @@ html, body {
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   border: 2px solid black;
+   border: 2px solid #000;
    color: black;
    position: fixed;
    --background: #fff;
