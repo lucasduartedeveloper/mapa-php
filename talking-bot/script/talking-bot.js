@@ -1,5 +1,6 @@
 var audio = new Audio("audio/phone-lock.wav");
 var alarm = new Audio("audio/battleship-alarm.wav");
+var coin = new Audio("audio/coin.wav");
 
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
@@ -153,6 +154,10 @@ $(document).ready(function() {
        accX = acc.x && acc.x.toFixed(3);
        accY = acc.y && acc.y.toFixed(3);
        accZ = acc.z && acc.z.toFixed(3);
+
+       if (accZ < -1) {
+           coin.play();
+       }
    }
 
    var nota = 1;
