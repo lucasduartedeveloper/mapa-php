@@ -1,5 +1,16 @@
 var audio = new Audio("audio/gun-shot.wav");
 
+var startTime = 0;
+var redTime = 0;
+var blueTime = 0;
+
+var redPlaying = false;
+var bluePlaying = false;
+var blueX = 0;
+var blueY = 0;
+var redX = 0;
+var redY = 0;
+
 // Botão de gravação
 $(document).ready(function() {
     var divBlack = "<div class=\"black\"></div>";
@@ -15,10 +26,6 @@ $(document).ready(function() {
                    divWhite + divBlack));
          }
     }
-
-    var startTime = 0;
-    var redTime = 0;
-    var blueTime = 0;
 
     var timer = 6;
     var timerInterval = false;
@@ -43,13 +50,6 @@ $(document).ready(function() {
                }
          }, 5000);
     });
-
-    var redPlaying = false;
-    var bluePlaying = false;
-    var blueX = 0;
-    var blueY = 0;
-    var redX = 0;
-    var redY = 0;
 
     $("#blue,#red").on("touchstart", function(e) {
          if (!startTime) return false;
@@ -83,10 +83,6 @@ $(document).ready(function() {
     
     $("#blue,#red").on("touchmove", function(e) {
          if (!bluePlaying && !redPlaying) return false;
-
-         console.log(e.target);
-         console.log($(e.target)[0].id);
-         console.log($(e.target).length);
 
          var blue = $(e.target)[0].id == "blue" ? 0 : 1;
          var red = $(e.target)[0].id == "red" ? 0 : 1;
