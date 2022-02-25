@@ -36,11 +36,11 @@ $(document).ready(function() {
 
          // ENVIAR
          var cnv = document.createElement("canvas");
-         cnv.width = 100;
-         cnv.height = 100;
+         cnv.width = 200;
+         cnv.height = 200;
          var ctx = cnv.getContext("2d");
 
-         ctx.drawImage(video, 0, 0, 100, 100);
+         ctx.drawImage(video, 0, 0, 200, 200);
 
          var imgData = ctx.getImageData(0, 0, 100, 100);
          var data = imgData.data;
@@ -60,8 +60,8 @@ $(document).ready(function() {
          var dataUrl = cnv.toDataURL();
 
          var img = document.createElement("img");
-         img.width = 100;
-         img.height = 100;
+         img.width = 200;
+         img.height = 200;
          img.style.objectFit = "cover";
 
          img.onload = function() {

@@ -30,11 +30,11 @@
 </head>
 <body>
 
-<video style="display:none" id="video" width="100" height="100" autoplay></video>
-<canvas width="100" height="100" id="camera-canvas"></canvas>
+<video style="display:none" id="video" width="200" height="200" autoplay></video>
+<canvas width="200" height="200" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     v0.0.2
+     v0.0.3
      <br>
      <span id="server-info">
      CONNECTING...
@@ -59,7 +59,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/database.js?v=0"></script>
-<script src="script/camera.js?v=2"></script>
+<script src="script/camera.js?v=3"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
