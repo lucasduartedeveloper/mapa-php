@@ -33,7 +33,7 @@ $(document).ready(function() {
                     timer = 6;
                     audio.play();
                     
-                    var startTime = new Date().getTime();
+                    startTime = new Date().getTime();
                     say("GO!");
                     $("#timer").text("GO!");
                }
@@ -134,7 +134,7 @@ $(document).ready(function() {
                 .css("background-color","#2B2A32");
          }
          
-         if (!bluePlaying && !redPlaying) {
+         //if (!bluePlaying && !redPlaying) {
                blueTime = blueTime - startTime;
                redTime = redTime - startTime;
                
@@ -143,7 +143,7 @@ $(document).ready(function() {
                $("#time2").text(
                  (redTime/1000).toFixed(3)+"s");
                $("#result").show();
-         }
+         //}
     });
 
     $("i").on("touchstart touchmove touchend",
