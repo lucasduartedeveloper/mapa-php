@@ -76,7 +76,7 @@ var gumStream;
 var input;
 
 function recordAudio() {
-navigator.mediaDevices.getUserMedia({ audio: true })
+    navigator.mediaDevices.getUserMedia({ audio: true })
     .then(stream => {
         gumStream = stream;
         input = audioContext
@@ -93,67 +93,43 @@ var recordInterval = false;
 
 // Botão de gravação
 $(document).ready(function() {
-    $("#mic").click(function(e) {
-        if (!recording) {
-            recording = true;
-            $("#mic").addClass("active");
-            $("#mic i").removeClass("bi-mic-mute-fill");
-            $("#mic i").addClass("bi-mic-fill");    
-            
-            alarm.pause();
-            audio.onended = function() {
-                recordAudio();
-                recordInterval =
-                setInterval(function () {
-                    saveRecording();
-                }, 1000);
-            };
-            audio.play();
-        }
-        else {
-            recording = false;
-            $("#mic").removeClass("active");
-            $("#mic i").removeClass("bi-mic-fill");
-            $("#mic i").addClass("bi-mic-mute-fill");
-            
-            clearInterval(recordInterval);
-            recorder.stop();
-        }
-    });
+    
 
-    if ('DeviceMotionEvent' in window) {
-        var onDeviceMotion = function (e) {
-             $("#acc").html("");
-             accHandler(e.accelerationIncludingGravity);
-        }
-        window
-        .addEventListener('devicemotion',
-        onDeviceMotion, false);
-   }
+}
 
-   function accHandler(acc) {
-       var info, xyz = "[X, Y, Z]<br>";
-       info = xyz.replace("X", acc.x && acc.x.toFixed(3));
-       info = info.replace("Y", acc.y && acc.y.toFixed(3));
-       info = info.replace("Z", acc.z && acc.z.toFixed(3));
-       $("#acc").html(info + $("#acc").html());
+if ('DeviceMotionEvent' in window) {
+    var onDeviceMotion = function (e) {
+        $("#acc").html("");
+        accHandler(e.accelerationIncludingGravity);
+    }
+    window
+    .addEventListener('devicemotion',
+    onDeviceMotion, false);
+}
 
-       accX = acc.x && acc.x.toFixed(3);
-       accY = acc.y && acc.y.toFixed(3);
-       accZ = acc.z && acc.z.toFixed(3);
+function accHandler(acc) {
+    var info, xyz = "[X, Y, Z]<br>";
+    info = xyz.replace("X", acc.x && acc.x.toFixed(3));
+    info = info.replace("Y", acc.y && acc.y.toFixed(3));
+    info = info.replace("Z", acc.z && acc.z.toFixed(3));
+    $("#acc").html(info + $("#acc").html());
 
-       if (accZ < -1) {
-           coin.play();
-       }
-   }
+    accX = acc.x && acc.x.toFixed(3);
+    accY = acc.y && acc.y.toFixed(3);
+    accZ = acc.z && acc.z.toFixed(3);
 
-   var question = 1;
-   var questions = [
-      { question: "", 
-         option_a: "",
-         option_c: "",
-         option_d: "",
-         option_d: ""}
+    if (accZ < -1) {
+        coin.play();
+    }
+}
+
+var question = 1;
+var questions = [
+   { question: "", 
+     option_a: "",
+     option_c: "",
+     option_d: "",
+     option_d: ""}
 ];
 });
 
