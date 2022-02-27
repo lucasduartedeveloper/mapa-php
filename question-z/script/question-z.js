@@ -94,7 +94,6 @@ var recordInterval = false;
 // Botão de gravação
 $(document).ready(function() {
     
-
 }
 
 if ('DeviceMotionEvent' in window) {
@@ -179,5 +178,22 @@ function alarme(audio) {
     if (play) {
         $("#mic").click();
         alarm.play();
+    }
+}
+
+// Texto para audio
+var speaking = false;
+function say(text) {
+    if (!speaking) {
+         speaking = true;
+         var msg = new SpeechSynthesisUtterance();
+         //msg.lang = "pt-BR";
+         msg.lang = "en-US";
+         //msg.lang = "ja-JP";
+         msg.text = text;
+         msg.onend = function(event) {
+              speaking = false;
+         };
+         window.speechSynthesis.speak(msg);
     }
 }

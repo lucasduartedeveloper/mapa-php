@@ -11,9 +11,9 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: #000;
-    color: #000;
-    background-image: url(../img/100.jpg);
+    background-color: #2f2e40;
+    color: #fff;
+    --background-image: url(../img/100.jpg);
     background-position: center;
     background-size: cover;
     -webkit-touch-callout: none;
@@ -37,6 +37,11 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    border: 2px solid white;
+}
+
+.option {
+    border-top: 1px solid white;
 }
 
 #version-info {
