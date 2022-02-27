@@ -71,3 +71,7 @@ $(document).ready(function() {
          img.src = dataUrl;
      }, 500);
 });
+
+function encontrarNada() {
+     
+}
