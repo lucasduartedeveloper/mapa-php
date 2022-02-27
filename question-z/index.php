@@ -39,7 +39,7 @@
     OPÇÃO A: STEFANNY KUROSAWA
 </p>
 <p id="option_b" class="option">
-    OPÇÃO B:JUDITH ALMEIDA
+    OPÇÃO B: JUDITH ALMEIDA
 </p>
 <p id="option_c" class="option">
     OPÇÃO C: LAURA MITSUKO TANAKA
@@ -60,7 +60,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v1.0.1
+     v2.0.1
      <br>
      <span id="server-info">
      CONNECTING...
