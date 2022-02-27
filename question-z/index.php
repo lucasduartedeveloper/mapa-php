@@ -33,19 +33,19 @@
 
 <div id="box">
 <p id="question" class="question">
-    PERGUNTA TESTE?
+    QUEM É A JAPONESA MAIS GOSTOSA DE LONDRINA?
 </p>
 <p id="option_a" class="option">
-    OPÇÃO A
+    OPÇÃO A: STEFANNY KUROSAWA
 </p>
 <p id="option_b" class="option">
-    OPÇÃO B
+    OPÇÃO B:JUDITH ALMEIDA
 </p>
 <p id="option_c" class="option">
-    OPÇÃO C
+    OPÇÃO C: LAURA MITSUKO TANAKA
 </p>
 <p id="option_d" class="option">
-    OPÇÃO D
+    OPÇÃO D: NENHUMA DAS ALTERNATIVAS
 </p>
 </div>
 
