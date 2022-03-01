@@ -90,6 +90,7 @@ html, body {
 }
 
 .invisible {
+   background: #ccc;
    line-height: 30px;
    text-align: center;
    color: #fff;
