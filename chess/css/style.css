@@ -11,9 +11,9 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: #000;
-    color: #000;
-    background-image: url(../img/100.jpg);
+    background-color: #2f2e40;
+    color: #2f2e40;
+    --background-image: url(../img/100.jpg);
     background-position: center;
     background-size: cover;
     -webkit-touch-callout: none;
@@ -66,25 +66,25 @@ html, body {
     margin: 0px;
 }
 
-@-webkit-keyframes left-in { 
-    0% { -webkit-transform: translateX(-100%); opacity: 1; }
-    100% { -webkit-transform: translateX(0%); opacity: 1; }
-} 
-@keyframes left-in { 
-    0% { transform: translateX(-100%); opacity: 1; } 
-    100% { transform: translateX(0%); opacity: 1; } 
-} 
-animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+#board {
+   width: 300px;
+   height: 300px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   overflow: hidden;
+   justify-content: center;
+   align-items: center;
 }
-.left-in { 
-    -webkit-animation-name: left-in; 
-    animation-name: left-in; 
-} 
-.animated.left-in { 
-    -webkit-animation-duration: 1s; 
-    animation-duration: 1s; 
+
+.black {
+   background: #000;
+   width: 30px;
+   height: 30px;
+}
+
+.white {
+   background: #fff;
+   width: 30px;
+   height: 30px;
 }

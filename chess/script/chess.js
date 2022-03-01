@@ -95,6 +95,20 @@ var recordInterval = false;
 
 // Botão de gravação
 $(document).ready(function() {
+    var divBlack = "<div class=\"black\"></div>";
+    var divWhite ="<div class=\"white\"></div>";
+    var width = Math.floor(screen.width / 40);
+
+    for (var c = 0; c < 9; c++) {
+         for (var k = 0; k < 9; k++) {
+              $("#board").html(
+              $("#board").html() +
+                   (c % 2 == 0 ? 
+                   divBlack + divWhite :
+                   divWhite + divBlack));
+         }
+    }
+
     $("#mic").click(function(e) {
         if (!recording) {
             recording = true;
@@ -133,58 +147,6 @@ $(document).ready(function() {
                 formatarAudio(buffer));
         };
     });
-
-    if ('DeviceMotionEvent' in window) {
-        var onDeviceMotion = function (e) {
-             $("#acc").html("");
-             accHandler(e.accelerationIncludingGravity);
-        }
-        window
-        .addEventListener('devicemotion',
-        onDeviceMotion, false);
-   }
-
-   function accHandler(acc) {
-       var info, xyz = "[X, Y, Z]<br>";
-       info = xyz.replace("X", acc.x && acc.x.toFixed(3));
-       info = info.replace("Y", acc.y && acc.y.toFixed(3));
-       info = info.replace("Z", acc.z && acc.z.toFixed(3));
-       $("#acc").html(info + $("#acc").html());
-
-       accX = acc.x && acc.x.toFixed(3);
-       accY = acc.y && acc.y.toFixed(3);
-       accZ = acc.z && acc.z.toFixed(3);
-
-       if (accZ < -1) {
-           coin.play();
-       }
-   }
-
-   var nota = 1;
-   var notas = [
-       { description: "Duzentos reais", 
-         image: "img/200.jpg" },
-       { description: "Cem reais", 
-         image: "img/100.jpg" },
-       { description: "Cinquenta reais", 
-         image: "img/50.jpg" },
-       { description: "Vinte reais", 
-         image: "img/20.jpg" },
-       { description: "Dez reais", 
-         image: "img/10.jpg" },
-       { description: "Cinco reais", 
-         image: "img/5.jpg" },
-       { description: "Dois reais", 
-         image: "img/2.jpg" }
-   ];
-   $("#title").on("touchstart", function() {
-       nota += 1;
-       nota = nota < notas.length ? nota : 0;
-       console.log(notas[nota].image);
-       $("html,body")
-       .css("background-image",
-       "url("+notas[nota].image+")");
-   });
 });
 
 function saveRecording() {
@@ -211,27 +173,4 @@ function saveRecording() {
             };
         };
     });
-}
-
-var accX = 0;
-var accY = 0;
-var accZ = 0;
-
-function alarme(audio) {
-    var play = false;
-    for (var k in audio) {
-        if (audio[k].somaPos > 5 ||
-             audio[k].somaNeg < -5) {
-             play = true;
-        }
-    }
-    play = 
-        ((Math.abs(accX) + 
-         Math.abs(accY) + 
-         Math.abs(accZ)) > 12) ||
-        play;
-    if (play) {
-        $("#mic").click();
-        alarm.play();
-    }
 }
