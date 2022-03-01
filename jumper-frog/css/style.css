@@ -74,13 +74,13 @@ html, body {
 
 #frog {
    position: fixed;
-   background: #5c4a36;
    background-image: url(../img/frog.png);
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+   background-position: center;
+   background-size: cover;
    width: 30px;
    height: 30px;
+   top: 270px;
+   left: 135px;
 }
 
 .trunk {
@@ -88,6 +88,4 @@ html, body {
    background: #5c4a36;
    width: 30px;
    height: 30px;
-   top: 270px;
-   left: 135px;
 }
