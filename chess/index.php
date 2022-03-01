@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=0">
+<link rel="stylesheet" href="css/style.css?v=1">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -50,7 +50,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v0.0.0
+     v1.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -76,7 +76,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/chess.js?v=0"></script>
+<script src="script/chess.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
