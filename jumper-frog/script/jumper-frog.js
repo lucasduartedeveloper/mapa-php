@@ -1,6 +1,7 @@
 var audio = new Audio("audio/phone-lock.wav");
 var alarm = new Audio("audio/battleship-alarm.wav");
 var coin = new Audio("audio/coin.wav");
+var frogJump = new Audio("audio/frog-jump.wav");
 
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
@@ -136,6 +137,20 @@ $(document).ready(function() {
         };
     });
 });
+
+function frog(audio) {
+    var play = false;
+    for (var k in audio) {
+        if (audio[k].somaPos > 5 ||
+             audio[k].somaNeg < -5) {
+             play = true;
+        }
+    }
+    if (play) {
+        $("#frog").click();
+        frogJump.play();
+    }
+}
 
 function saveRecording() {
     recorder.stop();
