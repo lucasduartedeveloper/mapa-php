@@ -151,7 +151,7 @@ function frog(audio) {
     }
     if (play) {
         frogY -= 30;
-        if (frogY <= 30) {
+        if (frogY <= 0) {
              frogY = 30;
              victory.play();
              ("#frog-3").show();
