@@ -31,14 +31,15 @@
 </head>
 <body>
 
-<p id="title">JUMPER FROG</p>
+<p id="title">
+JUMPER FROG<br>
+<canvas id="wave" class="wave">
+</canvas>
+</p>
 
 <div id="river">
     <div id="frog"></div>
 </div>
-
-<canvas id="wave" class="wave">
-</canvas>
 
 <div>
     <button id="mic" type="button" class="btn">
@@ -51,7 +52,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v7.0.1
+     v7.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -77,7 +78,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/jumper-frog.js?v=1"></script>
+<script src="script/jumper-frog.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
