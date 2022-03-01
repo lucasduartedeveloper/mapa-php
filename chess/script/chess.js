@@ -98,8 +98,8 @@ $(document).ready(function() {
     var divBlack = "<div class=\"black\"></div>";
     var divWhite ="<div class=\"white\"></div>";
 
-    for (var c = 0; c < 9; c++) {
-         for (var k = 0; k < 9; k++) {
+    for (var c = 0; c < 5; c++) {
+         for (var k = 0; k < 5; k++) {
               $("#board").html(
               $("#board").html() +
                    (c % 2 == 0 ? 
