@@ -53,7 +53,7 @@ JUMPER FROG<br>
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v8.0.7
+     v8.0.8
      <br>
      <span id="server-info">
      CONNECTING...
@@ -79,7 +79,7 @@ JUMPER FROG<br>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/jumper-frog.js?v=7"></script>
+<script src="script/jumper-frog.js?v=8"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
