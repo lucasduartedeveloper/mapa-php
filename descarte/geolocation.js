@@ -26,7 +26,7 @@ var pontuacaoMinima = [1,4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 196, 225, 
 var audio = new Audio();
 function play(file_path) {
 
-   file_path = file_path ? file_path : "/audio/game_notification.wav";
+   file_path = file_path ? file_path : "audio/game_notification.wav";
     audio.pause();
     audio = new Audio(file_path);
     audio.play(); 
@@ -65,7 +65,7 @@ function posicaoNoGrid(pos) {
 function reload() {
           //console.log("reload: " + moment(new Date()).format('YYYY-MM-DD HH:mm:ss'));
 
-         $.getJSON("/ajax/localizacao_gps_item.php", function(data) {
+         $.getJSON("ajax/localizacao_gps_item.php", function(data) {
 
           var inventario = "";
           itemId = -1; // Someone
@@ -146,7 +146,7 @@ function reload() {
         }
         });
 
-         $.getJSON("/ajax/localizacao_gps.php", function(data) {
+         $.getJSON("ajax/localizacao_gps.php", function(data) {
 
          //console.log(data);
          for (var k in reguas) {
@@ -200,7 +200,7 @@ function reload() {
         $(".distancia").text(Math.floor(distancia * 100) + " cm");
       });
 
-      $.getJSON("/ajax/localizacao_gps.php?select=true", function(data) {
+      $.getJSON("ajax/localizacao_gps.php?select=true", function(data) {
 
             var label1 = "";
             var label2 = "";
@@ -232,7 +232,7 @@ function reload() {
 }
 
 var markerIcon= L.icon({
-       iconUrl: "/img/marker-v3.png",
+       iconUrl: "img/marker-v3.png",
        /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
        shadowSize:   [50, 25], // size of the shadow
@@ -242,7 +242,7 @@ var markerIcon= L.icon({
 });
 
 var markerIconUnlocked= L.icon({
-       iconUrl: "/img/marker-v3-unlocked.png",
+       iconUrl: "img/marker-v3-unlocked.png",
        /*shadowUrl: '/img/icon-shadow.png',*/
        iconSize:     [35, 40], // size of the icon
        shadowSize:   [50, 25], // size of the shadow
@@ -309,7 +309,7 @@ function onMapClick(e) {
 
         itemId = -1;
 
-        $.post("/ajax/localizacao_gps_item.php", {
+        $.post("ajax/localizacao_gps_item.php", {
         lat: pos.lat, 
         lng: pos.lng,
         id: itens[id].id,
@@ -332,7 +332,7 @@ function onMapClick(e) {
                itens[k].lat = 0;
                itens[k].lng = 0;
 
-               $.post("/ajax/localizacao_gps_item.php", {
+               $.post("ajax/localizacao_gps_item.php", {
                     lat: 0, 
                     lng: 0,
                     id: itens[k].id,
@@ -365,7 +365,7 @@ function onMapClick(e) {
      }
      // MODO SIMULAÇÃO
      else if (itemId < 0)  {
-        $.post("/ajax/localizacao_gps.php", {
+        $.post("ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
         cor: cor })
@@ -450,12 +450,12 @@ $("#box4").click(function() {
 });
 
 $("#reset").click(function() {
-      $.getJSON("/ajax/localizacao_gps.php?delete=true", function(data) {
+      $.getJSON("ajax/localizacao_gps.php?delete=true", function(data) {
           //say("");
       });
 
       for (var k in itens) {
-           $.post("/ajax/localizacao_gps_item.php", {
+           $.post("ajax/localizacao_gps_item.php", {
                  lat: 0, 
                  lng: 0,
                  id: itens[k].id,
@@ -464,7 +464,7 @@ $("#reset").click(function() {
             }).done(function(data) {
                  if (k == itens.length -1) {
                       reload();
-                      play("/audio/game_over.mp3");
+                      play("audio/game_over.mp3");
                  }
             });
        }
@@ -551,7 +551,7 @@ function success(position) {
    }
 
    // Salvar localização
-   $.post("/ajax/localizacao_gps.php", {
+   $.post("ajax/localizacao_gps.php", {
         lat: pos.lat, 
         lng: pos.lng,
         cor: cor
@@ -635,7 +635,7 @@ function explodirArea(pos) {
                    //console.log("k " + k);
                    //console.log("j " + j);
 
-                   $.post("/ajax/localizacao_gps.php", {
+                   $.post("ajax/localizacao_gps.php", {
                    lat: pos.lat - (a * k),
                    lng: pos.lng - (d *  j),
                    cor: corExplodida,
@@ -650,7 +650,7 @@ function explodirArea(pos) {
               }
         }
 
-        $.post("/ajax/localizacao_gps_item.php", {
+        $.post("ajax/localizacao_gps_item.php", {
         lat: 0, 
         lng: 0,
         id: 98,
@@ -658,7 +658,7 @@ function explodirArea(pos) {
         data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
         });
 
-        play("/audio/explosion.mp3");
+        play("audio/explosion.mp3");
 }
 
 // Voldemort;
@@ -685,14 +685,14 @@ function desenharHP() {
             .on("click", function(e) {
                  hp -= 10;
 
-                 $.post("/ajax/localizacao_gps_item.php", {
+                 $.post("ajax/localizacao_gps_item.php", {
                       lat: voldemort.lat, 
                       lng: voldemort.lng,
                       id: 109,
                       hp_atual: hp,
                       data_hora: moment(new Date()).format('YYYY-MM-DD HH:mm:ss')
                  }).done(function(data) { 
-                      play("/audio/getting_hit.wav");
+                      play("audio/getting_hit.wav");
                       reload();
                  });
             })
@@ -704,7 +704,7 @@ function desenharHP() {
                             lat: voldemort.lat,
                             lng: voldemort.lng }
                     });
-            play("/audio/creature_dying.wav");
+            play("audio/creature_dying.wav");
      }
 }
 
