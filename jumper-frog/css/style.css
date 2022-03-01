@@ -69,17 +69,11 @@ html, body {
 #river {
    width: 300px;
    height: 300px;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   overflow: hidden;
-   justify-content: center;
-   align-items: center;
    background: #446cad;
 }
 
 #frog {
-   position: absolute;
+   position: fixed;
    background: #5c4a36;
    background-image: url(../img/frog.png);
    justify-content: center;
