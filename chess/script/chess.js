@@ -96,8 +96,8 @@ var recordInterval = false;
 // Botão de gravação
 $(document).ready(function() {
     var divBlack = "<div class=\"black\"></div>";
-    var divWhite ="<div class=\"white\"></div>";
-    var divInvisible ="<div class=\"invisible\">A</div>";
+    var divWhite = "<div class=\"white\"></div>";
+    var divInvisible = "<div class=\"invisible\">A</div>";
 
     for (var c = 0; c < 9; c++) {
          for (var k = 0; k < 5; k++) {
