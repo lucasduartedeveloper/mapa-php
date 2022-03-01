@@ -153,7 +153,7 @@ function frog(audio) {
         frogY -= 30;
         $("#frog").css("top", frogY.toString()+"px");
         frogJump.play();
-        if (frogY >= 30) {
+        if (frogY <= 30) {
              victory.play();
         }
     }
