@@ -2,6 +2,7 @@ var audio = new Audio("audio/phone-lock.wav");
 var alarm = new Audio("audio/battleship-alarm.wav");
 var coin = new Audio("audio/coin.wav");
 var frogJump = new Audio("audio/frog-jump.wav");
+var victory = new Audio("audio/sfx-victory.wav");
 
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
@@ -152,6 +153,9 @@ function frog(audio) {
         frogY -= 30;
         $("#frog").css("top", frogY.toString()+"px");
         frogJump.play();
+        if (frogY >= 30) {
+             victory.play();
+        }
     }
 }
 
