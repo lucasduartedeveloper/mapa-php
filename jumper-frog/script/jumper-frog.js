@@ -138,7 +138,7 @@ $(document).ready(function() {
     });
 });
 
-var top = 270;
+var frogY = 270;
 
 function frog(audio) {
     var play = false;
@@ -149,8 +149,8 @@ function frog(audio) {
         }
     }
     if (play) {
-        top -= 30;
-        $("#frog").css("top", top.toString()+"px");
+        frogY -= 30;
+        $("#frog").css("top", frogY.toString()+"px");
         frogJump.play();
     }
 }
