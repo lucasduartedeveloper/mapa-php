@@ -97,14 +97,21 @@ var recordInterval = false;
 $(document).ready(function() {
     var divBlack = "<div class=\"black\"></div>";
     var divWhite ="<div class=\"white\"></div>";
+    var divInvisible ="<div class=\"invisible\">A</div>";
 
     for (var c = 0; c < 9; c++) {
          for (var k = 0; k < 5; k++) {
-              $("#board").html(
-              $("#board").html() +
-                   (c % 2 == 0 ? 
-                   divBlack + divWhite :
-                   divWhite + divBlack));
+              if(c > 1 && c < 8 && k > 1 && k < 4) {
+                   $("#board").html(
+                   $("#board").html() +
+                       (c % 2 == 0 ? 
+                       divBlack + divWhite :
+                       divWhite + divBlack));
+              }
+              else {
+                   $("#board").html(
+                   $("#board").html() + divInvisible);
+              }
          }
     }
 
