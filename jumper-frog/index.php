@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -40,6 +40,7 @@ JUMPER FROG<br>
 <div id="river">
     <div id="frog"></div>
     <div id="frog-2"></div>
+    <div style="display:none" id="frog-3"></div>
 </div>
 
 <div>
@@ -53,7 +54,7 @@ JUMPER FROG<br>
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v8.0.8
+     v9.0.9
      <br>
      <span id="server-info">
      CONNECTING...
@@ -79,7 +80,7 @@ JUMPER FROG<br>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/jumper-frog.js?v=8"></script>
+<script src="script/jumper-frog.js?v=9"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

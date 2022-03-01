@@ -151,11 +151,13 @@ function frog(audio) {
     }
     if (play) {
         frogY -= 30;
+        if (frogY <= 30) {
+             frogY = 30;
+             victory.play();
+             ("#frog-3").show();
+        }
         $("#frog").css("top", frogY.toString()+"px");
         frogJump.play();
-        if (frogY <= 30) {
-             victory.play();
-        }
     }
 }
 
