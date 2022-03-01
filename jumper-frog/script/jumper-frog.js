@@ -95,7 +95,6 @@ var recordInterval = false;
 
 // Botão de gravação
 $(document).ready(function() {
-    var divTrunk = "<div class=\"trunk\"></div>";
     
 
     $("#mic").click(function(e) {
