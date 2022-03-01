@@ -121,7 +121,7 @@ catch (PDOException $e) {
     </div>
 </div>
 
-<img id="menu" class="my-float" src="/img/parafuso.png"/>
+<img id="menu" class="my-float" src="img/parafuso.png"/>
 <!-- 
 <i id="menu" class="bi bi-arrow-down-circle my-float"></i>
  -->
