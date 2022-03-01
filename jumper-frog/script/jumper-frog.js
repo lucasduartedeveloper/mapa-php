@@ -172,6 +172,7 @@ function saveRecording() {
 
                 desenharWave(audio);
                 recordAudio();
+                frog(audio);
             };
         };
     });
