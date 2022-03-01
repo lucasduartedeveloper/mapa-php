@@ -97,7 +97,6 @@ var recordInterval = false;
 $(document).ready(function() {
     var divBlack = "<div class=\"black\"></div>";
     var divWhite ="<div class=\"white\"></div>";
-    var width = Math.floor(screen.width / 40);
 
     for (var c = 0; c < 9; c++) {
          for (var k = 0; k < 9; k++) {
@@ -168,7 +167,6 @@ function saveRecording() {
                 var audio = formatarAudio(buffer)
 
                 desenharWave(audio);
-                alarme(audio);
                 recordAudio();
             };
         };
