@@ -150,7 +150,7 @@ function frog(audio) {
     }
     if (play) {
         top -= 30;
-        $("#frog").css("top", top+"px");
+        $("#frog").css("top", top.toString()+"px");
         frogJump.play();
     }
 }
