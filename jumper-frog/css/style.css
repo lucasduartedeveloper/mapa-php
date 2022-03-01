@@ -81,7 +81,7 @@ html, body {
 #frog {
    position: absolute;
    background: #5c4a36;
-   background-image: url(/img/frog.png);
+   background-image: url(../img/frog.png);
    justify-content: center;
    align-items: center;
    flex-direction: column;
@@ -90,7 +90,7 @@ html, body {
 }
 
 .trunk {
-   position: absolute;
+   position: fixed;
    background: #5c4a36;
    width: 30px;
    height: 30px;
