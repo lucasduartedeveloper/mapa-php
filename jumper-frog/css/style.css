@@ -84,6 +84,18 @@ html, body {
    left: 135px;
 }
 
+#frog-2 {
+   position: relative;
+   transform: translateY(-100%);
+   background-image: url(../img/frog.png);
+   background-position: center;
+   background-size: cover;
+   width: 30px;
+   height: 30px;
+   top: 0px;
+   left: 135px;
+}
+
 .trunk {
    position: fixed;
    background: #5c4a36;

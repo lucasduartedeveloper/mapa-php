@@ -138,6 +138,8 @@ $(document).ready(function() {
     });
 });
 
+var top = 270;
+
 function frog(audio) {
     var play = false;
     for (var k in audio) {
@@ -147,7 +149,8 @@ function frog(audio) {
         }
     }
     if (play) {
-        $("#frog").click();
+        top -= 30;
+        $("#frog").css("top", top+"px");
         frogJump.play();
     }
 }
