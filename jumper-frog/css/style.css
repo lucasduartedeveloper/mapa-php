@@ -73,7 +73,7 @@ html, body {
 }
 
 #frog {
-   position: fixed;
+   position: absolute;
    background-image: url(../img/frog.png);
    background-position: center;
    background-size: cover;
