@@ -38,7 +38,6 @@ JUMPER FROG<br>
 </p>
 
 <div id="river">
-    <div style="top:0px" class="leaf"></div>
     <div style="top:30px" class="leaf"></div>
     <div style="top:60px" class="leaf"></div>
     <div style="top:90px" class="leaf"></div>
@@ -48,6 +47,7 @@ JUMPER FROG<br>
     <div style="top:210px" class="leaf"></div>
     <div style="top:240px" class="leaf"></div>
     <div style="top:270px" class="leaf"></div>
+    <div style="top:300px" class="leaf"></div>
     <div id="frog"></div>
     <div id="frog-2"></div>
     <div style="display:none" id="frog-3"></div>
