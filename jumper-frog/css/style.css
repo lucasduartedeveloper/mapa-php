@@ -109,8 +109,7 @@ html, body {
 }
 
 .leaf {
-   position: fixed;
-   background: #5c4a36;
+   position: relative;
    width: 30px;
    height: 30px;
    left: 135px;

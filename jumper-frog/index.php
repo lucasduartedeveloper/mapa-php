@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -38,9 +38,6 @@ JUMPER FROG<br>
 </p>
 
 <div id="river">
-    <div id="frog"></div>
-    <div id="frog-2"></div>
-    <div style="display:none" id="frog-3"></div>
     <div style="top:0px" class="leaf"></div>
     <div style="top:30px" class="leaf"></div>
     <div style="top:60px" class="leaf"></div>
@@ -51,6 +48,9 @@ JUMPER FROG<br>
     <div style="top:210px" class="leaf"></div>
     <div style="top:240px" class="leaf"></div>
     <div style="top:270px" class="leaf"></div>
+    <div id="frog"></div>
+    <div id="frog-2"></div>
+    <div style="display:none" id="frog-3"></div>
 </div>
 
 <div>
@@ -64,7 +64,7 @@ JUMPER FROG<br>
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v12.0.13
+     v13.0.13
      <br>
      <span id="server-info">
      CONNECTING...
