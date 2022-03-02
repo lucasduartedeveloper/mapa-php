@@ -108,9 +108,15 @@ html, body {
    left: 157px;
 }
 
-.trunk {
+.leaf {
    position: fixed;
    background: #5c4a36;
    width: 30px;
    height: 30px;
+   left: 135px;
+   position: relative;
+   transform: translateY(-100%);
+   background-image: url(../img/leaf.png);
+   background-position: center;
+   background-size: cover;
 }
