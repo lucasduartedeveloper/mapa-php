@@ -109,11 +109,10 @@ html, body {
 }
 
 .leaf {
-   position: relative;
    width: 30px;
    height: 30px;
    left: 135px;
-   position: relative;
+   position: absolute;
    transform: translateY(-100%);
    background-image: url(../img/leaf.png);
    background-position: center;
