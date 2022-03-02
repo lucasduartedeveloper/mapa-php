@@ -74,7 +74,7 @@ html, body {
 }
 
 #frog {
-   position: relative;
+   position: absolute;
    background-image: url(../img/frog.png);
    background-position: center;
    background-size: cover;
@@ -85,7 +85,7 @@ html, body {
 }
 
 #frog-2 {
-   position: relative;
+   position: absolute;
    transform: translateY(-100%);
    background-image: url(../img/frog.png);
    background-position: center;
@@ -97,7 +97,7 @@ html, body {
 }
 
 #frog-3 {
-   position: relative;
+   position: absolute;
    transform: translateY(-100%);
    background-image: url(../img/frog.png);
    background-position: center;
