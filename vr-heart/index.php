@@ -40,8 +40,9 @@ EM PRETO E BRANCO
 <canvas width="200" height="200" id="camera-canvas"></canvas>
 
 <div class="form-group">
-    <textarea class="form-control" id="txt-area" rows="3" value="FIMFIMFOM">
-   </textarea>
+    <textarea class="form-control" id="txt-area" rows="3">
+    FIMFIMFOM
+    </textarea>
 </div>
 
 <p id="version-info">
