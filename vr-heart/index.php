@@ -30,8 +30,18 @@
 </head>
 <body>
 
+<p id="title">
+AS QUINAS DO INFERNO
+<br>
+EM PRETO E BRANCO
+</p>
+
 <video style="display:none" id="video" width="200" height="200" autoplay></video>
 <canvas width="200" height="200" id="camera-canvas"></canvas>
+
+<div class="form-group">
+    <textarea class="form-control" id="txt-area" rows="3"></textarea>
+</div>
 
 <p id="version-info">
      v1.0.5
