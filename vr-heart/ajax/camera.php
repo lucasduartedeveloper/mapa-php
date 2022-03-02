@@ -2,30 +2,22 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["cameraId"])  ) {
+  if (isset($_POST["texto"])  ) {
 
-    $cameraId = htmlspecialchars($_POST["cameraId"]);
+    $texto = htmlspecialchars($_POST["texto"]);
     $base64 = htmlspecialchars($_POST["base64"]);
 
-    $sql = "DELETE FROM camera_frame 
-WHERE data_hora < (now() - '2 hours 40 minutes'::interval);";
-
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-
-    echo $sql;
-
-    $sql =  "INSERT INTO camera_frame (camera_id,base64) VALUES (".$cameraId.",'".$base64."');";
+    $sql =  "INSERT INTO e_book (texto,base64) VALUES (".$texto.",'".$base64."');";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
     echo $sql;
   }
-  else if (isset($_GET["cameraId"])) {
+  else if (isset($_GET["id"])) {
 
-    $cameraId = htmlspecialchars($_GET["cameraId"]);
-    $sql = "SELECT * FROM camera_frame WHERE camera_id=".$cameraId." ORDER BY data_hora DESC LIMIT 1;";
+    $id = htmlspecialchars($_GET["id"]);
+    $sql = "SELECT * FROM e_book WHERE id=".$id.";";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -36,7 +28,7 @@ WHERE data_hora < (now() - '2 hours 40 minutes'::interval);";
   }
   else {
 
-   $sql = "select * from (select *, row_number() over (partition by camera_id order by data_hora desc) as row_number from camera_frame) temp where row_number=1;";
+   $sql = "SELECT * FROM e_book;";
 
    $stmt = $pdo->prepare($sql);
    $stmt->execute();

@@ -31,7 +31,7 @@
 <body>
 
 <p id="title">
-AS QUINAS DO INFERNO
+O LUCAS MORRENDO 10 VEZES PARADO
 <br>
 EM PRETO E BRANCO
 </p>
@@ -40,7 +40,9 @@ EM PRETO E BRANCO
 <canvas width="200" height="200" id="camera-canvas"></canvas>
 
 <div class="form-group">
-    <textarea class="form-control" id="txt-area" rows="3"></textarea>
+    <textarea class="form-control" id="txt-area" rows="3">
+    FIM
+   </textarea>
 </div>
 
 <p id="version-info">
