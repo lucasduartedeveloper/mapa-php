@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -40,6 +40,9 @@
 <p id="balance">
    R$ ----
 </p>
+<div id="product-list">
+   
+</div>
 <div>
 <button id="withdrawal" class="btn btn-danger">
 Saque
@@ -53,7 +56,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v5.0.49
+     v6.0.49
      <br>
      <span id="server-info">
      CONNECTING...
