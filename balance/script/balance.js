@@ -128,7 +128,7 @@ $(document).ready(function() {
     });
 });
 
-function getBalance(balance) {
+function getBalance() {
      $.getJSON("ajax/balance.php", function(data) {
           var saldo = data[0].valor.split(",");
           saldo[0] = parseInt(saldo[0]);
