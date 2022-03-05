@@ -29,11 +29,14 @@ html, body {
      text-align: center;
 }
 
-.title-2 {
-    text-align: left;
+#title {
     position: fixed;
     top: 0px;
     heighr: 80px;
+    font-size: 60px;
+}
+
+#balance {
     font-size: 60px;
 }
 
