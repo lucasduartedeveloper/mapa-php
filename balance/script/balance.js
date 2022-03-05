@@ -142,7 +142,7 @@ function getBalance(balance) {
                text += " e ";
           }
           if (saldo[1] > 0) {
-               text += saldo[0] + " centavos";
+               text += saldo[1] + " centavos";
           }
           say(text);
 
