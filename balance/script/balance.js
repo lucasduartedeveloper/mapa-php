@@ -116,7 +116,7 @@ $(document).ready(function() {
 function getBalance(balance) {
      $.getJSON("ajax/balance.php", function(data) {
           console.log(data);
-          balance = data.valor;
+          updateBalance(data[0].valor);
      });
 }
 
