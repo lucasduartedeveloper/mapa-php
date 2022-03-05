@@ -95,6 +95,15 @@ var recordInterval = false;
 var balance = 0.00;
 $(document).ready(function() {
     getBalance();
+    setInterval(function() {
+        if (accX > 5) {
+             updateBalance(balance + 0.01);
+        }
+        else if (accX < -5) {
+             updateBalance(balance - 0.01);
+        }
+    }, 1000);
+
     $("#deposit").on("click", function() {
          var value = prompt("Valor do depósito R$:", "0,00");
          value = parseFloat(value.replace(",","."));
@@ -130,7 +139,6 @@ function updateBalance(value) {
 
 if ('DeviceMotionEvent' in window) {
     var onDeviceMotion = function (e) {
-        //$("#acc").html("");
         accHandler(e.accelerationIncludingGravity);
     }
     window
@@ -146,13 +154,6 @@ function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
-
-    if (Math.abs(accX) > 5) {
-         updateBalance(balance + 0.01);
-    }
-    else if (Math.abs(accZ) > 5) {
-         updateBalance(balance - 0.01);
-    }
 }
 
 function saveRecording() {
