@@ -32,14 +32,14 @@
 <body>
 
 <p id="title">
-   
+   078.402.969-55
 </p>
 <p id="balance">
    R$ 0,00
 </p>
 <div>
-<button id="wirhdrawal" class="btn">Saque</button>
-<button id="deposit" class="btn">Depósito</button>
+<button id="wirhdrawal" class="btn btn-danger">Saque</button>
+<button id="deposit" class="btn btn-success">Depósito</button>
 </div>
 
 <p id="version-info">
