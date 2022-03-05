@@ -100,7 +100,7 @@ $(document).ready(function() {
          balance = parseFloat(balance) + value;
          updateBalance(balance
         .toFixed(2)
-        .replace(".",",")));
+        .replace(".",","));
     });
     $("#withdrawal").on("click", function() {
          var value = prompt("Valor do saque R$:", "0,00");
@@ -108,7 +108,7 @@ $(document).ready(function() {
          balance = parseFloat(balance) - value;
          updateBalance(balance
         .toFixed(2)
-        .replace(".",",")));
+        .replace(".",","));
     });
 });
 
