@@ -93,6 +93,8 @@ var recordInterval = false;
 
 // Saldo
 var balance = 0.00;
+var playerId = new Date().getTime();
+
 $(document).ready(function() {
     getBalance();
     setInterval(function() {
@@ -103,7 +105,14 @@ $(document).ready(function() {
              updateBalance(balance - 0.01);
         }
     }, 1000);
+    ws.onmessage = function(e) {
+        var msg = e.data.split("|");
+        if (msg[0] == "BALANCE" &&
+            playerId != msg[1]) {
+            getBalance();
+    }
 
+    // ----
     $("#deposit").on("click", function() {
          var value = prompt("Valor do depósito R$:", "0,00");
          value = parseFloat(value.replace(",","."));
@@ -128,12 +137,14 @@ function getBalance(balance) {
 
 function updateBalance(value) {
      balance = value;
+     var text = value.toFixed(2).replace(".",",");
      $.post("ajax/balance.php", {
-          balance: value.toFixed(2).replace(".",",")
+          balance: text
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                $("#balance").text("R$ " + value.toFixed(2).replace(".",","));
+                $("#balance").text("R$ " + text);
+                ws.send("BALANCE|"+playerId+"|"+text);
      });
 }
 
