@@ -207,8 +207,8 @@ function say(text) {
     if (!speaking) {
          speaking = true;
          var msg = new SpeechSynthesisUtterance();
-         //msg.lang = "pt-BR";
-         msg.lang = "en-US";
+         msg.lang = "pt-BR";
+         //msg.lang = "en-US";
          //msg.lang = "ja-JP";
          msg.text = text;
          msg.onend = function(event) {
