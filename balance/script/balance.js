@@ -94,7 +94,7 @@ var recordInterval = false;
 // Saldo
 var balance = "0,00";
 $(document).ready(function() {
-    $("#deposit").click(function() {
+    $("#deposit").on("click", function() {
          var value = prompt("Valor do depósito R$:", "0,00");
          value = parseFloat(value);
          balance = parseFloat(balance) + value;
@@ -104,7 +104,7 @@ $(document).ready(function() {
          .replace(".",","));
          updateBalance(balance);
     });
-    $("#withdrawal").click(function() {
+    $("#withdrawal")on("click", function() {
          var value = prompt("Valor do saque R$:", "0,00");
          value = parseFloat(value);
          balance = value;
