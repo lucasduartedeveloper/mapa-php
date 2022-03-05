@@ -131,7 +131,20 @@ $(document).ready(function() {
 function getBalance(balance) {
      $.getJSON("ajax/balance.php", function(data) {
           var saldo = data[0].valor.split(",");
-          say(saldo[0] + " reais e " +  saldo[1] + " centavos");
+          saldo[0] = parseInt(saldo[0]);
+          saldo[1] = parseInt(saldo[1]);
+
+          var text = "";
+          if (saldo[0] > 0) {
+               text += saldo[0] + " reais";
+          }
+          if (saldo[0] > 0 && saldo[1] > 0) {
+               text += " e ";
+          }
+          if (saldo[1] > 0) {
+               text += saldo[0] + " centavos";
+          }
+          say(text);
 
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
