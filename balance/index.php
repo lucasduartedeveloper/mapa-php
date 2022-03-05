@@ -43,7 +43,7 @@
 </div>
 
 <p id="version-info">
-     v1.0.34
+     v1.0.35
      <br>
      <span id="server-info">
      CONNECTING...
@@ -69,7 +69,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=34"></script>
+<script src="script/balance.js?v=35"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

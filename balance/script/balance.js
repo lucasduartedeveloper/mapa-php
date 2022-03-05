@@ -99,16 +99,9 @@ $(document).ready(function() {
     getBalance();
     setInterval(function() {
         if (accX > 5) {
-             updateBalance(balance + 0.01);
-        }
-        else if (accX < -5) {
-             updateBalance(balance - 0.01);
-        }
-    }, 1000);
-    ws.onmessage = function(e) {
-        var msg = e.data.split("|");
+ hj l
         if (msg[0] == "BALANCE" &&
-            playerId != msg[1]) {
+            playerId != msg[1]) {m
             getBalance();
         }
     };
@@ -130,6 +123,12 @@ $(document).ready(function() {
 
 function getBalance(balance) {
      $.getJSON("ajax/balance.php", function(data) {
+          var saldo = data[0].valor.split(",");
+          say("Você tem " + 
+                  saldo[0] + 
+                  " reais e " +
+                  saldo[1] + 
+                  " centavos");
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
           $("#balance").text("R$ " + data[0].valor);
