@@ -55,4 +55,10 @@ html, body {
     width: 90vw;
     height: 20vh;
     border: 2px solid black;
+    overflow-y: scroll;
+}
+
+#product-list p {
+   margin: 0px;
+   padding: 0px;
 }

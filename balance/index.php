@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -56,10 +56,11 @@ Depósito
      <p>1x CIGARRO R$ 10,00</p>
      <p>1x CAFÉ R$ 5,00</p>
      <p>1x ÁGUA R$ 2,00</p>
+     <p>1x PORTÃO R$ 1,00</p>
 </div>
 
 <p id="version-info">
-     v8.0.49
+     v9.0.49
      <br>
      <span id="server-info">
      CONNECTING...
