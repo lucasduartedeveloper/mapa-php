@@ -147,10 +147,10 @@ function accHandler(acc) {
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
 
-    if (Math.abs(accX) > 2) {
+    if (Math.abs(accX) > 5) {
          updateBalance(balance + 0.01);
     }
-    else if (Math.abs(accZ) > 2) {
+    else if (Math.abs(accZ) > 5) {
          updateBalance(balance - 0.01);
     }
 }
