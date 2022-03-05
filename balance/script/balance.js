@@ -112,7 +112,8 @@ $(document).ready(function() {
 function getBalance(balance) {
      $.getJSON("ajax/balance.php", function(data) {
           console.log(data);
-          updateBalance(data[0].valor);
+          balance = parseFloat(data[0].valor.replace(",","."));
+          $("#balance").text("R$ " + data[0].valor);
      });
 }
 
