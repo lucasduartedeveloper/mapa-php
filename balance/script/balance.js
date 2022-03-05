@@ -131,6 +131,7 @@ $(document).ready(function() {
     });
     $("#product-list p").click(function(e) {
          var text = $(e.target).text();
+         text = text.replace("x", "");
          say(text);
     });
 });
