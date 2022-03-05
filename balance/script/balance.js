@@ -98,18 +98,14 @@ $(document).ready(function() {
     $("#deposit").on("click", function() {
          var value = prompt("Valor do depósito R$:", "0,00");
          value = parseFloat(value);
-         balance = parseFloat(balance) + value;
-         updateBalance(balance
-        .toFixed(2)
-        .replace(".",","));
+         value = parseFloat(balance) + value;
+         updateBalance(value);
     });
     $("#withdrawal").on("click", function() {
          var value = prompt("Valor do saque R$:", "0,00");
          value = parseFloat(value);
-         balance = parseFloat(balance) - value;
-         updateBalance(balance
-        .toFixed(2)
-        .replace(".",","));
+         value = parseFloat(balance) - value;
+         updateBalance(value);
     });
 });
 
@@ -120,13 +116,17 @@ function getBalance(balance) {
      });
 }
 
-function updateBalance(balance) {
+function updateBalance(value) {
      $.post("ajax/balance.php", {
           balance: balance
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                $("#balance").text("R$ " + balance);
+                balance = value;
+                $("#balance").text("R$ " + 
+                balance
+                .toFixed(2)
+                .replace(".",","));
      });
 }
 
