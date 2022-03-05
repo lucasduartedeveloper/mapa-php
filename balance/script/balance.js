@@ -119,10 +119,8 @@ function getBalance(balance) {
 
 function updateBalance(value) {
      balance = value
-                .toFixed(2)
-                .replace(".",",");
      $.post("ajax/balance.php", {
-          balance: balance
+          balance: value.toFixed(2).replace(".",",");
           }).done(function(data) {
                 console.log(data);
                 coin.play();
