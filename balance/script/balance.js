@@ -129,6 +129,10 @@ $(document).ready(function() {
     $("#speak").click(function() {
          getBalance();
     });
+    $("#product-list p").click(function(e) {
+         var text = $(e.target).text();
+         say(text);
+    });
 });
 
 function getBalance() {
