@@ -105,7 +105,7 @@ $(document).ready(function() {
             updateBalance(balance - 0.01);
         }
         if (msg[0] == "BALANCE" &&
-            playerId != msg[1]) {m
+            playerId != msg[1]) {
             getBalance();
         }
     };
