@@ -146,7 +146,7 @@ function accHandler(acc) {
         balance = balance + 0.01;
         updateBalance(balance
         .toFixed(2)
-        .replace(".",",")));
+        .replace(".",","));
     }
 }
 
