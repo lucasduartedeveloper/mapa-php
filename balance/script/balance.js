@@ -99,11 +99,14 @@ $(document).ready(function() {
     getBalance();
     setInterval(function() {
         if (accX > 5) {
-            updateBalance(balance + 0.01);
-        }       
-        else if (accX < -5) {
-            updateBalance(balance - 0.01);
+             updateBalance(balance + 0.01);
         }
+        else if (accX < -5) {
+             updateBalance(balance - 0.01);
+        }
+    }, 1000);
+    ws.onmessage = function(e) {
+        var msg = e.data.split("|");
         if (msg[0] == "BALANCE" &&
             playerId != msg[1]) {
             getBalance();
