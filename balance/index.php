@@ -40,9 +40,6 @@
 <p id="balance">
    R$ ----
 </p>
-<div id="product-list">
-   
-</div>
 <div>
 <button id="withdrawal" class="btn btn-danger">
 Saque
@@ -53,6 +50,9 @@ Depósito
 <button id="speak" class="btn btn-dark">
 <i class="fa-solid fa-volume-high"></i>
 </button>
+</div>
+
+<div id="product-list">
 </div>
 
 <p id="version-info">
