@@ -139,13 +139,22 @@ function getBalance(balance) {
               text += "menos ";
           }
           if (saldo[0] > 0) {
-               text += saldo[0] + " reais";
+               text += saldo[0] + " rea";
+          }
+          if (saldo[0] == 1) {
+               text += "l";
+          }
+          if (saldo[0] > 1) {
+               text += "is";
           }
           if (saldo[0] > 0 && saldo[1] > 0) {
                text += " e ";
           }
           if (saldo[1] > 0) {
-               text += saldo[1] + " centavos";
+               text += saldo[1] + " centavo";
+          }
+          if (saldo[1] > 1) {
+               text += "s";
           }
           say(text);
 
