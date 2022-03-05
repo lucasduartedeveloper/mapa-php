@@ -131,11 +131,7 @@ $(document).ready(function() {
 function getBalance(balance) {
      $.getJSON("ajax/balance.php", function(data) {
           var saldo = data[0].valor.split(",");
-          say("Você tem " + 
-                  saldo[0] + 
-                  " reais e " +
-                  saldo[1] + 
-                  " centavos");
+          say(saldo[0] + " reais e " +  saldo[1] + " centavos");
 
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
