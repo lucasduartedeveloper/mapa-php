@@ -122,11 +122,10 @@ function updateBalance(value) {
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                balance = value;
-                $("#balance").text("R$ " + 
-                balance
+                balance = value
                 .toFixed(2)
-                .replace(".",","));
+                .replace(".",",");
+                $("#balance").text("R$ " + balance);
      });
 }
 
