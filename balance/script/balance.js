@@ -124,7 +124,7 @@ function updateBalance(value) {
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                $("#balance").text("R$ " + balance);
+                $("#balance").text("R$ " + value.toFixed(2).replace(".",","));
      });
 }
 
