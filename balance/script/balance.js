@@ -97,14 +97,14 @@ $(document).ready(function() {
     getBalance();
     $("#deposit").on("click", function() {
          var value = prompt("Valor do depósito R$:", "0,00");
-         value = parseFloat(value);
-         value = parseFloat(balance) + value;
+         value = parseFloat(value.replace(",","."));
+         value = balance + value;
          updateBalance(value);
     });
     $("#withdrawal").on("click", function() {
          var value = prompt("Valor do saque R$:", "0,00");
-         value = parseFloat(value);
-         value = parseFloat(balance) - value;
+         value = parseFloat(value.replace(",","."));
+         value = balance - value;
          updateBalance(value);
     });
 });
@@ -152,10 +152,7 @@ function accHandler(acc) {
     accZ = acc.z && acc.z.toFixed(3);
 
     if (accZ < -1) {
-        balance = balance + 0.01;
-        updateBalance(balance
-        .toFixed(2)
-        .replace(".",","));
+        updateBalance(balance + 0.01);
     }
 }
 
