@@ -131,7 +131,7 @@ $(document).ready(function() {
 function getBalance() {
      $.getJSON("ajax/balance.php", function(data) {
           var saldo = data[0].valor.split(",");
-          saldo[0] = parseInt(saldo[0]);
+          saldo[0] = Math.abs(parseInt(saldo[0]));
           saldo[1] = parseInt(saldo[1]);
 
           var text = "";
