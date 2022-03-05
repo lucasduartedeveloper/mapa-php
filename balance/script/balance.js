@@ -114,17 +114,20 @@ $(document).ready(function() {
     };
 
     // ----
-    $("#deposit").on("click", function() {
+    $("#deposit").click(function() {
          var value = prompt("Valor do depósito R$:", "0,00");
          value = parseFloat(value.replace(",","."));
          value = balance + value;
          updateBalance(value);
     });
-    $("#withdrawal").on("click", function() {
+    $("#withdrawal").click(function() {
          var value = prompt("Valor do saque R$:", "0,00");
          value = parseFloat(value.replace(",","."));
          value = balance - value;
          updateBalance(value);
+    });
+    $("#speak").click(function() {
+         getBalance();
     });
 });
 
