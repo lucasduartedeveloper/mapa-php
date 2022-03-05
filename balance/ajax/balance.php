@@ -6,7 +6,7 @@ try {
 
     $balance = htmlspecialchars($_POST["balance"]);
 
-    $sql = "INSERT INTO param (valor) VALUES ('".$balance."');";
+    $sql = "UPDATE param SET valor='".$balance."' WHERE nome='balance';";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
