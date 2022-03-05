@@ -147,7 +147,8 @@ function accHandler(acc) {
     info = xyz.replace("X", acc.x && acc.x.toFixed(3));
     info = info.replace("Y", acc.y && acc.y.toFixed(3));
     info = info.replace("Z", acc.z && acc.z.toFixed(3));
-    //$("#acc").html(info + $("#acc").html());
+    console.clear();
+    console.log(info);
 
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
