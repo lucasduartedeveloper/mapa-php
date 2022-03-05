@@ -92,20 +92,26 @@ var recording = false;
 var recordInterval = false;
 
 // Saldo
-var balance = 0.00;
+var balance = "0,00";
 $(document).ready(function() {
     $("#deposit").click(function() {
          var value = prompt("Valor do depósito R$:", "0,00");
-         value = parseFloat(value).toFixed(2);
-         balance += value;
-         $("#balance").text("R$ " + balance);
+         value = parseFloat(value);
+         balance = parseFloat(balance) + value;
+         $("#balance").text("R$ " + 
+         balance
+         .toFixed(2)
+         .replace(".",","));
          updateBalance(balance);
     });
     $("#withdrawal").click(function() {
          var value = prompt("Valor do saque R$:", "0,00");
-         value = parseFloat(value).toFixed(2);
-         balance += value;
-         $("#balance").text("R$ " + balance);
+         value = parseFloat(value);
+         balance = value;
+         $("#balance").text("R$ " + 
+         balance
+         .toFixed(2)
+         .replace(".",","));
          updateBalance(balance);
     });
 });
