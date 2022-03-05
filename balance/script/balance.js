@@ -99,7 +99,11 @@ $(document).ready(function() {
     getBalance();
     setInterval(function() {
         if (accX > 5) {
- hj l
+            updateBalance(balance + 0.01);
+        }       
+        else if (accX < -5) {
+            updateBalance(balance - 0.01);
+        }
         if (msg[0] == "BALANCE" &&
             playerId != msg[1]) {m
             getBalance();
@@ -129,6 +133,7 @@ function getBalance(balance) {
                   " reais e " +
                   saldo[1] + 
                   " centavos");
+
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
           $("#balance").text("R$ " + data[0].valor);
