@@ -32,13 +32,14 @@
 <body>
 
 <p id="title">
+   
 </p>
 <p id="balance">
    R$ 0,00
 </p>
 <div>
-<button id="></button>
-<button></button>
+<button id="wirhdrawal" class="btn">Saque</button>
+<button id="deposit" class="btn">Depósito</button>
 </div>
 
 <p id="version-info">
