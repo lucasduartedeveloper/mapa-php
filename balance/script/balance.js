@@ -118,7 +118,7 @@ function getBalance(balance) {
 }
 
 function updateBalance(value) {
-     balance = value
+     balance = value;
      $.post("ajax/balance.php", {
           balance: value.toFixed(2).replace(".",",");
           }).done(function(data) {
