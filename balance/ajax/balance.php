@@ -2,7 +2,7 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["balance"]) {
+  if (isset($_POST["balance"])) {
 
     $balance = htmlspecialchars($_POST["balance"]);
 
