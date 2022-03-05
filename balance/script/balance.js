@@ -113,11 +113,20 @@ $(document).ready(function() {
 });
 
 function getBalance(balance) {
-    return false;
+     $.getJSON("/extra/ajax/balance.php", function(data) {
+          console.log(data);
+          balance = data.valor;
+     });
 }
 
 function updateBalance(balance) {
-    $("#balance").text("R$ " + balance);
+     $.post("/extra/ajax/balance.php", {
+          balance: balance
+          }).done(function(data) {
+                console.log(data);
+                coin.play();
+                $("#balance").text("R$ " + balance);
+     });
 }
 
 if ('DeviceMotionEvent' in window) {
@@ -142,7 +151,6 @@ function accHandler(acc) {
     accZ = acc.z && acc.z.toFixed(3);
 
     if (accZ < -1) {
-        coin.play();
         balance = balance + 0.01;
         updateBalance(balance
         .toFixed(2)
