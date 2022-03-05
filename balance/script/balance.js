@@ -92,32 +92,32 @@ var recording = false;
 var recordInterval = false;
 
 // Saldo
-var balance = "0,00";
+var balance = 0.00;
 $(document).ready(function() {
     $("#deposit").on("click", function() {
          var value = prompt("Valor do depósito R$:", "0,00");
          value = parseFloat(value);
          balance = parseFloat(balance) + value;
-         $("#balance").text("R$ " + 
-         balance
-         .toFixed(2)
-         .replace(".",","));
-         updateBalance(balance);
+         updateBalance(balance
+        .toFixed(2)
+        .replace(".",",")));
     });
     $("#withdrawal").on("click", function() {
          var value = prompt("Valor do saque R$:", "0,00");
          value = parseFloat(value);
-         balance = value;
-         $("#balance").text("R$ " + 
-         balance
-         .toFixed(2)
-         .replace(".",","));
-         updateBalance(balance);
+         balance = parseFloat(balance) - value;
+         updateBalance(balance
+        .toFixed(2)
+        .replace(".",",")));
     });
 });
 
-function updateBalance(balance) {
+function getBalance(balance) {
     return false;
+}
+
+function updateBalance(balance) {
+    $("#balance").text("R$ " + balance);
 }
 
 if ('DeviceMotionEvent' in window) {
@@ -143,6 +143,10 @@ function accHandler(acc) {
 
     if (accZ < -1) {
         coin.play();
+        balance = balance + 0.01;
+        updateBalance(balance
+        .toFixed(2)
+        .replace(".",",")));
     }
 }
 
