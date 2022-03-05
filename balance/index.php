@@ -53,6 +53,9 @@ Depósito
 </div>
 
 <div id="product-list">
+     <p>1x CIGARRO R$ 10,00</p>
+     <p>1x CAFÉ R$ 5,00</p>
+     <p>1x ÁGUA R$ 2,00</p>
 </div>
 
 <p id="version-info">
