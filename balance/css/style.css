@@ -1,6 +1,6 @@
 /* Optional: Makes the sample page fill the window. */
 html, body {
-    --font-family: 'VT323', monospace !important;
+    font-family: 'VT323', monospace !important;
     font-size: 20px;
     margin: 0;
     padding: 0;
