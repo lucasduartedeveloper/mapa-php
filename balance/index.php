@@ -35,7 +35,7 @@
    078.402.969-55
 </p>
 <p id="balance">
-   R$ 0,00
+   R$ ---
 </p>
 <div>
 <button id="withdrawal" class="btn btn-danger">Saque</button>
@@ -43,7 +43,7 @@
 </div>
 
 <p id="version-info">
-     v1.0.20
+     v1.0.21
      <br>
      <span id="server-info">
      CONNECTING...
@@ -69,7 +69,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=20"></script>
+<script src="script/balance.js?v=21"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
