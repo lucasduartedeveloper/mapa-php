@@ -118,14 +118,14 @@ function getBalance(balance) {
 }
 
 function updateBalance(value) {
+     balance = value
+                .toFixed(2)
+                .replace(".",",");
      $.post("ajax/balance.php", {
           balance: balance
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                balance = value
-                .toFixed(2)
-                .replace(".",",");
                 $("#balance").text("R$ " + balance);
      });
 }
