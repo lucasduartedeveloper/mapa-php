@@ -110,6 +110,7 @@ $(document).ready(function() {
         if (msg[0] == "BALANCE" &&
             playerId != msg[1]) {
             getBalance();
+        }
     };
 
     // ----
