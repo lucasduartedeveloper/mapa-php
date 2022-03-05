@@ -104,7 +104,7 @@ $(document).ready(function() {
          .replace(".",","));
          updateBalance(balance);
     });
-    $("#withdrawal")on("click", function() {
+    $("#withdrawal").on("click", function() {
          var value = prompt("Valor do saque R$:", "0,00");
          value = parseFloat(value);
          balance = value;
