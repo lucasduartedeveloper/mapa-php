@@ -113,14 +113,14 @@ $(document).ready(function() {
 });
 
 function getBalance(balance) {
-     $.getJSON("/extra/ajax/balance.php", function(data) {
+     $.getJSON("ajax/balance.php", function(data) {
           console.log(data);
           balance = data.valor;
      });
 }
 
 function updateBalance(balance) {
-     $.post("/extra/ajax/balance.php", {
+     $.post("ajax/balance.php", {
           balance: balance
           }).done(function(data) {
                 console.log(data);
