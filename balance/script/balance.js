@@ -117,7 +117,7 @@ $(document).ready(function() {
 });
 
 function updateBalance(balance) {
-    
+    return false;
 }
 
 if ('DeviceMotionEvent' in window) {
@@ -145,16 +145,6 @@ function accHandler(acc) {
         coin.play();
     }
 }
-
-var question = 1;
-var questions = [
-   { question: "", 
-     option_a: "",
-     option_c: "",
-     option_d: "",
-     option_d: ""}
-];
-});
 
 function saveRecording() {
     recorder.stop();
