@@ -91,9 +91,14 @@ function recordAudio() {
 var recording = false;
 var recordInterval = false;
 
-// Botão de gravação
+// Saldo
 $(document).ready(function() {
-    
+    $("#deposit").click(function() {
+         var value = prompt("Valor do depósito R$:", "0,00");
+    });
+    $("#withdrawal").click(function() {
+         var value = prompt("Valor do saque R$:", "0,00");
+    });
 }
 
 if ('DeviceMotionEvent' in window) {
