@@ -143,21 +143,14 @@ var accY = 0;
 var accZ = 0;
 
 function accHandler(acc) {
-    var info, xyz = "[X, Y, Z]<br>";
-    info = xyz.replace("X", acc.x && acc.x.toFixed(3));
-    info = info.replace("Y", acc.y && acc.y.toFixed(3));
-    info = info.replace("Z", acc.z && acc.z.toFixed(3));
-    console.clear();
-    console.log(info);
-
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
 
-    if (Math.abs(accX) > 1) {
+    if (Math.abs(accX) > 2) {
          updateBalance(balance + 0.01);
     }
-    else if (Math.abs(accY) > 1) {
+    else if (Math.abs(accZ) > 2) {
          updateBalance(balance - 0.01);
     }
 }
