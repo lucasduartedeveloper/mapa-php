@@ -135,7 +135,7 @@ function getBalance(balance) {
           saldo[1] = parseInt(saldo[1]);
 
           var text = "";
-          if (data[0].valor.contains("-")) {
+          if (data[0].valor.includes("-")) {
               text += "menos ";
           }
           if (saldo[0] > 0) {
