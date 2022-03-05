@@ -163,7 +163,7 @@ function getBalance() {
 
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
-          $("#balance").text("R$ " + data[0].valor);
+          $("#balance").text("R$ " + formatBalance());
      });
 }
 
@@ -175,8 +175,15 @@ function updateBalance(value) {
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                $("#balance").text("R$ " + text);
+                $("#balance").text("R$ " + formatBalance());
                 ws.send("BALANCE|"+playerId+"|"+text);
+     });
+}
+
+function formatBalance() {
+     return balance.toLocaleString("de-GE", { 
+         minimumFractionDigits: 2, 
+         maximumFractionDigits: 2 
      });
 }
 
