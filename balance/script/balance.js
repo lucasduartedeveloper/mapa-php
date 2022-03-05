@@ -138,6 +138,10 @@ if ('DeviceMotionEvent' in window) {
     onDeviceMotion, false);
 }
 
+var accX = 0;
+var accY = 0;
+var accZ = 0;
+
 function accHandler(acc) {
     var info, xyz = "[X, Y, Z]<br>";
     info = xyz.replace("X", acc.x && acc.x.toFixed(3));
@@ -149,8 +153,10 @@ function accHandler(acc) {
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
 
-    if (accZ < -1) {
-        updateBalance(balance + 0.01);
+    if (Math.abs(accX) + 
+         Math.abs(accY) + 
+         Math.abs(accZ)) > 12) {
+         updateBalance(balance + 0.01);
     }
 }
 
@@ -178,29 +184,6 @@ function saveRecording() {
             };
         };
     });
-}
-
-var accX = 0;
-var accY = 0;
-var accZ = 0;
-
-function alarme(audio) {
-    var play = false;
-    for (var k in audio) {
-        if (audio[k].somaPos > 5 ||
-             audio[k].somaNeg < -5) {
-             play = true;
-        }
-    }
-    play = 
-        ((Math.abs(accX) + 
-         Math.abs(accY) + 
-         Math.abs(accZ)) > 12) ||
-        play;
-    if (play) {
-        //$("#mic").click();
-        //alarm.play();
-    }
 }
 
 // Texto para audio
