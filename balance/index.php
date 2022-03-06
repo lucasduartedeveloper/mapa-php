@@ -56,8 +56,7 @@ Depósito
      <p>1x CIGARRO R$ 10,00</p>
      <p>1x CAFÉ R$ 5,00</p>
      <p>1x ÁGUA R$ 2,00</p>
-     <p>1x PORTÃO R$ 1,00</p>
-     <p>1x SÓ UMA PAREDE AQUI R$ 1000,00</p>
+     <p>1x CADEADO R$ 7,00</p>
 </div>
 
 <p id="version-info">
