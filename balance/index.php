@@ -57,6 +57,7 @@ Depósito
      <p>1x CAFÉ R$ 5,00</p>
      <p>1x ÁGUA R$ 2,00</p>
      <p>1x CADEADO R$ 7,00</p>
+     <p>1x ARTHUR THOMAS R$ 1,99</p>
 </div>
 
 <p id="version-info">
