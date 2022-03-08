@@ -58,12 +58,16 @@ html, body {
     overflow-y: scroll;
 }
 
+table {
+    width: 100%;
+}
+
 table tr:nth-child(odd) {
-  background: #aaaa77;: 
+    background: #aaaa77;: 
 }
 
 tr td:nth-child(odd) {
-  background: #aaaa77;: 
+    background: #aaaa77;: 
 }
 
 #product-list p {
