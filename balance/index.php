@@ -76,10 +76,25 @@ Depósito
      </tr>
      <tr>
      <td>0</td>
+     <td>GATO</td>
+     <td>R$ 20,00</td>
+     </tr>
+     <tr>
+     <td>0</td>
      <td>CADEADO</td>
      <td>R$ 7,00</td>
      </tr>
      </table>
+</div>
+
+<div>
+<span>R$ 0,00</span>
+<button id="cancel" class="btn btn-dark">
+<i class="bi bi-x"></i>
+</button>
+<button id="confirm" class="btn btn-dark">
+<i class="bi bi-check"></i>
+</button>
 </div>
 
 <p id="version-info">
