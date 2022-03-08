@@ -71,6 +71,19 @@ td {
 }
 
 #product-list p {
-   margin: 0px;
-   padding: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#total {
+    margin-top: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: row;
+    text-align: right;
+}
+
+.btn {
+    border: 1px solid white;
 }
