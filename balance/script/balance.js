@@ -182,8 +182,7 @@ function getBalance() {
 
     $("tr").click(function(e) {
           coin.play();
-          console.log(e.target);
-          var id = parseInt(e.target.id);
+          var id = parseInt($(e.target).parent().attr("id"));
           produtos[id].estoque += 1;
           updateTotal();
     });

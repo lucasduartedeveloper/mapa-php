@@ -62,7 +62,7 @@ table {
     width: 100%;
 }
 
-table tr:nth-child(odd) {
+table tr:nth-child(even) {
     background: #aaaa77;: 
 }
 
