@@ -54,11 +54,11 @@ Depósito
 
 <div id="product-list">
      <table>
-     <th>
+     <tr>
      <td>Qtd.</td>
      <td>Produto</td>
      <td>Valor</td>
-     </th>
+     </tr>
      <tr id="0">
      <td>0</td>
      <td>CIGARRO</td>

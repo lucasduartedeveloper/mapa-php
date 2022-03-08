@@ -191,7 +191,7 @@ function getBalance() {
 function updateTotal() {
     total = 0.00;
     for(var k in produtos) {
-          $("#"+k+" td")[0].text(produtos[k].estoque);
+          $("#"+k+" td")[0].innerText = produtos[k].estoque;
           total = produtos[k].estoque * produtos[k].valor;
     }
     $("#total span").text("R$ "+total);
