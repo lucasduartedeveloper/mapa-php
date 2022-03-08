@@ -77,10 +77,6 @@ td {
 
 #total {
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
     text-align: right;
     width: 90vw;
 }
