@@ -183,6 +183,7 @@ function getBalance() {
     $("tr").click(function(e) {
           coin.play();
           var id = parseInt($(e.target).parent().attr("id"));
+          console.log($(e.target).parent().attr("id"));
           produtos[id].estoque += 1;
           updateTotal();
     });
@@ -194,7 +195,9 @@ function updateTotal() {
           $("#"+k+" td")[0].innerText = produtos[k].estoque;
           total = produtos[k].estoque * produtos[k].valor;
     }
-    $("#total span").text("R$ "+total.toFixed(2));
+    $("#total span").text("R$ "+total
+    .toFixed(2)
+    .replace(".",","));
 }
 
 function updateBalance(value) {
