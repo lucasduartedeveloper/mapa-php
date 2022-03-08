@@ -66,8 +66,8 @@ table tr:nth-child(odd) {
     background: #aaaa77;: 
 }
 
-tr td:nth-child(odd) {
-    background: #aaaa77;: 
+td {
+    border: 1px solid black;
 }
 
 #product-list p {
