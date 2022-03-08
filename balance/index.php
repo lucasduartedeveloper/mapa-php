@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="css/style.css?v=14">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -53,11 +53,33 @@ Depósito
 </div>
 
 <div id="product-list">
-     <p>1x CIGARRO R$ 10,00</p>
-     <p>1x CAFÉ R$ 5,00</p>
-     <p>1x ÁGUA R$ 2,00</p>
-     <p>1x CADEADO R$ 7,00</p>
-     <p>1x ARTHUR THOMAS R$ 1,99</p>
+     <table>
+     <tr>
+     <td>Qtd.</td>
+     <td>Produto</td>
+     <td>Valor</td>
+     </tr>
+     <tr>
+     <td>0</td>
+     <td>CIGARRO</td>
+     <td>R$ 10,00</td>
+     </tr>
+     <tr>
+     <td>0</td>
+     <td>CAFÉ</td>
+     <td>R$ 5,00</td>
+     </tr>
+     <tr>
+     <td>0</td>
+     <td>ÁGUA</td>
+     <td>R$ 2,00</td>
+     </tr>
+     <tr>
+     <td>0</td>
+     <td>CADEADO</td>
+     <td>R$ 7,00</td>
+     </tr>
+     </table>
 </div>
 
 <p id="version-info">
@@ -87,7 +109,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=51"></script>
+<script src="script/balance.js?v=52"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

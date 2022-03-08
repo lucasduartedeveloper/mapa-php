@@ -58,7 +58,11 @@ html, body {
     overflow-y: scroll;
 }
 
-#product-list p:nth-child(odd) {
+table tr:nth-child(odd) {
+  background: #aaaa77;: 
+}
+
+tr td:nth-child(odd) {
   background: #aaaa77;: 
 }
 
