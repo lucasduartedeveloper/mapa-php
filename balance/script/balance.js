@@ -187,13 +187,27 @@ function getBalance() {
           produtos[id].estoque += 1;
           updateTotal();
     });
+
+    $("cancel").click(function(e) {
+          updateTotal(true);
+    });
+
+   $("confirm").click(function(e) {
+          var value = total;
+          value = total;
+          value = balance - value;
+          updateBalance(value);
+          updateTotal(true);
+    });
 }
 
-function updateTotal() {
+function updateTotal(cancel = false) {
     total = 0.00;
     for(var k in produtos) {
+          produtos[k].estoque = cancel ? 0 : 
+          produtos[k].estoque;
           $("#"+k+" td")[0].innerText = produtos[k].estoque;
-          total = produtos[k].estoque * produtos[k].valor;
+          total += produtos[k].estoque * produtos[k].valor;
     }
     $("#total span").text("R$ "+total
     .toFixed(2)
