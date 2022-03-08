@@ -181,7 +181,7 @@ function getBalance() {
      });
 
     $("tr").click(function(e) {
-          var id = parseInt($(e.target).attr("id"));
+          var id = parseInt(e.target.id);
           produtos[id].estoque += 1;
           updateTotal();
     });
