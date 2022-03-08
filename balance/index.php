@@ -59,27 +59,27 @@ Depósito
      <td>Produto</td>
      <td>Valor</td>
      </tr>
-     <tr>
+     <tr id="0">
      <td>0</td>
      <td>CIGARRO</td>
      <td>R$ 10,00</td>
      </tr>
-     <tr>
+     <tr id="1">
      <td>0</td>
      <td>CAFÉ</td>
      <td>R$ 5,00</td>
      </tr>
-     <tr>
+     <tr id="2">
      <td>0</td>
      <td>ÁGUA</td>
      <td>R$ 2,00</td>
      </tr>
-     <tr>
+     <tr id="3">
      <td>0</td>
      <td>GATO</td>
      <td>R$ 20,00</td>
      </tr>
-     <tr>
+     <tr id="4">
      <td>0</td>
      <td>CADEADO</td>
      <td>R$ 7,00</td>
@@ -98,7 +98,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v19.0.52
+     v19.0.53
      <br>
      <span id="server-info">
      CONNECTING...
@@ -124,7 +124,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=52"></script>
+<script src="script/balance.js?v=53"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

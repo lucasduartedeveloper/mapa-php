@@ -93,7 +93,16 @@ var recordInterval = false;
 
 // Saldo
 var balance = 0.00;
+var total = 0.00;
 var playerId = new Date().getTime();
+
+var produtos = [
+    { estoque: 0, nome: "CIGARRO", valor: 10.00 },
+    { estoque: 0, nome: "CAFÉ", valor: 5.00 },
+    { estoque: 0, nome: "ÁGUA", valor: 2.00 },
+    { estoque: 0, nome: "GATO", valor: 20.00 },
+    { estoque: 0, nome: "CADEADO", valor: 7.00 }
+];
 
 $(document).ready(function() {
     getBalance();
@@ -170,6 +179,21 @@ function getBalance() {
           balance = parseFloat(data[0].valor.replace(",","."));
           $("#balance").text("R$ " + formatBalance());
      });
+
+    $("tr").click(function(e) {
+          var id = parseInt($(e.target).attr("id"));
+          produtos[id].estoque += 1;
+          updateTotal();
+    });
+}
+
+function updateTotal() {
+    total = 0.00;
+    for(var k in produtos) {
+          $("#"+k+" td")[0].text(produtos[k].estoque);
+          total = produtos[k].estoque * produtos[k].valor;
+    }
+    $("#total span").text("R$ "+total);
 }
 
 function updateBalance(value) {
