@@ -173,6 +173,9 @@ $(document).ready(function() {
           updateBalance(value);
           updateTotal(true);
     });
+    $("#title").click(function() {
+          $("#title").text("CAIXA 34");
+    });
 });
 
 function getBalance(sound = false) {
