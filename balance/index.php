@@ -61,45 +61,55 @@ Depósito
      </tr>
      <tr id="0">
      <td>
-     <i class="bi bi-plus-circle-fill"></i>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
      0
-     <i class="bi bi-minus-circle-fill"></i>
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>CIGARRO</td>
      <td>R$ 10,00</td>
      </tr>
      <tr id="1">
      <td>
-     <i class="bi bi-plus-circle-fill"></i>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
      0
-     <i class="bi bi-minus-circle-fill"></i>
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>CAFÉ</td>
      <td>R$ 5,00</td>
      </tr>
      <tr id="2">
      <td>
-     <i class="bi bi-plus-circle-fill"></i>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
      0
-     <i class="bi bi-minus-circle-fill"></i>
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>ÁGUA</td>
      <td>R$ 2,00</td>
      </tr>
      <tr id="3">
      <td>
-     <i class="bi bi-plus-circle-fill"></i>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
      0
-     <i class="bi bi-minus-circle-fill"></i>
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>GATO</td>
      <td>R$ 20,00</td>
      </tr>
      <tr id="4">
      <td>
-     <i class="bi bi-plus-circle-fill"></i>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
      0
-     <i class="bi bi-minus-circle-fill"></i>
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>CADEADO</td>
      <td>R$ 7,00</td>
@@ -118,7 +128,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v19.0.65
+     v19.0.66
      <br>
      <span id="server-info">
      CONNECTING...
@@ -144,7 +154,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=65"></script>
+<script src="script/balance.js?v=66"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

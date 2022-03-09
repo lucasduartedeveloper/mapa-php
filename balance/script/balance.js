@@ -140,7 +140,7 @@ $(document).ready(function() {
     $("#speak").click(function() {
          getBalance(true);
     });
-    $(".bi-plus-circle-fill").click(function(e) {
+    $(".fa-circle-plus").click(function(e) {
           notification.play();
 
           var id = parseInt(
@@ -149,7 +149,7 @@ $(document).ready(function() {
           produtos[id].estoque += 1;
           updateTotal();
     });
-    $(".bi-plus-minus-fill").click(function(e) {
+    $(".fa-circle-minus").click(function(e) {
           notification.play();
 
           var id = parseInt(
