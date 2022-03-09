@@ -104,8 +104,10 @@ var produtos = [
     { estoque: 0, nome: "ÁGUA", valor: 2.00 },
     { estoque: 0, nome: "MÁSCARA", valor: 15.00 },
     { estoque: 0, nome: "GATO", valor: 20.00 },
-    { estoque: 0, nome: "CADEADO", valor: 7.00 },
     { estoque: 0, nome: "CAMISINHA", valor: 5.00 },
+    { estoque: 0, nome: "SKOL", valor: 3.50 },
+    { estoque: 0, nome: "COROTE", valor: 5.00 },
+    { estoque: 0, nome: "CADEADO", valor: 7.00 },
     { estoque: 0, nome: "BICICLETA", valor: 500 }
 ];
 
@@ -126,6 +128,20 @@ $(document).ready(function() {
             getBalance();
         }
     };
+
+    var html = "";
+    for (var k in produtos) {
+        html += "<tr id=\"0\">" +
+        "<td>" +
+        "<i class=\"fa-solid fa-circle-plus\"></i>" +
+        "<span>0</span>" +
+        "<i class=\"fa-solid fa-circle-minus\"></i>" +
+        "</td>" +
+        "<td>"+produtos[k].nome+"</td>" +
+        "<td>R$ "+formatValue(produtos[k].valor)+"</td>" +
+        "</tr>";
+    }
+    $("table").html(html);
 
     // ----
     $("#deposit").click(function() {

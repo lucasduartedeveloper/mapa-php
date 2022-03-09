@@ -54,99 +54,6 @@ Depósito
 
 <div id="product-list">
      <table>
-     <tr>
-     <td>Qtd.</td>
-     <td>Produto</td>
-     <td>Valor</td>
-     </tr>
-     <tr id="0">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>CIGARRO</td>
-     <td>R$ 10,00</td>
-     </tr>
-     <tr id="1">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>CAFÉ</td>
-     <td>R$ 5,00</td>
-     </tr>
-     <tr id="2">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>ÁGUA</td>
-     <td>R$ 2,00</td>
-     </tr>
-     <tr id="3">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>MÁSCARA</td>
-     <td>R$ 15,00</td>
-     </tr>
-     <tr id="4">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>GATO</td>
-     <td>R$ 20,00</td>
-     </tr>
-     <tr id="5">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>CADEADO</td>
-     <td>R$ 7,00</td>
-     </tr>
-     <tr id="6">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>CAMISINHA</td>
-     <td>R$ 5,00</td>
-     </tr>
-     <tr id="7">
-     <td>
-     <i class="fa-solid fa-circle-plus"></i>
-     <span>
-     0
-     </span>
-     <i class="fa-solid fa-circle-minus"></i>
-     </td>
-     <td>BICICLETA</td>
-     <td>R$ 500,00</td>
-     </tr>
      </table>
 </div>
 
@@ -161,7 +68,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     SIMULADOR DE MERCADO v19.0.80
+     SIMULADOR DE MERCADO v19.0.81
      <br>
      <span id="server-info">
      CONNECTING...
@@ -187,7 +94,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=80"></script>
+<script src="script/balance.js?v=81"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
