@@ -100,10 +100,21 @@ Depósito
      </span>
      <i class="fa-solid fa-circle-minus"></i>
      </td>
+     <td>MÁSCARA</td>
+     <td>R$ 15,00</td>
+     </tr>
+     <tr id="4">
+     <td>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
+     0
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
+     </td>
      <td>GATO</td>
      <td>R$ 20,00</td>
      </tr>
-     <tr id="4">
+     <tr id="5">
      <td>
      <i class="fa-solid fa-circle-plus"></i>
      <span>
