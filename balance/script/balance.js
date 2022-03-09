@@ -1,4 +1,6 @@
 var coin = new Audio("audio/coin.wav");
+var notification = new Audio("audio/game-notification.wav");
+var gameOver = new Audio("audio/game-over.wav");
 
 function formatarAudio(buffer) {
     var array8 = new Uint8Array(buffer);
@@ -138,10 +140,23 @@ $(document).ready(function() {
     $("#speak").click(function() {
          getBalance();
     });
-    $("#product-list p").click(function(e) {
-         //var text = $(e.target).text();
-         //text = text.replace("x", "");
-         //say(text);
+    $("tr").click(function(e) {
+          notification.play();
+          var id = parseInt($(e.target).parent().attr("id"));
+          produtos[id].estoque += 1;
+          updateTotal();
+    });
+    $("#cancel").click(function(e) {
+          gameOver.play();
+          updateTotal(true);
+    });
+   $("#confirm").click(function(e) {
+          notification.play();
+          var value = total;
+          value = total;
+          value = balance - value;
+          updateBalance(value);
+          updateTotal(true);
     });
 });
 
@@ -179,26 +194,6 @@ function getBalance() {
           balance = parseFloat(data[0].valor.replace(",","."));
           $("#balance").text("R$ " + formatBalance());
      });
-
-    $("tr").click(function(e) {
-          coin.play();
-          var id = parseInt($(e.target).parent().attr("id"));
-          console.log($(e.target).parent().attr("id"));
-          produtos[id].estoque += 1;
-          updateTotal();
-    });
-
-    $("cancel").click(function(e) {
-          updateTotal(true);
-    });
-
-   $("confirm").click(function(e) {
-          var value = total;
-          value = total;
-          value = balance - value;
-          updateBalance(value);
-          updateTotal(true);
-    });
 }
 
 function updateTotal(cancel = false) {
