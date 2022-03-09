@@ -145,7 +145,7 @@ Depósito
      <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>BICICLETA</td>
-     <td>R$ 50.000,00</td>
+     <td>R$ 5.000,00</td>
      </tr>
      </table>
 </div>
@@ -161,7 +161,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v19.0.75
+     v19.0.76
      <br>
      <span id="server-info">
      CONNECTING...
@@ -187,7 +187,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=75"></script>
+<script src="script/balance.js?v=76"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

@@ -106,7 +106,7 @@ var produtos = [
     { estoque: 0, nome: "GATO", valor: 20.00 },
     { estoque: 0, nome: "CADEADO", valor: 7.00 },
     { estoque: 0, nome: "CAMISINHA", valor: 5.00 },
-    { estoque: 0, nome: "BICICLETA", valor: 50000 }
+    { estoque: 0, nome: "BICICLETA", valor: 5000 }
 ];
 
 $(document).ready(function() {
@@ -215,7 +215,7 @@ function getBalance(sound = false) {
 
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
-          $("#balance").text("R$ " + formatBalance());
+          $("#balance").text("R$ " + formatValue(balance));
      });
 }
 
@@ -227,7 +227,8 @@ function updateTotal(cancel = false) {
           $("#"+k+" td span")[0].innerText = produtos[k].estoque;
           total += produtos[k].estoque * produtos[k].valor;
     }
-    $("#total span").text("Valor da compra: R$ "+total
+    $("#total span").text(
+    "Valor da compra: R$ "+ formatValue(total)
     .toFixed(2)
     .replace(".",","));
 }
@@ -240,13 +241,13 @@ function updateBalance(value) {
           }).done(function(data) {
                 console.log(data);
                 coin.play();
-                $("#balance").text("R$ " + formatBalance());
+                $("#balance").text("R$ " + formatValue(balance));
                 ws.send("BALANCE|"+playerId+"|"+text);
      });
 }
 
-function formatBalance() {
-     return balance.toLocaleString("de-GE", { 
+function formatValue(value) {
+     return value.toLocaleString("de-GE", { 
          minimumFractionDigits: 2, 
          maximumFractionDigits: 2 
      });
