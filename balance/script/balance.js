@@ -138,7 +138,7 @@ $(document).ready(function() {
          updateBalance(value);
     });
     $("#speak").click(function() {
-         getBalance();
+         getBalance(true);
     });
     $("tr").click(function(e) {
           notification.play();
@@ -160,7 +160,7 @@ $(document).ready(function() {
     });
 });
 
-function getBalance() {
+function getBalance(say = false) {
      $.getJSON("ajax/balance.php", function(data) {
           var saldo = data[0].valor.split(",");
           saldo[0] = Math.abs(parseInt(saldo[0]));
@@ -188,7 +188,7 @@ function getBalance() {
           if (saldo[1] > 1) {
                text += "s";
           }
-          say(text);
+          if (say) { say(text); }
 
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
