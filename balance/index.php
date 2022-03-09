@@ -63,6 +63,7 @@ Depósito
      <td>
      <i class="bi bi-plus-circle-fill"></i>
      0
+     <i class="bi bi-minus-circle-fill"></i>
      </td>
      <td>CIGARRO</td>
      <td>R$ 10,00</td>
@@ -71,6 +72,7 @@ Depósito
      <td>
      <i class="bi bi-plus-circle-fill"></i>
      0
+     <i class="bi bi-minus-circle-fill"></i>
      </td>
      <td>CAFÉ</td>
      <td>R$ 5,00</td>
@@ -79,6 +81,7 @@ Depósito
      <td>
      <i class="bi bi-plus-circle-fill"></i>
      0
+     <i class="bi bi-minus-circle-fill"></i>
      </td>
      <td>ÁGUA</td>
      <td>R$ 2,00</td>
@@ -87,6 +90,7 @@ Depósito
      <td>
      <i class="bi bi-plus-circle-fill"></i>
      0
+     <i class="bi bi-minus-circle-fill"></i>
      </td>
      <td>GATO</td>
      <td>R$ 20,00</td>
@@ -95,6 +99,7 @@ Depósito
      <td>
      <i class="bi bi-plus-circle-fill"></i>
      0
+     <i class="bi bi-minus-circle-fill"></i>
      </td>
      <td>CADEADO</td>
      <td>R$ 7,00</td>
@@ -113,7 +118,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v19.0.64
+     v19.0.65
      <br>
      <span id="server-info">
      CONNECTING...
@@ -139,7 +144,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=64"></script>
+<script src="script/balance.js?v=65"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

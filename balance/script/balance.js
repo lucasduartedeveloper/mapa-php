@@ -140,10 +140,24 @@ $(document).ready(function() {
     $("#speak").click(function() {
          getBalance(true);
     });
-    $("tr").click(function(e) {
+    $(".bi-plus-circle-fill").click(function(e) {
           notification.play();
-          var id = parseInt($(e.target).parent().attr("id"));
+
+          var id = parseInt(
+          $(e.target).parent().parent().attr("id"));
+
           produtos[id].estoque += 1;
+          updateTotal();
+    });
+    $(".bi-plus-minus-fill").click(function(e) {
+          notification.play();
+
+          var id = parseInt(
+          $(e.target).parent().parent().attr("id"));
+
+          produtos[id].estoque = 
+          produtos[id].estoque > 1 ?
+          produtos[id].estoque -1;
           updateTotal();
     });
     $("#cancel").click(function(e) {
