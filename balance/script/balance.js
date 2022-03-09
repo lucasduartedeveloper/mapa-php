@@ -160,7 +160,7 @@ $(document).ready(function() {
     });
 });
 
-function getBalance(say = false) {
+function getBalance(sound = false) {
      $.getJSON("ajax/balance.php", function(data) {
           var saldo = data[0].valor.split(",");
           saldo[0] = Math.abs(parseInt(saldo[0]));
@@ -188,7 +188,7 @@ function getBalance(say = false) {
           if (saldo[1] > 1) {
                text += "s";
           }
-          if (say) { say(text); }
+          if (sound) { say(text); }
 
           console.log(data);
           balance = parseFloat(data[0].valor.replace(",","."));
