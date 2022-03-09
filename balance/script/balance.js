@@ -215,7 +215,7 @@ function updateTotal(cancel = false) {
     for(var k in produtos) {
           produtos[k].estoque = cancel ? 0 : 
           produtos[k].estoque;
-          $("#"+k+" td")[0].innerText = produtos[k].estoque;
+          $("#"+k+" td span")[0].innerText = produtos[k].estoque;
           total += produtos[k].estoque * produtos[k].valor;
     }
     $("#total span").text("Valor da compra: R$ "+total
