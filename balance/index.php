@@ -161,7 +161,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     SIMULADOR DE MERCADO v19.0.79
+     SIMULADOR DE MERCADO v19.0.80
      <br>
      <span id="server-info">
      CONNECTING...
@@ -187,7 +187,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=79"></script>
+<script src="script/balance.js?v=80"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
