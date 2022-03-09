@@ -145,7 +145,7 @@ Depósito
      <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>BICICLETA</td>
-     <td>R$ 1.000.000,00</td>
+     <td>R$ 500.000,00</td>
      </tr>
      </table>
 </div>
