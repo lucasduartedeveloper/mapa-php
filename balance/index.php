@@ -35,7 +35,7 @@
   CAIXA 84
 </p>
 <p id="cpf">
-   078.402.969-55
+   078.402.9##-##
 </p>
 <p id="balance">
    R$ ----
@@ -145,13 +145,13 @@ Depósito
      <i class="fa-solid fa-circle-minus"></i>
      </td>
      <td>BICICLETA</td>
-     <td>R$ 5.000,00</td>
+     <td>R$ 500,00</td>
      </tr>
      </table>
 </div>
 
 <div id="total">
-<span>Valor da compra: R$ 0,00</span>
+<span>Total: R$ 0,00</span>
 <button id="cancel" class="btn btn-dark">
 <i class="bi bi-x"></i>
 </button>
@@ -161,7 +161,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v19.0.77
+     SIMULADOR DE MERCADO v19.0.79
      <br>
      <span id="server-info">
      CONNECTING...
@@ -187,7 +187,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=77"></script>
+<script src="script/balance.js?v=79"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
