@@ -70,6 +70,10 @@ td {
     border: 1px solid black;
 }
 
+td span {
+    margin: 0px 5px;
+}
+
 #product-list p {
     margin: 0px;
     padding: 0px;
