@@ -104,8 +104,8 @@ var produtos = [
     { estoque: 0, nome: "ÁGUA", valor: 2.00 },
     { estoque: 0, nome: "MÁSCARA", valor: 15.00 },
     { estoque: 0, nome: "GATO", valor: 20.00 },
-    { estoque: 0, nome: "CADEADO", valor: 7.00 }
-    { estoque: 0, nome: "BICICLETA", valor: 1000000 },
+    { estoque: 0, nome: "CADEADO", valor: 7.00 },
+    { estoque: 0, nome: "BICICLETA", valor: 1000000 }
 ];
 
 $(document).ready(function() {
