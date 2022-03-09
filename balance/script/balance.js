@@ -228,7 +228,7 @@ function updateTotal(cancel = false) {
           total += produtos[k].estoque * produtos[k].valor;
     }
     $("#total span").text(
-    "Valor da compra: R$ "+ formatValue(total));
+    "Total: R$ "+ formatValue(total));
 }
 
 function updateBalance(value) {
