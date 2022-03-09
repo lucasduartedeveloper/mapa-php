@@ -157,7 +157,7 @@ $(document).ready(function() {
 
           produtos[id].estoque = 
           produtos[id].estoque > 1 ?
-          produtos[id].estoque -1;
+          produtos[id].estoque -1 : 0;
           updateTotal();
     });
     $("#cancel").click(function(e) {
