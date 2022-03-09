@@ -139,7 +139,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     v19.0.69
+     v19.0.70
      <br>
      <span id="server-info">
      CONNECTING...
@@ -165,7 +165,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=69"></script>
+<script src="script/balance.js?v=70"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

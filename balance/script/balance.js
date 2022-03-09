@@ -173,8 +173,11 @@ $(document).ready(function() {
           updateBalance(value);
           updateTotal(true);
     });
+    var n = 0;
+    var nroCaixas = [84,34,55];
     $("#title").click(function() {
-          $("#title").text("CAIXA 34");
+         n = n < 2 ? n+1: 0;
+         $("#title").text("CAIXA "+nroCaixas[n]);
     });
 });
 
