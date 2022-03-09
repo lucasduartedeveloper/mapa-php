@@ -60,27 +60,42 @@ Depósito
      <td>Valor</td>
      </tr>
      <tr id="0">
-     <td>0</td>
+     <td>
+     <i class="bi bi-plus-circle-fill"></i>
+     0
+     </td>
      <td>CIGARRO</td>
      <td>R$ 10,00</td>
      </tr>
      <tr id="1">
-     <td>0</td>
+     <td>
+     <i class="bi bi-plus-circle-fill"></i>
+     0
+     </td>
      <td>CAFÉ</td>
      <td>R$ 5,00</td>
      </tr>
      <tr id="2">
-     <td>0</td>
+     <td>
+     <i class="bi bi-plus-circle-fill"></i>
+     0
+     </td>
      <td>ÁGUA</td>
      <td>R$ 2,00</td>
      </tr>
      <tr id="3">
-     <td>0</td>
+     <td>
+     <i class="bi bi-plus-circle-fill"></i>
+     0
+     </td>
      <td>GATO</td>
      <td>R$ 20,00</td>
      </tr>
      <tr id="4">
-     <td>0</td>
+     <td>
+     <i class="bi bi-plus-circle-fill"></i>
+     0
+     </td>
      <td>CADEADO</td>
      <td>R$ 7,00</td>
      </tr>
