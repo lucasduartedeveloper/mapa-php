@@ -54,6 +54,11 @@ Depósito
 
 <div id="product-list">
      <table>
+     <tr> 
+     <td>Qtd.</td>
+     <td>Nome</td>
+     <td>Preço</td>
+     </tr>
      </table>
 </div>
 
@@ -68,7 +73,7 @@ Depósito
 </div>
 
 <p id="version-info">
-     SIMULADOR DE MERCADO v19.0.81
+     SIMULADOR DE MERCADO v19.0.82
      <br>
      <span id="server-info">
      CONNECTING...
@@ -94,7 +99,7 @@ Depósito
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/balance.js?v=81"></script>
+<script src="script/balance.js?v=82"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

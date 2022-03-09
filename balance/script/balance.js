@@ -129,9 +129,9 @@ $(document).ready(function() {
         }
     };
 
-    var html = "";
+    var html = $("table").html();
     for (var k in produtos) {
-        html += "<tr id=\"0\">" +
+        html += "<tr id=\""+k+"\">" +
         "<td>" +
         "<i class=\"fa-solid fa-circle-plus\"></i>" +
         "<span>0</span>" +
