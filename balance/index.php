@@ -125,6 +125,17 @@ Depósito
      <td>CADEADO</td>
      <td>R$ 7,00</td>
      </tr>
+     <tr id="6">
+     <td>
+     <i class="fa-solid fa-circle-plus"></i>
+     <span>
+     0
+     </span>
+     <i class="fa-solid fa-circle-minus"></i>
+     </td>
+     <td>BICICLETA</td>
+     <td>R$ 1.000.000,00</td>
+     </tr>
      </table>
 </div>
 
