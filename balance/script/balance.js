@@ -106,7 +106,7 @@ var produtos = [
     { estoque: 0, nome: "GATO", valor: 20.00 },
     { estoque: 0, nome: "CADEADO", valor: 7.00 },
     { estoque: 0, nome: "CAMISINHA", valor: 5.00 },
-    { estoque: 0, nome: "BICICLETA", valor: 500000 }
+    { estoque: 0, nome: "BICICLETA", valor: 50000 }
 ];
 
 $(document).ready(function() {
