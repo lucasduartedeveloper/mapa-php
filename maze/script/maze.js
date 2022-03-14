@@ -117,12 +117,16 @@ function draw() {
     // start position
     for (var k in walls) {
         context.moveTo(
-            walls[k].x1 +1,
-            walls[k].y1 +1
+            (walls[k].x1 < walls[k].x2 ? 
+             walls[k].x1 +1 : walls[k].x1 -1),
+            (walls[k].y1 < walls[k].y2 ? 
+             walls[k].y1 +1 : walls[k].y1 -1)
         ); 
         context.lineTo(
-            walls[k].x2 -1,
-            walls[k].y2 -1
+            (walls[k].x1 < walls[k].x2 ? 
+             walls[k].x2 -1 : walls[k].x2 +1),
+            (walls[k].y1 < walls[k].y2 ? 
+             walls[k].y2 -1 : walls[k].y2 +1),
         );
     }
 
