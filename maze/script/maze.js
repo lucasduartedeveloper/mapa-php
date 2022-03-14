@@ -96,9 +96,9 @@ var recordInterval = false;
 // Labirinto
 var walls = [
     { x1: 0, y1: 300, x2: 150, y2: 300 },
-    { x1: 180, y1: 300, x2: 300, y2: 300 },
+    { x1: 200, y1: 300, x2: 300, y2: 300 },
     { x1: 0, y1: 300, x2: 0, y2: 0 },
-    { x1: 0, y1: 0, x2: 120, y2: 0 },
+    { x1: 0, y1: 0, x2: 100, y2: 0 },
     { x1: 150, y1: 0, x2: 300, y2: 0 },
     { x1: 300, y1: 0, x2: 300, y2: 300 }
 ];
@@ -112,21 +112,21 @@ function draw() {
 
     context.beginPath(); // always start a new line with beginPath
     context.strokeStyle = "#fff";
-    context.lineWidth = 3;
+    context.lineWidth = 5;
 
     // start position
     for (var k in walls) {
         context.moveTo(
             (walls[k].x1 < 150 ? 
-             walls[k].x1 +1 : walls[k].x1 -1),
+             walls[k].x1 +3 : walls[k].x1 -3),
             (walls[k].y1 < 150 ? 
-             walls[k].y1 +1 : walls[k].y1 -1)
+             walls[k].y1 +3 : walls[k].y1 -3)
         ); 
         context.lineTo(
             (walls[k].x1 < 150 ? 
-             walls[k].x2 +1 : walls[k].x2 -1),
+             walls[k].x2 +3 : walls[k].x2 -3),
             (walls[k].y1 < 150 ? 
-             walls[k].y2 +1 : walls[k].y2 -1),
+             walls[k].y2 +3 : walls[k].y2 -3),
         );
     }
 
