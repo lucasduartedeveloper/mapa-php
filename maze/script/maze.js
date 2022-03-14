@@ -101,35 +101,33 @@ function draw() {
     canvas.width = 300;
     canvas.height = 300;
 
-    for (var k = 0; k < array.length; k++) {
-        context.beginPath(); // always start a new line with beginPath
-        context.strokeStyle = "#fff";
-        context.lineWidth = 2;
+    context.beginPath(); // always start a new line with beginPath
+    context.strokeStyle = "#fff";
+    context.lineWidth = 2;
 
-        // start position
-        context.moveTo(1,299); 
-        context.lineTo(151,299);
-        context.moveTo(151,299); 
-        context.lineTo(151,291);
-        context.moveTo(161,291); 
-        context.lineTo(161,299);
-        context.moveTo(161,299); 
-        context.lineTo(299,299);
-        context.moveTo(1,299); 
-        context.lineTo(1,1);
-        context.moveTo(1,1); 
-        context.lineTo(141,1);
-        context.moveTo(141,1); 
-        context.lineTo(141,9);
-        context.moveTo(151,9); 
-        context.lineTo(151,1);
-        context.moveTo(151,1); 
-        context.lineTo(299,1);
-        context.moveTo(299,1); 
-        context.lineTo(299,299);
+    // start position
+    context.moveTo(1,299); 
+    context.lineTo(151,299);
+    context.moveTo(151,299); 
+    context.lineTo(151,291);
+    context.moveTo(161,291); 
+    context.lineTo(161,299);
+    context.moveTo(161,299); 
+    context.lineTo(299,299);
+    context.moveTo(1,299); 
+    context.lineTo(1,1);
+    context.moveTo(1,1); 
+    context.lineTo(141,1);
+    context.moveTo(141,1); 
+    context.lineTo(141,9);
+    context.moveTo(151,9); 
+    context.lineTo(151,1);
+    context.moveTo(151,1); 
+    context.lineTo(299,1);
+    context.moveTo(299,1); 
+    context.lineTo(299,299);
 
-        context.stroke(); // actually draw the line
-    }
+    context.stroke(); // actually draw the line
 
     $("#wave").removeClass("animated left-in");
     $("#wave").addClass("animated left-in");
