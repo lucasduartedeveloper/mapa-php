@@ -124,9 +124,9 @@ function draw() {
         ); 
         context.lineTo(
             (walls[k].x1 < 150 ? 
-             walls[k].x2 -1 : walls[k].x2 +1),
+             walls[k].x2 +1 : walls[k].x2 -1),
             (walls[k].y1 < 150 ? 
-             walls[k].y2 -1 : walls[k].y2 +1),
+             walls[k].y2 +1 : walls[k].y2 -1),
         );
     }
 

@@ -39,7 +39,7 @@
 </canvas>
 
 <p id="version-info">
-     MAZE v0.0.4
+     MAZE v0.0.5
      <br>
      <span id="server-info">
      CONNECTING...
@@ -65,7 +65,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/maze.js?v=4"></script>
+<script src="script/maze.js?v=5"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
