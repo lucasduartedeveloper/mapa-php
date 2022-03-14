@@ -112,20 +112,20 @@ function draw() {
 
     context.beginPath(); // always start a new line with beginPath
     context.strokeStyle = "#fff";
-    context.lineWidth = 2;
+    context.lineWidth = 3;
 
     // start position
     for (var k in walls) {
         context.moveTo(
-            (walls[k].x1 < walls[k].x2 ? 
+            (walls[k].x1 < 150 ? 
              walls[k].x1 +1 : walls[k].x1 -1),
-            (walls[k].y1 < walls[k].y2 ? 
+            (walls[k].y1 < 150 ? 
              walls[k].y1 +1 : walls[k].y1 -1)
         ); 
         context.lineTo(
-            (walls[k].x1 < walls[k].x2 ? 
+            (walls[k].x1 < 150 ? 
              walls[k].x2 -1 : walls[k].x2 +1),
-            (walls[k].y1 < walls[k].y2 ? 
+            (walls[k].y1 < 150 ? 
              walls[k].y2 -1 : walls[k].y2 +1),
         );
     }
