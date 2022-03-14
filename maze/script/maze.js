@@ -94,6 +94,15 @@ var recording = false;
 var recordInterval = false;
 
 // Labirinto
+var walls = [
+    { x1: 0, y1: 300, x2: 150, y2: 300 },
+    { x1: 160, y1: 300, x2: 300, y2: 300 },
+    { x1: 0, y1: 300, x2: 0, y2: 0 },
+    { x1: 0, y1: 0, x2: 140, y2: 0 },
+    { x1: 150, y1: 0, x2: 300, y2: 0 },
+    { x1: 300, y1: 0, x2: 300, y2: 300 }
+];
+
 function draw() {
     var canvas = document.getElementById("maze");
     var context = canvas.getContext( '2d' );
@@ -106,26 +115,16 @@ function draw() {
     context.lineWidth = 2;
 
     // start position
-    context.moveTo(1,299); 
-    context.lineTo(151,299);
-    context.moveTo(151,299); 
-    context.lineTo(151,291);
-    context.moveTo(161,291); 
-    context.lineTo(161,299);
-    context.moveTo(161,299); 
-    context.lineTo(299,299);
-    context.moveTo(1,299); 
-    context.lineTo(1,1);
-    context.moveTo(1,1); 
-    context.lineTo(141,1);
-    context.moveTo(141,1); 
-    context.lineTo(141,9);
-    context.moveTo(151,9); 
-    context.lineTo(151,1);
-    context.moveTo(151,1); 
-    context.lineTo(299,1);
-    context.moveTo(299,1); 
-    context.lineTo(299,299);
+    for (var k in walls) {
+        context.moveTo(
+            walls[k].x1 +1,
+            walls[k].y1 +1
+        ); 
+        context.lineTo(
+            walls[k].x2 -1,
+            walls[k].y2 -1
+        );
+    }
 
     context.stroke(); // actually draw the line
 
@@ -140,7 +139,7 @@ var playerId = new Date().getTime();
 $(document).ready(function() {
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "DARTS" &&
+        if (msg[0] == "MAZE" &&
             playerId != msg[1]) {
         }
     };
