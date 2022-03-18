@@ -30,7 +30,7 @@ html, body {
 }
 
 .stairs {
-     width: 100px;
+     width: 80px;
      height: 320px;
      background-position: left;
      background-size: cover;
@@ -38,7 +38,7 @@ html, body {
 }
 
 .container {
-     width: 300px;
+     width: 240px;
      height: 320px;
      display: flex;
      justify-content: center;
