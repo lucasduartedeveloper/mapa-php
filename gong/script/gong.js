@@ -72,7 +72,7 @@ function desenharWave(array) {
         context.arc(
             500 -array[k].somaPos*5, 
             500 -array[k].somaPos*5, 
-            100 -array[k].somaPos*10, 
+            array[k].somaPos*10, 
             0, 2 * Math.PI);
         context.stroke(); // actually draw the line
     }
