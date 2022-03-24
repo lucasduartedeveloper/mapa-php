@@ -98,7 +98,6 @@ var recordInterval = false;
 // Botão de gravação
 $(document).ready(function() {
     
-
     $("#mic").click(function(e) {
         if (!recording) {
             recording = true;
@@ -138,8 +137,6 @@ $(document).ready(function() {
         };
     });
 });
-
-var frogY = 270;
 
 function frog(audio) {
     var play = false;
