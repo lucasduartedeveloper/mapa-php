@@ -48,7 +48,7 @@ GONG<br>
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v0.0.2
+     v0.0.3
      <br>
      <span id="server-info">
      CONNECTING...
@@ -74,7 +74,7 @@ GONG<br>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/gong.js?v=2"></script>
+<script src="script/gong.js?v=3"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

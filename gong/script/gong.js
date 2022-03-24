@@ -64,8 +64,16 @@ function desenharWave(array) {
             50 - ((array[k].somaNeg*2) - 2)
         );*/
 
-        context.arc(475, 475, 50, 0, 2 * Math.PI);
+        context.arc(450, 450, 100, 0, 2 * Math.PI);
 
+        context.strokeStyle = "#fff";
+        context.lineWidth = 5;
+
+        context.arc(
+            500 -array[k].somaPos*5, 
+            500 -array[k].somaPos*5, 
+            100 -array[k].somaPos*10, 
+            0, 2 * Math.PI);
         context.stroke(); // actually draw the line
     }
 
@@ -143,8 +151,8 @@ $(document).ready(function() {
 function gong(audio) {
     var play = false;
     for (var k in audio) {
-        if (audio[k].somaPos > 5 ||
-             audio[k].somaNeg < -5) {
+        if (audio[k].somaPos > 10 ||
+             audio[k].somaNeg < -10) {
              play = true;
         }
     }
