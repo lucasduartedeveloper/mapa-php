@@ -49,20 +49,22 @@ function desenharWave(array) {
     var context = canvas.getContext( '2d' );
 
     canvas.width = 1000;
-    canvas.height = 100;
+    canvas.height = 1000;
 
     for (var k = 0; k < array.length; k++) {
         context.beginPath(); // always start a new line with beginPath
-        context.strokeStyle = "#fff";
+        context.strokeStyle = "#f00";
         context.lineWidth = 5;
 
-        // start position
+        /*// start position
         context.moveTo(2.5+((k * 2) * 5), 
             50 - ((array[k].somaPos*2) + 1)
         ); 
         context.lineTo(2.5+((k *2) * 5), 
             50 - ((array[k].somaNeg*2) - 2)
-        );
+        );*/
+
+        context.arc(500, 500, 50, 2 * Math.PI);
 
         context.stroke(); // actually draw the line
     }
@@ -138,7 +140,7 @@ $(document).ready(function() {
     });
 });
 
-function frog(audio) {
+function gong(audio) {
     var play = false;
     for (var k in audio) {
         if (audio[k].somaPos > 5 ||
@@ -171,7 +173,7 @@ function saveRecording() {
 
                 desenharWave(audio);
                 recordAudio();
-                frog(audio);
+                gong(audio);
             };
         };
     });

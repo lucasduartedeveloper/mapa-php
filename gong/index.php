@@ -37,9 +37,6 @@ GONG<br>
 </canvas>
 </p>
 
-<div id="river">
-</div>
-
 <div>
     <button id="mic" type="button" class="btn">
         <i class="bi bi-mic-mute-fill"></i>
@@ -51,7 +48,7 @@ GONG<br>
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v0.0.0
+     v0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -77,7 +74,7 @@ GONG<br>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/gong.js?v=0"></script>
+<script src="script/gong.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
