@@ -101,7 +101,7 @@ var johrei = [
 ];
 
 $(document).ready(function() {
-    $.getJSON("ajax/balance.php", function(data) { 
+    $.getJSON("ajax/johrei.php", function(data) { 
         johrei = data;
         console.log(johrei);
     });
