@@ -98,6 +98,7 @@ var playerId = new Date().getTime();
 var counter = 0;
 
 $(document).ready(function() {
+    
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);
