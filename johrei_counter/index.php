@@ -39,7 +39,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v0.0.1
+     JOHREI COUNTER v0.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -65,7 +65,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=1"></script>
+<script src="script/johrei_counter.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
