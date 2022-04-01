@@ -31,6 +31,16 @@
 </head>
 <body>
 
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    01/04/2022
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">31/03/2022</a>
+    <a class="dropdown-item" href="#">30/03/2022</a>
+    <a class="dropdown-item" href="#">29/03/2022</a>
+  </div>
+</div>
 <p id="title">
      JOHREI
 </p>
@@ -45,7 +55,6 @@
      <i class="bi bi-person-dash-fill"></i>
      Desapareu
 </button>
-
 
 <p id="version-info">
      JOHREI COUNTER v2.0.3
