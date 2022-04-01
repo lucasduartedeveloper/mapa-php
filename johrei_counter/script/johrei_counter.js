@@ -100,9 +100,11 @@ var counter = 0;
 $(document).ready(function() {
     $("#plus").click(function() {
         counter += 1;
+        $("#counter").text(counter);
     });
     $("#minus").click(function() {
         counter -= 1;
+        $("#counter").text(counter);
     });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
