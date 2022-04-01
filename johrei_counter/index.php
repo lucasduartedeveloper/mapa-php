@@ -37,12 +37,12 @@
 <div>
      <span id="counter">0</span>
 </div>
-<button>
+<button type="button" class="btn btn-warning">
      <i class="bi bi-person-plus-fill"></i>
      Concluído
 </button>
-<button>
-     <i class="bi bi-person-minus-fill"></i>
+<button type="button" class="btn btn-warning">
+     <i class="bi bi-person-dash-fill"></i>
      Desapareu
 </button>
 
