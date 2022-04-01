@@ -95,8 +95,15 @@ var recordInterval = false;
 
 // Saldo
 var playerId = new Date().getTime();
+var counter = 0;
 
 $(document).ready(function() {
+    $("#plus").click(function() {
+        counter += 1;
+    });
+    $("#minus").click(function() {
+        counter -= 1;
+    });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "JOHREI" &&
