@@ -32,13 +32,10 @@
 <body>
 
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    01/04/2022
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="johrei-data" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    CARREGANDO...
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">31/03/2022</a>
-    <a class="dropdown-item" href="#">30/03/2022</a>
-    <a class="dropdown-item" href="#">29/03/2022</a>
+  <div id="johrei-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   </div>
 </div>
 <p id="title">
@@ -57,7 +54,7 @@
 </button>
 
 <p id="version-info">
-     JOHREI COUNTER v2.0.5
+     JOHREI COUNTER v2.0.6
      <br>
      <span id="server-info">
      CONNECTING...
@@ -83,7 +80,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=5"></script>
+<script src="script/johrei_counter.js?v=6"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

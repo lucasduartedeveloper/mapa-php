@@ -97,6 +97,7 @@ var recordInterval = false;
 var playerId = new Date().getTime();
 var counter = 0;
 
+var id = 0;
 var johrei = [
 ];
 
@@ -104,6 +105,11 @@ $(document).ready(function() {
     $.getJSON("ajax/johrei.php", function(data) { 
         johrei = data;
         console.log(johrei);
+        var html ="";
+        for (var k in johrei) {
+             html += "<a class=\"dropdown-item\" href=\"#\">"+johrei[k].data+"</a>";
+        }
+        $("#johrei-menu").html(html);
     });
     $("#plus").click(function() {
         counter += 1;
