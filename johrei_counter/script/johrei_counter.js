@@ -97,8 +97,14 @@ var recordInterval = false;
 var playerId = new Date().getTime();
 var counter = 0;
 
+var johrei = [
+];
+
 $(document).ready(function() {
-    
+    $.getJSON("ajax/balance.php", function(data) { 
+        johrei = data;
+        console.log(data);
+    });
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);

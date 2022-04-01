@@ -2,11 +2,12 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["balance"])) {
+  if (isset($_POST["data"])) {
 
-    $balance = htmlspecialchars($_POST["balance"]);
+    $quantidade = htmlspecialchars($_POST["quantidade"]);
+    $data = htmlspecialchars($_POST["data"]);
 
-    $sql = "UPDATE param SET valor='".$balance."' WHERE nome='balance';";
+    $sql = "UPDATE param SET quantidade='".$quantidade."' WHERE data=".$data;
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -14,7 +15,7 @@ try {
     echo $sql;
   }
   else {
-    $sql = "SELECT * FROM param WHERE nome='balance';";
+    $sql = "SELECT * FROM johrei_counter";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
