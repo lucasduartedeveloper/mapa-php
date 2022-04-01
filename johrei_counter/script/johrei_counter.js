@@ -99,7 +99,7 @@ var playerId = new Date().getTime();
 $(document).ready(function() {
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "MAZE" &&
+        if (msg[0] == "JOHREI" &&
             playerId != msg[1]) {
         }
     };

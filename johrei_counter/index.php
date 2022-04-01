@@ -32,11 +32,20 @@
 <body>
 
 <p id="title">
+     JOHREI
 </p>
-
 <div>
      <span id="counter">0</span>
 </div>
+<button>
+     <i class="bi bi-person-plus-fill"></i>
+     Concluído
+</button>
+<button>
+     <i class="bi bi-person-minus-fill"></i>
+     Desapareu
+</button>
+
 
 <p id="version-info">
      JOHREI COUNTER v1.0.2
