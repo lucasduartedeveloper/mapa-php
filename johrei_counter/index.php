@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=0">
+<link rel="stylesheet" href="css/style.css?v=1">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -39,7 +39,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v0.0.2
+     JOHREI COUNTER v1.0.2
      <br>
      <span id="server-info">
      CONNECTING...
