@@ -103,7 +103,7 @@ var johrei = [
 $(document).ready(function() {
     $.getJSON("ajax/balance.php", function(data) { 
         johrei = data;
-        console.log(data);
+        console.log(johrei);
     });
     $("#plus").click(function() {
         counter += 1;
