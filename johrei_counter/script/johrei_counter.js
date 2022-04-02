@@ -127,7 +127,7 @@ function get_johrei() {
         console.log(johrei);
         var html ="";
         for (var k in johrei) {
-             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | "+johrei[k].quantidade+"</a>";
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd:  "+johrei[k].quantidade+"</a>";
         }
         $("#johrei-menu").html(html);
         set_data(id);
@@ -152,7 +152,7 @@ function update_johrei(quantidade) {
                 console.log(data);
                 var html ="";
                 for (var k in johrei) {
-                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | "+johrei[k].quantidade+"</a>";
+                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd: "+johrei[k].quantidade+"</a>";
                 }
                $("#johrei-menu").html(html);
     });
