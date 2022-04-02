@@ -117,6 +117,7 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "JOHREI" &&
             playerId != msg[1]) {
+            get_johrei();
         }
     };
 });
@@ -155,6 +156,7 @@ function update_johrei(quantidade) {
                     html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd: "+johrei[k].quantidade+"</a>";
                 }
                $("#johrei-menu").html(html);
+               ws.send("JOHREI|"+playerId+"|UPDATE");
     });
 }
 
