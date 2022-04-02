@@ -37,6 +37,11 @@ html, body {
      flex-direction: row;
 }
 
+.line div,
+.line btn {
+     margin: 10px;
+}
+
 #counter {
    font-size: 150px;
 }
