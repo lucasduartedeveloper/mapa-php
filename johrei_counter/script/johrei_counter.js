@@ -130,7 +130,7 @@ $(document).ready(function() {
 });
 
 function johrei(novo_id) {
-    console.log(johrei[id]);
+    console.log(johrei[novo_id]);
     id = novo_id;
     $("#johrei-data").text(johrei[id].data);
 }
@@ -139,8 +139,8 @@ function update_johrei(id, quantidade) {
     console.log(johrei[k]);
     johrei[k].quantidade = quantidade;
     $.post("ajax/johrei.php", {
-          data: johrei[k].data,
-          quantidade: johrei[k].quantidade
+          data: johrei[id].data,
+          quantidade: johrei[id].quantidade
           }).done(function(data) {
                 console.log(data);
     });
