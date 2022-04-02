@@ -38,6 +38,15 @@
   <div id="johrei-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   </div>
 </div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    CARREGANDO...
+  </button>
+  <div id="" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <a class="dropdown-item" href="#">Evelyn</a>
+  <a class="dropdown-item" href="#">Carol</a>
+  </div>
+</div>
 <p id="title">
      JOHREI
 </p>
