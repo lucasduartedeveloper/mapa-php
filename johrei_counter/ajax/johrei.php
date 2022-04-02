@@ -7,7 +7,7 @@ try {
     $quantidade = htmlspecialchars($_POST["quantidade"]);
     $data = htmlspecialchars($_POST["data"]);
 
-    $sql = "UPDATE param SET quantidade=".$quantidade." WHERE data='".$data."'";
+    $sql = "UPDATE johrei_counter SET quantidade=".$quantidade." WHERE data='".$data."'";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
