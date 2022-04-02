@@ -37,8 +37,7 @@ html, body {
      flex-direction: row;
 }
 
-.line div,
-.line button {
+.line div {
      margin: 10px;
 }
 
