@@ -102,16 +102,7 @@ var johrei = [
 ];
 
 $(document).ready(function() {
-    $.getJSON("ajax/johrei.php", function(data) { 
-        johrei = data;
-        console.log(johrei);
-        var html ="";
-        for (var k in johrei) {
-             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | "+johrei[k].quantidade+"</a>";
-        }
-        $("#johrei-menu").html(html);
-        set_data(id);
-    });
+    get_johrei();
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);
@@ -130,6 +121,19 @@ $(document).ready(function() {
     };
 });
 
+function get_johrei() {
+    $.getJSON("ajax/johrei.php", function(data) { 
+        johrei = data;
+        console.log(johrei);
+        var html ="";
+        for (var k in johrei) {
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | "+johrei[k].quantidade+"</a>";
+        }
+        $("#johrei-menu").html(html);
+        set_data(id);
+    });
+}
+
 function set_data(novo_id) {
     console.log(johrei[novo_id]);
     id = novo_id;
@@ -146,6 +150,11 @@ function update_johrei(quantidade) {
           quantidade: johrei[id].quantidade
           }).done(function(data) {
                 console.log(data);
+                var html ="";
+                for (var k in johrei) {
+                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | "+johrei[k].quantidade+"</a>";
+                }
+               $("#johrei-menu").html(html);
     });
 }
 
