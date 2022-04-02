@@ -58,18 +58,18 @@
 </div>
 
 <div class="line">
-<button id="plus" type="button" class="btn btn-warning">
-     <i class="bi bi-person-plus-fill"></i>
-     Concluído
-</button>
 <button id="minus" type="button" class="btn btn-warning">
      <i class="bi bi-person-dash-fill"></i>
      Desapareu
 </button>
+<button id="plus" type="button" class="btn btn-warning">
+     <i class="bi bi-person-plus-fill"></i>
+     Concluído
+</button>
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v4.0.20
+     JOHREI COUNTER v5.0.20
      <br>
      <span id="server-info">
      CONNECTING...
