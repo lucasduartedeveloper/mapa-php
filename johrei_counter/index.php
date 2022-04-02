@@ -40,12 +40,17 @@
   </div>
 </div>
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="nome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     NOMES
   </button>
   <div id="" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <a class="dropdown-item" href="#">Evelyn</a>
-  <a class="dropdown-item" href="#">Carol</a>
+  <a class="dropdown-item" click="set_nome(0)" href="#">Evelyn</a>
+  <a class="dropdown-item" click="set_nome(1)" href="#">Carol</a>
+  <a class="dropdown-item" click="set_nome(2)" href="#">Cida</a>
+  <a class="dropdown-item" click="set_nome(3)" href="#">Jubeci</a>
+  <a class="dropdown-item" click="set_nome(4)" href="#">Afonso</a>
+  <a class="dropdown-item" click="set_nome(5)" href="#">Luciano</a>
+  <a class="dropdown-item" click="set_nome(6)" href="#">Stefany</a>
   </div>
 </div>
 </div>
@@ -69,7 +74,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v7.0.20
+     JOHREI COUNTER v7.0.21
      <br>
      <span id="server-info">
      CONNECTING...
@@ -95,7 +100,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=20"></script>
+<script src="script/johrei_counter.js?v=21"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

@@ -101,6 +101,17 @@ var id = 0;
 var johrei = [
 ];
 
+var id_nome = 0;
+var nomes = [
+    Evelyn
+    Carol
+    Cida
+    Jubeci
+    Afonso
+    Luciano
+    Stefany
+];
+
 $(document).ready(function() {
     get_johrei();
     $("#plus").click(function() {
@@ -141,6 +152,12 @@ function set_data(novo_id) {
     $("#johrei-data").text(johrei[id].data);
     counter = johrei[id].quantidade;
     $("#counter").text(counter);
+}
+
+function set_nome(novo_id) {
+    console.log(nomes[novo_id]);
+    id_nome = novo_id;
+    $("#nome").text(nomes[id]);
 }
 
 function update_johrei(quantidade) {
