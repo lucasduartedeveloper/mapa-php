@@ -114,10 +114,12 @@ $(document).ready(function() {
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);
+        update_johrei(id, counter);
     });
     $("#minus").click(function() {
         counter -= 1;
         $("#counter").text(counter);
+        update_johrei(id, counter);
     });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
@@ -127,8 +129,21 @@ $(document).ready(function() {
     };
 });
 
-function johrei(k) {
+function johrei(novo_id) {
+    console.log(johrei[id]);
+    id = novo_id;
+    $("#johrei-data").text(johrei[id].data);
+}
+
+function update_johrei(id, quantidade) {
     console.log(johrei[k]);
+    johrei[k].quantidade = quantidade;
+    $.post("ajax/johrei.php", {
+          data: johrei[k].data,
+          quantidade: johrei[k].quantidade
+          }).done(function(data) {
+                console.log(data);
+    });
 }
 
 if ('DeviceMotionEvent' in window) {
