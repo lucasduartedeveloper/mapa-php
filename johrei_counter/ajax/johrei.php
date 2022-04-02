@@ -15,7 +15,7 @@ try {
     echo $sql;
   }
   else {
-    $sql = "SELECT * FROM johrei_counter";
+    $sql = "SELECT * FROM johrei_counter ORDER BY id DESC";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
