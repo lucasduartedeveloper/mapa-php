@@ -107,9 +107,10 @@ $(document).ready(function() {
         console.log(johrei);
         var html ="";
         for (var k in johrei) {
-             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+"</a>";
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | "+johrei[k].quantidade+"</a>";
         }
         $("#johrei-menu").html(html);
+        set_data(id);
     });
     $("#plus").click(function() {
         counter += 1;
@@ -133,6 +134,8 @@ function set_data(novo_id) {
     console.log(johrei[novo_id]);
     id = novo_id;
     $("#johrei-data").text(johrei[id].data);
+    counter = johrei[id].quantidade;
+    $("#counter").text(counter);
 }
 
 function update_johrei(quantidade) {
