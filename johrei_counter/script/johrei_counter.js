@@ -114,12 +114,12 @@ $(document).ready(function() {
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);
-        update_johrei(id, counter);
+        update_johrei(counter);
     });
     $("#minus").click(function() {
         counter -= 1;
         $("#counter").text(counter);
-        update_johrei(id, counter);
+        update_johrei(counter);
     });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
@@ -135,9 +135,9 @@ function johrei(novo_id) {
     $("#johrei-data").text(johrei[id].data);
 }
 
-function update_johrei(id, quantidade) {
-    console.log(johrei[k]);
-    johrei[k].quantidade = quantidade;
+function update_johrei(quantidade) {
+    console.log(johrei[id]);
+    johrei[id].quantidade = quantidade;
     $.post("ajax/johrei.php", {
           data: johrei[id].data,
           quantidade: johrei[id].quantidade
