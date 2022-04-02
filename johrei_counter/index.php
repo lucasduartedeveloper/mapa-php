@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -31,6 +31,7 @@
 </head>
 <body>
 
+<div class="line">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="johrei-data" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     CARREGANDO...
@@ -47,12 +48,16 @@
   <a class="dropdown-item" href="#">Carol</a>
   </div>
 </div>
+</div>
+
 <p id="title">
      JOHREI
 </p>
 <div>
      <span id="counter">0</span>
 </div>
+
+<div class="line">
 <button id="plus" type="button" class="btn btn-warning">
      <i class="bi bi-person-plus-fill"></i>
      Concluído
@@ -61,9 +66,10 @@
      <i class="bi bi-person-dash-fill"></i>
      Desapareu
 </button>
+</div>
 
 <p id="version-info">
-     JOHREI COUNTER v2.0.19
+     JOHREI COUNTER v3.0.20
      <br>
      <span id="server-info">
      CONNECTING...
@@ -89,7 +95,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=19"></script>
+<script src="script/johrei_counter.js?v=20"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

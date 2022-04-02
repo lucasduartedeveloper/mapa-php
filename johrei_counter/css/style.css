@@ -29,6 +29,14 @@ html, body {
      text-align: center;
 }
 
+.line {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+}
+
 #counter {
    font-size: 150px;
 }
