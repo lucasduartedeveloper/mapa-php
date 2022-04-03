@@ -2,12 +2,13 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["data"])) {
+  if (isset($_POST["data_hora"])) {
 
-    $quantidade = htmlspecialchars($_POST["quantidade"]);
-    $data = htmlspecialchars($_POST["data"]);
+    $data_hora = htmlspecialchars($_POST["data_hora"]);
+    $nome = htmlspecialchars($_POST["nome"]);
+    $foto = htmlspecialchars($_POST["foto"]);
 
-    $sql = "INSERT INTO leaf_counter (data_hora, foto) quantidade=".$quantidade." WHERE data='".$data."'";
+    $sql = "INSERT INTO leaf_counter (data_hora, nome,foto) VALUES ('".$data_hora."','".$nome."','".$foto."'");
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

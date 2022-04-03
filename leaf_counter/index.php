@@ -49,13 +49,9 @@
 </div>
 
 <div class="line">
-<button id="minus" type="button" class="btn btn-warning">
-     <i class="bi bi-person-dash-fill"></i>
-     Desapareu
-</button>
-<button id="plus" type="button" class="btn btn-warning">
-     <i class="bi bi-person-plus-fill"></i>
-     Concluído
+<button id="plus" type="button" class="btn btn-success">
+    Incluir
+    <i class="bi bi-plus-lg"></i>
 </button>
 </div>
 

@@ -134,7 +134,7 @@ function get_leaf() {
         console.log(johrei);
         var html ="";
         for (var k in johrei) {
-             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd:  "+johrei[k].quantidade+"</a>";
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+leaf[k].data_hora+" | qtd:  "+leaf[k].quantidade+"</a>";
         }
         $("#leaf-menu").html(html);
         set_data(id);
@@ -159,7 +159,7 @@ function update_leaf(quantidade) {
                 console.log(data);
                 var html ="";
                 for (var k in johrei) {
-                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd: "+johrei[k].quantidade+"</a>";
+                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data_hora+" | qtd: "+johrei[k].quantidade+"</a>";
                 }
                $("#johrei-menu").html(html);
                ws.send("LEAF|"+playerId+"|UPDATE");
