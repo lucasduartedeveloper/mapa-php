@@ -145,7 +145,7 @@ function start_timer() {
     timer = 20;
     interval = setInterval(function() {
         timer -= 1;
-        $("#timer").text(timer);
+        $("#timer").text(timer + "○");
         if (timer == 0) {
             $("#timer").text("PRONTO");
             notification.play();
