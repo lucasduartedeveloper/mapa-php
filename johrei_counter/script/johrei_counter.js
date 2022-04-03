@@ -146,6 +146,7 @@ function start_timer() {
         timer -= 1;
         $("#timer").text(timer);
         if (timer == 0) {
+            $("#timer").text("PRONTO");
             notification.play();
             clearInterval(interval);
         }
