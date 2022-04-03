@@ -80,7 +80,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v9.0.26
+     JOHREI COUNTER v9.0.27
      <br>
      <span id="server-info">
      CONNECTING...
