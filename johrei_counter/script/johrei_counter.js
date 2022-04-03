@@ -103,13 +103,13 @@ var johrei = [
 
 var id_nome = 0;
 var nomes = [
-    Evelyn,
-    Carol,
-    Cida,
-    Jubeci,
-    Afonso,
-    Luciano,
-    Stefany
+    "Evelyn",
+    "Carol",
+    "Cida",
+    "Jubeci",
+    "Afonso",
+    "Luciano",
+    "Stefany"
 ];
 
 $(document).ready(function() {
