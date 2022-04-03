@@ -109,7 +109,8 @@ var nomes = [
     "Jubeci",
     "Afonso",
     "Luciano",
-    "Stefany"
+    "Stefany",
+    "Judith"
 ];
 
 $(document).ready(function() {
@@ -131,7 +132,25 @@ $(document).ready(function() {
             get_johrei();
         }
     };
+   $("#timer").click(function() {
+        start_timer();
+   });
 });
+
+var timer = 20;
+var interval = null;
+
+function start_timer() {
+    timer = 20;
+    interval = setInterval(function() {
+        timer -= 1;
+        $("#timer").text(timer);
+        if (timer == 0) {
+            notification.play();
+            clearInterval(interval);
+        }
+    }, 3140);    
+}
 
 function get_johrei() {
     $.getJSON("ajax/johrei.php", function(data) { 

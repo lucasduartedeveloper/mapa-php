@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=9">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -30,6 +30,10 @@
 <title></title>
 </head>
 <body>
+
+<div>
+     <span id="timer">20</span>
+</div>
 
 <div class="line">
 <div class="dropdown">
@@ -51,6 +55,7 @@
   <a class="dropdown-item" onclick="set_nome(4)" href="#">Afonso</a>
   <a class="dropdown-item" onclick="set_nome(5)" href="#">Luciano</a>
   <a class="dropdown-item" onclick="set_nome(6)" href="#">Stefany</a>
+  <a class="dropdown-item" onclick="set_nome(7)" href="#">Judith</a>
   </div>
 </div>
 </div>
@@ -74,7 +79,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v7.0.23
+     JOHREI COUNTER v9.0.23
      <br>
      <span id="server-info">
      CONNECTING...
