@@ -145,13 +145,13 @@ function start_timer() {
     timer = 20;
     interval = setInterval(function() {
         timer -= 1;
-        $("#timer").text(timer + "○");
+        $("#timer").text(timer);
         if (timer == 0) {
             $("#timer").text("PRONTO");
             notification.play();
             clearInterval(interval);
         }
-    }, 3140);    
+    }, 3141.59265359);    
 }
 
 function get_johrei() {
