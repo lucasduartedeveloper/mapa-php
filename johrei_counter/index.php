@@ -44,13 +44,13 @@
     NOMES
   </button>
   <div id="" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <a class="dropdown-item" click="set_nome(0)" href="#">Evelyn</a>
-  <a class="dropdown-item" click="set_nome(1)" href="#">Carol</a>
-  <a class="dropdown-item" click="set_nome(2)" href="#">Cida</a>
-  <a class="dropdown-item" click="set_nome(3)" href="#">Jubeci</a>
-  <a class="dropdown-item" click="set_nome(4)" href="#">Afonso</a>
-  <a class="dropdown-item" click="set_nome(5)" href="#">Luciano</a>
-  <a class="dropdown-item" click="set_nome(6)" href="#">Stefany</a>
+  <a class="dropdown-item" onclick="set_nome(0)" href="#">Evelyn</a>
+  <a class="dropdown-item" onclick="set_nome(1)" href="#">Carol</a>
+  <a class="dropdown-item" onclick="set_nome(2)" href="#">Cida</a>
+  <a class="dropdown-item" onclick="set_nome(3)" href="#">Jubeci</a>
+  <a class="dropdown-item" onclick="set_nome(4)" href="#">Afonso</a>
+  <a class="dropdown-item" onclick="set_nome(5)" href="#">Luciano</a>
+  <a class="dropdown-item" onclick="set_nome(6)" href="#">Stefany</a>
   </div>
 </div>
 </div>

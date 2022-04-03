@@ -157,7 +157,7 @@ function set_data(novo_id) {
 function set_nome(novo_id) {
     console.log(nomes[novo_id]);
     id_nome = novo_id;
-    $("#nome").text(nomes[id]);
+    $("#nome").text(nomes[novo_id]);
 }
 
 function update_johrei(quantidade) {
