@@ -32,7 +32,7 @@
 <body>
 
 <div>
-     <span id="timer">20</span>○
+     <span id="timer">20</span>
 </div>
 
 <div class="line">
