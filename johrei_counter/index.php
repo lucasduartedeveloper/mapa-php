@@ -65,7 +65,7 @@
      JOHREI
 </p>
 <div>
-     <span id="counter">0</span>
+     <span id="counter">0</span>○
 </div>
 
 <div class="line">
