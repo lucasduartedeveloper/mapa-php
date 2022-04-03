@@ -56,6 +56,7 @@
   <a class="dropdown-item" onclick="set_nome(5)" href="#">Luciano</a>
   <a class="dropdown-item" onclick="set_nome(6)" href="#">Stefany</a>
   <a class="dropdown-item" onclick="set_nome(7)" href="#">Judith</a>
+  <a class="dropdown-item" onclick="set_nome(8)" href="#">EXIT</a>
   </div>
 </div>
 </div>
@@ -105,7 +106,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=26"></script>
+<script src="script/johrei_counter.js?v=27"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

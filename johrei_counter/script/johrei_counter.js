@@ -110,7 +110,8 @@ var nomes = [
     "Afonso",
     "Luciano",
     "Stefany",
-    "Judith"
+    "Judith",
+    "EXIT"
 ];
 
 $(document).ready(function() {
