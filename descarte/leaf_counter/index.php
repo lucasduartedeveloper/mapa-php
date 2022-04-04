@@ -50,8 +50,8 @@
 
 <div class="line">
 <button id="plus" type="button" class="btn btn-success">
-    Incluir
     <i class="bi bi-plus-lg"></i>
+    Incluir
 </button>
 </div>
 

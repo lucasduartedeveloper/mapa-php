@@ -120,13 +120,10 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "LEAF" &&
             playerId != msg[1]) {
-            get_johrei();
+            get_leaf();
         }
     };
 });
-
-var timer = 20;
-var interval = null;
 
 function get_leaf() {
     $.getJSON("ajax/leaf.php", function(data) { 
