@@ -111,6 +111,10 @@ var nomes = [
     "Luciano",
     "Stefany",
     "Judith",
+    "O cara do Arrow",
+    "Escada",
+    "Léo",
+    "Cantora",
     "EXIT"
 ];
 
