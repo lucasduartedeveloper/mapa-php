@@ -56,7 +56,12 @@
   <a class="dropdown-item" onclick="set_nome(5)" href="#">Luciano</a>
   <a class="dropdown-item" onclick="set_nome(6)" href="#">Stefany</a>
   <a class="dropdown-item" onclick="set_nome(7)" href="#">Judith</a>
-  <a class="dropdown-item" onclick="set_nome(8)" href="#">EXIT</a>
+  <a class="dropdown-item" onclick="set_nome(8)" href="#">O cara do Arrow</a>
+  <a class="dropdown-item" onclick="set_nome(9)" href="#">Escada</a>
+  <a class="dropdown-item" onclick="set_nome(10)" href="#">Léo</a>
+  <a class="dropdown-item" onclick="set_nome(11)" href="#">Cantora dos papel</a>
+  <a class="dropdown-item" onclick="set_nome(12)"
+ href="#">EXIT</a>
   </div>
 </div>
 </div>
