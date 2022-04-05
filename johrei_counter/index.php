@@ -56,7 +56,7 @@
   <a class="dropdown-item" onclick="set_nome(5)" href="#">Luciano</a>
   <a class="dropdown-item" onclick="set_nome(6)" href="#">Stefany</a>
   <a class="dropdown-item" onclick="set_nome(7)" href="#">Judith</a>
-  <a class="dropdown-item" onclick="set_nome(8)" href="#">O cara do Arrow</a>
+  <a class="dropdown-item" onclick="set_nome(8)" href="#">AfonsoLuciano SSJ3</a>
   <a class="dropdown-item" onclick="set_nome(9)" href="#">Escada</a>
   <a class="dropdown-item" onclick="set_nome(10)" href="#">Léo</a>
   <a class="dropdown-item" onclick="set_nome(11)" href="#">Cantora dos papel</a>
@@ -85,7 +85,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v11.0.30
+     JOHREI COUNTER v11.0.31
      <br>
      <span id="server-info">
      CONNECTING...
@@ -111,7 +111,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=30"></script>
+<script src="script/johrei_counter.js?v=31"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
