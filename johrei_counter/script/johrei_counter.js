@@ -212,36 +212,24 @@ function set_nome(novo_id) {
 }
 
 function add_johrei() {
-    console.log(johrei[id]);
-    johrei[id].quantidade = quantidade;
+    console.log("ADD " + johrei[id] + nomes[id_nome]);
     $.post("ajax/johrei.php", {
-          data: johrei[id].data,
-          quantidade: johrei[id].quantidade,
+          data: johrei[id],
           id_nome: id_nome
           }).done(function(data) {
-                console.log(data);
-                var html ="";
-                for (var k in johrei) {
-                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd: "+johrei[k].quantidade+"</a>";
-                }
-               $("#johrei-menu").html(html);
+               console.log(data);
                ws.send("JOHREI|"+playerId+"|UPDATE");
     });
 }
 
-function delete_johrei(quantidade) {
-    johrei[id].quantidade = quantidade;
+function delete_johrei() {
+    console.log("DEL " + johrei[id] + nomes[id_nome]);
     $.ajax("ajax/johrei.php?id_nome="+id_nome+"&data=", {
           data: johrei[id].data,
           quantidade: johrei[id].quantidade,
           id_nome: id_nome
           }).done(function(data) {
-                console.log(data);
-                var html ="";
-                for (var k in johrei) {
-                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd: "+johrei[k].quantidade+"</a>";
-                }
-               $("#johrei-menu").html(html);
+               console.log(data);
                ws.send("JOHREI|"+playerId+"|UPDATE");
     });
 }
