@@ -132,6 +132,7 @@ var nomes = [
 ];
 
 $(document).ready(function() {
+    get_nomes();
     get_johrei();
     $("#plus").click(function() {
         counter += 1;
@@ -207,7 +208,7 @@ function set_nome(novo_id) {
     $("#nome").text(nomes[novo_id]);
 }
 
-function add_johrei(quantidade) {
+function add_johrei() {
     console.log(johrei[id]);
     johrei[id].quantidade = quantidade;
     $.post("ajax/johrei.php", {

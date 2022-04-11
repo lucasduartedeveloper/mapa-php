@@ -75,7 +75,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v11.0.32
+     JOHREI COUNTER v11.0.32 *bugada
      <br>
      <span id="server-info">
      CONNECTING...
