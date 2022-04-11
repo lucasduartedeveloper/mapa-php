@@ -132,6 +132,7 @@ var nomes = [
 ];
 
 $(document).ready(function() {
+    get_datas();
     get_nomes();
     get_johrei();
     $("#plus").click(function() {
@@ -173,16 +174,19 @@ function start_timer() {
 }
 
 function get_johrei() {
-    $.getJSON("ajax/johrei.php?id_nome="+id_nome, function(data) { 
+    $.getJSON("ajax/johrei.php?data="+johrei[k]+"&id_nome="+id_nome, function(data) { 
         johrei = data;
         console.log(johrei);
-        var html ="";
-        for (var k in johrei) {
-             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd:  "+johrei[k].quantidade+"</a>";
-        }
-        $("#johrei-menu").html(html);
-        set_data(id);
     });
+}
+
+function get_datas() {
+     var html ="";
+     for (var k in johrei) {
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k]+"</a>";
+     }
+     $("#johrei-menu").html(html);
+     set_data(id);
 }
 
 function get_nomes() {
@@ -228,7 +232,7 @@ function add_johrei() {
 
 function delete_johrei(quantidade) {
     johrei[id].quantidade = quantidade;
-    $.ajax("ajax/johrei.php?id_nome="+, {
+    $.ajax("ajax/johrei.php?id_nome="+id_nome+"&data=", {
           data: johrei[id].data,
           quantidade: johrei[id].quantidade,
           id_nome: id_nome
