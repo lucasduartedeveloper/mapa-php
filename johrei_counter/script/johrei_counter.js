@@ -134,7 +134,6 @@ var nomes = [
 $(document).ready(function() {
     get_datas();
     get_nomes();
-    get_johrei();
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);
@@ -201,15 +200,15 @@ function get_nomes() {
 function set_data(novo_id) {
     console.log(johrei[novo_id]);
     id = novo_id;
-    $("#johrei-data").text(johrei[id].data);
-    counter = johrei[id].quantidade;
-    $("#counter").text(counter);
+    $("#johrei-data").text(johrei[id]);
+    get_johrei();
 }
 
 function set_nome(novo_id) {
     console.log(nomes[novo_id]);
     id_nome = novo_id;
     $("#nome").text(nomes[novo_id]);
+    get_johrei();
 }
 
 function add_johrei() {
