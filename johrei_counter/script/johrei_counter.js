@@ -188,7 +188,7 @@ function get_johrei() {
 function get_nomes() {
     var html ="";
     for (var k in nomes) {
-             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_nome("+k+")'>"+nome[k]+"</a>";
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_nome("+k+")'>"+nomes[k]+"</a>";
     }
     $("#nome-menu").html(html);
     set_nome(id_nome);
