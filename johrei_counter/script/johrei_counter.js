@@ -173,7 +173,7 @@ function start_timer() {
 }
 
 function get_johrei() {
-    $.getJSON("ajax/johrei.php?data="+johrei[k]+"&id_nome="+id_nome, function(data) { 
+    $.getJSON("ajax/johrei.php?data="+johrei[id]+"&id_nome="+id_nome, function(data) { 
         johrei = data;
         console.log(johrei);
     });
