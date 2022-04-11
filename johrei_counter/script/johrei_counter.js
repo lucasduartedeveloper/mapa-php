@@ -99,14 +99,14 @@ var counter = 0;
 
 var id = 0;
 var johrei = [
-    "29/03/2022",
-    "30/03/2022",
-    "31/03/2022",
-    "02/04/2022",
-    "04/04/2022",
-    "09/04/2022",
-    "11/04/2022",
-    "18/04/2022"
+    "29/03/2022, Ter",
+    "30/03/2022, Qua",
+    "31/03/2022, Qui",
+    "02/04/2022, Sáb",
+    "04/04/2022, Seg",
+    "09/04/2022, Sáb",
+    "11/04/2022, Seg",
+    "18/04/2022, Seg"
 ];
 
 var id_nome = 0;
@@ -215,7 +215,7 @@ function set_nome(novo_id) {
 function add_johrei() {
     console.log("ADD " + johrei[id] + " " + nomes[id_nome]);
     $.post("ajax/johrei.php", {
-          data: johrei[id],
+          data: johrei[id].substring(10),
           id_nome: id_nome
           }).done(function(data) {
                console.log(data);
@@ -226,7 +226,7 @@ function add_johrei() {
 function delete_johrei() {
     console.log("DEL " + johrei[id] + " " +nomes[id_nome]);
     $.getJSON("ajax/johrei.php?data="+johrei[id]+"&id_nome="+id_nome+"&delete=true", {
-          data: johrei[id],
+          data: johrei[id].substring(10),
           id_nome: id_nome
           }).done(function(data) {
                console.log(data);
