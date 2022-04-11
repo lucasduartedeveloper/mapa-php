@@ -14,7 +14,7 @@ try {
 
     echo $sql;
   }
-  else if (isset($_GET["id_nome"])) {
+  else if (!isset($_GET["delete"])) {
 
     $data = htmlspecialchars($_GET["data"]);
     $id_nome = htmlspecialchars($_GET["id_nome"]);
