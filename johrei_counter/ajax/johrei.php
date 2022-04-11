@@ -19,7 +19,7 @@ try {
     $data = htmlspecialchars($_GET["data"]);
     $id_nome = htmlspecialchars($_GET["id_nome"]);
 
-    $sql = "SELECT count(*) FROM johrei_counter_nome GROUP BY id_nome WHERE data='".$data."' AND id_nome=".$id_nome.";";
+    $sql = "SELECT count(*) FROM johrei_counter_nome WHERE data='".$data."' AND id_nome=".$id_nome." GROUP BY id_nome ;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
