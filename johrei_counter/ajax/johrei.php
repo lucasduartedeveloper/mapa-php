@@ -7,7 +7,7 @@ try {
     $data = htmlspecialchars($_POST["data"]);
     $id_nome = htmlspecialchars($_POST["id_nome"]);
 
-    $sql = "INSERT INTO johrei_counter_nome (id_nome, data) VALUES (".$id_nome.",".$quantidade.",".$data.")";
+    $sql = "INSERT INTO johrei_counter_nome (id_nome, data) VALUES (".$id_nome.",'".$data."');"
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
