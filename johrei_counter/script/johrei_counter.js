@@ -125,7 +125,7 @@ var id_nome = 0;
     "EXIT"
 ];*/
 var nomes = [
-    "Teletubie",
+    "JOHREI",
     "GAME OVER"
 ];
 
