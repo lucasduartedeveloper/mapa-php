@@ -212,7 +212,7 @@ function set_nome(novo_id) {
 }
 
 function add_johrei() {
-    console.log("ADD " + johrei[id] + nomes[id_nome]);
+    console.log("ADD " + johrei[id] + " " + nomes[id_nome]);
     $.post("ajax/johrei.php", {
           data: johrei[id],
           id_nome: id_nome
@@ -223,10 +223,9 @@ function add_johrei() {
 }
 
 function delete_johrei() {
-    console.log("DEL " + johrei[id] + nomes[id_nome]);
-    $.ajax("ajax/johrei.php?id_nome="+id_nome+"&data=", {
-          data: johrei[id].data,
-          quantidade: johrei[id].quantidade,
+    console.log("DEL " + johrei[id] + " " +nomes[id_nome]);
+    $.getJSON("ajax/johrei.php?id_nome="+id_nome+"&data=", {
+          data: johrei[id],
           id_nome: id_nome
           }).done(function(data) {
                console.log(data);

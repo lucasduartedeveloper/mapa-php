@@ -14,8 +14,8 @@ try {
 
     echo $sql;
   }
-  else if (isset($_GET["id_nome"]) {
-    $sql = "SELECT count(*) FROM johrei_counter_nome GROUP BY id_nome WHERE id_nome=".$id_nome;
+  else if (isset($_GET["id_nome"])) {
+    $sql = "SELECT count(*) FROM johrei_counter_nome GROUP BY id_nome WHERE data='".$data."' AND id_nome=".$id_nome.";";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -24,7 +24,7 @@ try {
 
     echo json_encode($details);
   }
-  else if (isset($_GET["delete"]) {
+  else if (isset($_GET["delete"])) {
     
     $data = htmlspecialchars($_GET["data"]);
     $id_nome = htmlspecialchars($_GET["id_nome"]);
