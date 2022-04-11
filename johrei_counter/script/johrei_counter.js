@@ -128,7 +128,7 @@ var nomes = [
     "Mulher",
     "Homem",
     "Gostosa",
-    "GAME OVER",
+    "GAME OVER"
 ];
 
 $(document).ready(function() {
@@ -227,9 +227,8 @@ function add_johrei() {
 }
 
 function delete_johrei(quantidade) {
-    console.log(johrei[id]);
     johrei[id].quantidade = quantidade;
-    $.delete("ajax/johrei.php", {
+    $.ajax("ajax/johrei.php?id_nome="+, {
           data: johrei[id].data,
           quantidade: johrei[id].quantidade,
           id_nome: id_nome
