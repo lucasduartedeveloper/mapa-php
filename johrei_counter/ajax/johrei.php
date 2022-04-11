@@ -33,7 +33,7 @@ try {
     $data = htmlspecialchars($_GET["data"]);
     $id_nome = htmlspecialchars($_GET["id_nome"]);
 
-    $sql = "DELETE FROM johrei_counter_nome WHERE = id_nome=".$id_nome." AND data='".$data."';";
+    $sql = "DELETE FROM johrei_counter_nome WHERE id_nome=".$id_nome." AND data='".$data."' LIMIT 1;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
