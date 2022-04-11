@@ -172,7 +172,7 @@ function start_timer() {
 }
 
 function get_johrei() {
-    $.getJSON("ajax/johrei.php?data="+johrei[id]+"&id_nome="+id_nome, function(data) { 
+    $.getJSON("ajax/johrei.php?data="+johrei[id].substring(10)+"&id_nome="+id_nome, function(data) { 
         //johrei = data;
         console.log(data);
         counter = data[0] ? data[0].count : 0;
@@ -225,7 +225,7 @@ function add_johrei() {
 
 function delete_johrei() {
     console.log("DEL " + johrei[id] + " " +nomes[id_nome]);
-    $.getJSON("ajax/johrei.php?data="+johrei[id]+"&id_nome="+id_nome+"&delete=true", {
+    $.getJSON("ajax/johrei.php?data="+johrei[id].substring(10)+"&id_nome="+id_nome+"&delete=true", {
           data: johrei[id].substring(10),
           id_nome: id_nome
           }).done(function(data) {
