@@ -32,6 +32,10 @@
 <body>
 
 <div>
+
+</fiv>
+
+<div>
      <span id="timer">20</span>
 </div>
 
@@ -47,21 +51,7 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="nome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     NOMES
   </button>
-  <div id="" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <a class="dropdown-item" onclick="set_nome(0)" href="#">Evelyn</a>
-  <a class="dropdown-item" onclick="set_nome(1)" href="#">Carol</a>
-  <a class="dropdown-item" onclick="set_nome(2)" href="#">Cida</a>
-  <a class="dropdown-item" onclick="set_nome(3)" href="#">Jubeci</a>
-  <a class="dropdown-item" onclick="set_nome(4)" href="#">Afonso</a>
-  <a class="dropdown-item" onclick="set_nome(5)" href="#">Luciano</a>
-  <a class="dropdown-item" onclick="set_nome(6)" href="#">Stefany</a>
-  <a class="dropdown-item" onclick="set_nome(7)" href="#">Judith</a>
-  <a class="dropdown-item" onclick="set_nome(8)" href="#">AfonsoLuciano SSJ3</a>
-  <a class="dropdown-item" onclick="set_nome(9)" href="#">Escada</a>
-  <a class="dropdown-item" onclick="set_nome(10)" href="#">Léo</a>
-  <a class="dropdown-item" onclick="set_nome(11)" href="#">Cantora dos papel</a>
-  <a class="dropdown-item" onclick="set_nome(12)"
- href="#">EXIT</a>
+  <div id="nome-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   </div>
 </div>
 </div>
@@ -85,7 +75,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v11.0.31
+     JOHREI COUNTER v11.0.32
      <br>
      <span id="server-info">
      CONNECTING...
@@ -111,7 +101,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=31"></script>
+<script src="script/johrei_counter.js?v=32"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

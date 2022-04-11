@@ -99,10 +99,17 @@ var counter = 0;
 
 var id = 0;
 var johrei = [
+    "29/03/2022",
+    "30/03/2022",
+    "31/03/2022",
+    "02/04/2022",
+    "04/04/2022",
+    "11/04/2022",
+    "18/04/2022"
 ];
 
 var id_nome = 0;
-var nomes = [
+/*var nomes = [
     "Evelyn",
     "Carol",
     "Cida",
@@ -116,6 +123,12 @@ var nomes = [
     "Léo",
     "Cantora dos papel",
     "EXIT"
+];*/
+var nomes = [
+    "Mulher",
+    "Homem",
+    "Gostosa",
+    "GAME OVER",
 ];
 
 $(document).ready(function() {
@@ -123,12 +136,12 @@ $(document).ready(function() {
     $("#plus").click(function() {
         counter += 1;
         $("#counter").text(counter);
-        update_johrei(counter);
+        add_johrei();
     });
     $("#minus").click(function() {
         counter -= 1;
         $("#counter").text(counter);
-        update_johrei(counter);
+        delete_johrei();
     });
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
@@ -159,7 +172,7 @@ function start_timer() {
 }
 
 function get_johrei() {
-    $.getJSON("ajax/johrei.php", function(data) { 
+    $.getJSON("ajax/johrei.php?id_nome="+id_nome, function(data) { 
         johrei = data;
         console.log(johrei);
         var html ="";
@@ -169,6 +182,15 @@ function get_johrei() {
         $("#johrei-menu").html(html);
         set_data(id);
     });
+}
+
+function get_nomes() {
+    var html ="";
+    for (var k in nomes) {
+             html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_nome("+k+")'>"+nome[k]+"</a>";
+    }
+    $("#nome-menu").html(html);
+    set_nome(id_nome);
 }
 
 function set_data(novo_id) {
@@ -185,12 +207,31 @@ function set_nome(novo_id) {
     $("#nome").text(nomes[novo_id]);
 }
 
-function update_johrei(quantidade) {
+function add_johrei(quantidade) {
     console.log(johrei[id]);
     johrei[id].quantidade = quantidade;
     $.post("ajax/johrei.php", {
           data: johrei[id].data,
-          quantidade: johrei[id].quantidade
+          quantidade: johrei[id].quantidade,
+          id_nome: id_nome
+          }).done(function(data) {
+                console.log(data);
+                var html ="";
+                for (var k in johrei) {
+                    html += "<a class=\"dropdown-item\" href=\"#\" onclick='set_data("+k+")'>"+johrei[k].data+" | qtd: "+johrei[k].quantidade+"</a>";
+                }
+               $("#johrei-menu").html(html);
+               ws.send("JOHREI|"+playerId+"|UPDATE");
+    });
+}
+
+function delete_johrei(quantidade) {
+    console.log(johrei[id]);
+    johrei[id].quantidade = quantidade;
+    $.delete("ajax/johrei.php", {
+          data: johrei[id].data,
+          quantidade: johrei[id].quantidade,
+          id_nome: id_nome
           }).done(function(data) {
                 console.log(data);
                 var html ="";

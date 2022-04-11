@@ -4,18 +4,18 @@ $sql ="";
 try {
   if (isset($_POST["data"])) {
 
-    $quantidade = htmlspecialchars($_POST["quantidade"]);
     $data = htmlspecialchars($_POST["data"]);
+    $id_nome = htmlspecialchars($_POST["id_nome"]);
 
-    $sql = "UPDATE johrei_counter SET quantidade=".$quantidade." WHERE data='".$data."'";
+    $sql = "INSERT INTO johrei_counter_nome (id_nome, data) VALUES (".$id_nome.",".$quantidade.",".$data.")";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
     echo $sql;
   }
-  else {
-    $sql = "SELECT * FROM johrei_counter ORDER BY id DESC";
+  else if (isset($_GET["id_nome"]) {
+    $sql = "SELECT count(*) FROM johrei_counter_nome GROUP BY id_nome WHERE id_nome=".$id_nome;
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
