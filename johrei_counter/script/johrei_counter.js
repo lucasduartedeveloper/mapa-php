@@ -125,9 +125,7 @@ var id_nome = 0;
     "EXIT"
 ];*/
 var nomes = [
-    "Mulher",
-    "Homem",
-    "Gostosa",
+    "Teletubie",
     "GAME OVER"
 ];
 
@@ -174,9 +172,9 @@ function start_timer() {
 
 function get_johrei() {
     $.getJSON("ajax/johrei.php?data="+johrei[id]+"&id_nome="+id_nome, function(data) { 
-        johrei = data;
-        console.log(johrei);
-        counter = johrei[0].count;
+        //johrei = data;
+        console.log(data);
+        counter = data[0].count;
         $("#counter").text(counter);
     });
 }
