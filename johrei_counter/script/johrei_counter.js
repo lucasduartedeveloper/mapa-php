@@ -107,6 +107,7 @@ var johrei = [
     "09/04/2022, Sáb",
     "11/04/2022, Seg",
     "12/04/2022, Ter",
+    "13/04/2022, Qua",
     "18/04/2022, Seg"
 ];
 
@@ -114,7 +115,7 @@ var id_nome = 0;
 var nomes = [
     "JOHREI",
     "JOHREI+",
-    "FATALITY",
+    "FATALITY"
 ];
 
 $(document).ready(function() {

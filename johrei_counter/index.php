@@ -74,7 +74,7 @@
 </div>
 
 <p id="version-info">
-     JOHREI COUNTER v11.0.51 *pudim falante
+     JOHREI COUNTER v11.0.52 *pudim falante
      <br>
      <span id="server-info">
      CONNECTING...
@@ -100,7 +100,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/johrei_counter.js?v=51"></script>
+<script src="script/johrei_counter.js?v=52"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
