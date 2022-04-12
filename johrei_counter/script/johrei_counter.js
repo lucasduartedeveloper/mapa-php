@@ -128,7 +128,7 @@ var id_nome = 0;
 ];*/
 var nomes = [
     "JOHREI",
-    "GAME OVER",
+    "JOHREI+",
     "FATALITY"
 ];
 
