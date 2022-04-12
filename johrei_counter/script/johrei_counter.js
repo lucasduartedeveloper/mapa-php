@@ -106,6 +106,7 @@ var johrei = [
     "04/04/2022, Seg",
     "09/04/2022, Sáb",
     "11/04/2022, Seg",
+    "12/04/2022, Ter",
     "18/04/2022, Seg"
 ];
 
@@ -127,7 +128,8 @@ var id_nome = 0;
 ];*/
 var nomes = [
     "JOHREI",
-    "GAME OVER"
+    "GAME OVER",
+    "FATALITY"
 ];
 
 $(document).ready(function() {
