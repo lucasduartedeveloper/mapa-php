@@ -34,7 +34,7 @@
 <div>
 </fiv>
 
-<div>
+<div style="display:none;">
      <span id="timer">20</span>
 </div>
 

@@ -111,25 +111,10 @@ var johrei = [
 ];
 
 var id_nome = 0;
-/*var nomes = [
-    "Evelyn",
-    "Carol",
-    "Cida",
-    "Jubeci",
-    "Afonso",
-    "Luciano",
-    "Stefany",
-    "Judith",
-    "AfonsoLuciano SSJ3",
-    "Escada",
-    "Léo",
-    "Cantora dos papel",
-    "EXIT"
-];*/
 var nomes = [
     "JOHREI",
     "JOHREI+",
-    "FATALITY"
+    "FATALITY",
 ];
 
 $(document).ready(function() {
