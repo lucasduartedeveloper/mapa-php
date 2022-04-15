@@ -246,7 +246,7 @@ function accHandler(acc) {
 
     var motionStrength = accX + accY + accZ;
 
-    if (sumOnMotion && ) {
+    if (sumOnMotion && true) {
          counter += 1;
          $("#counter").text(counter);
          add_johrei();
