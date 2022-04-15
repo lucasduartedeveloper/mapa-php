@@ -922,7 +922,7 @@ $(document).ready(function() {
              players[playerId].camera = 
              players[playerId].icon;
 
-             playerId = playerId < 3 ? playerId += 1 : 0;
+             playerId = playerId < 5 ? playerId += 1 : 0;
              for (var m = 0; m < 4; m++) {
                  if(m != playerId) {
                      players[m].marker.setOpacity(0.5);
