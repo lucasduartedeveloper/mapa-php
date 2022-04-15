@@ -237,11 +237,20 @@ if ('DeviceMotionEvent' in window) {
 var accX = 0;
 var accY = 0;
 var accZ = 0;
+var sumOnMotion = false;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
+
+    var motionStrength = accX + accY + accZ;
+
+    if (sumOnMotion && ) {
+         counter += 1;
+         $("#counter").text(counter);
+         add_johrei();
+    }
 }
 
 function saveRecording() {

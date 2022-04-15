@@ -90,6 +90,38 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
         stroke: true
 }).addTo(map);
 
+var markerIcon4 = L.icon({
+       iconUrl: "/extra/img/vehicles/cg160.png",
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
+});
+
+var marker4 = L.marker([-23.37098615509997,  -51.15587314318577],  {icon: markerIcon4}).addTo(map);
+
+var markerShadow4 = L.circle([ -23.37098615509997,  -51.15587314318577], {
+        color: "#2E2E2E",
+        fillOpacity: 0.5,
+        radius: 2.25,
+        weight: 0,
+        stroke: true
+}).addTo(map);
+
+var markerIcon5 = L.icon({
+       iconUrl: "/extra/img/vehicles/mini_truck.png",
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
+});
+
+var marker5 = L.marker([-23.37098615509997,  -51.15587314318577],  {icon: markerIcon5}).addTo(map);
+
+var markerShadow5 = L.circle([ -23.37098615509997,  -51.15587314318577], {
+        color: "#2E2E2E",
+        fillOpacity: 0.5,
+        radius: 2.25,
+        weight: 0,
+        stroke: true
+}).addTo(map);
+
 //Teste nível
 var nvIcon = 
       L.icon({
@@ -134,7 +166,25 @@ var players = [
       icon: "/extra/img/vehicles/taxi.png",
       camera: "/extra/img/vehicles/taxi.png",
       color: "#3758b3",
+      pointList: [] },
+   { marker: marker4,
+      markerShadow: markerShadow4,
+      markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
+      name: "CG 160",
+      icon: "/extra/img/vehicles/cg160.png",
+      camera: "/extra/img/vehicles/cg160.png",
+      color: "#3758b3",
+      pointList: [] },
+   { marker: marker4,
+      markerShadow: markerShadow5,
+      markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
+      name: "C3",
+      icon: "/extra/img/vehicles/mini_truck.png",
+      camera: "/extra/img/vehicles/mini_truck.png",
+      color: "#3758b3",
       pointList: [] }
+];
+];
 ];
 trajetos = [];
 
