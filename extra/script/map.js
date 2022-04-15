@@ -186,7 +186,7 @@ var players = [
 ];
 trajetos = [];
 
-for (var m = 0; m < 4; m++) {
+for (var m = 0; m < 6; m++) {
     if(m != playerId) {
          players[m].marker.setOpacity(0.5);
     }
