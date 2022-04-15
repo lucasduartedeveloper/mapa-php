@@ -92,8 +92,8 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
 
 var markerIcon4 = L.icon({
        iconUrl: "/extra/img/vehicles/cg160.png",
-       iconSize:     [30, 10], 
-       iconAnchor:   [15, 15]
+       iconSize:     [15, 30], 
+       iconAnchor:   [7.5, 15]
 });
 
 var marker4 = L.marker([-23.37098615509997,  -51.15587314318577],  {icon: markerIcon4}).addTo(map);
@@ -367,7 +367,9 @@ function reload() {
                  data.filter(d => parseInt(d.playerid) == 0), 
                  data.filter(d => parseInt(d.playerid) == 1), 
                  data.filter(d => parseInt(d.playerid) == 2), 
-                 data.filter(d => parseInt(d.playerid) == 3)
+                 data.filter(d => parseInt(d.playerid) == 3), 
+                 data.filter(d => parseInt(d.playerid) == 4), 
+                 data.filter(d => parseInt(d.playerid) == 5)
              ];
 
              if (trajetos[playerId].length > 0 &&
@@ -378,7 +380,7 @@ function reload() {
                  };
              }
 
-             for (var m = 0; m < 4; m++) {
+             for (var m = 0; m < 6; m++) {
                   if (trajetos[m].length > 0 &&
                       (playerId != m || (!intervalA && !intervalB))) {
                       var latlng = [
@@ -1006,7 +1008,7 @@ $(document).ready(function() {
               var img = document.createElement("img");
               img.width = 120;
               img.height = 120;
-              img.linha = k < 2 ? 0 : 1;
+              img.linha = (k / 3) - 1;
               img.coluna = k == 0 || k== 2 ? 0 : 1;
               img.style.objectFit = "cover";
               img.k = k;
