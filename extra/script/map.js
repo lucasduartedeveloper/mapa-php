@@ -1139,7 +1139,8 @@ $(document).ready(function() {
        }
     );
 
-    $("#down").on       function(e) {
+    $("#down").on("touchstart",
+       function(e) {
             if (intervalC) {
                  $("#down").removeClass("active");
                  //console.log(intervalC);
