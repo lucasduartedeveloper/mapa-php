@@ -1009,7 +1009,7 @@ $(document).ready(function() {
               img.width = 120;
               img.height = 120;
               img.linha = Math.ceil((k + 1) / 3);
-              img.coluna = k == 0 || k== 2 ? 0 : 1;
+              img.coluna = Math.odd(k) ? 0 : 1;
               img.style.objectFit = "cover";
               img.k = k;
 
@@ -1244,8 +1244,8 @@ function reposicionarCarro(dir) {
         players[playerId].marker.setIcon(
             L.icon({
                  iconUrl: icon,
-                 iconSize:     [(playerId == 4 ? 15 : 30), 30],
-                 iconAnchor:   [(playerId == 4 ? 7.5 : 15), 15]
+                 iconSize:     [30, 30],
+                 iconAnchor:   [15, 15]
             }));
     }
     img.src = players[playerId].icon;
@@ -1309,7 +1309,7 @@ function rotateImage(img, angle) {
      canvas.width = 256;
      canvas.height = 256;
 ;
-     var width = img.width;
+     var width = playerId == 4 ? img.width / 2 : img.width;
      var height = img.height;
 
      context.save();
