@@ -418,6 +418,7 @@ function reload() {
                       img.m = m;
                       img.width = 256;
                       img.height = 256;
+                      img.id = m;
                       img.onload = function() {
                            var icon = rotateImage(this, this.a);
                            players[this.m].marker.setIcon(
@@ -831,6 +832,7 @@ function mapClick(e) {
           var img = new Image();
           img.width = 256;
           img.height = 256;
+          img.id = playerId;
           img.onload = function() {
                  var icon = rotateImage(img, a);
                  players[playerId].marker.setIcon(
@@ -1226,7 +1228,7 @@ function reposicionarCarro(dir) {
     var img = new Image();
     img.width = 256;
     img.height = 256;
-
+    img.id = playerId;
     img.onload = function() {
         var anguloCarro = angulo;
         if (window.turning == "left" && dir == "down") {
@@ -1309,7 +1311,7 @@ function rotateImage(img, angle) {
      canvas.width = 256;
      canvas.height = 256;
 ;
-     var width = playerId == 4 ? img.width / 2 : img.width;
+     var width = img.id == 4 ? img.width / 2 : img.width;
      var height = img.height;
 
      context.save();
