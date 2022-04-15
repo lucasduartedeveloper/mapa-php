@@ -100,7 +100,7 @@
 </p>
 
 <p id="version-info" class="version-info">
-     v97.8.1.575
+     v97.8.1.576
 </p>
 
 <button id="left" type="button" class="btn-left">
@@ -140,7 +140,7 @@
 <script src="/extra/script/websocket.js?v=8"></script>
 
 <script src="/extra/script/login.js?v=1"></script> 
-<script src="/extra/script/map.js?v=575"></script> 
+<script src="/extra/script/map.js?v=576"></script> 
 
 <!-- Modal -->
 <div style="z-index: 10001" class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-hidden="true">
