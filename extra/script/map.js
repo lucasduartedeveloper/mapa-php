@@ -1313,7 +1313,8 @@ function rotateImage(img, angle) {
      var height = img.height;
 
      context.save();
-     context.translate(width / 2, height / 2);
+     context.translate(width /
+     (playerId == 4 ? 4 : 2), height / 2);
      context.rotate(-angle);
      context.drawImage(img, -(width /
      (playerId == 4 ? 4 : 2)), -(height / 2),
