@@ -92,7 +92,7 @@ var markerShadow3 = L.circle([ -23.37098615509997,  -51.15587314318577], {
 
 var markerIcon4 = L.icon({
        iconUrl: "/extra/img/vehicles/cg160.png",
-       iconSize:     [30, 30], 
+       iconSize:     [30, 10], 
        iconAnchor:   [15, 15]
 });
 
@@ -169,7 +169,7 @@ var players = [
       pointList: [] },
    { marker: marker4,
       markerShadow: markerShadow4,
-      markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
+      markerNv: L.marker([-23.370658143982872, -51.15565359592438], { icon: nvIcon }).addTo(map),
       name: "CG 160",
       icon: "/extra/img/vehicles/cg160.png",
       camera: "/extra/img/vehicles/cg160.png",
@@ -177,7 +177,7 @@ var players = [
       pointList: [] },
    { marker: marker5,
       markerShadow: markerShadow5,
-      markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
+      markerNv: L.marker([ -23.370638476206793, -51.15565359592438], { icon: nvIcon }).addTo(map),
       name: "C3",
       icon: "/extra/img/vehicles/mini_truck.png",
       camera: "/extra/img/vehicles/mini_truck.png",
