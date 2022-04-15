@@ -1008,7 +1008,7 @@ $(document).ready(function() {
               var img = document.createElement("img");
               img.width = 120;
               img.height = 120;
-              img.linha = Math.ceil(((k + 1) / 3)) - 1;
+              img.linha = Math.ceil((k + 1) / 3);
               img.coluna = k == 0 || k== 2 ? 0 : 1;
               img.style.objectFit = "cover";
               img.k = k;
@@ -1243,8 +1243,8 @@ function reposicionarCarro(dir) {
         players[playerId].marker.setIcon(
             L.icon({
                  iconUrl: icon,
-                 iconSize:     [30, 30],
-                 iconAnchor:   [15, 15]
+                 iconSize:     [(playerId == 4 ? 15 : 30), 30],
+                 iconAnchor:   [(playerId == 4 ? 7.5 : 15), 15]
             }));
     }
     img.src = players[playerId].icon;
