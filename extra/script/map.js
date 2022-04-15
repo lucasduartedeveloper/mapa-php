@@ -173,18 +173,16 @@ var players = [
       name: "CG 160",
       icon: "/extra/img/vehicles/cg160.png",
       camera: "/extra/img/vehicles/cg160.png",
-      color: "#3758b3",
+      color: "#1c1e21",
       pointList: [] },
-   { marker: marker4,
+   { marker: marker5,
       markerShadow: markerShadow5,
       markerNv: L.marker([-23.37098615509997,  -51.15587314318577], { icon: nvIcon }).addTo(map),
       name: "C3",
       icon: "/extra/img/vehicles/mini_truck.png",
       camera: "/extra/img/vehicles/mini_truck.png",
-      color: "#3758b3",
+      color: "#1c1e21",
       pointList: [] }
-];
-];
 ];
 trajetos = [];
 
