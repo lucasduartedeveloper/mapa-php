@@ -924,8 +924,8 @@ $(document).ready(function() {
              players[playerId].camera = 
              players[playerId].icon;
 
-             playerId = playerId < 5 ? playerId += 1 : 0;
-             for (var m = 0; m < 4; m++) {
+             playerId = playerId < 6 ? playerId += 1 : 0;
+             for (var m = 0; m < 6; m++) {
                  if(m != playerId) {
                      players[m].marker.setOpacity(0.5);
                  }
@@ -1008,7 +1008,7 @@ $(document).ready(function() {
               var img = document.createElement("img");
               img.width = 120;
               img.height = 120;
-              img.linha = (k / 3) - 1;
+              img.linha = ((k + 1) / 3) - 1;
               img.coluna = k == 0 || k== 2 ? 0 : 1;
               img.style.objectFit = "cover";
               img.k = k;
