@@ -71,7 +71,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/d-shield.js?v=0"></script>
+<script src="script/e-shield.js?v=0"></script>
 <script src="script/camera.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
