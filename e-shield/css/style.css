@@ -66,6 +66,14 @@ html, body {
     margin: 0px;
 }
 
+#shield {
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    width: 80%;
+    height: 40%;
+}
+
 #camera-canvas {
     display: flex;
     justify-content: center;

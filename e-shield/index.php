@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=2">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -34,6 +34,8 @@
 <video style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
+<img id="shield" src="img/shield.png" />
+
 <div>
     <button id="mic" type="button" class="btn">
         <i class="bi bi-mic-mute-fill"></i>
@@ -45,7 +47,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v1.0.0
+     v2.0.0
      <br>
      <span id="server-info">
      CONNECTING...
