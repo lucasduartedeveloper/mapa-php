@@ -45,7 +45,7 @@
 <input style="display:none" type="file" id="file-selector">
 
 <p id="version-info">
-     v0.0.0
+     v0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
