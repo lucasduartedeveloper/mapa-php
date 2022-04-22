@@ -6,6 +6,4 @@ var victory = new Audio("audio/sfx-victory.wav");
 
 $(document).ready(function() {
     
-     
-
 });
