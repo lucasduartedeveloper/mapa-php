@@ -32,13 +32,13 @@
 <body>
 
 <p id="title">
-MARRY ME<br>
+LOL<br>
 
 <video style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     v3.0.2
+     v3.0.3
      <br>
      <span id="server-info">
      CONNECTING...
