@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -38,7 +38,7 @@ MARRY ME<br>
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     v2.0.0
+     v3.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -65,7 +65,7 @@ MARRY ME<br>
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/marry-me.js?v=0"></script>
-<script src="script/camera.js?v=0"></script>
+<script src="script/camera.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
