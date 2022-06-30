@@ -51,7 +51,7 @@
 </div>
 
 <p id="version-info">
-     ODOMETER v6.0.5
+     ODOMETER v6.0.6
      <br>
      <span id="server-info">
      CONNECTING...
@@ -77,7 +77,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/odometer.js?v=5"></script>
+<script src="script/odometer.js?v=6"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
