@@ -123,10 +123,10 @@ var accZ = 0;
 var sumOnMotion = true;
 
 var checkPoints = [
-    { x1: 0, y1: 0, x2: 0, y2: 0, done: false },
-    { x1: 0, y1: 0, x2: 0, y2: 0, done: false },
-    { x1: 0, y1: 0, x2: 0, y2: 0, done: false },
-    { x1: 0, y1: 0, x2: 0, y2: 0, done: false }
+    { x1: -1, y1: 9, x2: 1, y2: 10, done: false },
+    { x1: -10, y1: -1, x2: -9, y2: 1, done: false },
+    { x1: -1, y1: -10, x2: 1, y2: -9, done: false },
+    { x1: 9, y1: -1, x2: 10, y2: 1, done: false }
 ];
 
 function accHandler(acc) {
