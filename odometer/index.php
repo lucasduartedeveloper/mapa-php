@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -44,10 +44,10 @@
 </div>
 
 <div id="circle">
-     <div id="cp1"></div>
-     <div id="cp2"></div>
-     <div id="cp3"></div>
-     <div id="cp4"></div>
+     <span id="cp1"></span>
+     <span id="cp2"></span>
+     <span id="cp3"></span>
+     <span id="cp4"></span>
 </div>
 
 <p id="version-info">
@@ -77,7 +77,7 @@
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/odometer.js?v=6"></script>
+<script src="script/odometer.js?v=7"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
