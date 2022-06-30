@@ -155,7 +155,7 @@ function accHandler(acc) {
 
     for(var k in checkPoints) {
          if (checkPoints[k].done) {
-              $("#cp"+(k+1).toString()).addClass("done");
+              $("#cp"+k).addClass("done");
          }
     }
 
