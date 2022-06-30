@@ -121,7 +121,7 @@ if ('DeviceMotionEvent' in window) {
 var accX = 0;
 var accY = 0;
 var accZ = 0;
-var sumOnMotion = false;
+var sumOnMotion = true;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
@@ -132,7 +132,7 @@ function accHandler(acc) {
 
     if (sumOnMotion && true) {
          counter += 1;
-         $("#counter").text(counter);
+         $("#counter").text(counter.padStart(6,"0"));
     }
 }
 
