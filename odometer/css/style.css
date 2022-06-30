@@ -99,7 +99,7 @@ html, body {
     border: 2px solid #000;
 }
 
-.done {
+#circle span.done {
     background-color: #5f5;
 }
 
