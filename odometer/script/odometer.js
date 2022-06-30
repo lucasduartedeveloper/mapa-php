@@ -132,7 +132,9 @@ function accHandler(acc) {
 
     if (sumOnMotion && true) {
          counter += 1;
-         $("#counter").text(counter.padStart(6,"0"));
+         $("#counter").text(counter
+         .toString()
+         .padStart(6,"0"));
     }
 }
 
