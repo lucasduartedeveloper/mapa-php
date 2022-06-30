@@ -31,9 +31,6 @@
 </head>
 <body>
 
-<div>
-</fiv>
-
 <p id="title">
      ODOMETER
 </p>
