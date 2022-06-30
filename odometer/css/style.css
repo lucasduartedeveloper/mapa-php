@@ -47,16 +47,23 @@ html, body {
 }
 
 .counter {
-   font-size: 50px;
-   background-color: #000;
-   border: 2px solid #aaa;
+     font-size: 50px;
+     background-color: #000;
+     border: 2px solid #aaa;
 }
 
 #circle {
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   border: 2px solid #aaa;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     border: 2px solid #aaa;
+}
+
+#circle, div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
 }
 
 #version-info {
