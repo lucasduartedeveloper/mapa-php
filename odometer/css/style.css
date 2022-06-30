@@ -74,8 +74,17 @@ html, body {
     position: absolute;
 }
 
-#circle span :nth-of-type(1n) {
-  margin-left: 95px;
+#circle span:nth-of-type(1n) {
+  margin-top: -45px;
+}
+#circle span:nth-of-type(2n) {
+  margin-right: -45px;
+}
+#circle span:nth-of-type(3n) {
+  margin-bottom: -45px;
+}
+#circle span:nth-of-type(4n) {
+  margin-left: -45px;
 }
 
 #version-info {
