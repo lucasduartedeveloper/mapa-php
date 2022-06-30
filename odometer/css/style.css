@@ -52,6 +52,13 @@ html, body {
    border: 2px solid #aaa;
 }
 
+#circle {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 2px solid #aaa;
+}
+
 #version-info {
     text-align: left;
     position: fixed;

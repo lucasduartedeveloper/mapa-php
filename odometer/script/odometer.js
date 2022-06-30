@@ -122,6 +122,13 @@ var accY = 0;
 var accZ = 0;
 var sumOnMotion = true;
 
+var checkPoints = [
+    { x1: , y1: , x2: , y2: , done: false },
+    { x1: , y1: , x2: , y2: , done: false },
+    { x1: , y1: , x2: , y2: , done: false },
+    { x1: , y1: , x2: , y2: , done: false }
+];
+
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);

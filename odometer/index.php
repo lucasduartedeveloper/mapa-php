@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -46,8 +46,15 @@
      <span class="counter" id="counter-ccw">000000</span>
 </div>
 
+<div id="circle">
+     <div id="cp1"></div>
+     <div id="cp2"></div>
+     <div id="cp3"></div>
+     <div id="cp4"></div>
+</div>
+
 <p id="version-info">
-     ODOMETER v3.0.5
+     ODOMETER v4.0.5
      <br>
      <span id="server-info">
      CONNECTING...
