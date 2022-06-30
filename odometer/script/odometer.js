@@ -129,12 +129,19 @@ var checkPoints = [
     { x1: 9, y1: -1, x2: 10, y2: 1, done: false }
 ];
 
+var x = 0;
+var y = 0;
+
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
 
     var motionStrength = accX + accY + accZ;
+    var x = (95 / accX) * 9.8;
+    var y = (95 / accY) * 9.8;
+    $("#pointer").css("margin-left", x.toString() + "px");
+    $("#pointer").css("margin-top", y.toString() + "px");
 
     if (sumOnMotion && true) {
          counterCw += 1;
