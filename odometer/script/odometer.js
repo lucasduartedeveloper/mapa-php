@@ -144,6 +144,21 @@ function accHandler(acc) {
     $("#pointer").css("margin-left", x.toString() + "px");
     $("#pointer").css("margin-top", y.toString() + "px");
 
+    for(var k in checkPoints) {
+         if ((x >= checkPoints[k].x1 && 
+              x <= checkPoints[k].x2) &&
+              (y >= checkPoints[k].y1 && 
+              y <= checkPoints[k].y2)) {
+              checkPoints[k].done = true;
+         }
+    }
+
+    for(var k in checkPoints) {
+         if (checkPoints[k].done && true) {
+              $("#cp"+(k+1).toString()).addClass("done");
+         }
+    }
+
     if (sumOnMotion && true) {
          counterCw += 1;
          $("#counter-cw").text(counterCw

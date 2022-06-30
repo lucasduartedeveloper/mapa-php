@@ -96,6 +96,11 @@ html, body {
     margin-top: 0px;
     border-radius: 50%;
     background-color: #0ff;
+    border: 2px solid #000;
+}
+
+.done {
+    background-color: #5f5;
 }
 
 #version-info {
