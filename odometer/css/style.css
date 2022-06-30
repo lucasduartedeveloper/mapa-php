@@ -48,6 +48,8 @@ html, body {
 
 #counter {
    font-size: 50px;
+   background-color: #000;
+   border: 2px solid #aaa;
 }
 
 #version-info {
