@@ -136,7 +136,7 @@ function accHandler(acc) {
          .padStart(6,"0"));
 
          counterCcw += 1;
-         $("#counter-cw").text(counterCcw
+         $("#counter-ccw").text(counterCcw
          .toString()
          .padStart(6,"0"));
     }
