@@ -91,6 +91,15 @@ html, body {
     margin-top: 0px;
 }
 
+#pointer {
+    width: 10px;
+    height: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border-radius: 50%;
+    background-color: #f00;
+}
+
 #version-info {
     text-align: left;
     position: fixed;

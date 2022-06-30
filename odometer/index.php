@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=15">
+<link rel="stylesheet" href="css/style.css?v=16">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -48,10 +48,11 @@
      <span id="cp2"></span>
      <span id="cp3"></span>
      <span id="cp4"></span>
+     <span id="pointer"></span>
 </div>
 
 <p id="version-info">
-     ODOMETER v15.0.7
+     ODOMETER v16.0.7
      <br>
      <span id="server-info">
      CONNECTING...
