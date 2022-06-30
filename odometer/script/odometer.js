@@ -138,8 +138,8 @@ function accHandler(acc) {
     accZ = acc.z && acc.z.toFixed(3);
 
     var motionStrength = accX + accY + accZ;
-    x = (95 / accX) * 9.8;
-    y = (95 / accY) * 9.8;
+    x = (95 / 9.8) * accX;
+    y = (95 / 9.8) * accY;
 
     $("#pointer").css("margin-left", x.toString() + "px");
     $("#pointer").css("margin-top", y.toString() + "px");
