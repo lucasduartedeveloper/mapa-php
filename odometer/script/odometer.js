@@ -164,6 +164,7 @@ function accHandler(acc) {
                        $("#counter-cw").text(counterCw
                        .toString()
                        .padStart(6,"0"));
+                       bar();
                    }
 
                   if (lastCp == checkPoints[k].right) {
@@ -171,6 +172,7 @@ function accHandler(acc) {
                       $("#counter-ccw").text(counterCcw
                       .toString()
                       .padStart(6,"0"));
+                      bar();
                   }
              }
              lastCp = k;
@@ -185,6 +187,14 @@ function foo() {
         }
     }
     return true;
+}
+
+function bar() {
+    for(var k in checkPoints) {
+        checkPoints[k].done = false;
+        $("#cp"+k).removeClass("done");
+        notification.play();
+    }
 }
 
 function saveRecording() {
