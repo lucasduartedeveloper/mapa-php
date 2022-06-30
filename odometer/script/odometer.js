@@ -123,14 +123,19 @@ var accZ = 0;
 var sumOnMotion = true;
 
 var checkPoints = [
-    { x1: -1, y1: -10, x2: 1, y2: -9, done: false },
-    { x1: -10, y1: -1, x2: -9, y2: 1, done: false },
-    { x1: -1, y1: 9, x2: 1, y2: 10, done: false },
-    { x1: 9, y1: -1, x2: 10, y2: 1, done: false }
+    { x1: -1, y1: -10, x2: 1, y2: -9, 
+      left: 3, right: 1, done: false }, // 3
+    { x1: -10, y1: -1, x2: -9, y2: 1, 
+      left: 0, right: 2, done: false }, // 4
+    { x1: -1, y1: 9, x2: 1, y2: 10, 
+      left: 1, right: 3, done: false }, // 1
+    { x1: 9, y1: -1, x2: 10, y2: 1, 
+      left: 2, right: 0, done: false } // 2
 ];
 
 var x = 0;
 var y = 0;
+var lastCp = -1;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
@@ -149,27 +154,37 @@ function accHandler(acc) {
               accX <= checkPoints[k].x2) &&
               (accY >= checkPoints[k].y1 && 
               accY <= checkPoints[k].y2)) {
+
               checkPoints[k].done = true;
-         }
-    }
-
-    for(var k in checkPoints) {
-         if (checkPoints[k].done) {
               $("#cp"+k).addClass("done");
+
+              if (foo()) {
+                   if (lastCp == checkPoints[k].left) {
+                       counterCw += 1;
+                       $("#counter-cw").text(counterCw
+                       .toString()
+                       .padStart(6,"0"));
+                   }
+
+                  if (lastCp == checkPoints[k].right) {
+                      counterCcw += 1;
+                      $("#counter-ccw").text(counterCcw
+                      .toString()
+                      .padStart(6,"0"));
+                  }
+             }
+             lastCp = k;
          }
     }
+}
 
-    if (sumOnMotion && true) {
-         counterCw += 1;
-         $("#counter-cw").text(counterCw
-         .toString()
-         .padStart(6,"0"));
-
-         counterCcw += 1;
-         $("#counter-ccw").text(counterCcw
-         .toString()
-         .padStart(6,"0"));
+function foo() {
+    for(var k in checkPoints) {
+        if (!checkPoints[k].done) {
+             return false;
+        }
     }
+    return true;
 }
 
 function saveRecording() {
