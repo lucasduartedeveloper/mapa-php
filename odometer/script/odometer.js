@@ -123,9 +123,9 @@ var accZ = 0;
 var sumOnMotion = true;
 
 var checkPoints = [
-    { x1: -1, y1: 9, x2: 1, y2: 10, done: false },
     { x1: -10, y1: -1, x2: -9, y2: 1, done: false },
     { x1: -1, y1: -10, x2: 1, y2: -9, done: false },
+    { x1: -1, y1: 9, x2: 1, y2: 10, done: false },
     { x1: 9, y1: -1, x2: 10, y2: 1, done: false }
 ];
 
@@ -138,7 +138,7 @@ function accHandler(acc) {
     accZ = acc.z && acc.z.toFixed(3);
 
     var motionStrength = accX + accY + accZ;
-    x = (95 / 9.8) * accX;
+    x = ((95 / 9.8) * accX)* -1;
     y = (95 / 9.8) * accY;
 
     $("#pointer").css("margin-left", x.toString() + "px");
