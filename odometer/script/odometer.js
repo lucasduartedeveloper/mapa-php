@@ -135,6 +135,7 @@ var checkPoints = [
 
 var x = 0;
 var y = 0;
+var firstCp = -1;
 var lastCp = -1;
 
 function accHandler(acc) {
@@ -157,8 +158,11 @@ function accHandler(acc) {
 
               checkPoints[k].done = true;
               $("#cp"+k).addClass("done");
+              if (foo2()) {
+                   firstCp = k;
+              }
 
-              if (foo()) {
+              if (foo() && firstCp == k) {
                    if (lastCp == checkPoints[k].left) {
                        counterCw += 1;
                        $("#counter-cw").text(counterCw
@@ -187,6 +191,16 @@ function foo() {
         }
     }
     return true;
+}
+
+function foo2() {
+    var foo2 = 0;
+    for(var k in checkPoints) {
+        if (checkPoints[k].done) {
+             foo2 += 1; 
+        }
+    }
+    return foo2 == 1;
 }
 
 function bar() {
