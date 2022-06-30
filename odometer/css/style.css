@@ -89,14 +89,13 @@ html, body {
     margin-left: -95px;
     margin-top: 0px;
 }
-
-#pointer {
+#circle span:nth-of-type(5n) {
     width: 10px;
     height: 10px;
     margin-left: 0px;
     margin-top: 0px;
     border-radius: 50%;
-    background-color: #f00;
+    background-color: #0ff;
 }
 
 #version-info {
