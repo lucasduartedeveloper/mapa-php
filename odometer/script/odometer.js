@@ -95,10 +95,9 @@ var recordInterval = false;
 
 // Saldo
 var playerId = new Date().getTime();
-var counter = 0;
 
-var id = 0;
-var counter = 0;
+var counterCw = 0;
+var counterCcw = 0;
 
 $(document).ready(function() {
     ws.onmessage = function(e) {
@@ -131,8 +130,8 @@ function accHandler(acc) {
     var motionStrength = accX + accY + accZ;
 
     if (sumOnMotion && true) {
-         counter += 1;
-         $("#counter").text(counter
+         counterCw += 1;
+         $("#counter-cw").text(counter
          .toString()
          .padStart(6,"0"));
     }

@@ -46,7 +46,7 @@ html, body {
      border: 2px solid black;
 }
 
-#counter {
+.counter {
    font-size: 50px;
    background-color: #000;
    border: 2px solid #aaa;
