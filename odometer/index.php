@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=0">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -31,14 +31,15 @@
 </head>
 <body>
 
-<p id="title">
-LOL<br>
+<div>
+</fiv>
 
-<video style="display:none" id="video" width="100" height="100" autoplay></video>
-<canvas width="100" height="100" id="camera-canvas"></canvas>
+<p id="title">
+     ODOMETER
+</p>
 
 <p id="version-info">
-     v3.0.3
+     ODOMETER v0.0.0
      <br>
      <span id="server-info">
      CONNECTING...
@@ -64,8 +65,7 @@ LOL<br>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/marry-me.js?v=0"></script>
-<script src="script/camera.js?v=2"></script>
+<script src="script/odometer.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
