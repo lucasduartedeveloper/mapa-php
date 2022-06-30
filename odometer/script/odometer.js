@@ -145,10 +145,10 @@ function accHandler(acc) {
     $("#pointer").css("margin-top", y.toString() + "px");
 
     for(var k in checkPoints) {
-         if ((x >= checkPoints[k].x1 && 
-              x <= checkPoints[k].x2) &&
-              (y >= checkPoints[k].y1 && 
-              y <= checkPoints[k].y2)) {
+         if ((accX >= checkPoints[k].x1 && 
+              accX <= checkPoints[k].x2) &&
+              (accY >= checkPoints[k].y1 && 
+              accY <= checkPoints[k].y2)) {
               checkPoints[k].done = true;
          }
     }
