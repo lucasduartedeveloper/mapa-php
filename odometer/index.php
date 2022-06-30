@@ -37,6 +37,9 @@
 <p id="title">
      ODOMETER
 </p>
+<div>
+     <span id="counter">000000</span>
+</div>
 
 <p id="version-info">
      ODOMETER v0.0.0
