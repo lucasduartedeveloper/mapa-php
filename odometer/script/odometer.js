@@ -184,9 +184,14 @@ function accHandler(acc) {
               if (foo() && firstCp == k) {
                    if (lastCp == checkPoints[k].right) {
                        counterCw += 1;
+
+                       // Animation
+                       var html = "<span>x</span>";
+
                        $("#counter-cw").text(counterCw
                        .toString()
                        .padStart(6,"0"));
+
                        bar();
                        ws.send("ODOMETER|"+
                        playerId+"|"+counterCw+"|CW");
