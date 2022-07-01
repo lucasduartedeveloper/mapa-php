@@ -123,13 +123,13 @@ var accZ = 0;
 var sumOnMotion = true;
 
 var checkPoints = [
-    { x1: -1, y1: -100, x2: 1, y2: -7, 
+    { x1: -1, y1: -100, x2: 1, y2: -5, 
       left: 3, right: 1, done: false }, // 3
-    { x1: -100, y1: -1, x2: -7, y2: 1, 
+    { x1: -100, y1: -1, x2: -5, y2: 1, 
       left: 0, right: 2, done: false }, // 4
-    { x1: -1, y1: 7, x2: 1, y2: 100, 
+    { x1: -1, y1: 5, x2: 1, y2: 100, 
       left: 1, right: 3, done: false }, // 1
-    { x1: 7, y1: -1, x2: 100, y2: 1, 
+    { x1: 5, y1: -1, x2: 100, y2: 1, 
       left: 2, right: 0, done: false } // 2
 ];
 
