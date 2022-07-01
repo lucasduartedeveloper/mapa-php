@@ -206,8 +206,6 @@ function accHandler(acc) {
     }
 }
 
-function 
-
 function foo() {
     for(var k in checkPoints) {
         if (!checkPoints[k].done) {
