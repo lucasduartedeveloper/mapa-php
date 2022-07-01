@@ -231,6 +231,7 @@ function wow() {
          }
          if (zero == 0) {
               window.location.href = url_prefix + urls[k].chn;
+              return false;
          }
     }
 }
