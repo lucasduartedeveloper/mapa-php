@@ -9,6 +9,11 @@ try {
 
     $sql = "UPDATE param SET valor='".$cw."' WHERE nome='cw';";
 
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    echo $sql;
+
     $sql = "UPDATE param SET valor='".$ccw."' WHERE nome='ccw';";
 
     $stmt = $pdo->prepare($sql);
@@ -17,7 +22,7 @@ try {
     echo $sql;
   }
   else {
-    $sql = "SELECT * FROM param WHERE nome='cw' OR nome='ccw';";
+    $sql = "SELECT * FROM param WHERE nome='cw' OR nome='ccw' ORDER BY id;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
