@@ -104,6 +104,19 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "ODOMETER" &&
             playerId != msg[1]) {
+            var value = parseInt(msg[2]);
+            if (msg[3] == "CW") {
+                counterCw = value;
+                      $("#counter-cw").text(counterCw
+                      .toString()
+                      .padStart(6,"0"));
+            }
+            else {
+                counterCcw = value;
+                      $("#counter-ccw").text(counterCcw
+                      .toString()
+                      .padStart(6,"0"));
+            }
         }
     };
 });
@@ -147,6 +160,11 @@ function accHandler(acc) {
     x = ((95 / 9.8) * accX)* -1;
     y = (95 / 9.8) * accY;
 
+    /*
+    $("#circle").css("margin-left", x.toString() + "px");
+    $("#circle").css("margin-left", y.toString() + "px");
+    */
+
     $("#pointer").css("margin-left", x.toString() + "px");
     $("#pointer").css("margin-top", y.toString() + "px");
 
@@ -169,6 +187,7 @@ function accHandler(acc) {
                        .toString()
                        .padStart(6,"0"));
                        bar();
+                       ws.send("ODOMETER|"+counterCw+"|CW");
                    }
 
                   if (lastCp == checkPoints[k].left) {
@@ -177,6 +196,8 @@ function accHandler(acc) {
                       .toString()
                       .padStart(6,"0"));
                       bar();
+                      ws.send("ODOMETER|"+
+                      counterCcw+"|CCW");
                   }
              }
              lastCp = k;
@@ -184,6 +205,8 @@ function accHandler(acc) {
          }
     }
 }
+
+function 
 
 function foo() {
     for(var k in checkPoints) {
