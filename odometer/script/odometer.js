@@ -228,6 +228,7 @@ function updateOdometer() {
           cw: counterCw,
           ccw: counterCcw,
           }).done(function(data) {
+              console.log(data);
      });
 }
 
