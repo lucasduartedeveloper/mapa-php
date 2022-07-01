@@ -163,7 +163,7 @@ function accHandler(acc) {
               }
 
               if (foo() && firstCp == k) {
-                   if (lastCp == checkPoints[k].left) {
+                   if (lastCp == checkPoints[k].right) {
                        counterCw += 1;
                        $("#counter-cw").text(counterCw
                        .toString()
@@ -171,7 +171,7 @@ function accHandler(acc) {
                        bar();
                    }
 
-                  if (lastCp == checkPoints[k].right) {
+                  if (lastCp == checkPoints[k].left) {
                       counterCcw += 1;
                       $("#counter-ccw").text(counterCcw
                       .toString()
