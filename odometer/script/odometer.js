@@ -187,7 +187,8 @@ function accHandler(acc) {
                        .toString()
                        .padStart(6,"0"));
                        bar();
-                       ws.send("ODOMETER|"+counterCw+"|CW");
+                       ws.send("ODOMETER|"+
+                       playerId+"|"+counterCw+"|CW");
                    }
 
                   if (lastCp == checkPoints[k].left) {
@@ -197,7 +198,7 @@ function accHandler(acc) {
                       .padStart(6,"0"));
                       bar();
                       ws.send("ODOMETER|"+
-                      counterCcw+"|CCW");
+                      playerId+"|"+counterCcw+"|CCW");
                   }
              }
              lastCp = k;
