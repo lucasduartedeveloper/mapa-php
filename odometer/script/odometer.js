@@ -100,6 +100,7 @@ var counterCw = 0;
 var counterCcw = 0;
 
 $(document).ready(function() {
+    getOdometer();
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "ODOMETER" &&
@@ -200,11 +201,34 @@ function accHandler(acc) {
                       ws.send("ODOMETER|"+
                       playerId+"|"+counterCcw+"|CCW");
                   }
+                  updateOdometer();
              }
              lastCp = k;
              //wow();
          }
     }
+}
+
+function getOdometer() {
+     $.getJSON("ajax/odometer.php", function(data) {
+          counterCw = parseInt(data[0].valor);
+          counterCcw = parseInt(data[1].valor);
+          
+          $("#counter-cw").text(counterCw
+          .toString()
+          .padStart(6,"0"));
+          $("#counter-ccw").text(counterCcw
+          .toString()
+          .padStart(6,"0"));
+     });
+}
+
+function updateOdometer() {
+     $.post("ajax/odometer.php", {
+          cw: counterCw,
+          ccw: counterCcw,
+          }).done(function(data) {
+     });
 }
 
 function foo() {
