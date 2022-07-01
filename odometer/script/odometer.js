@@ -180,6 +180,7 @@ function accHandler(acc) {
                   }
              }
              lastCp = k;
+             wow();
          }
     }
 }
@@ -208,6 +209,29 @@ function bar() {
         checkPoints[k].done = false;
         $("#cp"+k).removeClass("done");
         notification.play();
+    }
+}
+
+var url_prefix = "https://m.chaturbate.com/";
+var urls = [
+   { seq: [ -5, 1 ] , chn: "artoftease" },
+   { seq: [ -4, 2, -1 ], chn: "_mito_69" },
+   { seq: [ -3, 1 ], chn: "seon_mi" }
+];
+
+function wow() {
+    for (var k in urls) {
+         var zero = 0;
+         for (var j in urls[k].seq) {
+               if (urls[k].seq[j] == counterCw ||
+                    urls[k].seq[j] == (counterCcw *-1)) {
+                     urls[k].seq[j] = 0;
+               }
+               zero += Math.abs(urls[k].seq[j]);
+         }
+         if (zero == 0) {
+              window.location.href = url_prefix + urls[k].chn;
+         }
     }
 }
 
