@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=22">
+<link rel="stylesheet" href="css/style.css?v=23">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -29,7 +29,7 @@
 
 <title></title>
 </head>
-<body>
+<body id="container">
 
 <p id="title">
      ODOMETER
@@ -52,7 +52,7 @@
 </div>
 
 <p id="version-info">
-     ODOMETER v22.0.35
+     ODOMETER v23.0.35
      <br>
      <span id="server-info">
      CONNECTING...
