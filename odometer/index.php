@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=30">
+<link rel="stylesheet" href="css/style.css?v=31">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -34,6 +34,7 @@
 <p id="title">
      ODOMETER
 </p>
+<div class="counters">
 <i class="fa-solid fa-arrow-rotate-right"></i>
 <div>
      <span class="counter" id="counter-cw">000000</span>
@@ -41,6 +42,7 @@
 <i class="fa-solid fa-arrow-rotate-left"></i>
 <div>
      <span class="counter" id="counter-ccw">000000</span>
+</div>
 </div>
 
 <canvas id="matter-js"></canvas>
@@ -54,7 +56,7 @@
 </div>
 
 <p id="version-info">
-     ODOMETER v30.0.77
+     ODOMETER v31.0.77
      <br>
      <span id="server-info">
      CONNECTING...

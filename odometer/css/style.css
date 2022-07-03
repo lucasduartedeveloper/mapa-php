@@ -34,6 +34,14 @@ html, body {
     font-size: 50px;
 }
 
+.counters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .line {
      width: 100%;
      display: flex;
