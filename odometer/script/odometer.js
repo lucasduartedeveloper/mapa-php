@@ -356,6 +356,17 @@ function matterJs() {
     var constraints = [
     Matter.Constraint.create({
         bodyA: head,
+        pointA: { x: 0, y: 0 },
+        pointB: { x: 0, y: 0 },
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff',
+            lineWidth: 1,
+            type: 'line'
+        }
+    }),
+    Matter.Constraint.create({
+        bodyA: head,
         pointA: { x: 0, y: 7.5 },
         bodyB: shoulders,
         pointB: { x: 0, y: 0 },
