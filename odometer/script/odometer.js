@@ -283,7 +283,7 @@ function matterJs() {
         pointB: { x: 0, y: -17.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -295,7 +295,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -307,7 +307,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -319,7 +319,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -331,7 +331,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -343,7 +343,7 @@ function matterJs() {
         pointB: { x: 0, y: 0 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -355,7 +355,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -367,7 +367,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -379,7 +379,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
@@ -391,7 +391,7 @@ function matterJs() {
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
-            strokeStyle: '#fff'
+            strokeStyle: '#fff',
             lineWidth: 1,
             type: 'line'
         }
