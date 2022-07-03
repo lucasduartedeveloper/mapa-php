@@ -275,7 +275,7 @@ function matterJs() {
     render.mouse = mouse;
 
     // add soft global constraint
-    var constraint = Constraint.create({
+    var constraint = Matter.Constraint.create({
         bodyA: head,
         pointA: { x: (sw/2), y: (sh/5)-92.5 },
         bodyB: torso,
