@@ -42,8 +42,8 @@ html, body {
      flex-direction: row;
 }
 
-.counters  i{
-     margin-bottom: 20px;
+.title  i{
+     margin: 20px;
 }
 
 .counters  div{
