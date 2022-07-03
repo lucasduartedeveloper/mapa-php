@@ -255,12 +255,21 @@ function matterJs() {
     var legRA = Bodies.rectangle(sw/2+5, (sh/5)-25, 5, 20);
     var legRB = Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20);
     
+    var ceiling = Bodies.rectangle(sw/2, 5, sw, 10, { isStatic: true });
+
+    var wallA = Bodies.rectangle(5, sh/2, 10, sh, { isStatic: true });
+    
+    var wallB = Bodies.rectangle(5, sh/2, 10, sh, { isStatic: true });
+
     var ground = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 20, { isStatic: true });
     
     // add all of the bodies to the world
     Composite.add(engine.world, 
     [head, torso, armLA, armLB, armRA, armRB,
-     hips, legLA, legLB, legRA, legRB, ground]);
+    hips, legLA, legLB, legRA, legRB]);
+
+    Composite.add(engine.world, 
+    [ceiling, wallA, wallB, ground]);
 
     let mouse = Matter.Mouse.create(render.canvas);
     let mouseConstraint = 
