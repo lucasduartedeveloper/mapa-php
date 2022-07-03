@@ -218,6 +218,9 @@ function accHandler(acc) {
 function matterJs() {
     var sh = window.innerHeight;
     var sw = window.innerWidth;
+    var canvas = document.getElementById("matter-js");
+    canvas.width = sw;
+    canvas.height = sh/5;
 
     // module aliases
     var Engine = Matter.Engine,
@@ -234,9 +237,11 @@ function matterJs() {
         element: document.body,
         engine: engine,
         options: {
+             canvas: canvas,
              width: sw,
              height: sh/5,
-             wireframes: false
+             wireframes: false,
+             showPerformance: true
         }
     });
     
