@@ -245,9 +245,19 @@ function matterJs() {
     });
     
     // create two boxes and a ground
-    var boxA = Bodies.rectangle((sw/2)-50, (sh/5)-70, 80, 80);
-    var boxB = Bodies.rectangle(sw/2, (sh/5)-50, 80, 80);
-    var ground = Bodies.rectangle(sw/2, (sh/5)-30, sw/3, 60, { isStatic: true });
+    var head = Bodies.circle((sw/2), (sh/5)-70, 10, 10);
+    var torso = Bodies.rectangle(sw/2, (sh/5)-65, 5, 40);
+    var armLA = Bodies.rectangle(sw/2-5, (sh/5)-65, 5, 20);
+    var armLB = Bodies.rectangle(sw/2-5, (sh/5)-45, 5, 20);
+    var armRA = Bodies.rectangle(sw/2+5, (sh/5)-65, 5, 20);
+    var armRB = Bodies.rectangle(sw/2+5, (sh/5)-45, 5, 20);
+    var hips = Bodies.rectangle(sw/2, (sh/5)-47.5, 15, 5);
+    var legLA = Bodies.rectangle(sw/2-5, (sh/5)-20, 5, 20);
+    var legLB = Bodies.rectangle(sw/2-5, (sh/5)-10, 5, 20);
+    var legRA = Bodies.rectangle(sw/2+5, (sh/5)-20, 5, 20);
+    var legRB = Bodies.rectangle(sw/2+5, (sh/5)-10, 5, 20);
+    
+    var ground = Bodies.rectangle(sw/2, (sh/5)-20, sw/3, 40, { isStatic: true });
     
     // add all of the bodies to the world
     Composite.add(engine.world, [boxA, boxB, ground]);
