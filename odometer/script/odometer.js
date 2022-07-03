@@ -262,7 +262,7 @@ function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, 
     [head, torso, armLA, armLB, armRA, armRB,
-     hips, legLA, legLB, legRA, legRB]);
+     hips, legLA, legLB, legRA, legRB, ground]);
     
     // run the renderer
     Render.run(render);
