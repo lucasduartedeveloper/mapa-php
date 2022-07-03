@@ -259,7 +259,7 @@ function matterJs() {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
     var armLA = 
-    Bodies.rectangle(sw/2-5, (sh/5)-60, 5, 20, {
+    Bodies.rectangle(sw/2-5, (sh/5)-70, 5, 20, {
     render: {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
@@ -269,7 +269,7 @@ function matterJs() {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
     var armRA = 
-    Bodies.rectangle(sw/2+5, (sh/5)-60, 5, 20, {
+    Bodies.rectangle(sw/2+5, (sh/5)-70, 5, 20, {
     render: {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
