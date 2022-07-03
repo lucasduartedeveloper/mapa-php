@@ -233,9 +233,10 @@ function matterJs() {
     var engine = Engine.create();
     
     // create a renderer
-    var render = Render.create(canvas, {
+    var render = Render.create({
         element: document.body,
         engine: engine,
+        canvas: canvas
         options: {
              width: sw,
              height: sh/5,
