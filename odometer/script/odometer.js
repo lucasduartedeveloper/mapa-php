@@ -259,7 +259,7 @@ function matterJs() {
 
     var wallA = Bodies.rectangle(5, sh/2, 10, sh, { isStatic: true });
     
-    var wallB = Bodies.rectangle(5, sh/2, sw-5, sh, { isStatic: true });
+    var wallB = Bodies.rectangle(sw-5, sh/2, 10, sh, { isStatic: true });
 
     var ground = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 20, { isStatic: true });
     
