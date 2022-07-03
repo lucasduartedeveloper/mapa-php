@@ -234,7 +234,6 @@ function matterJs() {
     
     // create a renderer
     var render = Render.create({
-        element: document.body,
         engine: engine,
         canvas: canvas
         options: {

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=29">
+<link rel="stylesheet" href="css/style.css?v=30">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -29,9 +29,7 @@
 
 <title></title>
 </head>
-<body id="container">
-
-<canvas id="matter-js"></canvas>
+<body>
 
 <p id="title">
      ODOMETER
@@ -45,6 +43,8 @@
      <span class="counter" id="counter-ccw">000000</span>
 </div>
 
+<canvas id="matter-js"></canvas>
+
 <div id="circle">
      <span id="cp0"></span>
      <span id="cp1"></span>
@@ -54,7 +54,7 @@
 </div>
 
 <p id="version-info">
-     ODOMETER v29.0.41
+     ODOMETER v30.0.42
      <br>
      <span id="server-info">
      CONNECTING...
@@ -82,7 +82,7 @@
 <script src="script/matter.min.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/odometer.js?v=41"></script>
+<script src="script/odometer.js?v=42"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

@@ -124,13 +124,3 @@ html, body {
 		transform: translateY(0);
 	}
 }
-
-#matter-js {
-    position: fixed;
-    top: 0px;
-}
-
-#container {
-    height: 100vh;
-    width: 100vw;
-}
