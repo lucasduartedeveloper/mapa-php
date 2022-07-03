@@ -217,7 +217,7 @@ var sh = window.innerHeight;
 var sw = window.innerWidth;
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
-canvas.height = sh/4;
+canvas.height = sh/3;
 
 // module aliases
 var Engine = Matter.Engine,
@@ -235,7 +235,7 @@ var render = Render.create({
     canvas: canvas,
     options: {
          width: sw,
-         height: sh/4,
+         height: sh/3,
          wireframes: false
          //showPerformance: true
     }
@@ -310,25 +310,25 @@ function matterJs() {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
 
-    var wallA = Bodies.rectangle(5, sh/4, 10, sh,
+    var wallA = Bodies.rectangle(5, sh/3, 10, sh,
     { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
     
-    var wallB = Bodies.rectangle(sw-5, sh/4, 10, sh, 
+    var wallB = Bodies.rectangle(sw-5, sh/3, 10, sh, 
     { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
 
-    var stage = Bodies.rectangle(sw/2, (sh/4)-10, sw/2, 20,
+    var stage = Bodies.rectangle(sw/2, (sh/3)-10, sw/2, 20,
     { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
 
-    var ground = Bodies.rectangle(sw/2, (sh/4)-5, sw, 10,
+    var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
    { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
