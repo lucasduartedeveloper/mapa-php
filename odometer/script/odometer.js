@@ -102,6 +102,11 @@ var counterCcw = 0;
 $(document).ready(function() {
     matterJs();
     getOdometer();
+
+    $("#title").on("click", function () {
+        raiseLeftArm();
+    });
+
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "ODOMETER" &&
@@ -240,100 +245,111 @@ var render = Render.create({
          //showPerformance: true
     }
 });
+
+
+
+// create two boxes and a ground
+var head = 
+Bodies.circle((sw/2), (sh/5)-95, 10, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var shoulders = 
+Bodies.rectangle(sw/2, (sh/5)-82.5, 15, 5, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var torso = 
+Bodies.rectangle(sw/2, (sh/5)-60, 5, 40, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var armLA = 
+Bodies.rectangle(sw/2-5, (sh/5)-70, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var armLB = 
+Bodies.rectangle(sw/2-5, (sh/5)-50, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var armRA = 
+Bodies.rectangle(sw/2+5, (sh/5)-70, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var armRB = 
+Bodies.rectangle(sw/2+5, (sh/5)-50, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var hips = 
+Bodies.rectangle(sw/2, (sh/5)-37.5, 15, 5, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var legLA = 
+Bodies.rectangle(sw/2-5, (sh/5)-25, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var legLB = 
+Bodies.rectangle(sw/2-5, (sh/5)-15, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var legRA = 
+Bodies.rectangle(sw/2+5, (sh/5)-25, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
+var legRB = 
+Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
     
+var ceiling = Bodies.rectangle(sw/2, 5, sw, 10,
+{ isStatic: true,
+    render: {
+         fillStyle: '#2f2e40',
+         strokeStyle: '#2f2e40' }});
+
+var wallA = Bodies.rectangle(5, sh/3, 10, sh,
+{ isStatic: true,
+    render: {
+         fillStyle: '#2f2e40',
+         strokeStyle: '#2f2e40' }});
+    
+var wallB = Bodies.rectangle(sw-5, sh/3, 10, sh, 
+{ isStatic: true,
+    render: {
+         fillStyle: '#2f2e40',
+         strokeStyle: '#2f2e40' }});
+
+var stage = Bodies.rectangle(sw/2, (sh/3)-10, sw/2, 20,
+{ isStatic: true,
+    render: {
+         fillStyle: '#2f2e40',
+         strokeStyle: '#2f2e40' }});
+
+var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
+{ isStatic: true,
+    render: {
+         fillStyle: '#2f2e40',
+         strokeStyle: '#2f2e40' }});
+
+
+function raiseLeftArm() {
+    Matter.Body.
+    applyForce(armLB, {
+    x: armLB.position.x, 
+    y: armLB.position.y }, 
+    {x: 0.05, y: -0.05});
+}
+
 function matterJs() {
-    // create two boxes and a ground
-    var head = 
-    Bodies.circle((sw/2), (sh/5)-95, 10, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var shoulders = 
-    Bodies.rectangle(sw/2, (sh/5)-82.5, 15, 5, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var torso = 
-    Bodies.rectangle(sw/2, (sh/5)-60, 5, 40, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var armLA = 
-    Bodies.rectangle(sw/2-5, (sh/5)-70, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var armLB = 
-    Bodies.rectangle(sw/2-5, (sh/5)-50, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var armRA = 
-    Bodies.rectangle(sw/2+5, (sh/5)-70, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var armRB = 
-    Bodies.rectangle(sw/2+5, (sh/5)-50, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var hips = 
-    Bodies.rectangle(sw/2, (sh/5)-37.5, 15, 5, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var legLA = 
-    Bodies.rectangle(sw/2-5, (sh/5)-25, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var legLB = 
-    Bodies.rectangle(sw/2-5, (sh/5)-15, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var legRA = 
-    Bodies.rectangle(sw/2+5, (sh/5)-25, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    var legRB = 
-    Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-    
-    var ceiling = Bodies.rectangle(sw/2, 5, sw, 10,
-    { isStatic: true,
-    render: {
-         fillStyle: '#2f2e40',
-         strokeStyle: '#2f2e40' }});
-
-    var wallA = Bodies.rectangle(5, sh/3, 10, sh,
-    { isStatic: true,
-    render: {
-         fillStyle: '#2f2e40',
-         strokeStyle: '#2f2e40' }});
-    
-    var wallB = Bodies.rectangle(sw-5, sh/3, 10, sh, 
-    { isStatic: true,
-    render: {
-         fillStyle: '#2f2e40',
-         strokeStyle: '#2f2e40' }});
-
-    var stage = Bodies.rectangle(sw/2, (sh/3)-10, sw/2, 20,
-    { isStatic: true,
-    render: {
-         fillStyle: '#2f2e40',
-         strokeStyle: '#2f2e40' }});
-
-    var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
-   { isStatic: true,
-    render: {
-         fillStyle: '#2f2e40',
-         strokeStyle: '#2f2e40' }});
-    
     // add all of the bodies to the world
     Composite.add(engine.world, 
     [head, torso, armLA, armLB, armRA, armRB,
