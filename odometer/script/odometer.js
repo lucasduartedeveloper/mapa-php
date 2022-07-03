@@ -248,6 +248,11 @@ function matterJs() {
     render: {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
+    var shoulders = 
+    Bodies.rectangle(sw/2, (sh/5)-62.5, 15, 5, {
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' }});
     var torso = 
     Bodies.rectangle(sw/2, (sh/5)-60, 5, 40, {
     render: {
@@ -352,6 +357,18 @@ function matterJs() {
     Matter.Constraint.create({
         bodyA: head,
         pointA: { x: 0, y: 0 },
+        bodyB: shoulders,
+        pointB: { x: 0, y: 0 },
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff',
+            lineWidth: 1,
+            type: 'line'
+        }
+    }),
+    Matter.Constraint.create({
+        bodyA: shoulders,
+        pointA: { x: 0, y: 0 },
         bodyB: torso,
         pointB: { x: 0, y: -17.5 },
         stiffness: 0.5,
@@ -362,8 +379,8 @@ function matterJs() {
         }
     }),
     Matter.Constraint.create({
-        bodyA: torso,
-        pointA: { x: 0, y: -17.5 },
+        bodyA: shoulders,
+        pointA: { x: -5, y: 0 },
         bodyB: armLA,
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
@@ -386,8 +403,8 @@ function matterJs() {
         }
     }),
     Matter.Constraint.create({
-        bodyA: torso,
-        pointA: { x: 0, y: -17.5 },
+        bodyA: shoulders,
+        pointA: { x: 5, y: 0 },
         bodyB: armRA,
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
