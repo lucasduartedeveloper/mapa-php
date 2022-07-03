@@ -215,7 +215,6 @@ function accHandler(acc) {
     }
 }
 
-function matterJs() {
     var sh = window.innerHeight;
     var sw = window.innerWidth;
     var canvas = document.getElementById("matter-js");
@@ -244,6 +243,7 @@ function matterJs() {
         }
     });
     
+function matterJs() {
     // create two boxes and a ground
     var head = Bodies.circle((sw/2), (sh/5)-92.5, 10, 10);
     var torso = Bodies.rectangle(sw/2, (sh/5)-62.5, 5, 40);
@@ -397,12 +397,8 @@ function matterJs() {
         }
     }),
     mouseConstraint];
-
     Composite.add(engine.world, constraints);
 
-    // add stiff multi-body constraint
-    var bodyA = Bodies.polygon(100, 400, 6, 20);
-    
     // run the renderer
     Render.run(render);
     
