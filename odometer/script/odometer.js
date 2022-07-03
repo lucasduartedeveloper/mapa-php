@@ -260,7 +260,9 @@ function matterJs() {
     var ground = Bodies.rectangle(sw/2, (sh/5)-20, sw/3, 40, { isStatic: true });
     
     // add all of the bodies to the world
-    Composite.add(engine.world, [boxA, boxB, ground]);
+    Composite.add(engine.world, 
+    [head, torso, armLA, armLB, armRA, armRB,
+     hips, legLA, legLB, legRA, legRB]);
     
     // run the renderer
     Render.run(render);
