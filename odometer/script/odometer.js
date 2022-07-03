@@ -162,10 +162,8 @@ function accHandler(acc) {
     x = ((95 / 9.8) * accX)* -1;
     y = (95 / 9.8) * accY;
 
-    /*
-    $("#circle").css("margin-left", x.toString() + "px");
-    $("#circle").css("margin-left", y.toString() + "px");
-    */
+    engine.world.gravity.x = 9.8 * accX;
+    engine.world.gravity.y = 9.8 * accY;
 
     $("#pointer").css("margin-left", x.toString() + "px");
     $("#pointer").css("margin-top", y.toString() + "px");
@@ -215,33 +213,33 @@ function accHandler(acc) {
     }
 }
 
-    var sh = window.innerHeight;
-    var sw = window.innerWidth;
-    var canvas = document.getElementById("matter-js");
-    canvas.width = sw;
-    canvas.height = sh/5;
+var sh = window.innerHeight;
+var sw = window.innerWidth;
+var canvas = document.getElementById("matter-js");
+canvas.width = sw;
+canvas.height = sh/5;
 
-    // module aliases
-    var Engine = Matter.Engine,
-        Render = Matter.Render,
-        Runner = Matter.Runner,
-        Bodies = Matter.Bodies,
-        Composite = Matter.Composite;
+// module aliases
+var Engine = Matter.Engine,
+    Render = Matter.Render,
+    Runner = Matter.Runner,
+    Bodies = Matter.Bodies,
+    Composite = Matter.Composite;
     
-    // create an engine
-    var engine = Engine.create();
+// create an engine
+var engine = Engine.create();
     
-    // create a renderer
-    var render = Render.create({
-        engine: engine,
-        canvas: canvas,
-        options: {
-             width: sw,
-             height: sh/5,
-             wireframes: false
-             //showPerformance: true
-        }
-    });
+// create a renderer
+var render = Render.create({
+    engine: engine,
+    canvas: canvas,
+    options: {
+         width: sw,
+         height: sh/5,
+         wireframes: false
+         //showPerformance: true
+    }
+});
     
 function matterJs() {
     // create two boxes and a ground
