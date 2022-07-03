@@ -281,90 +281,120 @@ function matterJs() {
         pointA: { x: 0, y: 0 },
         bodyB: torso,
         pointB: { x: 0, y: -17.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: torso,
         pointA: { x: 0, y: -17.5 },
         bodyB: armLA,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: armLA,
         pointA: { x: 0, y: 7.5 },
         bodyB: armLB,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: torso,
         pointA: { x: 0, y: -17.5 },
         bodyB: armRA,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: armRA,
         pointA: { x: 0, y: 7.5 },
         bodyB: armRB,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: torso,
         pointA: { x: 0, y: 17.5 },
         bodyB: hips,
         pointB: { x: 0, y: 0 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: hips,
         pointA: { x: 0, y: -5 },
         bodyB: legLA,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: legLA,
         pointA: { x: 0, y: 7.5 },
         bodyB: legLB,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: hips,
         pointA: { x: 0, y: 5 },
         bodyB: legRA,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     Matter.Constraint.create({
         bodyA: legRA,
         pointA: { x: 0, y: 7.5 },
         bodyB: legRB,
         pointB: { x: 0, y: -7.5 },
-        stiffness: 0.1,
-        lineWidth: 1,
-        type: 'line'
+        stiffness: 0.5,
+        render: {
+            strokeStyle: '#fff'
+            lineWidth: 1,
+            type: 'line'
+        }
     }),
     mouseConstraint];
 
