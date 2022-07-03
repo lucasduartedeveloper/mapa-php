@@ -350,7 +350,7 @@ function matterJs() {
     }),
     Matter.Constraint.create({
         bodyA: hips,
-        pointA: { x: 0, y: -5 },
+        pointA: { x: -5, y: 0 },
         bodyB: legLA,
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
@@ -374,7 +374,7 @@ function matterJs() {
     }),
     Matter.Constraint.create({
         bodyA: hips,
-        pointA: { x: 0, y: 5 },
+        pointA: { x: 5, y: 0 },
         bodyB: legRA,
         pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
