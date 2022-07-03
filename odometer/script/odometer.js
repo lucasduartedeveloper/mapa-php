@@ -307,7 +307,7 @@ function matterJs() {
 
     var stage = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 20, { isStatic: true });
 
-    var ground = Bodies.rectangle(5, (sh/5)-5, sw, 10, { isStatic: true });
+    var ground = Bodies.rectangle(sw/2, (sh/5)-5, sw, 10, { isStatic: true });
     
     // add all of the bodies to the world
     Composite.add(engine.world, 
