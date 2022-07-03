@@ -343,10 +343,10 @@ var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
 
 function raiseLeftArm() {
     Matter.Body.
-    applyForce(armLB, {
-    x: armLB.position.x, 
-    y: armLB.position.y }, 
-    {x: 0.05, y: -0.05});
+    applyForce(armRB, {
+    x: armRB.position.x, 
+    y: armRB.position.y }, 
+    {x: 0.01, y: -0.01});
 }
 
 function matterJs() {
