@@ -280,43 +280,57 @@ function matterJs() {
         bodyA: head,
         pointA: { x: 0, y: 0 },
         bodyB: torso,
-        pointB: { x: 0, y: -10 },
-        stiffness: 0.001
+        pointB: { x: 0, y: -17.5 },
+        stiffness: 0.1
     }),
     Matter.Constraint.create({
         bodyA: torso,
-        pointA: { x: 0, y: -10 },
+        pointA: { x: 0, y: -17.5 },
         bodyB: armLA,
-        pointB: { x: 0, y: -5 },
-        stiffness: 0.001
+        pointB: { x: 0, y: -7.5 },
+        stiffness: 0.1
+    }),
+    Matter.Constraint.create({
+        bodyA: armLA,
+        pointA: { x: 0, y: 7.5 },
+        bodyB: armLB,
+        pointB: { x: 0, y: -7.5 },
+        stiffness: 0.1
     }),
     Matter.Constraint.create({
         bodyA: torso,
-        pointA: { x: 0, y: 0 },
+        pointA: { x: 0, y: -17.5 },
         bodyB: armRA,
-        pointB: { x: 0, y: -10 },
-        stiffness: 0.001
+        pointB: { x: 0, y: -7.5 },
+        stiffness: 0.1
+    }),
+    Matter.Constraint.create({
+        bodyA: armRA,
+        pointA: { x: 0, y: 7.5 },
+        bodyB: armRB,
+        pointB: { x: 0, y: -7.5 },
+        stiffness: 0.1
     }),
     Matter.Constraint.create({
         bodyA: torso,
-        pointA: { x: 0, y: 10 },
+        pointA: { x: 0, y: 17.5 },
         bodyB: hips,
         pointB: { x: 0, y: 0 },
-        stiffness: 0.001
+        stiffness: 0.1
     }),
     Matter.Constraint.create({
         bodyA: hips,
         pointA: { x: 0, y: -5 },
         bodyB: legLA,
-        pointB: { x: 0, y: -5 },
-        stiffness: 0.001
+        pointB: { x: 0, y: -7.5 },
+        stiffness: 0.1
     }),
     Matter.Constraint.create({
         bodyA: hips,
         pointA: { x: 0, y: 5 },
         bodyB: legRA,
-        pointB: { x: 0, y: -5 },
-        stiffness: 0.001
+        pointB: { x: 0, y: -7.5 },
+        stiffness: 0.1
     }),
     mouseConstraint];
 
