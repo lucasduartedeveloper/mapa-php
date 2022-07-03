@@ -346,7 +346,7 @@ function raiseLeftArm() {
     applyForce(armRB, {
     x: armRB.position.x, 
     y: armRB.position.y }, 
-    {x: 0.01, y: -0.01});
+    {x: 0.005, y: -0.01});
 }
 
 function matterJs() {
