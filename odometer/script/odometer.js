@@ -214,6 +214,49 @@ function accHandler(acc) {
     }
 }
 
+function matterJs() {
+    var sh = window.innerHeight,
+    var sw = window.innerWidth;
+
+    // module aliases
+    var Engine = Matter.Engine,
+        Render = Matter.Render,
+        Runner = Matter.Runner,
+        Bodies = Matter.Bodies,
+        Composite = Matter.Composite;
+    
+    // create an engine
+    var engine = Engine.create();
+    
+    // create a renderer
+    var render = Render.create({
+        element: document.body,
+        engine: engine,
+        options: {
+             width: sw,
+             height: sh/5,
+             wireframes: false
+        }
+    });
+    
+    // create two boxes and a ground
+    var boxA = Bodies.rectangle((sw/2)-50, (sh/5)-70, 80, 80);
+    var boxB = Bodies.rectangle(sw/2, (sh/5)-50, 80, 80);
+    var ground = Bodies.rectangle(sw/2, (sh/5)-30, sw/3, 60, { isStatic: true });
+    
+    // add all of the bodies to the world
+    Composite.add(engine.world, [boxA, boxB, ground]);
+    
+    // run the renderer
+    Render.run(render);
+    
+    // create runner
+    var runner = Runner.create();
+
+    // run the engine
+    Runner.run(runner, engine);
+}
+
 function getOdometer() {
      $.getJSON("ajax/odometer.php", function(data) {
           counterCw = parseInt(data[0].valor);
