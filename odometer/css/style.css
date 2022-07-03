@@ -126,7 +126,7 @@ html, body {
 }
 
 #matter-js {
-    position: absolute;
+    position: fixed;
     top: 0px;
 }
 
