@@ -299,35 +299,35 @@ function matterJs() {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
     
-    var ceiling = Bodies.rectangle(sw/2, 5, sw, 10, { isStatic: true,
+    var ceiling = Bodies.rectangle(sw/2, 5, sw, 10,
+    { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
-    });
 
-    var wallA = Bodies.rectangle(5, sh/2, 10, sh, { isStatic: true,
+    var wallA = Bodies.rectangle(5, sh/2, 10, sh,
+    { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
-    });
     
-    var wallB = Bodies.rectangle(sw-5, sh/2, 10, sh, { isStatic: true,
+    var wallB = Bodies.rectangle(sw-5, sh/2, 10, sh, 
+    { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
-    });
 
-    var stage = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 20, { isStatic: true,
+    var stage = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 20,
+    { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
-    });
 
-    var ground = Bodies.rectangle(sw/2, (sh/5)-5, sw, 10, { isStatic: true,
+    var ground = Bodies.rectangle(sw/2, (sh/5)-5, sw, 10,
+   { isStatic: true,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
-    });
     
     // add all of the bodies to the world
     Composite.add(engine.world, 
