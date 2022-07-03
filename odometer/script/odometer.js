@@ -279,7 +279,47 @@ function matterJs() {
         bodyA: head,
         pointA: { x: 0, y: 0 },
         bodyB: torso,
-        pointB: { x: 0, y: -10},
+        pointB: { x: 0, y: -10 },
+        stiffness: 0.001
+    });
+    // add soft global constraint
+    var constraint = Matter.Constraint.create({
+        bodyA: torso,
+        pointA: { x: 0, y: -10 },
+        bodyB: armLA,
+        pointB: { x: 0, y: -5 },
+        stiffness: 0.001
+    });
+    // add soft global constraint
+    var constraint = Matter.Constraint.create({
+        bodyA: torso,
+        pointA: { x: 0, y: 0 },
+        bodyB: armRA,
+        pointB: { x: 0, y: -10 },
+        stiffness: 0.001
+    });
+    // add soft global constraint
+    var constraint = Matter.Constraint.create({
+        bodyA: torso,
+        pointA: { x: 0, y: 10 },
+        bodyB: hips,
+        pointB: { x: 0, y: 0 },
+        stiffness: 0.001
+    });
+    // add soft global constraint
+    var constraint = Matter.Constraint.create({
+        bodyA: hips,
+        pointA: { x: 0, y: -5 },
+        bodyB: legLA,
+        pointB: { x: 0, y: -5 },
+        stiffness: 0.001
+    });
+    // add soft global constraint
+    var constraint = Matter.Constraint.create({
+        bodyA: hips,
+        pointA: { x: 0, y: 5 },
+        bodyB: legRA,
+        pointB: { x: 0, y: -5 },
         stiffness: 0.001
     });
 
