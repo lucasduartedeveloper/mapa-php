@@ -244,7 +244,7 @@ var render = Render.create({
 function matterJs() {
     // create two boxes and a ground
     var head = 
-    Bodies.circle((sw/2), (sh/5)-65, 10, 10, {
+    Bodies.circle((sw/2), (sh/5)-65, 10, {
     render: {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
