@@ -243,19 +243,19 @@ var render = Render.create({
     
 function matterJs() {
     // create two boxes and a ground
-    var head = Bodies.circle((sw/2), (sh/5)-92.5, 10, 10);
-    var torso = Bodies.rectangle(sw/2, (sh/5)-62.5, 5, 40);
-    var armLA = Bodies.rectangle(sw/2-5, (sh/5)-62.5, 5, 20);
-    var armLB = Bodies.rectangle(sw/2-5, (sh/5)-52.5, 5, 20);
-    var armRA = Bodies.rectangle(sw/2+5, (sh/5)-62.5, 5, 20);
-    var armRB = Bodies.rectangle(sw/2+5, (sh/5)-52.5, 5, 20);
-    var hips = Bodies.rectangle(sw/2, (sh/5)-42.5, 15, 5);
-    var legLA = Bodies.rectangle(sw/2-5, (sh/5)-20, 5, 20);
-    var legLB = Bodies.rectangle(sw/2-5, (sh/5)-10, 5, 20);
-    var legRA = Bodies.rectangle(sw/2+5, (sh/5)-20, 5, 20);
-    var legRB = Bodies.rectangle(sw/2+5, (sh/5)-10, 5, 20);
+    var head = Bodies.circle((sw/2), (sh/5)-65, 10, 10);
+    var torso = Bodies.rectangle(sw/2, (sh/5)-60, 5, 40);
+    var armLA = Bodies.rectangle(sw/2-5, (sh/5)-60, 5, 20);
+    var armLB = Bodies.rectangle(sw/2-5, (sh/5)-50, 5, 20);
+    var armRA = Bodies.rectangle(sw/2+5, (sh/5)-60, 5, 20);
+    var armRB = Bodies.rectangle(sw/2+5, (sh/5)-50, 5, 20);
+    var hips = Bodies.rectangle(sw/2, (sh/5)-37.5, 15, 5);
+    var legLA = Bodies.rectangle(sw/2-5, (sh/5)-25, 5, 20);
+    var legLB = Bodies.rectangle(sw/2-5, (sh/5)-15, 5, 20);
+    var legRA = Bodies.rectangle(sw/2+5, (sh/5)-25, 5, 20);
+    var legRB = Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20);
     
-    var ground = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 40, { isStatic: true });
+    var ground = Bodies.rectangle(sw/2, (sh/5)-10, sw/2, 20, { isStatic: true });
     
     // add all of the bodies to the world
     Composite.add(engine.world, 
