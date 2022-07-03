@@ -355,9 +355,9 @@ function matterJs() {
     // add soft global constraint
     var constraints = [
     Matter.Constraint.create({
-        pointA: { x: (sw/2), y: -95 },
+        pointA: { x: (sw/2), y: 0 },
         bodyB: head,
-        pointB: { x: 0, y: 0 },
+        pointB: { x: 0, y: -7.5 },
         stiffness: 0.5,
         render: {
             strokeStyle: '#fff',

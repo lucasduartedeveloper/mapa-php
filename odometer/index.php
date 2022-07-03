@@ -56,7 +56,7 @@
 </div>
 
 <p id="version-info">
-     ODOMETER v36.0.85
+     ODOMETER v36.0.86
      <br>
      <span id="server-info">
      CONNECTING...
@@ -84,7 +84,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/odometer.js?v=85"></script>
+<script src="script/odometer.js?v=86"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
