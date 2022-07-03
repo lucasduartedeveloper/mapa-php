@@ -275,56 +275,52 @@ function matterJs() {
     render.mouse = mouse;
 
     // add soft global constraint
-    var constraint = Matter.Constraint.create({
+    var constraints = [
+    Matter.Constraint.create({
         bodyA: head,
         pointA: { x: 0, y: 0 },
         bodyB: torso,
         pointB: { x: 0, y: -10 },
         stiffness: 0.001
-    });
-    // add soft global constraint
-    var constraint = Matter.Constraint.create({
+    }),
+    Matter.Constraint.create({
         bodyA: torso,
         pointA: { x: 0, y: -10 },
         bodyB: armLA,
         pointB: { x: 0, y: -5 },
         stiffness: 0.001
-    });
-    // add soft global constraint
-    var constraint = Matter.Constraint.create({
+    }),
+    Matter.Constraint.create({
         bodyA: torso,
         pointA: { x: 0, y: 0 },
         bodyB: armRA,
         pointB: { x: 0, y: -10 },
         stiffness: 0.001
-    });
-    // add soft global constraint
-    var constraint = Matter.Constraint.create({
+    }),
+    Matter.Constraint.create({
         bodyA: torso,
         pointA: { x: 0, y: 10 },
         bodyB: hips,
         pointB: { x: 0, y: 0 },
         stiffness: 0.001
-    });
-    // add soft global constraint
-    var constraint = Matter.Constraint.create({
+    }),
+    Matter.Constraint.create({
         bodyA: hips,
         pointA: { x: 0, y: -5 },
         bodyB: legLA,
         pointB: { x: 0, y: -5 },
         stiffness: 0.001
-    });
-    // add soft global constraint
-    var constraint = Matter.Constraint.create({
+    }),
+    Matter.Constraint.create({
         bodyA: hips,
         pointA: { x: 0, y: 5 },
         bodyB: legRA,
         pointB: { x: 0, y: -5 },
         stiffness: 0.001
-    });
+    }),
+    mouseConstraint];
 
-    Composite.add(engine.world, 
-    [constraint, mouseConstraint]);
+    Composite.add(engine.world, constraints);
 
     // add stiff multi-body constraint
     var bodyA = Bodies.polygon(100, 400, 6, 20);
