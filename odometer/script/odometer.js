@@ -100,6 +100,7 @@ var counterCw = 0;
 var counterCcw = 0;
 
 $(document).ready(function() {
+    matterJs();
     getOdometer();
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
@@ -215,7 +216,7 @@ function accHandler(acc) {
 }
 
 function matterJs() {
-    var sh = window.innerHeight,
+    var sh = window.innerHeight;
     var sw = window.innerWidth;
 
     // module aliases
