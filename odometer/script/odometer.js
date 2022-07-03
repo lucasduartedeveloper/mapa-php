@@ -245,13 +245,13 @@ function matterJs() {
     });
     
     // create two boxes and a ground
-    var head = Bodies.circle((sw/2), (sh/5)-70, 10, 10);
-    var torso = Bodies.rectangle(sw/2, (sh/5)-65, 5, 40);
-    var armLA = Bodies.rectangle(sw/2-5, (sh/5)-65, 5, 20);
-    var armLB = Bodies.rectangle(sw/2-5, (sh/5)-45, 5, 20);
-    var armRA = Bodies.rectangle(sw/2+5, (sh/5)-65, 5, 20);
-    var armRB = Bodies.rectangle(sw/2+5, (sh/5)-45, 5, 20);
-    var hips = Bodies.rectangle(sw/2, (sh/5)-47.5, 15, 5);
+    var head = Bodies.circle((sw/2), (sh/5)-92.5, 10, 10);
+    var torso = Bodies.rectangle(sw/2, (sh/5)-62.5, 5, 40);
+    var armLA = Bodies.rectangle(sw/2-5, (sh/5)-62.5, 5, 20);
+    var armLB = Bodies.rectangle(sw/2-5, (sh/5)-52.5, 5, 20);
+    var armRA = Bodies.rectangle(sw/2+5, (sh/5)-62.5, 5, 20);
+    var armRB = Bodies.rectangle(sw/2+5, (sh/5)-52.5, 5, 20);
+    var hips = Bodies.rectangle(sw/2, (sh/5)-42.5, 15, 5);
     var legLA = Bodies.rectangle(sw/2-5, (sh/5)-20, 5, 20);
     var legLB = Bodies.rectangle(sw/2-5, (sh/5)-10, 5, 20);
     var legRA = Bodies.rectangle(sw/2+5, (sh/5)-20, 5, 20);
@@ -263,6 +263,31 @@ function matterJs() {
     Composite.add(engine.world, 
     [head, torso, armLA, armLB, armRA, armRB,
      hips, legLA, legLB, legRA, legRB, ground]);
+
+    let mouse = Matter.Mouse.create(render.canvas);
+    let mouseConstraint = 
+    Matter.MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+            render: {visible: true}
+        }
+    });
+    render.mouse = mouse;
+
+    // add soft global constraint
+    var constraint = Constraint.create({
+        bodyA: head,
+        pointA: { x: (sw/2), y: (sh/5)-92.5 },
+        bodyB: torso,
+        pointB: { x: (sw/2), y: (sh/5)-82.5},
+        stiffness: 0.001
+    });
+
+    Composite.add(engine.world, 
+    [constraint, mouseConstraint]);
+
+    // add stiff multi-body constraint
+    var bodyA = Bodies.polygon(100, 400, 6, 20);
     
     // run the renderer
     Render.run(render);
