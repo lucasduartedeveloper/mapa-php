@@ -162,7 +162,7 @@ function accHandler(acc) {
     x = ((95 / 9.8) * accX)* -1;
     y = (95 / 9.8) * accY;
 
-    engine.world.gravity.x = (1 / 9.8) * accX;
+    engine.world.gravity.x = ((1 / 9.8) * accX)*-1;
     engine.world.gravity.y = (1 / 9.8) * accY;
 
     $("#pointer").css("margin-left", x.toString() + "px");
