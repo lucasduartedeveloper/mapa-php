@@ -125,9 +125,12 @@ html, body {
 	}
 }
 
-#container {
+#matter-js {
+    position: absolute;
+    top: 0px;
+}
 
+#container {
     height: 100vh;
     width: 100vw;
-
 }

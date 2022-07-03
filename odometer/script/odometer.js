@@ -240,8 +240,8 @@ function matterJs() {
              canvas: canvas,
              width: sw,
              height: sh/5,
-             wireframes: false,
-             showPerformance: true
+             wireframes: false
+             //showPerformance: true
         }
     });
     
