@@ -35,11 +35,11 @@ html, body {
 }
 
 .counters {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
 }
 
 .line {
@@ -60,6 +60,13 @@ html, body {
      background-color: #000;
      border: 2px solid #aaa;
      animation: odo 1s ease 0s 1 normal forwards;
+}
+
+.counter  div{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
 }
 
 #circle {

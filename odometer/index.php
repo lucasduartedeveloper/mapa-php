@@ -37,10 +37,12 @@
 <div class="counters">
 <i class="fa-solid fa-arrow-rotate-right"></i>
 <div>
+     <i class="fa-solid fa-arrow-rotate-right"></i>
      <span class="counter" id="counter-cw">000000</span>
 </div>
-<i class="fa-solid fa-arrow-rotate-left"></i>
+<div class="counters">
 <div>
+     <i class="fa-solid fa-arrow-rotate-left"></i>
      <span class="counter" id="counter-ccw">000000</span>
 </div>
 </div>
