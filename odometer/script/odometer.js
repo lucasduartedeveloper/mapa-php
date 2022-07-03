@@ -243,17 +243,61 @@ var render = Render.create({
     
 function matterJs() {
     // create two boxes and a ground
-    var head = Bodies.circle((sw/2), (sh/5)-65, 10, 10);
-    var torso = Bodies.rectangle(sw/2, (sh/5)-60, 5, 40);
-    var armLA = Bodies.rectangle(sw/2-5, (sh/5)-60, 5, 20);
-    var armLB = Bodies.rectangle(sw/2-5, (sh/5)-50, 5, 20);
-    var armRA = Bodies.rectangle(sw/2+5, (sh/5)-60, 5, 20);
-    var armRB = Bodies.rectangle(sw/2+5, (sh/5)-50, 5, 20);
-    var hips = Bodies.rectangle(sw/2, (sh/5)-37.5, 15, 5);
-    var legLA = Bodies.rectangle(sw/2-5, (sh/5)-25, 5, 20);
-    var legLB = Bodies.rectangle(sw/2-5, (sh/5)-15, 5, 20);
-    var legRA = Bodies.rectangle(sw/2+5, (sh/5)-25, 5, 20);
-    var legRB = Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20);
+    var head = 
+    Bodies.circle((sw/2), (sh/5)-65, 10, 10,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var torso = 
+    Bodies.rectangle(sw/2, (sh/5)-60, 5, 40,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var armLA = 
+    Bodies.rectangle(sw/2-5, (sh/5)-60, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var armLB = 
+    Bodies.rectangle(sw/2-5, (sh/5)-50, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var armRA = 
+    Bodies.rectangle(sw/2+5, (sh/5)-60, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var armRB = 
+    Bodies.rectangle(sw/2+5, (sh/5)-50, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var hips = 
+    Bodies.rectangle(sw/2, (sh/5)-37.5, 15, 5,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var legLA = 
+    Bodies.rectangle(sw/2-5, (sh/5)-25, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var legLB = 
+    Bodies.rectangle(sw/2-5, (sh/5)-15, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var legRA = 
+    Bodies.rectangle(sw/2+5, (sh/5)-25, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
+    var legRB = 
+    Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20,
+    render: {
+         fillStyle: '#cacab5',
+         strokeStyle: '#cacab5' });
     
     var ceiling = Bodies.rectangle(sw/2, 5, sw, 10, { isStatic: true });
 
