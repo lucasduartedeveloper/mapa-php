@@ -246,8 +246,6 @@ var render = Render.create({
     }
 });
 
-
-
 // create two boxes and a ground
 var head = 
 Bodies.circle((sw/2), (sh/5)-95, 10, {
@@ -346,7 +344,7 @@ function raiseLeftArm() {
     applyForce(armRB, {
     x: armRB.position.x, 
     y: armRB.position.y }, 
-    {x: 0.005, y: -0.01});
+    {x: 0.0025, y: -0.005});
 }
 
 function matterJs() {
