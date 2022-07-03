@@ -315,7 +315,7 @@ function matterJs() {
     hips, legLA, legLB, legRA, legRB]);
 
     Composite.add(engine.world, 
-    [ceiling, wallA, wallB, ground]);
+    [ceiling, wallA, wallB, stage, ground]);
 
     let mouse = Matter.Mouse.create(render.canvas);
     let mouseConstraint = 
