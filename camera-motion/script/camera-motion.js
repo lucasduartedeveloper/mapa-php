@@ -10,7 +10,6 @@ var counterCcw = 0;
 
 $(document).ready(function() {
      //matterJs();
-
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
           navigator.mediaDevices
@@ -21,8 +20,13 @@ $(document).ready(function() {
      }
 
      setInterval(function() {
-         var canvas = document.getElementById("camera-canvas");
+         var canvas = 
+         document.getElementById("camera-canvas");
+         var lightCanvas = 
+         document.getElementById("light-canvas");
+
          var context = canvas.getContext("2d");
+         var lightContext = canvas.getContext("2d");
 
          // ENVIAR
          var cnv = document.createElement("canvas");
@@ -36,17 +40,24 @@ $(document).ready(function() {
          };
 
          var imgData = ctx.getImageData(0, 0, 100, 100);
+         var lightImgData = lightContext.getImageData(0, 0, 100, 100);
          var data = imgData.data;
+         var lightData = lightImgData.data;
+
          var maxBrightness = 0;
+
          for (var i = 0; i < data.length; i += 4) {
               var brightness = 0.34 * data[i] + 
               0.5 * data[i + 1] + 0.16 * data[i + 2];
               // red
               data[i] = brightness;
+              lightData[i] = brightness;
               // green
               data[i + 1] = brightness;
+              lightData[i + 1] = brightness;
               // blue
               data[i + 2] = brightness;
+              lightData[i + 1] = brightness;
               
               if (brightness > maxBrightness) {
                   maxBrightness = brightness;
@@ -54,7 +65,6 @@ $(document).ready(function() {
                   light.y = 100 / (Math.floor(i/3)+1);
               }
          }
-
          console.log(light);
 
          // overwrite original image

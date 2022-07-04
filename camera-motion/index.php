@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=0">
+<link rel="stylesheet" href="css/style.css?v=1">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -38,8 +38,10 @@
 <video style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
+canvas width="100" height="100" id="light-canvas"></canvas>
+
 <p id="version-info">
-     CAMERA MOTION v0.0.2
+     CAMERA MOTION v1.0.3
      <br>
      <span id="server-info">
      CONNECTING...
@@ -65,7 +67,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/camera-motion.js?v=2"></script>
+<script src="script/camera-motion.js?v=3"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
