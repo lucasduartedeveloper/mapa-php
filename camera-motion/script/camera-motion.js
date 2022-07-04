@@ -9,7 +9,7 @@ var counterCw = 0;
 var counterCcw = 0;
 
 $(document).ready(function() {
-     //matterJs();
+     matterJs();
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
           navigator.mediaDevices
