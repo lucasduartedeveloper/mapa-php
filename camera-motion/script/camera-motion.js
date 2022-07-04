@@ -76,14 +76,13 @@ $(document).ready(function() {
          forceX = head.position.x - forceX;
          forceY = head.position.y - forceY;
 
-         console.log(forceX);
-         console.log(forceY)
-
 	  Matter.Body.
-            applyForce(armRB, {
+            applyForce(head, {
             x: head.position.x, 
-            y: head.position.y }, 
-           {x: 0.0025, y: -0.0025});
+            y: head.position.y }, {
+            x: 0.0025 * (forceX > 0 ? 1 : -1), 
+            y: 0.0025 * (forceY > 0 ? 1 : -1)
+         });
 
          // overwrite original image
          context.putImageData(imgData, 0, 0);
