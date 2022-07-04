@@ -72,7 +72,7 @@ $(document).ready(function() {
 
          // overwrite original image
          context.putImageData(imgData, 0, 0);
-         lightContext.putImageData(imgData, 0, 0);
+         lightContext.putImageData(lightImgData, 0, 0);
      }, 500);
 
      ws.onmessage = function(e) {
