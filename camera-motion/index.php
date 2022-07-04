@@ -44,7 +44,7 @@
 <span id="xy"></span>
 
 <p id="version-info">
-     CAMERA MOTION v1.0.27
+     CAMERA MOTION v1.0.28
      <br>
      <span id="server-info">
      CONNECTING...
@@ -70,7 +70,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/camera-motion.js?v=27"></script>
+<script src="script/camera-motion.js?v=28"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
