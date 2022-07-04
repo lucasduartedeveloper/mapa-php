@@ -145,6 +145,7 @@ var render = Render.create({
 var dot = 
 Bodies.circle((sw/2), 12.5, 5, {
     isStatic: true,
+    isSensor: true,
     render: {
          fillStyle: '#926314',
          strokeStyle: '#926314',
