@@ -73,6 +73,7 @@ $(document).ready(function() {
          var forceX = (sw / 100) * light.x;
          var forceY = ((sh/3) / 100) * light.y;
 
+         /*
          forceX = ((forceX - head.position.x) / sw) * 0.05;
          forceY = ((forceY - head.position.y) / (sh/3)) * 0.05;
 
@@ -85,6 +86,12 @@ $(document).ready(function() {
             y: head.position.y }, {
             x: forceX, 
             y: forceY
+         });*/
+
+         Matter.Body.
+            translate(head, {
+            x: forceX - head.position.x,
+            y: forceY  - head.position.y
          });
 
          // overwrite original image
