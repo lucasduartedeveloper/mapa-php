@@ -73,8 +73,8 @@ $(document).ready(function() {
          var forceX = (sw / 100) * light.x;
          var forceY = ((sh/3) / 100) * light.y;
 
-         forceX = head.position.x - forceX;
-         forceY = head.position.y - forceY;
+         forceX = ((head.position.x - forceX) / sw) * 0.025;
+         forceY = ((head.position.y - forceY) / (sh/3)) * 0.0025;
 
          console.log(forceX);
          console.log(forceY);
@@ -83,8 +83,8 @@ $(document).ready(function() {
             applyForce(head, {
             x: head.position.x, 
             y: head.position.y }, {
-            x: 0.05 * (forceX > 0 ? 1 : -1), 
-            y: 0.05 * (forceY > 0 ? 1 : -1)
+            x: forceX, 
+            y: forceY
          });
 
          // overwrite original image
