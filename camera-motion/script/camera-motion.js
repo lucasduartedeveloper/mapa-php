@@ -74,7 +74,7 @@ $(document).ready(function() {
          var forceY = ((sh/3) / 100) * light.y;
 
          forceX = ((head.position.x - forceX) / sw) * 0.025;
-         forceY = ((head.position.y - forceY) / (sh/3)) * 0.0025;
+         forceY = ((head.position.y - forceY) / (sh/3)) * 0.025;
 
          console.log(forceX);
          console.log(forceY);
