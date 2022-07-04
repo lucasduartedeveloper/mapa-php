@@ -39,7 +39,7 @@
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     CAMERA MOTION v0.0.1
+     CAMERA MOTION v0.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -65,7 +65,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/camera-motion.js?v=1"></script>
+<script src="script/camera-motion.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
