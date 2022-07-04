@@ -72,7 +72,7 @@ $(document).ready(function() {
          lightContext.putImageData(lightImgData, 0, 0);
 
          console.log(imgData);
-         console.loglightImgData);
+         console.log(lightImgData);
 
          var dataUrl = cnv.toDataURL("image/png");
 
