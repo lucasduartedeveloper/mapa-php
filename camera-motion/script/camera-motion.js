@@ -95,7 +95,7 @@ $(document).ready(function() {
          });
 
          Matter.Body.
-            translate(light, {
+            translate(dot, {
             x: forceX - light.position.x,
             y: forceY - light.position.y
          });
@@ -142,12 +142,12 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var isStatic: true, = 
+var dot = 
 Bodies.circle((sw/2), 12.5, 5, {
     isStatic: true,
     render: {
-         fillStyle: '#fff',
-         strokeStyle: '#fff',
+         fillStyle: '#926314',
+         strokeStyle: '#926314',
     }});
 
 var head = 
