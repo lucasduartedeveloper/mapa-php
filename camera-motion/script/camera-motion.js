@@ -96,8 +96,8 @@ $(document).ready(function() {
 
          Matter.Body.
             translate(dot, {
-            x: forceX - light.position.x,
-            y: forceY - light.position.y
+            x: forceX - dot.position.x,
+            y: forceY - dot.position.y
          });
 
          // overwrite original image
