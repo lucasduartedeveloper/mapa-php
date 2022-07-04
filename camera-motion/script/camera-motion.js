@@ -31,9 +31,13 @@ $(document).ready(function() {
          var ctx = cnv.getContext("2d");
 
          ctx.drawImage(video, 0, 0, 100, 100);
+         var light = {
+              x: 0, y: 0
+         };
 
          var imgData = ctx.getImageData(0, 0, 100, 100);
          var data = imgData.data;
+         var maxBrightness = 0;
          for (var i = 0; i < data.length; i += 4) {
               var brightness = 0.34 * data[i] + 
               0.5 * data[i + 1] + 0.16 * data[i + 2];
@@ -43,7 +47,15 @@ $(document).ready(function() {
               data[i + 1] = brightness;
               // blue
               data[i + 2] = brightness;
+              
+              if (brightness > maxBrightness) {
+                  maxBrightness = brightness;
+                  light.x = 100 % (Math.floor(i/3)+1);
+                  light.y = 100 / (Math.floor(i/3)+1);
+              }
          }
+
+         console.log(light);
 
          // overwrite original image
          ctx.putImageData(imgData, 0, 0);
