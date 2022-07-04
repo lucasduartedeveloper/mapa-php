@@ -38,7 +38,7 @@
 <video style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas"></canvas>
 
-canvas width="100" height="100" id="light-canvas"></canvas>
+<canvas width="100" height="100" id="light-canvas"></canvas>
 
 <p id="version-info">
      CAMERA MOTION v1.0.3
