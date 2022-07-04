@@ -90,14 +90,14 @@ $(document).ready(function() {
 
          Matter.Body.
             translate(head, {
-            x: forceX,
-            y: forceY
+            x: forceX - head.position.x,
+            y: forceY - head.position.y
          });
 
          Matter.Body.
             translate(dot, {
-            x: forceX,
-            y: forceY
+            x: forceX - dot.position.x,
+            y: forceY - dot.position.y
          });
 
          // overwrite original image
