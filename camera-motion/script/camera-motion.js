@@ -69,7 +69,10 @@ $(document).ready(function() {
 
          // overwrite original image
          ctx.putImageData(imgData, 0, 0);
-         lightContext.putImageData(imgData, 0, 0);
+         lightContext.putImageData(lightImgData, 0, 0);
+
+         console.log(imgData);
+         console.loglightImgData);
 
          var dataUrl = cnv.toDataURL("image/png");
 
