@@ -69,9 +69,8 @@ $(document).ready(function() {
          console.log(light);
 
          // overwrite original image
-         ctx.putImageData(imgData, 0, 0);
-         lightContext.putImageData(imgData, 0, 0);
-
+         //ctx.putImageData(imgData, 0, 0);
+         //lightContext.putImageData(imgData, 0, 0);
      }, 500);
 
      ws.onmessage = function(e) {
