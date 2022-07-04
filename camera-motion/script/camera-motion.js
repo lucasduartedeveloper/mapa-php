@@ -64,11 +64,12 @@ $(document).ready(function() {
               
               if (brightness > maxBrightness) {
                   maxBrightness = brightness;
-                  light.x = 100 % Math.floor(i/4);
-                  light.y = 100 / Math.floor(i/4);
+                  light.x = Math.floor(i/4) % 100;
+                  light.y = Math.floor(i/4) / 100;
               }
          }
          $("#xy").text("x: " + light.x + ", y: " + light.y);
+	
 
          // overwrite original image
          context.putImageData(imgData, 0, 0);
