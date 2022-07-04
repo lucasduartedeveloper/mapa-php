@@ -94,6 +94,12 @@ $(document).ready(function() {
             y: forceY  - head.position.y
          });
 
+         Matter.Body.
+            translate(light, {
+            x: forceX - light.position.x,
+            y: forceY - light.position.y
+         });
+
          // overwrite original image
          context.putImageData(imgData, 0, 0);
          lightContext.putImageData(lightImgData, 0, 0);
@@ -136,6 +142,14 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
+var isStatic: true, = 
+Bodies.circle((sw/2), 12.5, 5, {
+    isStatic: true,
+    render: {
+         fillStyle: '#fff',
+         strokeStyle: '#fff',
+    }});
+
 var head = 
 Bodies.circle((sw/2), (sh/5)-95, 10, {
     render: {
