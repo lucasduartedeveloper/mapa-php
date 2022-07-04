@@ -45,7 +45,7 @@ $(document).ready(function() {
               data[i + 2] = brightness;
          }
 
-         /* overwrite original image
+         // overwrite original image
          ctx.putImageData(imgData, 0, 0);
          var dataUrl = cnv.toDataURL("image/png");
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
          img.height = 100;
          img.style.objectFit = "cover";
 
-         // Gravar no banco de dados
+         /* Gravar no banco de dados
          saveFrame(cameraId, dataUrl); */
 
          img.onload = function() {
