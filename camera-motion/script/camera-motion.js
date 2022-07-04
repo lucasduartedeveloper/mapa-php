@@ -70,26 +70,8 @@ $(document).ready(function() {
 
          // overwrite original image
          ctx.putImageData(imgData, 0, 0);
-         lightContext.putImageData(lightImgData, 0, 0);
+         lightContext.putImageData(imgData, 0, 0);
 
-         //console.log(imgData);
-         //console.log(lightImgData);
-
-         var dataUrl = cnv.toDataURL("image/png");
-
-         var img = document.createElement("img");
-         img.width = 100;
-         img.height = 100;
-         img.style.objectFit = "cover";
-
-         /* Gravar no banco de dados
-         saveFrame(cameraId, dataUrl); */
-
-         img.onload = function() {
-              context.drawImage(
-              this, 0, 0, 100, 100); 
-         };
-         img.src = dataUrl;
      }, 500);
 
      ws.onmessage = function(e) {
