@@ -58,12 +58,12 @@ $(document).ready(function() {
               // blue
               data[i + 2] = brightness;
               lightData[i + 2] = brightness;
-              lightData[i + 3] = 255;
+              lightData[i + 3] = data[i + 3];
               
               if (brightness > maxBrightness) {
                   maxBrightness = brightness;
-                  light.x = 100 % (Math.floor(i/3)+1);
-                  light.y = 100 / (Math.floor(i/3)+1);
+                  light.x = 100 % (Math.floor(i/4)+1);
+                  light.y = 100 / (Math.floor(i/4)+1);
               }
          }
          console.log(light);
