@@ -26,7 +26,7 @@ $(document).ready(function() {
          document.getElementById("light-canvas");
 
          var context = canvas.getContext("2d");
-         var lightContext = canvas.getContext("2d");
+         var lightContext = lightCanvas.getContext("2d");
 
          // ENVIAR
          var cnv = document.createElement("canvas");
@@ -58,7 +58,6 @@ $(document).ready(function() {
               // blue
               data[i + 2] = brightness;
               lightData[i + 2] = brightness;
-              lightData[i + 3] = data[i + 3];
               
               if (brightness > maxBrightness) {
                   maxBrightness = brightness;
