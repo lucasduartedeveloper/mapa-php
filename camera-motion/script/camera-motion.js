@@ -57,7 +57,7 @@ $(document).ready(function() {
               lightData[i + 1] = brightness;
               // blue
               data[i + 2] = brightness;
-              lightData[i + 1] = brightness;
+              lightData[i + 2] = brightness;
               
               if (brightness > maxBrightness) {
                   maxBrightness = brightness;
