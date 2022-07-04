@@ -69,6 +69,8 @@ $(document).ready(function() {
 
          // overwrite original image
          ctx.putImageData(imgData, 0, 0);
+         lightContext.putImageData(imgData, 0, 0);
+
          var dataUrl = cnv.toDataURL("image/png");
 
          var img = document.createElement("img");
