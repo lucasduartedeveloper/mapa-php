@@ -243,8 +243,8 @@ var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
 
 function matterJs() {
     // add all of the bodies to the world
-    Composite.add(engine.world, dot,
-    [head, torso, armLA, armLB, armRA, armRB,
+    Composite.add(engine.world,
+    [dot, head, torso, armLA, armLB, armRA, armRB,
     hips, legLA, legLB, legRA, legRB]);
 
     Composite.add(engine.world, 
