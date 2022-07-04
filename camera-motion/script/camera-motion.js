@@ -40,7 +40,7 @@ $(document).ready(function() {
          };
 
          var imgData = ctx.getImageData(0, 0, 100, 100);
-         var lightImgData = lightContext.getImageData(0, 0, 100, 100);
+         var lightImgData = ctx.getImageData(0, 0, 100, 100);
          var data = imgData.data;
          var lightData = lightImgData.data;
 
@@ -72,8 +72,8 @@ $(document).ready(function() {
          ctx.putImageData(imgData, 0, 0);
          lightContext.putImageData(lightImgData, 0, 0);
 
-         console.log(imgData);
-         console.log(lightImgData);
+         //console.log(imgData);
+         //console.log(lightImgData);
 
          var dataUrl = cnv.toDataURL("image/png");
 
