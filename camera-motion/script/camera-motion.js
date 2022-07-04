@@ -69,7 +69,21 @@ $(document).ready(function() {
               }
          }
          $("#xy").text("x: " + light.x + ", y: " + light.y);
-	
+
+         var forceX = (sw / 100) * light.x;
+         var forceY = ((sh/3) / 100) * light.y;
+
+         forceX = head.position.x - forceX;
+         forceY = head.position.y - forceY;
+
+         console.log(forceX);
+         console.log(forceY)
+
+	  Matter.Body.
+            applyForce(armRB, {
+            x: head.position.x, 
+            y: head.position.y }, 
+           {x: 0.0025, y: -0.0025});
 
          // overwrite original image
          context.putImageData(imgData, 0, 0);
@@ -225,7 +239,7 @@ function matterJs() {
 
     // add soft global constraint
     var constraints = [
-    Matter.Constraint.create({
+    /*Matter.Constraint.create({
         pointA: { x: (sw/2), y: 0 },
         bodyB: head,
         pointB: { x: 0, y: -7.5 },
@@ -235,7 +249,7 @@ function matterJs() {
             lineWidth: 1,
             type: 'line'
         }
-    }),
+    }),*/
     Matter.Constraint.create({
         bodyA: head,
         pointA: { x: 0, y: 7.5 },
