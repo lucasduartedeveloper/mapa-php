@@ -76,6 +76,9 @@ $(document).ready(function() {
          forceX = head.position.x - forceX;
          forceY = head.position.y - forceY;
 
+         console.log(forceX);
+         console.log(forceY);
+
 	  Matter.Body.
             applyForce(head, {
             x: head.position.x, 
