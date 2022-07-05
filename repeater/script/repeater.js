@@ -101,7 +101,6 @@ var counterCcw = 0;
 
 $(document).ready(function() {
     matterJs();
-    getOdometer();
 
     $("#title").on("click", function () {
         raiseLeftArm();
