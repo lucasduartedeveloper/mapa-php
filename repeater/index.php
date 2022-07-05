@@ -35,7 +35,7 @@
      REPEATER
 </p>
 
-<canvas id="matter-js"></canvas,>
+<canvas id="matter-js"></canvas>
 
 <div id="circle">
      <span id="cp0"></span>
