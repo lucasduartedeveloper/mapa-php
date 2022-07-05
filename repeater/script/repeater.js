@@ -312,7 +312,7 @@ Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20, {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
 var ball = 
-Bodies.circle(sw/2+25, (sh/5)-15, 10, {
+Bodies.circle(sw/2, (sh/5), 15 {
     render: {
          fillStyle: '#daf7a6,'
          strokeStyle: '#daf7a6' }});
