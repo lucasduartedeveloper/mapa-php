@@ -139,7 +139,7 @@ var render = Render.create({
     options: {
          width: sw,
          height: sh/3,
-         wireframes: falsep
+         wireframes: false
     }
 });
 
