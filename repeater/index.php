@@ -34,7 +34,6 @@
 <p id="title">
      REPEATER
 </p>
-</div>
 
 <canvas id="matter-js"></canvas,>
 
@@ -51,7 +50,7 @@
 </button>
 
 <p id="version-info">
-     REPEATER v0.0.1
+     REPEATER v0.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -79,7 +78,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/repeater.js?v=1"></script>
+<script src="script/repeater.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
