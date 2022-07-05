@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=0">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -44,7 +44,7 @@
 </div>
 
 <p id="version-info">
-     MAP-GYRO v0.0.0
+     MAP-GYRO v0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -73,7 +73,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=0"></script>
-<script src="script/map-gyro.js?v=0"></script>
+<script src="script/map-gyro.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

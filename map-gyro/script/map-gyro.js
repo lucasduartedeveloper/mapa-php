@@ -76,33 +76,43 @@ function accHandler(acc) {
               if (foo() && firstCp == k) {
                    if (lastCp == checkPoints[k].right) {
                        counterCw += 1;
-
-                       // Animation
-                       var html = "<span>x</span>";
-
-                       $("#counter-cw").text(counterCw
-                       .toString()
-                       .padStart(6,"0"));
-
                        bar();
-                       ws.send("ODOMETER|"+
-                       playerId+"|"+counterCw+"|CW");
                    }
 
                   if (lastCp == checkPoints[k].left) {
                       counterCcw += 1;
-                      $("#counter-ccw").text(counterCcw
-                      .toString()
-                      .padStart(6,"0"));
                       bar();
-                      ws.send("ODOMETER|"+
-                      playerId+"|"+counterCcw+"|CCW");
                   }
-                  updateOdometer();
              }
              lastCp = k;
-             //wow();
          }
+    }
+}
+
+function foo() {
+    for(var k in checkPoints) {
+        if (!checkPoints[k].done) {
+             return false;
+        }
+    }
+    return true;
+}
+
+function foo2() {
+    var foo2 = 0;
+    for(var k in checkPoints) {
+        if (checkPoints[k].done) {
+             foo2 += 1; 
+        }
+    }
+    return foo2 == 1;
+}
+
+function bar() {
+    for(var k in checkPoints) {
+        checkPoints[k].done = false;
+        $("#cp"+k).removeClass("done");
+        notification.play();
     }
 }
 
