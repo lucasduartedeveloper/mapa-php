@@ -119,14 +119,7 @@ $(document).ready(function() {
               $("#mic").removeClass("active");
               $("#mic i").removeClass("bi-mic-fill");
               $("#mic i").addClass("bi-mic-mute-fill");
-
-              recorder.stop();
-              gumStream.getAudioTracks()[0].stop();
-              recorder.exportWAV(function(blob) { 
-                   var audio = new Audio(URL.createObjectURL(blob));
-                   audio.play();
-                   desenharWave(audio);
-             });
+              saveRecording();
          }
     });
 
@@ -604,8 +597,8 @@ function saveRecording() {
                 var audio = formatarAudio(buffer)
 
                 desenharWave(audio);
-                alarme(audio);
-                recordAudio();
+                //alarme(audio);
+                //recordAudio();
             };
         };
     });
