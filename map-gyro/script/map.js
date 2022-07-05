@@ -11,7 +11,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 }).addTo(map);
 
 var markerIcon = L.icon({
-       iconUrl: "/img/marker.png",
+       iconUrl: "/map-gyro/img/marker.png",
        iconSize:     [30, 30], 
        iconAnchor:   [15, 15]
 });
