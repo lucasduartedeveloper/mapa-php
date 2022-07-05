@@ -13,7 +13,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 var markerIcon = L.icon({
        iconUrl: "/map-gyro/img/marker.png",
        iconSize:     [30, 30], 
-       iconAnchor:   [15, 15]
+       iconAnchor:   [15, 30]
 });
 
 var marker = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon}).addTo(map);
@@ -69,7 +69,7 @@ function mapClick(e) {
     // -- Final do cálculo de velocidade
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));;
+    markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
 }
 
 // Posição no mapa
