@@ -28,7 +28,7 @@ if ('DeviceMotionEvent' in window) {
     .addEventListener('devicemotion',
     onDeviceMotion, false);
 }
-l
+
 var accX = 0;
 var accY = 0;
 var accZ = 0;
