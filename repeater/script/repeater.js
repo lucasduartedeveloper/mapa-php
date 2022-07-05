@@ -120,6 +120,7 @@ $(document).ready(function() {
               $("#mic i").removeClass("bi-mic-fill");
               $("#mic i").addClass("bi-mic-mute-fill");
               saveRecording();
+              raiseLeftArm();
          }
     });
 
