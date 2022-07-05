@@ -312,7 +312,7 @@ Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20, {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
 var ball = 
-Bodies.circle(sw/2, (sh/5), 15 {
+Bodies.circle(sw/2, (sh/5), 15, {
     render: {
          fillStyle: '#daf7a6,'
          strokeStyle: '#daf7a6' }});
@@ -346,7 +346,6 @@ var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
-
 
 function raiseLeftArm() {
     Matter.Body.
