@@ -39,7 +39,7 @@ html, body {
    justify-content: center;
    align-items: center;
    bottom: 10vw;
-   left: 10vw;
+   right: 10vw;
    width: 15vw;
    height: 15vw;
    max-width: 25vh;
