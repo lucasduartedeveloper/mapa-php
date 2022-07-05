@@ -43,8 +43,14 @@
      <span id="pointer"></span>
 </div>
 
+<p id="indicators">
+<span id="height-indicator"></span>
+<br>
+<span id="north-indicator"></span>
+</p>
+
 <p id="version-info">
-     MAP-GYRO v2.0.3.4
+     MAP-GYRO v2.0.3.5
      <br>
      <span id="server-info">
      CONNECTING...
@@ -73,7 +79,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=3"></script>
-<script src="script/map-gyro.js?v=4"></script>
+<script src="script/map-gyro.js?v=5"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
