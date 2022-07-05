@@ -3,7 +3,10 @@ var notification = new Audio("audio/game-notification.wav");
 var gameOver = new Audio("audio/game-over.wav");
 
 // Saldo
-var playerId = new Date().getTime();
+var playerId = localStorage.getItem("playerId") ? 
+    parseInt(localStorage.getItem("playerId")) : new Date().getTime();
+var counterCw = 0;
+var counterCcw = 0;
 
 $(document).ready(function() {
     matterJs();

@@ -28,8 +28,6 @@ var markerShadow = L.circle([-23.37062642645644,  -51.15587314318577],
 
 // Teste
 var GPS = true;
-var playerId = localStorage.getItem("playerId") ? 
-    parseInt(localStorage.getItem("playerId")) : 0;
 
 // Click no mapa
 var posAnterior = false;
