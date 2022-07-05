@@ -18,7 +18,7 @@ var markerIcon = L.icon({
 
 var marker = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon}).addTo(map);
 
-var markerShadow = L.circle([-23.37062642645644,  -51.15587314318577], 
+var markerShadow = L.circle([-23.37062642645644,  -51.15587314318577], {
         color: "#2E2E2E",
         fillOpacity: 0.5,
         radius: 2.25,
@@ -137,11 +137,4 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 // Atualizar 
 $(document).ready(function() {
-     ws.onmessage = (event) => {
-        var msg = event.data.split("|");
-        if (msg[0] == "MAP-GYRO" && parseInt(msg[1]) != playerId) {
-            reload();
-            players[parseInt(msg[1])].camera = msg[2];
-        }
-     };
 });
