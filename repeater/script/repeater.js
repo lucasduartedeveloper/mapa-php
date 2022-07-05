@@ -125,27 +125,15 @@ $(document).ready(function() {
               recorder.exportWAV(function(blob) { 
                    var audio = new Audio(URL.createObjectURL(blob));
                    audio.play();
+                   desenharWave(audio);
              });
          }
     });
 
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "ODOMETER" &&
+        if (msg[0] == "REPEATER" &&
             playerId != msg[1]) {
-            var value = parseInt(msg[2]);
-            if (msg[3] == "CW") {
-                counterCw = value;
-                      $("#counter-cw").text(counterCw
-                      .toString()
-                      .padStart(6,"0"));
-            }
-            else {
-                counterCcw = value;
-                      $("#counter-ccw").text(counterCcw
-                      .toString()
-                      .padStart(6,"0"));
-            }
         }
     };
 });
