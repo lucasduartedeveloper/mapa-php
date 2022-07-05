@@ -32,8 +32,12 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 -->
 
-<!-- Leaflet-Rotate -->
+<!-- Leaflet-Rotate 
 <script src="https://raw.githubusercontent.com/Raruto/leaflet-rotate/master/dist/leaflet-rotate-src.js"></script>
+-->
+
+<!-- Leaflet-Rotate -->
+<script src="https://unpkg.com/leaflet-rotate@0.1.4/dist/leaflet-rotate-src.js"></script>
 
 <title></title>
 </head>
