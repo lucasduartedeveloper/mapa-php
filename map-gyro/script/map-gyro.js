@@ -55,13 +55,14 @@ function accHandler(acc) {
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
 
+    var speedUp = accX + accY + accZ;
     x = ((95 / 9.8) * accX)* -1;
     y = (95 / 9.8) * accY;
 
     engine.world.gravity.x = ((1 / 9.8) * accX)*-1;
     engine.world.gravity.y = (1 / 9.8) * accY;
     
-    height += (accY*-1)+9.8;
+    height += speedUp;
     $("#height-indicator").text(height + "m");
 
     $("#pointer").css("margin-left", x.toString() + "px");
