@@ -44,7 +44,7 @@
 </div>
 
 <p id="version-info">
-     MAP-GYRO v0.0.1
+     MAP-GYRO v0.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -73,7 +73,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=0"></script>
-<script src="script/map-gyro.js?v=1"></script>
+<script src="script/map-gyro.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
