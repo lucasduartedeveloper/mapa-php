@@ -31,7 +31,7 @@
 </head>
 <body>
 
-div id="audio-wave" class="audio-wave-box">
+<div id="audio-wave" class="audio-wave-box">
      <canvas id="wave" class="audio-wave-canvas"></canvas>
 </div>
 
