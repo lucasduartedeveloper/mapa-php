@@ -54,7 +54,7 @@
 </button>
 
 <p id="version-info">
-     REPEATER v2.0.6
+     REPEATER v2.0.7
      <br>
      <span id="server-info">
      CONNECTING...
@@ -82,7 +82,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/repeater.js?v=6"></script>
+<script src="script/repeater.js?v=7"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

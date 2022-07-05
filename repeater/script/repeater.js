@@ -311,6 +311,11 @@ Bodies.rectangle(sw/2+5, (sh/5)-15, 5, 20, {
     render: {
          fillStyle: '#cacab5',
          strokeStyle: '#cacab5' }});
+var ball = 
+Bodies.circle(sw/2+25, (sh/5)-15, 10, {
+    render: {
+         fillStyle: '#daf7a6,'
+         strokeStyle: '#daf7a6' }});
     
 var ceiling = Bodies.rectangle(sw/2, 5, sw, 10,
 { isStatic: true,
@@ -358,7 +363,7 @@ function matterJs() {
     hips, legLA, legLB, legRA, legRB]);
 
     Composite.add(engine.world, 
-    [ceiling, wallA, wallB, stage, ground]);
+    [ceiling, wallA, wallB, ball, stage, ground]);
 
     let mouse = Matter.Mouse.create(render.canvas);
     let mouseConstraint = 
