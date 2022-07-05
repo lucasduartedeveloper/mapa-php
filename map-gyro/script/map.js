@@ -1,5 +1,12 @@
 // Create the map
-var map = L.map('map').setView([-23.37062642645644,  -51.15587314318577], 18);
+var map = L.map('map', {
+     rotate: true,
+     touchRotate: true,
+     rotateControl: {
+          closeOnZeroBearing: false
+     },
+     bearing: 30
+}).setView([-23.37062642645644,  -51.15587314318577], 18);
 
 var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://www.mapbox.com/">Mapbox</a>',
