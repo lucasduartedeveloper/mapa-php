@@ -51,7 +51,7 @@ function desenharWave(array) {
 
     for (var k = 0; k < array.length; k++) {
         context.beginPath(); // always start a new line with beginPath
-        context.strokeStyle = "#000";
+        context.strokeStyle = "#fff";
         context.lineWidth = 5;
 
         // start position
