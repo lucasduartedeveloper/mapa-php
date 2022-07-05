@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=2">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -30,6 +30,10 @@
 <title></title>
 </head>
 <body>
+
+div id="audio-wave" class="audio-wave-box">
+     <canvas id="wave" class="audio-wave-canvas"></canvas>
+</div>
 
 <p id="title">
      REPEATER
@@ -50,7 +54,7 @@
 </button>
 
 <p id="version-info">
-     REPEATER v1.0.2
+     REPEATER v2.0.2
      <br>
      <span id="server-info">
      CONNECTING...
