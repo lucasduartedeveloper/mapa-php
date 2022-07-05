@@ -28,7 +28,7 @@ if ('DeviceMotionEvent' in window) {
     .addEventListener('devicemotion',
     onDeviceMotion, false);
 }
-
+l
 var accX = 0;
 var accY = 0;
 var accZ = 0;
@@ -62,7 +62,7 @@ function accHandler(acc) {
     engine.world.gravity.y = (1 / 9.8) * accY;
     
     height += (accY/1000);
-    $("height-indicator").text(height + "m");
+    $("#height-indicator").text(height + "m");
 
     $("#pointer").css("margin-left", x.toString() + "px");
     $("#pointer").css("margin-top", y.toString() + "px");
