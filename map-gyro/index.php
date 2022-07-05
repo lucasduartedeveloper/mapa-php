@@ -14,8 +14,6 @@
 <meta name="msapplication-TileColor" content="#2f2e40">
 <meta name="theme-color" content="#2f2e40">
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -25,7 +23,14 @@
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- Leaflet JS / CSS -->
+<script src="https://unpkg.com/leaflet@1.7/dist/leaflet-src.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7/dist/leaflet.css">
+
+<!-- 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+-->
 
 <!-- Leaflet-Rotate -->
 <script src="https://raw.githubusercontent.com/Raruto/leaflet-rotate/master/dist/leaflet-rotate-src.js"></script>
