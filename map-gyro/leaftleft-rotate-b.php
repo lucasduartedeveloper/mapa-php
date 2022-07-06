@@ -16,8 +16,8 @@
 		<!-- include some miscellaneous -->
 		<!-- <script src="https://unpkg.com/leaflet-rotate@0.1.4/misc/route.js"></script>
 		<script src="https://unpkg.com/leaflet-rotate@0.1.4/misc/places.js"></script>
-		<script src="https://unpkg.com/leaflet-rotate@0.1.4/misc/loremIpsum.js"></script> -->
-		<script src="https://unpkg.com/leaflet-rotate@0.1.4/lib/debug.js"></script>
+		<script src="https://unpkg.com/leaflet-rotate@0.1.4/misc/loremIpsum.js"></script>
+		<script src="https://unpkg.com/leaflet-rotate@0.1.4/lib/debug.js"></script> -->
 
 		<style>
 			#map {
