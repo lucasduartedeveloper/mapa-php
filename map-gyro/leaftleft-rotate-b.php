@@ -70,8 +70,6 @@
 			});
 
 			var map = L.map('map', {
-				center: [-23.37062642645644,  -51.15587314318577],
-				zoom: 2,
 				layers: [esri],
 				// worldCopyJump: true,
 				rotate: true,
@@ -80,7 +78,7 @@
 					closeOnZeroBearing: false
 				},
 				bearing: 30,
-			});
+			}).setView([-23.37062642645644,  -51.15587314318577], 18);;
 
 			// map.setBearing(30);
 			// map.touchRotate.enable();
