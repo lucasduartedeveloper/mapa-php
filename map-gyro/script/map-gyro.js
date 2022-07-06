@@ -87,15 +87,12 @@ function accHandler(acc) {
           Math.pow(x, 2) +
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
-    northAngleX = calcularAngulo(x, y, h);
-    northAngleY = calcularAngulo(x, y, h);
-    northAngleZ = calcularAngulo(x, y, h);
     map.setBearing(mapAngle);
     
     if ( !northLock) {
           northAngleX = calcularAngulo(x, y, h);
-          northAngleY = calcularAngulo(x, y, h);
-          northAngleZ = calcularAngulo(x, y, h);
+          northAngleY = calcularAngulo(y, z, h);
+          northAngleZ = calcularAngulo(x, z, h);
     }
 
     height = speedUp;
