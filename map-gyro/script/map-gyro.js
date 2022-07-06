@@ -19,7 +19,7 @@ $(document).ready(function() {
               $("#north").addClass("active");
               confirmationBeep.play();
          }
-         else if {
+         else {
               northLock = false;
               northAngle = mapAngle;
               $("#north").removeClass("active");
@@ -66,7 +66,6 @@ var lastCp = -1;
 
 var northLock = false;
 var mapAngle = 0;
-
 var northAngle = 0;
 
 function accHandler(acc) {
