@@ -24,7 +24,7 @@ $(document).ready(function() {
          }
     });
 
-    $("#btn-north").click(function(e) {
+    $("#btn-north").click(function(e) {q
          if (!northLock) {
               northLock = true;
               $("#btn-north").addClass("active");
@@ -40,6 +40,7 @@ $(document).ready(function() {
          $("#camera-canvas").hide();
          $("#btn-camera").hide();
     });
+    $("#btn-camera").click();
 
     $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
     .on("change", function() {
@@ -114,7 +115,7 @@ $(document).ready(function() {
 
          $("#pointer").css("margin-left", x.toString() + "px");
          $("#pointer").css("margin-top", y.toString() + "px")
-     }, 250);
+     }, 100);
 
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
