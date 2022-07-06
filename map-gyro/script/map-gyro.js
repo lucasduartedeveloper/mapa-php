@@ -15,7 +15,7 @@ $(document).ready(function() {
     $("#north").click(function(e) {
          northAngle = mapAngle;
          confirmationBeep.play();
-    }
+    });
 
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
