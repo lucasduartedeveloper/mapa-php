@@ -6,9 +6,12 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
-		<!-- Leaflet JS / CSS -->
+		<!-- Leaflet JS / CSS
 		<script src="https://unpkg.com/leaflet@1.7/dist/leaflet-src.js"></script>
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7/dist/leaflet.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7/dist/leaflet.css">  -->
+              
+              <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 		<!-- Leaflet-Rotate -->
 		<script src="https://unpkg.com/leaflet-rotate@0.1.4/dist/leaflet-rotate-src.js"></script>
@@ -67,7 +70,7 @@
 			});
 
 			var map = L.map('map', {
-				center: [55, 10],
+				center: [-23.37062642645644,  -51.15587314318577],
 				zoom: 2,
 				layers: [esri],
 				// worldCopyJump: true,
@@ -104,6 +107,22 @@
 					)
 					.addTo(map));
 			}
+
+                     var markerIcon = L.icon({
+			       iconUrl: "/map-gyro/img/marker.png",
+			       iconSize:     [30, 30], 
+			       iconAnchor:   [15, 30]
+			});
+			
+			var marker = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon}).addTo(map);
+			
+			var markerShadow = L.circle([-23.37062642645644,  -51.15587314318577], {
+			        color: "#2E2E2E",
+			        fillOpacity: 0.5,
+			        radius: 2.25,
+			        weight: 0,
+			        stroke: true
+			}).addTo(map);
 
 			var path = L.polyline(route, {
 				renderer: L.canvas()
