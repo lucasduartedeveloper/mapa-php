@@ -17,13 +17,19 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
     accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
 }).addTo(map);
 
+var compassIcon = L.icon({
+       iconUrl: "/map-gyro/img/compass.png",
+       iconSize:     [40, 40], 
+       iconAnchor:   [20, 20]
+});
+
 var markerIcon = L.icon({
        iconUrl: "/map-gyro/img/marker.png",
        iconSize:     [30, 30], 
        iconAnchor:   [15, 30]
 });
 
-var marker = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon}).addTo(map);
+var compassMarker = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: compassIcon}).addTo(map);
 
 var markerShadow = L.circle([-23.37062642645644,  -51.15587314318577], {
         color: "#2E2E2E",
@@ -32,6 +38,8 @@ var markerShadow = L.circle([-23.37062642645644,  -51.15587314318577], {
         weight: 0,
         stroke: true
 }).addTo(map);
+
+var marker = L.marker([-23.37062642645644,  -51.15587314318577],  {icon: markerIcon}).addTo(map);
 
 // Teste
 var GPS = true;
@@ -77,6 +85,44 @@ function mapClick(e) {
 
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
+    compassMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
+}
+
+function rotateCompass(angle) {
+    var img = new Image();
+    img.width = 64;
+    img.height = 64;
+    img.id = playerId;
+    img.onload = function() {
+        var icon = rotateImage(this, angle);
+        compassMarker.setIcon(
+            L.icon({
+                 iconUrl: icon,
+                 iconSize:     [40, 40],
+                 iconAnchor:   [20, 20]
+            }));
+    }
+    img.src = "/map-gyro/img/compass.png";
+}
+
+function rotateImage(img, angle) {
+     var canvas = document.createElement("canvas");
+     var context = canvas.getContext( '2d' );
+
+     canvas.width = 64;
+     canvas.height = 64;
+;
+     var width = img.id == 4 ? img.width / 2 : img.width;
+     var height = img.height;
+
+     context.save();
+     context.translate(canvas.width / 2, canvas.height / 2);
+     context.rotate(-angle);
+     context.drawImage(img, -(width / 2), -(height / 2),
+         width, height);
+     context.restore();
+
+     return canvas.toDataURL();
 }
 
 // Posição no mapa
