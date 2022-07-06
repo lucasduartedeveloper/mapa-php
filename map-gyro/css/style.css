@@ -65,6 +65,12 @@ html, body {
     z-index: 9999;
 }
 
+#circle #north-indicator {
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 9999;
+}
+
 #circle span:nth-of-type(1n) {
     margin-left: 0px;
     margin-top: -95px;

@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -53,20 +53,21 @@
      <span id="cp2"></span>
      <span id="cp3"></span>
      <span id="pointer"></span>
+     <i id="north-indicator"class="fa-solid fa-arrow-up-long"></i>
 </div>
 
 <p id="indicators">
-<span id="north-indicator"></span>
+<span id="map-angle-indicator"></span>
 <br>
 <span id="height-indicator"></span>
 </p>
 
 <button id="north" type="button" class="btn-north">
-<i class="fa-solid fa-arrow-up-long"></i>
+<i class="fa-solid fa-n"></i>
 </button>
 
 <p id="version-info">
-     MAP-GYRO v5.0.4.16
+     MAP-GYRO v6.0.4.17
      <br>
      <span id="server-info">
      CONNECTING...
@@ -95,7 +96,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=4"></script>
-<script src="script/map-gyro.js?v=16"></script>
+<script src="script/map-gyro.js?v=17"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

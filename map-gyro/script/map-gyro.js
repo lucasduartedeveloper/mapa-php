@@ -70,7 +70,8 @@ function accHandler(acc) {
     map.setBearing(a);
     
     height = speedUp;
-    $("#north-indicator").text(a+"°");
+    $("#north-indicator").css("tranform", "rotate("+a+"deg)");
+    $("#map-angle-indicator").text(a+"°");
     $("#height-indicator").text(speedUp.toFixed(3));
 
     $("#pointer").css("margin-left", x.toString() + "px");
