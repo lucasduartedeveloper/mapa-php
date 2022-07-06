@@ -147,7 +147,7 @@ function accHandler(acc) {
     if (!mapLock) {
          map.setBearing(mapAngle);
     }
-    else if (mapLock &&  !northLock) {
+    else if (!mapLock &&  !northLock) {
          $("#rotate3d").val(mapAngle);
     }
     else if (mapLock && northLock) {
