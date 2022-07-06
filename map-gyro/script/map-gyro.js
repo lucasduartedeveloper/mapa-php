@@ -64,8 +64,8 @@ function accHandler(acc) {
 
     var h = 
           Math.sqrt(
-          Math.pow(co, 2) +
-          Math.pow(ca, 2));
+          Math.pow(x, 2) +
+          Math.pow(y, 2));
     var a = calcularAngulo(x, y, h);
     L.Rotate._map.setBearing(a);
     
