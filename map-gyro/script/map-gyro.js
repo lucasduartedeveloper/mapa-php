@@ -92,14 +92,11 @@ function accHandler(acc) {
 
     height = speedUp;
     $("#north-indicator")
-    .css("transform", "rotateX("+
-    $("#rotateX").val()+"deg)");
-    $("#north-indicator")
-    .css("transform", "rotateY("+
-    $("#rotateY").val()+"deg)");
-    $("#north-indicator")
-    .css("transform", "rotateZ("+
-    $("#rotateZ").val()+"deg)");
+    .css("transform", "rotate3d("+
+    $("#rotate3dX").val()+","+
+    $("#rotate3dY").val()+","+
+    $("#rotate3dZ").val()+","+
+    $("#rotate3d").val());
 
     $("#map-angle-indicator")
     .text("map: " + mapAngle.toFixed(2) + "°");
