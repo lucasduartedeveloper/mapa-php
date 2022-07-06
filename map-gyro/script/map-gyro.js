@@ -12,6 +12,18 @@ var height = 0;
 
 $(document).ready(function() {
     matterJs();
+    $("#map").click(function(e) {
+         if (!northLock) {
+              mapLock = true;
+              $("#map").addClass("active");
+              confirmationBeep.play();
+         }
+         else {
+              northLock = false;
+              $("#map").removeClass("active");
+         }
+    });
+
     $("#north").click(function(e) {
          if (!northLock) {
               northLock = true;
@@ -109,6 +121,7 @@ var z = 0;
 var firstCp = -1;
 var lastCp = -1;
 
+var mapLock = false;
 var northLock = false;
 var mapAngle = 0;
 
@@ -131,11 +144,14 @@ function accHandler(acc) {
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
 
-    if ( !northLock) {
+    if (!mapLock) {
+         map.setBearing(mapAngle);
+    }
+    else if (mapLock &&  !northLock) {
          $("#rotate3d").val(mapAngle);
     }
-    else {
-         map.setBearing(mapAngle);
+    else if (mapLock && northLock) {
+         map.setBearing($("#rotate3d").val());
     }
 
     height = speedUp;
