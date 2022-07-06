@@ -69,6 +69,15 @@
 				attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 			});
 
+                     var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://www.mapbox.com/">Mapbox</a>',
+			    maxZoom: 20,
+			    id: 'mapbox/streets-v11',
+			    tileSize: 512,
+			    zoomOffset: -1,
+			    accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
+			}).addTo(map);
+
 			var map = L.map('map', {
 				layers: [esri],
 				// worldCopyJump: true,
@@ -85,7 +94,7 @@
 
 			var layers = L.control.layers({
 				'Empty': L.tileLayer(''),
-				'Streets': osm,
+				'Streets': tileLayer,
 				'Satellite': esri,
 			}, null, {
 				collapsed: false
