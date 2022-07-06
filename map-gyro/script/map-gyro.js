@@ -13,8 +13,17 @@ var height = 0;
 $(document).ready(function() {
     matterJs();
     $("#north").click(function(e) {
-         northAngle = mapAngle;
-         confirmationBeep.play();
+         if (!northLock) {
+              northLock = true;
+              northAngle = mapAngle;
+              $("#north").addClass("active");
+              confirmationBeep.play();
+         }
+         else if {
+              northLock = false;
+              northAngle = mapAngle;
+              $("#north").removeClass("active");
+         }
     });
 
     ws.onmessage = function(e) {
@@ -55,7 +64,9 @@ var y = 0;
 var firstCp = -1;
 var lastCp = -1;
 
+var northLock = false;
 var mapAngle = 0;
+
 var northAngle = 0;
 
 function accHandler(acc) {
@@ -76,12 +87,15 @@ function accHandler(acc) {
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
     map.setBearing(mapAngle);
+    
+    if ( !northLock) {
+          northAngle = mapAngle;
+    }
 
-    
-    
     height = speedUp;
     $("#north-indicator")
-    .css("transform", "rotate("+northAngle+"deg)");
+    .css("transform", "rotate3d(1,1,1,"+northAngle+"deg)");
+
     $("#map-angle-indicator").text(mapAngle.toFixed(2)+"°");
     $("#height-indicator").text(speedUp.toFixed(3));
 
