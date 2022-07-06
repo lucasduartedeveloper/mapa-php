@@ -70,9 +70,19 @@ html, body {
     margin-top: 0px;
     padding: 26.75px 30px;
     border-radius: 50%;
-    border: 1px solid #000;
+    border: 2px solid #000;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 9999;
+}
+
+#circle #north-indicator-ball {
+    width: 10px;
+    height: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border-radius: 50%;
+    background-color: #822B2B;
+    border: 2px solid #000;
 }
 
 #circle span:nth-of-type(1n) {

@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=11">
+<link rel="stylesheet" href="css/style.css?v=12">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -53,6 +53,7 @@
      <span id="cp2"></span>
      <span id="cp3"></span>
      <span id="pointer"></span>
+     <span id="north-indicator-ball"></span>
      <i id="north-indicator"class="fa-solid fa-arrow-up-long"></i>
 </div>
 
@@ -69,7 +70,7 @@
 </button>
 
 <p id="version-info">
-     MAP-GYRO v11.0.4.25
+     MAP-GYRO v12.0.4.25
      <br>
      <span id="server-info">
      CONNECTING...
