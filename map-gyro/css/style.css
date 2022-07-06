@@ -34,7 +34,6 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: #2f2e40;
     z-index: 9999;
 }
 
