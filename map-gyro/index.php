@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -43,6 +43,7 @@
 </head>
 <body>
 
+<div id="rotation">
 <label for="customRange1" class="form-label">RotateX: 0</label>
 <input type="range" class="form-range" id="customRange1">
 
@@ -57,6 +58,7 @@
 <input type="range" class="form-range" id="customRange1">
 <input type="range" class="form-range" id="customRange1">
 <input type="range" class="form-range" id="customRange1">
+</div>
 
 <div id="map" class="map-box">
 </div>
@@ -85,7 +87,7 @@
 </button>
 
 <p id="version-info">
-     MAP-GYRO v12.0.4.29
+     MAP-GYRO v13.0.4.29
      <br>
      <span id="server-info">
      CONNECTING...
