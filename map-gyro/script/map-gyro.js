@@ -35,6 +35,32 @@ $(document).ready(function() {
          );
     });
 
+    var video = document.getElementById("video");
+     if (navigator.mediaDevices) {
+          navigator.mediaDevices
+          .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
+          .then((stream) => {
+               video.srcObject = stream;
+          });
+     }
+
+     setInterval(function() {
+         var canvas = 
+         document.getElementById("camera-canvas");
+         var context = canvas.getContext("2d");
+
+         // ENVIAR
+         var cnv = document.createElement("canvas");
+         cnv.width = 100;
+         cnv.height = 100;
+         var ctx = cnv.getContext("2d");
+
+         ctx.drawImage(video, 0, 0, 100, 100);
+ 
+         // overwrite original image
+         context.putImageData(imgData, 0, 0);
+     }, 500);
+
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "MAP-GYRO" &&

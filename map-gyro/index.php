@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=20">
+<link rel="stylesheet" href="css/style.css?v=21">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -84,6 +84,10 @@ class="form-range">
 min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
+
+<video style="display:none" id="video" width="100" height="100" autoplay></video>
+<canvas width="100" height="100" id="camera-canvas"></canvas>
+
 </div>
 
 <div id="map" class="map-box">
@@ -113,7 +117,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v20.0.4.36
+     MAP-GYRO v21.0.4.37
      <br>
      <span id="server-info">
      CONNECTING...
@@ -142,7 +146,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=4"></script>
-<script src="script/map-gyro.js?v=36"></script>
+<script src="script/map-gyro.js?v=37"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

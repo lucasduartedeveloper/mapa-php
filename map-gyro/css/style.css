@@ -25,6 +25,19 @@ html, body {
      overflow: hidden;
 }
 
+#camera-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 20vh;
+    border: 1px black solid;
+    border-radius: 25px;
+    background-color: #212026;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
 #rotation {
     position: fixed;
     top: 10px;
