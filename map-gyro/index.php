@@ -44,20 +44,44 @@
 <body>
 
 <div id="rotation">
-<label for="customRange1" class="form-label">RotateX: 0</label>
-<input type="range" class="form-range" id="customRange1">
+<label id="rotateXlabel"
+for="rotateX" class="form-label">RotateX: 0</label>
+<input type="range" id="rotateX"
+min="-180" max="180"  step="1" value="0"
+class="form-range" >
 
-<label for="customRange1" class="form-label">RotateY: 0</label>
-<input type="range" class="form-range" id="customRange1">
+<label id="rotateYlabel"
+for="rotateY" class="form-label">RotateY: 0</label>
+<input id="rotateY"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
 
-<label for="customRange1" class="form-label">RotateZ: 0</label>
-<input type="range" class="form-range" id="customRange1">
+<label id="rotateZlabel"
+for="rotateZ" class="form-label">RotateZ: 0</label>
+<input id="rotateZ"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
 
-<label for="customRange1" class="form-label">Rotate3d: 0, 0, 0, 0</label>
-<input type="range" class="form-range" id="customRange1">
-<input type="range" class="form-range" id="customRange1">
-<input type="range" class="form-range" id="customRange1">
-<input type="range" class="form-range" id="customRange1">
+<label id="rotate3dlabel"
+for="rotate3dX" class="form-label">Rotate3d: 0, 0, 0, 0</label>
+<input id="rotate3dX"
+min="0" max="1" step="0.1" value="0"
+type="range" 
+class="form-range">
+<input id="rotate3dY"
+min="0" max="1" step="0.1" value="0"
+type="range" 
+class="form-range">
+<input id="rotate3dZ"
+min="0" max="1" step="0.1" value="0"
+type="range" 
+class="form-range">
+<input id="rotate3d"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
 </div>
 
 <div id="map" class="map-box">
