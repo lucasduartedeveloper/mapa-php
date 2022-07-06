@@ -60,6 +60,9 @@ $(document).ready(function() {
  
          // overwrite original image
          context.putImageData(imgData, 0, 0);
+
+         $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
+         .trigger("change");
      }, 500);
 
     ws.onmessage = function(e) {
@@ -127,8 +130,8 @@ function accHandler(acc) {
     if ( !northLock) {
          $("#rotate3d").val(calcularAngulo(x, y, h));
     }
-    $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
-    .trigger("change");
+    /*$("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
+    .trigger("change");*/
 
     height = speedUp;
     $("#north-indicator")
