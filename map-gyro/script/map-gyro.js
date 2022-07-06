@@ -76,11 +76,13 @@ function accHandler(acc) {
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
     map.setBearing(mapAngle);
+
+    
     
     height = speedUp;
     $("#north-indicator")
     .css("transform", "rotate("+northAngle+"deg)");
-    $("#map-angle-indicator").text(mapAngle+"°");
+    $("#map-angle-indicator").text(mapAngle.toFixed(2)+"°");
     $("#height-indicator").text(speedUp.toFixed(3));
 
     $("#pointer").css("margin-left", x.toString() + "px");

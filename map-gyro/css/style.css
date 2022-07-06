@@ -68,6 +68,10 @@ html, body {
 #circle #north-indicator {
     margin-left: 0px;
     margin-top: 0px;
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 9999;
 }
 
