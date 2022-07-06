@@ -1,5 +1,6 @@
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
+var confirmationBeep = new Audio("audio/confirmation-beep.wav");
 var gameOver = new Audio("audio/game-over.wav");
 
 // Saldo
@@ -11,6 +12,10 @@ var height = 0;
 
 $(document).ready(function() {
     matterJs();
+    $("#north").click(function(e) {
+         northAngle = mapAngle;
+         confirmationBeep.play();
+    }
 
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
@@ -50,6 +55,9 @@ var y = 0;
 var firstCp = -1;
 var lastCp = -1;
 
+var mapAngle = 0;
+var northAngle = 0;
+
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
@@ -66,13 +74,13 @@ function accHandler(acc) {
           Math.sqrt(
           Math.pow(x, 2) +
           Math.pow(y, 2));
-    var a = calcularAngulo(x, y, h);
-    map.setBearing(a);
+    mapAngle = calcularAngulo(x, y, h);
+    map.setBearing(mapAngle);
     
     height = speedUp;
     $("#north-indicator")
-    .css("transform", "rotate("+a+"deg)");
-    $("#map-angle-indicator").text(a+"°");
+    .css("transform", "rotate("+northAngle+"deg)");
+    $("#map-angle-indicator").text(mapAngle+"°");
     $("#height-indicator").text(speedUp.toFixed(3));
 
     $("#pointer").css("margin-left", x.toString() + "px");
