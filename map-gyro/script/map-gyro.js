@@ -78,8 +78,42 @@ $(document).ready(function() {
          // overwrite original image
          context.putImageData(imgData, 0, 0);
 
+         // update 
+         if (!mapLock  &&  !northLock) {
+              map.setBearing(mapAngle);
+              $("#rotate3d").val(mapAngle);
+              rotateCompass(mapAngle);
+         }
+         else if (!mapLock) {
+             map.setBearing(mapAngle);
+         }
+         else if (!northLock) {
+             $("#rotate3d").val(mapAngle);
+             rotateCompass(mapAngle);
+         }
+         else if (mapLock && northLock) {
+             map.setBearing($("#rotate3d").val());
+         }
+
          $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
          .trigger("change");
+
+         $("#north-indicator")
+         .css("transform", "rotate3d("+
+         $("#rotate3dX").val()+","+
+         $("#rotate3dY").val()+","+
+         $("#rotate3dZ").val()+","+
+         $("#rotate3d").val()+"deg");
+
+         $("#map-angle-indicator")
+         .text("map: " + mapAngle.toFixed(2) + "°");
+         $("#height-indicator")
+         .text("height: " +speedUp.toFixed(3) + "m");
+         $("#acc-indicator")
+         .text("x: " + accX + ", y: " + accY + ", z: " + accZ);
+
+         $("#pointer").css("margin-left", x.toString() + "px");
+         $("#pointer").css("margin-top", y.toString() + "px")
      }, 500);
 
     ws.onmessage = function(e) {
@@ -144,39 +178,7 @@ function accHandler(acc) {
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
 
-    if (!mapLock  &&  !northLock) {
-         map.setBearing(mapAngle);
-         $("#rotate3d").val(mapAngle);
-         rotateCompass(mapAngle);
-    }
-    else if (!mapLock) {
-         map.setBearing(mapAngle);
-    }
-    else if (!northLock) {
-        $("#rotate3d").val(mapAngle);
-        rotateCompass(mapAngle);
-    }
-    else if (mapLock && northLock) {
-         map.setBearing($("#rotate3d").val());
-    }
-
-    height = speedUp;
-    $("#north-indicator")
-    .css("transform", "rotate3d("+
-    $("#rotate3dX").val()+","+
-    $("#rotate3dY").val()+","+
-    $("#rotate3dZ").val()+","+
-    $("#rotate3d").val()+"deg");
-
-    $("#map-angle-indicator")
-    .text("map: " + mapAngle.toFixed(2) + "°");
-    $("#height-indicator")
-    .text("height: " +speedUp.toFixed(3) + "m");
-    $("#acc-indicator")
-    .text("x: " + accX + ", y: " + accY + ", z: " + accZ);
-
-    $("#pointer").css("margin-left", x.toString() + "px");
-    $("#pointer").css("margin-top", y.toString() + "px");
+    height = speedUp;;
 
     for(var k in checkPoints) {
          if ((accX >= checkPoints[k].x1 && 
