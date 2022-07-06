@@ -43,8 +43,8 @@
 </head>
 <body>
 
-<!--
 <div id="rotation">
+<!--
 <label id="rotateXlabel"
 for="rotateX" class="form-label">RotateX: 0</label>
 <input type="range" id="rotateX"
