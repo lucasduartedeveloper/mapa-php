@@ -98,7 +98,9 @@ function accHandler(acc) {
     map.setBearing(mapAngle);
     
     if ( !northLock) {
-         // ---
+         $("#rotate3d").val(calcularAngulo(y, z, h));
+         $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
+         .trigger("change");
     }
 
     height = speedUp;
