@@ -27,7 +27,7 @@ $(document).ready(function() {
     $("#close-camera").click(function(e) {
          $("#camera-canvas").hide();
          $("#close-camera").hide();
-    }
+    });
 
     $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
     .on("change", function() {

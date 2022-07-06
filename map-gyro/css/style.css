@@ -171,7 +171,7 @@ html, body {
    justify-content: center;
    align-items: center;
    margin-top: -40px;
-   margin-left: -50px;
+   margin-left: 50px;
    width: 10vw;
    height: 10vw;
    max-width: 15vh;
