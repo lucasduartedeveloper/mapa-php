@@ -43,6 +43,21 @@
 </head>
 <body>
 
+<label for="customRange1" class="form-label">RotateX: 0</label>
+<input type="range" class="form-range" id="customRange1">
+
+<label for="customRange1" class="form-label">RotateY: 0</label>
+<input type="range" class="form-range" id="customRange1">
+
+<label for="customRange1" class="form-label">RotateZ: 0</label>
+<input type="range" class="form-range" id="customRange1">
+
+<label for="customRange1" class="form-label">Rotate3d: 0, 0, 0, 0</label>
+<input type="range" class="form-range" id="customRange1">
+<input type="range" class="form-range" id="customRange1">
+<input type="range" class="form-range" id="customRange1">
+<input type="range" class="form-range" id="customRange1">
+
 <div id="map" class="map-box">
 </div>
 <canvas style="display:none" id="matter-js"></canvas>
@@ -70,7 +85,7 @@
 </button>
 
 <p id="version-info">
-     MAP-GYRO v12.0.4.28
+     MAP-GYRO v12.0.4.29
      <br>
      <span id="server-info">
      CONNECTING...
@@ -99,7 +114,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=4"></script>
-<script src="script/map-gyro.js?v=28"></script>
+<script src="script/map-gyro.js?v=29"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

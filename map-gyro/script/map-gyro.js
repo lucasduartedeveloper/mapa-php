@@ -96,10 +96,10 @@ function accHandler(acc) {
     }
 
     height = speedUp;
-    $("#north-indicator")
+    /*$("#north-indicator")
     .css("transform", "rotateX("+northAngleX+"deg)");
-    $("#north-indicator")
-    .css("transform", "rotateY("+northAngleY+"deg)");
+    /*$("#north-indicator")
+    .css("transform", "rotateY("+northAngleY+"deg)");*/
     /*$("#north-indicator")
     .css("transform", "rotateZ("+northAngleZ+"deg)");*/
 
