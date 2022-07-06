@@ -108,13 +108,13 @@ $(document).ready(function() {
          $("#map-angle-indicator")
          .text("map: " + mapAngle.toFixed(2) + "°");
          $("#height-indicator")
-         .text("height: " +speedUp.toFixed(3) + "m");
+         .text("height: " +height.toFixed(3) + "m");
          $("#acc-indicator")
          .text("x: " + accX + ", y: " + accY + ", z: " + accZ);
 
          $("#pointer").css("margin-left", x.toString() + "px");
          $("#pointer").css("margin-top", y.toString() + "px")
-     }, 500);
+     }, 250);
 
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
@@ -178,7 +178,7 @@ function accHandler(acc) {
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
 
-    height = speedUp;;
+    height = speedUp;
 
     for(var k in checkPoints) {
          if ((accX >= checkPoints[k].x1 && 
