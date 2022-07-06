@@ -15,13 +15,11 @@ $(document).ready(function() {
     $("#north").click(function(e) {
          if (!northLock) {
               northLock = true;
-              northAngle = mapAngle;
               $("#north").addClass("active");
               confirmationBeep.play();
          }
          else {
               northLock = false;
-              northAngle = mapAngle;
               $("#north").removeClass("active");
          }
     });
@@ -61,12 +59,15 @@ var checkPoints = [
 
 var x = 0;
 var y = 0;
+var z = 0;
 var firstCp = -1;
 var lastCp = -1;
 
 var northLock = false;
 var mapAngle = 0;
-var northAngle = 0;
+var northAngleX = 0;
+var northAngleY = 0;
+var northAngleZ = 0;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
@@ -76,6 +77,7 @@ function accHandler(acc) {
     var speedUp = acc.x + acc.y + acc.z;
     x = ((95 / 9.8) * accX)* -1;
     y = (95 / 9.8) * accY;
+    z = (95 / 9.8) * accZ;
 
     engine.world.gravity.x = ((1 / 9.8) * accX)*-1;
     engine.world.gravity.y = (1 / 9.8) * accY;
@@ -85,15 +87,24 @@ function accHandler(acc) {
           Math.pow(x, 2) +
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
+    northAngleX = calcularAngulo(x, y, h);
+    northAngleY = calcularAngulo(x, y, h);
+    northAngleZ = calcularAngulo(x, y, h);
     map.setBearing(mapAngle);
     
     if ( !northLock) {
-          northAngle = mapAngle;
+          northAngleX = calcularAngulo(x, y, h);
+          northAngleY = calcularAngulo(x, y, h);
+          northAngleZ = calcularAngulo(x, y, h);
     }
 
     height = speedUp;
     $("#north-indicator")
-    .css("transform", "rotate3d(0,1,0,"+northAngle+"deg)");
+    .css("transform", "rotateX("+northAngleX+"deg)");
+    $("#north-indicator")
+    .css("transform", "rotateY("+northAngleY+"deg)");
+    /*$("#north-indicator")
+    .css("transform", "rotateZ("+northAngleZ+"deg)");*/
 
     $("#map-angle-indicator")
     .text("map: " + mapAngle.toFixed(2) + "°");
