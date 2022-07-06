@@ -110,7 +110,7 @@ function calcularAngulo(co, ca, h) {
     a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
     a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
-    return a * (Math.PI/180);
+    return a * (180/Math.PI);
 }
 
 function foo() {
