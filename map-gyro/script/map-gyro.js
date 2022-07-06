@@ -95,8 +95,12 @@ function accHandler(acc) {
     $("#north-indicator")
     .css("transform", "rotate3d(1,1,1,"+northAngle+"deg)");
 
-    $("#map-angle-indicator").text(mapAngle.toFixed(2)+"°");
-    $("#height-indicator").text(speedUp.toFixed(3));
+    $("#map-angle-indicator")
+    .text("map: " + mapAngle.toFixed(2) + "°");
+    $("#height-indicator")
+    .text("height: " +speedUp.toFixed(3) + "m");
+    $("#acc-indicator")
+    .text("x: " + accX + ", y: " + accY + ", z: " + accZ);
 
     $("#pointer").css("margin-left", x.toString() + "px");
     $("#pointer").css("margin-top", y.toString() + "px");

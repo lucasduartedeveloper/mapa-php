@@ -60,6 +60,8 @@
 <span id="map-angle-indicator"></span>
 <br>
 <span id="height-indicator"></span>
+<br>
+<span id="acc-indicator"></span>
 </p>
 
 <button id="north" type="button" class="btn-north">
@@ -67,7 +69,7 @@
 </button>
 
 <p id="version-info">
-     MAP-GYRO v11.0.4.23
+     MAP-GYRO v11.0.4.25
      <br>
      <span id="server-info">
      CONNECTING...
@@ -96,7 +98,7 @@
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=4"></script>
-<script src="script/map-gyro.js?v=23"></script>
+<script src="script/map-gyro.js?v=25"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
