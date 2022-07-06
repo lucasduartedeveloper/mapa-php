@@ -94,7 +94,7 @@
 
 			var layers = L.control.layers({
 				'Empty': L.tileLayer(''),
-				'Streets': tileLayer,
+				'Streets': osm,
 				'Satellite': esri,
 			}, null, {
 				collapsed: false
