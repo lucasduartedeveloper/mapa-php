@@ -26,12 +26,16 @@ html, body {
 }
 
 #rotation {
+    position: fixed;
+    top: 10px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     background-color: #2f2e40;
+    z-index: 9999;
 }
 
 .map-box{
@@ -47,9 +51,12 @@ html, body {
 }
 
 #circle {
-    position: fixed;
-    top: 0px;
-    width: 100%;
+    bottom: 80px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
