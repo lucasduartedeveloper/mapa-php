@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=18">
+<link rel="stylesheet" href="css/style.css?v=19">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -113,7 +113,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v18.0.4.33
+     MAP-GYRO v19.0.4.33
      <br>
      <span id="server-info">
      CONNECTING...

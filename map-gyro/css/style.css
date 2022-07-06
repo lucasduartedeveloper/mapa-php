@@ -67,7 +67,7 @@ html, body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: #fff;
     position: absolute;
     z-index: 9999;
 }
@@ -78,7 +78,7 @@ html, body {
     rgba(157,4,4,1) 0%, 
     rgba(157,4,4,1) 48%, 
     rgba(0,0,0,1) 50%, 
-    rgba(0,10,11,1) 52%, 
+    rgba(0,183,220,1) 52%, 
     rgba(0,183,220,1) 100%);
     margin-left: 0px;
     margin-top: 0px;
