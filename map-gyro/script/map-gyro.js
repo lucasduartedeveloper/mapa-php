@@ -13,13 +13,13 @@ var height = 0;
 $(document).ready(function() {
     matterJs();
     $("#map").click(function(e) {
-         if (!northLock) {
+         if (!mapLock) {
               mapLock = true;
               $("#map").addClass("active");
               confirmationBeep.play();
          }
          else {
-              northLock = false;
+              mapLock = false;
               $("#map").removeClass("active");
          }
     });
