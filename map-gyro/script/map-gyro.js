@@ -12,33 +12,33 @@ var height = 0;
 
 $(document).ready(function() {
     matterJs();
-    $("#map").click(function(e) {
+    $("#btn-map").click(function(e) {
          if (!mapLock) {
               mapLock = true;
-              $("#map").addClass("active");
+              $("#btn-map").addClass("active");
               confirmationBeep.play();
          }
          else {
               mapLock = false;
-              $("#map").removeClass("active");
+              $("#btn-map").removeClass("active");
          }
     });
 
-    $("#north").click(function(e) {
+    $("#btn-north").click(function(e) {
          if (!northLock) {
               northLock = true;
-              $("#north").addClass("active");
+              $("#btn-north").addClass("active");
               confirmationBeep.play();
          }
          else {
               northLock = false;
-              $("#north").removeClass("active");
+              $("#btn-north").removeClass("active");
          }
     });
 
-    $("#close-camera").click(function(e) {
+    $("#btn-camera").click(function(e) {
          $("#camera-canvas").hide();
-         $("#close-camera").hide();
+         $("#btn-camera").hide();
     });
 
     $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
