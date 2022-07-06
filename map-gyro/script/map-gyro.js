@@ -67,7 +67,7 @@ function accHandler(acc) {
           Math.pow(x, 2) +
           Math.pow(y, 2));
     var a = calcularAngulo(x, y, h);
-    //L.Rotate._map.setBearing(a);
+    map.setBearing(a);
     
     height = speedUp;
     $("#north-indicator").text(a+"°");
@@ -110,7 +110,7 @@ function calcularAngulo(co, ca, h) {
     a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
     a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
-    return a;
+    return a * (Math.PI/180);
 }
 
 function foo() {
