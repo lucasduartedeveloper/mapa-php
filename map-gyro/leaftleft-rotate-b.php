@@ -76,7 +76,7 @@
 			    tileSize: 512,
 			    zoomOffset: -1,
 			    accessToken: 'pk.eyJ1IjoibHVjYXNkdWFydGUxOTkyIiwiYSI6ImNreGZieWE3ODFwNTQyb3N0cW4zNHMxMG8ifQ.HXS54wWrm6wPz-29LVVRbg'
-			}).addTo(map);
+			});
 
 			var map = L.map('map', {
 				layers: [esri],
@@ -87,7 +87,7 @@
 					closeOnZeroBearing: false
 				},
 				bearing: 30,
-			}).setView([-23.37062642645644,  -51.15587314318577], 18);;
+			}).setView([-23.37062642645644,  -51.15587314318577], 18);
 
 			// map.setBearing(30);
 			// map.touchRotate.enable();
