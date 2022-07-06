@@ -79,7 +79,7 @@
 			});
 
 			var map = L.map('map', {
-				layers: [esri],
+				//layers: [esri],
 				// worldCopyJump: true,
 				rotate: true,
 				touchRotate: true,
@@ -92,13 +92,14 @@
 			// map.setBearing(30);
 			// map.touchRotate.enable();
 
+/*
 			var layers = L.control.layers({
 				'Empty': L.tileLayer(''),
-				'Streets': osm,
+				'Streets': tileLayer,
 				'Satellite': esri,
 			}, null, {
 				collapsed: false
-			}).addTo(map);
+			}).addTo(map);*/
 
 			var markers = [];
 			for (var i in places) {
@@ -145,7 +146,7 @@
 			]).addTo(map);
 
 			// Display some debug info
-			L.Rotate.debug(map);
+			//L.Rotate.debug(map);
 		</script>
 
 		<a href="https://github.com/Raruto/leaflet-rotate" class="view-on-github" style="position: fixed;bottom: 10px;left: calc(50% - 60px);z-index: 9999;"> <img alt="View on Github" src="https://raruto.github.io/img/view-on-github.png" title="View on Github"
