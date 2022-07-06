@@ -19,7 +19,7 @@ var tileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 
 var compassIcon = L.icon({
        iconUrl: "/map-gyro/img/compass.png",
-       iconSize:     [40, 40], 
+       iconSize:     [30, 30], 
        iconAnchor:   [20, 20]
 });
 
@@ -98,7 +98,7 @@ function rotateCompass(angle) {
         compassMarker.setIcon(
             L.icon({
                  iconUrl: icon,
-                 iconSize:     [40, 40],
+                 iconSize:     [30, 30],
                  iconAnchor:   [20, 20]
             }));
     }
