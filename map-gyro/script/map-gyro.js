@@ -144,10 +144,11 @@ function accHandler(acc) {
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
 
-    if (!mapLock) {
+    if (!mapLock  &&  !northLock) {
          map.setBearing(mapAngle);
+         $("#rotate3d").val(mapAngle);
     }
-    else if (!mapLock &&  !northLock) {
+    else if (!mapLock) {
          $("#rotate3d").val(mapAngle);
     }
     else if (mapLock && northLock) {
