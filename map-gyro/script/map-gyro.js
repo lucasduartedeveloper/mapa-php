@@ -24,6 +24,17 @@ $(document).ready(function() {
          }
     });
 
+    $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
+    .on("change", function() {
+         $("#rotate3dlabel").text(
+              "Rotate3d(" +
+              $("#rotate3dX").val() + ", " +
+              $("#rotate3dY").val() + ", " +
+              $("#rotate3dZ").val() + ", " +
+              $("#rotate3d").val() + "deg)"
+         );
+    });
+
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "MAP-GYRO" &&
