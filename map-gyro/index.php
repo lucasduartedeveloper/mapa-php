@@ -120,7 +120,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v27.0.4.41
+     MAP-GYRO v27.0.4.42
      <br>
      <span id="server-info">
      CONNECTING...
@@ -149,7 +149,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=4"></script>
-<script src="script/map-gyro.js?v=41"></script>
+<script src="script/map-gyro.js?v=42"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

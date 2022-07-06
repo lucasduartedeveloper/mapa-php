@@ -130,13 +130,11 @@ function accHandler(acc) {
           Math.pow(x, 2) +
           Math.pow(y, 2));
     mapAngle = calcularAngulo(x, y, h);
-    map.setBearing(mapAngle);
-    
+
     if ( !northLock) {
-         $("#rotate3d").val(calcularAngulo(x, y, h));
+         map.setBearing(mapAngle);
     }
-    /*$("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
-    .trigger("change");*/
+    $("#rotate3d").val(mapAngle);
 
     height = speedUp;
     $("#north-indicator")
