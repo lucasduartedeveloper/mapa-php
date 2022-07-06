@@ -87,8 +87,10 @@ class="form-range">
 
 <video style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas">
-<button id="close-camera" class="btn-close-camera">x</button>
 </canvas>
+<button id="close-camera" class="btn-close-camera">
+<i class="fa-solid fa-x"></i>
+</button>
 </div>
 
 <div id="map" class="map-box">

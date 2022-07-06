@@ -170,8 +170,6 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-right: -40vw;
-   margin-top: -10vh;
    width: 15vw;
    height: 15vw;
    max-width: 25vh;
