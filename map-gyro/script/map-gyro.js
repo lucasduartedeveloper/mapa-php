@@ -93,7 +93,7 @@ function accHandler(acc) {
 
     height = speedUp;
     $("#north-indicator")
-    .css("transform", "rotate3d(1,1,1,"+northAngle+"deg)");
+    .css("transform", "rotate3d(0,1,0,"+northAngle+"deg)");
 
     $("#map-angle-indicator")
     .text("map: " + mapAngle.toFixed(2) + "°");
