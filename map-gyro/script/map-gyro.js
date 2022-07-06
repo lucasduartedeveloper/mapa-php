@@ -56,6 +56,7 @@ $(document).ready(function() {
          var ctx = cnv.getContext("2d");
 
          ctx.drawImage(video, 0, 0, 100, 100);
+         var imgData = ctx.getImageData(0, 0, 100, 100);
  
          // overwrite original image
          context.putImageData(imgData, 0, 0);
