@@ -74,7 +74,12 @@ html, body {
 
 #circle #north-indicator {
     background: rgb(157,4,4);
-    background: linear-gradient(180deg, rgba(157,4,4,1) 0%, rgba(255,251,251,1) 50%, rgba(0,183,220,1) 100%);
+    background: linear-gradient(180deg, 
+    rgba(157,4,4,1) 0%, 
+    rgba(157,4,4,1) 48%, 
+    rgba(0,0,0,1) 50%, 
+    rgba(0,10,11,1) 52%, 
+    rgba(0,183,220,1) 100%);
     margin-left: 0px;
     margin-top: 0px;
     padding: 26.75px 30px;
