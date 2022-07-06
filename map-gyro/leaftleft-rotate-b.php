@@ -79,7 +79,7 @@
 			});
 
 			var map = L.map('map', {
-				//layers: [esri],
+				layers: [esri],
 				// worldCopyJump: true,
 				rotate: true,
 				touchRotate: true,
