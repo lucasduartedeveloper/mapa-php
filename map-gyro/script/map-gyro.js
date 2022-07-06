@@ -24,7 +24,7 @@ $(document).ready(function() {
          }
     });
 
-    $("#btn-north").click(function(e) {q
+    $("#btn-north").click(function(e) {
          if (!northLock) {
               northLock = true;
               $("#btn-north").addClass("active");
