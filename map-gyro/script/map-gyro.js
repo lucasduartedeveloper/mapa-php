@@ -96,7 +96,7 @@ function accHandler(acc) {
     $("#rotate3dX").val()+","+
     $("#rotate3dY").val()+","+
     $("#rotate3dZ").val()+","+
-    $("#rotate3d").val());
+    $("#rotate3d").val()+"deg");
 
     $("#map-angle-indicator")
     .text("map: " + mapAngle.toFixed(2) + "°");
