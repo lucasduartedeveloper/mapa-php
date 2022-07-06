@@ -61,8 +61,16 @@ function accHandler(acc) {
 
     engine.world.gravity.x = ((1 / 9.8) * accX)*-1;
     engine.world.gravity.y = (1 / 9.8) * accY;
+
+    var h = 
+          Math.sqrt(
+          Math.pow(co, 2) +
+          Math.pow(ca, 2));
+    var a = calcularAngulo(x, y, h);
+    L.Rotate._map.setBearing(a);
     
     height = speedUp;
+    $("#north-indicator").text(a+"°");
     $("#height-indicator").text(speedUp.toFixed(3));
 
     $("#pointer").css("margin-left", x.toString() + "px");
@@ -94,6 +102,15 @@ function accHandler(acc) {
              lastCp = k;
          }
     }
+}
+
+function calcularAngulo(co, ca, h) {
+    var senA = co/h;
+    var a = Math.asin(senA);
+    a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
+    a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
+    a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
+    return a;
 }
 
 function foo() {
