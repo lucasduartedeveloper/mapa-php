@@ -65,9 +65,6 @@ var lastCp = -1;
 
 var northLock = false;
 var mapAngle = 0;
-var northAngleX = 0;
-var northAngleY = 0;
-var northAngleZ = 0;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
@@ -90,18 +87,19 @@ function accHandler(acc) {
     map.setBearing(mapAngle);
     
     if ( !northLock) {
-          northAngleX = calcularAngulo(x, y, h);
-          northAngleY = calcularAngulo(y, z, h);
-          northAngleZ = calcularAngulo(x, z, h);
+         // ---
     }
 
     height = speedUp;
-    /*$("#north-indicator")
-    .css("transform", "rotateX("+northAngleX+"deg)");
-    /*$("#north-indicator")
-    .css("transform", "rotateY("+northAngleY+"deg)");*/
-    /*$("#north-indicator")
-    .css("transform", "rotateZ("+northAngleZ+"deg)");*/
+    $("#north-indicator")
+    .css("transform", "rotateX("+
+    $("#rotateX").val()+"deg)");
+    $("#north-indicator")
+    .css("transform", "rotateY("+
+    $("#rotateY").val()+"deg)");
+    $("#north-indicator")
+    .css("transform", "rotateZ("+
+    $("#rotateZ").val()+"deg)");
 
     $("#map-angle-indicator")
     .text("map: " + mapAngle.toFixed(2) + "°");
