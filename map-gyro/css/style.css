@@ -114,6 +114,7 @@ html, body {
     border: 2px solid #000;
     -webkit-transform-style: preserve-3d;
     transform: translate3d(0px, 0px, 5px);
+    background-size: 140% 120%;
 }
 
 #circle #north-indicator-backside {
@@ -130,11 +131,13 @@ html, body {
     border: 2px solid #000;
     -webkit-transform-style: preserve-3d;
     transform: translate3d(0px, 0px, -5px);
+    background-size: 130% 120%;
+    background-position-x: 60%;
 }
 
 .cylinder-face-0 {
     position: absolute;
-    background-color: rgba(100, 100, 100, 1);
+    background-color: #6E4F2F;
     border: 2px solid #000;
     width: 10px;
     height: 50px;
@@ -143,7 +146,7 @@ html, body {
 }
 .cylinder-face-1 {
     position: absolute;
-    background-color: rgba(100, 100, 100, 1);
+    background-color: #6E4F2F;
     border: 2px solid #000;
     width: 10px;
     height: 50px;
@@ -152,7 +155,7 @@ html, body {
 }
 .cylinder-face-2 {
     position: absolute;
-    background-color: rgba(100, 100, 100, 1);
+    background-color: #6E4F2F;
     border: 2px solid #000;
     width: 10px;
     height: 50px;
@@ -161,7 +164,7 @@ html, body {
 }
 .cylinder-face-3 {
     position: absolute;
-    background-color: rgba(100, 100, 100, 1);
+    background-color: #6E4F2F;
     border: 2px solid #000;
     width: 10px;
     height: 50px;
