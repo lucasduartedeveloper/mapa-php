@@ -118,7 +118,7 @@ function rotateImage(img, angle) {
 
      context.save();
      context.translate(canvas.width / 2, canvas.height / 2);
-     context.rotate(angle);
+     context.rotate(angle * (Math.PI/180));
      context.drawImage(img, -(width / 2), -(height / 2),
          width, height);
      context.restore();
