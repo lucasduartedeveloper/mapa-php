@@ -86,7 +86,7 @@ function mapClick(e) {
     marker.setLatLng(new L.LatLng(pos.lat, pos.lng));
     markerShadow.setLatLng(new L.LatLng(pos.lat, pos.lng));
     compassMarker.setLatLng(new L.LatLng(pos.lat, pos.lng));
-    map.setView([ pos.latlng.lat, pos.latlng.lng ], 18);
+    map.setView([ pos.lat, pos.lng ], 18);
 }
 
 function rotateCompass(angle) {
