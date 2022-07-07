@@ -97,14 +97,14 @@ $(document).ready(function() {
          fixedX = parseInt($("#fixedX").val());
          fixedY = parseInt($("#fixedY").val());
          fixedZ = parseInt($("#fixedZ").val());
-
-         if (!mapLock) {
+         
+         if (mapLock && !northLock) {
               mapAngle = parseInt($("#map-rotation").val());
          }
-         else if (!northLock) {   
+         else if (!mapLock && northLock) {
               rotateX = parseInt($("#rotateX").val());
               rotateY = parseInt($("#rotateY").val());
-              northAngle = parseInt($("#rotateZ").val());
+              northAngle = parseInt($("#rotateZ").val())
          }
          else if (mapLock && northLock) {
               mapAngle = parseInt($("#map-rotation").val());
