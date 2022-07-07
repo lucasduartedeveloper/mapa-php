@@ -88,6 +88,10 @@ html, body {
 #circle #north-indicator-container {
     margin-left: 0px;
     margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     -webkit-transform-style: preserve-3d;
     z-index: 9999;
 }
