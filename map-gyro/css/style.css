@@ -111,6 +111,7 @@ html, body {
     background-color: rgba(0, 0, 0, 1);
     margin-left: 0px;
     margin-top: 0px;
+    transform: rotateY( 180deg );
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
