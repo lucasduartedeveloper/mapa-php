@@ -100,25 +100,25 @@ $(document).ready(function() {
 
          if (!mapLock  &&  !northLock) {
               $("#map-rotation").val(mapAngle);
-              map.setBearing(mapAngle);
+              map.setBearing(mapAngle + fixedZ);
               $("#rotateX").val(rotateX);
               $("#rotateY").val(rotateY);
               $("#rotateZ").val(northAngle);
-              rotateCompass(northAngle);
+              rotateCompass(northAngle + fixedZ);
          }
          else if (!mapLock) {
               $("#map-rotation").val(northAngle);
-              map.setBearing(mapAngle);
+              map.setBearing(mapAngle + fixedZ);
          }
          else if (!northLock) {
               $("#rotateX").val(rotateX);
               $("#rotateY").val(rotateY);
               $("#rotateZ").val(northAngle);
-              rotateCompass(northAngle);
+              rotateCompass(northAngle + fixedZ);
          }
          else if (mapLock && northLock) {
-              map.setBearing($("#map-rotation").val());
-              rotateCompass($("#rotateZ").val());
+              map.setBearing($("#map-rotation").val() + fixedZ);
+              rotateCompass($("#rotateZ").val() + fixedZ);
          }
 
          $("#rotateX, #rotateY, #rotateZ, #map-rotation")
@@ -126,9 +126,9 @@ $(document).ready(function() {
 
          $("#north-indicator-container")
          .css("transform", 
-         "rotateX("+ $("#rotateX").val()+"deg) "+
-         "rotateY("+ $("#rotateY").val()+"deg) "+
-         "rotateZ("+ $("#rotateZ").val()+"deg)");
+         "rotateX("+ $("#rotateX").val() + fixedX + "deg) "+
+         "rotateY("+ $("#rotateY").val() + fixedY + "deg) "+
+         "rotateZ("+ $("#rotateZ").val() + fixedZ + "deg)");
 
          $("#height-indicator")
          .text("height: " +height.toFixed(3) + "m");
@@ -207,21 +207,21 @@ function accHandler(acc) {
 
     if (!mapLock  &&  !northLock) {
          rotateX = 
-         Math.round((180 / 9.8) * acc.x) + fixedX;
+         Math.round((180 / 9.8) * acc.x);
          rotateY = 
-         Math.round((180 / 9.8) * acc.y) + fixedY;
+         Math.round((180 / 9.8) * acc.y);
          northAngle = 
-         Math.round((180 / 9.8) * acc.z) + fixedZ;
+         Math.round((180 / 9.8) * acc.z);
          mapAngle = 
-         Math.round((180 / 9.8) * acc.z) + fixedZ;
+         Math.round((180 / 9.8) * acc.z);
     }
     else if (!mapLock) {
          mapAngle = 
-         Math.round((180 / 9.8) * acc.z) + fixedZ;
+         Math.round((180 / 9.8) * acc.z);
     }
     else if (!northLock) {
          northAngle = 
-         Math.round((180 / 9.8) * acc.z) + fixedZ;
+         Math.round((180 / 9.8) * acc.z);
     }
 
     for(var k in checkPoints) {
