@@ -190,7 +190,7 @@ function accHandler(acc) {
 
     if (!mapLock  &&  !northLock) {
          rotateX = Math.round((180 / 9.8) * acc.x)+90;
-         rotateY = Math.round((180 / 9.8) * acc.y);
+         rotateY = Math.round((180 / 9.8) * acc.y)-180;
          northAngle = Math.round((180 / 9.8) * acc.z);
          mapAngle = Math.round((180 / 9.8) * acc.z);
     }
