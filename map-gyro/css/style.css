@@ -85,6 +85,12 @@ html, body {
     z-index: 9999;
 }
 
+#circle #north-indicator-container {
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 9999;
+}
+
 #circle #north-indicator {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
@@ -94,22 +100,18 @@ html, body {
     rgba(0,0,0,1) 50%, 
     rgba(0,183,220,1) 52%, 
     rgba(0,183,220,1) 100%);
+    padding: 26.75px 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+#circle #north-indicator-backside {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 1);
     margin-left: 0px;
     margin-top: 0px;
     padding: 26.75px 30px;
     border-radius: 50%;
-    border: 2px solid #000;
-    z-index: 9999;
-}
-
-#circle #north-indicator-ball {
-    display: none;
-    width: 10px;
-    height: 10px;
-    margin-left: 0px;
-    margin-top: 0px;
-    border-radius: 50%;
-    background-color: #822B2B;
     border: 2px solid #000;
 }
 

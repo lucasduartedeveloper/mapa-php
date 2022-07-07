@@ -100,7 +100,7 @@ $(document).ready(function() {
          $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
          .trigger("change");
 
-         $("#north-indicator")
+         $("#north-indicator-container")
          .css("transform", "rotate3d("+
          $("#rotate3dX").val()+","+
          $("#rotate3dY").val()+","+
