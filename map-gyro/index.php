@@ -69,15 +69,15 @@ class="form-range">
 <label id="rotate3dlabel"
 for="rotate3dX" class="form-label">Rotate3d: 0, 0, 0, 0</label>
 <input id="rotate3dX"
-min="0" max="5" step="0.1" value="0"
+min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
 <input id="rotate3dY"
-min="0" max="5" step="0.1" value="0"
+min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
 <input id="rotate3dZ"
-min="0" max="5" step="0.1" value="0"
+min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
 <input id="rotate3d"
