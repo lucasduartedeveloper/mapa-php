@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=43">
+<link rel="stylesheet" href="css/style.css?v=44">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -108,6 +108,10 @@ class="form-range">
          class="fa-solid fa-arrow-up-long"></i>
          <i id="north-indicator"
          class="fa-solid fa-arrow-up-long"></i>
+         <div id="cylinder-face-0"></div>
+         <div id="cylinder-face-1"></div>
+         <div id="cylinder-face-2"></div>
+         <div id="cylinder-face-3"></div>
      </div>
 </div>
 
@@ -128,7 +132,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v43.0.11.57
+     MAP-GYRO v44.0.11.57
      <br>
      <span id="server-info">
      CONNECTING...
