@@ -103,6 +103,7 @@ html, body {
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
+    -webkit-backface-visibility: hidden;
 }
 
 #circle #north-indicator-backside {
@@ -115,6 +116,7 @@ html, body {
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
+    -webkit-backface-visibility: hidden;
 }
 
 #circle span:nth-of-type(1n) {
