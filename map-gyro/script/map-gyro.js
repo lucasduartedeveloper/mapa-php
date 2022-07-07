@@ -88,20 +88,24 @@ $(document).ready(function() {
          if (!mapLock  &&  !northLock) {
               $("#map-rotation").val(mapAngle);
               map.setBearing(mapAngle);
+              $("#rotateX").val(rotateX);
+              $("#rotateY").val(rotateY);
               $("#rotateZ").val(northAngle);
               rotateCompass(northAngle);
          }
          else if (!mapLock) {
               $("#map-rotation").val(northAngle);
-             map.setBearing(mapAngle);
+              map.setBearing(mapAngle);
          }
          else if (!northLock) {
-             $("#rotateZ").val(northAngle);
-             rotateCompass(northAngle);
+              $("#rotateX").val(rotateX);
+              $("#rotateY").val(rotateY);
+              $("#rotateZ").val(northAngle);
+              rotateCompass(northAngle);
          }
          else if (mapLock && northLock) {
-             map.setBearing($("#map-rotation").val());
-             rotateCompass($("#rotateZ").val());
+              map.setBearing($("#map-rotation").val());
+              rotateCompass($("#rotateZ").val());
          }
 
          $("#rotateX, #rotateY, #rotateZ, #map-rotation")
