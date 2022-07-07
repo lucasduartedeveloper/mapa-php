@@ -180,7 +180,17 @@ function accHandler(acc) {
     engine.world.gravity.y = (1 / 9.8) * accY;
 
     height = speedUp;
-    
+
+    if (!mapLock  &&  !northLock) {
+         mapAngle = Math.round((180 / 9.8) * acc.z);
+         northAngle = Math.round((180 / 9.8) * acc.z);
+    }
+    else if (!mapLock) {
+         mapAngle = Math.round(180 / 9.8) * acc.z);
+    }
+    else if (!northLock) {
+         northAngle = Math.round(180 / 9.8) * acc.z);
+    }
 
     for(var k in checkPoints) {
          if ((accX >= checkPoints[k].x1 && 
