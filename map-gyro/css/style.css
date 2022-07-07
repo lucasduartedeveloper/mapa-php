@@ -104,8 +104,7 @@ html, body {
     border-radius: 50%;
     border: 2px solid #000;
     -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    transform: translate3d(0px, 0px, 2px);
+    transform: translate3d(0px, 0px, 1px);
 }
 
 #circle #north-indicator-backside {
@@ -118,8 +117,6 @@ html, body {
     border-radius: 50%;
     border: 2px solid #000;
     -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    transform: translate3d(0px, 0px, -2px);
 }
 
 #circle span:nth-of-type(1n) {
