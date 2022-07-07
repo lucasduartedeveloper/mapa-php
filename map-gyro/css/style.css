@@ -92,8 +92,8 @@ html, body {
 }
 
 #circle #north-indicator {
+    position: absolute;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
     background: linear-gradient(180deg, 
     rgba(157,4,4,1) 0%, 
     rgba(157,4,4,1) 48%, 
@@ -107,6 +107,7 @@ html, body {
 
 #circle #north-indicator-backside {
     color: #fff;
+    position: absolute;
     background-color: rgba(0, 0, 0, 1);
     margin-left: 0px;
     margin-top: 0px;
