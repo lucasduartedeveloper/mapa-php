@@ -94,9 +94,9 @@ $(document).ready(function() {
          context.putImageData(imgData, 0, 0);
 
          // update 
-         $("#fixedX").val(fixedX);
-         $("#fixedY").val(fixedY);
-         $("#fixedZ").val(fixedZ);
+         fixedX = $("#fixedX").val();
+         fixedY = $("#fixedY").val();
+         fixedZ = $("#fixedZ").val();
 
          if (!mapLock  &&  !northLock) {
               $("#map-rotation").val(mapAngle);
