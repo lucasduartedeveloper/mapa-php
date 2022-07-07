@@ -132,7 +132,7 @@ html, body {
     width: 10px;
     height: 50px;
     -webkit-transform-style: preserve-3d;
-    transform: rotateY(90deg) rotateX(90deg) translateY(-25px);
+    transform: translateY(-25px) rotateY(90deg) rotateX(90deg) ;
 }
 .cylinder-face-1 {
     position: absolute;
@@ -141,7 +141,7 @@ html, body {
     width: 10px;
     height: 50px;
     -webkit-transform-style: preserve-3d;
-    transform: rotateY(90deg) translateX( -25px);
+    transform: translateX( -25px) rotateY(90deg);
 }
 .cylinder-face-2 {
     position: absolute;
@@ -150,7 +150,7 @@ html, body {
     width: 10px;
     height: 50px;
     -webkit-transform-style: preserve-3d;
-    transform: rotateY(90deg) rotateX(90deg) translateY(25px);
+    transform: translateY(25px) rotateY(90deg) rotateX(90deg);
 }
 .cylinder-face-3 {
     position: absolute;
@@ -159,7 +159,7 @@ html, body {
     width: 10px;
     height: 50px;
     -webkit-transform-style: preserve-3d;
-    transform: rotateY(90deg) translateX(25px);
+    transform:  translateX(25px) rotateY(90deg);
 }
 
 #circle span:nth-of-type(1n) {
