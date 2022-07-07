@@ -102,9 +102,9 @@ $(document).ready(function() {
 
          $("#north-indicator-container")
          .css("transform", 
-         "rotateX("+ $("#rotate3dX").val()+") "+
-         "rotateY("+ $("#rotate3dY").val()+") "+
-         "rotateZ("+ $("#rotate3dZ").val()+")");
+         "rotateX("+ $("#rotate3dX").val()+"deg) "+
+         "rotateY("+ $("#rotate3dY").val()+"deg) "+
+         "rotateZ("+ $("#rotate3dZ").val()+"deg)");
 
          $("#map-angle-indicator")
          .text("map: " + mapAngle.toFixed(2) + "°");
