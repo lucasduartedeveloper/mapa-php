@@ -163,8 +163,11 @@ var lastCp = -1;
 
 var mapLock = false;
 var northLock = false;
-var mapAngle = 0;
+
+var rotateX = 0;
+var rotateY = 0;
 var northAngle = 0;
+var mapAngle = 0;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
@@ -182,8 +185,10 @@ function accHandler(acc) {
     height = speedUp;
 
     if (!mapLock  &&  !northLock) {
-         mapAngle = Math.round((180 / 9.8) * acc.z);
+         rotateX = Math.round((180 / 9.8) * acc.x);
+         rotateY = Math.round((180 / 9.8) * acc.y);
          northAngle = Math.round((180 / 9.8) * acc.z);
+         mapAngle = Math.round((180 / 9.8) * acc.z);
     }
     else if (!mapLock) {
          mapAngle = Math.round((180 / 9.8) * acc.z);
