@@ -62,7 +62,7 @@ $(document).ready(function() {
 
    $("#map-rotation")
     .on("change", function() {
-         $("#rotate-label").text(
+         $("#map-rotation-label").text(
               "Map rotate: " + $("#map-rotation").val()
          );
     });
@@ -130,9 +130,9 @@ $(document).ready(function() {
 
          $("#north-indicator-container")
          .css("transform", 
-         "rotateX("+ rotateX + fixedX + "deg) "+
-         "rotateY("+ rotateY + fixedY + "deg) "+
-         "rotateZ("+ northAngle + fixedZ + "deg)");
+         "rotateX("+ (rotateX + fixedX) + "deg) "+
+         "rotateY("+ (rotateY + fixedY) + "deg) "+
+         "rotateZ("+ (northAngle + fixedZ) + "deg)");
 
          $("#height-indicator")
          .text("height: " +height.toFixed(3) + "m");
