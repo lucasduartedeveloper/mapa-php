@@ -189,16 +189,16 @@ function accHandler(acc) {
     height = speedUp;
 
     if (!mapLock  &&  !northLock) {
-         rotateX = Math.round((180 / 9.8) * acc.x);
+         rotateX = Math.round((180 / 9.8) * acc.x)+90;
          rotateY = Math.round((180 / 9.8) * acc.y);
-         northAngle = Math.round((180 / 9.8) * acc.z)-180;
-         mapAngle = Math.round((180 / 9.8) * acc.z)-180;
+         northAngle = Math.round((180 / 9.8) * acc.z);
+         mapAngle = Math.round((180 / 9.8) * acc.z);
     }
     else if (!mapLock) {
-         mapAngle = Math.round((180 / 9.8) * acc.z)-180;
+         mapAngle = Math.round((180 / 9.8) * acc.z);
     }
     else if (!northLock) {
-         northAngle = Math.round((180 / 9.8) * acc.z)-180;
+         northAngle = Math.round((180 / 9.8) * acc.z);
     }
 
     for(var k in checkPoints) {
