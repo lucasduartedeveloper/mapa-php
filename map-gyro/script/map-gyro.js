@@ -94,6 +94,7 @@ $(document).ready(function() {
          }
          else if (mapLock && northLock) {
              map.setBearing($("#rotate3d").val());
+             rotateCompass($("#rotate3d").val());
          }
 
          $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
