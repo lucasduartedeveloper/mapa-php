@@ -92,7 +92,7 @@ html, body {
 }
 
 #circle #north-indicator {
-    position: absolute;
+    position: relative;
     color: #fff;
     background: linear-gradient(180deg, 
     rgba(157,4,4,1) 0%, 
@@ -114,7 +114,6 @@ html, body {
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
-    z-index: 9998;
 }
 
 #circle span:nth-of-type(1n) {
