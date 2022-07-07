@@ -103,6 +103,7 @@ html, body {
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
+    -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
 }
 
@@ -116,6 +117,7 @@ html, body {
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
+    -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
 }
 
