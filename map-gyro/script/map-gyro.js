@@ -101,11 +101,10 @@ $(document).ready(function() {
          .trigger("change");
 
          $("#north-indicator-container")
-         .css("transform", "rotate3d("+
-         $("#rotate3dX").val()+","+
-         $("#rotate3dY").val()+","+
-         $("#rotate3dZ").val()+","+
-         $("#rotate3d").val()+"deg");
+         .css("transform", 
+         "rotateX("+ $("#rotate3dX").val()+") "+
+         "rotateY("+ $("#rotate3dY").val()+") "+
+         "rotateZ("+ $("#rotate3dZ").val()+")");
 
          $("#map-angle-indicator")
          .text("map: " + mapAngle.toFixed(2) + "°");
