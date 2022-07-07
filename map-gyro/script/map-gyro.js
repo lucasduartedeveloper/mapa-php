@@ -44,8 +44,8 @@ $(document).ready(function() {
 
     $("#rotateX, #rotateY, #rotateZ")
     .on("change", function() {
-         $("#rotations-label").text(
-              "Rotate X: " + $("#rotateX").val() + ", " +
+         $("#rotation-label").text(
+              "Rotation X: " + $("#rotateX").val() + ", " +
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
@@ -53,8 +53,8 @@ $(document).ready(function() {
 
     $("#fixedX, #fixedY, #fixedZ")
     .on("change", function() {
-         $("#rotations-label").text(
-              "Rotate fix X: " + $("#fixedX").val() + ", " +
+         $("#rotation-fix-label").text(
+              "Rotation fix X: " + $("#fixedX").val() + ", " +
               "Y: " + $("#fixedY").val() + ", " +
               "Z: " + $("#fixedZ").val()
          );
@@ -94,6 +94,10 @@ $(document).ready(function() {
          context.putImageData(imgData, 0, 0);
 
          // update 
+         $("#fixedX").val(fixedX);
+         $("#fixedY").val(fixedY);
+         $("#fixedZ").val(fixedZ);
+
          if (!mapLock  &&  !northLock) {
               $("#map-rotation").val(mapAngle);
               map.setBearing(mapAngle);
