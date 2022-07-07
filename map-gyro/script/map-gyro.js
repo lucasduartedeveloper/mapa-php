@@ -121,7 +121,11 @@ $(document).ready(function() {
          $("#rotateY").val(rotateY);
          $("#rotateZ").val(northAngle);
 
-         $("#rotateX, #rotateY, #rotateZ, #map-rotation")
+         $("#rotateX, #rotateY, #rotateZ")
+         .trigger("change");
+         $("#fixedX, #fixedY, #fixedZ")
+         .trigger("change");
+         $("#map-rotation")
          .trigger("change");
 
          $("#north-indicator-container")
