@@ -51,6 +51,15 @@ $(document).ready(function() {
          );
     });
 
+    $("#fixedX, #fixedY, #fixedZ")
+    .on("change", function() {
+         $("#rotations-label").text(
+              "Rotate fix X: " + $("#fixedX").val() + ", " +
+              "Y: " + $("#fixedY").val() + ", " +
+              "Z: " + $("#fixedZ").val()
+         );
+    });
+
    $("#map-rotation")
     .on("change", function() {
          $("#rotate-label").text(
@@ -168,6 +177,10 @@ var lastCp = -1;
 var mapLock = false;
 var northLock = false;
 
+var fixedX = 0;
+var fixedY = 0;
+var fixedZ = 0;
+
 var rotateX = 0;
 var rotateY = 0;
 var northAngle = 0;
@@ -189,16 +202,22 @@ function accHandler(acc) {
     height = speedUp;
 
     if (!mapLock  &&  !northLock) {
-         rotateX = Math.round((180 / 9.8) * acc.x)+90;
-         rotateY = Math.round((180 / 9.8) * acc.y)-180;
-         northAngle = Math.round((180 / 9.8) * acc.z);
-         mapAngle = Math.round((180 / 9.8) * acc.z);
+         rotateX = 
+         Math.round((180 / 9.8) * acc.x) + fixedX;
+         rotateY = 
+         Math.round((180 / 9.8) * acc.y) + fixedY;
+         northAngle = 
+         Math.round((180 / 9.8) * acc.z) + fixedZ;
+         mapAngle = 
+         Math.round((180 / 9.8) * acc.z) + fixedZ;
     }
     else if (!mapLock) {
-         mapAngle = Math.round((180 / 9.8) * acc.z);
+         mapAngle = 
+         Math.round((180 / 9.8) * acc.z) + fixedZ;
     }
     else if (!northLock) {
-         northAngle = Math.round((180 / 9.8) * acc.z);
+         northAngle = 
+         Math.round((180 / 9.8) * acc.z) + fixedZ;
     }
 
     for(var k in checkPoints) {

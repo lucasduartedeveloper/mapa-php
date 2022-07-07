@@ -59,6 +59,21 @@ min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
 
+<label id="rotation-fix-label"
+for="fixedX" class="form-label">Rotation fix X: 0, Y: 0, Z: 0</label>
+<input id="fixedX"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
+<input id="fixedY"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
+<input id="fixedZ"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
+
 <label id="map-rotation-label"
 for="map-rotation" class="form-label">Map rotation: 0</label>
 <input id="map-rotation"
@@ -113,7 +128,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v50.0.11.67
+     MAP-GYRO v50.0.11.68
      <br>
      <span id="server-info">
      CONNECTING...
@@ -142,7 +157,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=11"></script>
-<script src="script/map-gyro.js?v=67"></script>
+<script src="script/map-gyro.js?v=68"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
