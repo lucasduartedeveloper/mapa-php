@@ -63,7 +63,7 @@ $(document).ready(function() {
    $("#map-rotation")
     .on("change", function() {
          $("#map-rotation-label").text(
-              "Map rotate: " + $("#map-rotation").val()
+              "Map rotation: " + $("#map-rotation").val()
          );
     });
 
