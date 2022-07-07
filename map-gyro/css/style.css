@@ -105,6 +105,7 @@ html, body {
     border: 2px solid #000;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
+    transform: translate3d(0px, 0px, 2px);
 }
 
 #circle #north-indicator-backside {
@@ -113,12 +114,12 @@ html, body {
     background-color: rgba(0, 0, 0, 1);
     margin-left: 0px;
     margin-top: 0px;
-    transform: rotateY( 180deg );
     padding: 26.75px 30px;
     border-radius: 50%;
     border: 2px solid #000;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
+    transform: rotateY( 180deg ), translate3d(0px, 0px, -2px);
 }
 
 #circle span:nth-of-type(1n) {
