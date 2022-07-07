@@ -94,41 +94,41 @@ $(document).ready(function() {
          context.putImageData(imgData, 0, 0);
 
          // update 
-         fixedX = $("#fixedX").val();
-         fixedY = $("#fixedY").val();
-         fixedZ = $("#fixedZ").val();
+         fixedX = parseInt($("#fixedX").val());
+         fixedY = parseInt($("#fixedY").val());
+         fixedZ = parseInt($("#fixedZ").val());
 
-         if (!mapLock  &&  !northLock) {
-              $("#map-rotation").val(mapAngle);
-              map.setBearing(mapAngle + fixedZ);
-              $("#rotateX").val(rotateX);
-              $("#rotateY").val(rotateY);
-              $("#rotateZ").val(northAngle);
-              rotateCompass(northAngle + fixedZ);
-         }
-         else if (!mapLock) {
-              $("#map-rotation").val(northAngle);
-              map.setBearing(mapAngle + fixedZ);
+         if (!mapLock) {
+              rotateX = parseInt($("#rotateX").val());
+              rotateY = parseInt($("#rotateY").val());
+              northAngle = parseInt($("#rotateZ").val());
          }
          else if (!northLock) {
-              $("#rotateX").val(rotateX);
-              $("#rotateY").val(rotateY);
-              $("#rotateZ").val(northAngle);
-              rotateCompass(northAngle + fixedZ);
+              mapAngle = parseInt($("#map-rotation").val());
          }
          else if (mapLock && northLock) {
-              map.setBearing($("#map-rotation").val() + fixedZ);
-              rotateCompass($("#rotateZ").val() + fixedZ);
+              mapAngle = parseInt($("#map-rotation").val());
+              rotateX = parseInt($("#rotateX").val());
+              rotateY = parseInt($("#rotateY").val());
+              northAngle = parseInt($("#rotateZ").val());
          }
+
+         map.setBearing(mapAngle + fixedZ);
+         rotateCompass(northAngle + fixedZ);
+
+         $("#map-rotation").val(mapAngle);
+         $("#rotateX").val(rotateX);
+         $("#rotateY").val(rotateY);
+         $("#rotateZ").val(northAngle);
 
          $("#rotateX, #rotateY, #rotateZ, #map-rotation")
          .trigger("change");
 
          $("#north-indicator-container")
          .css("transform", 
-         "rotateX("+ $("#rotateX").val() + fixedX + "deg) "+
-         "rotateY("+ $("#rotateY").val() + fixedY + "deg) "+
-         "rotateZ("+ $("#rotateZ").val() + fixedZ + "deg)");
+         "rotateX("+ rotateX + fixedX + "deg) "+
+         "rotateY("+ rotateY + fixedY + "deg) "+
+         "rotateZ("+ northAngle + fixedZ + "deg)");
 
          $("#height-indicator")
          .text("height: " +height.toFixed(3) + "m");
