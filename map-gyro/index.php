@@ -44,43 +44,24 @@
 <body>
 
 <div id="rotation">
-<!--
-<label id="rotateXlabel"
-for="rotateX" class="form-label">RotateX: 0</label>
-<input type="range" id="rotateX"
-min="-180" max="180"  step="1" value="0"
-class="form-range" >
-
-<label id="rotateYlabel"
-for="rotateY" class="form-label">RotateY: 0</label>
+<label id="rotations-label"
+for="rotateX" class="form-label">Rotation X: 0, Y: 0, Z: 0</label>
+<input id="rotateX"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
 <input id="rotateY"
 min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
-
-<label id="rotateZlabel"
-for="rotateZ" class="form-label">RotateZ: 0</label>
 <input id="rotateZ"
 min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
--->
 
-<label id="rotate3dlabel"
-for="rotate3dX" class="form-label">Rotate3d: 0, 0, 0, 0</label>
-<input id="rotate3dX"
-min="-180" max="180" step="1" value="0"
-type="range" 
-class="form-range">
-<input id="rotate3dY"
-min="-180" max="180" step="1" value="0"
-type="range" 
-class="form-range">
-<input id="rotate3dZ"
-min="-180" max="180" step="1" value="0"
-type="range" 
-class="form-range">
-<input id="rotate3d"
+<label id="map-rotation-label"
+for="map-rotation" class="form-label">Map rotation: 0</label>
+<input id="map-rotation"
 min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
@@ -132,7 +113,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v50.0.11.59
+     MAP-GYRO v50.0.11.60
      <br>
      <span id="server-info">
      CONNECTING...
@@ -161,7 +142,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=0"></script>
 <script src="script/map.js?v=11"></script>
-<script src="script/map-gyro.js?v=59"></script>
+<script src="script/map-gyro.js?v=60"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

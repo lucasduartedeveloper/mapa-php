@@ -42,14 +42,19 @@ $(document).ready(function() {
     });
     $("#btn-camera").click();
 
-    $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
+    $("#rotateX, #rotateY, #rotateZ")
     .on("change", function() {
-         $("#rotate3dlabel").text(
-              "Rotate3d(" +
-              $("#rotate3dX").val() + ", " +
-              $("#rotate3dY").val() + ", " +
-              $("#rotate3dZ").val() + ", " +
-              $("#rotate3d").val() + "deg)"
+         $("#rotations-label").text(
+              "Rotate X: " + $("#rotateX").val() + ", " +
+              "Y: " + $("#rotateY").val() + ", " +
+              "Z: " + $("#rotateZ").val()
+         );
+    });
+
+   $("#map-rotation")
+    .on("change", function() {
+         $("#rotate-label").text(
+              "Map rotate: " + $("#map-rotation").val()
          );
     });
 
@@ -81,33 +86,33 @@ $(document).ready(function() {
 
          // update 
          if (!mapLock  &&  !northLock) {
+              $("#map-rotation").val(mapAngle);
               map.setBearing(mapAngle);
-              $("#rotate3d").val(mapAngle);
-              rotateCompass(mapAngle);
+              $("#rotateZ").val(northAngle);
+              rotateCompass(northAngle);
          }
          else if (!mapLock) {
+              $("#map-rotation").val(northAngle);
              map.setBearing(mapAngle);
          }
          else if (!northLock) {
-             $("#rotate3d").val(mapAngle);
-             rotateCompass(mapAngle);
+             $("#rotateZ").val(northAngle);
+             rotateCompass(northAngle);
          }
          else if (mapLock && northLock) {
-             map.setBearing($("#rotate3d").val());
-             rotateCompass($("#rotate3d").val());
+             map.setBearing($("#map-rotation").val());
+             rotateCompass($("#rotateZ").val());
          }
 
-         $("#rotate3dX, #rotate3dY, #rotate3dZ, #rotate3d")
+         $("#rotateX, #rotateY, #rotateZ, #map-rotation")
          .trigger("change");
 
          $("#north-indicator-container")
          .css("transform", 
-         "rotateX("+ $("#rotate3dX").val()+"deg) "+
-         "rotateY("+ $("#rotate3dY").val()+"deg) "+
-         "rotateZ("+ $("#rotate3dZ").val()+"deg)");
+         "rotateX("+ $("#rotateX").val()+"deg) "+
+         "rotateY("+ $("#rotateY").val()+"deg) "+
+         "rotateZ("+ $("#rotateZ").val()+"deg)");
 
-         $("#map-angle-indicator")
-         .text("map: " + mapAngle.toFixed(2) + "°");
          $("#height-indicator")
          .text("height: " +height.toFixed(3) + "m");
          $("#acc-indicator")
@@ -159,6 +164,7 @@ var lastCp = -1;
 var mapLock = false;
 var northLock = false;
 var mapAngle = 0;
+var northAngle = 0;
 
 function accHandler(acc) {
     accX = acc.x && acc.x.toFixed(3);
@@ -173,13 +179,8 @@ function accHandler(acc) {
     engine.world.gravity.x = ((1 / 9.8) * accX)*-1;
     engine.world.gravity.y = (1 / 9.8) * accY;
 
-    var h = 
-          Math.sqrt(
-          Math.pow(x, 2) +
-          Math.pow(y, 2));
-    mapAngle = calcularAngulo(x, y, h);
-
     height = speedUp;
+    
 
     for(var k in checkPoints) {
          if ((accX >= checkPoints[k].x1 && 
