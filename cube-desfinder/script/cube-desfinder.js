@@ -99,7 +99,7 @@ function getXYZ() {
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
-          console.log(data);
+          //console.log(data);
           gotXYZ = true;
      });
 }
@@ -108,7 +108,7 @@ function updateXYZ() {
      $.post("ajax/cube-desfinder.php", {
           xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
           }).done(function(data) {
-              console.log(data);
+              //console.log(data);
      });
 }
 
@@ -118,7 +118,7 @@ function getCube() {
           for (var k = 0; k < 6; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
-               console.log(data);
+               //console.log(data);
           }
      });
 }
@@ -128,7 +128,7 @@ function saveSide(side, base64) {
              cameraId: side,
              base64: base64,
              }).done(function(data) { 
-                     console.log(data);
+                     //console.log(data);
       });
 }
 
