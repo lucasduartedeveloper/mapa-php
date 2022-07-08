@@ -35,10 +35,10 @@
      FLIP-FUNNEL
 </p>
 
-<div id="#funnel-container">
-     <div id="#funnel">
+<div id="funnel-container">
+     <div id="funnel">
      </div>
-     <div id="#funnel-backside">
+     <div id="funnel-backside">
      </div>
 </div>
 
