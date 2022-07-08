@@ -63,7 +63,6 @@ $(document).ready(function() {
      }, 100);
 
      var side = 0;
-
      $("#camera-canvas").click(function(e) {
          notification.play();
 
@@ -72,7 +71,7 @@ $(document).ready(function() {
          toDataURL();
 
          side += 1;
-         side += side > 5 ? 0 : side;
+         side = side > 5 ? 0 : side;
      });
 
      ws.onmessage = function(e) {
