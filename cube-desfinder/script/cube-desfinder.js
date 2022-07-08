@@ -111,7 +111,11 @@ function getXYZ() {
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
           //console.log(data);
-          gotXYZ = true;
+         
+         $("#rotateX, #rotateY, #rotateZ")
+         .trigger("change");
+
+         gotXYZ = true;
      });
 }
 
