@@ -34,7 +34,7 @@ $(document).ready(function() {
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
-         if (gotXYZ) updateXYZ() ;
+         if (gotXYZ) updateXYZ();
     });
 
      setInterval(function() {
@@ -42,17 +42,7 @@ $(document).ready(function() {
          document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
 
-         // ENVIAR
-         var cnv = document.createElement("canvas");
-         cnv.width = 64;
-         cnv.height = 64;
-         var ctx = cnv.getContext("2d");
-
-         ctx.drawImage(video, 0, 0, 64, 64);
-         var imgData = ctx.getImageData(0, 0, 64, 64);
- 
-         // overwrite original image
-         context.putImageData(imgData, 0, 0);
+         context.drawImage(video, 0, 0, 128, 128);
 
          $("#rotateX, #rotateY, #rotateZ")
          .trigger("change");

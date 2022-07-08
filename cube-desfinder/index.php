@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -44,8 +44,8 @@
      CUBE DESFINDER
 </p>
 
-<video style="display:none" id="video" width="64" height="64" autoplay></video>
-<canvas width="64" height="64" id="camera-canvas"></canvas>
+<video style="display:none" id="video" width="128" height="128" autoplay></video>
+<canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <div id="rotation">
 <label id="rotation-label"
@@ -65,7 +65,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DESFINDER v6.0.12
+     CUBE DESFINDER v7.0.13
      <br>
      <span id="server-info">
      CONNECTING...
@@ -89,7 +89,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/cube-desfinder.js?v=12"></script>
+<script src="script/cube-desfinder.js?v=13"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
