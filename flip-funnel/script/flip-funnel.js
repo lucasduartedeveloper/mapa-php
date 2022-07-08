@@ -21,12 +21,12 @@ $(document).ready(function() {
      var sh = window.innerHeight;
      var sw = window.innerWidth;
 
-    $("*").on("touchstart", function(e) {
+    $("#funnel-container").on("touchstart", function(e) {
           x = e.originalEvent.touches[0].pageX;
           y = e.originalEvent.touches[0].pageY;
     });
     
-    $("*").on("touchmove", function(e) {
+    $("#funnel-container").on("touchmove", function(e) {
           x = e.originalEvent.touches[0].pageX;
           y =  e.originalEvent.touches[0].pageY;
           
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
           $("#funnel-container")
           .css("transform", 
-          "rotateX("+angleX+") rotateY("+angleY+")");
+          "rotateX("+angleX+"deg) rotateY("+angleY+"deg)");
     });
 
    $("*").on("touchend", function(e) {
