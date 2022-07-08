@@ -39,10 +39,9 @@
 
 <video style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas"></canvas>
-<canvas width="100" height="100" id="light-canvas"></canvas>
 
 <p id="version-info">
-     2D v0.0.0
+     2D v0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -68,7 +67,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/2D.js?v=0"></script>
+<script src="script/2D.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

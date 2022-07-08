@@ -19,15 +19,6 @@ $(document).ready(function() {
           });
      }
 
-     var video = document.getElementById("video");
-     if (navigator.mediaDevices) {
-          navigator.mediaDevices
-          .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
-          .then((stream) => {
-               video.srcObject = stream;
-          });
-     }
-
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
@@ -83,14 +74,6 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var dot = 
-Bodies.circle((sw/2), 12.5, 5, {
-    isStatic: true,
-    isSensor: true,
-    render: {
-         fillStyle: '#926314',
-         strokeStyle: '#926314',
-    }});
 var head = 
 Bodies.circle((sw/2), (sh/5)-95, 10, {
     render: {
@@ -185,7 +168,7 @@ var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [dot, head, torso, armLA, armLB, armRA, armRB,
+    [head, torso, armLA, armLB, armRA, armRB,
     hips, legLA, legLB, legRA, legRB]);
 
     Composite.add(engine.world, 
@@ -203,7 +186,7 @@ function matterJs() {
 
     // add soft global constraint
     var constraints = [
-    /*Matter.Constraint.create({
+    Matter.Constraint.create({
         pointA: { x: (sw/2), y: 0 },
         bodyB: head,
         pointB: { x: 0, y: -7.5 },
@@ -213,7 +196,7 @@ function matterJs() {
             lineWidth: 1,
             type: 'line'
         }
-    }),*/
+    }),
     Matter.Constraint.create({
         bodyA: head,
         pointA: { x: 0, y: 7.5 },
