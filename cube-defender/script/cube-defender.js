@@ -59,6 +59,15 @@ $(document).ready(function() {
          $("#file-upload").click();
      });
 
+     $("#file-upload").on("change", function(e) {
+         uploadImage();
+     });
+
+     $.on("imageResized", function(e) {
+         saveSide(side, e.url);
+         console.log("imageResized");
+     });
+
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
