@@ -52,9 +52,6 @@ $(document).ready(function() {
 
          context.drawImage(video, 0, 0, 128, 128);
 
-         $("#rotateX, #rotateY, #rotateZ")
-         .trigger("change");
-
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
@@ -110,7 +107,7 @@ function getXYZ() {
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
-          //console.log(data);
+          console.log(data);
          
          $("#rotateX, #rotateY, #rotateZ")
          .trigger("change");
