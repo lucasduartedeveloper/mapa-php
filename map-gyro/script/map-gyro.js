@@ -140,7 +140,7 @@ $(document).ready(function() {
          .text("x: " + accX + ", y: " + accY + ", z: " + accZ);
 
          $("#pointer").css("margin-left", x.toString() + "px");
-         $("#pointer").css("margin-top", y.toString() + "px")
+         $("#pointer").css("margin-top", y.toString() + "px");
      }, 100);
 
     ws.onmessage = function(e) {
