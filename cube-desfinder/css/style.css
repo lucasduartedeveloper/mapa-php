@@ -72,7 +72,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateX(-64px) 
     rotateX(90deg)
-    rotateY(180deg) 
+    rotateY(-90deg) 
     rotateZ(90deg);
 }
 .top {
@@ -93,7 +93,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateX(64px)
     rotateX(90deg)
-    rotateY(180deg) 
+    rotateY(-90deg) 
     rotateZ(90deg);
 }
 .bottom {
