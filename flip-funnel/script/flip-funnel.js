@@ -34,7 +34,7 @@ $(document).ready(function() {
           var angleY = (180/sh)*y;
 
           $("#funnel-container")
-          .css("transform": 
+          .css("transform", 
           "rotateX("+angleX+") rotateY("+angleY+")";
     });
 
