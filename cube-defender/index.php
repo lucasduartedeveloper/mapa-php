@@ -92,7 +92,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/image-uploac.js?v=0"></script>
+<script src="script/image-upload.js?v=0"></script>
 <script src="script/cube-defender.js?v=52"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
