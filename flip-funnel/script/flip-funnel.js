@@ -29,10 +29,16 @@ $(document).ready(function() {
     var angleX = 0;
     var angleY = 0;
 
+    var speedX = 0;
+    var speedY = 0;
+
     $("#funnel-container").on("touchmove", function(e) {
           x = e.originalEvent.touches[0].pageX;
           y =  e.originalEvent.touches[0].pageY;
           
+          speedX = sw-x;
+          speedY = sh-y;
+
           angleX = (360/sw)*x;
           angleY = (360/sh)*y;
 
