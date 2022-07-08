@@ -63,7 +63,7 @@ $(document).ready(function() {
          uploadImage();
      });
 
-     $.on("imageResized", function(e) {
+     $(document).on("imageResized", function(e) {
          saveSide(side, e.url);
          console.log("imageResized");
      });
