@@ -67,10 +67,14 @@ $(document).ready(function() {
      var side = 0;
      $("#camera-canvas").click(function(e) {
          notification.play();
-
-         $("#cube-container").children()[side].src =
+ 
+         var base64 = 
          document.getElementById("camera-canvas").
          toDataURL();
+
+         $("#cube-container").children()[side].src =
+         base64;
+         saveSide(base64);
 
          side += 1;
          side = side > 5 ? 0 : side;
@@ -105,6 +109,25 @@ function updateXYZ() {
           }).done(function(data) {
               console.log(data);
      });
+}
+
+function getCube() {
+     $.getJSON("/camera/ajax/camera.php", 
+     function(data) {
+          for (var k = 0; k < 5; k++) {
+               $("#cube-container").children()[k].src =
+               data[k].base64;
+          }
+     });
+}
+
+function saveSide(base64) {
+     $.post("/camera/ajax/camera.php", {
+             cameraId: side,
+             base64: base64,
+             }).done(function(data) { 
+                     //console.log(data);
+      });
 }
 
 var sh = window.innerHeight;
