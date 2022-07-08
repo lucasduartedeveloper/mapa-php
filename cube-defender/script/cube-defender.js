@@ -28,8 +28,8 @@ $(document).ready(function() {
      var sh = window.innerHeight;
      var sw = window.innerWidth;
   
-    $("#rotateX, #rotateY, #rotateZ")
-    .on("change", function() {
+     $("#rotateX, #rotateY, #rotateZ")
+     .on("change", function() {
          $("#rotation-label").text(
               "Rotation X: " + rotateX + ", " +
               "Y: " + rotateY + ", " +
@@ -43,10 +43,19 @@ $(document).ready(function() {
                   rotateZ.toString());
 
          if (gotXYZ) updateXYZ();
-    });
+     });
 
-    $("#cube-container").click(function(e) {
-         alert("TODO: Incluir uma animação.")
+     var touchStart = 0;
+     $("#cube-container").on("touchstart", function(e) {
+         //alert("TODO: Incluir uma animação.")
+         touchStart = new Date().getTime();
+     });
+
+    $("#cube-container").on("touchend", function(e) {
+         //alert("TODO: Incluir uma animação.")
+         if (new Date().getTime() - touchStart == 5000) {
+              resetCube();
+         }
     });
 
      setInterval(function() {
@@ -134,18 +143,38 @@ function getCube() {
           for (var k = 0; k < 6; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
-	               //console.log(data);
+	        //console.log(data);
           }
      });
 }
 
 function saveSide(side, base64) {
-     $.post("/camera/ajax/camera.php", {
+      $.post("/camera/ajax/camera.php", {
              cameraId: side,
              base64: base64,
              }).done(function(data) { 
-                     //console.log(data);
+                   $("#cube-container").children()[k].src =
+                   base64;
+                   //console.log(data);
       });
+}
+
+var baseImages = [
+      "img/front.png",
+      "img/back.png",
+      "img/left.png",
+      "img/top.png",
+      "img/right.png",
+      "img/bottom.png",
+];
+
+function resetCube() {
+      for (var k = 0; k < 6; k++) {
+	      //console.log(data);
+             saveSide(k, baseImages[k]);
+      }
+      
+      say("Cube was deleted, you failed.");
 }
 
 var sh = window.innerHeight;
