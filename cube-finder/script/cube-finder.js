@@ -67,7 +67,7 @@ $(document).ready(function() {
      $("#camera-canvas").click(function(e) {
          notification.play();
 
-         document.getElementById("pic-backside").src =
+         $("#cube-container").children()[side].src =
          document.getElementById("camera-canvas").
          toDataURL();
 

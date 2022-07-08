@@ -44,6 +44,7 @@ html, body {
     z-index: 9999;
 }
 .front {
+    background-color: #ccc;
     border: 2px solid #000;
     position: absolute;
     margin-left: 0px;
@@ -54,6 +55,7 @@ html, body {
     transform: translate3d(0px, 0px, 32px);
 }
 .back {
+    background-color: #ccc;
     border: 2px solid #000;
     position: absolute;
     width: 64px;
