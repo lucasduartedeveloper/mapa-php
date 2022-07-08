@@ -143,8 +143,7 @@ function updateXYZ() {
 function getCube() {
      $.getJSON("/camera/ajax/camera.php", 
      function(data) {
-          if (data.length >= 5) return;
-          for (var k = 0; k < 6; k++) {
+          for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
 	        //console.log(data);
