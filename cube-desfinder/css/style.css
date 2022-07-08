@@ -61,7 +61,7 @@ html, body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: rotateY(180) translate3d(0px, 0px, -64px);
+    transform: rotateY(180) translate3d(0px, 0px, 64px);
 }
 .left {
     position: absolute;
