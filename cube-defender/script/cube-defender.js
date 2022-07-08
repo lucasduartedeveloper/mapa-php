@@ -92,7 +92,6 @@ $(document).ready(function() {
          }
      }, 100);
 
-     var side = 0;
      $("#camera-canvas").click(function(e) {
          notification.play();
  
@@ -158,6 +157,7 @@ function getCube() {
      });
 }
 
+var side = 0;
 var sides = [
     "Front", 
     "Back", 
