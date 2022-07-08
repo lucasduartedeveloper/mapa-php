@@ -22,14 +22,14 @@ var ws = {
            wsh.onmessage = function(e) {
                 ws.onmessage(e);
                 messagesReceived.push(
-                     e.data.split("|").slice(0,5).join("|"));
+                     e.data.split("|").slice(0,6).join("|"));
            };
       },
       send: function (e) {
            if (wsh.readyState == 1) {
                wsh.send(e);
                messagesSent.push(
-                     e.split("|").slice(0,5).join("|"));
+                     e.split("|").slice(0,6).join("|"));
            }
            else { messagesWaiting.push(e); }
       },

@@ -88,6 +88,7 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "CUBE-DSFNDR" &&
             playerId != msg[1]) {
+            console.log(msg);
             rotateX = parseInt(msg[2]);
             rotateY = parseInt(msg[3]);
             rotateZ = parseInt(msg[4]);
