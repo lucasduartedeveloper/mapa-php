@@ -92,7 +92,7 @@ html, body {
     height: 128px;
     -webkit-transform-style: preserve-3d;
     transform: translateX(64px)
-    rotateX(90deg)
+    rotateX(-90deg)
     rotateY(-90deg) 
     rotateZ(90deg);
 }
