@@ -61,7 +61,7 @@ html, body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: rotateX(180) translateZ(64px);
+    transform: translateZ(64px) rotateX(180);
 }
 .left {
     position: absolute;
@@ -70,10 +70,7 @@ html, body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: translateX(-64px) 
-    rotateX(90deg)
-    rotateY(-90deg) 
-    rotateZ(90deg);
+    transform: translateX(-64px) rotateY(-90deg);
 }
 .top {
     position: absolute;
@@ -91,10 +88,7 @@ html, body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: translateX(64px)
-    rotateX(-90deg)
-    rotateY(-90deg) 
-    rotateZ(90deg);
+    transform: translateX(64px) rotateY(90deg);
 }
 .bottom {
     position: absolute;
