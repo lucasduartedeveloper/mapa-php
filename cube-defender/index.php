@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=26">
+<link rel="stylesheet" href="css/style.css?v=27">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -50,12 +50,12 @@
          Frente
      </button>
      <div id="johrei-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a class="dropdown-item" href="#" onclick="()=>{side=0}">Frente</a>
-           <a class="dropdown-item" href="#" onclick="()=>{side=1}">Trás</a>
-           <a class="dropdown-item" href="#" onclick="()=>{side=2}">Esquerda</a>
-           <a class="dropdown-item" href="#" onclick="()=>{side=3}">Topo</a>
-           <a class="dropdown-item" href="#" onclick="()=>{side=4}">Direita</a>
-           <a class="dropdown-item" href="#" onclick="()=>{side=5}">Baixo</a>
+           <a class="dropdown-item" href="#" onclick="setSide(0);">Frente</a>
+           <a class="dropdown-item" href="#" onclick="setSide(1);">Trás</a>
+           <a class="dropdown-item" href="#" onclick="setSide(2);">Esquerda</a>
+           <a class="dropdown-item" href="#" onclick="setSide(3);">Topo</a>
+           <a class="dropdown-item" href="#" onclick="setSide(4);">Direita</a>
+           <a class="dropdown-item" href="#" onclick="setSide(5);">Baixo</a>
      </div>
      </div>
 </p>
@@ -81,7 +81,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v26.1.2.52
+     CUBE DEFENDER v27.1.2.52
      <br>
      <span id="server-info">
      CONNECTING...

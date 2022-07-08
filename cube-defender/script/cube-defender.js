@@ -158,6 +158,19 @@ function getCube() {
      });
 }
 
+var sides = [
+    "Frente", 
+    "Trás", 
+    "Esquerda", 
+    "Topo",
+    "Direita",
+    "Esquerda",
+    "Baixo" ];
+function setSide(k) {
+    side = k;
+    $("#side").text(sides[k]);
+}
+
 function saveSide(side, base64) {
       $.post("ajax/camera.php", {
              cameraId: side,

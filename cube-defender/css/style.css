@@ -29,7 +29,14 @@ html, body {
      text-align: center;
      overflow: hidden;
 }
-
+#title {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+     text-align: center;
+}
 #cube-container {
     margin-left: 0px;
     margin-top: 0px;
