@@ -22,13 +22,13 @@ $(document).ready(function() {
      var sw = window.innerWidth;
 
     $("*").on("touchstart", function(e) {
-          x = e.originalEvent.touches[blue].pageX;
-          y = e.originalEvent.touches[blue].pageY;
+          x = e.originalEvent.touches[0].pageX;
+          y = e.originalEvent.touches[0].pageY;
     });
     
     $("*").on("touchmove", function(e) {
-          x = e.originalEvent.touches[blue].pageX;
-          y =  e.originalEvent.touches[blue].pageY;
+          x = e.originalEvent.touches[0].pageX;
+          y =  e.originalEvent.touches[0].pageY;
           
           var angleX = (180/sw)*x;
           var angleY = (180/sh)*y;
