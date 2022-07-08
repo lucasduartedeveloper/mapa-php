@@ -35,7 +35,7 @@ $(document).ready(function() {
 
           $("#funnel-container")
           .css("transform", 
-          "rotateX("+angleX+") rotateY("+angleY+")";
+          "rotateX("+angleX+") rotateY("+angleY+")");
     });
 
    $("*").on("touchend", function(e) {
