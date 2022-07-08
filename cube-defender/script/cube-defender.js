@@ -156,7 +156,7 @@ function saveSide(side, base64) {
              cameraId: side,
              base64: base64,
              }).done(function(data) { 
-                   $("#cube-container").children()[k].src =
+                   $("#cube-container").children()[side].src =
                    base64;
                    //console.log(data);
       });
@@ -176,7 +176,6 @@ function resetCube() {
 	      //console.log(data);
              saveSide(k, baseImages[k]);
       }
-      
       //say("Cube was deleted, you failed.");
 }
 
