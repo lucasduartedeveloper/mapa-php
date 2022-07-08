@@ -38,7 +38,7 @@ $(document).ready(function() {
     });
 
     $("#cube-container").click(function(e) {
-         ws.send("CUBE-DSFNDR|" +
+         ws.send("CUBE-DEFENDER|" +
          playerId + "|" + 
          rotateX.toString() + "|" + 
          rotateY.toString() + "|" + 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
      ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "CUBE-DSFNDR" &&
+        if (msg[0] == "CUBE-DEFENDER" &&
             playerId != msg[1]) {
 
             rotateX = parseInt(msg[2]);
@@ -102,7 +102,7 @@ $(document).ready(function() {
 
 var gotXYZ = false;
 function getXYZ() {
-     $.getJSON("ajax/cube-desfinder.php", function(data) {
+     $.getJSON("ajax/cube-defender.php", function(data) {
           var xyz = data[0].valor.split("|");
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
