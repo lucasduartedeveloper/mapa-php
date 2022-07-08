@@ -32,12 +32,12 @@
 <body>
 
 <div id="cube-container">
-     <img id="front"class="front"></div>
-     <img id="back"class="back"></div>
-     <img id="left" class="left"></div>
-     <img id="top" class="top"></div>
-     <img id="right"class="right"></div>
-     <img id="bottom"class="bottom"></div>
+     <img id="front"class="front"/>
+     <img id="back"class="back"/>
+     <img id="left" class="left"/>
+     <img id="top" class="top"/>
+     <img id="right"class="right"/>
+     <img id="bottom"class="bottom"/>
 </div>
 
 <p id="title">
@@ -65,7 +65,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE FINDER v2.0.2
+     CUBE FINDER v2.0.3
      <br>
      <span id="server-info">
      CONNECTING...
@@ -89,7 +89,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/cube-finder.js?v=2"></script>
+<script src="script/cube-finder.js?v=3"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
