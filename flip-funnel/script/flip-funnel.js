@@ -26,12 +26,15 @@ $(document).ready(function() {
           y = e.originalEvent.touches[0].pageY;
     });
     
+    var angleX = 0;
+    var angleY = 0;
+
     $("#funnel-container").on("touchmove", function(e) {
           x = e.originalEvent.touches[0].pageX;
           y =  e.originalEvent.touches[0].pageY;
           
-          var angleX = (360/sw)*x;
-          var angleY = (360/sh)*y;
+          angleX += (360/sw)*x;
+          angleY += (360/sh)*y;
 
           $("#funnel-container")
           .css("transform", 
