@@ -4,6 +4,7 @@ var gameOver = new Audio("audio/game-over.wav");
 
 // Saldo
 var playerId = new Date().getTime();
+var partNo = 0;
 
 $(document).ready(function() {
      matterJs();
@@ -36,6 +37,9 @@ $(document).ready(function() {
 
      $("#camera-canvas").click(function(e) {
          notification.play();
+         partNo += 1;
+         partNo = partNo > (parts.lenght -1) ? 0 : partNo;
+         parts[partNo].render.fillStyle = "#66ff33";
      });
 
      ws.onmessage = function(e) {
@@ -165,6 +169,11 @@ var ground = Bodies.rectangle(sw/2, (sh/3)-5, sw, 10,
     render: {
          fillStyle: '#2f2e40',
          strokeStyle: '#2f2e40' }});
+
+var parts = [
+    head, torso, armLA, armLB, armRA, armRB,
+    hips, legLA, legLB, legRA, legRB
+];
 
 function matterJs() {
     // add all of the bodies to the world
