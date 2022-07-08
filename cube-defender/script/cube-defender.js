@@ -159,13 +159,13 @@ function getCube() {
 }
 
 var sides = [
-    "Frente", 
-    "Trás", 
-    "Esquerda", 
-    "Topo",
-    "Direita",
-    "Esquerda",
-    "Baixo" ];
+    "Front", 
+    "Back", 
+    "Left", 
+    "Top",
+    "Right",
+    "Left",
+    "Bottom" ];
 function setSide(k) {
     side = k;
     $("#side").text(sides[k]);

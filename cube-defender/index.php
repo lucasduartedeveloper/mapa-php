@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=27">
+<link rel="stylesheet" href="css/style.css?v=28">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -46,16 +46,16 @@
      <input style="display:none" type="file" id="file-upload" name="UploadFiles">
      <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
      <div class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle" type="button" id="johrei-data" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Frente
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="side" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Front
      </button>
-     <div id="johrei-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a class="dropdown-item" href="#" onclick="setSide(0);">Frente</a>
-           <a class="dropdown-item" href="#" onclick="setSide(1);">Trás</a>
-           <a class="dropdown-item" href="#" onclick="setSide(2);">Esquerda</a>
-           <a class="dropdown-item" href="#" onclick="setSide(3);">Topo</a>
-           <a class="dropdown-item" href="#" onclick="setSide(4);">Direita</a>
-           <a class="dropdown-item" href="#" onclick="setSide(5);">Baixo</a>
+     <div id="side-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#" onclick="setSide(0);">Front</a>
+           <a class="dropdown-item" href="#" onclick="setSide(1);">Back</a>
+           <a class="dropdown-item" href="#" onclick="setSide(2);">Left</a>
+           <a class="dropdown-item" href="#" onclick="setSide(3);">Top</a>
+           <a class="dropdown-item" href="#" onclick="setSide(4);">Right</a>
+           <a class="dropdown-item" href="#" onclick="setSide(5);">Bottom</a>
      </div>
      </div>
 </p>
@@ -81,7 +81,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v28.1.2.53
+     CUBE DEFENDER v29.1.2.54
      <br>
      <span id="server-info">
      CONNECTING...
@@ -106,7 +106,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=1"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=53"></script>
+<script src="script/cube-defender.js?v=54"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
