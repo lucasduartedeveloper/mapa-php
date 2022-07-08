@@ -34,7 +34,6 @@ function uploadImage(){
                 var dataUrl = canvas.toDataURL('image/jpeg');
                 $.event.trigger({
                     type: "imageResized",
-                    blob: resizedImage,
                     url: dataUrl
                 });
             }

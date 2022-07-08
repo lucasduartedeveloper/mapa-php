@@ -68,7 +68,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v26.1.1.52
+     CUBE DEFENDER v26.1.2.52
      <br>
      <span id="server-info">
      CONNECTING...
@@ -92,7 +92,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/image-upload.js?v=1"></script>
+<script src="script/image-upload.js?v=2"></script>
 <script src="script/cube-defender.js?v=52"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
