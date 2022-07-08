@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     $("#cube-container").click(function(e) {
          alert("TODO: Incluir uma animação.")
-    });p
+    });
 
      setInterval(function() {
          var canvas = 
