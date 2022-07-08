@@ -38,7 +38,7 @@ $(document).ready(function() {
     });
 
     $("#cube-container").click(function(e) {
-         ws.send("CUBE-DESFINDER|" +
+         ws.send("CUBE-DSFNDR|" +
          playerId + "|" + 
          rotateX.toString() + "|" + 
          rotateY.toString() + "|" + 
@@ -86,7 +86,7 @@ $(document).ready(function() {
 
      ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "CUBE-DESFINDER" &&
+        if (msg[0] == "CUBE-DSFNDR" &&
             playerId != msg[1]) {
             rotateX = parseInt(msg[2]);
             rotateY = parseInt(msg[3]);
