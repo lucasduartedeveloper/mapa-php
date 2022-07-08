@@ -7,6 +7,8 @@ var playerId = new Date().getTime();
 var partNo = 0;
 
 $(document).ready(function() {
+     getXYZ();
+
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
           navigator.mediaDevices
@@ -28,6 +30,7 @@ $(document).ready(function() {
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
+         updateXYZ() ;
     });
 
     var rotateX = 0;
@@ -61,7 +64,7 @@ $(document).ready(function() {
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
 
-          ws.send("CUBE-FINDER|" +
+          ws.send("CUBE-DESFINDER|" +
           playerId + "|" + 
           rotateX + "|" + 
           rotateY + "|" + 
@@ -82,7 +85,7 @@ $(document).ready(function() {
 
      ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "CUBE-FINDER" &&
+        if (msg[0] == "CUBE-DESFINDER" &&
             playerId != msg[1]) {
             rotateX = parseInt(msg[2]);
             rotateY = parseInt(msg[3]);
@@ -90,6 +93,23 @@ $(document).ready(function() {
         }
     };
 });
+
+function getXYZ() {
+     $.getJSON("ajax/cube-desfinder.php", function(data) {
+          var xyz = data[0].valor.split("|");
+          rotateX = parseInt(xyz[0]);
+          rotateY = parseInt(xyz[1]);
+          rotateZ = parseInt(xyz[2]);
+     });
+}
+
+function updateXYZ() {
+     $.post("ajax/cube-desfinder.php", {
+          xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
+          }).done(function(data) {
+              console.log(data);
+     });
+}
 
 var sh = window.innerHeight;
 var sw = window.innerWidth;

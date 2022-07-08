@@ -11,13 +11,6 @@ try {
     $stmt->execute();
 
     echo $sql;
-
-    $sql = "UPDATE param SET valor='".$xyz."' WHERE nome='xyz';";
-
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-
-    echo $sql;
   }
   else {
     $sql = "SELECT * FROM param WHERE nome='xyz' OR nome='xyz' ORDER BY id;";

@@ -41,7 +41,7 @@
 </div>
 
 <p id="title">
-     CUBE FINDER
+     CUBE DESFINDER
 </p>
 
 <video style="display:none" id="video" width="64" height="64" autoplay></video>
@@ -65,7 +65,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DESFINDER v6.0.8
+     CUBE DESFINDER v6.0.9
      <br>
      <span id="server-info">
      CONNECTING...
@@ -89,7 +89,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/cube-desfinder.js?v=8"></script>
+<script src="script/cube-desfinder.js?v=9"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
