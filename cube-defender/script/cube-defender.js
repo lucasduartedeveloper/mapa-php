@@ -39,6 +39,12 @@ $(document).ready(function() {
          $("#rotateY").val(rotateY);
          $("#rotateZ").val(rotateZ);
 
+         ws.send("CUBE-DEFENDER|" +
+                  playerId + "|" + 
+                  rotateX.toString() + "|" + 
+                  rotateY.toString() + "|" + 
+                  rotateZ.toString());
+
          if (gotXYZ) updateXYZ();
     });
 
@@ -63,11 +69,11 @@ $(document).ready(function() {
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
 
-         ws.send("CUBE-DEFENDER|" +
-         playerId + "|" + 
-         rotateX.toString() + "|" + 
-         rotateY.toString() + "|" + 
-         rotateZ.toString());
+         if (rotateX != parseInt($("#rotateX").val() &&
+              rotateY != parseInt($("#rotateY").val() &&
+              rotateZ != parseInt($("#rotateZ").val()) {
+                  
+         }
      }, 100);
 
      var side = 0;
