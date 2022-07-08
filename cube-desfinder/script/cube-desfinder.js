@@ -12,6 +12,7 @@ var rotateZ = 0;
 
 $(document).ready(function() {
      getXYZ();
+     getCube();
 
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
