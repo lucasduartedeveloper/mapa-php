@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=28">
+<link rel="stylesheet" href="css/style.css?v=30">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -45,19 +45,6 @@
      <i class="fa-solid fa-lock"></i>
      <input style="display:none" type="file" id="file-upload" name="UploadFiles">
      <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
-     <div class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle" type="button" id="side" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Front
-     </button>
-     <div id="side-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a class="dropdown-item" href="#" onclick="setSide(0);">Front</a>
-           <a class="dropdown-item" href="#" onclick="setSide(1);">Back</a>
-           <a class="dropdown-item" href="#" onclick="setSide(2);">Left</a>
-           <a class="dropdown-item" href="#" onclick="setSide(3);">Top</a>
-           <a class="dropdown-item" href="#" onclick="setSide(4);">Right</a>
-           <a class="dropdown-item" href="#" onclick="setSide(5);">Bottom</a>
-     </div>
-     </div>
 </p>
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
@@ -80,8 +67,22 @@ type="range"
 class="form-range">
 </div>
 
+<div id="dropdown" class="dropdown">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="side" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Front
+     </button>
+     <div id="side-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#" onclick="setSide(0);">Front</a>
+           <a class="dropdown-item" href="#" onclick="setSide(1);">Back</a>
+           <a class="dropdown-item" href="#" onclick="setSide(2);">Left</a>
+           <a class="dropdown-item" href="#" onclick="setSide(3);">Top</a>
+           <a class="dropdown-item" href="#" onclick="setSide(4);">Right</a>
+           <a class="dropdown-item" href="#" onclick="setSide(5);">Bottom</a>
+     </div>
+</div>
+
 <p id="version-info">
-     CUBE DEFENDER v29.1.2.55
+     CUBE DEFENDER v30.1.2.55
      <br>
      <span id="server-info">
      CONNECTING...
