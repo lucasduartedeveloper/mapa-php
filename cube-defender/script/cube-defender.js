@@ -117,7 +117,7 @@ function getXYZ() {
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
-          //console.log(data);
+          console.log(data);
          
          $("#rotateX, #rotateY, #rotateZ")
          .trigger("change");
