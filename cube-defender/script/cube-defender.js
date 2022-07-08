@@ -31,9 +31,9 @@ $(document).ready(function() {
     $("#rotateX, #rotateY, #rotateZ")
     .on("change", function() {
          $("#rotation-label").text(
-              "Rotation X: " + $("#rotateX").val() + ", " +
-              "Y: " + $("#rotateY").val() + ", " +
-              "Z: " + $("#rotateZ").val()
+              "Rotation X: " + rotateX + ", " +
+              "Y: " + rotateY + ", " +
+              "Z: " + rotateZ
          );
          if (gotXYZ) updateXYZ();
     });
