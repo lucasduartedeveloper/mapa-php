@@ -35,6 +35,7 @@ $(document).ready(function() {
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
+         if (gotXYZ) updateXYZ();
     });
 
     $("#cube-container").click(function(e) {
@@ -61,8 +62,6 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
-         
-         if (gotXYZ) updateXYZ();
      }, 100);
 
      var side = 0;
