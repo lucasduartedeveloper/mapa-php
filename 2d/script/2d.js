@@ -35,11 +35,11 @@ $(document).ready(function() {
          context.putImageData(imgData, 0, 0);
      }, 100);
 
+     parts[partNo].render.fillStyle = "#00cc99";
      $("#camera-canvas").click(function(e) {
          notification.play();
-         partNo += 1;
-         partNo = partNo > (parts.lenght -1) ? 0 : partNo;
-         parts[partNo].render.fillStyle = "#66ff33";
+         partNo = next();
+         parts[partNo].render.fillStyle = "#00cc99";
      });
 
      ws.onmessage = function(e) {
@@ -49,6 +49,18 @@ $(document).ready(function() {
         }
     };
 });
+
+function before() {
+    var no = partNo - 1;
+    no = no < 0 ? (parts.length -1) : no;
+    return no;
+};
+
+function next() {
+    var no = partNo + 1;
+    no = no > (parts.length -1) ? 0 : no;
+    return no;
+}
 
 var sh = window.innerHeight;
 var sw = window.innerWidth;
