@@ -32,12 +32,12 @@
 <body>
 
 <div id="cube-container">
-     <img class="front"/>
-     <img class="back"/>
-     <img class="left"/>
-     <img class="top"/>
-     <img class="right"/>
-     <img class="bottom"/>
+      <img src="img/front.png" class="front"/> 
+      <img src="img/back.png" class="back"/>
+      <img src="img/left.png" class="left"/>
+      <img src="img/top.png" class="top"/>
+      <img src="img/right.png" class="right"/>
+      <img src="img/bottom.png" class="bottom"/>
 </div>
 
 <p id="title">
