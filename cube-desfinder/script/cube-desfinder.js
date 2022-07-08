@@ -74,7 +74,7 @@ $(document).ready(function() {
 
          $("#cube-container").children()[side].src =
          base64;
-         saveSide(base64);
+         saveSide(side, base64);
 
          side += 1;
          side = side > 5 ? 0 : side;
@@ -121,7 +121,7 @@ function getCube() {
      });
 }
 
-function saveSide(base64) {
+function saveSide(side, base64) {
      $.post("/camera/ajax/camera.php", {
              cameraId: side,
              base64: base64,
