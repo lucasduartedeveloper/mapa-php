@@ -6,6 +6,10 @@ var gameOver = new Audio("audio/game-over.wav");
 var playerId = new Date().getTime();
 var partNo = 0;
 
+var rotateX = 0;
+var rotateY = 0;
+var rotateZ = 0;
+
 $(document).ready(function() {
      getXYZ();
 
@@ -32,10 +36,6 @@ $(document).ready(function() {
          );
          updateXYZ() ;
     });
-
-    var rotateX = 0;
-    var rotateY = 0;
-    var rotateZ = 0;
 
      setInterval(function() {
          var canvas = 
