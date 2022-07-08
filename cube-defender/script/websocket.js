@@ -8,17 +8,17 @@ var messagesReceived = [];
 var ws = {
       start: function () {
            wsh = new WebSocket(host);
-           wsh.onopen = function (e) {                
-                $("#server-info").html("CONNECTED&nbsp;
-                <i class=\"fa-solid fa-lock\"></i>");
+           wsh.onopen = function (e) {
+                $("#server-info").html("CONNECTED&nbsp;"+
+                "<i class=\"fa-solid fa-lock\"></i>");
                 for (var k in messagesWaiting) {
                      wsh.send(messagesWaiting[k]);
                 };
                 messagesWaiting = [];
            };
            wsh.onclose = function(e) {
-                $("#server-info").html("DISCONNECTED&nbsp;
-                <i class=\"fa-solid fa-lock-open\"></i>");
+                $("#server-info").html("DISCONNECTED&nbsp;"+
+                "<i class=\"fa-solid fa-lock-open\"></i>");
                 ws.start();
            };
            wsh.onmessage = function(e) {
