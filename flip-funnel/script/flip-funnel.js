@@ -31,7 +31,7 @@ $(document).ready(function() {
           y =  e.originalEvent.touches[blue].pageY;
           
           var angleX = (180/sw)*x;
-          var angleY = (180/sh)*y
+          var angleY = (180/sh)*y;
 
           $("#funnel-container")
           .css("transform": 
