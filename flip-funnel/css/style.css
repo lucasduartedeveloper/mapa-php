@@ -64,6 +64,27 @@ html, body {
     transform: translate3d(0px, 0px, -5px);
 }
 
+#pic {
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, 3px);
+}
+
+#pic-backside {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, -3px);
+}
+
 #camera-canvas {
     display: flex;
     justify-content: center;

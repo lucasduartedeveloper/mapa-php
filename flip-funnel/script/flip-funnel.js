@@ -60,8 +60,24 @@ $(document).ready(function() {
          context.putImageData(imgData, 0, 0);
      }, 100);
 
+     var side = 0;
+
      $("#camera-canvas").click(function(e) {
          notification.play();
+
+         if (side == 0) {
+             document.getElementById("pic").src = 
+             document.getElementById("camera-canvas").
+             toDataURL();
+         }
+         else {
+             document.getElementById("pic-backside").src =
+             document.getElementById("camera-canvas").
+             toDataURL();
+         }
+
+         side += 1;
+         side += side > 1 ? 0 side;
      });
 
      ws.onmessage = function(e) {
