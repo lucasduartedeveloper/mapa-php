@@ -84,7 +84,7 @@ $(document).ready(function() {
               rotateZ != parseInt($("#rotateZ").val())) {
                   
          }
-     }, 100);
+     }, 500);
 
      var side = 0;
      $("#camera-canvas").click(function(e) {
@@ -177,7 +177,7 @@ function resetCube() {
 	      //console.log(data);
              saveSide(k, baseImages[k]);
       }
-      //say("Cube was deleted, you failed.");
+      //say("q was deleted, you failed.");
 }
 
 var sh = window.innerHeight;
