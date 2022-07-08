@@ -45,28 +45,28 @@ html, body {
 }
 .front {
     background-color: #ccc;
-    border: 2px solid #000;
+    border: 8px solid #000;
     position: absolute;
     margin-left: 0px;
     margin-top: 0px;
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: translate3d(0px, 0px, 32px);
+    transform: translate3d(0px, 0px, 64px);
 }
 .back {
     background-color: #ccc;
-    border: 2px solid #000;
+    border: 8px solid #000;
     position: absolute;
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: translate3d(0px, 0px, -32px);
+    transform: translate3d(0px, 0px, -64px);
 }
 .left {
     position: absolute;
     background-color: #ccc;
-    border: 2px solid #000;
+    border: 8px solid #000;
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
@@ -75,7 +75,7 @@ html, body {
 .top {
     position: absolute;
     background-color: #ccc;
-    border: 2px solid #000;
+    border: 8px solid #000;
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
@@ -84,7 +84,7 @@ html, body {
 .right {
     position: absolute;
     background-color: #ccc;
-    border: 2px solid #000;
+    border: 8px solid #000;
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
@@ -93,7 +93,7 @@ html, body {
 .bottom {
     position: absolute;
     background-color: #ccc;
-    border: 2px solid #000;
+    border: 8px solid #000;
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
