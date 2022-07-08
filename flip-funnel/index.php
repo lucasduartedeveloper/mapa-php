@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=0">
+<link rel="stylesheet" href="css/style.css?v=1">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -31,16 +31,16 @@
 </head>
 <body>
 
-<p id="title">
-     FLIP-FUNNEL
-</p>
-
 <div id="funnel-container">
      <div id="funnel">
      </div>
      <div id="funnel-backside">
      </div>
 </div>
+
+<p id="title">
+     FLIP-FUNNEL
+</p>
 
 <video style="display:none" id="video" width="64" height="64" autoplay></video>
 <canvas width="64" height="64" id="camera-canvas"></canvas>

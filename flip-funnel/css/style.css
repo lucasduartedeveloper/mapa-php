@@ -52,6 +52,9 @@ html, body {
 }
 
 #funnel-backside {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
     width: 64px;
     height: 64px;
     background-image: url(../img/funnel.png);
