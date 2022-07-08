@@ -61,7 +61,7 @@ html, body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform: translateZ(64px) rotateX(180);
+    transform: translateZ(-64px) rotateY(180deg);
 }
 .left {
     position: absolute;
@@ -97,7 +97,7 @@ html, body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
-    transform:  translateY(64px) rotateX(90deg);
+    transform:  translateY(64px) rotateX(-90deg);
 }
 
 #camera-canvas {
