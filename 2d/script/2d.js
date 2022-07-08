@@ -34,6 +34,10 @@ $(document).ready(function() {
          context.putImageData(imgData, 0, 0);
      }, 100);
 
+     $("#camera-canvas").click(function(e) {
+         notification.play();
+     };
+
      ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "C-MOTION" &&
