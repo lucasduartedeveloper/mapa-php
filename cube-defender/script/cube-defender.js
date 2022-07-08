@@ -69,8 +69,8 @@ $(document).ready(function() {
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
 
-         if (rotateX != parseInt($("#rotateX").val() &&
-              rotateY != parseInt($("#rotateY").val() &&
+         if (rotateX != parseInt($("#rotateX").val()) &&
+              rotateY != parseInt($("#rotateY").val()) &&
               rotateZ != parseInt($("#rotateZ").val())) {
                   
          }
