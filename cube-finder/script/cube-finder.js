@@ -20,37 +20,7 @@ $(document).ready(function() {
      var y = 0;
      var sh = window.innerHeight;
      var sw = window.innerWidth;
-
-    $("#funnel-container").on("touchstart", function(e) {
-          x = e.originalEvent.touches[0].pageX;
-          y = e.originalEvent.touches[0].pageY;
-    });
-    
-    var angleX = 0;
-    var angleY = 0;
-
-    var speedX = 0;
-    var speedY = 0;
-
-    $("#funnel-container").on("touchmove", function(e) {
-          x = e.originalEvent.touches[0].pageX;
-          y =  e.originalEvent.touches[0].pageY;
-          
-          speedX = sw-x;
-          speedY = sh-y;
-
-          angleX = (360/sw)*x;
-          angleY = (360/sh)*y;
-
-          $("#funnel-container")
-          .css("transform", 
-          "rotateX("+angleX+"deg) rotateY("+angleY+"deg)");
-    });
-
-   $("*").on("touchend", function(e) {
-         // 
-    });
-
+  
     $("#rotateX, #rotateY, #rotateZ")
     .on("change", function() {
          $("#rotation-label").text(
@@ -80,6 +50,10 @@ $(document).ready(function() {
  
          // overwrite original image
          context.putImageData(imgData, 0, 0);
+
+         rotateX = parseInt($("#rotateX").val());
+         rotateY = parseInt($("#rotateY").val());
+         rotateZ = parseInt($("#rotateZ").val());
 
          $("#cube-container")
          .css("transform", 
