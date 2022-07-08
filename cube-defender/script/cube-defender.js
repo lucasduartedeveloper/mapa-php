@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     $("#cube-container").click(function(e) {
          alert("TODO: Incluir uma animação.")
-    });
+    });p
 
      setInterval(function() {
          var canvas = 
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
          if (rotateX != parseInt($("#rotateX").val() &&
               rotateY != parseInt($("#rotateY").val() &&
-              rotateZ != parseInt($("#rotateZ").val()) {
+              rotateZ != parseInt($("#rotateZ").val())) {
                   
          }
      }, 100);
