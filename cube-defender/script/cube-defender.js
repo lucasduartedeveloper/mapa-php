@@ -1,3 +1,6 @@
+document.addEventListener('contextmenu',
+                        event => event.preventDefault());
+
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
 var gameOver = new Audio("audio/game-over.wav");
@@ -174,7 +177,7 @@ function resetCube() {
              saveSide(k, baseImages[k]);
       }
       
-      say("Cube was deleted, you failed.");
+      //say("Cube was deleted, you failed.");
 }
 
 var sh = window.innerHeight;
