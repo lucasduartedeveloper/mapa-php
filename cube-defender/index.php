@@ -45,6 +45,19 @@
      <i class="fa-solid fa-lock"></i>
      <input style="display:none" type="file" id="file-upload" name="UploadFiles">
      <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
+     <div class="dropdown">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="johrei-data" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Frente
+     </button>
+     <div id="johrei-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#" onclick="()=>{side=0}">Frente</a>
+           <a class="dropdown-item" href="#" onclick="()=>{side=1}">Trás</a>
+           <a class="dropdown-item" href="#" onclick="()=>{side=2}">Esquerda</a>
+           <a class="dropdown-item" href="#" onclick="()=>{side=3}">Topo</a>
+           <a class="dropdown-item" href="#" onclick="()=>{side=4}">Direita</a>
+           <a class="dropdown-item" href="#" onclick="()=>{side=5}">Baixo</a>
+     </div>
+     </div>
 </p>
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
