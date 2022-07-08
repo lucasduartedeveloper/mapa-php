@@ -84,7 +84,7 @@ $(document).ready(function() {
               rotateZ != parseInt($("#rotateZ").val())) {
                   
          }
-     }, 500);
+     }, 100);
 
      var side = 0;
      $("#camera-canvas").click(function(e) {
