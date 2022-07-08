@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=2">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -65,7 +65,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE FINDER v1.0.1
+     CUBE FINDER v2.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -89,7 +89,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/cube-finder.js?v=1"></script>
+<script src="script/cube-finder.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
