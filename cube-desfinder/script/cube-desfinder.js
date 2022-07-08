@@ -35,7 +35,12 @@ $(document).ready(function() {
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
-         if (gotXYZ) updateXYZ();
+
+         ws.send("CUBE-DESFINDER|" +
+         playerId + "|" + 
+         rotateX + "|" + 
+         rotateY + "|" + 
+         rotateZ);
     });
 
      setInterval(function() {
@@ -57,12 +62,8 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
-
-          ws.send("CUBE-DESFINDER|" +
-          playerId + "|" + 
-          rotateX + "|" + 
-          rotateY + "|" + 
-          rotateZ);
+         
+         if (gotXYZ) updateXYZ();
      }, 100);
 
      var side = 0;
