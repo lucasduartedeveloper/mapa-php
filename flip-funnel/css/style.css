@@ -30,12 +30,35 @@ html, body {
      overflow: hidden;
 }
 
+#funnel-container {
+    margin-left: 0px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-transform-style: preserve-3d;
+    z-index: 9999;
+}
+
 #funnel {
     width: 64px;
     height: 64px;
     background-image: url(../img/funnel.png);
     background-position: center;
     background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, 5px);
+}
+
+#funnel-backside {
+    width: 64px;
+    height: 64px;
+    background-image: url(../img/funnel.png);
+    background-position: center;
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, -5px);
 }
 
 #camera-canvas {

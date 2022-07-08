@@ -7,7 +7,6 @@ var playerId = new Date().getTime();
 var partNo = 0;
 
 $(document).ready(function() {
-     matterJs();
      var video = document.getElementById("video");
      if (navigator.mediaDevices) {
           navigator.mediaDevices
@@ -16,9 +15,6 @@ $(document).ready(function() {
                video.srcObject = stream;
           });
      }
-
-     $("#funnel").click(function(e) {
-     });
 
      setInterval(function() {
          var canvas = 
@@ -52,7 +48,6 @@ $(document).ready(function() {
 
 var sh = window.innerHeight;
 var sw = window.innerWidth;
-var canvas = document.getElementById("matter-js");
 canvas.width = sw;
 canvas.height = sh/3;
 

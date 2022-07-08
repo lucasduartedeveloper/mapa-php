@@ -35,14 +35,18 @@
      FLIP-FUNNEL
 </p>
 
-<div id="#funnel">
+<div id="#funnel-container">
+     <div id="#funnel">
+     </div>
+     <div id="#funnel-backside">
+     </div>
 </div>
 
 <video style="display:none" id="video" width="64" height="64" autoplay></video>
 <canvas width="64" height="64" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     FLIP-FUNNEL v0.0.0
+     FLIP-FUNNEL v1.0.1
      <br>
      <span id="server-info">
      CONNECTING...
