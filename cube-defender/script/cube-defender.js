@@ -52,6 +52,7 @@ $(document).ready(function() {
      $("#cube-container").on("touchstart", function(e) {
          //alert("TODO: Incluir uma animação.")
          touchStart = new Date().getTime();
+         resetCube();
      });
 
     $("#cube-container").on("touchend", function(e) {
