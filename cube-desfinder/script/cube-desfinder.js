@@ -115,7 +115,7 @@ function updateXYZ() {
 function getCube() {
      $.getJSON("/camera/ajax/camera.php", 
      function(data) {
-          for (var k = 0; k < 5; k++) {
+          for (var k = 0; k < 6; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
                console.log(data);
