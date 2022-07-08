@@ -35,6 +35,10 @@ $(document).ready(function() {
               "Y: " + rotateY + ", " +
               "Z: " + rotateZ
          );
+         $("#rotateX").val(rotateX);
+         $("#rotateY").val(rotateY)
+         $("#rotateZ").val(rotateZ)
+
          if (gotXYZ) updateXYZ();
     });
 
