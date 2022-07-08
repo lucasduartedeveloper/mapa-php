@@ -41,8 +41,7 @@
 </div>
 
 <p id="title">
-     CUBE DEFENDER 
-     <i class="fa-solid fa-lock"></i>
+     CUBE DEFENDER
      <input style="display:none" type="file" id="file-upload" name="UploadFiles">
      <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
 </p>
@@ -82,7 +81,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v30.1.2.55
+     CUBE DEFENDER v30.2.2.55
      <br>
      <span id="server-info">
      CONNECTING...
@@ -105,7 +104,7 @@ class="form-range">
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<script src="script/websocket.js?v=1"></script>
+<script src="script/websocket.js?v=2"></script>
 <script src="script/image-upload.js?v=2"></script>
 <script src="script/cube-defender.js?v=55"></script>
 
