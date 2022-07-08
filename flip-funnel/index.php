@@ -46,7 +46,7 @@
 <canvas width="64" height="64" id="camera-canvas"></canvas>
 
 <p id="version-info">
-     FLIP-FUNNEL v2.0.8
+     FLIP-FUNNEL v2.0.9
      <br>
      <span id="server-info">
      CONNECTING...
@@ -70,7 +70,7 @@
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/flip-funnel.js?v=8"></script>
+<script src="script/flip-funnel.js?v=9"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
