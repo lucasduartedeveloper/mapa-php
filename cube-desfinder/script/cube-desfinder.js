@@ -43,7 +43,7 @@ $(document).ready(function() {
          rotateX + "|" + 
          rotateY + "|" + 
          rotateZ);
-    };
+    });
 
      setInterval(function() {
          var canvas = 
