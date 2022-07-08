@@ -60,6 +60,12 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
+
+          ws.send("CUBE-FINDER|" +
+          playerId + "|" + 
+          rotateX + "|" + 
+          rotateY + "|" + 
+          rotateZ;
      }, 100);
 
      var side = 0;
@@ -78,6 +84,9 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "CUBE-FINDER" &&
             playerId != msg[1]) {
+            rotateX = parseInt(msg[2]);
+            rotateY = parseInt(msg[3]);
+            rotateZ = parseInt(msg[4]);
         }
     };
 });
