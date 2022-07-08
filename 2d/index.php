@@ -67,7 +67,7 @@
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/2D.js?v=1"></script>
+<script src="script/2d.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

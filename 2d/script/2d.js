@@ -5,9 +5,6 @@ var gameOver = new Audio("audio/game-over.wav");
 // Saldo
 var playerId = new Date().getTime();
 
-var counterCw = 0;
-var counterCcw = 0;
-
 $(document).ready(function() {
      matterJs();
      var video = document.getElementById("video");
