@@ -117,7 +117,7 @@ function getXYZ() {
 }
 
 function updateXYZ() {
-     $.post("ajax/cube-desfinder.php", {
+     $.post("ajax/cube-defender.php", {
           xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
           }).done(function(data) {
               //console.log(data);
