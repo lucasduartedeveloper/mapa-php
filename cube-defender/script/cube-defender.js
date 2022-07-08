@@ -108,7 +108,7 @@ function getXYZ() {
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
-          console.log(data);
+          //console.log(data);
          
          $("#rotateX, #rotateY, #rotateZ")
          .trigger("change");
@@ -121,7 +121,7 @@ function updateXYZ() {
      $.post("ajax/cube-defender.php", {
           xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
           }).done(function(data) {
-              console.log(data);
+              //console.log(data);
      });
 }
 
@@ -131,7 +131,7 @@ function getCube() {
           for (var k = 0; k < 6; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
-	               console.log(data);
+	               //console.log(data);
           }
      });
 }
