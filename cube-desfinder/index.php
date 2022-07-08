@@ -41,7 +41,8 @@
 </div>
 
 <p id="title">
-     CUBE DESFINDER
+     CUBE DEFENDER 
+     <i class="fa-solid fa-lock"></i>
 </p>
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
