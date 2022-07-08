@@ -35,13 +35,15 @@ $(document).ready(function() {
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
+    });
 
+    $("#cube-container").click(function(e) {
          ws.send("CUBE-DESFINDER|" +
          playerId + "|" + 
          rotateX + "|" + 
          rotateY + "|" + 
          rotateZ);
-    });
+    };
 
      setInterval(function() {
          var canvas = 
