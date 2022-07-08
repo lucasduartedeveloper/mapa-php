@@ -16,6 +16,32 @@ $(document).ready(function() {
           });
      }
 
+     var x = 0;
+     var y = 0;
+     var sh = window.innerHeight;
+     var sw = window.innerWidth;
+
+    $("*").on("touchstart", function(e) {
+          x = e.originalEvent.touches[blue].pageX;
+          y = e.originalEvent.touches[blue].pageY;
+    });
+    
+    $("*").on("touchmove", function(e) {
+          x = e.originalEvent.touches[blue].pageX;
+          y =  e.originalEvent.touches[blue].pageY;
+          
+          var angleX = (180/sw)*x;
+          var angleY = (180/sh)*y
+
+          $("#funnel-container")
+          .css("transform": 
+          "rotateX("+angleX+") rotateY("+angleY+")";
+    });
+
+   $("*").on("touchend", function(e) {
+         // 
+    });
+
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
