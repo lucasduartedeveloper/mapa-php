@@ -40,9 +40,9 @@ $(document).ready(function() {
     $("#cube-container").click(function(e) {
          ws.send("CUBE-DESFINDER|" +
          playerId + "|" + 
-         rotateX + "|" + 
-         rotateY + "|" + 
-         rotateZ);
+         rotateX.toString() + "|" + 
+         rotateY.toString() + "|" + 
+         rotateZ.toString());
     });
 
      setInterval(function() {
