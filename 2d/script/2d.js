@@ -36,7 +36,7 @@ $(document).ready(function() {
 
      $("#camera-canvas").click(function(e) {
          notification.play();
-     };
+     });
 
      ws.onmessage = function(e) {
         var msg = e.data.split("|");
