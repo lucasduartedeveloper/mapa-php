@@ -33,6 +33,7 @@ html, body {
 #cube-container {
     margin-left: 0px;
     margin-top: 0px;
+    margin-bottom: 50px;
     width: 64px;
     height: 64px;
     display: flex;
@@ -64,7 +65,7 @@ html, body {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
-    width: 10px;
+    width: 64px;
     height: 64px;
     -webkit-transform-style: preserve-3d;
     transform: translateY(-32px) rotateY(90deg) rotateX(90deg) ;
@@ -73,7 +74,7 @@ html, body {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
-    width: 10px;
+    width: 64px;
     height: 64px;
     -webkit-transform-style: preserve-3d;
     transform: translateX( -32px) rotateY(90deg);
@@ -82,7 +83,7 @@ html, body {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
-    width: 10px;
+    width: 64px;
     height: 64px;
     -webkit-transform-style: preserve-3d;
     transform: translateY(32px) rotateY(90deg) rotateX(90deg);
@@ -91,7 +92,7 @@ html, body {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
-    width: 10px;
+    width: 64px;
     height: 64px;
     -webkit-transform-style: preserve-3d;
     transform:  translateX(32px) rotateY(90deg);
