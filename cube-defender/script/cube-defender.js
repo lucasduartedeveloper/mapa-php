@@ -36,18 +36,14 @@ $(document).ready(function() {
               "Z: " + rotateZ
          );
          $("#rotateX").val(rotateX);
-         $("#rotateY").val(rotateY)
-         $("#rotateZ").val(rotateZ)
+         $("#rotateY").val(rotateY);
+         $("#rotateZ").val(rotateZ);
 
          if (gotXYZ) updateXYZ();
     });
 
     $("#cube-container").click(function(e) {
-         ws.send("CUBE-DEFENDER|" +
-         playerId + "|" + 
-         rotateX.toString() + "|" + 
-         rotateY.toString() + "|" + 
-         rotateZ.toString());
+         alert("TODO: Incluir uma animação.")
     });
 
      setInterval(function() {
@@ -66,6 +62,12 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
+
+         ws.send("CUBE-DEFENDER|" +
+         playerId + "|" + 
+         rotateX.toString() + "|" + 
+         rotateY.toString() + "|" + 
+         rotateZ.toString());
      }, 100);
 
      var side = 0;
@@ -95,10 +97,6 @@ $(document).ready(function() {
             
             $("#rotateX, #rotateY, #rotateZ")
            .trigger("change");
-
-            setTimeout(function(e) {        
-                getCube();
-            }, 5000);
         }
     };
 });
