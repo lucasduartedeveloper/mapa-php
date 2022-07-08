@@ -55,6 +55,10 @@ $(document).ready(function() {
          resetCube();
      });
 
+     $("#upload").click(function(e) {
+         $("#file-upload").click();
+     });
+
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
@@ -135,7 +139,7 @@ function updateXYZ() {
 }
 
 function getCube() {
-     $.getJSON("/camera/ajax/camera.php", 
+     $.getJSON("ajax/camera.php", 
      function(data) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
@@ -146,7 +150,7 @@ function getCube() {
 }
 
 function saveSide(side, base64) {
-      $.post("/camera/ajax/camera.php", {
+      $.post("ajax/camera.php", {
              cameraId: side,
              base64: base64,
              }).done(function(data) { 

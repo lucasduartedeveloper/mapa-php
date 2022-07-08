@@ -43,6 +43,8 @@
 <p id="title">
      CUBE DEFENDER 
      <i class="fa-solid fa-lock"></i>
+     <input style="display:none" type="file" id="file-upload" name="UploadFiles">
+     <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
 </p>
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
@@ -66,7 +68,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v26.1.51
+     CUBE DEFENDER v26.1.52
      <br>
      <span id="server-info">
      CONNECTING...
@@ -90,7 +92,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=1"></script>
-<script src="script/cube-defender.js?v=51"></script>
+<script src="script/cube-defender.js?v=52"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
