@@ -88,9 +88,9 @@ $(document).ready(function() {
             rotateX = parseInt(msg[2]);
             rotateY = parseInt(msg[3]);
             rotateZ = parseInt(msg[4]);
-            setTimeout(function(e) {
+            setTimeout(function(e) {        
+                getCube();
             }, 5000);
-            getCube();
         }
     };
 });
@@ -121,7 +121,7 @@ function getCube() {
           for (var k = 0; k < 6; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
-               //console.log(data);
+	               //console.log(data);
           }
      });
 }
@@ -138,7 +138,7 @@ function saveSide(side, base64) {
 var sh = window.innerHeight;
 var sw = window.innerWidth;
 canvas.width = sw;
-canvas.height = sh/3;
+p.he,eight = sh/3;
 
 // Texto para audio
 var speaking = false;
