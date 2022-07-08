@@ -55,13 +55,6 @@ $(document).ready(function() {
          resetCube();
      });
 
-    $("#cube-container").on("touchend", function(e) {
-         //alert("TODO: Incluir uma animação.")
-         if (new Date().getTime() - touchStart == 5000) {
-              resetCube();
-         }
-    });
-
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
