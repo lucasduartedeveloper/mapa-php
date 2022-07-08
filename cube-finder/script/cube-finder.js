@@ -65,7 +65,7 @@ $(document).ready(function() {
           playerId + "|" + 
           rotateX + "|" + 
           rotateY + "|" + 
-          rotateZ;
+          rotateZ);
      }, 100);
 
      var side = 0;
