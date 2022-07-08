@@ -117,6 +117,7 @@ function getCube() {
           for (var k = 0; k < 5; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
+               console.log(data);
           }
      });
 }
@@ -126,7 +127,7 @@ function saveSide(side, base64) {
              cameraId: side,
              base64: base64,
              }).done(function(data) { 
-                     //console.log(data);
+                     console.log(data);
       });
 }
 
