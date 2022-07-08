@@ -54,6 +54,9 @@ $(document).ready(function() {
          // overwrite original image
          context.putImageData(imgData, 0, 0);
 
+         $("#rotateX, #rotateY, #rotateZ")
+         .trigger("change");
+
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
