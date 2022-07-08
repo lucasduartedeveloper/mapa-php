@@ -34,7 +34,7 @@ $(document).ready(function() {
               "Y: " + $("#rotateY").val() + ", " +
               "Z: " + $("#rotateZ").val()
          );
-         updateXYZ() ;
+         if (gotXYZ) updateXYZ() ;
     });
 
      setInterval(function() {
@@ -97,12 +97,15 @@ $(document).ready(function() {
     };
 });
 
+var gotXYZ = false;
 function getXYZ() {
      $.getJSON("ajax/cube-desfinder.php", function(data) {
           var xyz = data[0].valor.split("|");
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
+          console.log(data);
+          gotXYZ = true;
      });
 }
 

@@ -65,7 +65,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DESFINDER v6.0.11
+     CUBE DESFINDER v6.0.12
      <br>
      <span id="server-info">
      CONNECTING...
@@ -89,7 +89,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/cube-desfinder.js?v=11"></script>
+<script src="script/cube-desfinder.js?v=12"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
