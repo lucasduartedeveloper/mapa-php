@@ -49,15 +49,15 @@
 
 <div id="rotation">
 <label id="rotation-label"
-for="rotateX" class="form-label">Rotation X: 0, Y: 0, Z: 0</label>
+for="rotateX" class="form-label">Rotation X: 0, Y: 0, Z: 0</label><br>
 <input id="rotateX"
 min="-180" max="180" step="1" value="0"
 type="range" 
-class="form-range">
+class="form-range"><br>
 <input id="rotateY"
 min="-180" max="180" step="1" value="0"
 type="range" 
-class="form-range">
+class="form-range"><br>
 <input id="rotateZ"
 min="-180" max="180" step="1" value="0"
 type="range" 
