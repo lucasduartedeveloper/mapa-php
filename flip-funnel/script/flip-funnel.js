@@ -77,7 +77,7 @@ $(document).ready(function() {
          }
 
          side += 1;
-         side += side > 1 ? 0 side;
+         side += side > 1 ? 0 : side;
      });
 
      ws.onmessage = function(e) {
