@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=30">
+<link rel="stylesheet" href="css/style.css?v=31">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -48,6 +48,10 @@
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
 <canvas width="128" height="128" id="camera-canvas"></canvas>
+<input id="opacity"
+min="-180" max="180" step="1" value="0"
+type="range" 
+class="form-range">
 
 <div id="rotation">
 <label id="rotation-label"
@@ -81,7 +85,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v30.3.2.55
+     CUBE DEFENDER v31.0.3.2.55
      <br>
      <span id="server-info">
      CONNECTING...
@@ -103,7 +107,8 @@ class="form-range">
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
-
+>
+<script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
 <script src="script/cube-defender.js?v=55"></script>
