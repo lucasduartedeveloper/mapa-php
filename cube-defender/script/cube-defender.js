@@ -24,6 +24,13 @@ function startCamera(mode) {
      }
 }
 
+function stopCamera() {
+    () => video.srcObject
+    && video.srcObject
+    .getTracks()
+    .forEach(t => t.stop());
+}
+
 $(document).ready(function() {
      getXYZ();
      getCube();
@@ -39,10 +46,12 @@ $(document).ready(function() {
      $("#rotate-camera").click(function(e) {
           if (cameraMode == "environment") {
                cameraMode = "user";
+               stopCamera();
                startCamera(cameraMode);
           }
           else {
                cameraMode = "environment";
+               stopCamera();
                startCamera(cameraMode);
           }
      });
