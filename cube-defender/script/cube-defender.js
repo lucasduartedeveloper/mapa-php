@@ -25,8 +25,7 @@ function startCamera(mode) {
 }
 
 function stopCamera() {
-    () => video.srcObject
-    && video.srcObject
+     video.srcObject
     .getTracks()
     .forEach(t => t.stop());
 }
