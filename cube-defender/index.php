@@ -48,6 +48,7 @@
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
 <canvas width="128" height="128" id="camera-canvas"></canvas>
+
 <input id="opacity"
 min="-180" max="180" step="1" value="0"
 type="range" 
@@ -107,7 +108,7 @@ class="form-range">
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
->
+
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
