@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=31">
+<link rel="stylesheet" href="css/style.css?v=32">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -30,6 +30,9 @@
 <title></title>
 </head>
 <body>
+
+<i id="previous" class="fa-solid fa-caret-left"></i>
+<i id="next" class="fa-solid fa-caret-right"></i>
 
 <div id="cube-container">
       <img src="img/front.png" class="front"/> 
@@ -87,7 +90,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v31.0.3.2.60
+     CUBE DEFENDER v32.0.3.2.60
      <br>
      <span id="server-info">
      CONNECTING...

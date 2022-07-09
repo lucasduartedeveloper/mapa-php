@@ -29,6 +29,16 @@ html, body {
      text-align: center;
      overflow: hidden;
 }
+#previous {
+     position: fixed;
+     top: 20vh;
+     left: 5vw;
+}
+#next {
+    position: fixed;
+    top: 20vh;
+    right: 5vw;
+}
 #cube-container {
     margin-left: 0px;
     margin-top: 0px;
