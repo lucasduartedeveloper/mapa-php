@@ -44,7 +44,7 @@
      CUBE DEFENDER
      <input style="display:none" type="file" id="file-upload" name="UploadFiles">
      <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
-     <i id="rotate" class="fa-solid fa-rotate"></i>
+     <i id="rotate-camera" class="fa-solid fa-rotate"></i>
 </p>
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
@@ -87,7 +87,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v31.0.3.2.59
+     CUBE DEFENDER v31.0.3.2.60
      <br>
      <span id="server-info">
      CONNECTING...
@@ -113,7 +113,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=59"></script>
+<script src="script/cube-defender.js?v=60"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
