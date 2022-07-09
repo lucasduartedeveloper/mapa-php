@@ -105,6 +105,7 @@ $(document).ready(function() {
 
          side += 1;
          side = side > 5 ? 0 : side;
+         setSide(side);
      });
 
      ws.onmessage = function(e) {
