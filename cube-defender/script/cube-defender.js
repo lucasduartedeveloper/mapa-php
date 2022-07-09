@@ -13,23 +13,39 @@ var rotateX = 0;
 var rotateY = 0;
 var rotateZ = 0;
 
+var cameraMode = "environment";
+function startCamera(mode) {
+     if (navigator.mediaDevices) {
+          navigator.mediaDevices
+          .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false })
+          .then((stream) => {
+               video.srcObject = stream;
+          });
+     }
+}
+
 $(document).ready(function() {
      getXYZ();
      getCube();
 
      var video = document.getElementById("video");
-     if (navigator.mediaDevices) {
-          navigator.mediaDevices
-          .getUserMedia({ video: { facingMode: { exact: "environment" } }, audio: false })
-          .then((stream) => {
-               video.srcObject = stream;
-          });
-     }
+     startCamera("environment");
 
      var x = 0;
      var y = 0;
      var sh = window.innerHeight;
      var sw = window.innerWidth;
+
+     $("#rotate-camera").click(function(e) {
+          if (cameraMode == "environment") {
+               cameraMode = "user";
+               startCamera(cameraMode);
+          }
+          else {
+               cameraMode = "environment";
+               startCamera(cameraMode);
+          }
+     });
   
      $("#rotateX, #rotateY, #rotateZ")
      .on("change", function() {
