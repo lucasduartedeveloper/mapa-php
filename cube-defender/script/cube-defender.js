@@ -47,7 +47,7 @@ $(document).ready(function() {
           cubeId -= 1;
           cubeId = cubeId < 0 ? cubeList.lenght : cubeId;
           getCube(cubeId);
-          if (cubeId == 0 || cubeId == cubeList.length-1) {
+          if (cubeId == 0 || cubeId ==(cubeList.length-1)) {
               $('#add-cube').modal({
                   keyboard: true
               });
@@ -57,7 +57,7 @@ $(document).ready(function() {
           cubeId += 1;
           cubeId = cubeId > cubeList.lenght ? 0 : cubeId;
           getCube(cubeId);
-          if (cubeId == 0 || cubeId == cubeList.length-1) {
+          if (cubeId == 0 || cubeId == (cubeList.length-1)) {
               $('#add-cube').modal({
                   keyboard: true
               });
