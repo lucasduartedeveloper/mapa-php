@@ -208,9 +208,9 @@ function listCubes() {
      });
 }
 
-function addCube(name) {
+function addCube(text) {
      $.post("ajax/cube-info.php", {
-          name: name
+          text: text
           }).done(function(data) {
                listCubes();
                console.log(data);
