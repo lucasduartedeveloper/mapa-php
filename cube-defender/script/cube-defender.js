@@ -215,7 +215,7 @@ function addCube(text) {
 }
 
 function getCube(id) {
-     $.getJSON("ajax/camera.php?cameraId="+id, 
+     $.getJSON("ajax/cube-side.php?cubeId="+id, 
      function(data) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
@@ -239,9 +239,10 @@ function setSide(k) {
     $("#side").text(sides[k]);
 }
 
-function saveSide(side, base64) {
-      $.post("ajax/camera.php", {
-             cameraId: side,
+function saveSide(base64) {
+      $.post("ajax/cube-side.php", {
+             cubeId: cubeId,
+             sideId: side,
              base64: base64,
              }).done(function(data) { 
                    $("#cube-container").children()[side].src =
