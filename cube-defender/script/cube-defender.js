@@ -32,7 +32,7 @@ function stopCamera() {
 
 $(document).ready(function() {
      getXYZ();
-     getCube();
+     getCube(0);
 
      var video = document.getElementById("video");
      startCamera("environment");
@@ -42,6 +42,17 @@ $(document).ready(function() {
      var sh = window.innerHeight;
      var sw = window.innerWidth;
 
+     $("#previous").click(function(e) {
+          cubeId -= 1;
+          cubeId = cubeId < 0 ? cubeList.lenght : cubeId;
+          getCube(cubeId);
+     });
+     $("#next").click(function(e) {
+          cubeId += 1;
+          cubeId = cubeId > cubeList.lenght ? 0 : cubeId;
+          getCube(cubeId);
+     });
+     
      $("#rotate-camera").click(function(e) {
           if (cameraMode == "environment") {
                cameraMode = "user";
@@ -171,8 +182,19 @@ function updateXYZ() {
      });
 }
 
-function getCube() {
-     $.getJSON("ajax/camera.php", 
+var cubeId = 0;
+var cubeList = [];
+function listCubes() {
+     $.getJSON("ajax/cube-list.php", 
+     function(data) {
+          cubeList = data;
+          $("#name").text(data[cubeId].nome);
+          console.log(data);
+     });
+}
+
+function getCube(id) {
+     $.getJSON("ajax/camera.php?id="+id, 
      function(data) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =

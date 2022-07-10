@@ -33,11 +33,13 @@ html, body {
      position: fixed;
      top: 20vh;
      left: 5vw;
+     font-size: 50px;
 }
 #next {
     position: fixed;
     top: 20vh;
     right: 5vw;
+    font-size: 50px;
 }
 #cube-container {
     margin-left: 0px;
