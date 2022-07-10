@@ -111,7 +111,7 @@ $(document).ready(function() {
      });
 
      $(document).on("imageResized", function(e) {
-         saveFace(face, e.url);
+         saveFace(faceId, e.url);
          console.log("imageResized");
      });
 
@@ -195,6 +195,17 @@ function updateXYZ() {
 }
 
 var cubeId = 0;
+function getCube(id) {
+     $.getJSON("ajax/cube-face.php?cubeId="+id, 
+     function(data) {
+          for (var k = 0; k < data.length; k++) {
+               $("#cube-container").children()[k].src =
+               data[k].base64;
+	        console.log(data);
+          }
+     });
+}
+
 var cubeList = [];
 function listCubes() {
      $.getJSON("ajax/cube-info.php", 
@@ -214,17 +225,6 @@ function addCube(text) {
      });
 }
 
-function getCube(id) {
-     $.getJSON("ajax/cube-face.php?cubeId="+id, 
-     function(data) {
-          for (var k = 0; k < data.length; k++) {
-               $("#cube-container").children()[k].src =
-               data[k].base64;
-	        //console.log(data);
-          }
-     });
-}
-
 var faceId = 0;
 var faces = [
     "Front", 
@@ -234,9 +234,9 @@ var faces = [
     "Right",
     "Left",
     "Bottom" ];
-function setFace(k) {
-    face = k;
-    $("#cube-face").text(faces[k]);
+function setFace(id) {
+    faceId = id;
+    $("#cube-face").text(faces[id]);
 }
 
 function saveFace(base64) {
