@@ -238,6 +238,7 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
+      say("Digitalizing "+faces+" face.");
       log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
       $.post("ajax/cube-face.php", {
              cubeId: cubeId,
