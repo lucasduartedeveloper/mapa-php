@@ -275,7 +275,8 @@ var faces = [
     "Left", 
     "Top",
     "Right",
-    "Bottom" ];
+    "Bottom",
+    "Cube" ];
 function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[id]);
@@ -287,14 +288,22 @@ function saveFace(base64) {
 
       log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
 
-      $.post("ajax/cube-face.php", {
+     if (faceId == 6) {
+         for (var k = 0; k < 6; k++) {
+             setFace(k);
+             saveFace(baseImages[k]);
+         }
+      }
+      else {
+         $.post("ajax/cube-face.php", {
              cubeId: cubeId,
              faceId: faceId,
              base64: base64,
              }).done(function(data) { 
                    log("post", data);
                    say("Digitalized "+faces[faceId]);
-      });
+         });
+     }
 }
 
 var baseImages = [

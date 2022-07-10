@@ -102,11 +102,12 @@ class="form-range">
            <a class="dropdown-item" href="#" onclick="setFace(3);">Top</a>
            <a class="dropdown-item" href="#" onclick="setFace(4);">Right</a>
            <a class="dropdown-item" href="#" onclick="setFace(5);">Bottom</a>
+           <a class="dropdown-item" href="#" onclick="setFace(6);">Cube</a>
      </div>
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v36.0.3.2.123
+     CUBE DEFENDER v36.0.3.2.125
      <br>
      <span id="server-info">
      CONNECTING...
@@ -163,7 +164,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=123"></script>
+<script src="script/cube-defender.js?v=125"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
