@@ -197,9 +197,10 @@ function getCube(id) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
+      
+               data[k].base64 = data.base64.substring(0,20);
+               log("get", data);
           }
-
-          log("get", data);
           say("Downloaded cube.");
      });
 }
