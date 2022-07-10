@@ -160,8 +160,6 @@ $(document).ready(function() {
          document.getElementById("camera-canvas").
          toDataURL();
 
-         $("#cube-container").children()[faceId].src =
-         base64;
          saveFace(base64);
      });
 
