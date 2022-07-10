@@ -32,6 +32,7 @@ function stopCamera() {
 
 $(document).ready(function() {
      getXYZ();
+     listCubes();
      getCube(0);
 
      var video = document.getElementById("video");
