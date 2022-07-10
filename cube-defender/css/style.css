@@ -29,6 +29,9 @@ html, body {
      text-align: center;
      overflow: hidden;
 }
+.modal-title {
+     color: #000;
+}
 #previous {
      position: fixed;
      top: 20vh;

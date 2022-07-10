@@ -5,7 +5,7 @@ try {
     if (!isset($_POST["id"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
     
-        $sql =  "INSERT INTO cube_info (nome) VALUES (".$name."');";
+        $sql = "INSERT INTO cube_info (nome) VALUES (".$name."');";
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -16,7 +16,7 @@ try {
         $id = htmlspecialchars($_POST["id"]);
         $name = htmlspecialchars($_POST["name"]);
     
-        $sql =  "UPDATE cube_info SET nome='".$name."' WHERE id=".$id;
+        $sql = "UPDATE cube_info SET nome='".$name."' WHERE id=".$id;
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
