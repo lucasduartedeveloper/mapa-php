@@ -51,13 +51,11 @@ $(document).ready(function() {
           cubeId -= 1;
           cubeId = cubeId < 0 ? (cubeList.length-1) : cubeId;
           getCube(cubeId);
-          $("#name").text(cubeList[cubeId].nome);
      });
      $("#next").click(function(e) {
           cubeId += 1;
           cubeId = cubeId > (cubeList.length-1) ? 0 : cubeId;
           getCube(cubeId);
-          $("#name").text(cubeList[cubeId].nome);
      });
      $("#add").click(function(e) {
           $('#add-cube').modal({
@@ -215,6 +213,7 @@ function getCube(id) {
           }
           $("#loading").hide();
           $("#cube-container img").show();
+          $("#name").text(cubeList[cubeId].nome);
 
           log("get", data);
           say("Downloaded cube.");
