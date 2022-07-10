@@ -147,7 +147,7 @@ $(document).ready(function() {
 
          $("#cube-container").children()[faceId].src =
          base64;
-         saveFace(faceId, base64);
+         saveFace(base64);
      });
 
      ws.onmessage = function(e) {
