@@ -65,6 +65,7 @@ $(document).ready(function() {
      });
      $("#save").click(function(e) {
           addCube($("#input-name").val());
+          $('#add-cube').modal("hide");
      });
      
      $("#rotate-camera").click(function(e) {
