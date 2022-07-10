@@ -197,8 +197,8 @@ function updateXYZ() {
 
 var cubeId = 0;
 function getCube(id) {
-     $("#cube-container")
-     .removeClass("slide-in-blurred-top");
+     /*$("#cube-container")
+     .removeClass("slide-in-blurred-top");*/
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
           for (var k = 0; k < 6; k++) {
@@ -213,8 +213,8 @@ function getCube(id) {
                     .children()[k].src = baseImages[k];
                }
           }
-         $("#cube-container")
-         .addClass("slide-in-blurred-top");
+         /*$("#cube-container")
+         .addClass("slide-in-blurred-top");*/
           log("get", data);
           say("Downloaded cube.");
      });
