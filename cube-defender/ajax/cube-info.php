@@ -2,7 +2,7 @@
 <?php
 $sql ="";
 try {
-    echo (!isset($_POST["id"]) && isset($_POST["name"]);
+    echo !isset($_POST["id"]) && isset($_POST["name"]);
     if (!isset($_POST["id"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
     
