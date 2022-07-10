@@ -194,7 +194,7 @@ var cubeId = 0;
 function getCube(id) {
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
-          for (var k = 0; k < 5; k++) {
+          for (var k = 0; k < 6; k++) {
                if (data[k]) { 
                     $("#cube-container")
                     .children()[k].src = data[k].base64; 
