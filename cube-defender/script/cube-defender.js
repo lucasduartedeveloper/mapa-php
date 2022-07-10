@@ -203,10 +203,10 @@ function getCube(id) {
      function(data) {
           for (var k = 0; k < 6; k++) {
                if (data[k]) { 
-                    $("#cube-container")
-                    .children()[k].src = data[k].base64; 
+                    $("#cube-container img")[k]
+                    .src = data[k].base64; 
                     data[k].base64 = 
-                    data[k].base64.substring(0,20);
+                    data[k].base64.substring(0,40);
                }
                else {
                     $("#cube-container")
