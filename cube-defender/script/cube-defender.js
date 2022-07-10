@@ -1,11 +1,9 @@
-document.addEventListener('contextmenu',
-                        event => event.preventDefault());
-
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
 var gameOver = new Audio("audio/game-over.wav");
 
-// Saldo
+debug = true;
+
 var playerId = new Date().getTime();
 var partNo = 0;
 
@@ -112,7 +110,7 @@ $(document).ready(function() {
 
      $(document).on("imageResized", function(e) {
          saveFace(faceId, e.url);
-         console.log("imageResized");
+         log("info", "Image resized.");
      });
 
      setInterval(function() {
@@ -177,7 +175,7 @@ function getXYZ() {
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
-          console.log(data);
+          log("get", data);
          
          $("#rotateX, #rotateY, #rotateZ")
          .trigger("change");
@@ -190,7 +188,7 @@ function updateXYZ() {
      $.post("ajax/cube-defender.php", {
           xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
           }).done(function(data) {
-              //console.log(data);
+              log("post", data);
      });
 }
 
@@ -201,7 +199,7 @@ function getCube(id) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
-	        console.log(data);
+	        log("get", data);
           }
      });
 }
@@ -212,7 +210,7 @@ function listCubes() {
      function(data) {
           cubeList = data;
           $("#name").text(data[cubeId].nome);
-          console.log(data);
+          log("get", data);
      });
 }
 
@@ -221,7 +219,7 @@ function addCube(text) {
           name: text,
           }).done(function(data) {
                listCubes();
-               console.log(data);
+               log("post", data);
      });
 }
 
@@ -240,7 +238,7 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
-      console.log("cubeId:"+cubeId+", faceId:"+faceId);
+      log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
       $.post("ajax/cube-face.php", {
              cubeId: cubeId,
              faceId: faceId,
@@ -248,7 +246,7 @@ function saveFace(base64) {
              }).done(function(data) { 
                    $("#cube-container").children()[faceId].src =
                    base64;
-                   console.log(data);
+                   log("post", data);
       });
 }
 
@@ -263,10 +261,9 @@ var baseImages = [
 
 function resetCube() {
       for (var k = 0; k < 6; k++) {
-	      //console.log(data);
              saveSide(k, baseImages[k]);
       }
-      //say("q was deleted, you failed.");
+      say("Cube was deleted.");
 }
 
 var sh = window.innerHeight;
