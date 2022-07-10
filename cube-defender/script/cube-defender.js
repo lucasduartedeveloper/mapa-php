@@ -207,6 +207,7 @@ function updateXYZ() {
 
 var cubeId = 0;
 function getCube(id) {
+     $("#name").text("---");
      $("#cube-container img").hide();
      $("#loading").show();
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
