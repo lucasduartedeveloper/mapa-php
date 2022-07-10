@@ -261,7 +261,7 @@ function renameCube(text) {
           cubeId: cubeId,
           name: text,
           }).done(function(data) {
-               $("#name").text(cubeList[cubeId].nome);
+               listCubes();
 
                log("post", data);
                say("Cube renamed.");
