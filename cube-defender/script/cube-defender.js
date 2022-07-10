@@ -48,22 +48,17 @@ $(document).ready(function() {
           cubeId = cubeId < 0 ? (cubeList.length-1) : cubeId;
           getCube(cubeId);
           $("#name").text(cubeList[cubeId].nome);
-          if (cubeId == 0 || cubeId ==(cubeList.length-1)) {
-              $('#add-cube').modal({
-                  keyboard: true
-              });
-          }
      });
      $("#next").click(function(e) {
           cubeId += 1;
           cubeId = cubeId > (cubeList.length-1) ? 0 : cubeId;
           getCube(cubeId);
           $("#name").text(cubeList[cubeId].nome);
-          if (cubeId == 0 || cubeId == (cubeList.length-1)) {
-              $('#add-cube').modal({
-                  keyboard: true
-              });
-          }
+     });
+     $("#add").click(function(e) {
+          $('#add-cube').modal({
+               keyboard: true
+          });
      });
      $("#save").click(function(e) {
           addCube($("#input-name").val());

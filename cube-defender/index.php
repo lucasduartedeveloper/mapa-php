@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=33">
+<link rel="stylesheet" href="css/style.css?v=34">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -31,6 +31,7 @@
 </head>
 <body>
 
+<i id="add" class="fa-solid fa-circle-plus"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>
 
@@ -90,7 +91,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v33.0.3.2.76
+     CUBE DEFENDER v34.0.3.2.77
      <br>
      <span id="server-info">
      CONNECTING...
@@ -143,7 +144,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=76"></script>
+<script src="script/cube-defender.js?v=77"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
