@@ -14,7 +14,7 @@ WHERE data_hora < (now() - '2 hours 40 minutes'::interval);";
 
     echo $sql;*/
 
-    $sql =  "INSERT INTO cube_info (nome) VALUES (".$nome."');";
+    $sql =  "INSERT INTO cube_info (nome) VALUES (".$name."');";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
