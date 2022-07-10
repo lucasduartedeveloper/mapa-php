@@ -64,7 +64,7 @@ $(document).ready(function() {
           }
      });
      $("#save").click(function(e) {
-          
+          addCube($("#name").val());
      });
      
      $("#rotate-camera").click(function(e) {
