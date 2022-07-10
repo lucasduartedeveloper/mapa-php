@@ -47,11 +47,17 @@ $(document).ready(function() {
           cubeId -= 1;
           cubeId = cubeId < 0 ? cubeList.lenght : cubeId;
           getCube(cubeId);
+          $('#add-cube').modal({
+              keyboard: true
+          });
      });
      $("#next").click(function(e) {
           cubeId += 1;
           cubeId = cubeId > cubeList.lenght ? 0 : cubeId;
           getCube(cubeId);
+          $('#add-cube').modal({
+              keyboard: true
+          });
      });
      
      $("#rotate-camera").click(function(e) {
@@ -258,9 +264,9 @@ function say(text) {
     if (!speaking) {
          speaking = true;
          var msg = new SpeechSynthesisUtterance();
-         msg.lang = "pt-BR";
+         //msg.lang = "pt-BR";
          //msg.lang = "en-US";
-         //msg.lang = "ja-JP";
+         msg.lang = "ja-JP";
          msg.text = text;
          msg.onend = function(event) {
               speaking = false;

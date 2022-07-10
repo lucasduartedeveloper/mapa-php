@@ -90,12 +90,39 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v32.0.3.2.62
+     CUBE DEFENDER v32.0.3.2.63
      <br>
      <span id="server-info">
      CONNECTING...
      </span>
 </p>
+
+<div id="add-cube" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">キューブ名を挿入</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+        <div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -116,7 +143,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=62"></script>
+<script src="script/cube-defender.js?v=63"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
