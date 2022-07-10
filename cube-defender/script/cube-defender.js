@@ -210,7 +210,7 @@ function listCubes() {
 
 function addCube(text) {
      $.post("ajax/cube-info.php", {
-          text: text
+          name: text,
           }).done(function(data) {
                listCubes();
                console.log(data);
