@@ -34,6 +34,10 @@
 </head>
 <body>
 
+<div id="login" style="display:none">
+      <canvas width="128" height="128" id="login-camera-canvas"></canvas>
+</div>
+
 <i id="add" class="fa-solid fa-circle-plus"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>

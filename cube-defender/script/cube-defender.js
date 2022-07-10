@@ -209,8 +209,7 @@ function getCube(id) {
                     data[k].base64.substring(0,40);
                }
                else {
-                    $("#cube-container")
-                    .children()[k].src = baseImages[k];
+                    $("#cube-container img")[k].src = baseImages[k];
                }
           }
           $("#loading").show();
