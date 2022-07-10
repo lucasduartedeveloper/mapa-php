@@ -77,21 +77,21 @@ class="form-range">
 </div>
 
 <div id="dropdown" class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle" type="button" id="side" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="cube-face" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Front
      </button>
-     <div id="side-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a class="dropdown-item" href="#" onclick="setSide(0);">Front</a>
-           <a class="dropdown-item" href="#" onclick="setSide(1);">Back</a>
-           <a class="dropdown-item" href="#" onclick="setSide(2);">Left</a>
-           <a class="dropdown-item" href="#" onclick="setSide(3);">Top</a>
-           <a class="dropdown-item" href="#" onclick="setSide(4);">Right</a>
-           <a class="dropdown-item" href="#" onclick="setSide(5);">Bottom</a>
+     <div id="face-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#" onclick="setFace(0);">Front</a>
+           <a class="dropdown-item" href="#" onclick="setFace(1);">Back</a>
+           <a class="dropdown-item" href="#" onclick="setFace(2);">Left</a>
+           <a class="dropdown-item" href="#" onclick="setFace(3);">Top</a>
+           <a class="dropdown-item" href="#" onclick="setFace(4);">Right</a>
+           <a class="dropdown-item" href="#" onclick="setFace(5);">Bottom</a>
      </div>
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v36.0.3.2.80
+     CUBE DEFENDER v36.0.3.2.81
      <br>
      <span id="server-info">
      CONNECTING...
@@ -144,7 +144,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=80"></script>
+<script src="script/cube-defender.js?v=81"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

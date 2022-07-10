@@ -5,10 +5,10 @@ try {
   if (isset($_POST["cubeId"])) {
 
     $cubeId = htmlspecialchars($_POST["cubeId"]);
-    $sideId = htmlspecialchars($_POST["sideId"]);
+    $faceId = htmlspecialchars($_POST["faceId"]);
     $base64 = htmlspecialchars($_POST["base64"]);
 
-    $sql =  "INSERT INTO camera_frame (cube_id,cube_side,base64) VALUES (".$cubeId.",'".$sideId.",".$base64."');";
+    $sql =  "INSERT INTO cube_face (cube_id,face_id,base64) VALUES (".$cubeId.",'".$faceId.",".$base64."');";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -18,7 +18,7 @@ try {
   else if (isset($_GET["cubeId"])) {
 
     $cubeId = htmlspecialchars($_GET["cubeId"]);
-    $sql = "SELECT * FROM cube_side WHERE cube_id=".$cubeId." ORDER BY data_hora DESC LIMIT 1;";
+    $sql = "SELECT * FROM cube_face WHERE cube_id=".$cubeId." ORDER BY data_hora DESC LIMIT 1;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

@@ -111,7 +111,7 @@ $(document).ready(function() {
      });
 
      $(document).on("imageResized", function(e) {
-         saveSide(side, e.url);
+         saveFace(face, e.url);
          console.log("imageResized");
      });
 
@@ -146,13 +146,13 @@ $(document).ready(function() {
          document.getElementById("camera-canvas").
          toDataURL();
 
-         $("#cube-container").children()[side].src =
+         $("#cube-container").children()[faceId].src =
          base64;
-         saveSide(side, base64);
+         saveFace(faceId, base64);
 
-         side += 1;
-         side = side > 5 ? 0 : side;
-         setSide(side);
+         faceId += 1;
+         faceId = faceId > 5 ? 0 : faceId;
+         setFace(faceId);
      });
 
      ws.onmessage = function(e) {
@@ -215,7 +215,7 @@ function addCube(text) {
 }
 
 function getCube(id) {
-     $.getJSON("ajax/cube-side.php?cubeId="+id, 
+     $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
@@ -225,8 +225,8 @@ function getCube(id) {
      });
 }
 
-var side = 0;
-var sides = [
+var faceId = 0;
+var faces = [
     "Front", 
     "Back", 
     "Left", 
@@ -234,18 +234,18 @@ var sides = [
     "Right",
     "Left",
     "Bottom" ];
-function setSide(k) {
-    side = k;
-    $("#side").text(sides[k]);
+function setFace(k) {
+    face = k;
+    $("#cube-face").text(faces[k]);
 }
 
-function saveSide(base64) {
-      $.post("ajax/cube-side.php", {
+function saveFace(base64) {
+      $.post("ajax/cube-face.php", {
              cubeId: cubeId,
-             sideId: side,
+             faceId: faceId,
              base64: base64,
              }).done(function(data) { 
-                   $("#cube-container").children()[side].src =
+                   $("#cube-container").children()[faceId].src =
                    base64;
                    console.log(data);
       });
