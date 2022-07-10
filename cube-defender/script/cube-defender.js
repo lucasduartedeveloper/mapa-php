@@ -201,6 +201,7 @@ function getCube(id) {
                data[k].base64;
 	        log("get", data);
           }
+          say("Downloaded cube.");
      });
 }
 
@@ -219,7 +220,9 @@ function addCube(text) {
           name: text,
           }).done(function(data) {
                listCubes();
+
                log("post", data);
+               say("Cube created.");
      });
 }
 
@@ -238,7 +241,6 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
-      say("Digitalizing "+faces[faceId]);
       log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
       $.post("ajax/cube-face.php", {
              cubeId: cubeId,
@@ -247,7 +249,9 @@ function saveFace(base64) {
              }).done(function(data) { 
                    $("#cube-container").children()[faceId].src =
                    base64;
+
                    log("post", data);
+                   say("Digitalized "+faces[faceId]);
       });
 }
 
