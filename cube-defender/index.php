@@ -90,7 +90,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v32.0.3.2.67
+     CUBE DEFENDER v32.0.3.2.68
      <br>
      <span id="server-info">
      CONNECTING...
@@ -112,7 +112,7 @@ class="form-range">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
   </div>
-  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+  <input id="#input-name" type="text" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-sm">
 </div>
         </p>
       </div>
@@ -143,7 +143,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=67"></script>
+<script src="script/cube-defender.js?v=68"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
