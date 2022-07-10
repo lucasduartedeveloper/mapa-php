@@ -6,7 +6,7 @@ try {
     if (!isset($_POST["id"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
     
-        $sql = "INSERT INTO cube_info (nome) VALUES (".$name."');";
+        $sql = "INSERT INTO cube_info (nome) VALUES ('".$name."');";
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
