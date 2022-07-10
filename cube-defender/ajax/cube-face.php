@@ -25,7 +25,7 @@ try {
   else if (isset($_GET["cubeId"])) {
 
     $cubeId = htmlspecialchars($_GET["cubeId"]);
-    $sql = "SELECT * FROM cube_face WHERE cube_id=".$cubeId." ORDER BY data_hora DESC;";
+    $sql = "SELECT * FROM cube_face WHERE cube_id=".$cubeId." ORDER BY face_id;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
