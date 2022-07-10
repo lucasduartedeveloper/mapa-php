@@ -283,11 +283,6 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
-      $("#cube-container img")[faceId].src =
-      base64;
-
-      log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
-
      if (faceId == 6) {
          for (var k = 0; k < 6; k++) {
              setFace(k);
@@ -295,6 +290,12 @@ function saveFace(base64) {
          }
       }
       else {
+          $("#cube-container img")[faceId].src =
+          base64;
+
+          log("global-var", 
+          "cubeId:"+cubeId+", faceId:"+faceId);
+
          $.post("ajax/cube-face.php", {
              cubeId: cubeId,
              faceId: faceId,
