@@ -286,7 +286,7 @@ function resetCube() {
              setFace(k);
              saveFace(baseImages[k]);
       }
-      say("Cube was repainted.");
+      say("Cube was forgotten.");
 }
 
 var sh = window.innerHeight;
