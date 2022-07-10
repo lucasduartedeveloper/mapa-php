@@ -17,7 +17,7 @@ try {
         $cubeId = htmlspecialchars($_POST["cubeId"]);
         $name = htmlspecialchars($_POST["name"]);
     
-        $sql = "UPDATE cube_info SET nome='".$name."' WHERE id=".$cubeid;
+        $sql = "UPDATE cube_info SET nome='".$name."' WHERE id=".$cubeId;
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

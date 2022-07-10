@@ -258,7 +258,7 @@ function addCube(text) {
 var renaming = false;
 function renameCube(text) {
      $.post("ajax/cube-info.php", {
-          id: text,
+          cubeId: cubeId,
           name: text,
           }).done(function(data) {
                $("#name").text(cubeList[cubeId].nome);
