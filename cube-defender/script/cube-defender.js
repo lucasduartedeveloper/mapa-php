@@ -261,7 +261,8 @@ var baseImages = [
 
 function resetCube() {
       for (var k = 0; k < 6; k++) {
-             saveSide(k, baseImages[k]);
+             setFace(k);
+             saveFace(baseImages[k]);
       }
       say("Cube was deleted.");
 }
