@@ -324,8 +324,10 @@ var baseImages = [
 
 function resetCube() {
       speaking = true;
-      setFace(k);
-      saveFace(baseImages[k]);
+      for (var k = 0; k < 6; k++) {
+           setFace(k);
+           saveFace(baseImages[k]);
+      }
       speaking = false;
       say("Cube was reseted.");
 }
