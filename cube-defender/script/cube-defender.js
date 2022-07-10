@@ -110,7 +110,7 @@ $(document).ready(function() {
      });
 
      $(document).on("imageResized", function(e) {
-         saveFace(faceId, e.url);
+         saveFace(e.url);
          log("info", "Image resized.");
      });
 
