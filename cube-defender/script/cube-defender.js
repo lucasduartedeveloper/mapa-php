@@ -200,7 +200,7 @@ function updateXYZ() {
 var cubeId = 0;
 var cubeList = [];
 function listCubes() {
-     $.getJSON("ajax/cube-list.php", 
+     $.getJSON("ajax/cube-info.php", 
      function(data) {
           cubeList = data;
           $("#name").text(data[cubeId].nome);
@@ -209,7 +209,7 @@ function listCubes() {
 }
 
 function addCube(name) {
-     $.post("ajax/cube-list.php", {
+     $.post("ajax/cube-info.php", {
           name: name
           }).done(function(data) {
                listCubes();
