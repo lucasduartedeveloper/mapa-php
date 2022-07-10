@@ -8,6 +8,13 @@ try {
     $faceId = htmlspecialchars($_POST["faceId"]);
     $base64 = htmlspecialchars($_POST["base64"]);
 
+    $sql =  "DELETE FROM cube_face WHERE cube_id=".$cubeId." AND face_id=".$faceId.";";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    echo $sql;
+
     $sql =  "INSERT INTO cube_face (cube_id,face_id,base64) VALUES (".$cubeId.",".$faceId.",'".$base64."');";
 
     $stmt = $pdo->prepare($sql);
