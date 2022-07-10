@@ -288,7 +288,7 @@ function saveFace(base64) {
          var tts = "Digitalized ";
          for (var k = 0; k < 6; k++) {
              setFace(k);
-             saveFace(baseImages[k]);
+             saveFace(base64);
              tts += faces[k];
              tts += k < 6 ? ", " : ".";
          }
