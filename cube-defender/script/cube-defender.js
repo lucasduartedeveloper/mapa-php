@@ -147,10 +147,6 @@ $(document).ready(function() {
          $("#cube-container").children()[faceId].src =
          base64;
          saveFace(faceId, base64);
-
-         faceId += 1;
-         faceId = faceId > 5 ? 0 : faceId;
-         setFace(faceId);
      });
 
      ws.onmessage = function(e) {
@@ -211,7 +207,9 @@ function listCubes() {
      function(data) {
           cubeList = data;
           $("#name").text(data[cubeId].nome);
+
           log("get", data);
+          //say("");
      });
 }
 
