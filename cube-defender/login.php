@@ -22,7 +22,7 @@
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=0">
+         href="css/anim/slide-in-blurred-top.css?v=0">
 <link rel="stylesheet" 
          href="css/style.css?v=36">
 
@@ -37,13 +37,6 @@
 <i id="add" class="fa-solid fa-circle-plus"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>
-
-<div id="loading" class="lds-ellipsis">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-</div>
 
 <div id="cube-container">
       <img src="img/front.png" class="front"/> 
@@ -101,7 +94,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v36.0.3.2.111
+     CUBE DEFENDER v36.0.3.2.110
      <br>
      <span id="server-info">
      CONNECTING...
@@ -157,7 +150,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=111"></script>
+<script src="script/cube-defender.js?v=110"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
