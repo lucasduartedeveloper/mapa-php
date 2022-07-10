@@ -25,7 +25,7 @@ try {
         echo $sql;
     }
     else {
-        $sql = "SELECT a.* FROM cube_info a";
+        $sql = "SELECT a.* FROM cube_info a ORDER BY a.id";
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
