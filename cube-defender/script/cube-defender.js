@@ -284,10 +284,15 @@ function setFace(id) {
 
 function saveFace(base64) {
      if (faceId == 6) {
+         speaking = true;
+         var tts = "Digitalized ";
          for (var k = 0; k < 6; k++) {
              setFace(k);
              saveFace(baseImages[k]);
+             tts += faces[k];
+             tts += k < 6 ? ", " : ".";
          }
+         speaking = false;
       }
       else {
           $("#cube-container img")[faceId].src =
@@ -317,10 +322,10 @@ var baseImages = [
 ];
 
 function resetCube() {
-      for (var k = 0; k < 6; k++) {
-             setFace(k);
-             saveFace(baseImages[k]);
-      }
+      speaking = true;
+      setFace(k);
+      saveFace(baseImages[k]);
+      speaking = false;
       say("Cube was reseted.");
 }
 
