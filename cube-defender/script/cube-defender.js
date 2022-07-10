@@ -293,6 +293,7 @@ function saveFace(base64) {
              tts += k < 6 ? ", " : ".";
          }
          speaking = false;
+         say(tts);
       }
       else {
           $("#cube-container img")[faceId].src =
