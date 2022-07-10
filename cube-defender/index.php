@@ -106,7 +106,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v36.0.3.2.117
+     CUBE DEFENDER v36.0.3.2.118
      <br>
      <span id="server-info">
      CONNECTING...
@@ -114,11 +114,12 @@ class="form-range">
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
 </p>
 
-<div id="add-cube" class="modal" style="z-index: 9999" tabindex="-1" role="dialog">
+<div id="cube-modal" class="modal" style="z-index: 9999" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">NEW CUBE</h5>
+        <h5 id="cube-modal-title" 
+        class="modal-title">NEW CUBE</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -162,7 +163,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=117"></script>
+<script src="script/cube-defender.js?v=118"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

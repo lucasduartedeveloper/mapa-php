@@ -58,13 +58,27 @@ $(document).ready(function() {
           getCube(cubeId);
      });
      $("#add").click(function(e) {
-          $('#add-cube').modal({
+          renaming = false;
+          $('#cube-modal-title').text("NEW CUBE");
+          $('#cube-modal').modal({
+               keyboard: true
+          });
+     });
+     $("#name").click(function(e) {
+          renaming = true;
+          $('#cube-modal-title').text("RENAME CUBE");
+          $('#cube-modal').modal({
                keyboard: true
           });
      });
      $("#save").click(function(e) {
-          addCube($("#input-name").val());
-          $('#add-cube').modal("hide");
+          if (renaming) {
+              renameCube($("#input-name").val());
+          }
+          else {
+              addCube($("#input-name").val());
+          }
+          $('#cube-modal').modal("hide");
      });
      
      $("#rotate-camera").click(function(e) {
@@ -107,11 +121,9 @@ $(document).ready(function() {
      $("#upload").click(function(e) {
          $("#file-upload").click();
      });
-
      $("#file-upload").on("change", function(e) {
          uploadImage();
      });
-
      $(document).on("imageResized", function(e) {
          saveFace(e.url);
          log("info", "Image resized.");
@@ -243,6 +255,19 @@ function addCube(text) {
      });
 }
 
+var renaming = false;
+function renameCube(text) {
+     $.post("ajax/cube-info.php", {
+          id: text,
+          name: text,
+          }).done(function(data) {
+               $("#name").text(cubeList[cubeId].nome);
+
+               log("post", data);
+               say("Cube renamed.");
+     });
+}
+
 var faceId = 0;
 var faces = [
     "Front", 
@@ -286,7 +311,7 @@ function resetCube() {
              setFace(k);
              saveFace(baseImages[k]);
       }
-      say("Cube was forgotten.");
+      say("Cube was reseted.");
 }
 
 var sh = window.innerHeight;
