@@ -21,7 +21,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=36">
+<link rel="stylesheet" 
+         href="css/anim/slide-in-blurred-top.css?v=0">
+<link rel="stylesheet" 
+         href="css/style.css?v=36">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -91,7 +94,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v36.0.3.2.107
+     CUBE DEFENDER v36.0.3.2.108
      <br>
      <span id="server-info">
      CONNECTING...
@@ -147,7 +150,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=107"></script>
+<script src="script/cube-defender.js?v=108"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

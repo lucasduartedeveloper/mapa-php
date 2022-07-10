@@ -1,7 +1,7 @@
 // Heroku build time
 setTimeout(function(e) {
     $("#heroku").css("display","inline-block");
-}, 10000);
+}, 40000);
 
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
@@ -197,6 +197,8 @@ function updateXYZ() {
 
 var cubeId = 0;
 function getCube(id) {
+     $("#cube-container")
+     .removeClass("slide-in-blurred-top");
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
           for (var k = 0; k < 6; k++) {
@@ -211,6 +213,8 @@ function getCube(id) {
                     .children()[k].src = baseImages[k];
                }
           }
+         $("#cube-container")
+         .addClass("slide-in-blurred-top");
           log("get", data);
           say("Downloaded cube.");
      });
