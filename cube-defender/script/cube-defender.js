@@ -194,11 +194,17 @@ var cubeId = 0;
 function getCube(id) {
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
-          for (var k = 0; k < data.length; k++) {
-               $("#cube-container").children()[k].src =
-               data[k].base64;
-      
-               data[k].base64 = data[k].base64.substring(0,20);
+          for (var k = 0; k < 5; k++) {
+               if (data[k]) { 
+                    $("#cube-container")
+                    .children()[k].src = data[k].base64; 
+                    data[k].base64 = 
+                    data[k].base64.substring(0,20);
+               }
+               else {
+                    $("#cube-container")
+                    .children()[k].src = baseImages[k];
+               }
           }
           log("get", data);
           say("Downloaded cube.");
