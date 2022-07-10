@@ -2,7 +2,7 @@
 <?php
 $sql ="";
 try {
-    if (!isset($_POST["id"])) && isset($_POST["name"])) {
+    if (!isset($_POST["id"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
     
         $sql =  "INSERT INTO cube_info (nome) VALUES (".$name."');";
