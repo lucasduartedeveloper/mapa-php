@@ -186,6 +186,7 @@ function updateXYZ() {
           xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
           }).done(function(data) {
               log("post", data);
+              say("Cube was rotated.");
      });
 }
 
@@ -196,8 +197,9 @@ function getCube(id) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
                data[k].base64;
-	        log("get", data);
           }
+
+          log("get", data);
           say("Downloaded cube.");
      });
 }
