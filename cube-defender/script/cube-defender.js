@@ -199,8 +199,8 @@ function getCube(id) {
                data[k].base64;
       
                data[k].base64 = data[k].base64.substring(0,20);
-               log("get", data);
           }
+          log("get", data);
           say("Downloaded cube.");
      });
 }
