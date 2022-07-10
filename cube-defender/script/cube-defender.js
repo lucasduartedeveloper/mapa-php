@@ -211,6 +211,7 @@ function listCubes() {
 function addCube(text) {
      $.post("ajax/cube-info.php", {
           name: text,
+          post: "server",
           }).done(function(data) {
                listCubes();
                console.log(data);

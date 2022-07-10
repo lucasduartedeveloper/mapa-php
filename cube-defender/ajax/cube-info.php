@@ -2,6 +2,7 @@
 <?php
 $sql ="";
 try {
+    echo $_POST["post"];
     if (!isset($_POST["id"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
     
