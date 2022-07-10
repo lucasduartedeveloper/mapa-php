@@ -35,7 +35,7 @@ html, body {
 #add {
      position: fixed;
      top: 5vh;
-     right: 5vw;
+     left: 5vw;
      font-size: 50px;
 }
 #previous {
