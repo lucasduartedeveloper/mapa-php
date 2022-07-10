@@ -239,15 +239,16 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
+      $("#cube-container").children()[faceId].src =
+      base64;
+
       log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
+
       $.post("ajax/cube-face.php", {
              cubeId: cubeId,
              faceId: faceId,
              base64: base64,
              }).done(function(data) { 
-                   $("#cube-container").children()[faceId].src =
-                   base64;
-
                    log("post", data);
                    say("Digitalized "+faces[faceId]);
       });
