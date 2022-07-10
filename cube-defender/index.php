@@ -117,7 +117,7 @@ class="form-range">
         </p>
       </div>
       <div class="modal-footer">
-        <button id="#save" type="button" class="btn btn-primary">Save changes</button>
+        <button id="save" type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
