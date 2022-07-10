@@ -96,8 +96,7 @@ class="form-range">
      <span id="server-info">
      CONNECTING...
      </span>
-     &nbsp;
-     <i id="heroku" style="display:none" class="fa-solid fa-clock-rotate-left"></i>
+     <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
 </p>
 
 <div id="add-cube" class="modal" style="z-index: 9999" tabindex="-1" role="dialog">
