@@ -240,6 +240,7 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
+      console.log("cubeId:"+cubeId+", faceId:"+faceId);
       $.post("ajax/cube-face.php", {
              cubeId: cubeId,
              faceId: faceId,
