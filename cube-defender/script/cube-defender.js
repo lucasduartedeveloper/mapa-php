@@ -47,17 +47,24 @@ $(document).ready(function() {
           cubeId -= 1;
           cubeId = cubeId < 0 ? cubeList.lenght : cubeId;
           getCube(cubeId);
-          $('#add-cube').modal({
-              keyboard: true
-          });
+          if (cubeId == 0 || cubeId == cubeList.length-1) {
+              $('#add-cube').modal({
+                  keyboard: true
+              });
+          }
      });
      $("#next").click(function(e) {
           cubeId += 1;
           cubeId = cubeId > cubeList.lenght ? 0 : cubeId;
           getCube(cubeId);
-          $('#add-cube').modal({
-              keyboard: true
-          });
+          if (cubeId == 0 || cubeId == cubeList.length-1) {
+              $('#add-cube').modal({
+                  keyboard: true
+              });
+          }
+     });
+     $("#save").click(function(e) {
+          
      });
      
      $("#rotate-camera").click(function(e) {
@@ -197,6 +204,15 @@ function listCubes() {
           cubeList = data;
           $("#name").text(data[cubeId].nome);
           console.log(data);
+     });
+}
+
+function addCube(name) {
+     $.post("ajax/cube-list.php", {
+          name: name
+          }).done(function(data) {
+               listCubes();
+              //console.log(data);
      });
 }
 
