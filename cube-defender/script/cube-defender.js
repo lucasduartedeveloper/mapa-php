@@ -215,7 +215,7 @@ function addCube(text) {
 }
 
 function getCube(id) {
-     $.getJSON("ajax/camera.php?id="+id, 
+     $.getJSON("ajax/camera.php?cameraId="+id, 
      function(data) {
           for (var k = 0; k < data.length; k++) {
                $("#cube-container").children()[k].src =
