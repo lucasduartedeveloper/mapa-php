@@ -2,7 +2,7 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["cubeId"])  ) {
+  if (isset($_POST["cubeId"])) {
 
     $cubeId = htmlspecialchars($_POST["cubeId"]);
     $sideId = htmlspecialchars($_POST["sideId"]);

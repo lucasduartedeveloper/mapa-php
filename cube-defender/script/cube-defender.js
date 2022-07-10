@@ -247,7 +247,7 @@ function saveSide(base64) {
              }).done(function(data) { 
                    $("#cube-container").children()[side].src =
                    base64;
-                   //console.log(data);
+                   console.log(data);
       });
 }
 
