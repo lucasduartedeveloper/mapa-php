@@ -1,3 +1,8 @@
+// Heroku build time
+setTimeout(function(e) {
+    $("#heroku").css("display","block");
+}, 10000);
+
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
 var gameOver = new Audio("audio/game-over.wav");
