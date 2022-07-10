@@ -97,7 +97,7 @@ class="form-range">
      </span>
 </p>
 
-<div id="add-cube" class="modal" tabindex="-1" role="dialog">
+<div id="add-cube" class="modal" style="z-index: 9999" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -110,7 +110,7 @@ class="form-range">
         <p>
         <div class="input-group input-group-sm mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+    <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
   </div>
   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
 </div>
