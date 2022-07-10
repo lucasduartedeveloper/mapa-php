@@ -2,7 +2,27 @@
 <?php
 $sql ="";
 try {
-    if (isset($_POST["name"])  ) {
+    if (isset($_POST["id"])) {
+    $id = htmlspecialchars($_POST["id"]);
+    $name = htmlspecialchars($_POST["name"]);
+
+    /*
+    $sql = "DELETE FROM camera_frame 
+WHERE data_hora < (now() - '2 hours 40 minutes'::interval);";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    echo $sql;*/
+
+    $sql =  "UPDATE cube_info SET nome='".$name."' WHERE id=".$id;
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    echo $sql;
+    }
+    else if (isset($_POST["name"])) {
     $name = htmlspecialchars($_POST["name"]);
 
     /*
