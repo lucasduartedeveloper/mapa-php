@@ -22,7 +22,7 @@
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=1">
+         href="css/anim/loading.css?v=2">
 <link rel="stylesheet" 
          href="css/style.css?v=36">
 
@@ -102,7 +102,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v36.0.3.2.113
+     CUBE DEFENDER v36.0.3.2.114
      <br>
      <span id="server-info">
      CONNECTING...
@@ -158,7 +158,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=113"></script>
+<script src="script/cube-defender.js?v=114"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

@@ -258,7 +258,7 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
-      $("#cube-container").children()[faceId].src =
+      $("#cube-container img")[faceId].src =
       base64;
 
       log("global-var", "cubeId:"+cubeId+", faceId:"+faceId);
