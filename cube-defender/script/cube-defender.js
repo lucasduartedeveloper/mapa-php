@@ -212,7 +212,7 @@ function addCube(name) {
           name: name
           }).done(function(data) {
                listCubes();
-              //console.log(data);
+               console.log(data);
      });
 }
 
