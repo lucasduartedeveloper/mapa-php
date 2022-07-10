@@ -197,7 +197,7 @@ function updateXYZ() {
 
 var cubeId = 0;
 function getCube(id) {
-     $("#cube-container").hide();
+     $("#cube-container img").hide();
      $("#loading").show();
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
@@ -214,7 +214,7 @@ function getCube(id) {
                }
           }
           $("#loading").show();
-          $("#cube-container").show();
+          $("#cube-container img").show();
 
           log("get", data);
           say("Downloaded cube.");
