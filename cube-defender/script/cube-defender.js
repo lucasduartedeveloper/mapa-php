@@ -47,7 +47,7 @@ $(document).ready(function() {
           cubeId -= 1;
           cubeId = cubeId < 0 ? (cubeList.length-1) : cubeId;
           getCube(cubeId);
-          $("#name").text(data[cubeId].nome);
+          $("#name").text(cubeList[cubeId].nome);
           if (cubeId == 0 || cubeId ==(cubeList.length-1)) {
               $('#add-cube').modal({
                   keyboard: true
@@ -58,7 +58,7 @@ $(document).ready(function() {
           cubeId += 1;
           cubeId = cubeId > (cubeList.length-1) ? 0 : cubeId;
           getCube(cubeId);
-          $("#name").text(data[cubeId].nome);
+          $("#name").text(cubeList[cubeId].nome);
           if (cubeId == 0 || cubeId == (cubeList.length-1)) {
               $('#add-cube').modal({
                   keyboard: true
