@@ -21,7 +21,7 @@ WHERE data_hora < (now() - '2 hours 40 minutes'::interval);";
 
     echo $sql;
     }
-    else
+    else {
     /*
     $sql = "SELECT a.*, b.nome FROM camera_frame a LEFT JOIN cube_info b ON a.camera_id = b.id WHERE a.camera_id=".$cameraId." ORDER BY a.data_hora DESC LIMIT 1";*/
      $sql = "SELECT a.* FROM cube_info a";
