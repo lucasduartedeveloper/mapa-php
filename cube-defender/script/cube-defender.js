@@ -3,6 +3,7 @@ var notification = new Audio("audio/game-notification.wav");
 var gameOver = new Audio("audio/game-over.wav");
 
 debug = true;
+var base64!
 
 var playerId = new Date().getTime();
 var partNo = 0;
@@ -231,7 +232,6 @@ var faces = [
     "Left", 
     "Top",
     "Right",
-    "Left",
     "Bottom" ];
 function setFace(id) {
     faceId = id;
