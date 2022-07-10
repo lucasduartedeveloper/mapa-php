@@ -1,6 +1,6 @@
 // Heroku build time
 setTimeout(function(e) {
-    $("#heroku").css("display","block");
+    $("#heroku").css("display","inline-block");
 }, 10000);
 
 var coin = new Audio("audio/coin.wav");
