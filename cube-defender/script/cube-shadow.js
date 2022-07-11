@@ -14,14 +14,13 @@ function addShadow() {
         var img = new Image();
         img.width = 128;
         img.height = 128;
+        img.k = k;
     
         img.onload = function (e) {
              ctx.drawImage(this, 0, 0, 128, 128);
              ctx.drawImage(shadow, -64, 64, 256, 256);
 
-             log("info", faces);
-             log("info", k);
-             faces[k].src = cnv.toDataURL();
+             faces[img.k].src = cnv.toDataURL();
         }
         img.src = (k+1) > cube.length ? 
         baseImages[k] : 
