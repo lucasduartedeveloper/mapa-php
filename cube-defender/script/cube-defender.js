@@ -250,7 +250,7 @@ function addCube(text) {
                listCubes();
 
                log("post", data);
-               say("Cube created.");
+               say("A new cube was created.");
      });
 }
 
