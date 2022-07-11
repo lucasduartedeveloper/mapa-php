@@ -35,10 +35,6 @@ function stopCamera() {
 }
 
 $(document).ready(function() {
-     getXYZ();
-     listCubes();
-     getCube(0);
-
      var video = document.getElementById("video");
      startCamera("environment");
 
@@ -146,10 +142,9 @@ $(document).ready(function() {
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
 
-         if (rotateX != parseInt($("#rotateX").val()) &&
-              rotateY != parseInt($("#rotateY").val()) &&
-              rotateZ != parseInt($("#rotateZ").val())) {
-                  
+         if (!authenticated) {
+             var data = ctx.getImageData(0, 0, 100, 100).data;
+             authenticate(data);
          }
      }, 100);
 
