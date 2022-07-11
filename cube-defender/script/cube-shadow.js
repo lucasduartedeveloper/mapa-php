@@ -18,7 +18,12 @@ function addShadow() {
     
         img.onload = function (e) {
              ctx.drawImage(this, 0, 0, 128, 128);
+
+             ctx.save();
+             ctx.translate(cnv.width / 2, cnv.height / 2);
+             ctx.rotate(45 * (Math.PI/180));
              ctx.drawImage(shadow, -64, 64, 256, 256);
+             ctx.restore();
 
              faces[this.k].src = cnv.toDataURL();
         }
