@@ -128,10 +128,20 @@ $(document).ready(function() {
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
-         var context = canvas.getContext("2d");
+         var context = canvas.getContext("2d");        
 
-         context.drawImage(video, 0, 0, 128, 128);
-         
+         if (!authenticated) {
+             canvas.width = 32;
+             canvas.height = 32;
+             context.drawImage(video, 0, 0, 32, 32);
+             var data =
+             context.getImageData(0, 0, 32, 32).data;
+             authenticate(data);
+         }
+         else {
+             context.drawImage(video, 0, 0, 128, 128);
+         }
+
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
@@ -141,12 +151,6 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
-
-         if (!authenticated) {
-             var data =
-             context.getImageData(0, 0, 32, 32).data;
-             authenticate(data);
-         }
      }, 100);
 
      $("#camera-canvas").click(function(e) {
