@@ -101,9 +101,7 @@ class="form-range">
      <button class="btn btn-secondary dropdown-toggle" type="button" id="cube-face" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Front
      </button>
-     <div id="face-menu" 
-     style="z-index: 9999" 
-     class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <div id="face-menu"  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
            <a class="dropdown-item" href="#" onclick="setFace(0);">Front</a>
            <a class="dropdown-item" href="#" onclick="setFace(1);">Back</a>
            <a class="dropdown-item" href="#" onclick="setFace(2);">Left</a>
@@ -123,7 +121,7 @@ class="form-range">
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
 </p>
 
-<div id="cube-modal" class="modal" style="z-index: 9999" tabindex="-1" role="dialog">
+<div id="cube-modal" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
