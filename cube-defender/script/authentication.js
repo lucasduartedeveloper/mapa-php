@@ -19,11 +19,12 @@ function authenticate(data) {
         //brightness > 200 ? brightness : 0;
         
         if (brightness > maxBrightness) {
-        maxBrightness = brightness;
-        //light.x = Math.floor(i/4) % 100;
-        //light.y = Math.floor(i/4) / 100;
+            maxBrightness = brightness;
+            //light.x = Math.floor(i/4) % 100;
+            //light.y = Math.floor(i/4) / 100;
+        }
     }
-    
+
     authenticated = 
     maxBrightness == 255 ||
     maxBrightness == 0;
