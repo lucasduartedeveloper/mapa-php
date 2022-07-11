@@ -170,6 +170,8 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
+
+          addShadow();
      }, 100);
 
      $("#camera-canvas").click(function(e) {

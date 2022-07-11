@@ -9,8 +9,12 @@ var key = [
 
 function collideImage(faceId, data) {
     var cnv = document.createElement('canvas');
+    cnv.width = 10;
+    cnv.height = 10;
     var ctx = cnv.getContext('2d');
     var img = new Image();
+    img.width = 10;
+    img.height = 10;
     var matchPercentage = 0;
 
     img.onload = function (e) {
