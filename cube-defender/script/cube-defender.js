@@ -138,7 +138,7 @@ $(document).ready(function() {
              canvas.width = 32;
              canvas.height = 32;
              context.drawImage(video, 0, 
-             ((32*ar)/2) - 32, 32, 32 * ar);
+             (((32*ar)/2) - 3)*-1, 32, 32 * ar);
              var data =
              context.getImageData(0, 0, 32, 32).data;
              authenticate(data);
@@ -148,7 +148,7 @@ $(document).ready(function() {
              canvas.height = 128;
              context
              .drawImage(video, 0, 
-             ((128*ar)2) - 128, 128, 128 * ar);
+             (((128*ar)/2) - 128)*-1, 128, 128 * ar);
          }
 
          rotateX = parseInt($("#rotateX").val());
