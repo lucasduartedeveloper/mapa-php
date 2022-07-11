@@ -29,13 +29,15 @@ var rotateZ = 0;
 var cameraMode = "environment";
 function startCamera(mode) {
      if (navigator.mediaDevices) {
-          var display = 
           navigator.mediaDevices
           .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false })
           .then((stream) => {
                video.srcObject = stream;
           });
 
+          var display = 
+          navigator.mediaDevices
+          .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false });
           var settings = display.getVideoTracks()[0] 
           .getSettings(); 
 
