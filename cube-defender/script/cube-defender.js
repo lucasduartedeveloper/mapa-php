@@ -33,17 +33,11 @@ function async startCamera(mode) {
           .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false })
           .then((stream) => {
                video.srcObject = stream;
+               var settings = stream.getSettings(); 
+               vw = settings.width; 
+               vh = settings.height;
+               vr = vh /vw;
           });
-
-          var display = await 
-          navigator.mediaDevices
-          .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false });
-          var settings = display.getVideoTracks()[0] 
-          .getSettings(); 
-
-          vw = settings.width; 
-          vh = settings.height;
-          vr = vh /vw;
      }
 }
 
