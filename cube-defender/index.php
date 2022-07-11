@@ -172,7 +172,7 @@ class="form-range">
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=13"></script>
 
-<script src="script/cube-shadow.js?v=6"></script>
+<script src="script/cube-shadow.js?v=7"></script>
 
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>

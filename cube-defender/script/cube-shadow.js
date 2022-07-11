@@ -27,7 +27,7 @@ function addShadow() {
 
              faces[this.k].src = cnv.toDataURL();
         }
-        var c = cube.filter(o => o.cube.face_id == k);
+        var c = cube.filter(o => o.face_id == k);
         var n = c.length > 0 ? c[0].face_id : k;
 
         img.src = (k+1) > cube.length ? 
