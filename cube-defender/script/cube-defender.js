@@ -225,6 +225,7 @@ function updateXYZ() {
 }
 
 var cubeId = 0;
+var cube = [];
 function getCube(id) {
      $("#name").text("---");
      $("#cube-container img").hide();
@@ -247,6 +248,7 @@ function getCube(id) {
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeId].nome);
 
+          cube = data;
           log("get", data);
           say("Around the cube.");
      });

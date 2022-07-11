@@ -21,6 +21,8 @@ function addShadow() {
 
              faces[k].src = cnv.toDataURL();
         }
-        img.src = cubeList[k].base64;
+        img.src = (k+1) > cube.length ? 
+        baseImages[k] : 
+        cube[k].base64;
     }
 }
