@@ -179,7 +179,6 @@ html, body {
     margin: 0px;
 }
 #dropdown,
-#face-menu, 
 #cube-modal {
     z-index: 99999;
 }

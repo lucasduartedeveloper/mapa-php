@@ -37,6 +37,7 @@ function authenticate(data) {
         //notification.play();
         $("#authentication").hide();
         $("#cube-container").show();
+        $("#dropdown").show();
         $("#video").width = 128;
         $("#video").height = 128;
 
