@@ -159,6 +159,8 @@ $(document).ready(function() {
              context
              .drawImage(video, 
              0, (((128/vr)-128)/2)*-1, 128, 128/vr);
+
+             addShadow();
          }
 
          rotateX = parseInt($("#rotateX").val());
@@ -170,8 +172,6 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
-
-          addShadow();
      }, 100);
 
      $("#camera-canvas").click(function(e) {

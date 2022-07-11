@@ -10,7 +10,7 @@ function addShadow() {
     var ctx = cnv.getContext('2d');
     
     var faces = $("#cube-container img");
-    for (var k in faces) {
+    for (var k = 0; k < 6; k++) {
         var img = new Image();
         img.width = 128;
         img.height = 128;
