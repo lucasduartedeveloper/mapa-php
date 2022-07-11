@@ -143,7 +143,8 @@ $(document).ready(function() {
          "rotateZ("+ (rotateZ) + "deg)");
 
          if (!authenticated) {
-             var data = ctx.getImageData(0, 0, 100, 100).data;
+             var data =
+             context.getImageData(0, 0, 100, 100).data;
              authenticate(data);
          }
      }, 100);
