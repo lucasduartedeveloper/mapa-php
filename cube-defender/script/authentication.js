@@ -26,7 +26,7 @@ function authenticate(data) {
          ")");        
 
         if (brightness > maxBrightness) {
-            //maxBrightness = brightness;
+            maxBrightness = brightness;
             //light.x = Math.floor(i/4) % 100;
             //light.y = Math.floor(i/4) / 100;
         }
