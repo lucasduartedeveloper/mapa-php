@@ -13,9 +13,14 @@ var base64 = "";
 var playerId = new Date().getTime();
 var partNo = 0;
 
+var x = 0;
+var y = 0;
 var sh = window.innerHeight;
 var sw = window.innerWidth;
 var ar = sh/sw;
+var vh = 0;
+var vw = 0;
+var vr = 0;
 
 var rotateX = 0;
 var rotateY = 0;
@@ -24,11 +29,19 @@ var rotateZ = 0;
 var cameraMode = "environment";
 function startCamera(mode) {
      if (navigator.mediaDevices) {
+          var display = 
           navigator.mediaDevices
           .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false })
           .then((stream) => {
                video.srcObject = stream;
           });
+
+          var settings = display.getVideoTracks()[0] 
+          .getSettings(); 
+
+          vw = settings.width; 
+          vh = settings.height;
+          vr = vh /vw;
      }
 }
 
@@ -41,11 +54,6 @@ function stopCamera() {
 $(document).ready(function() {
      var video = document.getElementById("video");
      startCamera("environment");
-
-     var x = 0;
-     var y = 0;
-     var sh = window.innerHeight;
-     var sw = window.innerWidth;
 
      $("#previous").click(function(e) {
           cubeId -= 1;
@@ -138,7 +146,7 @@ $(document).ready(function() {
              canvas.width = 32;
              canvas.height = 32;
              context.drawImage(video, 0, 
-             (((32*ar)/2) - 3)*-1, 32, 32 * ar);
+             (((32*vr)/2) - 32)*-1, 32, 32 * vr);
              var data =
              context.getImageData(0, 0, 32, 32).data;
              authenticate(data);
@@ -148,7 +156,7 @@ $(document).ready(function() {
              canvas.height = 128;
              context
              .drawImage(video, 0, 
-             (((128*ar)/2) - 128)*-1, 128, 128 * ar);
+             (((128*vr)/2) - 128)*-1, 128, 128 * vr);
          }
 
          rotateX = parseInt($("#rotateX").val());
