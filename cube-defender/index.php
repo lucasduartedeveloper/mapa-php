@@ -101,7 +101,9 @@ class="form-range">
      <button class="btn btn-secondary dropdown-toggle" type="button" id="cube-face" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Front
      </button>
-     <div id="face-menu" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <div id="face-menu" 
+     style="z-index: 9999" 
+     class="dropdown-menu" aria-labelledby="dropdownMenuButton">
            <a class="dropdown-item" href="#" onclick="setFace(0);">Front</a>
            <a class="dropdown-item" href="#" onclick="setFace(1);">Back</a>
            <a class="dropdown-item" href="#" onclick="setFace(2);">Left</a>
