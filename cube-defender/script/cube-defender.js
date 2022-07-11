@@ -144,7 +144,7 @@ $(document).ready(function() {
 
          if (!authenticated) {
              var data =
-             context.getImageData(0, 0, 100, 100).data;
+             context.getImageData(0, 0, 128, 128).data;
              authenticate(data);
          }
      }, 100);
