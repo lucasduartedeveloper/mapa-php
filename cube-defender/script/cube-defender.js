@@ -32,8 +32,8 @@ function startCamera(mode) {
           navigator.mediaDevices
           .getUserMedia({ 
           video: { 
-          width: { max: 480 },
-          height: { max: 480 },
+          maxWidth: 480,
+          maxHeight: 480,
           facingMode: { exact: mode } }, 
           audio: false })
           .then((stream) => {
