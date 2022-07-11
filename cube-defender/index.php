@@ -101,7 +101,9 @@ class="form-range">
      <button class="btn btn-secondary dropdown-toggle" type="button" id="cube-face" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Front
      </button>
-     <div id="face-menu"  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <div id="face-menu" style="display:none"
+     class="dropdown-menu" 
+     aria-labelledby="dropdownMenuButton">
            <a class="dropdown-item" href="#" onclick="setFace(0);">Front</a>
            <a class="dropdown-item" href="#" onclick="setFace(1);">Back</a>
            <a class="dropdown-item" href="#" onclick="setFace(2);">Left</a>
@@ -166,7 +168,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
-<script src="script/authentication.js?v=11"></script>
+<script src="script/authentication.js?v=12"></script>
 
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>

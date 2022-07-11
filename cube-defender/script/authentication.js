@@ -36,6 +36,7 @@ function authenticate(data) {
     if (authenticated) {
         //notification.play();
         $("#authentication").hide();
+        $("#cube-container").show();
         $("#video").width = 128;
         $("#video").height = 128;
 
