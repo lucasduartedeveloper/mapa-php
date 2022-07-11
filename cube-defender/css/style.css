@@ -24,6 +24,30 @@ html, body {
      text-align: center;
      overflow: hidden;
 }
+#auth-header {
+     position: fixed;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     overflow: hidden;
+     width: 100%;
+     top: 30vh;
+     z-index: 9999;
+}
+#color-code {
+     position: fixed;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     overflow: hidden;
+     width: 100%;
+     bottom: 30vh;
+     z-index: 9999;
+}
 #authentication {
      background-color: #2f2e40;
      position: fixed;
