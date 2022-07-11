@@ -33,7 +33,7 @@ function startCamera(mode) {
           .getUserMedia({ 
           video: { 
           width: { min: 480 },
-          height: { min: 480 }
+          height: { min: 480 },
           facingMode: { exact: mode } }, 
           audio: false })
           .then((stream) => {
