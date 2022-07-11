@@ -139,6 +139,8 @@ $(document).ready(function() {
              authenticate(data);
          }
          else {
+             canvas.width = 128;
+             canvas.height = 128;
              context.drawImage(video, 0, 0, 128, 128);
          }
 
