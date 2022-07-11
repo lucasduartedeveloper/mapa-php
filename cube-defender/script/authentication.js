@@ -1,22 +1,30 @@
 var authenticated = false;
 var maxBrightness = 0;
+var rgb = "";
 
 function authenticate(data) {
-    for (var i = 0; i < data.length; i += 4) {
-        var brightness = 0.34 * data[i] + 
-        0.5 * data[i + 1] + 0.16 * data[i + 2];
+    for (var i = 0; i < (data.length/2); i += 4) {
+        /*var brightness = 0.34 * data[i] + 
+        0.5 * data[i + 1] + 0.16 * data[i + 2];*/
         // red
-        data[i] = brightness;
+        //data[i] = brightness;
         //lightData[i] = 
         //brightness > 200 ? brightness : 0;
         // green
-        data[i + 1] = brightness;
+        //data[i + 1] = brightness;
         //lightData[i + 1] = 
         //brightness > 200 ? brightness : 0;
         // blue
-        data[i + 2] = brightness;
+        //data[i + 2] = brightness;
         //lightData[i + 2] = 
         //brightness > 200 ? brightness : 0;
+
+        $("#color-code").text(
+        "rgb("+
+        data[i] + ", " + 
+        data[i + 1]  + ", " +
+        data[i + 2] + 
+         ")");
         
         if (brightness > maxBrightness) {
             maxBrightness = brightness;
