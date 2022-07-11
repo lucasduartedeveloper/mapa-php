@@ -27,7 +27,7 @@ var rotateY = 0;
 var rotateZ = 0;
 
 var cameraMode = "environment";
-function async startCamera(mode) {
+function startCamera(mode) {
      if (navigator.mediaDevices) {
           navigator.mediaDevices
           .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false })
