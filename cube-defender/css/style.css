@@ -6,11 +6,6 @@ html, body {
     padding: 0;
     height: 100%;
     font-weight: 400 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
     background-color: #2f2e40;
     color: #fff;
     --background-image: url(../img/100.jpg);
@@ -30,6 +25,8 @@ html, body {
      overflow: hidden;
 }
 #authentication {
+     background-color: #2f2e40;
+     position: fixed;
      display: flex;
      justify-content: center;
      align-items: center;
