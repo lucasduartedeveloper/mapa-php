@@ -30,7 +30,8 @@ function authenticate(data) {
     maxBrightness == 0;
     
     if (authenticated) {
-        notification.play();
+        //notification.play();
+        $("#authentication").hide();
         getXYZ();
         listCubes();
         getCube(0);
