@@ -145,12 +145,12 @@ $(document).ready(function() {
          var context = canvas.getContext("2d");        
 
          if (!authenticated) {
-             canvas.width = 32;
-             canvas.height = 32;
+             canvas.width = 10;
+             canvas.height = 10;
              context.drawImage(video,
-             0, (((32/vr)-32)/2)*-1, 32, 32/vr);
+             0, (((10/vr)-10)/2)*-1, 10, 10/vr);
              var data =
-             context.getImageData(0, 0, 32, 32).data;
+             context.getImageData(0, 0, 10, 10).data;
              authenticate(data);
          }
          else {
