@@ -19,6 +19,8 @@ function addShadow() {
              ctx.drawImage(this, 0, 0, 128, 128);
              ctx.drawImage(shadow, -64, 64, 256, 256);
 
+             log("info", faces);
+             log("info", k);
              faces[k].src = cnv.toDataURL();
         }
         img.src = (k+1) > cube.length ? 
