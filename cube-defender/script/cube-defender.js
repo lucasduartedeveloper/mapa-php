@@ -30,13 +30,15 @@ var cameraMode = "environment";
 function startCamera(mode) {
      if (navigator.mediaDevices) {
           navigator.mediaDevices
-          .getUserMedia({ video: { facingMode: { exact: mode } }, audio: false })
+          .getUserMedia({ 
+          video: { 
+          width: { min: 480 },
+          height: { min: 480 }
+          facingMode: { exact: mode } }, 
+          audio: false })
           .then((stream) => {
                video.srcObject = stream;
                var settings = stream.getSettings(); 
-               vw = settings.width; 
-               vh = settings.height;
-               vr = vh /vw;
           });
      }
 }
@@ -141,8 +143,7 @@ $(document).ready(function() {
          if (!authenticated) {
              canvas.width = 32;
              canvas.height = 32;
-             context.drawImage(video, 0, 
-             (((32*vr)/2) - 32)*-1, 32, 32 * vr);
+             context.drawImage(video, 0, 0, 32, 32);
              var data =
              context.getImageData(0, 0, 32, 32).data;
              authenticate(data);
@@ -151,8 +152,7 @@ $(document).ready(function() {
              canvas.width = 128;
              canvas.height = 128;
              context
-             .drawImage(video, 0, 
-             (((128*vr)/2) - 128)*-1, 128, 128 * vr);
+             .drawImage(video, 0, 0, 128, 128);
          }
 
          rotateX = parseInt($("#rotateX").val());
