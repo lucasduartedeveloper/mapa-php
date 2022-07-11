@@ -115,7 +115,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v42.0.3.2.139
+     CUBE DEFENDER v42.0.3.2.140
      <br>
      <span id="server-info">
      CONNECTING...
@@ -173,7 +173,7 @@ class="form-range">
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=139"></script>
+<script src="script/cube-defender.js?v=140"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

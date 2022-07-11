@@ -13,6 +13,10 @@ var base64 = "";
 var playerId = new Date().getTime();
 var partNo = 0;
 
+var sh = window.innerHeight;
+var sw = window.innerWidth;
+var ar = sh/sw;
+
 var rotateX = 0;
 var rotateY = 0;
 var rotateZ = 0;
@@ -133,7 +137,8 @@ $(document).ready(function() {
          if (!authenticated) {
              canvas.width = 32;
              canvas.height = 32;
-             context.drawImage(video, 0, 0, 32, 32);
+             context.drawImage(video, 0, 
+             ((32*ar)/2) - 32, 32, 32 * ar);
              var data =
              context.getImageData(0, 0, 32, 32).data;
              authenticate(data);
@@ -141,7 +146,9 @@ $(document).ready(function() {
          else {
              canvas.width = 128;
              canvas.height = 128;
-             context.drawImage(video, 0, 0, 128, 128);
+             context
+             .drawImage(video, 0, 
+             ((128*ar)2) - 128, 128, 128 * ar);
          }
 
          rotateX = parseInt($("#rotateX").val());
