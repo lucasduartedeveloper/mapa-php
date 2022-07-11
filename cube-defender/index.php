@@ -72,7 +72,7 @@
      <i id="rotate-camera" class="fa-solid fa-rotate"></i>
 </p>
 
-<video style="display:none" id="video" width="128" height="128" autoplay></video>
+<video style="display:none" id="video" width="32" height="32" autoplay></video>
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <input id="opacity"
@@ -166,12 +166,12 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
-<script src="script/authentication.js?v=3"></script>
+<script src="script/authentication.js?v=4"></script>
 
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=137"></script>
+<script src="script/cube-defender.js?v=138"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

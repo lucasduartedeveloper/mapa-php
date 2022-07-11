@@ -25,13 +25,18 @@ function authenticate(data) {
         }
     }
 
+    /*
     authenticated = 
     maxBrightness == 255 ||
     maxBrightness == 0;
+    */
     
     if (authenticated) {
         //notification.play();
         $("#authentication").hide();
+        $("#video").width = 128;
+        $("#video").height = 128;
+
         getXYZ();
         listCubes();
         getCube(0);
