@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div id="authentication" style="display:none">
+<div id="authentication">
 </div>
 
 <i id="add" class="fa-solid fa-circle-plus"></i>
