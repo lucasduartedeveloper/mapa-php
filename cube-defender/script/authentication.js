@@ -32,7 +32,9 @@ function authenticate(data) {
         }
     }
 
-    authenticated = "rgb(255,255,255)";
+    authenticated =
+    $("#color-code").text() ==
+    "rgb(255,255,255)";
     if (authenticated) {
         //notification.play();
         $("#authentication").hide();
