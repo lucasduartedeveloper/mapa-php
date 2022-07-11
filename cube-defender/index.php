@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=2">
 <link rel="stylesheet" 
-         href="css/style.css?v=42">
+         href="css/style.css?v=43">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -36,11 +36,11 @@
 
 <div id="authentication">
       <p id="auth-header">
-           MATCH COLOR
+           LOGIN
            <i id="cube-icon" class="fa-solid fa-cube"></i>
       </p>
-      <p id="color-code">
-           rgb(0,0,0)
+      <p id="auth-footer">
+           xxxxxx
       </p>
 </div>
 
@@ -115,7 +115,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v42.0.3.2.154
+     CUBE DEFENDER v43.0.3.2.154
      <br>
      <span id="server-info">
      CONNECTING...
@@ -168,6 +168,8 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
+
+<script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=13"></script>
 
 <script src="script/gyro.js?v=0"></script>

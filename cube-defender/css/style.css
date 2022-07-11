@@ -36,7 +36,7 @@ html, body {
      top: 30vh;
      z-index: 9999;
 }
-#color-code {
+#auth-footer {
      position: fixed;
      display: flex;
      justify-content: center;
