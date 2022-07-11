@@ -227,7 +227,7 @@ function getCube(id) {
           $("#name").text(cubeList[cubeId].nome);
 
           log("get", data);
-          say("Downloaded cube.");
+          say("Around the cube.");
      });
 }
 
