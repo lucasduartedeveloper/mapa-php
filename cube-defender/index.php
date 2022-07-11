@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=2">
 <link rel="stylesheet" 
-         href="css/style.css?v=40">
+         href="css/style.css?v=41">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -113,7 +113,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v40.0.3.2.137
+     CUBE DEFENDER v41.0.3.2.138
      <br>
      <span id="server-info">
      CONNECTING...

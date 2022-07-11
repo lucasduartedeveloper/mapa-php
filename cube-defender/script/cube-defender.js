@@ -130,7 +130,7 @@ $(document).ready(function() {
          document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
 
-         context.drawImage(video, 0, 0, 128, 128);
+         context.drawImage(video, 0, 0, 32, 32);
          
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());

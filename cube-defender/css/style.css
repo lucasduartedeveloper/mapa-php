@@ -45,7 +45,7 @@ html, body {
      text-align: center;
      overflow: hidden;
      width: 100%;
-     bottom: 30vh;
+     bottom: 20vh;
      z-index: 9999;
 }
 #authentication {
