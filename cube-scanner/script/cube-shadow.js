@@ -1,13 +1,92 @@
-var matrix = [
+// nodes of cube
+var node0 = [ 0, 0, 1 ];
+var node1 = [ 0, 0, -1 ];
+var node2 = [ -1, 0, 0 ];
+var node3 = [ 0, -1, 0 ];
+var node4 = [ 1, 0, 0 ];
+var node5 = [ 0, 1, 0 ];
+
+// nodes array
+var nodes = [ node0, node1, node2, node3, node4, node5 ];
+
+// rotates node by theta around x-axis
+function rotateNode3DonX(node, theta) {
+    var y = node[1];
+    var z = node[2];
     
-];
+    theta *= transformQuotient;
+    
+    var cosTheta = Math.cos(theta);
+    var sinTheta = Math.sin(theta);
+    
+    var y = node[1];
+    var z = node[2];
+    
+    node[1] = y * cosTheta - z * sinTheta;
+    node[2] = y * sinTheta + z * cosTheta;
+}
+
+// rotates nodes by theta around x-axis
+function rotateNodes3DonX(nodes, theta) {
+    for(var n = 0; n < nodes.length; n++) {
+        rotateNode3DonX(nodes[n], theta);
+    }
+}
+
+// rotates node by theta around y-axis
+function rotateNode3DonY(node, theta) {
+    var x = node[0];
+    var z = node[2];
+    
+    theta *= transformQuotient;
+    
+    var cosTheta = Math.cos(theta);
+    var sinTheta = Math.sin(theta);
+    
+    var x = node[0];
+    var z = node[2];
+    
+    node[0] = x * cosTheta - z * sinTheta;
+    node[2] = x * sinTheta + z * cosTheta;
+}
+   
+// rotates nodes by theta around y-axis
+function rotateNodes3DonY(nodes, theta) {
+    for(var n = 0; n < nodes.length; n++) {
+        rotateNode3DonY(nodes[n], theta);
+    }
+}
+
+// rotates node by theta around z-axis
+function rotateNode3DonZ(node, theta) {
+    var x = node[0];
+    var y = node[1];
+    
+    theta *= transformQuotient;
+    
+    var cosTheta = Math.cos(theta);
+    var sinTheta = Math.sin(theta);
+    
+    var x = node[0];
+    var y = node[1];
+    
+    node[0] = x * cosTheta - y * sinTheta;
+    node[1] = x * sinTheta + y * cosTheta;
+}
+   
+// rotates nodes by theta around z-axis
+function rotateNodes3DonZ(nodes, theta) {
+    for(var n = 0; n < nodes.length; n++) {
+        rotateNode3DonZ(nodes[n], theta);
+    }
+}
 
 function addShadow() {
     var cnv = document.createElement('canvas');
     cnv.width = 128;
     cnv.height = 128;
     var ctx = cnv.getContext('2d');
-    
+
     var faces = $("#cube-container img");
     for (var k = 0; k < 6; k++) {
         var img = new Image();
@@ -15,12 +94,16 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
-        ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
-    
+        rotateNodes3DonX(nodes[k], rotateX);
+        rotateNodes3DonY(nodes[k], rotateY);
+        rotateNodes3DonZ(nodes[k], rotateZ);
+
+        ctx.fillStyle = "rgba(0, 0, 0, "+(nodes[k][2])+")";
+
         img.onload = function (e) {
-             ctx.drawImage(this, 0, 0, 128, 128);
-             ctx.fillRect(0, 0, 128, 128);
-             faces[this.k].src = cnv.toDataURL();
+            ctx.drawImage(this, 0, 0, 128, 128);
+            ctx.fillRect(0, 0, 128, 128);
+            faces[this.k].src = cnv.toDataURL();
         }
         var c = cube.filter(o => o.face_id == k);
         var n = c.length > 0 ? c[0].face_id : k;
