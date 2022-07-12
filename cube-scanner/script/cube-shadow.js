@@ -1,8 +1,3 @@
-var shadow = new Image();
-shadow.width = 256;
-shadow.height = 256;
-shadow.src = "img/gradient.png";
-
 var matrix = [
     
 ];
@@ -19,16 +14,12 @@ function addShadow() {
         img.width = 128;
         img.height = 128;
         img.k = k;
+
+        ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
     
         img.onload = function (e) {
              ctx.drawImage(this, 0, 0, 128, 128);
-
-             ctx.save();
-             ctx.translate(cnv.width / 2, cnv.height / 2);
-             ctx.rotate(45 * (Math.PI/180));
-             ctx.drawImage(shadow, -64, 64, 256, 256);
-             ctx.restore();
-
+             ctx.fillRect(0, 0, 128, 128);
              faces[this.k].src = cnv.toDataURL();
         }
         var c = cube.filter(o => o.face_id == k);
