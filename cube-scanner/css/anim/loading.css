@@ -13,7 +13,7 @@
 }
 #loading .sperm-orbit {
     position: absolute;
-    border: 2px solid #333;
+    border: 2px solid #888;
     width: 96px;
     height: 96px;
     -webkit-transform-style: preserve-3d;
@@ -157,5 +157,23 @@
   }
   100% {
     transform: rotateX(360deg) rotateY(45deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes cube-orbiting {
+  0% {
+    transform: ;
+  }
+  25% {
+    transform: ;
+  }
+  50% {
+    transform: ;
+  }
+  75% {
+    transform: ;
+  }
+  100% {
+    transform: ;
   }
 }
