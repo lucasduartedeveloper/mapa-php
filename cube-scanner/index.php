@@ -54,7 +54,7 @@
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
-          <div class="poison"></div>
+          <div class="blood"></div>
           <div class="front"></div>
           <div class="back"></div>
           <div class="left"></div>
