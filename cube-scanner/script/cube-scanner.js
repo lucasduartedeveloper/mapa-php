@@ -235,7 +235,7 @@ function getCube(id) {
      $("#name").text("---");
      $("#cube-container img").hide();
      $("#loading").show();
-     if (cubeList.length > 0) {
+ 
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
           cube = data;
@@ -250,20 +250,24 @@ function getCube(id) {
           //say("Around the cube.");
           //say(cubeList[cubeNo].nome + " downloaded.");
      });
-     }
 }
 
 var cubeList = [];
 function listCubes() {
      $.getJSON("ajax/cube-info.php", 
      function(data) {
-          cubeList = data;
-          if (cubeList.length > 0) {
-               goToCube(cubeList.length-1);
-          }
+         cubeList = data;
+         if (cubeList.length > 0) {
+             goToCube(cubeList.length-1);
+         }
+         else {
+             $("#name").text("---");
+             $("#cube-container img").hide();
+             $("#loading").show();
+         }
 
-          log("get", data);
-          //say("");
+         log("get", data);
+         //say("");
      });
 }
 
