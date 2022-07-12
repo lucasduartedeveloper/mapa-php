@@ -53,7 +53,7 @@
 <span id="record-no"></span>
 
 <div id="cube-container">
-      <div id="loading">
+      <div id="loading" onclick="eruda.init();">
           <div class="front"></div>
           <div class="back"></div>
           <div class="left"></div>
@@ -189,7 +189,7 @@ class="form-range">
 <script src="script/debug.js?v=0"></script>
 
 <script src="script/image-collision.js?v=0"></script>
-<script src="script/authentication.js?v=15"></script>
+<script src="script/authentication.js?v=16"></script>
 <script src="script/websocket.js?v=3"></script>
 
 <script src="script/cube-shadow.js?v=30"></script>
@@ -197,7 +197,6 @@ class="form-range">
 <script src="script/cube-scanner.js?v=201"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
 
 </body>
 </html> 
