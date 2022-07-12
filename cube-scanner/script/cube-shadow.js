@@ -105,7 +105,7 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
-        ctx.fillStyle = "rgba(0, 0, 0, "+(tempNodes[k][2])+")";
+        ctx.fillStyle = "rgba(255, 255, 255, "+(tempNodes[k][2])+")";
 
         img.onload = function (e) {
             ctx.drawImage(this, 0, 0, 128, 128);
