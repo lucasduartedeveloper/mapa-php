@@ -89,7 +89,10 @@ function addShadow() {
     cnv.height = 128;
     var ctx = cnv.getContext('2d');
 
-    var tempNodes = [ ...nodes ];
+    var tempNodes = [];
+    for (var i = 0; i < nodes.length; i++) {
+        tempNodes[i] = nodes[i].slice();
+    }
 
     rotateNodes3DonX(tempNodes, rotateX);
     rotateNodes3DonY(tempNodes, rotateY);
