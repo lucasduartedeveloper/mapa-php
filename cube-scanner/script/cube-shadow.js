@@ -1,12 +1,12 @@
 // nodes of cube
-var node0 = [ 0, 0, 1 ];
-var node1 = [ 0, 0, -1 ];
-var node2 = [ -1, 0, 0 ];
-var node3 = [ 0, -1, 0 ];
-var node4 = [ 1, 0, 0 ];
-var node5 = [ 0, 1, 0 ];
+var node0 = [ 0, 0, 64 ];
+var node1 = [ 0, 0, -64 ];
+var node2 = [ -64, 0, 0 ];
+var node3 = [ 0, -64, 0 ];
+var node4 = [ 64, 0, 0 ];
+var node5 = [ 0, 64, 0 ];
 
-var light = [ 0, 0, 2 ];
+var light = [ 0, 0, 128 ];
 
 var transformQuotient = Math.PI/180;
 
