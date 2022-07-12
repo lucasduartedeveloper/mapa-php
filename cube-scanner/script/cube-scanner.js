@@ -339,8 +339,9 @@ function saveFace(base64) {
          say(tts);
       }
       else {
-          log("global-var", 
-          "cubeId:"+cubeId+", faceId:"+faceId);
+         $("#cube-container img")[faceId].src = base64;
+         log("global-var", 
+         "cubeId:"+cubeId+", faceId:"+faceId);
 
          $.post("ajax/cube-face.php", {
              cubeId: cubeId,
