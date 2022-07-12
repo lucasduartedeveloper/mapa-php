@@ -235,6 +235,7 @@ function getCube(id) {
      $("#name").text("---");
      $("#cube-container img").hide();
      $("#loading").show();
+     if (cubeList.length > 0) {
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
           cube = data;
@@ -249,6 +250,7 @@ function getCube(id) {
           //say("Around the cube.");
           //say(cubeList[cubeNo].nome + " downloaded.");
      });
+     }
 }
 
 var cubeList = [];
@@ -256,10 +258,7 @@ function listCubes() {
      $.getJSON("ajax/cube-info.php", 
      function(data) {
           cubeList = data;
-          if (cubeList.length == 0) {
-               addCube();
-          }
-          else {
+          if (cubeList.length > 0) {
                goToCube(cubeList.length-1);
           }
 
@@ -291,7 +290,7 @@ function deleteCube() {
           }).done(function(data) {
                cubeList = cubeList
                .filter(c => c.id != cubeId);
-               $("#add-cube").click();
+               goToCube(cubeList.length-1);
 
                log("post", data);
                say("Cube deleted.");
