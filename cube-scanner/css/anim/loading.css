@@ -57,11 +57,14 @@
 }
 
 #loading {
-  display: inline-block;
   position: absolute;
   width: 80px;
   height: 80px;
-  -webkit-transform-style: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-transform-style: preserve-3d;
   animation: cube-rotating 1s infinite;
 }
 #loading .front {
