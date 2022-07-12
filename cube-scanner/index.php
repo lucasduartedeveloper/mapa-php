@@ -66,7 +66,7 @@
 </div>
 
 <p id="title">
-     <span id="name">CUBE DEFENDER</span>
+     <span id="name">CUBE SCANNER</span>
      <input style="display:none" type="file" id="file-upload" name="UploadFiles">
      <i id="upload" class="fa-solid fa-cloud-arrow-up"></i>
      <i id="rotate-camera" class="fa-solid fa-rotate"></i>
@@ -115,7 +115,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE DEFENDER v43.0.3.2.157
+     CUBE SCANNER v43.0.3.2.157
      <br>
      <span id="server-info">
      CONNECTING...
