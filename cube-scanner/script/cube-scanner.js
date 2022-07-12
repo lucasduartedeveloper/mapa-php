@@ -303,7 +303,14 @@ function deleteCube() {
           }).done(function(data) {
                cubeList = cubeList
                .filter(c => c.id != cubeId);
-               goToCube(cubeList.length-1);
+               if (cubeList.length > 0) {
+                   goToCube(cubeList.length-1);
+               }
+               else {
+                   $("#name").text("---");
+                   $("#cube-container img").hide();
+                   $("#loading").show();
+               }
 
                log("post", data);
                say("Cube deleted.");
