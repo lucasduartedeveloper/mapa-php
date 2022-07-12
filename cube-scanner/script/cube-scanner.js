@@ -163,9 +163,15 @@ $(document).ready(function() {
              addShadow();
          }
 
+         /*
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
+         */
+
+         $("#rotateX").val(rotateX);
+         $("#rotateY").val(rotateY);
+         $("#rotateZ").val(rotateZ);
 
          $("#cube-container")
          .css("transform", 
