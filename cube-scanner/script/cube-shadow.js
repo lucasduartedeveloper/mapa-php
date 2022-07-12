@@ -86,6 +86,8 @@ function rotateNodes3DonZ(nodes, theta) {
 }
 
 // light distance
+// verificar qual poligono mais distante
+var end = lightDistance(node3);
 function lightDistance(node) {
     var x = Math.pow(light[0] - node[0], 2);
     var y = Math.pow(light[1] - node[1], 2);
@@ -115,11 +117,11 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
-        var ld = lightDistance(tempNodes[k]);
-        log("ld", ld);
+        var ld = (1 / lightDistance(tempNodes[k]) * end;
+        //log("ld", ld));
 
         ctx.fillStyle = 
-        "rgba(255,255,255,"+(ld)+")";
+        "rgba(0,0,0,"+(ld)+")";
 
         img.onload = function (e) {
             ctx.drawImage(this, 0, 0, 128, 128);
