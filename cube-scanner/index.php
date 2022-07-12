@@ -52,8 +52,8 @@
 <span id="cube-id"></span>
 <span id="record-no"></span>
 
-
-     <div id="loading">
+<div id="cube-container">
+      <div id="loading">
           <div class="front"></div>
           <div class="back"></div>
           <div class="left"></div>
@@ -62,7 +62,6 @@
           <div class="bottom"></div>
       </div>
 
-<div id="cube-container">
       <img src="img/front.png" class="front"/> 
       <img src="img/back.png" class="back"/>
       <img src="img/left.png" class="left"/>
