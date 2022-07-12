@@ -58,14 +58,14 @@ $(document).ready(function() {
      startCamera("environment");
 
      $("#previous").click(function(e) {
-          cubeId -= 1;
-          cubeId = cubeId < 0 ? (cubeList.length-1) : cubeId;
-          getCube(cubeId);
+          cubeNo -= 1;
+          cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
+          getCube(cubeList[cubeNo].id);
      });
      $("#next").click(function(e) {
-          cubeId += 1;
-          cubeId = cubeId > (cubeList.length-1) ? 0 : cubeId;
-          getCube(cubeId);
+          cubeNo += 1;
+          cubeNo = cubeNo > (cubeList.length-1) ? 0 : cubeNo;
+          getCube(cubeList[cubeNo].id);
      });
      $("#add").click(function(e) {
           renaming = false;
@@ -229,7 +229,7 @@ function updateXYZ() {
      });
 }
 
-var cubeId = 0;
+var cubeNo = 0;
 var cube = [];
 function getCube(id) {
      $("#name").text("---");
@@ -241,13 +241,13 @@ function getCube(id) {
 
           $("#loading").hide();
           $("#cube-container img").show();
-          $("#name").text(cubeList[cubeId].nome);
+          $("#name").text(cubeList[cubeNo].nome);
           $("#cube-id").text(id);
-          $("#record-no").text((cubeId+1)+"/"+cubeList.length);
+          $("#record-no").text((cubeNo+1)+"/"+cubeList.length);
 
           log("get", data);
           //say("Around the cube.");
-          //say(cubeList[cubeId].nome + " downloaded.");
+          //say(cubeList[cubeNo].nome + " downloaded.");
      });
 }
 
@@ -280,16 +280,16 @@ function addCube(text) {
 }
 
 function goToCube(n) {
-     cubeId = n;
+     cubeNo = n;
      getCube(cubeList[n].id);
 }
 
 function deleteCube() {
      $.post("ajax/cube-info.php", {
-          deleteId: cubeList[cubeId].id,
+          deleteId: cubeList[cubeNo].id,
           }).done(function(data) {
                cubeList = cubeList
-               .filter(c => c.id != cubeList[cubeId].id);
+               .filter(c => c.id != cubeList[cubeNo].id);
                goToCube(cubeList.length-1);
 
                log("post", data);
@@ -300,11 +300,11 @@ function deleteCube() {
 var renaming = false;
 function renameCube(text) {
      $.post("ajax/cube-info.php", {
-          cubeId: cubeList[cubeId].id,
+          cubeId: cubeList[cubeNo].id,
           name: text,
           }).done(function(data) {
-               cubeList[cubeId].nome = text;
-               $("#name").text(cubeList[cubeId].nome);
+               cubeList[cubeNo].nome = text;
+               $("#name").text(cubeList[cubeNo].nome);
 
                log("post", data);
                say("Cube renamed.");
@@ -343,10 +343,10 @@ function saveFace(base64) {
       else {
          cube[faceId].base64 = base64;
          log("global-var", 
-         "cubeId:"+cubeId+", faceId:"+faceId);
+         "cubeNo:"+cubeNo+", faceId:"+faceId);
 
          $.post("ajax/cube-face.php", {
-             cubeId: cubeList[cubeId].id,
+             cubeId: cubeList[cubeNo].id,
              faceId: faceId,
              base64: base64,
              }).done(function(data) { 
@@ -371,7 +371,7 @@ function resetCube() {
            setFace(k);
            saveFace(baseImages[k]);
       }
-      getCube(cubeId);
+      getCube(cubeList[cubeNo].id);
       speaking = false;
       gameOver.play();
       //say("Cube was reseted.");
