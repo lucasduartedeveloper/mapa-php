@@ -139,6 +139,10 @@ $(document).ready(function() {
          document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
 
+         rotateX = parseInt($("#rotateX").val());
+         rotateY = parseInt($("#rotateY").val());
+         rotateZ = parseInt($("#rotateZ").val());
+
          if (!authenticated) {
              canvas.width = 10;
              canvas.height = 10;
@@ -157,10 +161,6 @@ $(document).ready(function() {
 
              addShadow();
          }
-
-         rotateX = parseInt($("#rotateX").val());
-         rotateY = parseInt($("#rotateY").val());
-         rotateZ = parseInt($("#rotateZ").val());
 
          $("#rotation-label").text(
               "Rotation X: " + rotateX + ", " +

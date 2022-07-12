@@ -115,7 +115,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v43.3.2.168
+     CUBE SCANNER v43.3.2.169
      <br>
      <span id="server-info">
      CONNECTING...
@@ -178,7 +178,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=168"></script>
+<script src="script/cube-scanner.js?v=169"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
