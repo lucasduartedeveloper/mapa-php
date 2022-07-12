@@ -25,7 +25,7 @@
 <link rel="stylesheet" 
          href="css/style.css?v=49">
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=14">
+         href="css/anim/loading.css?v=15">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -54,6 +54,7 @@
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
+          <div class="poison"></div>
           <div class="front"></div>
           <div class="back"></div>
           <div class="left"></div>

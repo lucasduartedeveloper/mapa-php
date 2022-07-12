@@ -11,6 +11,18 @@
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
     animation: cube-rotating 2s infinite;
 }
+#loading .poison {
+    position: absolute;
+    background-color: rgba(0,125,0,0.5);
+    border: 2px solid #080;
+    width: 4px;
+    height: 4px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-16px)
+    translateY(-16px)
+    translateZ(16px);
+}
 #loading .front {
     position: absolute;
     background-color: rgba(255,255,255,0.5);
