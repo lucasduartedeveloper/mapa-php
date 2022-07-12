@@ -74,6 +74,9 @@ $(document).ready(function() {
                keyboard: true
           });
      });
+     $("#delete").click(function(e) {
+          deleteCube(cubeId);
+     });
      $("#name").click(function(e) {
           renaming = true;
           $('#cube-modal-title').text("RENAME CUBE");
@@ -241,7 +244,7 @@ function getCube(id) {
           cube = data;
           log("get", data);
           //say("Around the cube.");
-          //say("Cube downloaded.");
+          say(cubeList[cubeId].nome + " downloaded.");
      });
 }
 
@@ -277,7 +280,7 @@ function goToCube(id) {
      getCube(cubeList[id].id);
 }
 
-function deleteCube(id).{
+function deleteCube(id) {
      $.post("ajax/cube-info.php", {
           deleteId: cubeList[cubeId].id,
           }).done(function(data) {
