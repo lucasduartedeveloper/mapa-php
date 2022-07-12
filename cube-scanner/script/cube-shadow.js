@@ -117,7 +117,7 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
-        var ld = (1 / lightDistance(tempNodes[k]) * end;
+        var ld = (1 / lightDistance(tempNodes[k])) * end;
         //log("ld", ld));
 
         ctx.fillStyle = 
