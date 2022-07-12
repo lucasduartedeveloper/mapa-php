@@ -60,12 +60,12 @@ $(document).ready(function() {
      $("#previous").click(function(e) {
           cubeNo -= 1;
           cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
-          getCube(cubeList[cubeNo].id);
+          goToCube(cubeList[cubeNo].id);
      });
      $("#next").click(function(e) {
           cubeNo += 1;
           cubeNo = cubeNo > (cubeList.length-1) ? 0 : cubeNo;
-          getCube(cubeList[cubeNo].id);
+          goToCube(cubeList[cubeNo].id);
      });
      $("#add").click(function(e) {
           renaming = false;
