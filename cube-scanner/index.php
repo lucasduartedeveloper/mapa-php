@@ -189,7 +189,7 @@ class="form-range">
 <script src="script/debug.js?v=0"></script>
 
 <script src="script/image-collision.js?v=0"></script>
-<script src="script/authentication.js?v=18"></script>
+<script src="script/authentication.js?v=19"></script>
 <script src="script/websocket.js?v=3"></script>
 
 <script src="script/cube-shadow.js?v=30"></script>

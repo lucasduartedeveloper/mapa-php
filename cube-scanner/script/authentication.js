@@ -1,6 +1,6 @@
 // Tioos de autenticação eficientes contra mentirosas
 // Reconhecimento facial
-// Iluminação fixa
+// Iluminação fixa [x]
 // Reconhecimento de voz
 // QR Code
 
@@ -24,7 +24,7 @@ function authenticate(data) {
         }
     }
 
-    authenticated = maxBrightness > 62.5;
+    authenticated = maxBrightness > 30;
     if (authenticated) {
         //notification.play();
         $("#authentication").hide();
