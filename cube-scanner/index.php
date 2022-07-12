@@ -27,8 +27,8 @@
          href="css/style.css?v=44">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-<i id="add" 
- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 <title></title>
 </head>
