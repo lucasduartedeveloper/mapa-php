@@ -341,7 +341,8 @@ function saveFace(base64) {
          say(tts);
       }
       else {
-         cube[faceId].base64 = base64;
+         if (cube[faceId]) // faceId*
+             cube[faceId].base64 = base64;
          log("global-var", 
          "cubeNo:"+cubeNo+", faceId:"+faceId);
 
@@ -371,12 +372,12 @@ function resetCube() {
            setFace(k);
            saveFace(baseImages[k]);
       }
-      setTimeout(function() {
+      setTimeout(function() { // *
           getCube(cubeList[cubeNo].id);
-      }, 3000);
-      speaking = false;
-      gameOver.play();
-      //say("Cube was reseted.");
+          speaking = false;
+          gameOver.play();
+          //say("Cube was reseted.");
+      }, 5000);
 }
 
 var sh = window.innerHeight;
