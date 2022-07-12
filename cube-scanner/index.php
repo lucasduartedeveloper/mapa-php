@@ -25,7 +25,7 @@
 <link rel="stylesheet" 
          href="css/style.css?v=49">
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=16">
+         href="css/anim/loading.css?v=17">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -54,7 +54,13 @@
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
-          <div class="blood"></div>
+          <div class="sperm-front"></div>
+          <div class="sperm-back"></div>
+          <div class="sperm-left"></div>
+          <div class="sperm-top"></div>
+          <div class="sperm-right"></div>
+          <div class="sperm-bottom"></div>
+
           <div class="front"></div>
           <div class="back"></div>
           <div class="left"></div>

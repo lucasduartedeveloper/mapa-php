@@ -11,7 +11,7 @@
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
     animation: cube-rotating 2s infinite;
 }
-#loading .blood {
+#loading .sperm-front {
     position: absolute;
     background-color: rgba(180,0,0,0.5);
     border: 2px solid #a00;
@@ -19,9 +19,69 @@
     height: 8px;
     -webkit-transform-style: preserve-3d;
     transform: 
-    translateX(-16px)
-    translateY(-16px)
-    translateZ(16px);
+    translateX(-48px)
+    translateY(0px)
+    translateZ(4px);
+}
+#loading .sperm-back {
+    position: absolute;
+    background-color: rgba(180,0,0,0.5);
+    border: 2px solid #a00;
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(0px)
+    translateZ(-4px);
+}
+#loading .sperm-left {
+    position: absolute;
+    background-color: rgba(180,0,0,0.5);
+    border: 2px solid #a00;
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-52px)
+    translateY(0px)
+    translateZ(0px);
+}
+#loading .sperm-top {
+    position: absolute;
+    background-color: rgba(180,0,0,0.5);
+    border: 2px solid #a00;
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(-4px)
+    translateZ(0px);
+}
+#loading .sperm-right {
+    position: absolute;
+    background-color: rgba(180,0,0,0.5);
+    border: 2px solid #a00;
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-44px)
+    translateY(0px)
+    translateZ(0px);
+}
+#loading .sperm-bottom {
+    position: absolute;
+    background-color: rgba(180,0,0,0.5);
+    border: 2px solid #a00;
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(4px)
+    translateZ(0px);
 }
 #loading .front {
     position: absolute;
