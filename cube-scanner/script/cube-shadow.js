@@ -96,9 +96,9 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
-        rotateNodes3DonX(nodes[k], rotateX);
-        rotateNodes3DonY(nodes[k], rotateY);
-        rotateNodes3DonZ(nodes[k], rotateZ);
+        rotateNode3DonX(nodes[k], rotateX);
+        rotateNode3DonY(nodes[k], rotateY);
+        rotateNode3DonZ(nodes[k], rotateZ);
 
         ctx.fillStyle = "rgba(0, 0, 0, "+(nodes[k][2])+")";
 
