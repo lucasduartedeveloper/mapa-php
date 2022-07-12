@@ -112,7 +112,7 @@ $(document).ready(function() {
               "Z: " + rotateZ
          );
 
-         ws.send("CUBE-DEFENDER|" +
+         ws.send("CUBE-SCANNER|" +
                   playerId + "|" + 
                   rotateX.toString() + "|" + 
                   rotateY.toString() + "|" + 
@@ -142,7 +142,7 @@ $(document).ready(function() {
      setInterval(function() {
          var canvas = 
          document.getElementById("camera-canvas");
-         var context = canvas.getContext("2d");        
+         var context = canvas.getContext("2d");
 
          if (!authenticated) {
              canvas.width = 10;
@@ -186,8 +186,9 @@ $(document).ready(function() {
 
      ws.onmessage = function(e) {
         var msg = e.data.split("|");
-        if (msg[0] == "CUBE-DEFENDER" &&
+        if (msg[0] == "CUBE-SCANNER" &&
             playerId != msg[1]) {
+            log("ws", msg);
 
             rotateX = parseInt(msg[2]);
             rotateY = parseInt(msg[3]);
