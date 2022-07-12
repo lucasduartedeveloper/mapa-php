@@ -115,7 +115,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     z-index: 9998;
 }
-#cube-container {
+#cube-container img {
     display: none;
 }
 #cube-container .front {
