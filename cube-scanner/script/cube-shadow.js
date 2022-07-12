@@ -118,8 +118,8 @@ function addShadow() {
             cnv.height = 128;
             var ctx = cnv.getContext('2d');
 
-            var ld = (0.5 / lightDistance(
-            tempNodes[img.k])) * end;
+            var ld = (0.5 / end) * lightDistance(
+            tempNodes[img.k]);
             ctx.fillStyle = "rgba(0,0,0,"+(ld)+")";
 
             ctx.drawImage(this, 0, 0, 128, 128);
