@@ -313,8 +313,9 @@ function saveFace(base64) {
              setFace(k);
              saveFace(base64);
              tts += faces[k];
-             tts += k < 6 ? ", " : ".";
+             tts += k < 5 ? ", " : " and ";
          }
+         tts += ".";
          speaking = false;
          say(tts);
       }
