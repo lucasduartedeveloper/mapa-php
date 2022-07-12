@@ -244,7 +244,8 @@ function getCube(id) {
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeNo].nome);
           $("#cube-id").text(id);
-          $("#record-no").text((cubeNo+1)+"/"+cubeList.length);
+          $("#record-no").text(
+          (cubeNo+1)+"/"+cubeList.length);
 
           log("get", data);
           //say("Around the cube.");
@@ -288,6 +289,8 @@ function goToCube(n) {
 }
 
 function deleteCube() {
+     if (listEmpty()) return;
+
      var cubeId = cubeList[cubeNo].id;
      $.post("ajax/cube-info.php", {
           deleteId: cubeId,
@@ -313,6 +316,14 @@ function renameCube(text) {
                log("post", data);
                say("Cube renamed.");
      });
+}
+
+function listEmpty() {
+     if (cubeList.length == 0) {
+          say("You don't have any cubes, create one first");
+          return true;
+     }
+     return false;
 }
 
 var faceId = 0;

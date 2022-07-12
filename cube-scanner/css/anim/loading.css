@@ -9,7 +9,7 @@
     flex-direction: column;
     -webkit-transform-style: preserve-3d;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
-    animation: cube-rotating 1s infinite;
+    animation: cube-rotating 2s infinite;
 }
 #loading .front {
     position: absolute;
@@ -18,7 +18,7 @@
     width: 32px;
     height: 32px;
     -webkit-transform-style: preserve-3d;
-    transform: translateZ(18px);
+    transform: translateZ(16px);
 }
 #loading .back {
     position: absolute;
@@ -27,7 +27,7 @@
     width: 32px;
     height: 32px;
     -webkit-transform-style: preserve-3d;
-    transform: translateZ(-18px) rotateY(180deg);
+    transform: translateZ(-16px) rotateY(180deg);
 }
 #loading .left {
     position: absolute;
@@ -36,7 +36,7 @@
     width: 32px;
     height: 32px;
     -webkit-transform-style: preserve-3d;
-    transform: translateX(-18px) rotateY(-90deg);
+    transform: translateX(-16px) rotateY(-90deg);
 }
 #loading .top {
     position: absolute;
@@ -45,7 +45,7 @@
     width: 32px;
     height: 32px;
     -webkit-transform-style: preserve-3d;
-    transform: translateY(-18px) rotateX(90deg);
+    transform: translateY(-16px) rotateX(90deg);
 }
 #loading .right {
     position: absolute;
@@ -54,7 +54,7 @@
     width: 32px;
     height: 32px;
     -webkit-transform-style: preserve-3d;
-    transform: translateX(18px) rotateY(90deg);
+    transform: translateX(16px) rotateY(90deg);
 }
 #loading .bottom {
     position: absolute;
@@ -63,7 +63,7 @@
     width: 32px;
     height: 32px;
     -webkit-transform-style: preserve-3d;
-    transform:  translateY(18px) rotateX(-90deg);
+    transform:  translateY(16px) rotateX(-90deg);
 }
 
 @keyframes cube-rotating {
