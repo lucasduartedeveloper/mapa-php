@@ -312,7 +312,8 @@ function saveFace(base64) {
          for (var k = 0; k < 6; k++) {
              setFace(k);
              saveFace(base64);
-             tts += k > 0 && k < 5 ? ", " : " and ";
+             tts += k > 0 && k < 5 ?
+             ", " : k> 0 ? " and " : "";
              tts += faces[k];
          }
          tts += ".";
