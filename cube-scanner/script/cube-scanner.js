@@ -285,11 +285,12 @@ function goToCube(n) {
 }
 
 function deleteCube() {
+     var cubeId = cubeList[cubeNo].id;
      $.post("ajax/cube-info.php", {
-          deleteId: cubeList[cubeNo].id,
+          deleteId: cubeId,
           }).done(function(data) {
                cubeList = cubeList
-               .filter(c => c.id != cubeList[cubeNo].id);
+               .filter(c => c.id != cubeId);
                goToCube(cubeList.length-1);
 
                log("post", data);
