@@ -54,7 +54,7 @@
 
 <div id="cube-container">
 
-      <div id="loading" class="lds-ellipsis">
+      <div id="loading">
           <div class="front"></div>
           <div class="back"></div>
           <div class="left"></div>
