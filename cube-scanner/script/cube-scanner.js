@@ -234,6 +234,7 @@ function getCube(id) {
      $("#loading").show();
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
+          /*
           for (var k = 0; k < 6; k++) {
                if (data[k]) { 
                     $("#cube-container img")[k]
@@ -245,7 +246,7 @@ function getCube(id) {
                     $("#cube-container img")[k]
                     .src = baseImages[k];
                }
-          }
+          } */
           $("#loading").hide();
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeId].nome);
