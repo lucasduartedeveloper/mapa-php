@@ -139,11 +139,23 @@ class="form-range">
       <div class="modal-body">
         <p>
         <div class="input-group input-group-sm mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
-  </div>
-  <input id="input-name" type="text" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-sm">
-</div>
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+        </div>
+        <input id="input-name" type="text" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Size (cm)</span>
+        </div>
+        <input id="input-size" type="text" class="form-control" aria-label="Size" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Weight (kg)</span>
+        </div>
+        <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
         </p>
       </div>
       <div class="modal-footer">
