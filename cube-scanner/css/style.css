@@ -115,6 +115,9 @@ html, body {
     -webkit-transform-style: preserve-3d;
     z-index: 9998;
 }
+#cube-container {
+    display: none;
+}
 #cube-container .front {
     background-color: #ccc;
     border: 2px solid #000;
