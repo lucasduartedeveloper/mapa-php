@@ -6,6 +6,8 @@ var node3 = [ 0, -1, 0 ];
 var node4 = [ 1, 0, 0 ];
 var node5 = [ 0, 1, 0 ];
 
+var transformQuotient = Math.PI/180;
+
 // nodes array
 var nodes = [ node0, node1, node2, node3, node4, node5 ];
 
