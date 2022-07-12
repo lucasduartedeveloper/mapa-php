@@ -281,7 +281,7 @@ function addCube(text) {
 
 function goToCube(n) {
      cubeNo = n;
-     getCube(cubeList[n].id);
+     getCube(cubeList[n].cube_id);
 }
 
 function deleteCube() {
@@ -341,10 +341,12 @@ function saveFace(base64) {
          say(tts);
       }
       else {
-         if (cube[faceId]) // faceId*
-             cube[faceId].base64 = base64;
          log("global-var", 
          "cubeNo:"+cubeNo+", faceId:"+faceId);
+         for (var k in cube) {
+             if (cube[k].face_id == faceId)
+             cube[k].base64 = base64;
+         }
 
          $.post("ajax/cube-face.php", {
              cubeId: cubeList[cubeNo].id,
