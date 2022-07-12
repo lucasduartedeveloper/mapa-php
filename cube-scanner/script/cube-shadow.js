@@ -6,6 +6,8 @@ var node3 = [ 0, -1, 0 ];
 var node4 = [ 1, 0, 0 ];
 var node5 = [ 0, 1, 0 ];
 
+var light = [ 0, 0, 2 ];
+
 var transformQuotient = Math.PI/180;
 
 // nodes array
@@ -83,6 +85,14 @@ function rotateNodes3DonZ(nodes, theta) {
     }
 }
 
+// light distance
+function lightDistance(node) {
+    var x = Math.pow(light[0] - node[0], 2);
+    var y = Math.pow(light[1] - node[1], 2);
+    var z = Math.pow(light[2] - node[2], 2);
+    return Math.sqrt(x+y+z);
+}
+
 function addShadow() {
     var cnv = document.createElement('canvas');
     cnv.width = 128;
@@ -105,8 +115,11 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
+        var ld = lightDistance(tempNodes[k]);
+        log("ld", ld);
+
         ctx.fillStyle = 
-        "rgba(255,255,255,"+(tempNodes[k][2])+")";
+        "rgba(255,255,255,"+(ld)+")";
 
         img.onload = function (e) {
             ctx.drawImage(this, 0, 0, 128, 128);
