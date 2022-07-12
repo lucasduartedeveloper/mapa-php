@@ -106,11 +106,6 @@ $(document).ready(function() {
   
      $("#rotateX, #rotateY, #rotateZ")
      .on("change", function() {
-         $("#rotation-label").text(
-              "Rotation X: " + rotateX + ", " +
-              "Y: " + rotateY + ", " +
-              "Z: " + rotateZ
-         );
 
          ws.send("CUBE-SCANNER|" +
                   playerId + "|" + 
@@ -163,15 +158,15 @@ $(document).ready(function() {
              addShadow();
          }
 
-         /*
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
-         */
 
-         $("#rotateX").val(rotateX);
-         $("#rotateY").val(rotateY);
-         $("#rotateZ").val(rotateZ);
+         $("#rotation-label").text(
+              "Rotation X: " + rotateX + ", " +
+              "Y: " + rotateY + ", " +
+              "Z: " + rotateZ
+         );
 
          $("#cube-container")
          .css("transform", 

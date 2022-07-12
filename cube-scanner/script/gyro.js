@@ -1,3 +1,5 @@
+/*
+
 if ('DeviceMotionEvent' in window) {
     var onDeviceMotion = function (e) {
         accHandler(e.accelerationIncludingGravity);
@@ -22,8 +24,6 @@ var fixedX = 0;
 var fixedY = 0;
 var fixedZ = 0;
 
-var rotateX = 0;
-var rotateY = 0;
 var northAngle = 0;
 var mapAngle = 0;
 
@@ -60,10 +60,12 @@ function accHandler(acc) {
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
     var a = Math.asin(senA);
-    /*
+    
     a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
     a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
-    */
+    
     return a * (180/Math.PI);
 }
+
+*/
