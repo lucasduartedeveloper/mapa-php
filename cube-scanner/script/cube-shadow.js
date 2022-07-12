@@ -3,6 +3,10 @@ shadow.width = 256;
 shadow.height = 256;
 shadow.src = "img/gradient.png";
 
+var matrix = [
+    
+];
+
 function addShadow() {
     var cnv = document.createElement('canvas');
     cnv.width = 128;

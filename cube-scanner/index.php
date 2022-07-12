@@ -170,14 +170,14 @@ class="form-range">
 <script src="script/debug.js?v=0"></script>
 
 <script src="script/image-collision.js?v=0"></script>
-<script src="script/authentication.js?v=13"></script>
+<script src="script/authentication.js?v=14"></script>
 
 <script src="script/cube-shadow.js?v=7"></script>
 
 <script src="script/gyro.js?v=0"></script>
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-defender.js?v=157"></script>
+<script src="script/cube-scanner.js?v=157"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
