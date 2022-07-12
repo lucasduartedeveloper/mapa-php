@@ -24,6 +24,23 @@ try {
     
         echo $sql;
     }
+    else if (isset($_POST["deleteId"])) {
+        $cubeid = htmlspecialchars($_POST["deleteId"]);
+    
+        $sql = "DELETE FROM cube_info WHERE id=".$cubeId;
+    
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    
+        echo $sql;
+
+        $sql = "DELETE FROM cube_face WHERE cube_id=".$cubeId;
+    
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    
+        echo $sql;
+    }
     else {
         $sql = "SELECT a.* FROM cube_info a ORDER BY a.id";
     

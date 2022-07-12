@@ -24,10 +24,10 @@
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=2">
 <link rel="stylesheet" 
-         href="css/style.css?v=43">
+         href="css/style.css?v=44">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-
+<i id="add" 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 <title></title>
@@ -45,6 +45,7 @@
 </div>
 
 <i id="add" class="fa-solid fa-circle-plus"></i>
+<i id="delete" class="fa-solid fa-circle-x"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>
 
@@ -115,7 +116,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v43.3.2.169
+     CUBE SCANNER v44.3.2.170
      <br>
      <span id="server-info">
      CONNECTING...
@@ -170,7 +171,7 @@ class="form-range">
 <script src="script/debug.js?v=0"></script>
 
 <script src="script/image-collision.js?v=0"></script>
-<script src="script/authentication.js?v=14"></script>
+<script src="script/authentication.js?v=15"></script>
 
 <script src="script/cube-shadow.js?v=30"></script>
 
@@ -178,7 +179,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=169"></script>
+<script src="script/cube-scanner.js?v=170"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

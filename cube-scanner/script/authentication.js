@@ -29,6 +29,5 @@ function authenticate(data) {
 
         getXYZ();
         listCubes();
-        getCube(0);
     }
 }

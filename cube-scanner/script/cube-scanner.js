@@ -250,7 +250,12 @@ function listCubes() {
      $.getJSON("ajax/cube-info.php", 
      function(data) {
           cubeList = data;
-          $("#name").text(data[cubeId].nome);
+          if (cubeList.length == 0) {
+               addCube();
+          }
+          else {
+               goToCube(cubeList.length - 1);
+          }
 
           log("get", data);
           //say("");
@@ -265,6 +270,21 @@ function addCube(text) {
 
                log("post", data);
                say("A new cube was created.");
+     });
+}
+
+function goToCube(id) {
+     getCube(cubeList[id].id);
+}
+
+function deleteCube(id).{
+     $.post("ajax/cube-info.php", {
+          deleteId: cubeList[cubeId].id,
+          }).done(function(data) {
+               listCubes();
+
+               log("post", data);
+               say("Cube deleted.");
      });
 }
 
