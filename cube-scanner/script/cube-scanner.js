@@ -394,9 +394,9 @@ function say(text) {
          var msg = new SpeechSynthesisUtterance();
          //msg.lang = "pt-BR";
          //msg.lang = "en-US";
-         //msg.lang = "ja-JP";
+         msg.lang = "ja-JP";
          //msg.lang = "ko-KR";
-         msg.lang = "cmn-CN";
+         //msg.lang = "cmn-CN";
          msg.text = text;
          msg.onend = function(event) {
               speaking = false;
