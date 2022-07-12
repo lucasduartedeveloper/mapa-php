@@ -87,7 +87,7 @@ function rotateNodes3DonZ(nodes, theta) {
 
 // light distance
 // verificar qual poligono mais distante
-var end = lightDistance(node3);
+var end = lightDistance(node1);
 function lightDistance(node) {
     var x = Math.pow(light[0] - node[0], 2);
     var y = Math.pow(light[1] - node[1], 2);
@@ -107,26 +107,24 @@ function addShadow() {
 
     var faces = $("#cube-container img");
     for (var k = 0; k < 6; k++) {
-        var cnv = document.createElement('canvas');
-        cnv.width = 128;
-        cnv.height = 128;
-        var ctx = cnv.getContext('2d');
-
         var img = new Image();
         img.width = 128;
         img.height = 128;
-        img.cnv = cnv;
-        img.ctx = ctx;
         img.k = k;
 
         img.onload = function (e) {
+            var cnv = document.createElement('canvas');
+            cnv.width = 128;
+            cnv.height = 128;
+            var ctx = cnv.getContext('2d');
+
             var ld = (0.5 / lightDistance(
             tempNodes[img.k])) * end;
-            img.ctx.fillStyle = "rgba(0,0,0,"+(ld)+")";
+            ctx.fillStyle = "rgba(0,0,0,"+(ld)+")";
 
-            img.ctx.drawImage(this, 0, 0, 128, 128);
-            img.ctx.fillRect(0, 0, 128, 128);
-            faces[this.k].src = img.cnv.toDataURL();
+            ctx.drawImage(this, 0, 0, 128, 128);
+            ctx.fillRect(0, 0, 128, 128);
+            faces[this.k].src = cnv.toDataURL();
         }
         var c = cube.filter(o => o.face_id == k);
         var n = c.length > 0 ? c[0].face_id : k;
