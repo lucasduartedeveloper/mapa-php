@@ -21,10 +21,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
+
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=2">
+         href="css/style.css?v=47">
 <link rel="stylesheet" 
-         href="css/style.css?v=46">
+         href="css/anim/loading.css?v=3">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -54,10 +55,12 @@
 <div id="cube-container">
 
       <div id="loading" class="lds-ellipsis">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="top"></div>
+          <div class="right"></div>
+          <div class="bottom"></div>
       </div>
 
       <img src="img/front.png" class="front"/> 
@@ -118,7 +121,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v46.3.2.194
+     CUBE SCANNER v47.3 - 30.2.194
      <br>
      <span id="server-info">
      CONNECTING...
@@ -182,16 +185,15 @@ class="form-range">
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
+<!-- <script src="script/gyro.js?v=1"></script> -->
+
 <script src="script/debug.js?v=0"></script>
 
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=15"></script>
+<script src="script/websocket.js?v=3"></script>
 
 <script src="script/cube-shadow.js?v=30"></script>
-
-<script src="script/gyro.js?v=1"></script>
-
-<script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
 <script src="script/cube-scanner.js?v=194"></script>
 

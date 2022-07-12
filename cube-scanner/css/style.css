@@ -115,7 +115,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     z-index: 9998;
 }
-.front {
+#cube-container .front {
     background-color: #ccc;
     border: 2px solid #000;
     position: absolute;
@@ -126,7 +126,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateZ(64px);
 }
-.back {
+#cube-container .back {
     background-color: #ccc;
     border: 2px solid #000;
     position: absolute;
@@ -135,7 +135,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateZ(-64px) rotateY(180deg);
 }
-.left {
+#cube-container .left {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
@@ -144,7 +144,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateX(-64px) rotateY(-90deg);
 }
-.top {
+#cube-container .top {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
@@ -153,7 +153,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateY(-64px) rotateX(90deg);
 }
-.right {
+#cube-container .right {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
@@ -162,7 +162,7 @@ html, body {
     -webkit-transform-style: preserve-3d;
     transform: translateX(64px) rotateY(90deg);
 }
-.bottom {
+#cube-container .bottom {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
