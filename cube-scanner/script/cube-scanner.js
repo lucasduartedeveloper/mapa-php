@@ -54,6 +54,8 @@ function stopCamera() {
 }
 
 $(document).ready(function() {
+     say("Cube scanner initialized, delete the sphere.");
+
      var video = document.getElementById("video");
      startCamera("environment");
 
