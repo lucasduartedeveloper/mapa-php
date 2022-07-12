@@ -89,6 +89,12 @@ function addShadow() {
     cnv.height = 128;
     var ctx = cnv.getContext('2d');
 
+    var tempNodes = [ ...nodes ];
+
+    rotateNodes3DonX(tempNodes, rotateX);
+    rotateNodes3DonY(tempNodes, rotateY);
+    rotateNodes3DonZ(tempNodes, rotateZ);
+
     var faces = $("#cube-container img");
     for (var k = 0; k < 6; k++) {
         var img = new Image();
@@ -96,11 +102,7 @@ function addShadow() {
         img.height = 128;
         img.k = k;
 
-        rotateNode3DonX(nodes[k], rotateX);
-        rotateNode3DonY(nodes[k], rotateY);
-        rotateNode3DonZ(nodes[k], rotateZ);
-
-        ctx.fillStyle = "rgba(0, 0, 0, "+(nodes[k][2])+")";
+        ctx.fillStyle = "rgba(0, 0, 0, "+(tempNodes[k][2])+")";
 
         img.onload = function (e) {
             ctx.drawImage(this, 0, 0, 128, 128);
