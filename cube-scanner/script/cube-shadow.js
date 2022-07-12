@@ -115,18 +115,18 @@ function addShadow() {
         var img = new Image();
         img.width = 128;
         img.height = 128;
-        img.k = k;
+        img.cnv = cnv;
         img.ctx = ctx;
+        img.k = k;
 
         img.onload = function (e) {
             var ld = (0.5 / lightDistance(
             tempNodes[img.k])) * end;
             img.ctx.fillStyle = "rgba(0,0,0,"+(ld)+")";
 
-            ctx.drawImage(this, 0, 0, 128, 128);
-            ctx
-            ctx.fillRect(0, 0, 128, 128);
-            faces[this.k].src = cnv.toDataURL();
+            img.ctx.drawImage(this, 0, 0, 128, 128);
+            img.ctx.fillRect(0, 0, 128, 128);
+            faces[this.k].src = img.cnv.toDataURL();
         }
         var c = cube.filter(o => o.face_id == k);
         var n = c.length > 0 ? c[0].face_id : k;
