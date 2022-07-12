@@ -291,7 +291,7 @@ function goToCube(n) {
      if (listEmpty()) return;
 
      cubeNo = n;
-     getCube(cubeList[n].cube_id);
+     getCube(cubeList[n].id);
 }
 
 function deleteCube() {
