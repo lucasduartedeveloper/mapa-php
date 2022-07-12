@@ -45,7 +45,7 @@
 </div>
 
 <i id="add" class="fa-solid fa-circle-plus"></i>
-<i id="delete" class="fa-solid fa-circle-x"></i>
+<i id="delete" class="fa-solid fa-circle-xmark"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>
 
