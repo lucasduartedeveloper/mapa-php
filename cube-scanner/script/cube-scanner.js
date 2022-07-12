@@ -240,6 +240,7 @@ function getCube(id) {
           $("#loading").hide();
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeId].nome);
+          $("#rercord-no").text(cubeId+"/"+cubeList.length);
 
           cube = data;
           log("get", data);
