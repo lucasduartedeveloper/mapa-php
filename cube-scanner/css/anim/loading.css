@@ -33,7 +33,8 @@
     transform: 
     translateX(-48px)
     translateY(0px)
-    translateZ(-4px);
+    translateZ(-4px)
+    rotateY(180deg);
 }
 #loading .sperm-left {
     position: absolute;
@@ -45,7 +46,8 @@
     transform: 
     translateX(-52px)
     translateY(0px)
-    translateZ(0px);
+    translateZ(0px)
+    rotateY(-90deg);
 }
 #loading .sperm-top {
     position: absolute;
@@ -57,7 +59,8 @@
     transform: 
     translateX(-48px)
     translateY(-4px)
-    translateZ(0px);
+    translateZ(0px)
+    rotateX(90deg);
 }
 #loading .sperm-right {
     position: absolute;
@@ -69,7 +72,8 @@
     transform: 
     translateX(-44px)
     translateY(0px)
-    translateZ(0px);
+    translateZ(0px)
+    rotateY(90deg);
 }
 #loading .sperm-bottom {
     position: absolute;
@@ -81,7 +85,8 @@
     transform: 
     translateX(-48px)
     translateY(4px)
-    translateZ(0px);
+    translateZ(0px)
+    rotateX(-90deg);
 }
 #loading .front {
     position: absolute;
