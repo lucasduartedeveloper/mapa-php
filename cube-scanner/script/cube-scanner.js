@@ -75,7 +75,7 @@ $(document).ready(function() {
           });
      });
      $("#delete").click(function(e) {
-          deleteCube(cubeId);
+          deleteCube();
      });
      $("#name").click(function(e) {
           renaming = true;
@@ -280,7 +280,7 @@ function goToCube(id) {
      getCube(cubeList[id].id);
 }
 
-function deleteCube(id) {
+function deleteCube() {
      $.post("ajax/cube-info.php", {
           deleteId: cubeList[cubeId].id,
           }).done(function(data) {

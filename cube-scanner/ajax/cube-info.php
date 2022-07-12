@@ -25,7 +25,7 @@ try {
         echo $sql;
     }
     else if (isset($_POST["deleteId"])) {
-        $cubeid = htmlspecialchars($_POST["deleteId"]);
+        $cubeId = htmlspecialchars($_POST["deleteId"]);
     
         $sql = "DELETE FROM cube_info WHERE id=".$cubeId;
     
