@@ -18,7 +18,7 @@ function authenticate(data) {
         }
     }
 
-    authenticated = maxBrightness > 125;
+    authenticated = maxBrightness > 62.5;
     if (authenticated) {
         //notification.play();
         $("#authentication").hide();
