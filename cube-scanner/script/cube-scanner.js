@@ -244,7 +244,7 @@ function getCube(id) {
           cube = data;
           log("get", data);
           //say("Around the cube.");
-          say(cubeList[cubeId].nome + " downloaded.");
+          //say(cubeList[cubeId].nome + " downloaded.");
      });
 }
 
@@ -257,7 +257,7 @@ function listCubes() {
                addCube();
           }
           else {
-               goToCube(cubeList.length - 1);
+               goToCube(cubeList.length-1);
           }
 
           log("get", data);
@@ -277,6 +277,7 @@ function addCube(text) {
 }
 
 function goToCube(id) {
+     cubeId = id;
      getCube(cubeList[id].id);
 }
 
@@ -286,7 +287,7 @@ function deleteCube() {
           }).done(function(data) {
                cubeList = cubeList
                .filter(c => c.id != cubeList[cubeId].id);
-               goToCube(id);
+               goToCube(cubeList.length-1);
 
                log("post", data);
                say("Cube deleted.");
