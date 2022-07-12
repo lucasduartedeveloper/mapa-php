@@ -25,7 +25,7 @@
 <link rel="stylesheet" 
          href="css/style.css?v=47">
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=9">
+         href="css/anim/loading.css?v=10">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -120,7 +120,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v47.9 - 30.2.194
+     CUBE SCANNER v47.10 - 30.2.194
      <br>
      <span id="server-info">
      CONNECTING...
