@@ -383,11 +383,6 @@ function resetCube() {
       }, 5000);
 }
 
-var sh = window.innerHeight;
-var sw = window.innerWidth;
-canvas.width = sw;
-p.he,eight = sh/3;
-
 // Texto para audio
 var speaking = false;
 function say(text) {
