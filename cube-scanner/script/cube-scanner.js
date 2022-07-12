@@ -234,19 +234,6 @@ function getCube(id) {
      $("#loading").show();
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
-          /*
-          for (var k = 0; k < 6; k++) {
-               if (data[k]) { 
-                    $("#cube-container img")[k]
-                    .src = data[k].base64; 
-                    data[k].base64 = 
-                    data[k].base64.substring(0,40);
-               }
-               else {
-                    $("#cube-container img")[k]
-                    .src = baseImages[k];
-               }
-          } */
           $("#loading").hide();
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeId].nome);
@@ -324,9 +311,6 @@ function saveFace(base64) {
          say(tts);
       }
       else {
-          $("#cube-container img")[faceId].src =
-          base64;
-
           log("global-var", 
           "cubeId:"+cubeId+", faceId:"+faceId);
 
@@ -356,8 +340,10 @@ function resetCube() {
            setFace(k);
            saveFace(baseImages[k]);
       }
+      getCube(cubeId);
       speaking = false;
-      say("Cube was reseted.");
+      gameOver.play();
+      //say("Cube was reseted.");
 }
 
 var sh = window.innerHeight;
