@@ -1,0 +1,125 @@
+#loading {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-transform-style: preserve-3d;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    animation: cube-rotating 2s infinite;
+}
+#loading .sperm-orbit {
+    position: absolute;
+    border: 2px solid #fae743;
+    width: 96px;
+    height: 96px;
+    -webkit-transform-style: preserve-3d;
+    transform: ;
+}
+#loading .sperm-front {
+    position: absolute;
+    background-color: rgb(91,180,193,0.5);
+    border: 2px solid rgb(91,180,193);
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(0px)
+    translateZ(4px);
+}
+#loading .sperm-back {
+    position: absolute;
+    background-color: rgb(91,180,193,0.5);
+    border: 2px solid rgb(91,180,193);
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(0px)
+    translateZ(-4px)
+    rotateY(180deg);
+}
+#loading .sperm-left {
+    position: absolute;
+    background-color: rgb(91,180,193,0.5);
+    border: 2px solid rgb(91,180,193);
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-52px)
+    translateY(0px)
+    translateZ(0px)
+    rotateY(-90deg);
+}
+#loading .sperm-top {
+    position: absolute;
+    background-color: rgb(91,180,193,0.5);
+    border: 2px solid rgb(91,180,193);
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(-4px)
+    translateZ(0px)
+    rotateX(90deg);
+}
+#loading .sperm-right {
+    position: absolute;
+    background-color: rgb(91,180,193,0.5);
+    border: 2px solid rgb(91,180,193);
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-44px)
+    translateY(0px)
+    translateZ(0px)
+    rotateY(90deg);
+}
+#loading .sperm-bottom {
+    position: absolute;
+    background-color: rgb(91,180,193,0.5);
+    border: 2px solid rgb(91,180,193);
+    width: 8px;
+    height: 8px;
+    -webkit-transform-style: preserve-3d;
+    transform: 
+    translateX(-48px)
+    translateY(4px)
+    translateZ(0px)
+    rotateX(-90deg);
+}
+
+@keyframes cube-rotating {
+  0% {
+    transform: rotateX(0deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(45deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes cube-orbiting {
+  0% {
+    transform: ;
+  }
+  25% {
+    transform: ;
+  }
+  50% {
+    transform: ;
+  }
+  75% {
+    transform: ;
+  }
+  100% {
+    transform: ;
+  }
+}
