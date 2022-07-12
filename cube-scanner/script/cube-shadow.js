@@ -118,7 +118,7 @@ function addShadow() {
             cnv.height = 128;
             var ctx = cnv.getContext('2d');
 
-            var ld = (0.5 / end) * lightDistance(
+            var ld = (0.8 / end) * lightDistance(
             tempNodes[this.k]);
             ctx.fillStyle = "rgba(0,0,0,"+(ld.toFixed(1))+")";
 
