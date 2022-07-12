@@ -284,7 +284,9 @@ function deleteCube() {
      $.post("ajax/cube-info.php", {
           deleteId: cubeList[cubeId].id,
           }).done(function(data) {
-               listCubes();
+               cubeList = cubeList
+               .filter(c => c.id != cubeList[cubeId].id);
+               goToCube(id);
 
                log("post", data);
                say("Cube deleted.");
@@ -297,7 +299,8 @@ function renameCube(text) {
           cubeId: cubeList[cubeId].id,
           name: text,
           }).done(function(data) {
-               listCubes();
+               cubeList[cubeId].nome = text;
+               $("#name").text(cubeList[cubeId].nome);
 
                log("post", data);
                say("Cube renamed.");
