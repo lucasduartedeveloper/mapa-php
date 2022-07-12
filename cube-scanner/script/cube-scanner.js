@@ -310,6 +310,8 @@ function deleteCube() {
                    $("#name").text("---");
                    $("#cube-container img").hide();
                    $("#loading").show();
+                   $("#cube-id").text("");
+                   $("#record-no").text("");
                }
 
                log("post", data);
