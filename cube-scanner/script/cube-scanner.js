@@ -371,7 +371,9 @@ function resetCube() {
            setFace(k);
            saveFace(baseImages[k]);
       }
-      getCube(cubeList[cubeNo].id);
+      setTimeout(function() {
+          getCube(cubeList[cubeNo].id);
+      }, 3000);
       speaking = false;
       gameOver.play();
       //say("Cube was reseted.");
