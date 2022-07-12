@@ -253,7 +253,7 @@ function getCube(id) {
           cube = data;
           log("get", data);
           //say("Around the cube.");
-          say("Cube downloaded.");
+          //say("Cube downloaded.");
      });
 }
 
