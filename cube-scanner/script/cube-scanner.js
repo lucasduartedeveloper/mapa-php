@@ -237,12 +237,14 @@ function getCube(id) {
      $("#loading").show();
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
+          cube = data;
+
           $("#loading").hide();
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeId].nome);
+          $("#cube-id").text(cube.id);
           $("#record-no").text((cubeId+1)+"/"+cubeList.length);
 
-          cube = data;
           log("get", data);
           //say("Around the cube.");
           //say(cubeList[cubeId].nome + " downloaded.");

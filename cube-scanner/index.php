@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=2">
 <link rel="stylesheet" 
-         href="css/style.css?v=45">
+         href="css/style.css?v=46">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -48,6 +48,7 @@
 <i id="delete" class="fa-solid fa-circle-xmark"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>
+<span id="cube-id"></span>
 <span id="record-no"></span>
 
 <div id="cube-container">
@@ -117,7 +118,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v45.3.2.179
+     CUBE SCANNER v46.3.2.180
      <br>
      <span id="server-info">
      CONNECTING...
@@ -180,7 +181,7 @@ class="form-range">
 
 <script src="script/websocket.js?v=3"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=179"></script>
+<script src="script/cube-scanner.js?v=180"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

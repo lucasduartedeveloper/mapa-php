@@ -76,6 +76,13 @@ html, body {
      left: 5vw;
      font-size: 40px;
 }
+#cube-id {
+     position: fixed;
+     top: 2vh;
+     right: 5vw;
+     font-size: 30px;
+     text-align: right;
+}
 #record-no {
      position: fixed;
      top: 12vh;
