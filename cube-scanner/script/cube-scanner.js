@@ -62,14 +62,14 @@ $(document).ready(function() {
           cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
           
           if (listEmpty()) return;
-          goToCube(cubeList[cubeNo].id);
+          goToCube(cubeNo);
      });
      $("#next").click(function(e) {
           cubeNo += 1;
           cubeNo = cubeNo > (cubeList.length-1) ? 0 : cubeNo;
           
           if (listEmpty()) return;
-          goToCube(cubeList[cubeNo].id);
+          goToCube(cubeNo);
      });
      $("#add").click(function(e) {
           renaming = false;
