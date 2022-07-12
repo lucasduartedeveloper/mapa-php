@@ -312,8 +312,8 @@ function saveFace(base64) {
          for (var k = 0; k < 6; k++) {
              setFace(k);
              saveFace(base64);
+             tts += k > 0 && k < 5 ? ", " : " and ";
              tts += faces[k];
-             tts += k < 5 ? ", " : " and ";
          }
          tts += ".";
          speaking = false;
