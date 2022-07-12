@@ -120,9 +120,9 @@ function addShadow() {
 
             var ld = (0.5 / end) * lightDistance(
             tempNodes[img.k]);
-            ctx.fillStyle = "rgba(0,0,0,"+(ld)+")";
+            ctx.fillStyle = "rgba(0,0,0,"+(ld.toFixed(1))+")";
 
-            ctx.drawImage(this, 0, 0, 128, 128);
+            //ctx.drawImage(this, 0, 0, 128, 128);
             ctx.fillRect(0, 0, 128, 128);
             faces[this.k].src = cnv.toDataURL();
         }
