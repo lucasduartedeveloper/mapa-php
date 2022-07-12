@@ -63,9 +63,9 @@
 
 @keyframes cube-rotating {
   0% {
-    transform: rotateX(0) rotateY(45) rotateZ(0);
+    transform: rotateX(0deg) rotateY(45deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(0) rotateY(45) rotateZ(360);
+    transform: rotateX(0deg) rotateY(45deg) rotateZ(360deg);
   }
 }
