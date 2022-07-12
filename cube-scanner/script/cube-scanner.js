@@ -291,7 +291,7 @@ function deleteCube() {
           }).done(function(data) {
                cubeList = cubeList
                .filter(c => c.id != cubeId);
-               goToCube(cubeList.length-1);
+               $("#add-cube").click();
 
                log("post", data);
                say("Cube deleted.");
