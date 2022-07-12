@@ -1,3 +1,9 @@
+// Tioos de autenticação eficientes contra mentirosas
+// Reconhecimento facial
+// Iluminação fixa
+// Reconhecimento de voz
+// QR Code
+
 var authenticated = false;
 var maxBrightness = 0;
 
