@@ -279,9 +279,9 @@ function addCube(text) {
      });
 }
 
-function goToCube(id) {
-     cubeId = id;
-     getCube(cubeList[id].id);
+function goToCube(n) {
+     cubeId = n;
+     getCube(cubeList[n].id);
 }
 
 function deleteCube() {
@@ -346,7 +346,7 @@ function saveFace(base64) {
          "cubeId:"+cubeId+", faceId:"+faceId);
 
          $.post("ajax/cube-face.php", {
-             cubeId: cubeId,
+             cubeId: cubeList[cubeId].id,
              faceId: faceId,
              base64: base64,
              }).done(function(data) { 
