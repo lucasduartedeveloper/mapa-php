@@ -209,9 +209,9 @@ $(document).ready(function() {
             playerId != msg[1]) {
             log("ws", msg);
 
-            rotateX = parseInt(msg[2]);
-            rotateY = parseInt(msg[3]);
-            rotateZ = parseInt(msg[4]);
+            $("#rotateX").val(parseInt(msg[2]));
+            $("#rotateY").val(parseInt(msg[3]));
+            $("#rotateZ").val(parseInt(msg[4]));
         }
     };
 });

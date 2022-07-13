@@ -128,7 +128,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     SPHERE SCANNER v1.1-0.0.13
+     SPHERE SCANNER v1.1-0.0.14
      <br>
      <span id="server-info">
      CONNECTING...
@@ -221,7 +221,7 @@ class="form-range">
 <script src="script/draw-sphere.js?v=50"></script>
 <script src="script/sphere-shadow.js?v=1"></script>
 <script src="script/image-upload.js?v=0"></script>
-<script src="script/sphere-scanner.js?v=13"></script>
+<script src="script/sphere-scanner.js?v=14"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
