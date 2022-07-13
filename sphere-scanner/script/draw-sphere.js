@@ -1,12 +1,12 @@
-var matrix = [];
+var matrix = new Array(10);
 
 function drawSphere() {
       for (var n = 0; n < 10; n++) {
-           matrix[0] = [];
+           matrix[0] = new Array(10);
            matrix[0][n] = [0,0,64];
            rotateNode3DonX(matrix[k][n], k*36);
            for (var o = 0; o < 10; o++) {
-                matrix[n] = [];
+                matrix[n] = new Array(10);
                 matrix[n][o] = matrix[k][n];
                 rotateNode3DonY(matrix[n][o], k*36);
            }
