@@ -33,7 +33,7 @@ function drawSphere() {
                 "position" :
                 "absolute",
                 "background" :
-                "#ccc",
+                "rgb("+(k*20)+","+(k*20)+","+(k*20)+")",
                 "border" :
                 "2px solid #fff",
                 "-webkit-transform-style" :
