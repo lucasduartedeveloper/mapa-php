@@ -21,9 +21,7 @@ function drawSphere() {
                 img.height = ((128*Math.PI)/2) / 10;
 
                 var tx = matrix[k][n][0];
-                //tx = tx - (img.width/2);
                 var ty = matrix[k][n][1];
-                //ty = ty - (img.height/2);
                 var tz = matrix[k][n][2];
 
                 $("#sphere-container")
@@ -41,7 +39,8 @@ function drawSphere() {
                 "transform" :
                 "translateX("+tx+"px) "+
                 "translateY("+ty+"px) "+
-                "translateZ("+tz+"px) "
+                "translateZ("+tz+"px) "+
+                "rotateX("+(k*36)+")"
                 });
           }
      }
