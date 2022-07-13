@@ -340,7 +340,7 @@ var updating = false;
 function updateSphere(info) {
      post(info, function(data) {
           sphereList[sphereNo] = info;
-          $("#name").text(sphereList[sphereNo].nome);
+          $("#name").text(sphereList[sphereNo].name);
 
           log("post", data);
           say("Sphere updated.");
