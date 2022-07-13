@@ -100,7 +100,7 @@ $(document).ready(function() {
                angle: $("#input-angle").val()
           };
           if (updating) {
-               info.id = sphere[sphereNo].id;
+               info.id = sphereList[sphereNo].id;
                updateSphere(info);
           }
           else {
