@@ -217,9 +217,6 @@ $(document).ready(function() {
                 $("#rotateY").val(parseInt(msg[3]));
                 $("#rotateZ").val(parseInt(msg[4]));
             }
-            
-            $("#rotateX, #rotateY, #rotateZ")
-           .trigger("change");
         }
     };
 });
