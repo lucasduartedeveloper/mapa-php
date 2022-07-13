@@ -91,11 +91,20 @@ $(document).ready(function() {
           });
      });
      $("#save").click(function(e) {
+          var info = {
+               name: $("#input-name").val(),
+               size: $("#input-size").val(),
+               weight: $("#input-weight").val(),
+               lat: $("#input-lat").val(),
+               lng: $("#input-lng").val(),
+               angle: $("#input-angle").val()
+          };
           if (updating) {
-              updateCube($("#input-name").val());
+              updateCube(info);
           }
           else {
-              addCube($("#input-name").val());
+              info.id = cubeList[cubeNo].id;
+              addCube(info);
           }
           $('#cube-modal').modal("hide");
      });
@@ -248,9 +257,9 @@ function getCube(id) {
 
           $("#loading").hide();
           $("#cube-container img").show();
-          $("#name").text(cubeList[cubeNo].nome);
+          $("#name").text(cubeList[cubeNo].name);
 
-          $("#input-name").val(cubeList[cubeNo].nome);
+          $("#input-name").val(cubeList[cubeNo].name);
           $("#input-size").val(cubeList[cubeNo].size);
           $("#input-weight").val(cubeList[cubeNo].weight);
           $("#input-lat").val(cubeList[cubeNo].lat);
