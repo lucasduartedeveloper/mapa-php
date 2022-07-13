@@ -177,7 +177,7 @@ $(document).ready(function() {
              .drawImage(video, 
              0, (((128/vr)-128)/2)*-1, 128, 128/vr);
 
-             addShadow();
+             //addShadow();
          }
 
          $("#rotation-label").text(
