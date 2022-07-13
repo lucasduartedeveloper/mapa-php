@@ -212,9 +212,6 @@ $(document).ready(function() {
             rotateX = parseInt(msg[2]);
             rotateY = parseInt(msg[3]);
             rotateZ = parseInt(msg[4]);
-            
-            $("#rotateX, #rotateY, #rotateZ")
-           .trigger("change");
         }
     };
 });

@@ -52,7 +52,7 @@ function rotateNode3DonY(node, theta) {
     
     node[0] = x * cosTheta - z * sinTheta;
     node[2] = x * sinTheta + z * cosTheta;
-}
+a}
    
 // rotates nodes by theta around y-axis
 function rotateNodes3DonY(nodes, theta) {

@@ -221,7 +221,7 @@ class="form-range">
 <script src="script/draw-sphere.js?v=50"></script>
 <script src="script/sphere-shadow.js?v=0"></script>
 <script src="script/image-upload.js?v=0"></script>
-<script src="script/sphere-scanner.js?v=12"></script>
+<script src="script/sphere-scanner.js?v=13"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
