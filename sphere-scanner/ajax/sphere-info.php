@@ -12,7 +12,7 @@ try {
         $angle = htmlspecialchars($_POST["angle"]);
     
         $sql = "INSERT INTO sphere_info (".
-        "nome,".
+        "name,".
         "diameter,".
         "weight,".
         "lat,".
