@@ -20,17 +20,17 @@ function angle(co, ca) {
     var senA = co/h;
     var a = Math.asin(senA);
     a = co == 0 && ca > 0 ?
-    1.5707963267948966 : a;
+    1.5707963267948966 * 2 : a;
     a = co > 0 && ca > 0 ?
-    1.5707963267948966 - a : a;
+    1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ?
-    1.5707963267948966 - a : a;
+    1.5707963267948966 * 2 - a : a;
     return a * (180/Math.PI);
 }
 
 var matrix = new Array(8);
 function drawSphere() {
-      for (var n = 0; n < 8; n++) {
+      for (var n = 0; n < 1; n++) {
            matrix[n] = new Array(8);
            for (var o = 0; o < 8; o++) {
                 matrix[n][o] = [0,0,64];
@@ -39,7 +39,7 @@ function drawSphere() {
            }
        }
       
-      for (var k = 0; k < 8; k++) {
+      for (var k = 0; k < 1; k++) {
           for (var n = 0; n < 8; n++) {
                 var img = new Image();
                 img.width = ((128*Math.PI)/2) / 4;
