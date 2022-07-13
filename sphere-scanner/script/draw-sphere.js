@@ -1,9 +1,9 @@
-var matrix = [];
+var matrix = new Array(2);
 
 function drawSphere() {
      for (var k = 0; k < 10; k++) {
           for (var n = 0; n < 10; n++) {
-                matrix[k].push([0,0,64]);
+                matrix[k][n] = [0,0,64];
                 rotateNode3DonX(matrix[k], k*36);
 
                 var img = new Image();
