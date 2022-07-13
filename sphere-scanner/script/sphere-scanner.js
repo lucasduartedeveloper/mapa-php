@@ -219,9 +219,15 @@ var gotXYZ = false;
 function getXYZ() {
      $.getJSON("ajax/sphere-defender.php", function(data) {
           var xyz = data[0].valor.split("|");
+
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
+
+          $("#rotateX").val(rotateX);
+          $("#rotateY").val(rotateY);
+          $("#rotateZ").val(rotateZ);
+
           log("get", data);
          
          $("#rotateX, #rotateY, #rotateZ")
