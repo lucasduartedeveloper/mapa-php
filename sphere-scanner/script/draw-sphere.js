@@ -8,7 +8,7 @@ function rotationX(node) {
      return angle(node[1],node[2]);
 }
 function rotationY(node) {
-     return angle(node[2],node[0]);
+     return angle(node[0],node[2]);
 }
 function rotationZ(node) {
      return angle(node[0],node[1]);
