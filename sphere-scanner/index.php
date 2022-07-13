@@ -41,7 +41,8 @@
            <span>
            <i id="globe-icon" class="fa-solid fa-globe"></i>        
            <i id="cube-icon" 
-           onclick="location.replace('/cube-scanner')"
+           onclick=
+           "location.replace('https://mapa-php.herokuapp.com/cube-scanner/')"
            class="fa-solid fa-cube"></i>
            </span>
       </p>
