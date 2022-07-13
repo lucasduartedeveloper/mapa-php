@@ -8,9 +8,21 @@ function drawSphere() {
      for (var k = 0; k < 10; k++) {
           for (var n = 0; n < 10; n++) {
                 $("#sphere-container")
-                .add(img)
-                .css("transform",
-                "translateZ(64) rotateY("+(-k * 36)+"deg)");
+                .add("img")
+                .css({ 
+                "position" :
+                "absolute",
+                "width" :
+                "13px",
+                "height" :
+                "13px",
+                "background" :
+                "#ccc",
+                "-webkit-transform-style" :
+                "preserve-3d",
+                "transform" :
+                "translateZ(64) rotateY("+(-k * 36)+"deg)"
+                });
           }
      }
 }
