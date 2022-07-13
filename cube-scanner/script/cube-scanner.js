@@ -209,9 +209,14 @@ $(document).ready(function() {
             playerId != msg[1]) {
             log("ws", msg);
 
-            rotateX = parseInt(msg[2]);
-            rotateY = parseInt(msg[3]);
-            rotateZ = parseInt(msg[4]);
+            if (msg[2] == "[]" && !authenticated) {
+                 authenticate([]);
+            }
+            else {
+                $("#rotateX").val(parseInt(msg[2]));
+                $("#rotateY").val(parseInt(msg[3]));
+                $("#rotateZ").val(parseInt(msg[4]));
+            }
             
             $("#rotateX, #rotateY, #rotateZ")
            .trigger("change");
@@ -223,9 +228,15 @@ var gotXYZ = false;
 function getXYZ() {
      $.getJSON("ajax/cube-defender.php", function(data) {
           var xyz = data[0].valor.split("|");
+          
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
           rotateZ = parseInt(xyz[2]);
+
+          $("#rotateX").val(rotateX);
+          $("#rotateY").val(rotateY);
+          $("#rotateZ").val(rotateZ);
+
           log("get", data);
          
          $("#rotateX, #rotateY, #rotateZ")

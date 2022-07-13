@@ -24,9 +24,12 @@ function authenticate(data) {
         }
     }
 
-    authenticated = maxBrightness > 30;
+    authenticated = maxBrightness > 30 || 
+    data.length == 0;
     if (authenticated) {
-        //notification.play();
+        ws.send("CUBE-SCANNER|" +
+                  playerId + "|" + "[]");
+
         $("#authentication").hide();
         $("#cube-container").show();
         $("#dropdown").show();
