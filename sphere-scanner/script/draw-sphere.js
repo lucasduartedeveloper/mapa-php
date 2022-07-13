@@ -3,16 +3,48 @@
 // Girar os anéis até fechar a esfera
 
 function rotationX(node) {
-     return angle(node[1],node[2]);
+     return angleX(node[1],node[2]);
 }
 function rotationY(node) {
-     return angle(node[0],node[2]);
+     return angleY(node[0],node[2]);
 }
 function rotationZ(node) {
-     return angle(node[0],node[1]);
+     return angleZ(node[0],node[1]);
 }
 
-function angle(co, ca) {
+function angleX(co, ca) {
+    var h = 
+    Math.sqrt(
+    Math.pow(co, 2) +
+    Math.pow(ca, 2));
+    var senA = co/h;
+    var a = Math.asin(senA);
+    a = co == 0 && ca > 0 ?
+    1.5707963267948966 * 2 : a;
+    a = co > 0 && ca < 0 ?
+    1.5707963267948966 * 2 - a : a;
+    a = co < 0 && ca < 0 ?
+    1.5707963267948966 * 2 - a : a;
+    return a * (180/Math.PI);
+}
+
+function angleY(co, ca) {
+    var h = 
+    Math.sqrt(
+    Math.pow(co, 2) +
+    Math.pow(ca, 2));
+    var senA = co/h;
+    var a = Math.asin(senA);
+    a = co == 0 && ca > 0 ?
+    1.5707963267948966 * 2 : a;
+    a = co > 0 && ca < 0 ?
+    1.5707963267948966 * 2 - a : a;
+    a = co < 0 && ca < 0 ?
+    1.5707963267948966 * 2 - a : a;
+    return a * (180/Math.PI);
+}
+
+function angleZ(co, ca) {
     var h = 
     Math.sqrt(
     Math.pow(co, 2) +
@@ -53,7 +85,8 @@ function drawSphere() {
                 var ry = rotationY(matrix[k][n]);
                 var rz = rotationZ(matrix[k][n]);
 
-                log("img", "co: "+tx+", ca: "+tz+", ry: "+ry+"deg");
+                log("rx", "co: "+ty+", ca: "+tz+", ry: "+rx+"deg");
+                //log("ry", "co: "+tx+", ca: "+tz+", rx: "+ry+"deg");
 
                 $("#sphere-container")
                 .append(img);
