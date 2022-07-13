@@ -17,7 +17,7 @@ function drawSphere() {
       for (var k = 0; k < 10; k++) {
           for (var n = 0; n < 10; n++) {
                 var img = new Image();
-                img.width = (128*MathPI) / 10;
+                img.width = (128*Math.PI) / 10;
                 img.height = (128*Math.PI) / 10;
 
                 var tx = matrix[k][n][0];
