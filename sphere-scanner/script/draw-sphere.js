@@ -1,12 +1,12 @@
 var matrix = [];
 
 function drawSphere() {
-     var img = new Image();
-     img.width = 128 / 10;
-     img.height = 128 / 10;
-
      for (var k = 0; k < 10; k++) {
           for (var n = -5; n < 5; n++) {
+                var img = new Image();
+                img.width = 128 / 10;
+                img.height = 128 / 10;
+
                 $("#sphere-container")
                 .append(img);
                 $(img)
