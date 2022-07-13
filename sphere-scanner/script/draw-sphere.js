@@ -39,6 +39,7 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
+                "translateX("+tx+"px) "+
                 "translateY("+ty+"px) "+
                 "translateZ("+tz+"px) "
                 });
