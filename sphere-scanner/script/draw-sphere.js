@@ -1,18 +1,18 @@
 var matrix = [];
 
 function drawSphere() {
-     for (var k = 0; k < 10; k++) {
-          for (var n = 0; n < 10; n++) {
-                matrix[k] = [];
-                matrix[k][n] = [0,0,64];
-                rotateNode3DonX(matrix[k][n], k*36);
-                for (var o = 0; o < 10; o++) {
-                     matrix[n] = [];
-                     matrix[n][o] = matrix[k][n];
-                     rotateNode3DonY(matrix[n][o], k*36);
-                }
-          }
-          
+      for (var n = 0; n < 10; n++) {
+           matrix[0] = [];
+           matrix[0][n] = [0,0,64];
+           rotateNode3DonX(matrix[k][n], k*36);
+           for (var o = 0; o < 10; o++) {
+                matrix[n] = [];
+                matrix[n][o] = matrix[k][n];
+                rotateNode3DonY(matrix[n][o], k*36);
+           }
+       }
+      
+      for (var k = 0; k < 10; k++) {
           for (var n = 0; n < 10; n++) {
                 var img = new Image();
                 img.width = 128 / 10;
