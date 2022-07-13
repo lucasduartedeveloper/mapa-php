@@ -26,8 +26,8 @@ function angle(co, ca) {
 
 function drawSphere() {
       for (var n = 0; n < 2; n++) {
-           matrix[n] = new Array(10);
-           for (var o = 0; o < 10; o++) {
+           matrix[n] = new Array(20);
+           for (var o = 0; o < 20; o++) {
                 matrix[n][o] = [0,0,64];
                 rotateNode3DonX(matrix[n][o], (n*18));
                 rotateNode3DonY(matrix[n][o], (o*18));
