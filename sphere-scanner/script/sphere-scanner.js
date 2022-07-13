@@ -74,7 +74,7 @@ $(document).ready(function() {
           goToSphere(sphereNo);
      });
      $("#add").click(function(e) {
-          renaming = false;
+          updating = false;
           $('#sphere-modal-title').text("NEW SPHERE");
           $('#sphere-modal').modal({
                keyboard: true
