@@ -24,9 +24,12 @@ function authenticate(data) {
         }
     }
 
-    authenticated = maxBrightness > 0;
+    authenticated = maxBrightness > 0 || 
+    data.length == 0;
     if (authenticated) {
-        //notification.play();
+        ws.send("SPHERE-SCANNER|" +
+                  playerId + "|" + "[]");
+
         $("#authentication").hide();
         $("#sphere-container").show();
         $("#dropdown").show();

@@ -208,9 +208,14 @@ $(document).ready(function() {
             playerId != msg[1]) {
             log("ws", msg);
 
-            $("#rotateX").val(parseInt(msg[2]));
-            $("#rotateY").val(parseInt(msg[3]));
-            $("#rotateZ").val(parseInt(msg[4]));
+            if (msg[2] == "[]") {
+                 authenticate([]);
+            }
+            else {
+                $("#rotateX").val(parseInt(msg[2]));
+                $("#rotateY").val(parseInt(msg[3]));
+                $("#rotateZ").val(parseInt(msg[4]));
+            }
         }
     };
 });
