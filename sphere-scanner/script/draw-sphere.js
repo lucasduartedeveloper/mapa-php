@@ -7,12 +7,10 @@ var matrix = new Array(10);
 function drawSphere() {
       for (var n = 0; n < 10; n++) {
            matrix[n] = new Array(10);
-           matrix[0][n] = [0,0,64];
-           rotateNode3DonX(matrix[0][n], n*36);
            for (var o = 0; o < 10; o++) {
-                
-                matrix[n][o] = matrix[0][o];
-                //rotateNode3DonY(matrix[n][o], n*36);
+                matrix[n][o] = [0,0,64];
+                rotateNode3DonX(matrix[n][o], n*36);
+                rotateNode3DonY(matrix[n][o], o*36);
            }
        }
       
