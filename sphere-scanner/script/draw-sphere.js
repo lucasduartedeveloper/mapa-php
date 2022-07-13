@@ -64,7 +64,7 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
-                "rotateX("+(k*18)+"deg) "+
+                "rotateX("+(rx)+"deg) "+
                 "rotateY("+(ry+90)+"deg) "
                 /*"rotateZ("+(rz)+"deg)"*/
                 });
