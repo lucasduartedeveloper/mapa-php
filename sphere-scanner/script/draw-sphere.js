@@ -20,6 +20,12 @@ function drawSphere() {
                 img.width = 128 / 10;
                 img.height = 128 / 10;
 
+                var tx = matrix[k][n][0];
+                tx = tx - (img.width/2);
+                var ty = matrix[k][n][1];
+                ty = ty - (img.height/2);
+                var tz = matrix[k][n][2];
+
                 $("#sphere-container")
                 .append(img);
                 $(img)
@@ -31,10 +37,11 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "translateX("+matrix[k][n][0]+"px) "+
-                "translateY("+matrix[k][n][1]+"px) "+
-                "translateZ("+matrix[k][n][2]+"px) "
-                /*"rotateX("+(k * 36)+"deg)"*/
+                "translateX("+tx+"px) "+
+                "translateY("+ty+"px) "+
+                "translateZ("+tz+"px) "+
+                "rotateX("+(k * 36)+"deg) " +
+                "rotateY("+(n * 36)+"deg)"
                 });
           }
      }
