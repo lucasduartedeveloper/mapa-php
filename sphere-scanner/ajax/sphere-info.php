@@ -46,7 +46,7 @@ try {
         "diameter='".$diameter.", ".
         "weight='".$weight.", ".
         "lat='".$lat.", ".
-        "long='".$lng.", ".
+        "lng='".$lng.", ".
         "angle=".$angle." ".
         "' WHERE id=".$sphereId;
     

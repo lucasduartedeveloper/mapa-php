@@ -25,7 +25,7 @@
 <link rel="stylesheet" 
          href="css/style.css?v=0">
 <link rel="stylesheet" 
-         href="css/anim/loading.css?v=0">
+         href="css/anim/loading.css?v=1">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -122,7 +122,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     SPHERE SCANNER v0.0-0.0.0
+     SPHERE SCANNER v0.1-0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
@@ -160,6 +160,26 @@ class="form-range">
         </div>
         <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
         </div>
+        <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Latitude</span>
+        </div>
+        <input id="input-lat" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Longitude</span>
+        </div>
+        <input id="input-lng" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Angle to North</span>
+        </div>
+        <input id="input-angle" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
         </p>
       </div>
       <div class="modal-footer">
@@ -196,7 +216,7 @@ class="form-range">
 
 <script src="script/sphere-shadow.js?v=0"></script>
 <script src="script/image-upload.js?v=0"></script>
-<script src="script/sphere-scanner.js?v=0"></script>
+<script src="script/sphere-scanner.js?v=1"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 

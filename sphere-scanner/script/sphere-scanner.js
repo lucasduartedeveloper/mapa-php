@@ -54,50 +54,59 @@ function stopCamera() {
 }
 
 $(document).ready(function() {
-     //say("Cube scanner initialized.");
+     //say("Sphere scanner initialized.");
 
      var video = document.getElementById("video");
      startCamera("environment");
 
      $("#previous").click(function(e) {
-          cubeNo -= 1;
-          cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
+          sphereNo -= 1;
+          sphereNo = sphereNo < 0 ? (sphereList.length-1) : sphereNo;
           
           if (listEmpty()) return;
-          goToCube(cubeNo);
+          goToSphere(sphereNo);
      });
      $("#next").click(function(e) {
-          cubeNo += 1;
-          cubeNo = cubeNo > (cubeList.length-1) ? 0 : cubeNo;
+          sphereNo += 1;
+          sphereNo = sphereNo > (sphereList.length-1) ? 0 : sphereNo;
           
           if (listEmpty()) return;
-          goToCube(cubeNo);
+          goToSphere(sphereNo);
      });
      $("#add").click(function(e) {
           renaming = false;
-          $('#sphere-modal-title').text("NEW CUBE");
+          $('#sphere-modal-title').text("NEW SPHERE");
           $('#sphere-modal').modal({
                keyboard: true
           });
      });
      $("#delete").click(function(e) {
-          deleteCube();
+          deleteSphere();
      });
      $("#name").click(function(e) {
-          renaming = true;
-          $('#sphere-modal-title').text("RENAME CUBE");
+          updating = true;
+          $('#sphere-modal-title').text("RENAME SPHERE");
           $('#sphere-modal').modal({
                keyboard: true
           });
      });
      $("#save").click(function(e) {
-          if (renaming) {
-              renameCube($("#input-name").val());
+          var info = {
+               name: $("#input-name").val(),
+               size: $("#input-size").val(),
+               diameter: $("#input-diameter").val(),
+               lat: $("#input-lat").val(),
+               lng: $("#input-lng").val(),
+               angle: $("#input-angle").val()
+          };
+          if (updating) {
+               info.id = sphere[sphereNo].id;
+               updateSphere(info);
           }
           else {
-              addCube($("#input-name").val());
+               addSphere(info);
           }
-          $('#cube-modal').modal("hide");
+          $('#sphere-modal').modal("hide");
      });
      
      $("#rotate-camera").click(function(e) {
@@ -129,7 +138,7 @@ $(document).ready(function() {
      $("#sphere-container").on("touchstart", function(e) {
          //alert("TODO: Incluir uma animação.")
          touchStart = new Date().getTime();
-         resetCube();
+         resetSphere();
      });
 
      $("#upload").click(function(e) {
@@ -231,41 +240,49 @@ function updateXYZ() {
           xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
           }).done(function(data) {
               log("post", data);
-              //say("Cube was rotated.");
+              //say("Sphere was rotated.");
      });
 }
 
-var cubeNo = 0;
-var cube = [];
-function getCube(id) {
+var sphereNo = 0;
+var sphere = [];
+function getSphere(id) {
      $("#name").text("---");
      $("#sphere-container img").hide();
      $("#loading").show();
  
      $.getJSON("ajax/sphere-face.php?sphereId="+id, 
      function(data) {
-          cube = data;
+          sphere = data;
 
           $("#loading").hide();
           $("#sphere-container img").show();
-          $("#name").text(cubeList[cubeNo].nome);
-          $("#cube-id").text(id);
+          $("#name").text(sphereList[sphereNo].nome);
+
+          $("#input-name").val(sphereList[sphereNo].name);
+          $("#input-size").val(sphereList[sphereNo].size);
+          $("#input-diametet").val(sphereList[sphereNo].weight);
+          $("#input-lat").val(sphereList[sphereNo].lat);
+          $("#input-lng").val(sphereList[sphereNo].lng);
+          $("#input-angle").val(sphereList[sphereNo].angle);
+
+          $("#sphere-id").text(id);
           $("#record-no").text(
-          (cubeNo+1)+"/"+cubeList.length);
+          (sphereNo+1)+"/"+sphereList.length);
 
           log("get", data);
-          //say("Around the cube.");
-          //say(cubeList[cubeNo].nome + " downloaded.");
+          //say("Around the sphere.");
+          //say(sphereList[sphereNo].nome + " downloaded.");
      });
 }
 
-var cubeList = [];
-function listCubes() {
+var sphereList = [];
+function listSpheres() {
      $.getJSON("ajax/sphere-info.php", 
      function(data) {
-         cubeList = data;
-         if (cubeList.length > 0) {
-             goToCube(cubeList.length-1);
+         sphereList = data;
+         if (sphereList.length > 0) {
+             goToSphere(sphereList.length-1);
          }
          else {
              $("#name").text("---");
@@ -279,34 +296,32 @@ function listCubes() {
 }
 
 function addSphere(text) {
-     $.post("ajax/sphere-info.php", {
-          name: text,
-          }).done(function(data) {
-               listCubes();
+     post(info, function(data) {
+          listSpheres();
 
-               log("post", data);
-               say("A new sphere was created.");
+          log("post", data);
+          say("A new sphere was created.");
      });
 }
 
-function goToCube(n) {
+function goToSphere(n) {
      if (listEmpty()) return;
 
-     cubeNo = n;
-     getCube(cubeList[n].id);
+     sphereNo = n;
+     getSphere(sphereList[n].id);
 }
 
-function deleteCube() {
+function deleteSphere() {
      if (listEmpty()) return;
 
-     var cubeId = cubeList[cubeNo].id;
+     var sphereId = sphereList[sphereNo].id;
      $.post("ajax/sphere-info.php", {
-          deleteId: cubeId,
+          deleteId: sphereId,
           }).done(function(data) {
-               cubeList = cubeList
-               .filter(c => c.id != cubeId);
-               if (cubeList.length > 0) {
-                   goToCube(cubeList.length-1);
+               sphereList = sphereList
+               .filter(c => c.id != sphereId);
+               if (sphereList.length > 0) {
+                   goToSphere(sphereList.length-1);
                }
                else {
                    $("#name").text("---");
@@ -323,15 +338,12 @@ function deleteCube() {
 
 var updating = false;
 function updateSphere(info) {
-     $.post("ajax/cube-info.php", {
-          cubeId: cubeList[cubeNo].id,
-          name: text,
-          }).done(function(data) {
-               cubeList[cubeNo].nome = text;
-               $("#name").text(cubeList[cubeNo].nome);
+     post(info, function(data) {
+          sphereList[sphereNo] = info;
+          $("#name").text(sphereList[sphereNo].nome);
 
-               log("post", data);
-               say("Sphere renamed.");
+          log("post", data);
+          say("Sphere updated.");
      });
 }
 
@@ -348,7 +360,7 @@ function post(info, callback) {
 }
 
 function listEmpty() {
-     if (cubeList.length == 0) {
+     if (sphereList.length == 0) {
           say("You don't have any spheres, create one first");
           return true;
      }
@@ -363,10 +375,10 @@ var faces = [
     "Top",
     "Right",
     "Bottom",
-    "Cube" ];
+    "Sphere" ];
 function setFace(id) {
     faceId = id;
-    $("#cube-face").text(faces[id]);
+    $("#sphere-face").text(faces[id]);
 }
 
 function saveFace(base64) {
@@ -386,14 +398,14 @@ function saveFace(base64) {
       }
       else {
          log("global-var", 
-         "cubeNo:"+cubeNo+", faceId:"+faceId);
-         for (var k in cube) {
-             if (cube[k].face_id == faceId)
-             cube[k].base64 = base64;
+         "sphereNo:"+sphereNo+", faceId:"+faceId);
+         for (var k in sphere) {
+             if (sphere[k].face_id == faceId)
+             sphere[k].base64 = base64;
          }
 
          $.post("ajax/sphere-face.php", {
-             cubeId: cubeList[cubeNo].id,
+             sphereId: sphereList[sphereNo].id,
              faceId: faceId,
              base64: base64,
              }).done(function(data) { 
@@ -412,17 +424,17 @@ var baseImages = [
       "img/bottom.png",
 ];
 
-function resetCube() {
+function resetSphere() {
       speaking = true;
       for (var k = 0; k < 6; k++) {
            setFace(k);
            saveFace(baseImages[k]);
       }
       setTimeout(function() { // *
-          getCube(cubeList[cubeNo].id);
+          getSphere(sphereList[sphereNo].id);
           speaking = false;
           gameOver.play();
-          //say("Cube was reseted.");
+          //say("Spherewas reseted.");
       }, 5000);
 }
 
