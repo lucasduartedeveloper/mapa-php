@@ -5,22 +5,18 @@ var matrix = new Array(10);
 // Girar os anéis até fechar a esfera
 
 function rotationX(node) {
-     var h = Math.pow(node[1], 2) +
-     Math.pow(node[2], 2);
-     return angle(node[1],node[2], h);
+     return angle(node[1],node[2]);
 }
 function rotationY(node) {
-     var h = Math.pow(node[0], 2) +
-     Math.pow(node[2], 2);
-     return angle(node[0],node[2], h);
+     return angle(node[0],node[2]);
 }
 function rotationZ(node) {
-     var h = Math.pow(node[0], 2) +
-     Math.pow(node[1], 2);
-     return angle(node[0],node[0], h);
+     return angle(node[0],node[0]);
 }
 
-function angle(co, ca, h) {
+function angle(co, ca) {
+    var h = Math.pow(co, 2) +
+     Math.pow(ca, 2);
     var senA = co/h;
     var a = Math.asin(senA);
     return a * (180/Math.PI);
