@@ -25,20 +25,20 @@ function angle(co, ca) {
 }
 
 function drawSphere() {
-      for (var n = 0; n < 20; n++) {
+      for (var n = 0; n < 10; n++) {
            matrix[n] = new Array(10);
-           for (var o = 0; o < 20; o++) {
+           for (var o = 0; o < 10; o++) {
                 matrix[n][o] = [0,0,64];
-                rotateNode3DonX(matrix[n][o], (n*18));
-                rotateNode3DonY(matrix[n][o], (o*18));
+                rotateNode3DonX(matrix[n][o], (n*36));
+                rotateNode3DonY(matrix[n][o], (o*36));
            }
        }
       
-      for (var k = 0; k < 20; k++) {
-          for (var n = 0; n < 20; n++) {
+      for (var k = 0; k < 10; k++) {
+          for (var n = 0; n < 10; n++) {
                 var img = new Image();
-                img.width = ((128*Math.PI)/2) / 10;
-                img.height = ((128*Math.PI)/2) / 10;
+                img.width = ((128*Math.PI)/2) / 5;
+                img.height = ((128*Math.PI)/2) / 5;
 
                 var tx = matrix[k][n][0];
                 var ty = matrix[k][n][1];
@@ -65,7 +65,7 @@ function drawSphere() {
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
                 "rotateX("+(rx)+"deg) "+
-                "rotateY("+(ry+90)+"deg) "
+                "rotateY("+(ry)+"deg) "
                 /*"rotateZ("+(rz)+"deg)"*/
                 });
           }
