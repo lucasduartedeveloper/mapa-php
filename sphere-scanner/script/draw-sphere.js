@@ -71,7 +71,7 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
-                /*"rotateX("+(rx)+"deg) "+*/
+                "rotateX("+(rx)+"deg) "+
                 "rotateY("+(ry)+"deg) "
                 /*"rotateZ("+(rz)+"deg)"*/
                 });
