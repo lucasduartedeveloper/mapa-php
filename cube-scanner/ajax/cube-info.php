@@ -46,7 +46,7 @@ try {
         "size='".$size."', ".
         "weight='".$weight."', ".
         "lat='".$lat."', ".
-        "long='".$lng."', ".
+        "lng='".$lng."', ".
         "angle='".$angle."' ".
         "WHERE id=".$cubeId;
     
