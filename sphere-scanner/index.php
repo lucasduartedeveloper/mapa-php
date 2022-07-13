@@ -38,7 +38,12 @@
 <div id="authentication">
       <p id="auth-header">
            LOGIN
-           <i id="globe-icon" class="fa-solid fa-globe"></i>
+           <span>
+           <i id="globe-icon" class="fa-solid fa-globe"></i>        
+           <i id="cube-icon" 
+           onclick="location.replace('/cube-scanner')"
+           class="fa-solid fa-cube"></i>
+           </span>
       </p>
       <p id="auth-footer">
            xxxxxx
@@ -122,7 +127,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     SPHERE SCANNER v1.1-0.0.1
+     SPHERE SCANNER v1.1-0.0.2
      <br>
      <span id="server-info">
      CONNECTING...
@@ -160,7 +165,6 @@ class="form-range">
         </div>
         <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
         </div>
-        <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
@@ -216,7 +220,7 @@ class="form-range">
 
 <script src="script/sphere-shadow.js?v=0"></script>
 <script src="script/image-upload.js?v=0"></script>
-<script src="script/sphere-scanner.js?v=1"></script>
+<script src="script/sphere-scanner.js?v=2"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 

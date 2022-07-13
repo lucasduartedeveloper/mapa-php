@@ -38,7 +38,12 @@
 <div id="authentication">
       <p id="auth-header">
            LOGIN
+           <span>    
            <i id="cube-icon" class="fa-solid fa-cube"></i>
+           <i id="globe-icon"
+           onclick="location.replace('/sphere-scanner')"
+           class="fa-solid fa-globe"></i>
+           </span>
       </p>
       <p id="auth-footer">
            xxxxxx
