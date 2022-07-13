@@ -124,6 +124,11 @@ $(document).ready(function() {
   
      $("#rotateX, #rotateY, #rotateZ")
      .on("change", function() {
+         ws.send("SPHERE-SCANNER|" +
+                  playerId + "|" + 
+                  rotateX.toString() + "|" + 
+                  rotateY.toString() + "|" + 
+                  rotateZ.toString());
 
          if (gotXYZ) updateXYZ();
      });
@@ -185,12 +190,6 @@ $(document).ready(function() {
          "rotateX("+ (rotateX) + "deg) "+
          "rotateY("+ (rotateY) + "deg) "+
          "rotateZ("+ (rotateZ) + "deg)");
-
-          ws.send("SPHERE-SCANNER|" +
-                  playerId + "|" + 
-                  rotateX.toString() + "|" + 
-                  rotateY.toString() + "|" + 
-                  rotateZ.toString());
      }, 100);
 
      $("#camera-canvas").click(function(e) {
