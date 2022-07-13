@@ -4,6 +4,28 @@ var matrix = new Array(10);
 // Duplicar várias vezes
 // Girar os anéis até fechar a esfera
 
+var rotationX(node) {
+     var h = Math.pow(node[1], 2) +
+     Math.pow(node[2], 2);
+     return angle(node[1],node[2], h)
+}
+var rotationY(node) {
+     var h = Math.pow(node[0], 2) +
+     Math.pow(node[2], 2);
+     return angle(node[0],node[2], h)
+}
+var rotationZ(node) {
+     var h = Math.pow(node[0], 2) +
+     Math.pow(node[1], 2);
+     return angle(node[0],node[0], h)
+}
+
+function angle(co, ca, h) {
+    var senA = co/h;
+    var a = Math.asin(senA);
+    return a * (180/Math.PI);
+}
+
 function drawSphere() {
       for (var n = 0; n < 10; n++) {
            matrix[n] = new Array(10);
@@ -24,6 +46,10 @@ function drawSphere() {
                 var ty = matrix[k][n][1];
                 var tz = matrix[k][n][2];
 
+                var rx = rotationX(matrix[k][n]);
+                var ry = rotationY(matrix[k][n]);
+                var rz = rotationZ(matrix[k][n]);
+
                 $("#sphere-container")
                 .append(img);
                 $(img)
@@ -37,12 +63,12 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "translateX("+tx+"px) "+
-                "translateY("+ty+"px) "+
-                "translateZ("+tz+"px) "+
-                "rotateX("+((k*18))+"deg) "+
-                "rotateY("+((n*18))+"deg) "+
-                "rotateZ("+((0))+"deg)"
+                "translateX("+(tx)+"px) "+
+                "translateY("+(ty)+"px) "+
+                "translateZ("+(tz)+"px) "+
+                "rotateX("+(rx)+"deg) "+
+                "rotateY("+(ry)+"deg) "+
+                "rotateZ("+(rz)+"deg)"
                 });
           }
      }
