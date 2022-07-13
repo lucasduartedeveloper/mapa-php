@@ -20,14 +20,14 @@ function angle(co, ca) {
     Math.pow(co, 2) +
     Math.pow(ca, 2));
     var senA = co/h;
-    var a = Math.asin(senA) * (180/Math.PI);
+    var a = Math.asin(senA);
     a = co == 0 && ca > 0 ?
     1.5707963267948966 * 2 : a;
     a = co > 0 && ca > 0 ?
     1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ?
     1.5707963267948966 * 2 - a : a;
-    return a;
+    return a * (180/Math.PI);
 }
 
 function drawSphere() {
