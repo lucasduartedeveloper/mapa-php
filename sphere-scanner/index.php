@@ -158,14 +158,13 @@ class="form-range">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-sm">Diameter (cm)</span>
         </div>
-        <input id="input-size" type="text" class="form-control" aria-label="Diameter" aria-describedby="inputGroup-sizing-sm">
+        <input id="input-diameter" type="text" class="form-control" aria-label="Size" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-sm">Weight (kg)</span>
         </div>
         <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
-        </div>
         </div>
         <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
