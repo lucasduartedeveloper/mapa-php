@@ -8,7 +8,7 @@ function drawSphere() {
      for (var k = 0; k < 10; k++) {
           for (var n = 0; n < 10; n++) {
                 $("#sphere-container")
-                .append("img")
+                .append(img)
                 .css({ 
                 "position" :
                 "absolute",
