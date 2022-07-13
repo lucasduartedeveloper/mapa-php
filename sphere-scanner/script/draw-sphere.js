@@ -2,7 +2,10 @@ var matrix = [];
 
 function drawSphere() {
      for (var k = 0; k < 10; k++) {
-          for (var n = -5; n < 5; n++) {
+          for (var n = 0; n < 10; n++) {
+                matrix[k].push([0,0,64]);
+                rotateNode3DonX(matrix[k], k*36);
+
                 var img = new Image();
                 img.width = 128 / 10;
                 img.height = 128 / 10;
@@ -13,19 +16,17 @@ function drawSphere() {
                 .css({ 
                 "position" :
                 "absolute",
-                "width" :
-                "13px",
-                "height" :
-                "13px",
                 "background" :
                 "#ccc",
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
                 "translateZ(64px) "+
-                "translateY("+(n*13)+"px) "+
-                "rotateX("+(k * 36)+"deg)"
+                "translateY("+matrix[k][1]+"px) "+
+                "rotateY("+(k * 36)+"deg)"
                 });
           }
      }
+
+    
 }
