@@ -34,8 +34,8 @@ function drawSphere() {
            matrix[n] = new Array(8);
            for (var o = 0; o < 8; o++) {
                 matrix[n][o] = [0,0,64];
-                rotateNode3DonX(matrix[n][o], (n*36));
-                rotateNode3DonY(matrix[n][o], (o*36));
+                rotateNode3DonX(matrix[n][o], (n*(360/8)));
+                rotateNode3DonY(matrix[n][o], (o*(360/8)));
            }
        }
       
