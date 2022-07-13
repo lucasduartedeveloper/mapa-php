@@ -351,8 +351,8 @@ function post(info, callback) {
      $.post("ajax/sphere-info.php", {
           sphereId: info.id,
           name: info.name,
-          size: info.size,
           diameter: info.diameter,
+          weight: info.weight,
           lat: info.lat,
           lng: info.lng,
           angle: info.angle,
