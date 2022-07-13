@@ -253,18 +253,18 @@ function getSphere(id) {
  
      $.getJSON("ajax/sphere-face.php?sphereId="+id, 
      function(data) {
-          sphere = data;
+          sphere = data[0];
 
           $("#loading").hide();
           $("#sphere-container img").show();
-          $("#name").text(sphereList[sphereNo].nome);
+          $("#name").text(sphere.name);
 
-          $("#input-name").val(sphereList[sphereNo].name);
-          $("#input-size").val(sphereList[sphereNo].size);
-          $("#input-diametet").val(sphereList[sphereNo].weight);
-          $("#input-lat").val(sphereList[sphereNo].lat);
-          $("#input-lng").val(sphereList[sphereNo].lng);
-          $("#input-angle").val(sphereList[sphereNo].angle);
+          $("#input-name").val(sphere.name);
+          $("#input-size").val(sphere.size);
+          $("#input-diametet").val(sphere.weight);
+          $("#input-lat").val(sphere.lat);
+          $("#input-lng").val(sphere.lng);
+          $("#input-angle").val(sphere.angle);
 
           $("#sphere-id").text(id);
           $("#record-no").text(
@@ -272,7 +272,7 @@ function getSphere(id) {
 
           log("get", data);
           //say("Around the sphere.");
-          //say(sphereList[sphereNo].nome + " downloaded.");
+          //say(sphereList[sphereNo].name + " downloaded.");
      });
 }
 

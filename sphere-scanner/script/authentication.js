@@ -28,12 +28,12 @@ function authenticate(data) {
     if (authenticated) {
         //notification.play();
         $("#authentication").hide();
-        $("#cube-container").show();
+        $("#sphere-container").show();
         $("#dropdown").show();
         $("#video").width = 128;
         $("#video").height = 128;
 
         getXYZ();
-        listCubes();
+        listSpheres();
     }
 }
