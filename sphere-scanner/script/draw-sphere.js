@@ -7,17 +7,17 @@ var matrix = new Array(10);
 var rotationX(node) {
      var h = Math.pow(node[1], 2) +
      Math.pow(node[2], 2);
-     return angle(node[1],node[2], h)
+     return angle(node[1],node[2], h);
 }
 var rotationY(node) {
      var h = Math.pow(node[0], 2) +
      Math.pow(node[2], 2);
-     return angle(node[0],node[2], h)
+     return angle(node[0],node[2], h);
 }
 var rotationZ(node) {
      var h = Math.pow(node[0], 2) +
      Math.pow(node[1], 2);
-     return angle(node[0],node[0], h)
+     return angle(node[0],node[0], h);
 }
 
 function angle(co, ca, h) {
@@ -72,6 +72,4 @@ function drawSphere() {
                 });
           }
      }
-
-    
 }
