@@ -9,8 +9,8 @@ function drawSphere() {
            matrix[n] = new Array(10);
            for (var o = 0; o < 10; o++) {
                 matrix[n][o] = [0,0,64];
-                rotateNode3DonX(matrix[n][o], (n*18));
-                rotateNode3DonY(matrix[n][o], (o*18)*-1);
+                rotateNode3DonX(matrix[n][o], (n*18)*-1);
+                rotateNode3DonY(matrix[n][o], (o*18));
            }
        }
       
