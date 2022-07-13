@@ -259,8 +259,8 @@ function getSphere(id) {
           $("#sphere-container img").show();
           $("#name").text(sphereList[sphereNo].name);
 
-          $("#input-name").val(sphereList[sphereNo].diameter);
-          $("#input-diameter").val(sphereList[sphereNo].size);
+          $("#input-name").val(sphereList[sphereNo].name);
+          $("#input-diameter").val(sphereList[sphereNo].diameter);
           $("#input-weight").val(sphereList[sphereNo].weight);
           $("#input-lat").val(sphereList[sphereNo].lat);
           $("#input-lng").val(sphereList[sphereNo].lng);
