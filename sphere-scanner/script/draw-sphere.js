@@ -1,5 +1,3 @@
-var matrix = new Array(10);
-
 // Criar um anel vertical
 // Duplicar várias vezes
 // Girar os anéis até fechar a esfera
@@ -23,28 +21,29 @@ function angle(co, ca) {
     var a = Math.asin(senA);
     a = co == 0 && ca > 0 ?
     1.5707963267948966 * 2 : a;
-    /*a = co > 0 && ca > 0 ?
-    1.5707963267948966 * 2 - a : a;*/
+    a = co > 0 && ca > 0 ?
+    1.5707963267948966 * 2 - a : a;
     a = co < 0 && ca > 0 ?
     1.5707963267948966 * 2 - a : a;
     return a * (180/Math.PI);
 }
 
+var matrix = new Array(8);
 function drawSphere() {
-      for (var n = 0; n < 10; n++) {
-           matrix[n] = new Array(10);
-           for (var o = 0; o < 10; o++) {
+      for (var n = 0; n < 8; n++) {
+           matrix[n] = new Array(8);
+           for (var o = 0; o < 8; o++) {
                 matrix[n][o] = [0,0,64];
                 rotateNode3DonX(matrix[n][o], (n*36));
                 rotateNode3DonY(matrix[n][o], (o*36));
            }
        }
       
-      for (var k = 0; k < 10; k++) {
-          for (var n = 0; n < 10; n++) {
+      for (var k = 0; k < 8; k++) {
+          for (var n = 0; n < 8; n++) {
                 var img = new Image();
-                img.width = ((128*Math.PI)/2) / 5;
-                img.height = ((128*Math.PI)/2) / 5;
+                img.width = ((128*Math.PI)/2) / 4;
+                img.height = ((128*Math.PI)/2) / 4;
 
                 var tx = matrix[k][n][0];
                 var ty = matrix[k][n][1];
