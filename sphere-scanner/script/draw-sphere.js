@@ -40,7 +40,7 @@ function drawSphere() {
                 "translateX("+tx+"px) "+
                 "translateY("+ty+"px) "+
                 "translateZ("+tz+"px) "+
-                "rotateX("+(k*36)+")"
+                "rotateX("+(k*36)+"deg)"
                 });
           }
      }
