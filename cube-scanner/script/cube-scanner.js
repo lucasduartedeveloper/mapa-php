@@ -100,10 +100,10 @@ $(document).ready(function() {
                angle: $("#input-angle").val()
           };
           if (updating) {
+              info.id = cubeList[cubeNo].id;
               updateCube(info);
           }
           else {
-              info.id = cubeList[cubeNo].id;
               addCube(info);
           }
           $('#cube-modal').modal("hide");
