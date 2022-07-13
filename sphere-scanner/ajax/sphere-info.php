@@ -42,12 +42,12 @@ try {
         $angle = htmlspecialchars($_POST["angle"]);
     
         $sql = "UPDATE sphere_info SET ".
-        "name='".$name.", ".
-        "diameter='".$diameter.", ".
-        "weight='".$weight.", ".
-        "lat='".$lat.", ".
-        "lng='".$lng.", ".
-        "angle=".$angle." ".
+        "name='".$name."', ".
+        "diameter='".$diameter."', ".
+        "weight='".$weight."', ".
+        "lat='".$lat."', ".
+        "lng='".$lng."', ".
+        "angle='".$angle."' ".
         "' WHERE id=".$sphereId;
     
         $stmt = $pdo->prepare($sql);
