@@ -22,54 +22,6 @@ function angle(co, ca) {
     return a * (180/Math.PI);
 }
 
-function angleX(co, ca) {
-    var h = 
-    Math.sqrt(
-    Math.pow(co, 2) +
-    Math.pow(ca, 2));
-    var senA = co/h;
-    var a = Math.asin(senA);
-    a = co == 0 && ca > 0 ?
-    1.5707963267948966 * 2 : a;
-    a = co < 0 && ca > 0 ?
-    1.5707963267948966 * 2 - a : a;
-    a = co > 0 && ca > 0 ?
-    1.5707963267948966 * 2 - a : a;
-    return a * (180/Math.PI);
-}
-
-function angleY(co, ca) {
-    var h = 
-    Math.sqrt(
-    Math.pow(co, 2) +
-    Math.pow(ca, 2));
-    var senA = co/h;
-    var a = Math.asin(senA);
-    a = co == 0 && ca > 0 ?
-    1.5707963267948966 * 2 : a;
-    a = co > 0 && ca < 0 ?
-    1.5707963267948966 * 2 - a : a;
-    a = co < 0 && ca < 0 ?
-    1.5707963267948966 * 2 - a : a;
-    return a * (180/Math.PI);
-}
-
-function angleZ(co, ca) {
-    var h = 
-    Math.sqrt(
-    Math.pow(co, 2) +
-    Math.pow(ca, 2));
-    var senA = co/h;
-    var a = Math.asin(senA);
-    a = co == 0 && ca > 0 ?
-    1.5707963267948966 * 2 : a;
-    a = co > 0 && ca < 0 ?
-    1.5707963267948966 * 2 - a : a;
-    a = co < 0 && ca < 0 ?
-    1.5707963267948966 * 2 - a : a;
-    return a * (180/Math.PI);
-}
-
 var matrix = new Array(8);
 function drawSphere() {
       for (var n = 0; n < 8; n++) {
@@ -114,9 +66,9 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
-                "rotateX("+(rx)+"deg) "+
-                "rotateY("+(ry)+"deg) "+
-                "rotateZ("+(rz)+"deg)"
+                "rotateX("+(n*(360/8))+"deg) "+
+                "rotateY("+(k*(360/8))+"deg) "
+                /*"rotateZ("+(rz)+"deg)"*/
                 });
           }
      }
