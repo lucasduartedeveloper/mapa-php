@@ -382,6 +382,8 @@ function setFace(id) {
 }
 
 function saveFace(base64) {
+     if (listEmpty()) return;
+
      if (faceId == 6) {
          speaking = true;
          var tts = "Digitalized ";
