@@ -122,7 +122,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     SPHERE SCANNER v0.1-0.0.1
+     SPHERE SCANNER v1.1-0.0.1
      <br>
      <span id="server-info">
      CONNECTING...
