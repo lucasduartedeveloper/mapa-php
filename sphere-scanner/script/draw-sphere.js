@@ -7,7 +7,7 @@ function drawSphere() {
            rotateNode3DonX(matrix[k][n], k*36);
            for (var o = 0; o < 10; o++) {
                 matrix[n] = new Array(10);
-                matrix[n][o] = matrix[k][n];
+                matrix[n][o] = matrix[0][n];
                 rotateNode3DonY(matrix[n][o], k*36);
            }
        }
