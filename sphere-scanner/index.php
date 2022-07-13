@@ -215,7 +215,7 @@ class="form-range">
 <script src="script/debug.js?v=0"></script>
 
 <script src="script/image-collision.js?v=0"></script>
-<script src="script/authentication.js?v=1"></script>
+<script src="script/authentication.js?v=2"></script>
 <script src="script/websocket.js?v=0"></script>
 
 <script src="script/draw-sphere.js?v=0"></script>
