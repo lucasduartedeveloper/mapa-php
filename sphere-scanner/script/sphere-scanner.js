@@ -270,6 +270,8 @@ function getSphere(id) {
           $("#record-no").text(
           (sphereNo+1)+"/"+sphereList.length);
 
+          drawSphere();
+
           log("get", data);
           //say("Around the sphere.");
           //say(sphereList[sphereNo].name + " downloaded.");
