@@ -17,8 +17,8 @@ function drawSphere() {
       for (var k = 0; k < 10; k++) {
           for (var n = 0; n < 10; n++) {
                 var img = new Image();
-                img.width = (128*Math.PI) / 10;
-                img.height = (128*Math.PI) / 10;
+                img.width = ((128*Math.PI)/2) / 10;
+                img.height = ((128*Math.PI)/2) / 10;
 
                 var tx = matrix[k][n][0];
                 tx = tx - (img.width/2);
@@ -39,9 +39,6 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "rotateX("+(k * 36)+"deg) "+
-                "rotateY("+(n * 36)+"deg) "+
-                "translateX("+tx+"px) "+
                 "translateY("+ty+"px) "+
                 "translateZ("+tz+"px) "
                 });
