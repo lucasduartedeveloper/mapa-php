@@ -22,7 +22,7 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "translateZ(64px) "+
+                "translateZ("+matrix[k][n][0]+"px) "+
                 "translateY("+matrix[k][n][1]+"px) "+
                 "rotateY("+(k * 36)+"deg)"
                 });
