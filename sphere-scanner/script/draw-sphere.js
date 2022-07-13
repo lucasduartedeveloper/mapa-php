@@ -5,7 +5,7 @@ var matrix = new Array(10);
 // Girar os anéis até fechar a esfera
 
 function rotationX(node) {
-     return angle(node[2],node[1]);
+     return angle(node[1],node[2]);
 }
 function rotationY(node) {
      return angle(node[2],node[0]);
