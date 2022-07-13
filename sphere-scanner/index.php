@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=0">
+         href="css/style.css?v=1">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=1">
 
@@ -38,7 +38,7 @@
 <div id="authentication">
       <p id="auth-header">
            LOGIN
-           <i id="cube-icon" class="fa-solid fa-globe"></i>
+           <i id="globe-icon" class="fa-solid fa-globe"></i>
       </p>
       <p id="auth-footer">
            xxxxxx
@@ -49,7 +49,7 @@
 <i id="delete" class="fa-solid fa-circle-xmark"></i>
 <i id="previous" class="fa-solid fa-caret-left"></i>
 <i id="next" class="fa-solid fa-caret-right"></i>
-<span id="cube-id"></span>
+<span id="sphere-id"></span>
 <span id="record-no"></span>
 
 <div id="sphere-container">
@@ -106,7 +106,7 @@ class="form-range">
 
 <div id="dropdown" style="display:none"
      class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle" type="button" id="cube-face" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="sphere-face" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Front
      </button>
      <div id="face-menu" class="dropdown-menu" 
@@ -117,7 +117,7 @@ class="form-range">
            <a class="dropdown-item" href="#" onclick="setFace(3);">Top</a>
            <a class="dropdown-item" href="#" onclick="setFace(4);">Right</a>
            <a class="dropdown-item" href="#" onclick="setFace(5);">Bottom</a>
-           <a class="dropdown-item" href="#" onclick="setFace(6);">Cube</a>
+           <a class="dropdown-item" href="#" onclick="setFace(6);">Sphere</a>
      </div>
 </div>
 
@@ -130,11 +130,11 @@ class="form-range">
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
 </p>
 
-<div id="cube-modal" class="modal" tabindex="-1" role="dialog">
+<div id="sphere-modal" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 id="cube-modal-title" 
+        <h5 id="sphere-modal-title" 
         class="modal-title">NEW SPHERE</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>

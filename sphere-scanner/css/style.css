@@ -76,7 +76,7 @@ html, body {
      left: 5vw;
      font-size: 40px;
 }
-#cube-id {
+#sphere-id {
      position: fixed;
      top: 2vh;
      right: 5vw;
@@ -144,7 +144,7 @@ html, body {
     margin: 0px;
 }
 #dropdown,
-#cube-modal {
+#sphere-modal {
     z-index: 99999;
 }
 
