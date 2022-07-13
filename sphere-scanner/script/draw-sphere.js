@@ -15,8 +15,10 @@ function rotationZ(node) {
 }
 
 function angle(co, ca) {
-    var h = Math.pow(co, 2) +
-    Math.pow(ca, 2);
+    var h = 
+    Math.sqrt(
+    Math.pow(co, 2) +
+    Math.pow(ca, 2));
     var senA = co/h;
     var a = Math.asin(senA) * (180/Math.PI);
     return a;
@@ -62,9 +64,9 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
-                "rotateX("+(rx)+"deg) "+
-                "rotateY("+(ry)+"deg) "+
-                "rotateZ("+(rz)+"deg)"
+                /*"rotateX("+(rx)+"deg) "+*/
+                "rotateY("+(ry)+"deg) "
+                /*"rotateZ("+(rz)+"deg)"*/
                 });
           }
      }
