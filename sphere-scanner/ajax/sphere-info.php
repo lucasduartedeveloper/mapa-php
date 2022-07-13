@@ -5,9 +5,28 @@ try {
     echo $_POST["post"];
     if (!isset($_POST["sphereId"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
+        $diameter = htmlspecialchars($_POST["diameter"]);
+        $weight = htmlspecialchars($_POST["weight"]);
+        $lat = htmlspecialchars($_POST["lat"]);
+        $lng = htmlspecialchars($_POST["lng"]);
+        $angle = htmlspecialchars($_POST["angle"]);
     
-        $sql = "INSERT INTO sphere_info (nome) VALUES ('".$name."');";
-    
+        $sql = "INSERT INTO sphere_info (".
+        "nome,".
+        "diameter,".
+        "weight,".
+        "lat,".
+        "lng,".
+        "angle ".
+        ") VALUES ('".
+        "'".$name."',".
+        "'".$diameter."',".
+        "'".$weight."',".
+        "'".$lat."',".
+        "'".$lng."',".
+        "'".$angle."' ".
+        ");";
+
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
     
@@ -16,8 +35,20 @@ try {
     else if (isset($_POST["sphereId"])) {
         $sphereId = htmlspecialchars($_POST["sphereId"]);
         $name = htmlspecialchars($_POST["name"]);
+        $diameter = htmlspecialchars($_POST["diameter"]);
+        $weight = htmlspecialchars($_POST["weight"]);
+        $lat = htmlspecialchars($_POST["lat"]);
+        $lng = htmlspecialchars($_POST["lng"]);
+        $angle = htmlspecialchars($_POST["angle"]);
     
-        $sql = "UPDATE sphere_info SET nome='".$name."' WHERE id=".$sphereId;
+        $sql = "UPDATE sphere_info SET ".
+        "name='".$name.", ".
+        "diameter='".$diameter.", ".
+        "weight='".$weight.", ".
+        "lat='".$lat.", ".
+        "long='".$lng.", ".
+        "angle=".$angle." ".
+        "' WHERE id=".$sphereId;
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

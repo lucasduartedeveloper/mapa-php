@@ -129,7 +129,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v49.14-30.2.207
+     CUBE SCANNER v49.14-30.2.208
      <br>
      <span id="server-info">
      CONNECTING...
@@ -167,6 +167,24 @@ class="form-range">
         </div>
         <input id="input-weight" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
         </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Latitude</span>
+        </div>
+        <input id="input-lat" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Longitude</span>
+        </div>
+        <input id="input-lng" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Angle to North</span>
+        </div>
+        <input id="input-angle" type="text" class="form-control" aria-label="Weight" aria-describedby="inputGroup-sizing-sm">
+        </div>
         </p>
       </div>
       <div class="modal-footer">
@@ -203,7 +221,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=207"></script>
+<script src="script/cube-scanner.js?v=208"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 

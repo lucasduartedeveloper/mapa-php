@@ -5,8 +5,27 @@ try {
     echo $_POST["post"];
     if (!isset($_POST["cubeId"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
+        $size = htmlspecialchars($_POST["size"]);
+        $weight = htmlspecialchars($_POST["weight"]);
+        $lat = htmlspecialchars($_POST["lat"]);
+        $lng = htmlspecialchars($_POST["lng"]);
+        $angle = htmlspecialchars($_POST["angle"]);
     
-        $sql = "INSERT INTO cube_info (nome) VALUES ('".$name."');";
+        $sql = "INSERT INTO cube_info (".
+        "name,".
+        "size,".
+        "weight,".
+        "lat,".
+        "lng,".
+        "angle ".
+        ") VALUES (".
+        "'".$name."',".
+        "'".$size."',".
+        "'".$weight."',".
+        "'".$lat."',".
+        "'".$lng."',".
+        "'".$angle."' ".
+        ");";
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -16,8 +35,20 @@ try {
     else if (isset($_POST["cubeId"])) {
         $cubeId = htmlspecialchars($_POST["cubeId"]);
         $name = htmlspecialchars($_POST["name"]);
+        $size = htmlspecialchars($_POST["size"]);
+        $weight = htmlspecialchars($_POST["weight"]);
+        $lat = htmlspecialchars($_POST["lat"]);
+        $lng = htmlspecialchars($_POST["lng"]);
+        $angle = htmlspecialchars($_POST["angle"]);
     
-        $sql = "UPDATE cube_info SET nome='".$name."' WHERE id=".$cubeId;
+        $sql = "UPDATE cube_info SET ".
+        "nome='".$name."', ".
+        "size='".$size."', ".
+        "weight='".$weight."', ".
+        "lat='".$lat."', ".
+        "long='".$lng."', ".
+        "angle='".$angle."' ".
+        "WHERE id=".$cubeId;
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

@@ -74,7 +74,7 @@ $(document).ready(function() {
           goToCube(cubeNo);
      });
      $("#add").click(function(e) {
-          renaming = false;
+          updating = false;
           $('#cube-modal-title').text("NEW CUBE");
           $('#cube-modal').modal({
                keyboard: true
@@ -84,15 +84,15 @@ $(document).ready(function() {
           deleteCube();
      });
      $("#name").click(function(e) {
-          renaming = true;
+          updating = true;
           $('#cube-modal-title').text("RENAME CUBE");
           $('#cube-modal').modal({
                keyboard: true
           });
      });
      $("#save").click(function(e) {
-          if (renaming) {
-              renameCube($("#input-name").val());
+          if (updating) {
+              updateCube($("#input-name").val());
           }
           else {
               addCube($("#input-name").val());
@@ -249,6 +249,14 @@ function getCube(id) {
           $("#loading").hide();
           $("#cube-container img").show();
           $("#name").text(cubeList[cubeNo].nome);
+
+          $("#input-name").val(cubeList[cubeNo].nome);
+          $("#input-size").val(cubeList[cubeNo].size);
+          $("#input-weight").val(cubeList[cubeNo].weight);
+          $("#input-lat").val(cubeList[cubeNo].lat);
+          $("#input-lng").val(cubeList[cubeNo].lng);
+          $("#input-angle").val(cubeList[cubeNo].angle);
+
           $("#cube-id").text(id);
           $("#record-no").text(
           (cubeNo+1)+"/"+cubeList.length);
@@ -278,10 +286,8 @@ function listCubes() {
      });
 }
 
-function addCube(text) {
-     $.post("ajax/cube-info.php", {
-          name: text,
-          }).done(function(data) {
+function addCube(info) {
+     post(info, function(data) {
                listCubes();
 
                log("post", data);
@@ -321,18 +327,27 @@ function deleteCube() {
      });
 }
 
-var renaming = false;
-function renameCube(text) {
-     $.post("ajax/cube-info.php", {
-          cubeId: cubeList[cubeNo].id,
-          name: text,
-          }).done(function(data) {
-               cubeList[cubeNo].nome = text;
-               $("#name").text(cubeList[cubeNo].nome);
+var updating = false;
+function updateCube(info) {
+     post(info, function(data) {
+          cubeList[cubeNo] = info;
+          $("#name").text(info.name);
 
-               log("post", data);
-               say("Cube renamed.");
+          log("post", data);
+          say("Cube updated.");
      });
+}
+
+function post(info, callback) {
+     $.post("ajax/cube-info.php", {
+          cubeId: info.id,
+          name: info.name,
+          size: info.size,
+          weight: info.weight,
+          lat: info.lat,
+          lng: info.lng,
+          angle: info.angle,
+          }).done(callback);
 }
 
 function listEmpty() {
