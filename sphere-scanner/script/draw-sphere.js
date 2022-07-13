@@ -22,7 +22,7 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "translateZ(64) rotateY("+(-k * 36)+"deg)"
+                "translateZ(64) rotateY("+(k * 36)+"deg)"
                 });
           }
      }
