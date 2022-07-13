@@ -93,8 +93,8 @@ $(document).ready(function() {
      $("#save").click(function(e) {
           var info = {
                name: $("#input-name").val(),
-               size: $("#input-size").val(),
                diameter: $("#input-diameter").val(),
+               weight: $("#input-weight").val(),
                lat: $("#input-lat").val(),
                lng: $("#input-lng").val(),
                angle: $("#input-angle").val()

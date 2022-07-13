@@ -11,21 +11,21 @@ try {
         $lng = htmlspecialchars($_POST["lng"]);
         $angle = htmlspecialchars($_POST["angle"]);
     
-        $sql = "INSERT INTO sphere_info (".
+        $sql = "INSERT INTO sphere_info ( ".
         "name,".
         "diameter,".
         "weight,".
         "lat,".
         "lng,".
-        "angle ".
-        ") VALUES ('".
+        "angle".
+        " ) VALUES ( ".
         "'".$name."',".
         "'".$diameter."',".
         "'".$weight."',".
         "'".$lat."',".
         "'".$lng."',".
-        "'".$angle."' ".
-        ");";
+        "'".$angle."'".
+        " );";
 
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

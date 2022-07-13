@@ -11,21 +11,21 @@ try {
         $lng = htmlspecialchars($_POST["lng"]);
         $angle = htmlspecialchars($_POST["angle"]);
     
-        $sql = "INSERT INTO cube_info (".
+        $sql = "INSERT INTO cube_info ( ".
         "name,".
         "size,".
         "weight,".
         "lat,".
         "lng,".
-        "angle ".
-        ") VALUES (".
+        "angle".
+        " ) VALUES ( ".
         "'".$name."',".
         "'".$size."',".
         "'".$weight."',".
         "'".$lat."',".
         "'".$lng."',".
-        "'".$angle."' ".
-        ");";
+        "'".$angle."'".
+        " );";
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
