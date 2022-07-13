@@ -25,7 +25,7 @@ function angle(co, ca) {
 }
 
 function drawSphere() {
-      for (var n = 0; n < 1; n++) {
+      for (var n = 0; n < 2; n++) {
            matrix[n] = new Array(10);
            for (var o = 0; o < 10; o++) {
                 matrix[n][o] = [0,0,64];
@@ -34,7 +34,7 @@ function drawSphere() {
            }
        }
       
-      for (var k = 0; k < 1; k++) {
+      for (var k = 0; k < 2; k++) {
           for (var n = 0; n < 10; n++) {
                 var img = new Image();
                 img.width = ((128*Math.PI)/2) / 10;
@@ -64,7 +64,7 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
-                /*"rotateX("+(rx)+"deg) "+*/
+                "rotateX("+(rx)+"deg) "+
                 "rotateY("+(ry)+"deg) "
                 /*"rotateZ("+(rz)+"deg)"*/
                 });
