@@ -4,17 +4,17 @@ var matrix = new Array(10);
 // Duplicar várias vezes
 // Girar os anéis até fechar a esfera
 
-var rotationX(node) {
+function rotationX(node) {
      var h = Math.pow(node[1], 2) +
      Math.pow(node[2], 2);
      return angle(node[1],node[2], h);
 }
-var rotationY(node) {
+function rotationY(node) {
      var h = Math.pow(node[0], 2) +
      Math.pow(node[2], 2);
      return angle(node[0],node[2], h);
 }
-var rotationZ(node) {
+function rotationZ(node) {
      var h = Math.pow(node[0], 2) +
      Math.pow(node[1], 2);
      return angle(node[0],node[0], h);
