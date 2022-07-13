@@ -278,7 +278,7 @@ function listCubes() {
      });
 }
 
-function addCube(text) {
+function addSphere(text) {
      $.post("ajax/sphere-info.php", {
           name: text,
           }).done(function(data) {
@@ -317,12 +317,12 @@ function deleteCube() {
                }
 
                log("post", data);
-               say("Cube deleted.");
+               say("Sphere deleted.");
      });
 }
 
-var renaming = false;
-function renameCube(text) {
+var updating = false;
+function updateSphere(info) {
      $.post("ajax/cube-info.php", {
           cubeId: cubeList[cubeNo].id,
           name: text,
@@ -333,6 +333,18 @@ function renameCube(text) {
                log("post", data);
                say("Sphere renamed.");
      });
+}
+
+function post(info, callback) {
+     $.post("ajax/sphere-info.php", {
+          sphereId: info.id,
+          name: info.name,
+          size: info.size,
+          diameter: info.diameter,
+          lat: info.lat,
+          lng: info.lng,
+          angle: info.angle,
+          }).done(callback);
 }
 
 function listEmpty() {

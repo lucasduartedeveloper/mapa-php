@@ -42,7 +42,7 @@ try {
         $angle = htmlspecialchars($_POST["angle"]);
     
         $sql = "UPDATE cube_info SET ".
-        "nome='".$name."', ".
+        "name='".$name."', ".
         "size='".$size."', ".
         "weight='".$weight."', ".
         "lat='".$lat."', ".
