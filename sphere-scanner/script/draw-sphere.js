@@ -18,8 +18,8 @@ function angle(co, ca) {
     var h = Math.pow(co, 2) +
      Math.pow(ca, 2);
     var senA = co/h;
-    var a = Math.asin(senA);
-    return a * (180/Math.PI);
+    var a = Math.asin(senA) * (180/Math.PI);
+    return (Math.PI / a) * 180;
 }
 
 function drawSphere() {
