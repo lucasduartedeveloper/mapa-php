@@ -48,7 +48,7 @@ try {
         "lat='".$lat."', ".
         "lng='".$lng."', ".
         "angle='".$angle."' ".
-        "' WHERE id=".$sphereId;
+        " WHERE id=".$sphereId;
     
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
