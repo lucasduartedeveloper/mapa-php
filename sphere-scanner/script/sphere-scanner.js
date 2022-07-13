@@ -208,7 +208,7 @@ $(document).ready(function() {
             playerId != msg[1]) {
             log("ws", msg);
 
-            if (msg[2] == "[]") {
+            if (msg[2] == "[]" && !authenticated) {
                  authenticate([]);
             }
             else {
