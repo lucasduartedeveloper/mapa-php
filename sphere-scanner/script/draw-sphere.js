@@ -14,12 +14,12 @@ function rotationZ(node) {
      return angle(node[0],node[0]);
 }
 
-function angle(ca, co) {
+function angle(co, ca) {
     var h = Math.pow(co, 2) +
     Math.pow(ca, 2);
     var senA = co/h;
     var a = Math.asin(senA) * (180/Math.PI);
-    return (Math.PI / a) * 180;
+    return a;
 }
 
 function drawSphere() {
