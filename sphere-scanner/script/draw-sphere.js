@@ -53,7 +53,7 @@ function drawSphere() {
                 var ry = rotationY(matrix[k][n]);
                 var rz = rotationZ(matrix[k][n]);
 
-                log("ry", ry+"deg");
+                log("img", "tx: "+tx+", tz: "+", ry: "+ry+"deg");
 
                 $("#sphere-container")
                 .append(img);
