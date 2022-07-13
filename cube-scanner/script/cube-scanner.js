@@ -253,18 +253,18 @@ function getCube(id) {
  
      $.getJSON("ajax/cube-face.php?cubeId="+id, 
      function(data) {
-          cube = data[0];
+          cube = data;
 
           $("#loading").hide();
           $("#cube-container img").show();
-          $("#name").text(cube.name);
+          $("#name").text(cubeList[cubeNo].name);
 
-          $("#input-name").val(cube.name);
-          $("#input-size").val(cube.size);
-          $("#input-weight").val(cube.weight);
-          $("#input-lat").val(cube.lat);
-          $("#input-lng").val(cube.lng);
-          $("#input-angle").val(cube.angle);
+          $("#input-name").val(cubeList[cubeNo].name);
+          $("#input-size").val(cubeList[cubeNo].size);
+          $("#input-weight").val(cubeList[cubeNo].weight);
+          $("#input-lat").val(cubeList[cubeNo].lat);
+          $("#input-lng").val(cubeList[cubeNo].lng);
+          $("#input-angle").val(cubeList[cubeNo].angle);
 
           $("#cube-id").text(id);
           $("#record-no").text(
@@ -272,7 +272,7 @@ function getCube(id) {
 
           log("get", data);
           //say("Around the cube.");
-          //say(cube.name + " downloaded.");
+          //say(cubeList[cubeNo].name + " downloaded.");
      });
 }
 
