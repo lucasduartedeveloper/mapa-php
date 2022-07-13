@@ -65,7 +65,7 @@ function drawSphere() {
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px) "+
                 /*"rotateX("+(rx)+"deg) "+*/
-                "rotateY("+(ry)+"deg) "
+                "rotateY("+(ry+90)+"deg) "
                 /*"rotateZ("+(rz)+"deg)"*/
                 });
           }
