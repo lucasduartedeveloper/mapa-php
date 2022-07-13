@@ -30,17 +30,17 @@ function angle(co, ca) {
 
 var matrix = new Array(8);
 function drawSphere() {
-      for (var n = 0; n < 1; n++) {
-           matrix[n] = new Array(8);
-           for (var o = 0; o < 8; o++) {
+      for (var n = 0; n < 8; n++) {
+           matrix[n] = new Array(1);
+           for (var o = 0; o < 1; o++) {
                 matrix[n][o] = [0,0,64];
                 rotateNode3DonX(matrix[n][o], (n*(360/8)));
                 rotateNode3DonY(matrix[n][o], (o*(360/8)));
            }
        }
       
-      for (var k = 0; k < 1; k++) {
-          for (var n = 0; n < 8; n++) {
+      for (var k = 0; k < 8; k++) {
+          for (var n = 0; n < 1; n++) {
                 var img = new Image();
                 img.width = ((128*Math.PI)/2) / 4;
                 img.height = ((128*Math.PI)/2) / 4;
