@@ -224,6 +224,6 @@ class="form-range">
 <script src="script/sphere-scanner.js?v=12"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-
+<script>eruda.init();</script>
 </body>
 </html> 
