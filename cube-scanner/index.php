@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=49">
+         href="css/style.css?v=50">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -136,7 +136,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v49.14-30.2.234
+     CUBE SCANNER v50.14-30.2.235
      <br>
      <span id="server-info">
      CONNECTING...
@@ -230,7 +230,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=234"></script>
+<script src="script/cube-scanner.js?v=235"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

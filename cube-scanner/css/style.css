@@ -205,7 +205,9 @@ html, body {
 #cube-modal {
     z-index: 99999;
 }
-
+#get-position {
+    color: #000;
+}
 #version-info {
     text-align: left;
     position: fixed;

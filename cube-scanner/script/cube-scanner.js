@@ -517,11 +517,11 @@ function say(text) {
 // Localização melhor
 var GPS = true;
 var position = false;
-function success(position) {
+function success(pos) {
      if (GPS = false) return;
      position = {
-          lat : position.coords.latitude,
-          lng : position.coords.longitude
+          lat : pos.coords.latitude,
+          lng : pos.coords.longitude
      };
 }
 
