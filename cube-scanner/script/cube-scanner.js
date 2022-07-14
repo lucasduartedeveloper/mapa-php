@@ -5,6 +5,7 @@ setTimeout(function(e) {
 
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
+var gettingHit = new Audio("audio/getting-hit.wav");
 var gameOver = new Audio("audio/game-over.wav");
 
 debug = true;
@@ -443,7 +444,7 @@ function resetCube() {
       setTimeout(function() { // *
           getCube(cubeList[cubeNo].id);
           speaking = false;
-          gameOver.play();
+          gettingHit.play();
           //say("Cube was reseted.");
       }, 5000);
 }
