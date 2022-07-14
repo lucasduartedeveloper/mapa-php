@@ -433,8 +433,8 @@ function saveFace(base64) {
              tts += k > 0 && k < 5 ?
              ", " : k> 0 ? " and " : "";
              tts += faces[k]; */
-             tts += faces[faceId];
          }
+         tts += faces[faceId];
          tts += ".";
          speaking = false;
          say(tts);
