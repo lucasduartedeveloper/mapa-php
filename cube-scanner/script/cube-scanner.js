@@ -422,6 +422,7 @@ function saveFace(base64) {
                       face_id: faceId,
                       base64: base64
                   });
+                  return;
              }
          }
 
