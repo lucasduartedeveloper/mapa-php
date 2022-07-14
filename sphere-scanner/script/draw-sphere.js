@@ -58,6 +58,7 @@ function drawSphere() {
                 var img = new Image();
                 img.width = ((128*Math.PI)/2) / 4;
                 img.height = ((128*Math.PI)/2) / 4;
+                img.id = k+"/"+n;
 
                 var tx = matrix[k][n][0];
                 var ty = matrix[k][n][1];
@@ -70,11 +71,15 @@ function drawSphere() {
                 $("#sphere-container")
                 .append(img);
                 $(img)
-                .css({ 
+                .css({    
+                "content" :
+                img.id,
                 "position" :
                 "absolute",
+                "color" :
+                "rgb(255,255,255)",
                 "background" :
-                "rgb("+(n*20)+","+(n*20)+","+(n*20)+")",
+                "rgb(0,0,0)",
                 "border" :
                 "2px solid #fff",
                 "-webkit-transform-style" :
