@@ -66,6 +66,9 @@ $(document).ready(function() {
           
           if (listEmpty()) return;
           goToCube(cubeNo);
+          ws.send("CUBE-SCANNER|" +
+                  playerId + "|CUBE-UPD|" + 
+                  cubeNo);
      });
      $("#next").click(function(e) {
           cubeNo += 1;
@@ -73,6 +76,9 @@ $(document).ready(function() {
           
           if (listEmpty()) return;
           goToCube(cubeNo);
+          ws.send("CUBE-SCANNER|" +
+                  playerId + "|CUBE-UPD|" + 
+                  cubeNo);
      });
      $("#add").click(function(e) {
           updating = false;
@@ -224,6 +230,15 @@ $(document).ready(function() {
 
             if (msg[2] == "[]" && !authenticated) {
                  authenticate([]);
+            }
+            if (msg[2] == "CUBE-UPD" && !authenticated) {
+                 cubeNo = parseInt(msg[3]);
+                 goToCube(cubeNo);
+            }
+            if (msg[2] == "LIST-UPD" && !authenticated) {
+                 cubeNo = parseInt(msg[3]);
+                 listCubes();
+                 goToCube(cubeNo);
             }
             else {
                 $("#rotateX").val(parseInt(msg[2]));
