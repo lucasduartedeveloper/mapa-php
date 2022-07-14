@@ -411,11 +411,17 @@ function saveFace(base64) {
          log("global-var", 
          "cubeNo:"+cubeNo+", faceId:"+faceId);
          for (var k in cube) {
+             var hasFace = false;
              if (cube[k].face_id == faceId) {
                   cube[k].base64 = base64;
+                  hasFace = true; // return
              }
-             else {
-                  cube.push({ base64: base64});
+             if (!hasFace)
+                  cube.push({ 
+                      cube_id: cube[k].cube_id,
+                      face_id: faceId,
+                      base64: base64
+                  });
              }
          }
 
