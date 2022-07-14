@@ -254,7 +254,7 @@ function updateXYZ() {
 }
 
 var cubeNo = 0;
-var cube = new Array(6);
+var cube = [];
 function getCube(id) {
      $("#name").text("---");
      $("#cube-container img").hide();
