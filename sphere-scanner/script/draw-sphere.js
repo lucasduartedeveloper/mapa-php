@@ -63,8 +63,7 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "rotate3D(
-                 1,1,0,"+(n*((360/8)))+"deg) "+
+                "rotate3D(1,1,0,"+(n*((360/8)))+"deg) "+
                 //"rotateX("+(n*((360/8)))+"deg) "+
                 //"rotateY("+(k*((360/8)))+"deg) " +
                 /*"rotateZ("+(rz)+"deg)"*/
