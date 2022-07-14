@@ -218,7 +218,7 @@ class="form-range">
 <script src="script/authentication.js?v=3"></script>
 <script src="script/websocket.js?v=0"></script>
 
-<script src="script/draw-sphere.js?v=109"></script>
+<script src="script/draw-sphere.js?v=110"></script>
 <script src="script/sphere-shadow.js?v=1"></script>
 <script src="script/image-upload.js?v=0"></script>
 <script src="script/sphere-scanner.js?v=19"></script>

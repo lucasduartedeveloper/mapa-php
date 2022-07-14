@@ -45,7 +45,7 @@ console.log(angle(5,-5));
 var matrix = new Array(8);
 function drawSphere() {
       for (var n = 0; n < 8; n++) {
-           matrix[n] = new Array(1);
+           matrix[n] = new Array(8);
            for (var o = 0; o < 8; o++) {
                 matrix[n][o] = [0,0,64];
                 rotateNode3DonX(matrix[n][o], (n*(360/8)));
