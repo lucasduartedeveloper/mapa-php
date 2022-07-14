@@ -206,7 +206,8 @@ html, body {
     z-index: 99999;
 }
 #modal-footer-left {
-    width: 100%;
+    position: absolute;
+    left: 0px;
     color: #000;
     text-align: left;
 }
