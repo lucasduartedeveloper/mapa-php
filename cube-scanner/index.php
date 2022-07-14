@@ -199,7 +199,7 @@ class="form-range">
             <i id="get-location"
             class="fa-solid fa-location-dot"></i>
             <i id="map"
-      
+            class="fa-regular fa-map"></i>
         </span>
         <button id="save" type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
