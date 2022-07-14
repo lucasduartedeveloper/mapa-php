@@ -100,6 +100,10 @@ $(document).ready(function() {
                keyboard: true
           });
      });
+     $("#get-location").click(function(e) {
+          $("#input-lat").val(position.lat);
+          $("#input-lng").val(position.lng)
+     });
      $("#save").click(function(e) {
           var info = {
                name: $("#input-name").val(),
@@ -118,7 +122,6 @@ $(document).ready(function() {
           }
           $('#cube-modal').modal("hide");
      });
-     
      $("#rotate-camera").click(function(e) {
           if (cameraMode == "environment") {
                cameraMode = "user";
@@ -510,3 +513,40 @@ function say(text) {
          window.speechSynthesis.speak(msg);
     }
 }
+
+// Localização melhor
+var GPS = true;
+var position = false;
+function success(position) {
+     if (GPS = false) return;
+     position = {
+          lat : position.coords.latitude,
+          lng : position.coords.longitude
+     };
+}
+
+function error(error) {
+  switch(error.code)  {
+    case error.PERMISSION_DENIED:
+      console.log("Usuário rejeitou a solicitação de Geolocalização.");
+      //setInterval(reload, 5000);
+      break;
+    case error.POSITION_UNAVAILABLE:
+      console.log("Localização indisponível.");
+      break;
+    case error.TIMEOUT:
+      console.log("A requisição expirou.");
+      break;
+    case error.UNKNOWN_ERROR:
+      console.log("Algum erro desconhecido aconteceu.");
+      break;
+    }
+}
+
+const options = {
+  enableHighAccuracy: true,
+  maximumAge: 0,
+  timeout: 5000
+};
+
+const watchID = navigator.geolocation.watchPosition(success, error, options); 

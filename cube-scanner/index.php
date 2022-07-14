@@ -136,7 +136,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v49.14-30.2.233
+     CUBE SCANNER v49.14-30.2.234
      <br>
      <span id="server-info">
      CONNECTING...
@@ -195,6 +195,8 @@ class="form-range">
         </p>
       </div>
       <div class="modal-footer">
+        <i id="get-location"
+        class="fa-solid fa-location-dot"></i>
         <button id="save" type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
@@ -228,7 +230,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=233"></script>
+<script src="script/cube-scanner.js?v=234"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
