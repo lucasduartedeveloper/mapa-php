@@ -234,11 +234,11 @@ $(document).ready(function() {
             if (msg[2] == "[]" && !authenticated) {
                  authenticate([]);
             }
-            if (msg[2] == "CUBE-UPD") {
+            else if (msg[2] == "CUBE-UPD") {
                  cubeNo = parseInt(msg[3]);
                  goToCube(cubeNo);
             }
-            if (msg[2] == "LIST-UPD") {
+            else if (msg[2] == "LIST-UPD") {
                  cubeNo = parseInt(msg[3]);
                  listCubes();
                  goToCube(cubeNo);
