@@ -422,7 +422,7 @@ function saveFace(base64) {
                       face_id: faceId,
                       base64: base64
                   });
-                  return;
+                  hasFace = true;
              }
          }
 
@@ -452,10 +452,10 @@ function resetCube() {
            setFace(k);
            saveFace(baseImages[k]);
       }
+      gettingHit.play();
       setTimeout(function() { // *
           getCube(cubeList[cubeNo].id);
           speaking = false;
-          gettingHit.play();
           //say("Cube was reseted.");
       }, 5000);
 }
