@@ -60,6 +60,8 @@ $(document).ready(function() {
      var video = document.getElementById("video");
      startCamera("environment");
 
+     
+
      $("#previous").click(function(e) {
           cubeNo -= 1;
           cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
@@ -136,10 +138,14 @@ $(document).ready(function() {
      });
 
      var touchStart = 0;
-     $("#cube-container").on("touchstart", function(e) {
+     $("#cube-container").on("touchstart", (function(e) {
          //alert("TODO: Incluir uma animação.")
          touchStart = new Date().getTime();
-         resetCube();
+     });
+     $("#cube-container").on("touchend", (function(e) {
+         if ((new Date().getTime() - touchstart) < 500) {
+              resetCube();
+         }
      });
 
      $("#upload").click(function(e) {
@@ -384,7 +390,8 @@ var faces = [
     "Top",
     "Right",
     "Bottom",
-    "Cube" ];
+    "Cube",
+    "Secret"];
 function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[id]);
@@ -393,7 +400,7 @@ function setFace(id) {
 function saveFace(base64) {
      if (listEmpty()) return;
 
-     if (faceId == 6) {
+     if (faceId == 7) {
          speaking = true;
          var tts = "Digitalized ";
          for (var k = 0; k < 6; k++) {
@@ -443,7 +450,7 @@ var baseImages = [
       "img/left.png",
       "img/top.png",
       "img/right.png",
-      "img/bottom.png",
+      "img/bottom.png"
 ];
 
 function resetCube() {
