@@ -78,7 +78,8 @@ function drawSphere() {
                 "border" :
                 "2px solid #fff",
                 "-webkit-transform-style" :
-                "preserve-3d",
+                "preserve-3d" })
+                .animate({
                 "transform" :
                 //"rotateX("+(rx)+"deg) "+
                 //"rotateY("+(ry)+"deg) " +
@@ -86,7 +87,7 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px)"
-                });
+                }, "slow");
           }
      }
 }
