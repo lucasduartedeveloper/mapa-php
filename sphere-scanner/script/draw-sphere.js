@@ -19,6 +19,7 @@ function angle(co, ca) {
     Math.pow(ca, 2));
     var senA = co/h;
     var a = Math.asin(senA);
+    var a = Math.atan2(co, ca);
     return a * (180/Math.PI);
 }
 
@@ -47,9 +48,6 @@ function drawSphere() {
                 var ry = rotationY(matrix[k][n]);
                 var rz = rotationZ(matrix[k][n]);
 
-                //log("rx", "co: "+ty+", ca: "+tz+", ry: "+rx+"deg");
-                //log("ry", "co: "+tx+", ca: "+tz+", rx: "+ry+"deg");
-
                 $("#sphere-container")
                 .append(img);
                 $(img)
@@ -63,10 +61,9 @@ function drawSphere() {
                 "-webkit-transform-style" :
                 "preserve-3d",
                 "transform" :
-                "rotate3D("+n+","+k+",0,"+(360/8)+"deg) "+
-                //"rotateX("+(n*((360/8)))+"deg) "+
-                //"rotateY("+(k*((360/8)))+"deg) " +
-                /*"rotateZ("+(rz)+"deg)"*/
+                "rotateX("+(rx)+"deg) "+
+                "rotateY("+(ry)+"deg) " +
+                //"rotateZ("+(rz)+"deg) "+
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px)"
