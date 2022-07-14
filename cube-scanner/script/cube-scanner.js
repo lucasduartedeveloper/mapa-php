@@ -60,8 +60,6 @@ $(document).ready(function() {
      var video = document.getElementById("video");
      startCamera("environment");
 
-     
-
      $("#previous").click(function(e) {
           cubeNo -= 1;
           cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
@@ -137,14 +135,22 @@ $(document).ready(function() {
          if (gotXYZ) updateXYZ();
      });
 
+     var touchX = 0;
+     var touchY = 0;
      var touchStart = 0;
-     $("#cube-container").on("touchstart", (function(e) {
+     $("#cube-container").on("touchstart", function(e) {
          //alert("TODO: Incluir uma animação.")
+         touchX =  e.originalEvent.touches[0].pageX;
+         touchY = e.originalEvent.touches[0].pageY;
          touchStart = new Date().getTime();
      });
-     $("#cube-container").on("touchend", (function(e) {
-         if ((new Date().getTime() - touchstart) < 500) {
+     $("#cube-container").on("touchend", function(e) {
+         if ((new Date().getTime() - touchStart) < 1000) {
               resetCube();
+         }
+         else {
+              touchX =  e.originalEvent.touches[0].pageX;
+              touchY = e.originalEvent.touches[0].pageY;
          }
      });
 
@@ -390,8 +396,7 @@ var faces = [
     "Top",
     "Right",
     "Bottom",
-    "Cube",
-    "Secret"];
+    "Cube"];
 function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[id]);
