@@ -58,7 +58,7 @@ function drawSphere() {
                 var img = new Image();
                 img.width = ((128*Math.PI)/2) / 4;
                 img.height = ((128*Math.PI)/2) / 4;
-                img.id = k+"/"+n;
+                img.id = k+"-"+n;
 
                 var tx = matrix[k][n][0];
                 var ty = matrix[k][n][1];
@@ -83,7 +83,8 @@ function drawSphere() {
                 "border" :
                 "2px solid #fff",
                 "-webkit-transform-style" :
-                "preserve-3d" })
+                "preserve-3d" });     
+                $(img)
                 .animate({
                 "transform" :
                 //"rotateX("+(rx)+"deg) "+
@@ -92,7 +93,7 @@ function drawSphere() {
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px)"
-                }, "slow");
+                }, 5000);
           }
      }
 }
