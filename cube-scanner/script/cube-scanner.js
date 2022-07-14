@@ -102,7 +102,8 @@ $(document).ready(function() {
      });
      $("#get-location").click(function(e) {
           $("#input-lat").val(position.lat);
-          $("#input-lng").val(position.lng)
+          $("#input-lng").val(position.lng);
+          say("Location set.");
      });
      $("#save").click(function(e) {
           var info = {
