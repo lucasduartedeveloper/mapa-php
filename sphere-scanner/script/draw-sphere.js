@@ -44,21 +44,21 @@ console.log(angle(5,-5));
 
 var matrix = new Array(8);
 function drawSphere() {
-      for (var n = 0; n < 8; n++) {
+      for (var n = 0; n < 2; n++) {
            matrix[n] = new Array(8);
            for (var o = 0; o < 8; o++) {
                 matrix[n][o] = [0,0,64];
                 rotateNode3DonX(matrix[n][o], (n*(360/8)));
-                rotateNode3DonY(matrix[n][o], (o*(360/8)));
+                rotateNode3DonY(matrix[n][o], (o*(90)));
            }
        }
       
-      for (var k = 0; k < 8; k++) {
+      for (var k = 0; k < 2; k++) {
           for (var n = 0; n < 8; n++) {
                 var img = new Image();
                 img.width = ((128*Math.PI)/2) / 4;
                 img.height = ((128*Math.PI)/2) / 4;
-                img.id = k+"-"+n;
+                img.id = k+"/"+n;
 
                 var tx = matrix[k][n][0];
                 var ty = matrix[k][n][1];
@@ -71,9 +71,7 @@ function drawSphere() {
                 $("#sphere-container")
                 .append(img);
                 $(img)
-                .css({    
-                "content" :
-                img.id,
+                .css({ 
                 "position" :
                 "absolute",
                 "color" :
@@ -83,17 +81,15 @@ function drawSphere() {
                 "border" :
                 "2px solid #fff",
                 "-webkit-transform-style" :
-                "preserve-3d" });     
-                $(img)
-                .animate({
+                "preserve-3d",
                 "transform" :
-                //"rotateX("+(rx)+"deg) "+
-                //"rotateY("+(ry)+"deg) " +
+                "rotateX("+(n*(360/8))+"deg) "+
+                //"rotateY("+()+"deg) " +
                 //"rotateZ("+(rz)+"deg) "+
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
                 "translateZ("+(tz)+"px)"
-                }, 5000);
+                });
           }
      }
 }
