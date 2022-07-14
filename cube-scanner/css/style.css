@@ -207,7 +207,7 @@ html, body {
 }
 #modal-footer-left {
     position: absolute;
-    left: 0px;
+    left: 15px;
     color: #000;
     text-align: left;
 }
