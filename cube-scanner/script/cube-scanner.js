@@ -411,8 +411,12 @@ function saveFace(base64) {
          log("global-var", 
          "cubeNo:"+cubeNo+", faceId:"+faceId);
          for (var k in cube) {
-             if (cube[k].face_id == faceId)
-             cube[k].base64 = base64;
+             if (cube[k].face_id == faceId) {
+                  cube[k].base64 = base64;
+             }
+             else {
+                  cube.push({ base64: base64});
+             }
          }
 
          $.post("ajax/cube-face.php", {
