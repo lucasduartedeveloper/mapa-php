@@ -105,6 +105,13 @@ $(document).ready(function() {
           $("#input-lng").val(position.lng);
           say("Location set.");
      });
+     $("#map").click(function(e) {
+          location.replace("
+          http://maps.google.com/maps?z=12&t=m&q=loc:"+
+          $("#input-lat").val()+"+"+
+          $("#input-lng").val()
+          +");
+     });
      $("#save").click(function(e) {
           var info = {
                name: $("#input-name").val(),
