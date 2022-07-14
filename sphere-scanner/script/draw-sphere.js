@@ -12,15 +12,35 @@ function rotationZ(node) {
      return angle(node[0],node[1]);
 }
 
-function angle(co, ca) {
+var angle = function(co, ca) {
+    var add = 0;
+    var coPositive = co >= 0;
+    var caPositive = ca >= 0;
+
+    if (coPositive && caPositive) add =  0;
+    if (!coPositive && caPositive) add = 90;
+    if (!coPositive && !caPositive) add =  180;
+    if (coPositive && !caPositive) add =  270;
+
     var h = 
     Math.sqrt(
-    Math.pow(co, 2) +
-    Math.pow(ca, 2));
-    var senA = co/h;
+    Math.pow(Math.abs(co), 2) +
+    Math.pow(Math.abs(ca), 2));
+    var senA = Math.abs(co)/h;
     var a = Math.asin(senA);
-    return a * (180/Math.PI);
-}
+
+    return (a + ((Math.PI/180)*add)) * 
+    (180/Math.PI);
+}/*
+console.log(angle(10,0));
+console.log(angle(5,5));
+console.log(angle(0,10));
+console.log(angle(-5,5));
+console.log(angle(-10,0));
+console.log(angle(-5,-5));
+console.log(angle(0,-10));
+console.log(angle(5,-5));
+*/
 
 var matrix = new Array(8);
 function drawSphere() {
