@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=51">
+         href="css/style.css?v=52">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -136,7 +136,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v51.14-30.2.235
+     CUBE SCANNER v52.14-30.2.235
      <br>
      <span id="server-info">
      CONNECTING...
@@ -195,7 +195,9 @@ class="form-range">
         </p>
       </div>
       <div class="modal-footer">
-        <i id="get-location"
+        <span id="modal-footer-left">
+            <i id="get-location"
+        </span>
         class="fa-solid fa-location-dot"></i>
         <button id="save" type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

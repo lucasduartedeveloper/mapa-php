@@ -205,8 +205,10 @@ html, body {
 #cube-modal {
     z-index: 99999;
 }
-#get-position {
+#modal-footer-left {
+    width: 100%;
     color: #000;
+    text-align: left;
 }
 #version-info {
     text-align: left;
