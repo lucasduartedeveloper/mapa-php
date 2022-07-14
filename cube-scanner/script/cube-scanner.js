@@ -423,15 +423,17 @@ function setFace(id) {
 function saveFace(base64) {
      if (listEmpty()) return;
 
-     if (faceId == 7) {
+     if (faceId == 6) {
          speaking = true;
          var tts = "Digitalized ";
          for (var k = 0; k < 6; k++) {
              setFace(k);
              saveFace(base64);
+             /*
              tts += k > 0 && k < 5 ?
              ", " : k> 0 ? " and " : "";
-             tts += faces[k];
+             tts += faces[k]; */
+             tts += faces[faceId];
          }
          tts += ".";
          speaking = false;
