@@ -197,8 +197,8 @@ class="form-range">
       <div class="modal-footer">
         <span id="modal-footer-left">
             <i id="get-location"
+            class="fa-solid fa-location-dot"></i>
         </span>
-        class="fa-solid fa-location-dot"></i>
         <button id="save" type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
