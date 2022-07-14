@@ -81,7 +81,7 @@ function drawSphere() {
                 "preserve-3d",
                 "transform" :
                 //"rotateX("+(rx)+"deg) "+
-                "rotateY("+(ry)+"deg) " +
+                //"rotateY("+(ry)+"deg) " +
                 //"rotateZ("+(rz)+"deg) "+
                 "translateX("+(tx)+"px) "+
                 "translateY("+(ty)+"px) "+
