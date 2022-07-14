@@ -3,6 +3,9 @@ setTimeout(function(e) {
     $("#heroku").css("display","inline-block");
 }, 40000);
 
+// TODO:
+// Link delete, update and create cube
+
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
 var gettingHit = new Audio("audio/getting-hit.wav");
