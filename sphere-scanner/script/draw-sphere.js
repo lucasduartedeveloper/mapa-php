@@ -19,7 +19,6 @@ function angle(co, ca) {
     Math.pow(ca, 2));
     var senA = co/h;
     var a = Math.asin(senA);
-    var a = Math.atan2(co, ca);
     return a * (180/Math.PI);
 }
 
