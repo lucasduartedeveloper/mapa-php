@@ -311,7 +311,7 @@ $(document).ready(function() {
                  .getElementById("interface")
                  .getContext("2d")
                  .drawImage(video, 
-                 0, 0, vw, vh);
+                 0, (((sw/vr)-sw)/2)*-1, sw, sh/vr);
              }
              addShadow();
          }
