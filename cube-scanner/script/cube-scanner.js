@@ -242,13 +242,17 @@ $(document).ready(function() {
          if (gotXYZ) updateXYZ();
      });
 
+     var touchStart = 0;
+     var touchStartX = 0;
+     var touchStartY = 0;
      var touchX = 0;
      var touchY = 0;
-     var touchStart = 0;
+     var translateY = 0;
+     
      $("#cube-container").on("touchstart", function(e) {
          //alert("TODO: Incluir uma animação.")
-         touchX =  e.originalEvent.touches[0].pageX;
-         touchY = e.originalEvent.touches[0].pageY;
+         touchStartX =  e.originalEvent.touches[0].pageX;
+         touchStartY = e.originalEvent.touches[0].pageY;
          touchStart = new Date().getTime();
      });
      $("#cube-container").on("touchmove", function(e) {
@@ -256,6 +260,11 @@ $(document).ready(function() {
          touchX =  e.originalEvent.touches[0].pageX;
          touchY = e.originalEvent.touches[0].pageY;
          // hipotenuse 
+         var h = Math.sqrt(
+         Math.pow(touchX-touchStartX,2),
+         Math.pow(touchY-touchStartY,2));
+         var d = 1/128*h;
+         translateY = d;
      });
      $("#cube-container").on("touchend", function(e) {
          if ((new Date().getTime() - touchStart) < 1000) {
@@ -357,6 +366,47 @@ $(document).ready(function() {
               "Y: " + rotateY.toFixed(0) + ", " +
               "Z: " + rotateZ.toFixed(0)
          );
+
+          $(".front")          
+          .css("transform",          
+         "translateX(0px) "+
+         "translateY("+ (translateY) + "px) "+
+         "translateZ(64px) "+
+         "rotateX(0deg) "+
+         "rotateY(0deg) "+
+         "rotateZ(0deg)");
+          $(".back")         
+         .css("transform", 
+         "translateX(0px) "+
+         "translateY("+ (translateY) + "px) "+
+         "translateZ(-64px) " +
+         "rotateX(0deg) "+
+         "rotateY(180deg) "+
+         "rotateZ(0deg)");
+          $(".left")       
+         .css("transform", 
+         "translateX(-64px) "+
+         "translateY("+ (translateY) + "px) "+
+         "translateZ(0px) " +
+         "rotateX(0deg) "+
+         "rotateY(-90deg) "+
+         "rotateZ(0deg)");
+          $(".top")        
+         .css("transform", 
+         "translateX(0px) "+
+         "translateY("+ (translateY-64) + "px) "+
+         "translateZ(0px) " +
+         "rotateX(90deg) "+
+         "rotateY(0deg) "+
+         "rotateZ(0deg)");       
+          $(".right")          
+         .css("transform", 
+         "translateX(64px) "+
+         "translateY("+ (translateY) + "px) "+
+         "translateZ(0px) " +
+         "rotateX(0deg) "+
+         "rotateY(90deg) "+
+         "rotateZ(0deg)");
 
          $("#cube-container")
          .css("transform", 
