@@ -210,6 +210,21 @@ $(document).ready(function() {
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
 
+         rotateX += speedX;
+         rotateY += speedY;
+         rotateZ += speedZ;
+
+         if (rotateX > 180) rotateX = 180;
+         if (rotateX < 180) rotateX = -180;
+         if (rotateY > 180) rotateX = 180;
+         if (rotateY < 180) rotateX = -180;
+         if (rotateZ > 180) rotateX = 180;
+         if (rotateZ < 180) rotateX = -180;
+
+         $("#rotateX").val(parseInt(rotateX));
+         $("#rotateY").val(parseInt(rotateY));
+         $("#rotateZ").val(parseInt(rotateZ));
+
          if (!authenticated) {
              canvas.width = 10;
              canvas.height = 10;
