@@ -458,7 +458,7 @@ $(document).ready(function() {
             else {
                 $("#translateY").val(parseInt(msg[2]));
                 $("#rotateX").val(parseInt(msg[3]));
-                $("#rotateY").val(parseInt(msg[4));
+                $("#rotateY").val(parseInt(msg[4]));
                 $("#rotateZ").val(parseInt(msg[5]));
             }
         }
