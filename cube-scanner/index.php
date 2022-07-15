@@ -141,8 +141,8 @@ class="form-range">
      <span id="server-info">
      CONNECTING...
      </span>
-     <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
      <i id="motion" class="fa-solid fa-whiskey-glass"></i>
+     <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
 </p>
 
 <div id="cube-modal" class="modal" tabindex="-1" role="dialog">
@@ -226,7 +226,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
-<script src="script/gyro.js?v=5"></script>
+<script src="script/gyro.js?v=6"></script>
 
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=21"></script>
