@@ -245,9 +245,9 @@ $(document).ready(function() {
          }
 
          $("#rotation-label").text(
-              "Rotation X: " + rotateX + ", " +
-              "Y: " + rotateY + ", " +
-              "Z: " + rotateZ
+              "Rotation X: " + rotateX.toFixed(0) + ", " +
+              "Y: " + rotateY.toFixed(0) + ", " +
+              "Z: " + rotateZ.toFixed(0)
          );
 
          $("#cube-container")
