@@ -309,12 +309,15 @@ $(document).ready(function() {
                  context.drawImage(video, 
                  0, (((128/vr)-128)/2)*-1, 128, 128/vr);
              if (interface) {
-                 document
-                 .getElementById("interface")
+                 var canvas = document
+                 .getElementById("interface");
+                 canvas.width = sw;
+                 canvas.height = sh;
+                 canvas
                  .getContext("2d")
                  .drawImage(video, 
-                 ((vw-sh)/2)*-1, 
-                 ((vh-sw)/2)*-1, 
+                 ((vw-sw)/2)*-1, 
+                 ((vh-sh)/2)*-1, 
                  vw, vh);
              }
              addShadow();
