@@ -38,6 +38,8 @@ var interface = false;
 $("#light-switch").click(function() {
     if (!authenticated) return;
     if (interface) {
+        video.width = 128;
+        video.height = 128;
         $("#cube-container").css("z-index", "9998");
         $("#title").show();
         $("#camera-canvas").show();
@@ -48,6 +50,8 @@ $("#light-switch").click(function() {
         interface = false;
     }
     else {
+        video.width = vw;
+        video.height = vh;
         $("#cube-container").css("z-index", "99999");
         $("#title").hide();
         $("#camera-canvas").hide();   
