@@ -198,6 +198,15 @@ body {
     -webkit-transform-style: preserve-3d;
     transform:  translateY(64px) rotateX(-90deg);
 }
+#cube-container .inside {
+    position: absolute;
+    background-color: #ccc;
+    border: 2px solid #000;
+    width: 64px;
+    height: 64px;
+    -webkit-transform-style: preserve-3d;
+    transform:  translateY(32px);
+}
 #camera-canvas {
     margin-bottom: 20px;
     display: flex;
