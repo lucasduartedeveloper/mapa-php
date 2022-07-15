@@ -624,7 +624,7 @@ function saveFace(base64, callback = false) {
          }
          if (!hasFace) {
               cube.push({ 
-                  cube_id: cube[k].cube_id,
+                  cube_id: cubeList[cubeNo].id,
                   face_id: faceId,
                   base64: base64
               });
