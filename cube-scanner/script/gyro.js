@@ -12,7 +12,7 @@ var accY = 0;
 var accZ = 0;
 
 var speedX = 0;
-var sppedY = 0;
+var speedY = 0;
 var speedZ = 0;
 
 function accHandler(acc) {
@@ -21,6 +21,6 @@ function accHandler(acc) {
     accZ = acc.z && acc.z.toFixed(3);
 
     speedX = Math.round((1 / 9.8) * acc.x);
-    sppedY = Math.round((1 / 9.8) * acc.y);
+    speedY = Math.round((1 / 9.8) * acc.y);
     speedZ = Math.round((1 / 9.8) * acc.z);
 }
