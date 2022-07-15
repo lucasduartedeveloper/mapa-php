@@ -20,7 +20,7 @@ function accHandler(acc) {
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);
 
-    speedX = Math.round((1 / 9.8) * acc.x);
-    speedY = Math.round((1 / 9.8) * acc.y);
-    speedZ = Math.round((1 / 9.8) * acc.z);
+    speedX = Math.round((5 / 9.8) * acc.x);
+    speedY = Math.round((5 / 9.8) * acc.y);
+    speedZ = Math.round((5 / 9.8) * acc.z);
 }
