@@ -59,9 +59,9 @@ $("#light-switch").click(function() {
         stopCamera();
         startCamera("environment");
         $("#cube-container").css("z-index", "99999");
-        $("#title").hide();
-        $("#camera-canvas").hide();   
-        $("#rotation").hide();
+        //$("#title").hide();
+        //$("#camera-canvas").hide();   
+        //$("#rotation").hide();
         $("#dropdown").hide();
         $("#interface").show();
         $("#light-switch").removeClass("place");
