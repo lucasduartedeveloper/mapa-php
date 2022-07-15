@@ -242,12 +242,12 @@ $(document).ready(function() {
          if (gotXYZ) updateXYZ();
      });
 
-     var touchStart = 0;
-     var touchStartX = 0;
-     var touchStartY = 0;
-     var touchX = 0;
-     var touchY = 0;
-     var translateY = 0;
+     window.touchStart = 0;
+     window.touchStartX = 0;
+     window.touchStartY = 0;
+     window.touchX = 0;
+     window.touchY = 0;
+     window.translateY = 0;
      
      $("#cube-container").on("touchstart", function(e) {
          //alert("TODO: Incluir uma animação.")
