@@ -98,6 +98,7 @@ $("#socks").click(function() {
 
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
+var beep0 = new Audio("audio/confirmation-beep.wav");
 var gettingHit = new Audio("audio/getting-hit.wav");
 var gameOver = new Audio("audio/game-over.wav");
 
@@ -721,23 +722,16 @@ var baseImages = [
 
 function resetCube() {
       speaking = true;
-      gettingHit.play();
-      for (var k = 0; k < 6; k++) {
-           setFace(k);
-           saveFace(baseImages[k], 
-               k == 5 ?
-               function() {
-                   getCube(cubeList[cubeNo].id);
+      beep0.play();
+      saveFace(baseImages[k], 
+          function() {
+               ws.send("CUBE-SCANNER|" +
+                    playerId + "|CUBE-UPD|" + 
+                    cubeNo);
 
-                   ws.send("CUBE-SCANNER|" +
-                       playerId + "|CUBE-UPD|" + 
-                       cubeNo);
-
-                   speaking = false;
-                   //say("Cube was reseted.");
-               } : false
-           );
-      }
+               speaking = false;
+               //say("Cube was reseted.");
+      });
 }
 
 // Texto para audio
