@@ -299,7 +299,7 @@ $(document).ready(function() {
                  document
                  .getElementById("interface")
                  .getContext("2d")
-                 context.drawImage(video, 
+                 .drawImage(video, 
                  0, 0, sw, sh);
              }
              addShadow();
