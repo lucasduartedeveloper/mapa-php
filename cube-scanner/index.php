@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<canvas id="light"></canvas>
+<canvas id="light" style="display:none"></canvas>
 
 <div id="authentication">
       <p id="auth-header">
