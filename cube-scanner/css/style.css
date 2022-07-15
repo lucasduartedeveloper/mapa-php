@@ -64,8 +64,8 @@ html, body {
 .modal-title {
      color: #000;
 }
-.active {
-     color: #f55;
+.place {
+     color: #2a2934;
 }
 #add {
      position: fixed;

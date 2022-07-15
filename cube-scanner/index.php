@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=55">
+         href="css/style.css?v=56">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -136,13 +136,15 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v55.14-30.2.257
+     CUBE SCANNER v56.14-30.2.258
      <br>
      <span id="server-info">
      CONNECTING...
      </span>
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
      <i id="motion" class="fa-solid fa-whiskey-glass"></i>
+     <i id="motion" class="fa-solid fa-whiskey-glass"></i>
+     <i  id="key"  class="fa-solid fa-key"></i>
 </p>
 
 <div id="cube-modal" class="modal" tabindex="-1" role="dialog">
@@ -234,7 +236,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=257"></script>
+<script src="script/cube-scanner.js?v=258"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

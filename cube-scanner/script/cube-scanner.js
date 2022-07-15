@@ -12,12 +12,25 @@ $("#motion").click(function() {
     if (motion) {
         speedX = 0;
         speedY = 0;
-        $("#motion").removeClass("active");
+        speedZ = 0;
+        $("#motion").addClass("place");
         motion = false;
     }
     else {
-        $("#motion").addClass("active");
+        $("#motion").removeClass("place");
         motion = true;
+    }
+});
+
+var cameraKey = false;
+$("#key").click(function() {
+    if (cameraKey) {
+        $("#key").addClass("place");
+        cameraKey = false;
+    }
+    else {
+        $("#key").removeClass("place");
+        cameraKey = true;
     }
 });
 
@@ -241,6 +254,7 @@ $(document).ready(function() {
          if (!authenticated) {
              canvas.width = 10;
              canvas.height = 10;
+             if (cameraKey)
              context.drawImage(video,
              0, (((10/vr)-10)/2)*-1, 10, 10/vr);
              var data =
@@ -250,10 +264,9 @@ $(document).ready(function() {
          else {
              canvas.width = 128;
              canvas.height = 128;
-             context
-             .drawImage(video, 
+             if (cameraKey)
+             context.drawImage(video, 
              0, (((128/vr)-128)/2)*-1, 128, 128/vr);
-
              addShadow();
          }
 
