@@ -251,7 +251,6 @@ $(document).ready(function() {
             else if (msg[2] == "LIST-UPD") {
                  cubeNo = parseInt(msg[3]);
                  listCubes();
-                 goToCube(cubeNo);
             }
             else {
                 $("#rotateX").val(parseInt(msg[2]));
@@ -308,18 +307,8 @@ function getCube(id) {
 
           $("#loading").hide();
           $("#cube-container img").show();
-          $("#name").text(cubeList[cubeNo].name);
-
-          $("#input-name").val(cubeList[cubeNo].name);
-          $("#input-size").val(cubeList[cubeNo].size);
-          $("#input-weight").val(cubeList[cubeNo].weight);
-          $("#input-lat").val(cubeList[cubeNo].lat);
-          $("#input-lng").val(cubeList[cubeNo].lng);
-          $("#input-angle").val(cubeList[cubeNo].angle);
-
-          $("#cube-id").text(id);
-          $("#record-no").text(
-          (cubeNo+1)+"/"+cubeList.length);
+ 
+          setCubeInfo();
 
           log("get", data);
           //say("Around the cube.");
@@ -327,8 +316,23 @@ function getCube(id) {
      });
 }
 
+function setCubeInfo() {
+    $("#name").text(cubeList[cubeNo].name);
+
+    $("#input-name").val(cubeList[cubeNo].name);
+    $("#input-size").val(cubeList[cubeNo].size);
+    $("#input-weight").val(cubeList[cubeNo].weight);
+    $("#input-lat").val(cubeList[cubeNo].lat);
+    $("#input-lng").val(cubeList[cubeNo].lng);
+    $("#input-angle").val(cubeList[cubeNo].angle);
+
+    $("#cube-id").text(id);
+    $("#record-no").text(
+    (cubeNo+1)+"/"+cubeList.length);
+}
+
 var cubeList = [];
-function listCubes() {
+function listCubes(callback = false) {
      $.getJSON("ajax/cube-info.php", 
      function(data) {
          cubeList = data;
@@ -341,6 +345,7 @@ function listCubes() {
              $("#loading").show();
          }
 
+         if (callback) callback();
          log("get", data);
          //say("");
      });
@@ -348,14 +353,19 @@ function listCubes() {
 
 function addCube(info) {
      post(info, function(data) {
-               listCubes();
+          listCubes(function() {
 
-               log("post", data);
-               say("A new cube was created.");
+              ws.send("CUBE-SCANNER|" +
+                  playerId + "|LIST-UPD|" + 
+                  cubeNo);
+
+          });
+          log("post", data);
+          say("A new cube was created.");
      });
 }
 
-function goToCube(n) {
+function goToCube(n, callback = false) {
      if (listEmpty()) return;
 
      if (cubeNo != n) {
@@ -370,6 +380,7 @@ function goToCube(n) {
           cubeNo = n;
           getCube(cubeList[n].id);
      }
+     if (callback) callback();
 }
 
 function deleteCube() {
@@ -382,7 +393,12 @@ function deleteCube() {
                cubeList = cubeList
                .filter(c => c.id != cubeId);
                if (cubeList.length > 0) {
-                   goToCube(cubeList.length-1);
+                   goToCube(cubeList.length-1,
+                   function() {
+                       ws.send("CUBE-SCANNER|" +
+                           playerId + "|LIST-UPD|" + 
+                           cubeNo);
+                   });
                }
                else {
                    $("#name").text("---");
@@ -401,10 +417,10 @@ var updating = false;
 function updateCube(info) {
      post(info, function(data) {
           cubeList[cubeNo] = info;
-          $("#name").text(info.name);
+          setCubeInfo();
           
           ws.send("CUBE-SCANNER|" +
-                  playerId + "|CUBE-UPD|" + 
+                  playerId + "|LIST-UPD|" + 
                   cubeNo);
 
           log("post", data);
