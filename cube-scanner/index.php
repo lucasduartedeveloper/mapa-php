@@ -143,8 +143,10 @@ class="form-range">
      </span>
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
      <i id="motion" class="fa-solid fa-whiskey-glass"></i>
-     <i id="motion" class="fa-solid fa-whiskey-glass"></i>
-     <i  id="key"  class="fa-solid fa-key"></i>
+     <i id="motion" 
+     class="fa-solid fa-whiskey-glass place"></i>
+     <i  id="key"  
+     class="fa-solid fa-key place"></i>
 </p>
 
 <div id="cube-modal" class="modal" tabindex="-1" role="dialog">
