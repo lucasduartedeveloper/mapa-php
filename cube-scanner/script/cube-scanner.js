@@ -99,7 +99,7 @@ function startCamera(mode) {
      if (navigator.mediaDevices) {
           navigator.mediaDevices
           .getUserMedia({ 
-          video: { ,
+          video: {
           facingMode: { exact: mode } }, 
           audio: false })
           .then((stream) => {
