@@ -42,6 +42,10 @@ console.log(angle(0,-10));
 console.log(angle(5,-5));
 */
 
+// Teste  fácil
+// Rodar um disco no eixo X e no eixo Y
+// Verificar o formato que ficou com as funções encontradas
+
 var matrix = new Array(20);
 function drawSphere() {
       for (var n = 0; n < 2; n++) {

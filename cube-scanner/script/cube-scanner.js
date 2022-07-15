@@ -8,6 +8,14 @@ $("#heroku").click(function() {
         playerId + "|VERSION-UPD");
 });
 
+$("#print").click(function() {
+    if (listEmpty()) return;
+
+    location.replace(
+    "print.php?id="+
+    cubeList[cubeNo].id);
+});
+
 $("#motion").click(function() {
     if (motion) {
         speedX = 0;

@@ -119,6 +119,12 @@ html, body {
     right: 5vw;
     font-size: 50px;
 }
+#print {
+     position: fixed;
+     top: 32vh;
+     left: 5vw;
+     font-size: 40px;
+}
 #cube-container {
     margin-left: 0px;
     margin-top: 0px;
