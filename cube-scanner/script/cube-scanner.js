@@ -251,6 +251,14 @@ $(document).ready(function() {
          $("#rotateY").val(parseInt(rotateY));
          $("#rotateZ").val(parseInt(rotateZ));
 
+         if (motion) {
+             ws.send("CUBE-SCANNER|" +
+                  playerId + "|" + 
+                  rotateX.toString() + "|" + 
+                  rotateY.toString() + "|" + 
+                  rotateZ.toString());
+         }
+
          if (!authenticated) {
              canvas.width = 10;
              canvas.height = 10;
