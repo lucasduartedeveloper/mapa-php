@@ -86,7 +86,7 @@
       <img src="img/top.png" class="top"/>
       <img src="img/right.png" class="right"/>
       <img src="img/bottom.png" class="bottom"/>
-      <img src="img/inside.png" class="inside"/>
+      <img src="img/inside.jpg" class="inside"/>
 </div>
 
 <p id="title">
