@@ -214,12 +214,12 @@ $(document).ready(function() {
          rotateY += speedY;
          rotateZ += speedZ;
 
-         if (rotateX > 180) rotateX = 180;
-         if (rotateX < 180) rotateX = -180;
-         if (rotateY > 180) rotateY = 180;
-         if (rotateY < 180) rotateY = -180;
-         if (rotateZ > 180) rotateZ = 180;
-         if (rotateZ < 180) rotateZ = -180;
+         if (rotateX > 180) rotateX = -180;
+         if (rotateX < 180) rotateX = 180;
+         if (rotateY > 180) rotateY = -180;
+         if (rotateY < 180) rotateY = 180;
+         if (rotateZ > 180) rotateZ = -180;
+         if (rotateZ < 180) rotateZ = 180;
 
          $("#rotateX").val(parseInt(rotateX));
          $("#rotateY").val(parseInt(rotateY));
