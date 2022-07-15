@@ -52,8 +52,8 @@ $("#light-switch").click(function() {
         interface = false;
     }
     else {
-        video.width = vw;
-        video.height = vh;
+        video.width = sw;
+        video.height = sh;
         stopCamera();
         startCamera("environment");
         $("#cube-container").css("z-index", "99999");
