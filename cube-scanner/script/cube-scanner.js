@@ -256,6 +256,7 @@ $(document).ready(function() {
          touchStart = new Date().getTime();
      });
      $("#cube-container").on("touchmove", function(e) {
+         if (e.originalEvent.touches.length == 0) return;
          //alert("TODO: Incluir uma animação.")
          touchX =  e.originalEvent.touches[0].pageX;
          touchY = e.originalEvent.touches[0].pageY;
