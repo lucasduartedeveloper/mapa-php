@@ -8,7 +8,7 @@
 <body>
 
 <p id="version-info">
-     CUBE SCANNER v63.14-30.2.288
+     CUBE SCANNER v63.14-30.2.289
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
