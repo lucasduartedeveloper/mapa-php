@@ -269,12 +269,8 @@ $(document).ready(function() {
          translateY = d;
      });
      $("#cube-container").on("touchend", function(e) {
-         if ((new Date().getTime() - touchStart) > 5000) {
+         if ((new Date().getTime() - touchStart) > 500) {
               resetCube();
-         }
-         else {
-              touchX =  e.originalEvent.touches[0].pageX;
-              touchY = e.originalEvent.touches[0].pageY;
          }
      });
 
@@ -719,11 +715,10 @@ var baseImages = [
       "img/right.png",
       "img/bottom.png"
 ];
-
 function resetCube() {
       speaking = true;
       beep0.play();
-      saveFace(baseImages[k], 
+      saveFace(baseImages[faceId], 
           function() {
                ws.send("CUBE-SCANNER|" +
                     playerId + "|CUBE-UPD|" + 
