@@ -398,6 +398,8 @@ function goToCube(n, callback = false) {
               }).done(function(data) {
                   cubeNo = n;
                   getCube(cubeList[n].id);
+
+                  log("post", data);
               });
      }
      else {
