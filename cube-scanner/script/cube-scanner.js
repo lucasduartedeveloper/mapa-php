@@ -81,14 +81,14 @@ var socks = false;
 $("#socks").click(function() {
     if (socks) {
         $("#socks").addClass("place");
-        $(document).css("transform",
-        "rotateX(-180deg)");
+        $(document.body).css("transform",
+        "rotateY(-180deg)");
         socks = false;
     }
     else {
         $("#socks").removeClass("place");
-        $(document).css("transform",
-        "rotateX(0deg)");
+        $(document.body).css("transform",
+        "rotateY(0deg)");
         socks = true;
     }
 });

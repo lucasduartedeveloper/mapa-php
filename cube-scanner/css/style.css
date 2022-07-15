@@ -24,10 +24,10 @@ html, body {
      flex-direction: column;
      text-align: center;
      overflow: hidden;
-     -transform: rotateX(-180deg);
+     -transform: rotateY(-180deg);
 }
 body {
-     transform: rotateX(-180deg);
+     transform: rotateY(-180deg);
 }
 #interface {
      background-color: #000;
