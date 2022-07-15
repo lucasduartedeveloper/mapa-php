@@ -16,6 +16,10 @@ $("#print").click(function() {
     cubeList[cubeNo].id);
 });
 
+$("#eraser").click(function(e) {
+    resetCube();
+});
+
 $("#motion").click(function() {
     if (motion) {
         speedX = 0;

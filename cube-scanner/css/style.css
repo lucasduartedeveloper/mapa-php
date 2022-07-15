@@ -88,7 +88,7 @@ body {
 #add {
      position: fixed;
      top: 2vh;
-     left: 5vw;
+     left: 8vw;
      font-size: 50px;
 }
 #delete {
@@ -125,9 +125,15 @@ body {
 }
 #print {
      position: fixed;
-     top: 32vh;
+     top: 28vh;
      left: 5vw;
-     font-size: 40px;
+     font-size: 30px;
+}
+#eraser {
+     position: fixed;
+     top: 28vh;
+     right: 5vw;
+     font-size: 30px;
 }
 #cube-container {
     margin-left: 0px;

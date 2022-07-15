@@ -22,7 +22,7 @@
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" 
-         href="css/style.css?v=67">
+         href="css/style.css?v=68">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -60,6 +60,7 @@
 <span id="cube-id"></span>
 <span id="record-no"></span>
 <i id="print" class="fa-solid fa-print"></i>
+<i id="eraser" class="fa-solid fa-eraser"></i>
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
@@ -139,7 +140,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v67.14-30.2.303
+     CUBE SCANNER v68.14-30.2.305
      <br>
      <span id="server-info">
      CONNECTING...
@@ -244,7 +245,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=303"></script>
+<script src="script/cube-scanner.js?v=305"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
