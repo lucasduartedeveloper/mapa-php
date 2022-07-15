@@ -31,7 +31,7 @@ var ws = {
            if (wsh.readyState == 1) {
                wsh.send(e);
                messagesSent.push(
-                     e.split("|").slice(0,6).join("|"));
+                     e.split("|").slice(0,7).join("|"));
            }
            else { messagesWaiting.push(e); }
       },
