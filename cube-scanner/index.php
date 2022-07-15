@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=59">
+         href="css/style.css?v=60">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -139,7 +139,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v59.14-30.2.261
+     CUBE SCANNER v60.14-30.2.261
      <br>
      <span id="server-info">
      CONNECTING...
