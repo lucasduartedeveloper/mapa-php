@@ -77,6 +77,20 @@ $("#light-switch").click(function() {
     }
 });
 
+var socks = false;
+$("#socks").click(function() {
+    if (socks) {
+        $("#socks").addClass("place");
+        $(document).css("rotateY", "-180deg");
+        socks = false;
+    }
+    else {
+        $("#socks").removeClass("place");
+        $(document).css("rotateY", "0deg");
+        socks = true;
+    }
+});
+
 // TODO:
 // Link delete, update and create cube
 
