@@ -34,6 +34,20 @@ $("#key").click(function() {
     }
 });
 
+var light = false;
+$("#light-switch").click(function() {
+    if (light) {
+        $("#light").hide();
+        $("#light-switch").addClass("place");
+        light = false;
+    }
+    else {
+        $("#light").show();
+        $("#light-switch").removeClass("place");
+        light = true;
+    }
+});
+
 // TODO:
 // Link delete, update and create cube
 
