@@ -35,7 +35,10 @@
 </head>
 <body>
 
-<canvas id="light" style="display:none"></canvas>
+<!-
+<canvas id="light" style="display:none">
+</canvas>
+-->
 
 <div id="authentication">
       <p id="auth-header">
