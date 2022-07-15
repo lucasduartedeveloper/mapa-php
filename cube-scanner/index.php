@@ -60,7 +60,6 @@
 <span id="cube-id"></span>
 <span id="record-no"></span>
 <i id="print" class="fa-solid fa-print"></i>
-<i id="socks" class="fa-solid fa-socks"></i>
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
@@ -152,6 +151,8 @@ class="form-range">
      class="fa-solid fa-key place"></i>
      <i id="light-switch"
      class="fa-solid fa-lightbulb place"></i>
+     <i id="socks" 
+     class="fa-solid fa-socks"></i>
 </p>
 
 <div id="cube-modal" class="modal" tabindex="-1" role="dialog">
