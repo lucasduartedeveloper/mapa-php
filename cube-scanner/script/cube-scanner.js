@@ -358,12 +358,18 @@ function addCube(info) {
 function goToCube(n) {
      if (listEmpty()) return;
 
-     $.post("ajax/cube-defender.php", {
-          cubeNo: n,
-          }).done(function(data) {
-              cubeNo = n;
-              getCube(cubeList[n].id);
-     });
+     if (cubeNo != n) {
+          $.post("ajax/cube-defender.php", {
+              cubeNo: n,
+              }).done(function(data) {
+                  cubeNo = n;
+                  getCube(cubeList[n].id);
+              });
+     }
+     else {
+          cubeNo = n;
+          getCube(cubeList[n].id);
+     }
 }
 
 function deleteCube() {
@@ -396,6 +402,10 @@ function updateCube(info) {
      post(info, function(data) {
           cubeList[cubeNo] = info;
           $("#name").text(info.name);
+          
+          ws.send("CUBE-SCANNER|" +
+                  playerId + "|CUBE-UPD|" + 
+                  cubeNo);
 
           log("post", data);
           say("Cube updated.");
