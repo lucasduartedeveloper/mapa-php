@@ -136,7 +136,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v54.14-30.2.247
+     CUBE SCANNER v54.14-30.2.248
      <br>
      <span id="server-info">
      CONNECTING...
@@ -224,9 +224,8 @@ class="form-range">
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<!-- <script src="script/gyro.js?v=1"></script> -->
-
 <script src="script/debug.js?v=0"></script>
+<script src="script/gyro.js?v=2"></script>
 
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=21"></script>
@@ -234,7 +233,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=247"></script>
+<script src="script/cube-scanner.js?v=248"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

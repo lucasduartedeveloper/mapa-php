@@ -205,6 +205,7 @@ $(document).ready(function() {
          document.getElementById("camera-canvas");
          var context = canvas.getContext("2d");
 
+         // add gyro
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
