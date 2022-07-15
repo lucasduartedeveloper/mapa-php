@@ -22,7 +22,7 @@
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" 
-         href="css/style.css?v=68">
+         href="css/style.css?v=69">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -100,8 +100,8 @@
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
-<input id="opacity"
-min="-180" max="180" step="1" value="0"
+<input id="translateY"
+min="0" max="100" step="1" value="100"
 type="range" 
 class="form-range">
 
@@ -140,7 +140,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v68.14-30.2.305
+     CUBE SCANNER v69.14-30.2.306
      <br>
      <span id="server-info">
      CONNECTING...
@@ -245,7 +245,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=305"></script>
+<script src="script/cube-scanner.js?v=306"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
