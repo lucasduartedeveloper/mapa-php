@@ -36,6 +36,7 @@ $("#key").click(function() {
 
 var interface = false;
 $("#light-switch").click(function() {
+    if (!authenticated) return;
     if (interface) {
         $("#cube-container").css("z-index", "9998");
         $("#title").show();
