@@ -38,7 +38,7 @@ var interface = false;
 $("#light-switch").click(function() {
     if (interface) {
         $("#cube-container").css("z-index", "9998");
-        //$("#camera-canvas").show();
+        $("#camera-canvas").show();
         $("#dropdown").show();
         $("#interface").hide();
         $("#light-switch").addClass("place");
@@ -46,7 +46,7 @@ $("#light-switch").click(function() {
     }
     else {
         $("#cube-container").css("z-index", "99999");
-        //$("#camera-canvas").hide();   
+        $("#camera-canvas").hide();   
         $("#dropdown").hide();
         $("#interface").show();
         $("#light-switch").removeClass("place");
@@ -283,8 +283,8 @@ $(document).ready(function() {
              canvas.width = 10;
              canvas.height = 10;
              if (cameraKey)
-             context.drawImage(video,
-             0, (((10/vr)-10)/2)*-1, 10, 10/vr);
+                 context.drawImage(video,
+                 0, (((10/vr)-10)/2)*-1, 10, 10/vr);
              var data =
              context.getImageData(0, 0, 10, 10).data;
              authenticate(data);
@@ -293,8 +293,15 @@ $(document).ready(function() {
              canvas.width = 128;
              canvas.height = 128;
              if (cameraKey)
-             context.drawImage(video, 
-             0, (((128/vr)-128)/2)*-1, 128, 128/vr);
+                 context.drawImage(video, 
+                 0, (((128/vr)-128)/2)*-1, 128, 128/vr);
+             if (interface) {
+                 document
+                 .getElementById("interface")
+                 .getContext("2d")
+                 context.drawImage(video, 
+                 0, 0, sw, sh);
+             }
              addShadow();
          }
 
