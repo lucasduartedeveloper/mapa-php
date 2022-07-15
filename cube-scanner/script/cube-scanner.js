@@ -1,7 +1,12 @@
 // Heroku build time
 setTimeout(function(e) {
     $("#heroku").css("display","inline-block");
-}, 40000);
+}, 10000);
+
+$("#heroku").click(function() {
+    ws.send("CUBE-SCANNER|" +
+        playerId + "|VERSION-UPD");
+});
 
 // TODO:
 // Link delete, update and create cube
@@ -163,6 +168,12 @@ $(document).ready(function() {
          touchY = e.originalEvent.touches[0].pageY;
          touchStart = new Date().getTime();
      });
+     $("#cube-container").on("touchmove", function(e) {
+         //alert("TODO: Incluir uma animação.")
+         touchX =  e.originalEvent.touches[0].pageX;
+         touchY = e.originalEvent.touches[0].pageY;
+         // hipotenuse 
+     });
      $("#cube-container").on("touchend", function(e) {
          if ((new Date().getTime() - touchStart) < 1000) {
               resetCube();
@@ -180,7 +191,12 @@ $(document).ready(function() {
          uploadImage();
      });
      $(document).on("imageResized", function(e) {
-         saveFace(e.url);
+         saveFace(e.url, 
+         function() {
+             ws.send("CUBE-SCANNER|" +
+                 playerId + "|CUBE-UPD|" + 
+                 cubeNo);
+         });
          log("info", "Image resized.");
      });
 
@@ -232,7 +248,12 @@ $(document).ready(function() {
          document.getElementById("camera-canvas").
          toDataURL();
 
-         saveFace(base64);
+         saveFace(base64,
+         function() {
+             ws.send("CUBE-SCANNER|" +
+                 playerId + "|CUBE-UPD|" + 
+                 cubeNo);
+         });
      });
 
      ws.onmessage = function(e) {
@@ -251,6 +272,9 @@ $(document).ready(function() {
             else if (msg[2] == "LIST-UPD") {
                  cubeNo = parseInt(msg[3]);
                  listCubes(setCubeInfo);
+            }
+            else if (msg[2] == "VERSION-UPD") {
+                 location.reload();
             }
             else {
                 $("#rotateX").val(parseInt(msg[2]));
@@ -462,7 +486,7 @@ function setFace(id) {
     $("#cube-face").text(faces[id]);
 }
 
-function saveFace(base64) {
+function saveFace(base64, callback = false) {
      if (listEmpty()) return;
 
      if (faceId == 6) {
@@ -470,11 +494,8 @@ function saveFace(base64) {
          var tts = "Digitalized ";
          for (var k = 0; k < 6; k++) {
              setFace(k);
-             saveFace(base64);
-             /*
-             tts += k > 0 && k < 5 ?
-             ", " : k> 0 ? " and " : "";
-             tts += faces[k]; */
+             saveFace(base64,
+             k == 5 ? callback : false);
          }
          tts += faces[6];
          tts += ".";
@@ -507,6 +528,7 @@ function saveFace(base64) {
              }).done(function(data) { 
                    log("post", data);
                    say("Digitalized "+faces[faceId]);
+                   if (callback) callback();
          });
      }
 }
@@ -522,16 +544,23 @@ var baseImages = [
 
 function resetCube() {
       speaking = true;
+      gettingHit.play();
       for (var k = 0; k < 6; k++) {
            setFace(k);
-           saveFace(baseImages[k]);
+           saveFace(baseImages[k], 
+               k == 5 ?
+               function() {
+                   getCube(cubeList[cubeNo].id);
+
+                   ws.send("CUBE-SCANNER|" +
+                       playerId + "|CUBE-UPD|" + 
+                       cubeNo);
+
+                   speaking = false;
+                   //say("Cube was reseted.");
+               } : false
+           );
       }
-      gettingHit.play();
-      setTimeout(function() { // *
-          getCube(cubeList[cubeNo].id);
-          speaking = false;
-          //say("Cube was reseted.");
-      }, 5000);
 }
 
 // Texto para audio
