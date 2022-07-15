@@ -76,7 +76,7 @@ $(document).ready(function() {
           goToCube(n);
           ws.send("CUBE-SCANNER|" +
                   playerId + "|CUBE-UPD|" + 
-                  cubeNo);
+                  n);
      });
      $("#next").click(function(e) {
           var n = cubeNo+1;
@@ -86,7 +86,7 @@ $(document).ready(function() {
           goToCube(n);
           ws.send("CUBE-SCANNER|" +
                   playerId + "|CUBE-UPD|" + 
-                  cubeNo);
+                  n);
      });
      $("#add").click(function(e) {
           updating = false;
