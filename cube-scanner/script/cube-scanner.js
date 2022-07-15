@@ -313,7 +313,9 @@ $(document).ready(function() {
                  .getElementById("interface")
                  .getContext("2d")
                  .drawImage(video, 
-                 (((sw/vr)-sw)/2)*-1, 0, sw/vr, sh);
+                 (((sw/vr)-sw)/2)*-1, 
+                 ((sh-vh)/2)*-1, 
+                 sw/vr, vh);
              }
              addShadow();
          }
