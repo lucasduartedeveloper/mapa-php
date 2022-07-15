@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=56">
+         href="css/style.css?v=57">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -136,13 +136,12 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v56.14-30.2.258
+     CUBE SCANNER v57.14-30.2.258
      <br>
      <span id="server-info">
      CONNECTING...
      </span>
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
-     <i id="motion" class="fa-solid fa-whiskey-glass"></i>
      <i id="motion" 
      class="fa-solid fa-whiskey-glass place"></i>
      <i  id="key"  
