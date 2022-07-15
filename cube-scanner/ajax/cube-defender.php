@@ -2,10 +2,22 @@
 <?php
 $sql ="";
 try {
+  if (isset($_POST["cubeNo"])) {
+
+    $cubeNo = htmlspecialchars($_POST["cubeNo"]);
+
+    $sql = "UPDATE param SET valor='".$cubeNo."' WHERE nome='cube-no';";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    echo $sql;
+  }
   if (isset($_POST["xyz"])) {
 
     $xyz = htmlspecialchars($_POST["xyz"]);
-    $sql = "UPDATE param SET valor='".$xyz."' WHERE nome='xyz';";
+
+    sql = "UPDATE param SET valor='".$xyz."' WHERE nome='xyz';";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
@@ -13,7 +25,7 @@ try {
     echo $sql;
   }
   else {
-    $sql = "SELECT * FROM param WHERE nome='xyz' OR nome='xyz' ORDER BY id;";
+    $sql = "SELECT * FROM param WHERE nome='cube-no' OR nome='xyz' ORDER BY id;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

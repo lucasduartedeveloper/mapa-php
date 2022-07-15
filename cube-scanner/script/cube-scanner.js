@@ -263,9 +263,10 @@ $(document).ready(function() {
 });
 
 var gotXYZ = false;
-function getXYZ() {
+function getXYZ(callback) {
      $.getJSON("ajax/cube-defender.php", function(data) {
           var xyz = data[0].valor.split("|");
+          cubeNo = parseInt(data[1].valor);
           
           rotateX = parseInt(xyz[0]);
           rotateY = parseInt(xyz[1]);
@@ -280,6 +281,7 @@ function getXYZ() {
          $("#rotateX, #rotateY, #rotateZ")
          .trigger("change");
 
+         callback();
          gotXYZ = true;
      });
 }
@@ -331,7 +333,7 @@ function listCubes() {
      function(data) {
          cubeList = data;
          if (cubeList.length > 0) {
-             goToCube(cubeList.length-1);
+             goToCube(cubeNo);
          }
          else {
              $("#name").text("---");
@@ -356,8 +358,12 @@ function addCube(info) {
 function goToCube(n) {
      if (listEmpty()) return;
 
-     cubeNo = n;
-     getCube(cubeList[n].id);
+     $.post("ajax/cube-defender.php", {
+          cubeNo: n,
+          }).done(function(data) {
+              cubeNo = n;
+              getCube(cubeList[n].id);
+     });
 }
 
 function deleteCube() {

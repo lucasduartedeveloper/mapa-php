@@ -36,7 +36,6 @@ function authenticate(data) {
         $("#video").width = 128;
         $("#video").height = 128;
 
-        getXYZ();
-        listCubes();
+        getXYZ(listCubes);
     }
 }
