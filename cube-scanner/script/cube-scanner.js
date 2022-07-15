@@ -326,7 +326,7 @@ function setCubeInfo() {
     $("#input-lng").val(cubeList[cubeNo].lng);
     $("#input-angle").val(cubeList[cubeNo].angle);
 
-    $("#cube-id").text(id);
+    $("#cube-id").text(cubeList[cubeNo].cube_id);
     $("#record-no").text(
     (cubeNo+1)+"/"+cubeList.length);
 }
