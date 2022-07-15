@@ -69,21 +69,21 @@ $(document).ready(function() {
      startCamera("environment");
 
      $("#previous").click(function(e) {
-          cubeNo -= 1;
-          cubeNo = cubeNo < 0 ? (cubeList.length-1) : cubeNo;
+          var n = cubeNo-1;
+          n = n < 0 ? (cubeList.length-1) : n;
           
           if (listEmpty()) return;
-          goToCube(cubeNo);
+          goToCube(n);
           ws.send("CUBE-SCANNER|" +
                   playerId + "|CUBE-UPD|" + 
                   cubeNo);
      });
      $("#next").click(function(e) {
-          cubeNo += 1;
-          cubeNo = cubeNo > (cubeList.length-1) ? 0 : cubeNo;
+          var n = cubeNo+1;
+          n = n > (cubeList.length-1) ? 0 : n;
           
           if (listEmpty()) return;
-          goToCube(cubeNo);
+          goToCube(n);
           ws.send("CUBE-SCANNER|" +
                   playerId + "|CUBE-UPD|" + 
                   cubeNo);
