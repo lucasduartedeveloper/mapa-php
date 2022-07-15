@@ -367,7 +367,7 @@ $(document).ready(function() {
               "Z: " + rotateZ.toFixed(0)
          );
 
-          $("#cube-container .front")          
+          $("#cube-container img.front")          
           .css("transform",          
          "translateX(0px) "+
          "translateY("+ (translateY) + "px) "+
@@ -375,7 +375,7 @@ $(document).ready(function() {
          "rotateX(0deg) "+
          "rotateY(0deg) "+
          "rotateZ(0deg)");
-          $("#cube-container .back")         
+          $("#cube-container img.back")         
          .css("transform", 
          "translateX(0px) "+
          "translateY("+ (translateY) + "px) "+
@@ -383,7 +383,7 @@ $(document).ready(function() {
          "rotateX(0deg) "+
          "rotateY(180deg) "+
          "rotateZ(0deg)");
-          $("#cube-container .left")       
+          $("#cube-container img.left")       
          .css("transform", 
          "translateX(-64px) "+
          "translateY("+ (translateY) + "px) "+
@@ -391,7 +391,7 @@ $(document).ready(function() {
          "rotateX(0deg) "+
          "rotateY(-90deg) "+
          "rotateZ(0deg)");
-          $("#cube-container .top")        
+          $("#cube-container img.top")        
          .css("transform", 
          "translateX(0px) "+
          "translateY("+ (translateY-64) + "px) "+
@@ -399,7 +399,7 @@ $(document).ready(function() {
          "rotateX(90deg) "+
          "rotateY(0deg) "+
          "rotateZ(0deg)");       
-          $("#cube-container .right")          
+          $("#cube-container img.right")          
          .css("transform", 
          "translateX(64px) "+
          "translateY("+ (translateY) + "px) "+
