@@ -138,8 +138,8 @@ body {
 #translateY {
      position: fixed;
      top: 40vh;
-     width: 30vh;
-     right: 8vw;
+     width: 20vh;
+     left: 60vw;
      font-size: 50px;
      transform: rotateZ(90deg);
 }

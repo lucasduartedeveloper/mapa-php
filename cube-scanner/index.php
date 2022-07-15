@@ -22,7 +22,7 @@
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" 
-         href="css/style.css?v=70">
+         href="css/style.css?v=71">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -101,7 +101,7 @@
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <input id="translateY"
-min="0" max="100" step="1" value="100"
+min="0" max="-100" step="-1" value="0"
 type="range" 
 class="form-range">
 
@@ -140,7 +140,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v70.14-30.2.306
+     CUBE SCANNER v71.14-30.2.306
      <br>
      <span id="server-info">
      CONNECTING...
