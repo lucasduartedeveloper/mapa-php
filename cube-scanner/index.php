@@ -23,7 +23,7 @@
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 
 <link rel="stylesheet" 
-         href="css/style.css?v=58">
+         href="css/style.css?v=59">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -35,10 +35,8 @@
 </head>
 <body>
 
-<!-
 <canvas id="light" style="display:none">
 </canvas>
--->
 
 <div id="authentication">
       <p id="auth-header">
@@ -141,7 +139,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v58.14-30.2.260
+     CUBE SCANNER v59.14-30.2.260
      <br>
      <span id="server-info">
      CONNECTING...
