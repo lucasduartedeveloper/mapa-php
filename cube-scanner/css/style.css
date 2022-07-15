@@ -24,6 +24,7 @@ html, body {
      flex-direction: column;
      text-align: center;
      overflow: hidden;
+     rotateY: -180deg;
 }
 #interface {
      background-color: #000;
