@@ -101,7 +101,7 @@
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <input id="translateY"
-min="0" max="-100" step="-1" value="0"
+min="0" max="100" step="1" value="100"
 type="range" 
 class="form-range">
 
@@ -140,7 +140,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v71.14-30.2.306
+     CUBE SCANNER v71.14-30.2.307
      <br>
      <span id="server-info">
      CONNECTING...
@@ -245,7 +245,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=306"></script>
+<script src="script/cube-scanner.js?v=307"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

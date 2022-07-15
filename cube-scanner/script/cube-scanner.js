@@ -303,8 +303,9 @@ $(document).ready(function() {
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
-         translateY = parseInt($("#translateY").val());
-
+         translateY =
+         100/(-128) * parseInt($("#translateY").val());
+        
          rotateX += speedX;
          rotateY += speedY;
          rotateZ += speedZ;
