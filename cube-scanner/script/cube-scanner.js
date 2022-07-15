@@ -25,10 +25,12 @@ $("#motion").click(function() {
 var cameraKey = false;
 $("#key").click(function() {
     if (cameraKey) {
+        stopCamera();
         $("#key").addClass("place");
         cameraKey = false;
     }
     else {
+        startCamera("environment");
         $("#key").removeClass("place");
         cameraKey = true;
     }
@@ -311,7 +313,7 @@ $(document).ready(function() {
                  .getElementById("interface")
                  .getContext("2d")
                  .drawImage(video, 
-                 0, (((sw/vr)-sw)/2)*-1, sw, sh/vr);
+                 0, (((sh/vr)-sh)/2)*-1, sw, sh/vr);
              }
              addShadow();
          }
