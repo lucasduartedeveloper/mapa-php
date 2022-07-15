@@ -22,7 +22,7 @@
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
 <link rel="stylesheet" 
-         href="css/style.css?v=64">
+         href="css/style.css?v=65">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -139,7 +139,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v64.14-30.2.291
+     CUBE SCANNER v65.14-30.2.292
      <br>
      <span id="server-info">
      CONNECTING...
@@ -152,7 +152,7 @@ class="form-range">
      <i id="light-switch"
      class="fa-solid fa-lightbulb place"></i>
      <i id="socks" 
-     class="fa-solid fa-socks"></i>
+     class="fa-solid fa-socks place"></i>
 </p>
 
 <div id="cube-modal" class="modal" tabindex="-1" role="dialog">
@@ -244,7 +244,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=291"></script>
+<script src="script/cube-scanner.js?v=292"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
