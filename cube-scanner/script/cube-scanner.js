@@ -269,7 +269,7 @@ $(document).ready(function() {
          translateY = d;
      });
      $("#cube-container").on("touchend", function(e) {
-         if ((new Date().getTime() - touchStart) > 500) {
+         if ((new Date().getTime() - touchStart)) {
               resetCube();
          }
      });
