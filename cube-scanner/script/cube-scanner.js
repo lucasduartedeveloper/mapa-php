@@ -456,9 +456,10 @@ $(document).ready(function() {
                  location.reload();
             }
             else {
-                $("#rotateX").val(parseInt(msg[2]));
-                $("#rotateY").val(parseInt(msg[3]));
-                $("#rotateZ").val(parseInt(msg[4]));
+                $("#translateY").val(parseInt(msg[2]));
+                $("#rotateX").val(parseInt(msg[3]));
+                $("#rotateY").val(parseInt(msg[4));
+                $("#rotateZ").val(parseInt(msg[5]));
             }
         }
     };
