@@ -250,7 +250,7 @@ $(document).ready(function() {
             }
             else if (msg[2] == "LIST-UPD") {
                  cubeNo = parseInt(msg[3]);
-                 listCubes();
+                 listCubes(setCubeInfo);
             }
             else {
                 $("#rotateX").val(parseInt(msg[2]));
