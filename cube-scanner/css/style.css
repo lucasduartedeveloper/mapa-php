@@ -138,9 +138,10 @@ body {
 #translateY {
      position: fixed;
      top: 40vh;
-     left: 8vw;
+     width: 30vh;
+     right: 8vw;
      font-size: 50px;
-     transform: rotateZ(-90deg);
+     transform: rotateZ(90deg);
 }
 #cube-container {
     margin-left: 0px;
