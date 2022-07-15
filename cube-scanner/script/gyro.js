@@ -30,7 +30,8 @@ function accHandler(acc) {
 }
 
 setInterval(function() {
+    /*
     speedX -= gripX;
     speedY -= gripY;
-    speedZ -= gripZ;
+    speedZ -= gripZ;*/
 }, 100);
