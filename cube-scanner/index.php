@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<canvas id="light" style="display:none">
+<canvas id="interface" style="display:none">
 </canvas>
 
 <div id="authentication">
@@ -139,7 +139,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v59.14-30.2.260
+     CUBE SCANNER v59.14-30.2.261
      <br>
      <span id="server-info">
      CONNECTING...
@@ -242,7 +242,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=260"></script>
+<script src="script/cube-scanner.js?v=261"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>

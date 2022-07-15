@@ -34,17 +34,17 @@ $("#key").click(function() {
     }
 });
 
-var light = false;
+var interface = false;
 $("#light-switch").click(function() {
-    if (light) {
+    if (interface) {
         $("#light").hide();
         $("#light-switch").addClass("place");
-        light = false;
+        interface = false;
     }
     else {
         $("#light").show();
         $("#light-switch").removeClass("place");
-        light = true;
+        interface = true;
     }
 });
 
