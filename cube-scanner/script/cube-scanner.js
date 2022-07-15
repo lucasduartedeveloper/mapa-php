@@ -37,12 +37,18 @@ $("#key").click(function() {
 var interface = false;
 $("#light-switch").click(function() {
     if (interface) {
-        $("#light").hide();
+        $("#cube-container").css("z-index", "9998");
+        //$("#camera-canvas").show();
+        $("#dropdown").show();
+        $("#interface").hide();
         $("#light-switch").addClass("place");
         interface = false;
     }
     else {
-        $("#light").show();
+        $("#cube-container").css("z-index", "99999");
+        //$("#camera-canvas").hide();   
+        $("#dropdown").hide();
+        $("#interface").show();
         $("#light-switch").removeClass("place");
         interface = true;
     }
