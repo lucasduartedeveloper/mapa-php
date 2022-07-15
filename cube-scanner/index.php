@@ -139,7 +139,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v62.14-30.2.270
+     CUBE SCANNER v62.14-30.2.271
      <br>
      <span id="server-info">
      CONNECTING...
