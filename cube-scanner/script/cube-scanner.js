@@ -38,7 +38,9 @@ var interface = false;
 $("#light-switch").click(function() {
     if (interface) {
         $("#cube-container").css("z-index", "9998");
+        $("#title").show();
         $("#camera-canvas").show();
+        $("#rotation").show();
         $("#dropdown").show();
         $("#interface").hide();
         $("#light-switch").addClass("place");
@@ -46,7 +48,9 @@ $("#light-switch").click(function() {
     }
     else {
         $("#cube-container").css("z-index", "99999");
+        $("#title").hide();
         $("#camera-canvas").hide();   
+        $("#rotation").hide();
         $("#dropdown").hide();
         $("#interface").show();
         $("#light-switch").removeClass("place");
@@ -87,8 +91,8 @@ function startCamera(mode) {
           navigator.mediaDevices
           .getUserMedia({ 
           video: { 
-          maxWidth: 480,
-          maxHeight: 480,
+          //maxWidth: 480,
+          //maxHeight: 480,
           facingMode: { exact: mode } }, 
           audio: false })
           .then((stream) => {
