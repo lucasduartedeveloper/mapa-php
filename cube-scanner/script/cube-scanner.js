@@ -40,6 +40,8 @@ $("#light-switch").click(function() {
     if (interface) {
         video.width = 128;
         video.height = 128;
+        stopCamera();
+        startCamera("environment");
         $("#cube-container").css("z-index", "9998");
         $("#title").show();
         $("#camera-canvas").show();
@@ -52,6 +54,8 @@ $("#light-switch").click(function() {
     else {
         video.width = vw;
         video.height = vh;
+        stopCamera();
+        startCamera("environment");
         $("#cube-container").css("z-index", "99999");
         $("#title").hide();
         $("#camera-canvas").hide();   
@@ -95,9 +99,7 @@ function startCamera(mode) {
      if (navigator.mediaDevices) {
           navigator.mediaDevices
           .getUserMedia({ 
-          video: { 
-          //maxWidth: 480,
-          //maxHeight: 480,
+          video: { ,
           facingMode: { exact: mode } }, 
           audio: false })
           .then((stream) => {
