@@ -10,6 +10,8 @@ $("#heroku").click(function() {
 
 $("#motion").click(function() {
     if (motion) {
+        speedX = 0;
+        speedY = 0;
         $("#motion").removeClass("active");
         motion = false;
     }
