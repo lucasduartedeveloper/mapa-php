@@ -17,7 +17,7 @@ try {
 
     $xyz = htmlspecialchars($_POST["xyz"]);
 
-    sql = "UPDATE param SET valor='".$xyz."' WHERE nome='xyz';";
+    $sql = "UPDATE param SET valor='".$xyz."' WHERE nome='xyz';";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
