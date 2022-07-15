@@ -296,8 +296,10 @@ $(document).ready(function() {
              canvas.width = 10;
              canvas.height = 10;
              if (cameraKey)
-                 context.drawImage(video,
-                 0, (((10/vr)-10)/2)*-1, 10, 10/vr);
+                 context.drawImage(video, 
+                 ((vw-128)/2)*-1, 
+                 ((vh-128)/2)*-1, 
+                 vw, vh);
              var data =
              context.getImageData(0, 0, 10, 10).data;
              authenticate(data);
@@ -306,8 +308,11 @@ $(document).ready(function() {
              canvas.width = 128;
              canvas.height = 128;
              if (cameraKey)
-                 context.drawImage(video, 
-                 0, (((128/vr)-128)/2)*-1, 128, 128/vr);
+                 context
+                 .drawImage(video, 
+                 ((vw-128)/2)*-1, 
+                 ((vh-128)/2)*-1, 
+                 vw, vh);
              if (interface) {
                  var canvas = document
                  .getElementById("interface");
