@@ -46,7 +46,7 @@ $("#light-switch").click(function() {
         startCamera("environment");
         $("#cube-container").css("z-index", "9998");
         $("#title").show();
-        $("#camera-canvas").show();
+        $("#camera-canvas").css("z-index", "9999");
         $("#rotation").show();
         $("#dropdown").show();
         $("#interface").hide();
@@ -60,7 +60,7 @@ $("#light-switch").click(function() {
         startCamera("environment");
         $("#cube-container").css("z-index", "99999");
         //$("#title").hide();
-        //$("#camera-canvas").hide();   
+        $("#camera-canvas").css("z-index", "9998"); 
         //$("#rotation").hide();
         $("#dropdown").hide();
         $("#interface").show();
