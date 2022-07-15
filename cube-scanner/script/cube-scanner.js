@@ -235,11 +235,12 @@ $(document).ready(function() {
           }
      });
   
-     $("#rotateX, #rotateY, #rotateZ")
+     $("#rotateX, #rotateY, #rotateZ, #translateY")
      .on("change", function() {
 
          ws.send("CUBE-SCANNER|" +
                   playerId + "|" + 
+                  translateY.toString() + "|" + 
                   rotateX.toString() + "|" + 
                   rotateY.toString() + "|" + 
                   rotateZ.toString());
@@ -300,11 +301,11 @@ $(document).ready(function() {
          var context = canvas.getContext("2d");
 
          // add gyro
+         translateY =
+         100/(-128) * parseInt($("#translateY").val());
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
-         translateY =
-         100/(-128) * parseInt($("#translateY").val());
         
          rotateX += speedX;
          rotateY += speedY;
@@ -469,10 +470,12 @@ function getXYZ(callback) {
           var xyz = data[0].valor.split("|");
           cubeNo = parseInt(data[1].valor);
           
-          rotateX = parseInt(xyz[0]);
-          rotateY = parseInt(xyz[1]);
-          rotateZ = parseInt(xyz[2]);
+          translateY = parseInt(xyz[0]);
+          rotateX = parseInt(xyz[1]);
+          rotateY = parseInt(xyz[2]);
+          rotateZ = parseInt(xyz[3]);
 
+          $("#translateY").val(translateY);
           $("#rotateX").val(rotateX);
           $("#rotateY").val(rotateY);
           $("#rotateZ").val(rotateZ);
@@ -489,7 +492,11 @@ function getXYZ(callback) {
 
 function updateXYZ() {
      $.post("ajax/cube-defender.php", {
-          xyz: rotateX + "|" +  rotateY + "|" + rotateZ,
+          xyz:
+          translateY + "|" +
+          rotateX + "|" + 
+          rotateY + "|" +
+          rotateZ,
           }).done(function(data) {
               log("post", data);
               //say("Cube was rotated.");
