@@ -7,6 +7,8 @@ if ('DeviceMotionEvent' in window) {
     onDeviceMotion, false);
 }
 
+var gyro = false;
+
 var accX = 0;
 var accY = 0;
 var accZ = 0;
@@ -20,6 +22,8 @@ var gripY = 9.8;
 var gripZ = 9.8;
 
 function accHandler(acc) {
+    if(!gyro) return;
+
     accX = acc.x && acc.x.toFixed(3);
     accY = acc.y && acc.y.toFixed(3);
     accZ = acc.z && acc.z.toFixed(3);

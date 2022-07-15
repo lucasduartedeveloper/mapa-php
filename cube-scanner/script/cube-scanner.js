@@ -8,6 +8,17 @@ $("#heroku").click(function() {
         playerId + "|VERSION-UPD");
 });
 
+$("#motion").click(function() {
+    if (motion) {
+        $("#motion").removeClass("active");
+        motion = false;
+    }
+    else {
+        $("#motion").addClass("active");
+        motion = true;
+    }
+});
+
 // TODO:
 // Link delete, update and create cube
 
