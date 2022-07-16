@@ -701,7 +701,7 @@ function setFace(id) {
         }
     }
     else {
-        $("#cube-container img")[k]
+        $("#cube-container img")[faceId]
         .css("outline", "solid orange");
     }
 }

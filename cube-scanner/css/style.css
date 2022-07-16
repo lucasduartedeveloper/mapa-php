@@ -226,6 +226,8 @@ body {
     position: absolute;
     background-color: #ccc;
     border: 2px solid #000;
+    outline: none;
+    outline-offset: 0px;:
     width: 64px;
     height: 64px;
     -webkit-transform-style: preserve-3d;
