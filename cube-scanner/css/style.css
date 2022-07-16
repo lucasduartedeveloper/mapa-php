@@ -163,11 +163,11 @@ body {
     z-index: 9998;
 }
 #cube-container img {
+    background-color: rgba(0,0,0,1);
     outline: solid black;
     outline-offset: 0px;:
 }
 #cube-container .front {
-    background-color: #ccc;
     border: 2px solid #000;
     position: absolute;
     margin-left: 0px;
@@ -178,7 +178,6 @@ body {
     transform: translateZ(64px);
 }
 #cube-container .back {
-    background-color: #ccc;
     border: 2px solid #000;
     position: absolute;
     width: 128px;
@@ -188,7 +187,6 @@ body {
 }
 #cube-container .left {
     position: absolute;
-    background-color: #ccc;
     border: 2px solid #000;
     width: 128px;
     height: 128px;
@@ -197,7 +195,6 @@ body {
 }
 #cube-container .top {
     position: absolute;
-    background-color: #ccc;
     border: 2px solid #000;
     width: 128px;
     height: 128px;
@@ -206,7 +203,6 @@ body {
 }
 #cube-container .right {
     position: absolute;
-    background-color: #ccc;
     border: 2px solid #000;
     width: 128px;
     height: 128px;
@@ -215,7 +211,6 @@ body {
 }
 #cube-container .bottom {
     position: absolute;
-    background-color: #ccc;
     border: 2px solid #000;
     width: 128px;
     height: 128px;
@@ -224,7 +219,6 @@ body {
 }
 #cube-container .inside {
     position: absolute;
-    background-color: #ccc;
     border: 2px solid #000;
     outline: none;
     outline-offset: 0px;:
