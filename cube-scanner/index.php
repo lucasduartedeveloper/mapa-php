@@ -250,6 +250,11 @@ class="form-range">
 <script src="script/cube-scanner.js?v=329"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
+<script>
+    eruda.init();
+    if (location.protocol !== "https:") {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
+</script>
 </body>
 </html> 

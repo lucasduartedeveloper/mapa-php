@@ -160,7 +160,12 @@ class="form-range">
 <script src="script/map-gyro.js?v=77"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
+<script>
+    eruda.init();
+    if (location.protocol !== "https:") {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
+</script>
 
 </body>
 </html> 
