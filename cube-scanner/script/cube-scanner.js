@@ -27,7 +27,7 @@ $("#mic").click(function(e) {
     else {
         $("#mic").removeClass("fa-microfone-slash");
         $("#mic").addClass("fa-microfone");
-        $("#mic").addClass("place");
+        $("#mic").removeClass("place");
         beep0.play();
         mic = true;
     }
