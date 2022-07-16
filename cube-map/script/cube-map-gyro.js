@@ -371,12 +371,12 @@ setInterval(function() {
 }, 100);
 
 var baseImages = [
-      "cube-scanner/img/front.png",
-      "cube-scanner/img/back.png",
-      "cube-scanner/img/left.png",
-      "cube-scanner/img/top.png",
-      "cube-scanner/img/right.png",
-      "cube-scanner/img/bottom.png"
+      "/cube-scanner/img/front.png",
+      "/cube-scanner/img/back.png",
+      "/cube-scanner/img/left.png",
+      "/cube-scanner/img/top.png",
+      "/cube-scanner/img/right.png",
+      "/cube-scanner/img/bottom.png"
 ];
 
 var gotXYZ = false;
