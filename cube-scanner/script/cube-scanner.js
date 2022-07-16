@@ -20,7 +20,7 @@ var mic = false;
 $("#mic").click(function(e) {   
     if (mic) {
         $("#mic").removeClass("fa-microphone");
-        $("#mic").addClass("fa-microfone-slash");
+        $("#mic").addClass("fa-microphone-slash");
         $("#mic").addClass("place");
         mic = false;
     }
