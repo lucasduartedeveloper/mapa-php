@@ -357,15 +357,15 @@ function matterJs() {
     Runner.run(runner, engine);
 }
 
-var rotateX = 0;
-var rotateY = 0;
-var rotateZ = 0;
+var cubeRotateX = 0;
+var cubeRotateY = 0;
+var cubeRotateZ = 0;
 setInterval(function() {
      $("#cube-container")
          .css("transform", 
-         "rotateX("+ (rotateX) + "deg) "+
-         "rotateY("+ (rotateY) + "deg) "+
-         "rotateZ("+ (rotateZ) + "deg)");
+         "rotateX("+ (cubeRotateX) + "deg) "+
+         "rotateY("+ (cubeRotateY) + "deg) "+
+         "rotateZ("+ (cubeRotateZ) + "deg)");
 }, 100);
 
 var gotXYZ = false;
@@ -376,13 +376,13 @@ function getXYZ(callback) {
           var xyz = data[0].valor.split("|");
           cubeNo = parseInt(data[1].valor);
           ;
-          rotateX = parseInt(xyz[1]);
-          rotateY = parseInt(xyz[2]);
-          rotateZ = parseInt(xyz[3]);
+          cubeRotateX = parseInt(xyz[1]);
+          cubeRotateY = parseInt(xyz[2]);
+          cubeRotateZ = parseInt(xyz[3]);
 ;
-          $("#rotateX").val(rotateX);
-          $("#rotateY").val(rotateY);
-          $("#rotateZ").val(rotateZ);
+          $("#rotateX").val(cubeRotateX);
+          $("#rotateY").val(cubeRotateY);
+          $("#rotateZ").val(cubeRotateZ);
 
           log("get", data);
 
