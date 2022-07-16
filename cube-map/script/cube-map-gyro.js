@@ -456,3 +456,11 @@ function listCubes(callback = false) {
          //say("");
      });
 }
+
+function listEmpty() {
+     if (cubeList.length == 0) {
+          say("You don't have any cubes, create one first");
+          return true;
+     }
+     return false;
+}
