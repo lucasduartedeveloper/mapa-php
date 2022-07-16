@@ -61,7 +61,7 @@
 <span id="record-no"></span>
 <i id="print" class="fa-solid fa-print"></i>
 <i id="eraser" class="fa-solid fa-eraser"></i>
-<i id="mic" class="fa-solid fa-microphone"></i>
+<i id="mic" class="fa-solid fa-microphone-slash place"></i>
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
@@ -142,7 +142,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v72.14-30.2.317
+     CUBE SCANNER v72.14-30.2.318
      <br>
      <span id="server-info">
      CONNECTING...
@@ -247,7 +247,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=317"></script>
+<script src="script/cube-scanner.js?v=318"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
