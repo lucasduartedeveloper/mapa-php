@@ -696,8 +696,9 @@ function setFace(id) {
     }
     if (faceId == 6) {
         for (var k = 0; k < 6; k++) {
-        $("#cube-container img")[k]
-        .css("outline", "orange");
+            $("#cube-container img")[k]
+            .css("outline", "orange");
+        }
     }
     else {
         $("#cube-container img")[k]
