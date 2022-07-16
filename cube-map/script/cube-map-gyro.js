@@ -149,6 +149,8 @@ $(document).ready(function() {
             playerId != msg[1]) {
         }
     };
+
+    getXYZ(listCubes);
 });
 
 if ('DeviceMotionEvent' in window) {
