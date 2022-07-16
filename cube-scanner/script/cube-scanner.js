@@ -689,6 +689,20 @@ var faces = [
 function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[id]);
+
+    for (var k = 0; k < 6; k++) {
+        $("#cube-container img")[k]
+        .css("outline", "black");
+    }
+    if (faceId == 6) {
+        for (var k = 0; k < 6; k++) {
+        $("#cube-container img")[k]
+        .css("outline", "orange");
+    }
+    else {
+        $("#cube-container img")[k]
+        .css("outline", "orange");
+    }
 }
 
 function saveFace(base64, callback = false) {
