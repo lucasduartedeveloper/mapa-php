@@ -19,14 +19,14 @@ $("#print").click(function() {
 var mic = false;
 $("#mic").click(function(e) {   
     if (mic) {
-        $("#mic").removeClass("fa-microfone");
+        $("#mic").removeClass("fa-microphone");
         $("#mic").addClass("fa-microfone-slash");
         $("#mic").addClass("place");
         mic = false;
     }
     else {
-        $("#mic").removeClass("fa-microfone-slash");
-        $("#mic").addClass("fa-microfone");
+        $("#mic").removeClass("fa-microphone-slash");
+        $("#mic").addClass("fa-microphone");
         $("#mic").removeClass("place");
         beep0.play();
         mic = true;
