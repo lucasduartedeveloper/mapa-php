@@ -419,6 +419,26 @@ function getCube(id) {
      });
 }
 
+function goToCube(n, callback = false) {
+     if (listEmpty()) return;
+
+     if (cubeNo != n) {
+          $.post("/cube-scanner/ajax/cube-defender.php", {
+              cubeNo: n,
+              }).done(function(data) {
+                  cubeNo = n;
+                  getCube(cubeList[n].id);
+
+                  log("post", data);
+              });
+     }
+     else {
+          cubeNo = n;
+          getCube(cubeList[n].id);
+     }
+     if (callback) callback();
+}
+
 var cubeList = [];
 function listCubes(callback = false) {
      $.getJSON("/cube-scanner/ajax/cube-info.php", 
