@@ -22,6 +22,7 @@ $("#mic").click(function(e) {
         $("#mic").removeClass("fa-microphone");
         $("#mic").addClass("fa-microphone-slash");
         $("#mic").addClass("place");
+        cubia = false;
         mic = false;
     }
     else {
@@ -29,6 +30,7 @@ $("#mic").click(function(e) {
         $("#mic").addClass("fa-microphone");
         $("#mic").removeClass("place");
         beep0.play();
+        cubia = true;
         mic = true;
     }
 });
@@ -776,9 +778,10 @@ function resetCube() {
 }
 
 // Texto para audio
+var cubia = false;
 var speaking = false;
 function say(text) {
-    if (!speaking) {
+    if (!speaking && cubia) {
          speaking = true;
          var msg = new SpeechSynthesisUtterance();
          //msg.lang = "pt-BR";
