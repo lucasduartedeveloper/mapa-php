@@ -219,9 +219,8 @@ $(document).ready(function() {
      });
      $("#map").click(function(e) {
           location.replace(
-          "http://maps.google.com/maps?z=12&t=m&q=loc:"+
-          $("#input-lat").val()+"+"+
-          $("#input-lng").val());
+          "/cube-map?id="+
+          cubeList[cubeNo].cube_id);
      });
      $("#save").click(function(e) {
           var info = {
