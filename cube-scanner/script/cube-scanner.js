@@ -483,7 +483,7 @@ function getXYZ(callback) {
 
           log("get", data);
          
-         $("#tranlateY, #rotateX, #rotateY, #rotateZ")
+         $("#translateY, #rotateX, #rotateY, #rotateZ")
          .trigger("change");
 
          callback();
