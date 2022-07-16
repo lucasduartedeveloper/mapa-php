@@ -360,7 +360,7 @@ function matterJs() {
 var rotateX = 0;
 var rotateY = 0;
 var rotateZ = 0;
-setInterval(function) {
+setInterval(function() {
      $("#cube-container")
          .css("transform", 
          "rotateX("+ (rotateX) + "deg) "+
