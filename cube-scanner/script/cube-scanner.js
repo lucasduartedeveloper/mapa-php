@@ -218,9 +218,9 @@ $(document).ready(function() {
           say("Location set.");
      });
      $("#map").click(function(e) {
-          location.replace(
+          window.open(
           "https://mapa-php.herokuapp.com/cube-map?id="+
-          cubeList[cubeNo].cube_id);
+          cubeList[cubeNo].id, "_blank");
      });
      $("#save").click(function(e) {
           var info = {
