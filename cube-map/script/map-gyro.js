@@ -356,3 +356,71 @@ function matterJs() {
     // run the engine
     Runner.run(runner, engine);
 }
+
+setInterval(function) {
+     $("#cube-container")
+         .css("transform", 
+         "rotateX("+ (rotateX) + "deg) "+
+         "rotateY("+ (rotateY) + "deg) "+
+         "rotateZ("+ (rotateZ) + "deg)");
+}, 100);
+
+var gotXYZ = false;
+function getXYZ(callback) {
+     $.getJSON(
+     "/cube-scanner"+
+     "/ajax/cube-defender.php", function(data) {
+          var xyz = data[0].valor.split("|");
+          cubeNo = parseInt(data[1].valor);
+          ;
+          rotateX = parseInt(xyz[1]);
+          rotateY = parseInt(xyz[2]);
+          rotateZ = parseInt(xyz[3]);
+;
+          $("#rotateX").val(rotateX);
+          $("#rotateY").val(rotateY);
+          $("#rotateZ").val(rotateZ);
+
+          log("get", data);
+
+         callback();
+         gotXYZ = true;
+     });
+}
+
+var cubeNo = 0;
+var cube = [];
+function getCube(id) {
+     $("#cube-container img").hide();
+ 
+     $.getJSON(
+     "/cube-scanner"+
+     "/ajax/cube-face.php?cubeId="+id, 
+     function(data) {
+          cube = data;
+
+          $("#cube-container img").show();
+
+          log("get", data);
+          //say("Around the cube.");
+          //say(cubeList[cubeNo].name + " downloaded.");
+     });
+}
+
+var cubeList = [];
+function listCubes(callback = false) {
+     $.getJSON("ajax/cube-info.php", 
+     function(data) {
+         cubeList = data;
+         if (cubeList.length > 0) {
+             goToCube(cubeNo);
+         }
+         else {
+             $("#cube-container img").hide();	
+         }
+
+         if (callback) callback();
+         log("get", data);
+         //say("");
+     });
+}
