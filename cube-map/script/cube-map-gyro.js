@@ -361,6 +361,8 @@ var cubeRotateX = 0;
 var cubeRotateY = 0;
 var cubeRotateZ = 0;
 setInterval(function() {
+     addShadow();
+
      $("#cube-container")
          .css("transform", 
          "rotateX("+ (cubeRotateX) + "deg) "+
