@@ -379,10 +379,6 @@ function getXYZ(callback) {
           cubeRotateX = parseInt(xyz[1]);
           cubeRotateY = parseInt(xyz[2]);
           cubeRotateZ = parseInt(xyz[3]);
-;
-          $("#rotateX").val(cubeRotateX);
-          $("#rotateY").val(cubeRotateY);
-          $("#rotateZ").val(cubeRotateZ);
 
           log("get", data);
 
