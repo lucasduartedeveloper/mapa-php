@@ -162,6 +162,7 @@ class="form-range">
 
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
+<script src="script/debug.js?v=0"></script>
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
