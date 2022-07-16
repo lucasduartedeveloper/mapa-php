@@ -691,17 +691,17 @@ function setFace(id) {
     $("#cube-face").text(faces[id]);
 
     for (var k = 0; k < 6; k++) {
-        $("#cube-container img")[k]
+        $($("#cube-container img")[k])
         .css("outline", "solid black");
     }
     if (faceId == 6) {
         for (var k = 0; k < 6; k++) {
-            $("#cube-container img")[k]
+            $($("#cube-container img")[k])
             .css("outline", "solid orange");
         }
     }
     else {
-        $("#cube-container img")[faceId]
+        $($("#cube-container img")[faceId])
         .css("outline", "solid orange");
     }
 }
