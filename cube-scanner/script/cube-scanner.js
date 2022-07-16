@@ -301,7 +301,7 @@ $(document).ready(function() {
          var context = canvas.getContext("2d");
 
          // add gyro
-         translateY =
+         var translateYtoWeight =
          100/(-128) * parseInt($("#translateY").val());
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
@@ -325,6 +325,7 @@ $(document).ready(function() {
          if (motion) {
              ws.send("CUBE-SCANNER|" +
                   playerId + "|" + 
+                  translateY.toString() + "|" + 
                   rotateX.toString() + "|" + 
                   rotateY.toString() + "|" + 
                   rotateZ.toString());
@@ -375,7 +376,7 @@ $(document).ready(function() {
           $("#cube-container img.front")          
           .css("transform",          
          "translateX(0px) "+
-         "translateY("+ (translateY) + "px) "+
+         "translateY("+ (translateYtoWeight) + "px) "+
          "translateZ(64px) "+
          "rotateX(0deg) "+
          "rotateY(0deg) "+
@@ -383,7 +384,7 @@ $(document).ready(function() {
           $("#cube-container img.back")         
          .css("transform", 
          "translateX(0px) "+
-         "translateY("+ (translateY) + "px) "+
+         "translateY("+ (translateYtoWeight) + "px) "+
          "translateZ(-64px) " +
          "rotateX(0deg) "+
          "rotateY(180deg) "+
@@ -391,7 +392,7 @@ $(document).ready(function() {
           $("#cube-container img.left")       
          .css("transform", 
          "translateX(-64px) "+
-         "translateY("+ (translateY) + "px) "+
+         "translateY("+ (translateYtoWeight) + "px) "+
          "translateZ(0px) " +
          "rotateX(0deg) "+
          "rotateY(-90deg) "+
@@ -399,7 +400,7 @@ $(document).ready(function() {
           $("#cube-container img.top")        
          .css("transform", 
          "translateX(0px) "+
-         "translateY("+ (translateY-64) + "px) "+
+         "translateY("+ (translateYtoWeight-64) + "px) "+
          "translateZ(0px) " +
          "rotateX(90deg) "+
          "rotateY(0deg) "+
@@ -407,7 +408,7 @@ $(document).ready(function() {
           $("#cube-container img.right")          
          .css("transform", 
          "translateX(64px) "+
-         "translateY("+ (translateY) + "px) "+
+         "translateY("+ (translateYtoWeight) + "px) "+
          "translateZ(0px) " +
          "rotateX(0deg) "+
          "rotateY(90deg) "+
