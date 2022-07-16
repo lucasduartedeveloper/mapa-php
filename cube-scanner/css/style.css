@@ -164,7 +164,7 @@ body {
 }
 #cube-container img {
     outline: solid black;
-    outline-offset: 1px;:
+    outline-offset: 0px;:
 }
 #cube-container .front {
     background-color: #ccc;
