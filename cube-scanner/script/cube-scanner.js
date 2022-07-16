@@ -235,7 +235,7 @@ $(document).ready(function() {
           }
      });
   
-     $("#tranlateY, #rotateX, #rotateY, #rotateZ")
+     $("#translateY, #rotateX, #rotateY, #rotateZ")
      .on("change", function() {
 
          ws.send("CUBE-SCANNER|" +
@@ -482,9 +482,6 @@ function getXYZ(callback) {
           $("#rotateZ").val(rotateZ);
 
           log("get", data);
-         
-         $("#translateY, #rotateX, #rotateY, #rotateZ")
-         .trigger("change");
 
          callback();
          gotXYZ = true;
