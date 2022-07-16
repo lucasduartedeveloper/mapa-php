@@ -301,8 +301,9 @@ $(document).ready(function() {
          var context = canvas.getContext("2d");
 
          // add gyro
+         translateY = parseInt($("#translateY").val());
          var translateYtoWeight =
-         100/(-128) * parseInt($("#translateY").val());
+         100/(-128) * 
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
