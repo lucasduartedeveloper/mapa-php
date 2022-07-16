@@ -163,7 +163,7 @@ body {
     z-index: 9998;
 }
 #cube-container img {
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0,0);
     outline: solid black;
     outline-offset: 0px;:
 }
