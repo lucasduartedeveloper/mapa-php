@@ -780,7 +780,7 @@ function resetCube() {
 var speaker = false;
 var speaking = false;
 function say(text) {
-    if (!speaking && cubia) {
+    if (!speaking && speaker) {
          speaking = true;
          var msg = new SpeechSynthesisUtterance();
          //msg.lang = "pt-BR";
