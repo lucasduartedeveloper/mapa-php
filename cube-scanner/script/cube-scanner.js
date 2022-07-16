@@ -692,17 +692,17 @@ function setFace(id) {
 
     for (var k = 0; k < 6; k++) {
         $("#cube-container img")[k]
-        .css("outline", "black");
+        .css("outline", "solid black");
     }
     if (faceId == 6) {
         for (var k = 0; k < 6; k++) {
             $("#cube-container img")[k]
-            .css("outline", "orange");
+            .css("outline", "solid orange");
         }
     }
     else {
         $("#cube-container img")[k]
-        .css("outline", "orange");
+        .css("outline", "solid orange");
     }
 }
 
