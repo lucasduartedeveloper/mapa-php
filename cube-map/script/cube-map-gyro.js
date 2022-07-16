@@ -421,7 +421,7 @@ function getCube(id) {
 
 var cubeList = [];
 function listCubes(callback = false) {
-     $.getJSON("ajax/cube-info.php", 
+     $.getJSON("/cube-scanner/ajax/cube-info.php", 
      function(data) {
          cubeList = data;
          if (cubeList.length > 0) {
