@@ -16,6 +16,23 @@ $("#print").click(function() {
     cubeList[cubeNo].id);
 });
 
+var mic = false;
+$("#mic").click(function(e) {   
+    if (mic) {
+        $("#mic").removeClass("fa-microfone");
+        $("#mic").addClass("fa-microfone-slash");
+        $("#mic").addClass("place");
+        mic = false;
+    }
+    else {
+        $("#mic").removeClass("fa-microfone-slash");
+        $("#mic").addClass("fa-microfone");
+        $("#mic").addClass("place");
+        beep0.play();
+        mic = true;
+    }
+});
+
 $("#eraser").click(function(e) {
     resetCube();
 });
@@ -667,7 +684,8 @@ var faces = [
     "Top",
     "Right",
     "Bottom",
-    "Cube"];
+    "Cube",
+    "Inside"];
 function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[id]);

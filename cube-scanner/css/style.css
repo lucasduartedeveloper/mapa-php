@@ -135,6 +135,12 @@ body {
      right: 5vw;
      font-size: 30px;
 }
+#mic {
+     position: fixed;
+     top: 2vh;
+     right: 8vw;
+     font-size: 50px;
+}
 #translateY {
      position: fixed;
      top: 40vh;
