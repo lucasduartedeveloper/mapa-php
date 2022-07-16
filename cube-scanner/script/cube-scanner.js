@@ -303,7 +303,7 @@ $(document).ready(function() {
          // add gyro
          translateY = parseInt($("#translateY").val());
          var translateYtoWeight =
-         100/(-128) * 
+         100/(-128) * translateY;
          rotateX = parseInt($("#rotateX").val());
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
