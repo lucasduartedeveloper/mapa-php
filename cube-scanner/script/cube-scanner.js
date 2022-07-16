@@ -219,7 +219,7 @@ $(document).ready(function() {
      });
      $("#map").click(function(e) {
           location.replace(
-          "/cube-map?id="+
+          "https://mapa-php.herokuapp.com/cube-map?id="+
           cubeList[cubeNo].cube_id);
      });
      $("#save").click(function(e) {

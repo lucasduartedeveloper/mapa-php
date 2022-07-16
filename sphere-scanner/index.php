@@ -37,7 +37,7 @@
 
 <div id="authentication">
       <p id="auth-header">
-           LOGIN
+           LOGIN (DEACTIVATED)
            <span>
            <i id="globe-icon" class="fa-solid fa-globe"></i>        
            <i id="cube-icon" 
