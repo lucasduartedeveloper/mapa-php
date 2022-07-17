@@ -448,8 +448,7 @@ var dataURL = "";
 function convertToIcon() {
         var domElement = document
         .getElementById("cube-container");
-        html2canvas(domElement, {
-            onrendered: function (domElementCanvas) {
+        html2canvas(domElement).then(function (domElementCanvas) {
             var canvas = document.createElement('canvas');
             canvas.width = 256;
             canvas.height = 256;
