@@ -320,8 +320,8 @@ var render = Render.create({
 var cubeMarker = L.marker([0,0], { icon: 
                L.icon({
                iconUrl: "/cube-scanner/img/front.png",
-               iconSize: [50, 50], // size of the icon
-               iconAnchor:  [50/2, 50/2] })
+               iconSize: [1, 1], // size of the icon
+               iconAnchor:  [1/2, 1/2] })
 }).addTo(map);
 
 var cubeRotateX = 0;
@@ -455,6 +455,11 @@ function convertToIcon() {
             canvas.height = 256;
             canvas.getContext('2d')
            .drawImage(domElementCanvas, 0, 0, 256, 256);
+
+           //Download
+           a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+           a.download = 'somefilename.jpg';
+           a.click();
 
            dataURL = canvas.toDataURL();
         }
