@@ -329,6 +329,7 @@ var cubeRotateY = 0;
 var cubeRotateZ = 0;
 setInterval(function() {
      addShadow();
+     convertToIcon();
 
      var size = 200/parseInt(cubeList[cubeNo].size);
      var lat = cubeList[cubeNo].lat;
