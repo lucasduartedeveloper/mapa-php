@@ -317,7 +317,7 @@ var render = Render.create({
     }
 });
 
-var cubeMarker = L.marker([0,0],  {icon: cubeIcon}).addTo(map);
+var cubeMarker = L.marker([0,0]).addTo(map);
 
 var cubeRotateX = 0;
 var cubeRotateY = 0;
