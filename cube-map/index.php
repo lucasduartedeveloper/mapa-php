@@ -43,20 +43,8 @@
 </head>
 <body>
 
-<div id="cube-container">
-      <img src="/cube-scanner/img/front.png" 
-      class="front"/> 
-      <img src="/cube-scanner/img/back.png" 
-      class="back"/>
-      <img src="/cube-scanner/img/left.png" 
-      class="left"/>
-      <img src="/cube-scanner/img/top.png" 
-      class="top"/>
-      <img src="/cube-scanner/img/right.png" 
-      class="right"/>
-      <img src="/cube-scanner/img/bottom.png" 
-      class="bottom"/>
-</div>
+<canvas id="cube-container">
+</canvas>
 
 <div id="rotation">
 <label id="rotation-label"
@@ -143,7 +131,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v62.30.11.106
+     MAP-GYRO v62.30.11.107
      <br>
      <span id="server-info">
      CONNECTING...
@@ -173,9 +161,9 @@ class="form-range">
 <script src="script/matter.js"></script>
 
 <script src="script/websocket.js?v=0"></script>
-<script src="script/cube-shadow.js?v=30"></script>
+<script src="script/cube-shadow.js?v=31"></script>
 <script src="script/map.js?v=11"></script>
-<script src="script/cube-map-gyro.js?v=106"></script>
+<script src="script/cube-map-gyro.js?v=107"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>

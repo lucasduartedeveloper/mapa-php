@@ -317,6 +317,8 @@ var render = Render.create({
     }
 });
 
+var dataURL = "";
+
 var cubeMarker = L.marker([0,0], { icon: 
                L.icon({
                iconUrl: "/cube-scanner/img/front.png",
@@ -327,6 +329,7 @@ var cubeMarker = L.marker([0,0], { icon:
 var cubeRotateX = 0;
 var cubeRotateY = 0;
 var cubeRotateZ = 0;
+
 setInterval(function() {
      addShadow();
      convertToIcon();
@@ -443,26 +446,4 @@ function listEmpty() {
           return true;
      }
      return false;
-}
-
-var dataURL = "";
-function convertToIcon() {
-        $("#cube-container").show();
-        var domElement = document
-        .getElementById("cube-container");
-        html2canvas(domElement).then(function (domElementCanvas) {
-            var canvas = document.createElement('canvas');
-            canvas.width = 256;
-            canvas.height = 256;
-            canvas.getContext('2d')
-           .drawImage(domElementCanvas, 0, 0, 256, 256);
-           
-           $("#cube-container").hide();
-           /*/Download
-           a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-           a.download = 'somefilename.jpg';
-           a.click();*/
-
-           dataURL = canvas.toDataURL();
-      });
 }
