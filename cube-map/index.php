@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="css/style.css?v=60">
+<link rel="stylesheet" href="css/style.css?v=61">
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -137,7 +137,7 @@ class="form-range">
 </button>
 
 <p id="version-info">
-     MAP-GYRO v59.30.11.91
+     MAP-GYRO v61.30.11.92
      <br>
      <span id="server-info">
      CONNECTING...
@@ -169,7 +169,7 @@ class="form-range">
 <script src="script/websocket.js?v=0"></script>
 <script src="script/cube-shadow.js?v=30"></script>
 <script src="script/map.js?v=11"></script>
-<script src="script/cube-map-gyro.js?v=91"></script>
+<script src="script/cube-map-gyro.js?v=92"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>

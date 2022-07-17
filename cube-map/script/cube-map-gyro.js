@@ -317,6 +317,13 @@ var render = Render.create({
     }
 });
 
+var cubeIcon = L.icon({
+       iconUrl: "",
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
+});
+var cubeMarker = L.marker([0,0],  {icon: cubeIcon}).addTo(map);
+
 var cubeRotateX = 0;
 var cubeRotateY = 0;
 var cubeRotateZ = 0;
@@ -436,13 +443,6 @@ function listEmpty() {
      }
      return false;
 }
-
-var cubeIcon = L.icon({
-       iconUrl: "",
-       iconSize:     [30, 30], 
-       iconAnchor:   [15, 15]
-});
-var cubeMarker = L.marker([0,0],  {icon: cubeIcon}).addTo(map);
 
 function convertToIcon() {
         var domElement = document
