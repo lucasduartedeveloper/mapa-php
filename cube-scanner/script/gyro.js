@@ -37,11 +37,11 @@ setInterval(function() {
     if(motion) return;
     if (speedY > 0) {
         speedY -= gripY;
-        speedY = speedY < 0 ? 0 speedY;
+        speedY = speedY < 0 ? 0 : speedY;
     }
     else if (speedY < 0) {
         speedY += gripY;
-        speedY = speedY > 0 ? 0 speedY;
+        speedY = speedY > 0 ? 0 : speedY;
     }
     //speedX -= gripX;
     //speedY -= gripY;
