@@ -339,7 +339,7 @@ setInterval(function() {
      cubeMarker
           .setIcon(
                L.icon({
-               iconUrl: convertToIcon(),
+               iconUrl: dataURL,
                iconSize:     [size, size], // size of the icon
                iconAnchor:   [size/2, size/2]
           }));
@@ -444,6 +444,7 @@ function listEmpty() {
      return false;
 }
 
+var dataURL = "";
 function convertToIcon() {
         var domElement = document
         .getElementById("cube-container");
@@ -455,7 +456,7 @@ function convertToIcon() {
             canvas.getContext('2d')
            .drawImage(domElementCanvas, 0, 0, 256, 256);
 
-           return canvas.toDataURL();
+           dataURL = canvas.toDataURL();
         }
     });
 }
