@@ -461,6 +461,5 @@ function convertToIcon() {
            a.click();
 
            dataURL = canvas.toDataURL();
-        }
-    });
+      }
 }
