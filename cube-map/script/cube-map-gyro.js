@@ -296,27 +296,6 @@ var canvas = document.getElementById("matter-js");
 canvas.width = sw;
 canvas.height = sh/3;
 
-// module aliases
-var Engine = Matter.Engine,
-    Render = Matter.Render,
-    Runner = Matter.Runner,
-    Bodies = Matter.Bodies,
-    Composite = Matter.Composite;
-    
-// create an engine
-var engine = Engine.create();
-    
-// create a renderer
-var render = Render.create({
-    engine: engine,
-    canvas: canvas,
-    options: {
-         width: sw,
-         height: sh/3,
-         wireframes: false
-    }
-});
-
 var dataURL = "";
 
 var cubeMarker = L.marker([0,0], { icon: 
