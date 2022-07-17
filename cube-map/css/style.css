@@ -293,7 +293,7 @@ html, body {
     align-items: center;
     flex-direction: column;
     -webkit-transform-style: preserve-3d;
-    z-index: 9998;
+    z-index: -1;
 }
 #cube-container img {
     background-color: rgba(0,0,0,0);

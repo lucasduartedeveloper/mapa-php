@@ -324,8 +324,11 @@ setInterval(function() {
      addShadow();
 
      var size = 200/parseInt(cubeList[cubeNo].size);
+     var lat = cubeList[cubeNo].lat;
+     var lng = cubeList[cubeNo].lng;
+
      cubeMarker
-           .setLatLng(new L.LatLng(pos.lat, pos.lng));
+           .setLatLng(new L.LatLng(lat, lng));
      cubeMarker
           .setIcon(
                L.icon({
