@@ -44,12 +44,18 @@
 <body>
 
 <div id="cube-container">
-      <img src="img/front.png" class="front"/> 
-      <img src="img/back.png" class="back"/>
-      <img src="img/left.png" class="left"/>
-      <img src="img/top.png" class="top"/>
-      <img src="img/right.png" class="right"/>
-      <img src="img/bottom.png" class="bottom"/>
+      <img src="/cube-scanner/img/front.png" 
+      class="front"/> 
+      <img src="/cube-scanner/img/back.png" 
+      class="back"/>
+      <img src="/cube-scanner/img/left.png" 
+      class="left"/>
+      <img src="/cube-scanner/img/top.png" 
+      class="top"/>
+      <img src="/cube-scanner/img/right.png" 
+      class="right"/>
+      <img src="/cube-scanner/img/bottom.png" 
+      class="bottom"/>
 </div>
 
 <div id="rotation">
