@@ -17,9 +17,9 @@ var speedX = 0;
 var speedY = 0;
 var speedZ = 0;
 
-var gripX = 9.8;
-var gripY = 9.8;
-var gripZ = 9.8;
+var gripX = Math.round((5 / 9.8) * 0.5;
+var gripY = Math.round((5 / 9.8) * 0.5;
+var gripZ = Math.round((5 / 9.8) * 0.5;
 
 function accHandler(acc) {
     if(!motion) return;
@@ -34,7 +34,16 @@ function accHandler(acc) {
 }
 
 setInterval(function() {
+    if(motion) return;
+    if (speedY > 0) {
+        speedY -= gripY;
+        speedY = speedY < 0 ? 0 speedY;
+    }
+    else if (speedY < 0) {
+        speedY += gripY;
+        speedY = speedY > 0 ? 0 speedY;
+    }
     //speedX -= gripX;
-    //speedY -= gripY;
+    // speedY -= gripY;
     //speedZ -= gripZ;
 }, 100);
