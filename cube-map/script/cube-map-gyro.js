@@ -317,7 +317,12 @@ var render = Render.create({
     }
 });
 
-var cubeMarker = L.marker([0,0]).addTo(map);
+var cubeMarker = L.marker([0,0], { icon: 
+               L.icon({
+               iconUrl: "/cube-scanner/img/front.png",
+               iconSize:     [50, 50], // size of the icon
+               iconAnchor:   [50/2, 50/2]
+}).addTo(map);
 
 var cubeRotateX = 0;
 var cubeRotateY = 0;
