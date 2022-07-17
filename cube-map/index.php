@@ -96,7 +96,7 @@ min="-180" max="180" step="1" value="0"
 type="range" 
 class="form-range">
 
-<video style="display:none" id="video" width="100" height="100" autoplay></video>
+<video data-html2canvas-ignore style="display:none" id="video" width="100" height="100" autoplay></video>
 <canvas width="100" height="100" id="camera-canvas">
 </canvas>
 <button id="btn-camera" class="btn-camera">
