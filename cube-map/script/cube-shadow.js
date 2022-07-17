@@ -159,6 +159,7 @@ function convertToIcon() {
      rotateNodes3DonY(nodes, cubeRotateY);
      rotateNodes3DonZ(nodes, cubeRotateZ);
 
+     clearScreen();
      ctx.save();
      ctx.translate(128, 128);
 
@@ -207,18 +208,6 @@ function color(x, y, z) {
 // draw function
 function clearScreen() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function fillScreen(color) {
-      ctx.beginPath();
-      ctx.rect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = color;
-      ctx.fill();
-}
-
-function refreshScreen() {
-      clearScreen();
-      fillScreen(backgroundColor);
 }
 
 function point(x, y, color) {
