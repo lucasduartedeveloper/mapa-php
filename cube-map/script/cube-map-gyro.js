@@ -317,11 +317,6 @@ var render = Render.create({
     }
 });
 
-var cubeIcon = L.icon({
-       iconUrl: "",
-       iconSize:     [30, 30], 
-       iconAnchor:   [15, 15]
-});
 var cubeMarker = L.marker([0,0],  {icon: cubeIcon}).addTo(map);
 
 var cubeRotateX = 0;
@@ -446,7 +441,7 @@ function listEmpty() {
 
 function convertToIcon() {
         var domElement = document
-        .getElementById("#cube-container");
+        .getElementById("cube-container");
         html2canvas(domElement, {
             onrendered: function (domElementCanvas) {
             var canvas = document.createElement('canvas');
