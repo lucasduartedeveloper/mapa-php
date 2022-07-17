@@ -442,14 +442,17 @@ var cubeIcon = L.icon({
 var cubeMarker = L.marker([0,0],  {icon: cubeIcon}).addTo(map);
 
 function convertToIcon() {
-        var domElement = document.getElementById("#cube-container");
-html2canvas(domElement, {
-    onrendered: function (domElementCanvas) {
-        var canvas = document.createElement('canvas');
-        canvas.width = 256;
-        canvas.height = 256;
-        canvas.getContext('2d').drawImage(domElementCanvas, 0, 0, 256, 256);
+        var domElement = document
+        .getElementById("#cube-container");
+        html2canvas(domElement, {
+            onrendered: function (domElementCanvas) {
+            var canvas = document.createElement('canvas');
+            canvas.width = 256;
+            canvas.height = 256;
+            canvas.getContext('2d')
+           .drawImage(domElementCanvas, 0, 0, 256, 256);
 
-        return canvas.toDataURL();
-    }
+           return canvas.toDataURL();
+        }
+    });
 }
