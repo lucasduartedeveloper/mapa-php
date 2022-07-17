@@ -11,7 +11,6 @@ var counterCcw = 0;
 var height = 0;
 
 $(document).ready(function() {
-    matterJs();
     $("#btn-map").click(function(e) {
          if (!mapLock) {
               mapLock = true;
@@ -261,11 +260,6 @@ function accHandler(acc) {
 function calcularAngulo(co, ca, h) {
     var senA = co/h;
     var a = Math.asin(senA);
-    /*
-    a = co == 0 && ca > 0 ? 1.5707963267948966 * 2 : a;
-    a = co > 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
-    a = co < 0 && ca > 0 ? 1.5707963267948966 * 2 - a : a;
-    */
     return a * (180/Math.PI);
 }
 
@@ -323,47 +317,22 @@ var render = Render.create({
     }
 });
 
-// create two boxes and a ground
-var head = 
-Bodies.circle((sw/2), (sh/5)-95, 10, {
-    render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
-
-function matterJs() {
-    // add all of the bodies to the world
-    Composite.add(engine.world, [head]);
-
-    let mouse = Matter.Mouse.create(render.canvas);
-    let mouseConstraint = 
-    Matter.MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-            render: {visible: true}
-        }
-    });
-    render.mouse = mouse;
-
-    // add soft global constraint
-    var constraints = [
-    mouseConstraint];
-    Composite.add(engine.world, constraints);
-
-    // run the renderer
-    Render.run(render);
-    
-    // create runner
-    var runner = Runner.create();
-
-    // run the engine
-    Runner.run(runner, engine);
-}
-
 var cubeRotateX = 0;
 var cubeRotateY = 0;
 var cubeRotateZ = 0;
 setInterval(function() {
      addShadow();
+
+     var size = 200/parseInt(cubeList[cubeNo].size);
+     cubeMarker
+           .setLatLng(new L.LatLng(pos.lat, pos.lng));
+     cubeMarker
+          .setIcon(
+               L.icon({
+               iconUrl: convertToIcon(),
+               iconSize:     [size, size], // size of the icon
+               iconAnchor:   [size/2, size/2]
+          }));
 
      $("#cube-container")
          .css("transform", 
@@ -463,4 +432,24 @@ function listEmpty() {
           return true;
      }
      return false;
+}
+
+var cubeIcon = L.icon({
+       iconUrl: "",
+       iconSize:     [30, 30], 
+       iconAnchor:   [15, 15]
+});
+var cubeMarker = L.marker([0,0],  {icon: cubeIcon}).addTo(map);
+
+function convertToIcon() {
+        var domElement = document.getElementById("#cube-container");
+html2canvas(domElement, {
+    onrendered: function (domElementCanvas) {
+        var canvas = document.createElement('canvas');
+        canvas.width = 256;
+        canvas.height = 256;
+        canvas.getContext('2d').drawImage(domElementCanvas, 0, 0, 256, 256);
+
+        return canvas.toDataURL();
+    }
 }
