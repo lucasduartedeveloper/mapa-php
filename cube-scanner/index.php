@@ -239,7 +239,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
-<script src="script/gyro.js?v=7"></script>
+<script src="script/gyro.js?v=8"></script>
 
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=21"></script>
