@@ -446,6 +446,7 @@ function listEmpty() {
 
 var dataURL = "";
 function convertToIcon() {
+        $("#cube-container").show();
         var domElement = document
         .getElementById("cube-container");
         html2canvas(domElement).then(function (domElementCanvas) {
@@ -454,7 +455,8 @@ function convertToIcon() {
             canvas.height = 256;
             canvas.getContext('2d')
            .drawImage(domElementCanvas, 0, 0, 256, 256);
-
+           
+           $("#cube-container").show();
            /*/Download
            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
            a.download = 'somefilename.jpg';
