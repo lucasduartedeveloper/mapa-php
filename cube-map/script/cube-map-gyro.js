@@ -456,7 +456,7 @@ function convertToIcon() {
             canvas.getContext('2d')
            .drawImage(domElementCanvas, 0, 0, 256, 256);
            
-           $("#cube-container").show();
+           $("#cube-container").hide();
            /*/Download
            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
            a.download = 'somefilename.jpg';
