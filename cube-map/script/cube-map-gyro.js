@@ -353,7 +353,7 @@ setInterval(function() {
          "rotateX("+ (cubeRotateX) + "deg) "+
          "rotateY("+ (cubeRotateY) + "deg) "+
          "rotateZ("+ (cubeRotateZ) + "deg)");
-}, 10000);
+}, 500);
 
 var baseImages = [
       "/cube-scanner/img/front.png",
