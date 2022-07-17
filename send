@@ -1,0 +1,6 @@
+cd /storage/emulated/0/Download/heroku/mapa-php/
+git add .
+git commit -am "first commit"
+git push origin main
+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
+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
