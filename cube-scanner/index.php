@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=88">
+         href="css/style.css?v=89">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -279,7 +279,7 @@ class="form-range">
          "#00b4d8",
          "#48cae4",
        ],
-       swatchesOnly: false,
+       swatchesOnly: true,
        focusInput: false,
        change: function() {
           alert("");
