@@ -1,6 +1,20 @@
 // Heroku build time
 setTimeout(function(e) {
-    $("#heroku").css("display","inline-block");
+    $.ajax({
+    beforeSend: function(request) {
+        request.setRequestHeader("Authorization",
+        "Bearer a75752e9-e348-45e9-924a-06e71730c9b6");
+        request.setRequestHeader("Accept",
+        "application/vnd.heroku+json; version=3");
+    },
+    dataType: "json",
+    url: "https://api.heroku.com/apps/mapa-php/builds",
+    })
+    .done(function(data) {
+        //Your code
+        log("heroku", data);
+        $("#heroku").css("display","inline-block");
+    });
 }, 10000);
 
 $("#heroku").click(function() {
