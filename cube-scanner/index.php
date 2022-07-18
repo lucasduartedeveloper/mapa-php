@@ -265,7 +265,7 @@ class="form-range">
 
     Coloris({
        theme: "large",
-       themeMode: "dark", // light, dark, auto
+       themeMode: "light", // light, dark, auto
        swatches: [
          "#264653",
          "#2a9d8f",
