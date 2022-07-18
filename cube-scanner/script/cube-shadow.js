@@ -131,8 +131,7 @@ function addShadow() {
 
         img.src = (k+1) > cube.length ? 
         baseImages[k] : 
-        cube[n].base64 ? // *
-        baseImages[k] :
-        cube[n].base64;
+        ( cube[n].base64 ? cube[n].base64 : 
+        baseImages[k]); // *
     }
 }
