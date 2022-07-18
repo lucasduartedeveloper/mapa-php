@@ -85,9 +85,13 @@ body {
 .place {
      color: #000;
 }
-#coloris {
+#theme {
      position: fixed;
-     top: 2vh;
+     top: 50vh;
+     left: 8vw;
+     border: 4px solid black;
+     width: 16vw;
+     height: 16vw;
 }
 #add {
      position: fixed;

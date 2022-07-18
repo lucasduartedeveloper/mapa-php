@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=84">
+         href="css/style.css?v=85">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -64,7 +64,8 @@
 <i id="print" class="fa-solid fa-print"></i>
 <i id="eraser" class="fa-solid fa-eraser"></i>
 <i id="mic" class="fa-solid fa-microphone-slash place"></i>
-<input id="coloris" type="text" data-coloris />
+<input style="display:none" id="coloris" type="text" data-coloris />
+<button id="theme" ></button>
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
@@ -145,7 +146,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v84.14-30.2.333
+     CUBE SCANNER v85.14-30.2.333
      <br>
      <span id="server-info">
      CONNECTING...
@@ -257,11 +258,34 @@ class="form-range">
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
     eruda.init();
+
     if (location.protocol !== "https:") {
         location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
+
     Coloris({
-      el: "#coloris"
+       theme: "large",
+       themeMode: "light", // light, dark, auto
+       swatches: [
+         "#264653",
+         "#2a9d8f",
+         "#e9c46a",
+         "#f4a261",
+         "#e76f51",
+         "#d62828",
+         "#023e8a",
+         "#0077b6",
+         "#0096c7",
+         "#00b4d8",
+         "#48cae4",
+       ],
+       change: function() {
+          alert("");
+       }
+    });
+
+    $("#theme").click(function() {
+       $("#coloris").click();
     });
 </script>
 </body>
