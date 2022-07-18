@@ -5,3 +5,5 @@ git commit -am "first commit"
 git push origin main
 
 git push https://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@github.com/lucasduartedeveloper/mapa-php.git
+
+git remote --set-url origin https://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@github.com/lucasduartedeveloper/mapa-php.git
