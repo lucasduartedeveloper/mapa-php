@@ -259,6 +259,9 @@ class="form-range">
     if (location.protocol !== "https:") {
         location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
+    Coloris({
+      el: "#coloris"
+    });
 </script>
 </body>
 </html> 
