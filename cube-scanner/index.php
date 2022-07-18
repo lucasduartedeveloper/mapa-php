@@ -142,7 +142,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v83.14-30.2.332
+     CUBE SCANNER v83.14-30.2.333
      <br>
      <span id="server-info">
      CONNECTING...
@@ -247,7 +247,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=32"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=332"></script>
+<script src="script/cube-scanner.js?v=333"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>

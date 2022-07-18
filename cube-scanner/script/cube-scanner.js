@@ -1,5 +1,5 @@
 // Heroku build time
-setTimeout(function(e) {
+//setTimeout(function(e) {
     $.ajax({
     beforeSend: function(request) {
         request.setRequestHeader("Authorization",
@@ -15,7 +15,11 @@ setTimeout(function(e) {
         log("heroku", data);
         $("#heroku").css("display","inline-block");
     });
-}, 10000);
+//}, 10000);
+
+// Get build state
+// If newer version available
+// Update all clients
 
 $("#heroku").click(function() {
     ws.send("CUBE-SCANNER|" +
