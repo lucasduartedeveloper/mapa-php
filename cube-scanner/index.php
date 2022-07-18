@@ -21,7 +21,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
-<link rel="stylesheet" href="coloris.min.css" />
+<link rel="stylesheet" 
+         href="script/coloris.min.css" />
 <link rel="stylesheet" 
          href="css/style.css?v=84">
 <link rel="stylesheet" 
@@ -243,7 +244,7 @@ class="form-range">
 <script src="script/debug.js?v=0"></script>
 <script src="script/gyro.js?v=11"></script>
 
-<script src="coloris.min.js"></script>
+<script src="script/coloris.min.js"></script>
 
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=21"></script>
