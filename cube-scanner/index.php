@@ -279,6 +279,7 @@ class="form-range">
          "#00b4d8",
          "#48cae4",
        ],
+       focusInput: false,
        change: function() {
           alert("");
        }
