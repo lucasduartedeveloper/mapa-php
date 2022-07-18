@@ -94,6 +94,9 @@ body {
      height: 16vw;
      border-radius: 50%;
 }
+#clr-picker {
+     z-index: 9999;
+}
 #add {
      position: fixed;
      top: 2vh;
