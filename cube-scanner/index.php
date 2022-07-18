@@ -21,8 +21,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <!-- <link rel="stylesheet" href="css/normalizee.css"> -->
+<link rel="stylesheet" href="coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=83">
+         href="css/style.css?v=84">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -62,6 +63,7 @@
 <i id="print" class="fa-solid fa-print"></i>
 <i id="eraser" class="fa-solid fa-eraser"></i>
 <i id="mic" class="fa-solid fa-microphone-slash place"></i>
+<input id="coloris" type="text" data-coloris />
 
 <div id="cube-container">
       <div id="loading" onclick="eruda.init();">
@@ -142,7 +144,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v83.14-30.2.333
+     CUBE SCANNER v84.14-30.2.333
      <br>
      <span id="server-info">
      CONNECTING...
@@ -240,6 +242,8 @@ class="form-range">
 
 <script src="script/debug.js?v=0"></script>
 <script src="script/gyro.js?v=11"></script>
+
+<script src="coloris.min.js"></script>
 
 <script src="script/image-collision.js?v=0"></script>
 <script src="script/authentication.js?v=21"></script>

@@ -85,6 +85,10 @@ body {
 .place {
      color: #000;
 }
+#coloris {
+     position: fixed;
+     top: 2vh;
+}
 #add {
      position: fixed;
      top: 2vh;
