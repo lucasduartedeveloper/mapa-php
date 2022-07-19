@@ -4,7 +4,7 @@
 
 <meta content='width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
-<link rel="stylesheet" href="css/print-cube.css?v17">
+<link rel="stylesheet" href="css/print-cube.css?v18">
 <title></title>
 </head>
 <body>
@@ -19,10 +19,10 @@
       -->
       
       <div class="space"></div>
-      <div class="space"></div>
+      <div class="fold-left"></div>
       <img face-id="3"
       src="img/top.png" class="top"/>
-      <div class="space"></div>
+      <div class="fold-right"></div>
       <div class="space"></div>
 
       <div class="fold-left"></div>
