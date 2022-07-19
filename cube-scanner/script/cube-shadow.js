@@ -109,7 +109,7 @@ function addShadow() {
 
     // *
     var c = cube.filter(o => o.face_id == 7);
-    var n = c.length > 0 ? c[0].face_id : 6;
+    var n = c.length > 0 ? 6 : 0;
     faces[6].src = n > cube.length ? 
     baseImages[6] : 
     ( cube[n].base64 ? cube[n].base64 : 
