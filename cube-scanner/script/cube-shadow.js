@@ -109,10 +109,10 @@ function addShadow() {
 
     // *
     var c = cube.filter(o => o.face_id == 7);
-    var n = c.length > 0 ? 6 : 0;
-    faces[6].src = n > cube.length ? 
+ 
+    faces[6].src = c.length == 0 ? 
     baseImages[6] : 
-    ( cube[n].base64 ? cube[n].base64 : 
+    ( c[0].base64 ? c[0].base64 : 
     baseImages[6]); // *
 
     for (var k = 0; k < 6; k++) {
@@ -138,11 +138,10 @@ function addShadow() {
             faces[this.k].src = cnv.toDataURL();
         }
         var c = cube.filter(o => o.face_id == k);
-        var n = c.length > 0 ? c[0].face_id : k;
 
-        img.src = (k+1) > cube.length ? 
+        img.src = c.length == 0 ? 
         baseImages[k] : 
-        ( cube[n].base64 ? cube[n].base64 : 
+        ( c[0].base64 ? c[0].base64 : 
         baseImages[k]); // *
     }
 }
