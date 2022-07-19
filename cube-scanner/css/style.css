@@ -281,6 +281,7 @@ body {
 #dropdown,
 #cube-modal, 
 #bugfix-modal {
+    color: #000;
     z-index: 99999;
 }
 #modal-footer-left {
