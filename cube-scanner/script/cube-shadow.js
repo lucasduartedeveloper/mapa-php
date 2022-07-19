@@ -106,7 +106,9 @@ function addShadow() {
     rotateNodes3DonZ(tempNodes, rotateZ);
 
     var faces = $("#cube-container img");
-    for (var k = 0; k < 6; k++) {
+    for (var k = 0; k < 8; k++) {
+        if (k == 6) continue; // Cube
+
         var img = new Image();
         img.width = 128;
         img.height = 128;

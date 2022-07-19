@@ -34,7 +34,14 @@ $.ajax({
                  if (n > -1) {
                      heroku_version =
                      xhr.responseText.substring(n +9, 5); 
-                     location.reload();
+                     
+                     $("#heroku")
+                     .removeClass("fa-location-dot");
+                     $("#heroku").addClass("fa-rocket");
+                     $("#heroku").css("display","inline-block");
+                     setTimout(() => {
+                         location.reload();
+                     }, 2000);
                  }
              }
              xhr.send();
