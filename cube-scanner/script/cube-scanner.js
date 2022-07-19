@@ -483,7 +483,7 @@ $(document).ready(function() {
                   scale = (1 / dist) * 128;
              }
              tx = (width/2);
-            
+             ty = (height/2);
              tz = (dist/2);
          }
 
