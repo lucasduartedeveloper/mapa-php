@@ -49,10 +49,6 @@
       <div class="space"></div>
 
       <div class="fold-bottom"></div>
-      <div class="fold-bottom"></div>
-      <div class="fold-bottom"></div>
-      <div class="fold-bottom"></div>
-      <div class="fold-bottom"></div>
       
 </div>
 
