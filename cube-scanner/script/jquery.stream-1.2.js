@@ -9,7 +9,7 @@
  *
  * Compatible with jQuery 1.5+
  */
-(function($, undefined) {
+
 
 	var // Stream object instances
 		instances = {},
@@ -760,4 +760,3 @@
 		};
 	}
 	
-})(jQuery);
