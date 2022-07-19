@@ -1,5 +1,10 @@
 // Heroku build time
-//setTimeout(function(e) {
+var heroku_releaseId = "";
+var heroku_version = "";
+var heroku_outputStreamUrl = "";
+var heroku_buildStatus = "";
+
+setTimeout(function(e) {
     $.ajax({
     beforeSend: function(request) {
         request.setRequestHeader("Authorization",
@@ -7,17 +12,35 @@
         request.setRequestHeader("Accept",
         "application/vnd.heroku+json; version=3");
         request.setRequestHeader("Range",
-        "id; max=1");
+        "id; order=asc,max=1;");
     },
     dataType: "json",
     url: "https://api.heroku.com/apps/mapa-php/builds",
     })
     .done(function(data) {
-        //Your code
-        log("heroku", data);
+        //Heroku release id
+        heroku_releaseId =data[0].release.id;
+        heroku_buildStatus = data[0].status;
+        heroku_outputStreamUrl = 
+        data[0].output_stream_url;
+
+        $.ajax({
+            beforeSend: function(request) {
+                request.setRequestHeader("Authorization",
+                "Bearer a75752e9-e348-45e9-924a-06e71730c9b6");
+                request.setRequestHeader("Accept",
+                "application/vnd.heroku+json; version=3");
+            },
+            url: heroku_outputStreamUrl
+        })  
+        .done(function(data) {
+            log("heroku-api : build logs", data);
+        });
+
+        log("heroku-api : builds", data);
         $("#heroku").css("display","inline-block");
     });
-//}, 10000);
+}, 1000);
 
 // Get build state
 // If newer version available
