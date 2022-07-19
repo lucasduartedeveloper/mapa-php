@@ -29,6 +29,13 @@ $.ajax({
              xhr.onprogress = function () {
                  log("heroku-api : build logs", 
                  xhr.responseText);
+
+                 var n = xhr.responseText.indexOf("Released");
+                 if (n > -1) {
+                     heroku_version =
+                     xhr.responseText.substring(n +9, 5); 
+                     $("#heroku").css("display","inline-block");
+                 }
              }
              xhr.send();
         }
