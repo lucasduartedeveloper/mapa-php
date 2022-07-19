@@ -257,13 +257,6 @@ class="form-range">
     </div>
   </div>
 </div>
-<script>
-    $("#version-info").click(function () {
-         $("#bugfix-modal").modal({
-             keyboard: false
-         });
-     });
-</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -297,6 +290,11 @@ class="form-range">
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
     eruda.init();
+    $("#version-info").click(function () {
+         $("#bugfix-modal").modal({
+             keyboard: false
+         });
+     });
 
     if (location.protocol !== "https:") {
         location.replace(`https:${location.href.substring(location.protocol.length)}`);
