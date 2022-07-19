@@ -187,9 +187,11 @@ function stopCamera() {
     .forEach(t => t.stop());
 }
 
+var lazyCubeNo = 0;
 var selectTimeout = false;
 function lazySelectCube(n) {
      if (listEmpty()) return;
+     lazyCubeNo = n;
 
      $("#name").text("---");
      $("#cube-container img").hide();
@@ -216,12 +218,12 @@ $(document).ready(function() {
      startCamera("environment");
 
      $("#previous").click(function(e) {
-          var n = cubeNo-1;
+          var n = lazyCubeNo-1;
           n = n < 0 ? (cubeList.length-1) : n;
           lazySelectCube(n);
      });
      $("#next").click(function(e) {
-          var n = cubeNo+1;
+          var n = lazyCubeNo+1;
           n = n > (cubeList.length-1) ? 0 : n;
           lazySelectCube(n);
      });
@@ -519,6 +521,7 @@ var gotXYZ = false;
 function getXYZ(callback) {
      $.getJSON("ajax/cube-defender.php", function(data) {
           var xyz = data[0].valor.split("|");
+          lazyCubeNo = parseInt(data[1].valor);
           cubeNo = parseInt(data[1].valor);
 
           // BG color
@@ -634,6 +637,7 @@ function goToCube(n, callback = false) {
           $.post("ajax/cube-defender.php", {
               cubeNo: n,
               }).done(function(data) {
+                  lazyCubeNo = n;
                   cubeNo = n;
                   getCube(cubeList[n].id);
 
