@@ -146,7 +146,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v98.14-30.2.351
+     CUBE SCANNER v98.14-30.2.352
      <br>
      <span id="server-info">
      CONNECTING...
@@ -253,7 +253,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=32"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=351"></script>
+<script src="script/cube-scanner.js?v=352"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
@@ -294,13 +294,19 @@ class="form-range">
               $("#coloris").val(selectedColor);
 
               log("post", data);
-              //say("Cube was rotated.");
        });
     });
 
-    $("#theme").click(function() {
+   $.getJSON("ajax/cube-defender.php", function(data) {
+          // BG color
+          $("html, body, authentication, #theme")
+          .css("background-color", data[2].valor);
+          $("#coloris").val(data[2].valor);
+   });
+
+   $("#theme").click(function() {
        $("#coloris").click();
-    });
+   });
 </script>
 </body>
 </html> 

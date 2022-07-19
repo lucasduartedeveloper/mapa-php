@@ -551,11 +551,6 @@ function getXYZ(callback) {
           var xyz = data[0].valor.split("|");
           lazyCubeNo = parseInt(data[1].valor);
           cubeNo = parseInt(data[1].valor);
-
-          // BG color
-          $("html, body, authentication, #theme")
-          .css("background-color", data[2].valor);
-          $("#coloris").val(data[2].valor);
           
           translateY = parseInt(xyz[0]);
           rotateX = parseInt(xyz[1]);
