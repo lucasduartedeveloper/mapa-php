@@ -54,7 +54,7 @@
       
 </div>
 
-<p id="version-info">
+<p style="display:none" id="version-info">
      CUBE SCANNER v###
 </p>
 
