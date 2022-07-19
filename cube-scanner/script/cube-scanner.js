@@ -6,6 +6,8 @@
         "Bearer a75752e9-e348-45e9-924a-06e71730c9b6");
         request.setRequestHeader("Accept",
         "application/vnd.heroku+json; version=3");
+        request.setRequestHeader("Range",
+        "id; max=1");
     },
     dataType: "json",
     url: "https://api.heroku.com/apps/mapa-php/builds",
