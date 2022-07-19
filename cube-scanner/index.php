@@ -258,7 +258,7 @@ class="form-range">
 <script src="script/authentication.js?v=21"></script>
 <script src="script/websocket.js?v=4"></script>
 
-<script src="script/cube-shadow.js?v=33"></script>
+<script src="script/cube-shadow.js?v=34"></script>
 <script src="script/image-upload.js?v=2"></script>
 <script src="script/cube-scanner.js?v=355"></script>
 
