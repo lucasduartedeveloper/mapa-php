@@ -178,8 +178,9 @@ body {
 }
 #cube-container img {
     background-color: rgba(0,0,0,0);
-    outline: solid black;
+    outline: 1px solid black;
     outline-offset: 0px;:
+    object-fit: cover;
 }
 #cube-container .front {
     border: 2px solid #000;

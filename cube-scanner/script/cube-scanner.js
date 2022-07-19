@@ -489,6 +489,9 @@ $(document).ready(function() {
              tx = (width/2) * scale;
              ty = (height/2) * scale;
              tz = (dist/2) * scale;
+
+             // Crop rectangle
+             // [code]
          }
 
           $("#cube-container img.front")          
@@ -546,6 +549,17 @@ $(document).ready(function() {
          "rotateX(0deg) "+
          "rotateY(90deg) "+
          "rotateZ(0deg)"});
+          $("#cube-container img.bottom")        
+         .css({ 
+         "width" : (width * scale) + "px",
+         "height" : (dist * scale) + "px",
+         "transform" : 
+         "translateX(0px) "+
+         "translateY("+ ty +"px) "+
+         "translateZ(0px) " +
+         "rotateX(-90deg) "+
+         "rotateY(0deg) "+
+         "rotateZ(0deg)" }); 
 
          $("#cube-container")
          .css("transform", 
