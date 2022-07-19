@@ -239,7 +239,7 @@ body {
     width: 64px;
     height: 64px;
     -webkit-transform-style: preserve-3d;
-    transform:  translateY(32px);
+    transform:  translateY(16px);
 }
 #camera-canvas {
     margin-bottom: 20px;
