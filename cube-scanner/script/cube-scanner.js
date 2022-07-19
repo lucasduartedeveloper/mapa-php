@@ -65,7 +65,7 @@ $("#print").click(function() {
     if (listEmpty()) return;
 
     location.replace(
-    "print.php?id="+
+    "print.php?cubeId="+
     cubeList[cubeNo].id);
 });
 
