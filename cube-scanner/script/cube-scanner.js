@@ -483,7 +483,7 @@ $(document).ready(function() {
                   scale = (1 / height) * 128;
              }
              // Ex: Bed, car, bus
-             else if (dist >= (width + height) {
+             else if (dist >= (width + height)) {
                   scale = (1 / dist) * 128;
              }
              tx = (width/2) * scale;
