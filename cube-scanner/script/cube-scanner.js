@@ -15,7 +15,7 @@ setTimeout(function(e) {
         "id; order=asc,max=1;");
     },
     dataType: "json",
-    url: "https://api.heroku.com/apps/mapa-php/builds",
+    url: "https://api.heroku.com/apps/mapa-php/builds"
     })
     .done(function(data) {
         //Heroku release id
@@ -24,15 +24,19 @@ setTimeout(function(e) {
         heroku_outputStreamUrl = 
         data[0].output_stream_url;
 
-        $.ajax({
-            beforeSend: function(request) {
-                request.setRequestHeader("Authorization",
-                "Bearer a75752e9-e348-45e9-924a-06e71730c9b6");
-            },
-            url: heroku_outputStreamUrl
-        })  
-        .done(function(data) {
-            log("heroku-api : build logs", data);
+        $.stream(heroku_outputStreamUrl, {
+             open: function(){
+                 log("heroku-api : build logs", "");
+             },
+             message: function(event){
+                 log("heroku-api : build logs", event.data);
+             },
+             error: function(){
+                 log("heroku-api : build logs", "");
+             },
+             close: function(){
+                 log("heroku-api : build logs", "");
+             }
         });
 
         log("heroku-api : builds", data);

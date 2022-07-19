@@ -146,7 +146,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v98.14-30.2.342
+     CUBE SCANNER v98.14-30.2.343
      <br>
      <span id="server-info">
      CONNECTING...
@@ -228,6 +228,8 @@ class="form-range">
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+<script src="https://code.jquery.com/jquery.stream-1.2.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
@@ -253,7 +255,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=32"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=342"></script>
+<script src="script/cube-scanner.js?v=343"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
