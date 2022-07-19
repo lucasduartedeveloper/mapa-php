@@ -93,6 +93,7 @@ body {
      width: 16vw;
      height: 16vw;
      border-radius: 50%;
+     background-color: #2f2e40;
 }
 #clr-picker {
      position: fixed;

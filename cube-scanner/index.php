@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=91">
+         href="css/style.css?v=92">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -146,7 +146,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v91.14-30.2.333
+     CUBE SCANNER v92.14-30.2.333
      <br>
      <span id="server-info">
      CONNECTING...
@@ -284,7 +284,7 @@ class="form-range">
     });
 
     $("#coloris").on("change", function() {
-       $("#theme").css("background",
+       $("html, body, authentication #theme").css("background",
        $("#coloris").val());
     });
 
