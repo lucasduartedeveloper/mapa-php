@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=107">
+         href="css/style.css?v=108">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -235,6 +235,36 @@ class="form-range">
     </div>
   </div>
 </div>
+
+<div id="bugfix-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="cube-modal-title" 
+        class="modal-title">BUGFIX</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+        <b>v108.14-30.2.378</b><br>
+        BUGFIX added.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $("#version-info").click(function () {
+         $("#bugfix-modal").modal({
+             keyboard: false
+         });
+     });
+</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 

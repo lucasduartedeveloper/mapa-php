@@ -279,7 +279,8 @@ body {
     margin: 0px;
 }
 #dropdown,
-#cube-modal {
+#cube-modal, 
+#bugfix-modal {
     z-index: 99999;
 }
 #modal-footer-left {
