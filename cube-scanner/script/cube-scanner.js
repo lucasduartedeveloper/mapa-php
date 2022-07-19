@@ -758,7 +758,8 @@ var faces = [
     "Inside"];
 function setFace(id) {
     faceId = id;
-    $("#cube-face").text(faces[id]);
+    $("#cube-face").text(
+    faces[faceId < 6 ? faceId : 6]);
 
     for (var k = 0; k < 6; k++) {
         $($("#cube-container img")[k])
