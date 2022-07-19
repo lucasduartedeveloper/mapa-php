@@ -24,6 +24,12 @@ setTimeout(function(e) {
         heroku_outputStreamUrl = 
         data[0].output_stream_url;
 
+        var xhr = new XMLHttpRequest()
+xhr.open("GET", heroku_outputStreamUrl, true)
+xhr.onprogress = function () {
+  log("heroku-api : build logs", xhr.responseText);
+}
+xhr.send();
         $.stream(heroku_outputStreamUrl, {
              open: function(){
                  log("heroku-api : build logs", "");
