@@ -157,9 +157,9 @@ body {
 }
 #translateY {
      position: fixed;
-     top: 50vh;
+     top: 45vh;
      width: 10vh;
-     left: 70vw;
+     left: 75vw;
      font-size: 50px;
      transform: rotateZ(90deg);
 }
