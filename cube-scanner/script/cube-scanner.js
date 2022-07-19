@@ -463,12 +463,15 @@ $(document).ready(function() {
          var tx = 64;
          var ty = 64;
          var tz = 64;
+         var width = 0;
+         var height = 0;
+         var dist = 0;
          var scale = 0;
          if (cubeList[cubeNo].size.includes("x")) {
              var dim = cubeList[cubeNo].size.split("x");
-             var width = parseInt(dim[0]);
-             var height = parseInt(dim[1]);
-             var dist = parseInt(dim[2]);
+             width = parseInt(dim[0]);
+             height = parseInt(dim[1]);
+             dist = parseInt(dim[2]);
              
              // Ex: TV, printer
              if (width > ((height + dist)/2)) {
@@ -482,9 +485,9 @@ $(document).ready(function() {
              else if (dist > ((width + height)/2)) {
                   scale = (1 / dist) * 128;
              }
-             tx = (width/2);
-             ty = (height/2);
-             tz = (dist/2);
+             tx = (width/2) * scale;
+             ty = (height/2) * scale;
+             tz = (dist/2) * scale;
          }
 
           $("#cube-container img.front")          
