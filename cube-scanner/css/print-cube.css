@@ -13,15 +13,16 @@ html, body {
    width: 17cm;
    height: 22cm;
    display: flex;
-   border: 1mm solid #ccc;: 
+   border: 1mm solid #ccc;
 }
 #cube-container img {
-   border: 1mm solid black;
    width: 5cm;
    height: 5cm;
    margin: 0px;
+   border: 1mm solid black;
 }
 .space {
+   border: 1mm solid #ccc;
    width: 5cm;
    height: 5cm;
 }
