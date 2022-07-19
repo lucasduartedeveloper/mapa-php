@@ -34,7 +34,7 @@ $.ajax({
                  if (n > -1) {
                      heroku_version =
                      xhr.responseText.substring(n +9, 5); 
-                     $("#heroku").css("display","inline-block");
+                     location.reload();
                  }
              }
              xhr.send();
