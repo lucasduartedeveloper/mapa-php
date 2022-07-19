@@ -141,12 +141,12 @@ class="form-range">
            <a class="dropdown-item" href="#" onclick="setFace(4);">Right</a>
            <a class="dropdown-item" href="#" onclick="setFace(5);">Bottom</a>
            <a class="dropdown-item" href="#" onclick="setFace(6);">Cube</a>
-           <a class="dropdown-item" href="#" onclick="setFace(-1);">Inside</a>
+           <a class="dropdown-item" href="#" onclick="setFace(7);">Inside</a>
      </div>
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v98.14-30.2.352
+     CUBE SCANNER v98.14-30.2.353
      <br>
      <span id="server-info">
      CONNECTING...
@@ -253,7 +253,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=32"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=352"></script>
+<script src="script/cube-scanner.js?v=353"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>

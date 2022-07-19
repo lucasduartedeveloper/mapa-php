@@ -762,6 +762,10 @@ function setFace(id) {
             $($("#cube-container img")[k])
             .css("outline", "solid orange");
         }
+    }  
+    else if (faceId == 7) {
+       $($("#cube-container img")[7])
+       .css("outline", "solid orange");
     }
     else {
         $($("#cube-container img")[faceId])
