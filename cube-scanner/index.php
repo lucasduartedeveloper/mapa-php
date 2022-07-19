@@ -280,10 +280,12 @@ class="form-range">
          "#48cae4",
        ],
        swatchesOnly: true,
-       focusInput: false,
-       change: function() {
-          alert("");
-       }
+       focusInput: false
+    });
+
+    $("#coloris").on("change", function() {
+       $("#theme").css("background",
+       $("#coloris").val());
     });
 
     $("#theme").click(function() {
