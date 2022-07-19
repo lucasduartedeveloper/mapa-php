@@ -106,13 +106,18 @@ function addShadow() {
     rotateNodes3DonZ(tempNodes, rotateZ);
 
     var faces = $("#cube-container img");
-    // *
+    // Inside
     var c = cube.filter(o => o.face_id == 7);
- 
     faces[6].src = c.length == 0 ? 
     baseImages[6] : 
     ( c[0].base64 ? c[0].base64 : 
-    baseImages[6]); // *
+    baseImages[6]);
+    // Ground
+    c = cube.filter(o => o.face_id == 8);
+    faces[7].src = c.length == 0 ? 
+    baseImages[7] : 
+    ( c[7].base64 ? c[0].base64 : 
+    baseImages[7]);
 
     for (var k = 0; k < 6; k++) {
         if (k == 6) continue; // Cube
