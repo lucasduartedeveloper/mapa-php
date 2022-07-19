@@ -25,25 +25,11 @@ setTimeout(function(e) {
         data[0].output_stream_url;
 
         var xhr = new XMLHttpRequest()
-xhr.open("GET", heroku_outputStreamUrl, true)
-xhr.onprogress = function () {
-  log("heroku-api : build logs", xhr.responseText);
-}
-xhr.send();
-        $.stream(heroku_outputStreamUrl, {
-             open: function(){
-                 log("heroku-api : build logs", "");
-             },
-             message: function(event){
-                 log("heroku-api : build logs", event.data);
-             },
-             error: function(){
-                 log("heroku-api : build logs", "");
-             },
-             close: function(){
-                 log("heroku-api : build logs", "");
-             }
-        });
+        xhr.open("GET", heroku_outputStreamUrl, true)
+        xhr.onprogress = function () {
+           log("heroku-api : build logs", xhr.responseText);
+        }
+        xhr.send();
 
         log("heroku-api : builds", data);
         $("#heroku").css("display","inline-block");
