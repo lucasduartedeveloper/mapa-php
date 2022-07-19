@@ -228,7 +228,7 @@ class="form-range">
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="script/jquery.stream-1.2.min.js"></script>
+<script src="script/jquery.stream-1.2.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
