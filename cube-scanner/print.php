@@ -18,24 +18,24 @@
       
       <div class="space"></div>
       <div class="space"></div>
-      <img face-id="2"
-      src="img/left.png" class="left"/>
+      <img face-id="3"
+      src="img/top.png" class="top"/>
       <div class="space"></div>
       <div class="space"></div>
 
       <div class="fold-left"></div>
-      <img face-id="5"
-      src="img/bottom.png" class="bottom"/>
+      <img face-id="2"
+      src="img/left.png" class="left"/>
       <img face-id="0"
       src="img/front.png" class="front"/> 
-      <img face-id="3"
-      src="img/top.png" class="top"/>
+      <img face-id="4"
+      src="img/right.png" class="right"/>
       <div class="fold-right"></div>
 
       <div class="space"></div>
       <div class="fold-left"></div>
-      <img face-id="4"
-      src="img/right.png" class="right"/>
+      <img face-id="5"
+      src="img/bottom.png" class="bottom"/>
       <div class="fold-right"></div>
       <div class="space"></div>
 
