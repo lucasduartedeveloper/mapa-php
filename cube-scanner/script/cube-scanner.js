@@ -22,16 +22,20 @@ $.ajax({
         heroku_buildStatus = data[0].status;
         heroku_outputStreamUrl = 
         data[0].output_stream_url;
-
-        var xhr = new XMLHttpRequest()
-        xhr.open("GET", heroku_outputStreamUrl, true)
-        xhr.onprogress = function () {
-           log("heroku-api : build logs", xhr.responseText);
+ 
+        if (heroku_buildStatus == "pending") {
+             var xhr = new XMLHttpRequest()
+             xhr.open("GET", heroku_outputStreamUrl, true)
+             xhr.onprogress = function () {
+                 log("heroku-api : build logs", 
+                 xhr.responseText);
+             }
+             xhr.send();
         }
-        xhr.send();
-
-        log("heroku-api : builds", data);
-        $("#heroku").css("display","inline-block");
+        else {
+             log("heroku-api : builds", data);
+             $("#heroku").css("display","inline-block");
+        }
 });
 
 // Get build state
