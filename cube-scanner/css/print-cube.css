@@ -23,6 +23,9 @@ html, body {
    flex-direction: row;
    border: 1mm solid #ccc;
 }
+#cube-container {
+   margin: 0px;
+}
 #cube-container img {
    width: 5cm;
    height: 5cm;
