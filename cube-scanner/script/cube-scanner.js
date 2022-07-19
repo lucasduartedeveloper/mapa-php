@@ -459,11 +459,41 @@ $(document).ready(function() {
               "Z: " + rotateZ.toFixed(0)
          );
 
+         // Box 
+         var tz = 64;
+         if (cubeList[cubeNo].size.includes("x")) {
+             var dim = cubeList[cubeNo].size.split("x");
+             var width = parseInt(dim[0]);
+             var height = parseInt(dim[1]);
+             var dist = parseInt(dim[2]);
+             
+             var scale = 0;
+             // Ex: TV, printer
+             if (width > ((height + dist)/2)) {
+                  scale = (1 / width) * 128;
+             }
+             // Ex: Fridge, coffin, door
+             else if (height > ((width + dist)/2)) {
+                  scale = (1 / height) * 128;
+             }
+             // Ex: Bed, car, bus
+             else if (dist > ((width + height)/2)) {
+                  scale = (1 / dist) * 128;
+             }
+             tz = (dist/2);
+
+             $("#cube-container img.front")          
+            .css({ 
+            "width" : (width * scale) + "px",
+            "height" : (height * scale) + "px"
+             });
+         }
+
           $("#cube-container img.front")          
           .css("transform",          
          "translateX(0px) "+
          "translateY("+ (translateYtoWeight) + "px) "+
-         "translateZ(64px) "+
+         "translateZ("+ tz+ "px) "+
          "rotateX(0deg) "+
          "rotateY(0deg) "+
          "rotateZ(0deg)");
@@ -471,7 +501,7 @@ $(document).ready(function() {
          .css("transform", 
          "translateX(0px) "+
          "translateY("+ (translateYtoWeight) + "px) "+
-         "translateZ(-64px) " +
+         "translateZ(-" + tz + "px) " +
          "rotateX(0deg) "+
          "rotateY(180deg) "+
          "rotateZ(0deg)");
