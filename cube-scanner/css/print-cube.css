@@ -15,8 +15,8 @@ html, body {
 }
 
 #cube-container {
-   width: 17cm;
-   height: 22cm;
+   width: 18.2cm;
+   height: 24cm;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -27,6 +27,7 @@ html, body {
 }
 #cube-container div{
    display: inline-block;
+   border: 1mm solid #ccc;
    margin: 0px;
 }
 #cube-container img {
@@ -36,7 +37,6 @@ html, body {
    margin: 0px;
 }
 .space {
-   border: 1mm solid #ccc;
    width: 5cm;
    height: 5cm;
 }
