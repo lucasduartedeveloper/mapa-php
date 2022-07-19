@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=92">
+         href="css/style.css?v=93">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -146,7 +146,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v92.14-30.2.333
+     CUBE SCANNER v93.14-30.2.333
      <br>
      <span id="server-info">
      CONNECTING...
@@ -267,6 +267,7 @@ class="form-range">
        theme: "large",
        themeMode: "light", // light, dark, auto
        swatches: [
+         "#2f2e40",
          "#264653",
          "#2a9d8f",
          "#e9c46a",
