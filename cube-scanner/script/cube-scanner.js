@@ -24,6 +24,11 @@ $.ajax({
         data[0].output_stream_url;
  
         if (heroku_buildStatus == "pending") {
+            $("#heroku")
+            .removeClass("fa-location-dot");
+            $("#heroku").addClass("fa-rocket");
+            $("#heroku").css("display","inline-block");
+
              var xhr = new XMLHttpRequest()
              xhr.open("GET", heroku_outputStreamUrl, true)
              xhr.onprogress = function () {
@@ -34,12 +39,7 @@ $.ajax({
                  if (n > -1) {
                      heroku_version =
                      xhr.responseText.substring(n +9, 5); 
-                     
-                     $("#heroku")
-                     .removeClass("fa-location-dot");
-                     $("#heroku").addClass("fa-rocket");
-                     $("#heroku").css("display","inline-block");
-                     setTimout(() => {
+                     setTimeout(() => {
                          location.reload();
                      }, 2000);
                  }
