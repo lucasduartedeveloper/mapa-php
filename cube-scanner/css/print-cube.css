@@ -12,6 +12,8 @@ html, body {
 #cube-container {
    width: 17cm;
    height: 22cm;
+   display: flex;
+   border: 1mm solid #ccc;: 
 }
 #cube-container img {
    border: 1mm solid black;
