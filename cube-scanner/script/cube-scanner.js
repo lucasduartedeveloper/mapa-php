@@ -508,6 +508,9 @@ function getXYZ(callback) {
      $.getJSON("ajax/cube-defender.php", function(data) {
           var xyz = data[0].valor.split("|");
           cubeNo = parseInt(data[1].valor);
+          $("html, body, authentication, #theme")
+          .css("background-color", data[2]);
+          $("#coloris").val(data[2]);
           
           translateY = parseInt(xyz[0]);
           rotateX = parseInt(xyz[1]);

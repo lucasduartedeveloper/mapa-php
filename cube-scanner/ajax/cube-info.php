@@ -2,7 +2,6 @@
 <?php
 $sql ="";
 try {
-    echo $_POST["post"];
     if (!isset($_POST["cubeId"]) && isset($_POST["name"])) {
         $name = htmlspecialchars($_POST["name"]);
         $size = htmlspecialchars($_POST["size"]);
