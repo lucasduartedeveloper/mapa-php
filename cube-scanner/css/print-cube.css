@@ -17,6 +17,7 @@ html, body {
    border: 1mm solid black;
    width: 5cm;
    height: 5cm;
+   border: 0px;
 }
 .space {
    width: 5cm;
