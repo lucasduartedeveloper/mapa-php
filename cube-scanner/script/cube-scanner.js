@@ -764,7 +764,7 @@ function setFace(id) {
         }
     }  
     else if (faceId == 7) {
-       $($("#cube-container img")[7])
+       $($("#cube-container img")[6])
        .css("outline", "solid orange");
     }
     else {
