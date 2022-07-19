@@ -9,6 +9,11 @@
 </head>
 <body>
 
+<p>
+      NAME: CUBE #0<br>
+      SIZE: 5cm
+</p>
+
 <div id="cube-container">
       <!--
       <div class="space"></div>
