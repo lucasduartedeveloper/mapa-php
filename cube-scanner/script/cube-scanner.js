@@ -463,9 +463,9 @@ $(document).ready(function() {
          var tx = 64;
          var ty = 64;
          var tz = 64;
-         var width = 0;
-         var height = 0;
-         var dist = 0;
+         var width = 128;
+         var height = 128;
+         var dist = 128;
          var scale = 0;
          if (cubeList[cubeNo].size.includes("x")) {
              var dim = cubeList[cubeNo].size.split("x");
