@@ -27,11 +27,13 @@ html, body {
 }
 #cube-container div{
    display: inline-block;
+   margin: 0px;
 }
 #cube-container img {
    width: 5cm;
    height: 5cm;
    border: 1mm solid black;
+   margin: 0px;
 }
 .space {
    border: 1mm solid #ccc;
