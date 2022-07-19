@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="css/print-cube.css?v=4">
+<link rel="stylesheet" href="css/print-cube.css?v=5">
 <title></title>
 </head>
 <body>
