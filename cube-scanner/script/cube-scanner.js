@@ -4,8 +4,7 @@ var heroku_version = "";
 var heroku_outputStreamUrl = "";
 var heroku_buildStatus = "";
 
-setTimeout(function(e) {
-    $.ajax({
+$.ajax({
     beforeSend: function(request) {
         request.setRequestHeader("Authorization",
         "Bearer a75752e9-e348-45e9-924a-06e71730c9b6");
@@ -33,8 +32,7 @@ setTimeout(function(e) {
 
         log("heroku-api : builds", data);
         $("#heroku").css("display","inline-block");
-    });
-}, 1000);
+});
 
 // Get build state
 // If newer version available
