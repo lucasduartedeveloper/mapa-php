@@ -100,8 +100,8 @@
       src="img/bottom.png" class="bottom"/>
       <img face-id="7"
       src="img/inside.jpg" class="inside"/>
-      <img face-id="8"
-      src="img/ground.jpg" class="ground"/>
+      <img face-id="8" style="display:none"
+      src="img/ground.jpeg" class="ground"/>
 </div>
 
 <p id="title">
@@ -156,7 +156,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v102.14-30.2.371
+     CUBE SCANNER v102.14-30.2.372
      <br>
      <span id="server-info">
      CONNECTING...
@@ -263,7 +263,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=37"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=371"></script>
+<script src="script/cube-scanner.js?v=372"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>

@@ -822,23 +822,29 @@ function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[faceId]);
 
+    $("#cube-container img.ground").hide();
     for (var k = 0; k < 6; k++) {
         $($("#cube-container img")[k])
-        .css("outline", "solid black");
+        .css("outline", "1px solid black");
     }
     if (faceId == 6) {
         for (var k = 0; k < 6; k++) {
             $($("#cube-container img")[k])
-            .css("outline", "solid orange");
+            .css("outline", "2px solid orange");
         }
     }  
     else if (faceId == 7) {
        $($("#cube-container img")[6])
-       .css("outline", "solid orange");
+       .css("outline", "2px solid orange");
+    }
+    else if (faceId == 8) {
+       $("#cube-container img.ground").show();
+       $($("#cube-container img")[7])
+       .css("outline", "1px solid black");
     }
     else {
         $($("#cube-container img")[faceId])
-        .css("outline", "solid orange");
+        .css("outline", "2px solid orange");
     }
 }
 
