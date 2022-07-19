@@ -662,7 +662,8 @@ function getCube(id) {
           cube = data;
 
           $("#loading").hide();
-          $("#cube-container img").show();
+          $("#cube-container img").show();  
+          $("#cube-container img.ground").hide();
  
           setCubeInfo();
 
