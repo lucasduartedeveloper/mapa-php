@@ -28,8 +28,6 @@ setTimeout(function(e) {
             beforeSend: function(request) {
                 request.setRequestHeader("Authorization",
                 "Bearer a75752e9-e348-45e9-924a-06e71730c9b6");
-                request.setRequestHeader("Accept",
-                "application/vnd.heroku+json; version=3");
             },
             url: heroku_outputStreamUrl
         })  
