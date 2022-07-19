@@ -475,15 +475,15 @@ $(document).ready(function() {
              dist = parseInt(dim[2]);
              
              // Ex: TV, printer
-             if (width >= (height + dist)) {
+             if (width >= (height + dist)/2) {
                   scale = (1 / width) * 128;
              }
              // Ex: Fridge, coffin, door
-             else if (height >= (width + dist)) {
+             else if (height >= (width + dist)/2) {
                   scale = (1 / height) * 128;
              }
              // Ex: Bed, car, bus
-             else if (dist >= (width + height)) {
+             else if (dist >= (width + height)/2) {
                   scale = (1 / dist) * 128;
              }
              tx = (width/2) * scale;
