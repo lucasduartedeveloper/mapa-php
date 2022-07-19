@@ -13,6 +13,9 @@ html, body {
    width: 17cm;
    height: 22cm;
    display: flex;
+   justify-content: center;
+   align-items: center;
+  flex-direction: row;
    border: 1mm solid #ccc;
 }
 #cube-container img {
