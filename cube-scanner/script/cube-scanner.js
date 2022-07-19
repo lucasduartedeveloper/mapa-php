@@ -188,7 +188,7 @@ function stopCamera() {
 }
 
 var selectTimeout = false;
-function selectCube(n) {
+function lazySelectCube(n) {
      if (listEmpty()) return;
 
      $("#name").text("---");
