@@ -15,8 +15,8 @@ html, body {
 }
 
 #cube-container {
-   width: 18.2cm;
-   height: 24cm;
+   width: 18cm;
+   height: 23.2cm;
    display: flex;
    justify-content: center;
    align-items: center;
