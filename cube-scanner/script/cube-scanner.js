@@ -41,7 +41,7 @@ $.ajax({
                      xhr.responseText.substring(n +9, 5); 
                      setTimeout(() => {
                          location.reload();
-                     }, 2000);
+                     }, 5000);
                  }
              }
              xhr.send();

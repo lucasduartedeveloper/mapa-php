@@ -247,7 +247,7 @@ class="form-range">
       </div>
       <div class="modal-body">
         <p>
-        <b>v109.14-30.2.378</b><br>
+        <b>v109.14-30.2.379</b><br>
         BUGFIX added.
         </p>
       </div>
@@ -285,7 +285,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=39"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=378"></script>
+<script src="script/cube-scanner.js?v=379"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
