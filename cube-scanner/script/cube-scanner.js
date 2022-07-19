@@ -243,7 +243,7 @@ function lazySelectCube(n) {
      goToCube(n);
          ws.send("CUBE-SCANNER|" +
            playerId + "|CUBE-UPD|" + n);
-     }, 2000);
+     }, 1000);
 }
 
 $(document).ready(function() {
