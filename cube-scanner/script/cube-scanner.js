@@ -460,14 +460,16 @@ $(document).ready(function() {
          );
 
          // Box 
+         var tx = 64;
+         var ty = 64;
          var tz = 64;
+         var scale = 0;
          if (cubeList[cubeNo].size.includes("x")) {
              var dim = cubeList[cubeNo].size.split("x");
              var width = parseInt(dim[0]);
              var height = parseInt(dim[1]);
              var dist = parseInt(dim[2]);
              
-             var scale = 0;
              // Ex: TV, printer
              if (width > ((height + dist)/2)) {
                   scale = (1 / width) * 128;
@@ -480,55 +482,66 @@ $(document).ready(function() {
              else if (dist > ((width + height)/2)) {
                   scale = (1 / dist) * 128;
              }
+             tx = (width/2);
+            
              tz = (dist/2);
-
-             $("#cube-container img.front")          
-            .css({ 
-            "width" : (width * scale) + "px",
-            "height" : (height * scale) + "px"
-             });
          }
 
           $("#cube-container img.front")          
-          .css("transform",          
+          .css({ 
+         "width" : (width * scale) +"px",
+         "height" : (height * scale) +"px",
+         "transform" :  
          "translateX(0px) "+
-         "translateY("+ (translateYtoWeight) + "px) "+
-         "translateZ("+ tz+ "px) "+
+         "translateY("+ (translateYtoWeight) +"px) "+
+         "translateZ("+ tz +"px) "+
          "rotateX(0deg) "+
          "rotateY(0deg) "+
-         "rotateZ(0deg)");
+         "rotateZ(0deg)" });
           $("#cube-container img.back")         
-         .css("transform", 
+         .css({ 
+         "width" : (width * scale) +"px",
+         "height" : (height * scale) +"px",
+         "transform" : "transform", 
          "translateX(0px) "+
-         "translateY("+ (translateYtoWeight) + "px) "+
-         "translateZ(-" + tz + "px) " +
+         "translateY("+ (translateYtoWeight) +"px) "+
+         "translateZ(-"+ tz +"px) "+
          "rotateX(0deg) "+
          "rotateY(180deg) "+
-         "rotateZ(0deg)");
-          $("#cube-container img.left")       
-         .css("transform", 
-         "translateX(-64px) "+
-         "translateY("+ (translateYtoWeight) + "px) "+
-         "translateZ(0px) " +
+         "rotateZ(0deg)" });
+          $("#cube-container img.left")
+         .css({ 
+         "width" : (dist * scale) + "px",
+         "height" : (height * scale) + "px",
+         "transform" :  "transform" :
+         "translateX(-"+ tx +"px) "+
+         "translateY("+ (translateYtoWeight) +"px) "+
+         "translateZ(0px) "+
          "rotateX(0deg) "+
          "rotateY(-90deg) "+
-         "rotateZ(0deg)");
+         "rotateZ(0deg)" });
           $("#cube-container img.top")        
-         .css("transform", 
+         .css({ 
+         "width" : (width * scale) + "px",
+         "height" : (dist * scale) + "px",
+         "transform" :  "transform", 
          "translateX(0px) "+
-         "translateY("+ (translateYtoWeight-64) + "px) "+
+         "translateY("+ (translateYtoWeight-ty) + "px) "+
          "translateZ(0px) " +
          "rotateX(90deg) "+
          "rotateY(0deg) "+
-         "rotateZ(0deg)");       
+         "rotateZ(0deg)" });       
           $("#cube-container img.right")          
-         .css("transform", 
-         "translateX(64px) "+
+         .css({ 
+         "width" : (dist * scale) + "px",
+         "height" : (height * scale) + "px",
+         "transform" :  "transform", 
+         "translateX("+ tx +"px) "+
          "translateY("+ (translateYtoWeight) + "px) "+
          "translateZ(0px) " +
          "rotateX(0deg) "+
          "rotateY(90deg) "+
-         "rotateZ(0deg)");
+         "rotateZ(0deg)"});
 
          $("#cube-container")
          .css("transform", 
