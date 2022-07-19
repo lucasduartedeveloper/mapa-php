@@ -178,7 +178,9 @@ body {
 }
 #cube-container img {
     background-color: rgba(0,0,0,0);
-    outline: 1px solid black;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
     outline-offset: 0px;:
     object-fit: cover;
 }

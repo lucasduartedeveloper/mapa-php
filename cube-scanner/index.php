@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=100">
+         href="css/style.css?v=101">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -153,7 +153,7 @@ class="form-range">
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v100.14-30.2.370
+     CUBE SCANNER v101.14-30.2.370
      <br>
      <span id="server-info">
      CONNECTING...
