@@ -284,6 +284,9 @@ body {
     color: #000;
     z-index: 99999;
 }
+#bugfix-modal .modal-body {
+    font-size: 40px;
+}
 #modal-footer-left {
     position: absolute;
     left: 15px;
