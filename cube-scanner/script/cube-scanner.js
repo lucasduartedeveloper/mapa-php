@@ -505,7 +505,7 @@ $(document).ready(function() {
          .css({ 
          "width" : (width * scale) +"px",
          "height" : (height * scale) +"px",
-         "transform" : "transform", 
+         "transform" : 
          "translateX(0px) "+
          "translateY("+ (translateYtoWeight) +"px) "+
          "translateZ(-"+ tz +"px) "+
@@ -516,7 +516,7 @@ $(document).ready(function() {
          .css({ 
          "width" : (dist * scale) + "px",
          "height" : (height * scale) + "px",
-         "transform" :  "transform" :
+         "transform" : 
          "translateX(-"+ tx +"px) "+
          "translateY("+ (translateYtoWeight) +"px) "+
          "translateZ(0px) "+
@@ -527,7 +527,7 @@ $(document).ready(function() {
          .css({ 
          "width" : (width * scale) + "px",
          "height" : (dist * scale) + "px",
-         "transform" :  "transform", 
+         "transform" : 
          "translateX(0px) "+
          "translateY("+ (translateYtoWeight-ty) + "px) "+
          "translateZ(0px) " +
@@ -538,7 +538,7 @@ $(document).ready(function() {
          .css({ 
          "width" : (dist * scale) + "px",
          "height" : (height * scale) + "px",
-         "transform" :  "transform", 
+         "transform" : 
          "translateX("+ tx +"px) "+
          "translateY("+ (translateYtoWeight) + "px) "+
          "translateZ(0px) " +
