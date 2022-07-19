@@ -816,7 +816,8 @@ var faces = [
     "Right",
     "Bottom",
     "Cube",
-    "Inside"];
+    "Inside",
+    "Ground"];
 function setFace(id) {
     faceId = id;
     $("#cube-face").text(faces[faceId]);
@@ -895,7 +896,8 @@ var baseImages = [
       "img/top.png",
       "img/right.png",
       "img/bottom.png",
-      "img/inside.jpg"
+      "img/inside.jpg",
+      "img/ground.jpg"
 ];
 function resetCube() {
       speaking = true;

@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=101">
+         href="css/style.css?v=102">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -100,6 +100,8 @@
       src="img/bottom.png" class="bottom"/>
       <img face-id="7"
       src="img/inside.jpg" class="inside"/>
+      <img face-id="8"
+      src="img/ground.jpg" class="ground"/>
 </div>
 
 <p id="title">
@@ -148,12 +150,13 @@ class="form-range">
            <a class="dropdown-item" href="#" onclick="setFace(4);">Right</a>
            <a class="dropdown-item" href="#" onclick="setFace(5);">Bottom</a>
            <a class="dropdown-item" href="#" onclick="setFace(6);">Cube</a>
-           <a class="dropdown-item" href="#" onclick="setFace(7);">Inside</a>
+           <a class="dropdown-item" href="#" onclick="setFace(7);">Inside</a> 
+           <a class="dropdown-item" href="#" onclick="setFace(8);">Ground</a>
      </div>
 </div>
 
 <p id="version-info">
-     CUBE SCANNER v101.14-30.2.370
+     CUBE SCANNER v102.14-30.2.371
      <br>
      <span id="server-info">
      CONNECTING...
@@ -260,7 +263,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=37"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=370"></script>
+<script src="script/cube-scanner.js?v=371"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
