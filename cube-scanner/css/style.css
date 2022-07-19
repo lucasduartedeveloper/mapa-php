@@ -285,7 +285,7 @@ body {
     z-index: 99999;
 }
 #bugfix-modal .modal-body {
-    font-size: 40px;
+    font-size: 30px;
 }
 #modal-footer-left {
     position: absolute;
