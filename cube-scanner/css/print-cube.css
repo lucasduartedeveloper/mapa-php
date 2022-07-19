@@ -24,7 +24,7 @@ html, body {
    flex-wrap: wrap;
    border: 1mm solid #ccc;
    margin: 0px;
-   display: block;
+   display: inline-block;
 }
 #cube-container img {
    width: 5cm;
