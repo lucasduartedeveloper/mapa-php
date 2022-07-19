@@ -466,8 +466,8 @@ $(document).ready(function() {
          var width = 128;
          var height = 128;
          var dist = 128;
-         var scale = 0;
-         if (authenticated && 
+         var scale = 1;
+         if (cubeList.length > 0 && 
              cubeList[cubeNo].size.includes("x")) {
              var dim = cubeList[cubeNo].size.split("x");
              width = parseInt(dim[0]);
