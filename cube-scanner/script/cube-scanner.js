@@ -187,6 +187,28 @@ function stopCamera() {
     .forEach(t => t.stop());
 }
 
+var selectTimeout = false;
+function selectCube(n) {
+     if (listEmpty()) return;
+
+     $("#name").text("---");
+     $("#cube-container img").hide();
+     $("#loading").show();
+
+     $("#cube-id").text(cubeList[cubeNo].cube_id);
+     $("#record-no").text(
+     (cubeNo+1)+"/"+cubeList.length);
+
+     if (selectTimeout)
+     clearTimeout(selectTimeout);
+     selectTimeout = 
+     setTimeout(() => { 
+     goToCube(n);
+         ws.send("CUBE-SCANNER|" +
+           playerId + "|CUBE-UPD|" + n);
+     }, 2000);
+}
+
 $(document).ready(function() {
      //say("Cube scanner initialized.");
 
@@ -196,22 +218,12 @@ $(document).ready(function() {
      $("#previous").click(function(e) {
           var n = cubeNo-1;
           n = n < 0 ? (cubeList.length-1) : n;
-          
-          if (listEmpty()) return;
-          goToCube(n);
-          ws.send("CUBE-SCANNER|" +
-                  playerId + "|CUBE-UPD|" + 
-                  n);
+          lazySelectCube(n);
      });
      $("#next").click(function(e) {
           var n = cubeNo+1;
           n = n > (cubeList.length-1) ? 0 : n;
-          
-          if (listEmpty()) return;
-          goToCube(n);
-          ws.send("CUBE-SCANNER|" +
-                  playerId + "|CUBE-UPD|" + 
-                  n);
+          lazySelectCube(n);
      });
      $("#add").click(function(e) {
           updating = false;
