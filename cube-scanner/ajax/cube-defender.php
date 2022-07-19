@@ -2,7 +2,7 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["theme"]) {
+  if (isset($_POST["theme"])) {
     $theme = htmlspecialchars($_POST["theme"]);
 
     $sql = "UPDATE param SET valor='".$theme."' WHERE nome='theme';";

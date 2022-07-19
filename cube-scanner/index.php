@@ -285,13 +285,13 @@ class="form-range">
     });
 
     $("#coloris").on("change", function() {    
-       var color = $("#coloris").val();
+       var selectedColor = $("#coloris").val();
        $.post("ajax/cube-defender.php", {
-          theme: color
+          theme: selectedColor
           }).done(function(data) {   
               $("html, body, authentication, #theme")
-              .css("background-color", color);
-              $("#coloris").val(color);
+              .css("background-color", selectedColor);
+              $("#coloris").val(selectedColor);
 
               log("post", data);
               //say("Cube was rotated.");
