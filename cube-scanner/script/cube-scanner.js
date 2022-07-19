@@ -195,9 +195,9 @@ function lazySelectCube(n) {
      $("#cube-container img").hide();
      $("#loading").show();
 
-     $("#cube-id").text(cubeList[cubeNo].cube_id);
+     $("#cube-id").text(cubeList[n].cube_id);
      $("#record-no").text(
-     (cubeNo+1)+"/"+cubeList.length);
+     (n+1)+"/"+cubeList.length);
 
      if (selectTimeout)
      clearTimeout(selectTimeout);
