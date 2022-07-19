@@ -21,6 +21,7 @@ html, body {
    justify-content: center;
    align-items: center;
    flex-direction: row;
+   flex-wrap: wrap;
    border: 1mm solid #ccc;
    margin: 0px;
    display: block;

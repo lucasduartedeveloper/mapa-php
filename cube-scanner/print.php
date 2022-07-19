@@ -4,7 +4,7 @@
 
 <meta content='width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
-<link rel="stylesheet" href="css/print-cube.css?v12">
+<link rel="stylesheet" href="css/print-cube.css?v13">
 <title></title>
 </head>
 <body>
