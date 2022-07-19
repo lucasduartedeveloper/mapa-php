@@ -12,7 +12,7 @@ setTimeout(function(e) {
         request.setRequestHeader("Accept",
         "application/vnd.heroku+json; version=3");
         request.setRequestHeader("Range",
-        "id; order=asc,max=1;");
+        "started_at; order=desc,max=1;");
     },
     dataType: "json",
     url: "https://api.heroku.com/apps/mapa-php/builds"
