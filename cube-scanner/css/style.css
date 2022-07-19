@@ -250,6 +250,7 @@ body {
     width: 128px;
     height: 128px;
     -webkit-transform-style: preserve-3d;
+    backface-visibility: hidden;
     transform:  translateY(64px) 
     rotateX(90deg);
 }
