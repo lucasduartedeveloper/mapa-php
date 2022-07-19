@@ -156,7 +156,9 @@ class="form-range">
 </div>
 
 <p id="version-info">
+     <span>
      CUBE SCANNER v109.14-30.2.379
+     </span>
      <br>
      <span id="server-info">
      CONNECTING...
@@ -247,8 +249,8 @@ class="form-range">
       </div>
       <div class="modal-body">
         <p>
-        <b>v109.14-30.2.379</b><br>
-        BUGFIX added.
+        <b>ABCDEFGHIJKLMN</b><br>
+        <b>OPQRSTUVWXYZ</b><br>
         </p>
       </div>
       <div class="modal-footer">
@@ -290,7 +292,7 @@ class="form-range">
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
     eruda.init();
-    $("#version-info").click(function () {
+    $("#version-info span").click(function () {
          $("#bugfix-modal").modal({
              keyboard: false
          });
@@ -302,7 +304,7 @@ class="form-range">
 
     Coloris({
        theme: "large",
-       themeMode: "light", // light, dark, auto
+a       themeMode: "light", // light, dark, auto
        swatches: [
          "#2f2e40",
          "#264653",
