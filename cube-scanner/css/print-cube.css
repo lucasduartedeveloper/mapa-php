@@ -4,6 +4,11 @@
 html, body {
     /*changing width to 100% causes huge overflow and wrap*/
     height:100%; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     overflow: hidden;
     background: #FFF; 
     font-size: 9.5pt;
@@ -15,7 +20,7 @@ html, body {
    display: flex;
    justify-content: center;
    align-items: center;
-  flex-direction: row;
+   flex-direction: row;
    border: 1mm solid #ccc;
 }
 #cube-container img {
