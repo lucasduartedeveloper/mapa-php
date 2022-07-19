@@ -37,7 +37,7 @@ try {
   else {
     $sql = "SELECT * FROM param WHERE ".
         "nome='cube-no' OR ".
-        "nome='xyz' ".
+        "nome='xyz' OR ".
         "nome='theme' ".
         "ORDER BY id;";
 
