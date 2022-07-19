@@ -834,7 +834,7 @@ var baseImages = [
       "img/top.png",
       "img/right.png",
       "img/bottom.png",
-      "img/inside.png"
+      "img/inside.jpg"
 ];
 function resetCube() {
       speaking = true;
