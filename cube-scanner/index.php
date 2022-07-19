@@ -250,7 +250,13 @@ class="form-range">
       <div class="modal-body">
         <p>
         <b>ABCDEFGHIJKLMN</b><br>
-        <b>OPQRSTUVWXYZ</b><br>
+        <b>
+        <i class="fa-regular fa-square"></i>&nbsp;
+        OPQRSTUVWXYZ
+        <i style="transform:rotateZ(-90deg)" 
+        class="fa-solid fa-play"></i>&nbsp;
+        </b><br> 
+        <b>0123456789</b><br>
         </p>
       </div>
       <div class="modal-footer">
