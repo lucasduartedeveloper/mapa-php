@@ -289,7 +289,7 @@ class="form-range">
        $.post("ajax/cube-defender.php", {
           theme: selectedColor
           }).done(function(data) {   
-              $("html, body, authentication, #theme")
+              $("html, body, #authentication, #theme")
               .css("background-color", selectedColor);
               $("#coloris").val(selectedColor);
 
