@@ -251,7 +251,7 @@ body {
     height: 144px;
     -webkit-transform-style: preserve-3d;
     backface-visibility: hidden;
-    transform:  translateY(64px) 
+    transform:  translateY(66px) 
     rotateX(90deg);
 }
 #camera-canvas {
