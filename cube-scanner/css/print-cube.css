@@ -13,3 +13,13 @@
   img { width:100%; }
   li { margin: 0 0 10px 20px !important;}
 }
+
+#cube-container {
+   width: 16cm;
+   height: 21cm;
+}
+#cube-container img {
+   border: 1mm solid black;
+   width: 5cm;
+   height: 5cm;
+}
