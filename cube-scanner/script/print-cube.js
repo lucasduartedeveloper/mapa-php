@@ -15,9 +15,9 @@ function loadCubeToPrint(id) {
               var c = data.filter(o => o.face_id == k);
 
               faces[k].src = c.length == 0 ? 
-              baseImages[k] : 
+              faces[k].src : 
               ( c[0].base64 ? c[0].base64 : 
-              baseImages[k]); // *
+              faces[k].src); // *
          }
          //setCubeInfo();
 
