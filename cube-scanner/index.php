@@ -299,7 +299,7 @@ class="form-range">
 
    $.getJSON("ajax/cube-defender.php", function(data) {
           // BG color
-          $("html, body, authentication, #theme")
+          $("html, body, #authentication, #theme")
           .css("background-color", data[2].valor);
           $("#coloris").val(data[2].valor);
    });
