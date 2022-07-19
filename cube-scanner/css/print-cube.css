@@ -15,11 +15,55 @@
 }
 
 #cube-container {
-   width: 16cm;
+   width: 15cm;
    height: 21cm;
 }
 #cube-container img {
    border: 1mm solid black;
+   width: 5cm;
+   height: 5cm;
+}
+.space {
+   width: 5cm;
+   height: 5cm;
+}
+.fold-left {
+   border: 1mm dashed black;
+   width: 1cm;
+   height: 5cm;
+}
+.fold-left-up {
+   border: 1mm dashed black;
+   width: 5cm;
+   height: 5cm;
+}
+.fold-up {
+   border: 1mm dashed black;
+   width: 5cm;
+   height: 1cm;
+}
+.fold-up-right {
+   border: 1mm dashed black;
+   width: 1cm;
+   height: 5cm;
+}
+.fold-right {
+   border: 1mm dashed black;
+   width: 1cm;
+   height: 5cm;
+}
+.fold-right-bottom {
+   border: 1mm dashed black;
+   width: 5cm;
+   height: 5cm;
+}
+.fold-bottom {
+   border: 1mm dashed black;
+   width: 5cm;
+   height: 1cm;
+}
+.fold-bottom-left {
+   border: 1mm dashed black;
    width: 5cm;
    height: 5cm;
 }

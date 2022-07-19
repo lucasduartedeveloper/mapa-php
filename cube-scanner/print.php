@@ -2,26 +2,56 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="css/print-cube.css?v=1">
+<link rel="stylesheet" href="css/print-cube.css?v=2">
 <title></title>
 </head>
 <body>
 
 <div id="cube-container">
-      <img face-id="0"
-      src="img/front.png" class="front"/> 
-      <img face-id="1"
-      src="img/back.png" class="back"/>
+      <!--
+      <div class="space"></div>
+      <div class="fold-left"></div>
+      <div class="fold-up"></div>
+      <div class="fold-right"></div>
+      <div class="fold-bottom"></div>
+      -->
+      
+      <div class="space"></div>
+      <div class="space"></div>
       <img face-id="2"
       src="img/left.png" class="left"/>
-      <img face-id="3"
-      src="img/top.png" class="top"/>
-      <img face-id="4"
-      src="img/right.png" class="right"/>
+      <div class="space"></div>
+      <div class="space"></div>
+
+      <div class="fold-left"></div>
       <img face-id="5"
       src="img/bottom.png" class="bottom"/>
-      <img face-id="7"
-      src="img/inside.jpg" class="inside"/>
+      <img face-id="0"
+      src="img/front.png" class="front"/> 
+      <img face-id="3"
+      src="img/top.png" class="top"/>
+      <div class="fold-right"></div>
+
+      <div class="space"></div>
+      <div class="fold-left"></div>
+      <img face-id="4"
+      src="img/right.png" class="right"/>
+      <div class="fold-right"></div>
+      <div class="space"></div>
+
+      <div class="space"></div>
+      <div class="fold-left"></div>
+      <img face-id="1"
+      src="img/back.png" class="back"/>
+      <div class="fold-right"></div>
+      <div class="space"></div>
+
+      <div class="space"></div>
+      <div class="space"></div>
+      <div class="fold-bottom"></div>
+      <div class="space"></div>
+      <div class="space"></div>
+      
 </div>
 
 <p id="version-info">
