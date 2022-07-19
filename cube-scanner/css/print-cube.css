@@ -9,7 +9,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
+    --overflow: hidden;
     background: #FFF; 
     font-size: 9.5pt;
 }
