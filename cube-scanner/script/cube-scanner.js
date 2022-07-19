@@ -1,5 +1,5 @@
 // Heroku build time
-var heroku_releaseId = "";
+// var heroku_releaseId = "";
 var heroku_version = "";
 var heroku_outputStreamUrl = "";
 var heroku_buildStatus = "";
@@ -18,7 +18,7 @@ $.ajax({
     })
     .done(function(data) {
         //Heroku release id
-        heroku_releaseId =data[0].release.id;
+        //heroku_releaseId =data[0].release.id;
         heroku_buildStatus = data[0].status;
         heroku_outputStreamUrl = 
         data[0].output_stream_url;
