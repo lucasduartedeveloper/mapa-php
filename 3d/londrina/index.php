@@ -78,7 +78,7 @@ href="css/index.css?v=<? echo $rnd; ?>">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <?php
-foreach ($script as $scripts) {
+foreach ($scripts as $script) {
    echo 
    "<script src=\"script/\"".
    $script."?v=".$rnd."></script>";
