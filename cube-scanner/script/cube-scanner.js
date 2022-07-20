@@ -863,7 +863,7 @@ function setFace(id) {
        .css("outline", "1px solid black");
     }
     else {
-q        $($("#cube-container img")[faceId])
+        $($("#cube-container img")[faceId])
         .css("outline", "2px solid orange");
     }
 }
