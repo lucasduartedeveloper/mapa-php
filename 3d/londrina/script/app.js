@@ -1,5 +1,10 @@
 var sh = window.innerHeight;
 var sw = window.innerWidth;
+var ar = sh/sw;
+var vh = 0;
+var vw = 0;
+var vr = 0;
+
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
 canvas.height = sh;
@@ -79,10 +84,40 @@ function matterJs() {
 }
 
 var cameraKey = true;
+var cameraMode = "environment";
+function startCamera(mode) {
+     if (navigator.mediaDevices) {
+          navigator.mediaDevices
+          .getUserMedia({ 
+          video: {
+          facingMode: { exact: mode } }, 
+          audio: false })
+          .then((stream) => {
+               video.srcObject = stream;
+               var display = stream.
+               getVideoTracks()[0].getSettings();
+               vw = display.width;
+               vh = display.height;
+               vr = vh/vw;
+          });
+     }
+}
+
+function stopCamera() {
+     video.srcObject
+    .getTracks()
+    .forEach(t => t.stop());
+}
+
 $(document).ready(function() {
     matterJs();
+    startCamera("environment");
 
     setInterval(function() {
+        var canvas = 
+        document.getElementById("camera-canvas");
+        var context = canvas.getContext("2d");
+
         canvas.width = 128;
         canvas.height = 128;
         if (cameraKey)
