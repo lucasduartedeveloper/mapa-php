@@ -10,7 +10,8 @@ $style = [
 $script = [
     0 => "thirdpart/matter.js",
     1 => "debug.js",
-    2 => "app.js"
+    2 => "gyro.js"
+    3 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
