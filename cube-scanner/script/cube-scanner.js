@@ -424,7 +424,7 @@ $(document).ready(function() {
          }
          if (translateY >= 0) {
              musicStream.volume = (1/100)*translateY;
-             if (translateY == 0) {
+             if (translateY == 0 && !musicStream.paused) {
                  doorSlam.play();
                  musicStream.pause();
              }
