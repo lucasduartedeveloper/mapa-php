@@ -24,7 +24,7 @@ var render = Render.create({
          wireframes: false
          //showPerformance: true
     }
-})
+});
 
 // create two boxes and a ground
 var tile = 
