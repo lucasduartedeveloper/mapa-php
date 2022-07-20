@@ -46,8 +46,9 @@ foreach ($style as $a) {
    "<link rel=\"stylesheet\" href=\"css/".
    $a."?v=".$rnd."\">";
 }
-echo "<!-- PHP -->";
+echo "\n";
 ?>
+<!-- PHP -->
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -90,8 +91,9 @@ foreach ($script as $a) {
    "<script src=\"script/".
    $a."?v=".$rnd."\"></script>";
 }
-   echo "<!-- PHP -->";
+echo "\n";
 ?>
+<!-- PHP -->
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
