@@ -56,7 +56,7 @@ echo "\n";
 </head>
 <body>
 
-<div id="matter-js"></div>
+<canvas id="matter-js"></canvas>
 
 <p id="version-info">
      <span>
