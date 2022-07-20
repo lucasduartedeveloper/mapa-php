@@ -172,8 +172,7 @@ $("#socks").click(function() {
 // TODO:
 // Link delete, update and create cube
 
-var song = 
-new Audio("audio/song.mp3");
+var song = new Audio("audio/song.mp3");
 
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
@@ -420,7 +419,7 @@ $(document).ready(function() {
                   rotateZ.toString());
          }
          if (translateY >= 0) {
-             song.volume((1/100)*translateY));
+             song.volume((1/100)*translateY);
              if (translateY == 0) {
                  song.stop();
              }
