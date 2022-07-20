@@ -399,9 +399,11 @@ $(document).ready(function() {
          rotateY = parseInt($("#rotateY").val());
          rotateZ = parseInt($("#rotateZ").val());
         
-         //rotateX += speedX;
-         rotateY += 3; //speedY;
-         //rotateZ += speedZ;
+         if (motion) { 
+             //rotateX += speedX;
+             rotateY += 3; //speedY;
+             //rotateZ += speedZ;
+         }
 
          if (rotateX > 180) rotateX = -180;
          if (rotateX < -180) rotateX = 180;
