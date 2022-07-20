@@ -8,9 +8,9 @@ $style = [
     0 => "index.css"
 ];
 $script = [
-    0 => "debug.js",
-    1 => "app.js",
-    2 => "matter.min.js",
+    0 => "matter.min.js",
+    1 => "debug.js",
+    2 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
