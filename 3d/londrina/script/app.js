@@ -26,7 +26,7 @@ var render = Render.create({
     options: {
          width: sw,
          height: sh,
-         wireframes: false
+         wireframes: true
          //showPerformance: true
     }
 });
