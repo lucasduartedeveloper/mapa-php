@@ -1,3 +1,11 @@
+// Random number for cache ignore
+<?php
+    $rnd = 
+        str_pad(
+        strval(rand(0,999999)), 
+        6, "0", STR_PAD_LEFT);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +40,7 @@
 <body>
 
 <div id="app">
+     <? echo $rnd; ?>
 </div>
 
 <p id="version-info">
