@@ -55,8 +55,9 @@ html, body {
 }
 
 /* Controls */
-#matter-js {
+#cut {
    position: fixed;
+   color: orange;
    right: 10px;
    bottom: 10px;
    font-size: 30px;
