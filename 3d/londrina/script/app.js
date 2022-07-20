@@ -54,6 +54,7 @@ function matterJs() {
         }
     });
     render.mouse = mouse;
+    Composite.add(engine.world, mouseConstraint);
 
     // run the renderer
     Render.run(render);
