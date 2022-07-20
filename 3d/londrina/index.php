@@ -1,4 +1,4 @@
-<!-- Random number for cache ignore -->
+<!-- PHP: Random number for cache ignore -->
 <?php
 $rnd = 
     str_pad(
@@ -15,6 +15,7 @@ $script = [
     2 => "matter.min.js",
 ];
 ?>
+<!-- PHP -->
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +40,7 @@ $script = [
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<!-- Load style files -->
+<!-- PHP: Load style files -->
 <?php
 foreach ($style as $a) {
    echo 
@@ -47,6 +48,7 @@ foreach ($style as $a) {
    $a."?v=".$rnd."\">";
 }
 ?>
+<!-- PHP -->
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -82,7 +84,7 @@ foreach ($style as $a) {
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<!-- Load script files -->
+<!-- PHP: Load script files -->
 <?php
 foreach ($script as $a) {
    echo 
@@ -90,6 +92,7 @@ foreach ($script as $a) {
    $a."?v=".$rnd."\"></script>";
 }
 ?>
+<!-- PHP -->
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
