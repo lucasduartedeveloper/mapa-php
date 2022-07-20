@@ -50,7 +50,7 @@ function accHandler(acc) {
     }
 
     gyro = {
-        timestamp:  new Date().getTime();
+        timestamp:  new Date().getTime(),
         accX: acc.x,
         accY: acc.y,
         accZ: acc.z)
