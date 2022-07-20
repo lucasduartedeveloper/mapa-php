@@ -20,7 +20,7 @@ var render = Render.create({
     canvas: canvas,
     options: {
          width: sw,
-         height: sh/3,
+         height: sh,
          wireframes: false
          //showPerformance: true
     }
