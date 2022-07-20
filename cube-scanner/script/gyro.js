@@ -44,6 +44,7 @@ function accHandler(acc) {
          speedY = Math.round(distY);
          speedZ = Math.round(distZ);
 
+         console.clear();
          log("motion-x", speedX);
          log("motion-y", speedY);
          log("motion-z", speedZ);
