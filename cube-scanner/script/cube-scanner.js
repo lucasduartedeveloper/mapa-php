@@ -420,12 +420,12 @@ $(document).ready(function() {
                   rotateZ.toString());
          }
          if (translateY >= 0) {
-             song.volume = (1/100)*translateY;
+             musicStream.volume = (1/100)*translateY;
              if (translateY == 0) {
-                 song.pause();
+                 musicStream.pause();
              }
-             if (translateY > 0 && song.paused) {
-                 song.play();
+             if (translateY > 0 && musicStream.paused) {
+                 musicStream.play();
              }
          }
 
