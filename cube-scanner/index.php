@@ -303,6 +303,9 @@ class="form-range">
          $("#bugfix-modal").modal({
              keyboard: false
          });
+         say(
+         "ABCDEFGHIJKLMNOPQRSTUV"+
+         "0123456789");
      });
 
     if (location.protocol !== "https:") {
