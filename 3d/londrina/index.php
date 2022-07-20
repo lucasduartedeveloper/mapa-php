@@ -5,15 +5,14 @@ $rnd =
     strval(rand(0,999999)), 
     6, "0", STR_PAD_LEFT);
 
-$styles = [
-    0 => "bar",
-    1 => "foo",
+$style = [
+    0 => "index.css"
 ];
 
-$scripts = [
-    0 => "bar",
-    1 => "foo",
-    2 => "foo",
+$script = [
+    0 => "debug.js",
+    1 => "app.js",
+    2 => "matter.min.js",
 ];
 ?>
 
@@ -40,8 +39,14 @@ $scripts = [
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<link rel="stylesheet" 
-href="css/index.css?v=<? echo $rnd; ?>">
+<!-- Load style files -->
+<?php
+foreach ($style as $a) {
+   echo 
+   "<link rel=\"stylesheet\" href=\"css/".
+   $a."?v=".$rnd."\">";
+}
+?>
 
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -77,17 +82,14 @@ href="css/index.css?v=<? echo $rnd; ?>">
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
+<!-- Load script files -->
 <?php
-foreach ($scripts as $script) {
+foreach ($script as $a) {
    echo 
-   "<script src=\"script/\"".
-   $script."?v=".$rnd."></script>";
+   "<script src=\"script/".
+   $a."?v=".$rnd."\"></script>";
 }
 ?>
-
-<script src="script/debug.js?v=0"></script>
-<script src="script/app.js?v=0"></script>
-<script src="script/matter.min.js?v=0"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
