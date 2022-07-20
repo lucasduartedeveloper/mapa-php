@@ -8,7 +8,7 @@ $style = [
     0 => "index.css"
 ];
 $script = [
-    0 => "thirdpart/matter.min.js",
+    0 => "thirdpart/matter.js",
     1 => "debug.js",
     2 => "app.js"
 ];

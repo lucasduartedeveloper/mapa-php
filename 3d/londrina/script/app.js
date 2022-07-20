@@ -2,7 +2,7 @@ var sh = window.innerHeight;
 var sw = window.innerWidth;
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
-canvas.height = sh/3;
+canvas.height = sh;
 
 // module aliases
 var Engine = Matter.Engine,
