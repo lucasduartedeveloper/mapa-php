@@ -30,44 +30,29 @@ var gyro= {
 function accHandler(acc) {
     if(!motion) return;
 
+    if ((new Date().getTime() -
+         gyro.timestamp) > 100) {
+
+         var distX = 
+         (acc.x) - gyro.accX;
+         var distY = 
+         (acc.y) - gyro.accY;
+         var distZ = 
+         (acc.z) - gyro.accZ;
+
+         speedX = Math.round(distX);
+         speedY = Math.round(distY);
+         speedZ = Math.round(distZ);
+
+         log("motion-x", speedX);
+         log("motion-y", speedY);
+         log("motion-z", speedZ);
+    }
+
     gyro = {
         timestamp:  new Date().getTime();
-        accX: acc.x && acc.x.toFixed(3),
-        accY: acc.y && acc.y.toFixed(3),
-        accZ: acc.z && acc.z.toFixed(3)
+        accX: acc.x,
+        accY: acc.y,
+        accZ: acc.z)
     };
-
-    
-
-    //speedX = Math.round((5 / 9.8) * acc.x);
-    //speedY = Math.round((5 / 9.8) * acc.y);
-    //speedZ = Math.round((5 / 9.8) * acc.z);
-}
-
-setInterval(function() {
-    if(motion) return;
-
-    //speedX -= gripX;
-    //speedY -= gripY;
-    //speedZ -= gripZ;
-}, 100);
-
-function angle(co, ca) {
-    var h = Math.sqrt(
-        Math.pow(co, 2) +
-        Math.pow(ca, 2)
-    );
-    var senA = co/h;
-    var a = Math.asin(senA);
-    return a * (180/Math.PI);
-}
-
-function distanceX(y, z) {
-    
-}
-function distanceY(x, z) {
-
-}
-function distanceZ(x, y) {
-
 }
