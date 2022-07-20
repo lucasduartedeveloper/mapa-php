@@ -1,4 +1,4 @@
-// Random number for cache ignore
+<!-- Random number for cache ignore -->
 <?php
     $rnd = 
         str_pad(
