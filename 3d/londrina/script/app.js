@@ -26,7 +26,7 @@ var render = Render.create({
     options: {
          width: sw,
          height: sh,
-         wireframes: true
+         wireframes: false
          //showPerformance: true
     }
 });
@@ -115,6 +115,9 @@ $(document).ready(function() {
     startCamera("environment");
 
     setInterval(function() {
+        engine.gravity.x = gyro.accX / 9.8;
+        engine.gravity.y = gyro.accY / 9.8;
+
         var canvas = 
         document.getElementById("camera-canvas");
         var context = canvas.getContext("2d");

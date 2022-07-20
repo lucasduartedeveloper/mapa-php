@@ -7,7 +7,7 @@ if ('DeviceMotionEvent' in window) {
     onDeviceMotion, false);
 }
 
-var motion = false;
+var motion = true;
 
 var accX = 0;
 var accY = 0;
