@@ -4,16 +4,15 @@ $rnd =
     str_pad(
     strval(rand(0,999999)), 
     6, "0", STR_PAD_LEFT);
-
 $style = [
     0 => "index.css"
 ];
-
 $script = [
     0 => "debug.js",
     1 => "app.js",
     2 => "matter.min.js",
 ];
+echo "<!-- "+$rnd+" -->";
 ?>
 <!-- PHP -->
 
@@ -40,13 +39,14 @@ $script = [
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
-<!-- PHP: Load style files -->
+<!-- PHP: Inject style files -->
 <?php
 foreach ($style as $a) {
    echo 
    "<link rel=\"stylesheet\" href=\"css/".
    $a."?v=".$rnd."\">";
 }
+echo "";
 ?>
 <!-- PHP -->
 
@@ -84,13 +84,14 @@ foreach ($style as $a) {
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
-<!-- PHP: Load script files -->
+<!-- PHP: Inject script files -->
 <?php
 foreach ($script as $a) {
    echo 
    "<script src=\"script/".
    $a."?v=".$rnd."\"></script>";
 }
+   echo "";
 ?>
 <!-- PHP -->
 
