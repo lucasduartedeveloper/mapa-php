@@ -59,6 +59,8 @@ echo "\n";
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
+<i id="cut" class="fa-solid fa-scissors"></i>
+
 <canvas id="matter-js"></canvas>
 
 <p id="version-info">

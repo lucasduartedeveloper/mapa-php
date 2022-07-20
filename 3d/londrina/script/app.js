@@ -127,4 +127,21 @@ $(document).ready(function() {
             vw, vh);
         }
     }, 100);
+
+   $("#cut").click(function(e) {
+         var base64 = 
+         document.getElementById("camera-canvas").
+         toDataURL();
+
+         Composite.add(engine.world,
+         [Bodies.rectangle(49, 49, 50, 50, {
+         render: {
+         sprite: {
+             texture: base64,
+             xScale: 0.39,
+             yScale: 0.39
+         },
+         fillStyle: "#fff",
+         strokeStyle: "#000" }})])
+     });
 });
