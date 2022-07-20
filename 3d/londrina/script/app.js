@@ -27,7 +27,7 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var tile = 
+var square = 
 Bodies.rectangle(sw/2, (sh/5)-82.5, 15, 5, {
     render: {
          fillStyle: "#fff",
@@ -36,7 +36,7 @@ Bodies.rectangle(sw/2, (sh/5)-82.5, 15, 5, {
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [tile]);
+    [square]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
