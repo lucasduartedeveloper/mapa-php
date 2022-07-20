@@ -21,7 +21,7 @@ var gripX = Math.round((5 / 9.8) * 0.5);
 var gripY = Math.round((5 / 9.8) * 0.5);
 var gripZ = Math.round((5 / 9.8) * 0.5);
 
-var gyro= {
+var gyro = {
     timestamp:  new Date().getTime(),
     accX: 0,
     accY: 0,
@@ -34,11 +34,11 @@ function accHandler(acc) {
          gyro.timestamp) > 100) {
 
          var distX = 
-         (acc.x) - gyro.accX;
+         (acc.x - gyro.accX);
          var distY = 
-         (acc.y) - gyro.accY;
+         (acc.y - gyro.accY);
          var distZ = 
-         (acc.z) - gyro.accZ;
+         (acc.z - gyro.accZ);
 
          speedX = Math.round(distX);
          speedY = Math.round(distY);
@@ -53,6 +53,6 @@ function accHandler(acc) {
         timestamp:  new Date().getTime(),
         accX: acc.x,
         accY: acc.y,
-        accZ: acc.z)
+        accZ: acc.z
     };
 }
