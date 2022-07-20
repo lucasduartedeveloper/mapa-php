@@ -78,7 +78,7 @@ function matterJs() {
     Runner.run(runner, engine);
 }
 
-cameraKey = true;
+var cameraKey = true;
 $(document).ready(function() {
     matterJs();
 
