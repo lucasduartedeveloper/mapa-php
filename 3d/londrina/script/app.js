@@ -44,14 +44,16 @@ Bodies.rectangle((sw/2)-25, (sh/2)-25, 50, 50, {
          strokeStyle: "#000" }});
 
 var floor0 = 
-Bodies.rectangle((sw/2), ((sh/3)*2)+50, sw/2, 10, {
+Bodies.rectangle((sw/2), (sh/3)+50,
+    (sw/2)-25, 10, {
     isStatic: true,
     render: {
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
 var floor1 = 
-Bodies.rectangle((sw/4), (sh/3)+50, sw/2, 10, {
+Bodies.rectangle((sw/4)+25, (sh/3)+50,
+    (sw/2)-25, 10, {
     isStatic: true,
     render: {
          fillStyle: "#fff",
