@@ -92,5 +92,5 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             vw, vh);
         }
-    });
+    }, 100);
 });
