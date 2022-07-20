@@ -9,7 +9,6 @@ $style = [
 ];
 $script = [
     0 => "thirdpart/matter.min.js",
-
     1 => "debug.js",
     2 => "app.js"
 ];
@@ -20,6 +19,8 @@ echo "<!-- ".$rnd." -->";
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,10 +52,6 @@ echo "\n";
 ?>
 <!-- PHP -->
 
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
 <title></title>
 </head>
 <body>
@@ -72,12 +69,6 @@ echo "\n";
 </p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
