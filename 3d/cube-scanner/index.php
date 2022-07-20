@@ -46,7 +46,7 @@
            <i id="cube-icon" class="fa-solid fa-cube"></i>
            <i id="globe-icon"
            onclick=
-          "location.replace('/sphere-scanner/')"
+          "location.replace('/3d/sphere-scanner/')"
            class="fa-solid fa-globe"></i>
            </span>
       </p>
