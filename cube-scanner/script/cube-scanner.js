@@ -41,7 +41,7 @@ $.ajax({
                      xhr.responseText.substring(n +9, 5); 
                      setTimeout(() => {
                          location.reload();
-                     }, 5000);
+                     }, 10000);
                  }
              }
              xhr.send();
@@ -92,16 +92,16 @@ $("#eraser").click(function(e) {
     resetCube();
 });
 
-$("#motion").click(function() {
+$("#motion-switch").click(function() {
     if (motion) {
         speedX = 0;
         speedY = 0;
         speedZ = 0;
-        $("#motion").addClass("place");
+        $("#motion-switch").addClass("place");
         motion = false;
     }
     else {
-        $("#motion").removeClass("place");
+        $("#motion-switch").removeClass("place");
         motion = true;
     }
 });

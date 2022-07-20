@@ -157,14 +157,14 @@ class="form-range">
 
 <p id="version-info">
      <span>
-     CUBE SCANNER v111.14-30.2.392
+     CUBE SCANNER v111.14-30.2.394
      </span>
      <br>
      <span id="server-info">
      CONNECTING...
      </span>
      <i id="heroku" style="display:none" class="fa-solid fa-location-crosshairs"></i>
-     <i id="motion" 
+     <i id="motion-switch" 
      class="fa-solid fa-whiskey-glass place"></i>
      <i  id="key"  
      class="fa-solid fa-key place"></i>
@@ -283,7 +283,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
-<script src="script/gyro.js?v=13"></script>
+<script src="script/gyro.js?v=14"></script>
 
 <script src="script/coloris.min.js"></script>
 
@@ -293,7 +293,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=39"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=392"></script>
+<script src="script/cube-scanner.js?v=394"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
