@@ -175,6 +175,9 @@ $("#socks").click(function() {
 var musicStream = 
 new Audio("https:\/\/ice.fabricahost.com.br\/jovempanlondrina");
 
+var doorSlam = 
+new Audio("audio/door-slam.wav");
+
 var coin = new Audio("audio/coin.wav");
 var notification = new Audio("audio/game-notification.wav");
 var beep0 = new Audio("audio/confirmation-beep.wav");
@@ -422,6 +425,7 @@ $(document).ready(function() {
          if (translateY >= 0) {
              musicStream.volume = (1/100)*translateY;
              if (translateY == 0) {
+                 doorSlam play();
                  musicStream.pause();
              }
              if (translateY > 0 && musicStream.paused) {
