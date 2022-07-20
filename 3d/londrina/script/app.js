@@ -28,7 +28,7 @@ var render = Render.create({
 
 // create two boxes and a ground
 var square = 
-Bodies.rectangle(sw/2, (sh/5)-82.5, 15, 5, {
+Bodies.rectangle((sw/2)-25, (sh/2)-25, 50, 50, {
     render: {
          fillStyle: "#fff",
          strokeStyle: "#000" }});
