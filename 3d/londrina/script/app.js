@@ -33,10 +33,16 @@ Bodies.rectangle((sw/2)-25, (sh/2)-25, 50, 50, {
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
+var ground = 
+Bodies.rectangle((sw/4), (sh/2)+50, sw/2, 10, {
+    render: {
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
+
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [square]);
+    [square, ground]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
