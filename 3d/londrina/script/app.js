@@ -30,6 +30,11 @@ var render = Render.create({
 var square = 
 Bodies.rectangle((sw/2)-25, (sh/2)-25, 50, 50, {
     render: {
+         sprite: {
+             texture: "img/placeholder.png",
+             xScale: 1,
+             yScale: 1
+         }
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
