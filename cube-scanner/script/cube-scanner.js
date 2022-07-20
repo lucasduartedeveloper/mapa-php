@@ -421,7 +421,7 @@ $(document).ready(function() {
          if (translateY >= 0) {
              song.volume = (1/100)*translateY;
              if (translateY == 0) {
-                 song.stop();
+                 song.pause();
              }
              if (translateY > 0 && song.paused) {
                  song.play();
