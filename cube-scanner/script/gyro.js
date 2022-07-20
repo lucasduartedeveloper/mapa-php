@@ -31,7 +31,7 @@ function accHandler(acc) {
     if(!motion) return;
 
     if ((new Date().getTime() -
-         gyro.timestamp) > 100) {
+         gyro.timestamp) > 50) {
 
          var distX = 
          (acc.x - gyro.accX);
@@ -40,9 +40,9 @@ function accHandler(acc) {
          var distZ = 
          (acc.z - gyro.accZ);
 
-         speedX = Math.round(distX);
-         speedY = Math.round(distY);
-         speedZ = Math.round(distZ);
+         speedX = distX;
+         speedY = distY;
+         speedZ = distZ;
 
          console.clear();
          log("motion-x", speedX);
