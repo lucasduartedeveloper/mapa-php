@@ -172,7 +172,7 @@ $("#socks").click(function() {
 // TODO:
 // Link delete, update and create cube
 
-var var musicStream = 
+var musicStream = 
 new Audio("https:\/\/ice.fabricahost.com.br\/jovempanlondrina");
 
 var coin = new Audio("audio/coin.wav");
