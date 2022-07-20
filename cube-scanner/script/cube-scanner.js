@@ -400,9 +400,9 @@ $(document).ready(function() {
          rotateZ = parseInt($("#rotateZ").val());
         
          if (motion) { 
-             //rotateX += speedX;
-             rotateY += 3; //speedY;
-             //rotateZ += speedZ;
+             rotateX += speedY;
+             rotateY += speedX;
+             rotateZ += speedZ;
          }
 
          if (rotateX > 180) rotateX = -180;
