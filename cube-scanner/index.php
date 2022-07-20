@@ -303,9 +303,16 @@ class="form-range">
          $("#bugfix-modal").modal({
              keyboard: false
          });
+         if (socks) {
          say(
-         "ABCDEFGHIJKLMNOPQRSTUV"+
+         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+
          "0123456789");
+         }
+         else {
+         say(
+         "9876543210"+
+         "ZYXWVUTSRQPONMLKJIHGFEDCBA");
+         }
      });
 
     if (location.protocol !== "https:") {
