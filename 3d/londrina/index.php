@@ -12,7 +12,7 @@ $script = [
     1 => "app.js",
     2 => "matter.min.js",
 ];
-echo "<!-- "+$rnd+" -->";
+echo "<!-- ".$rnd." -->";
 ?>
 <!-- PHP -->
 
