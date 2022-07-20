@@ -58,9 +58,7 @@ echo "\n";
 </head>
 <body>
 
-<div id="app">
-     <? echo $rnd; ?>
-</div>
+<div id="matter-js"></div>
 
 <p id="version-info">
      <span>
