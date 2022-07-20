@@ -935,7 +935,7 @@ function resetCube() {
       speaking = true;
       beep0.play();
       saveFace(
-      baseImages[faceId < 6 ? faceId : 6], 
+      baseImages[faceId], 
           function() {
                ws.send("CUBE-SCANNER|" +
                     playerId + "|CUBE-UPD|" + 
