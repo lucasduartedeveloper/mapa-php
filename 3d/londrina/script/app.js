@@ -1,8 +1,8 @@
-var sh = window.innerHeight;
 var sw = window.innerWidth;
+var sh = window.innerHeight;
 var ar = sh/sw;
-var vh = 0;
 var vw = 0;
+var vh = 0;
 var vr = 0;
 
 var canvas = document.getElementById("matter-js");
@@ -102,7 +102,6 @@ function startCamera(mode) {
           });
      }
 }
-
 function stopCamera() {
      video.srcObject
     .getTracks()
@@ -120,7 +119,7 @@ $(document).ready(function() {
 
         canvas.width = 128;
         canvas.height = 128;
-        if (cameraKey)
+        if (cameraKey) {
             context
             .drawImage(video, 
             ((vw-128)/2)*-1, 
