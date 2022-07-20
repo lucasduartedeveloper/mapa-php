@@ -22,7 +22,7 @@ var gripY = Math.round((5 / 9.8) * 0.5);
 var gripZ = Math.round((5 / 9.8) * 0.5);
 
 var gyro= {
-    timestamp:  new Date().getTime();
+    timestamp:  new Date().getTime(),
     accX: 0,
     accY: 0,
     accZ: 0
