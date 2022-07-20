@@ -24,7 +24,7 @@
 <link rel="stylesheet" 
          href="script/coloris.min.css" />
 <link rel="stylesheet" 
-         href="css/style.css?v=111">
+         href="css/style.css?v=112">
 <link rel="stylesheet" 
          href="css/anim/loading.css?v=22">
 
@@ -65,6 +65,7 @@
 <i id="eraser" class="fa-solid fa-eraser"></i>
 <i id="mic" class="fa-solid fa-microphone-slash place"></i>
 <input style="display:none" id="coloris" type="text" data-coloris />
+<i id="jump" class="fa-solid fa-circle-up"></i>
 <button id="theme" ></button>
 
 <div id="cube-container">
@@ -157,7 +158,7 @@ class="form-range">
 
 <p id="version-info">
      <span>
-     CUBE SCANNER v111.14-30.2.397
+     CUBE SCANNER v112.14-30.2.398
      </span>
      <br>
      <span id="server-info">
@@ -283,7 +284,7 @@ class="form-range">
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="script/debug.js?v=0"></script>
-<script src="script/gyro.js?v=23"></script>
+<script src="script/gyro.js?v=25"></script>
 
 <script src="script/coloris.min.js"></script>
 
@@ -293,7 +294,7 @@ class="form-range">
 
 <script src="script/cube-shadow.js?v=39"></script>
 <script src="script/image-upload.js?v=2"></script>
-<script src="script/cube-scanner.js?v=397"></script>
+<script src="script/cube-scanner.js?v=398"></script>
 
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>

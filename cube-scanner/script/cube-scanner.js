@@ -88,15 +88,20 @@ $("#mic").click(function(e) {
     }
 });
 
+var speedY = 0;
+$("#jump").click(function(e) {
+    speedY = 1;
+});
+
 $("#eraser").click(function(e) {
     resetCube();
 });
 
 $("#motion-switch").click(function() {
     if (motion) {
-        speedX = 0;
-        speedY = 0;
-        speedZ = 0;
+        rotationXspeed = 0;
+        rotationYspeed = 0;
+        rotationZspeed = 0;
         $("#motion-switch").addClass("place");
         motion = false;
     }
@@ -400,9 +405,9 @@ $(document).ready(function() {
          rotateZ = parseInt($("#rotateZ").val());
         
          if (motion) { 
-             rotateX += speedY;
-             rotateY += speedX;
-             rotateZ += speedZ;
+             rotateX += rotationYspeed;
+             rotateY += rotationXspeed;
+             rotateZ += rotationZspeed;
          }
 
          if (rotateX > 180) rotateX = -180;
@@ -511,6 +516,7 @@ $(document).ready(function() {
              // Crop rectangle
              // [code]
          }
+         ty += speedY;
 
           $("#cube-container img.front")          
           .css({ 

@@ -13,9 +13,9 @@ var accX = 0;
 var accY = 0;
 var accZ = 0;
 
-var speedX = 0;
-var speedY = 0;
-var speedZ = 0;
+var rotationXspeed = 0;
+var rotationYspeed = 0;
+var rotationZspeed = 0;
 
 var gripX = (5 / 9.8) * 0.5;
 var gripY = (5 / 9.8) * 0.5;
@@ -40,14 +40,14 @@ function accHandler(acc) {
          var distZ = 
          (acc.z - gyro.accZ);
 
-         speedX += distX ;
-         speedY += distY;
-         speedZ += distZ;
+         rotationXspeed += distX ;
+         rotationYspeed += distY;
+         rotationZspeed += distZ;
 
          console.clear();
-         log("motion-x", speedX);
-         log("motion-y", speedY);
-         log("motion-z", speedZ);
+         log("motion-x", rotationXspeed);
+         log("motion-y", rotationYspeed);
+         log("motion-z", rotationZspeed);
     }
 
     gyro = {
