@@ -516,7 +516,6 @@ $(document).ready(function() {
              // Crop rectangle
              // [code]
          }
-         ty += speedY;
 
           $("#cube-container img.front")          
           .css({ 
@@ -935,7 +934,7 @@ function resetCube() {
       speaking = true;
       beep0.play();
       saveFace(
-      baseImages[faceId], 
+      baseImages[faceId < 6 ? faceId : faceId+1], 
           function() {
                ws.send("CUBE-SCANNER|" +
                     playerId + "|CUBE-UPD|" + 
