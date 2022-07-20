@@ -17,9 +17,9 @@ var speedX = 0;
 var speedY = 0;
 var speedZ = 0;
 
-var gripX = Math.round((5 / 9.8) * 0.5);
-var gripY = Math.round((5 / 9.8) * 0.5);
-var gripZ = Math.round((5 / 9.8) * 0.5);
+var gripX = (5 / 9.8) * 0.5;
+var gripY = (5 / 9.8) * 0.5;
+var gripZ = (5 / 9.8) * 0.5;
 
 var gyro = {
     timestamp:  new Date().getTime(),
@@ -40,9 +40,9 @@ function accHandler(acc) {
          var distZ = 
          (acc.z - gyro.accZ);
 
-         speedX = distX;
-         speedY = distY;
-         speedZ = distZ;
+         speedX += distX ;
+         speedY += distY;
+         speedZ += distZ;
 
          console.clear();
          log("motion-x", speedX);
