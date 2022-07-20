@@ -1,0 +1,1 @@
+ALTER TABLE johrei_counter ADD COLUMN id_nome SMALLINT DEFAULT 0 NOT NULL;

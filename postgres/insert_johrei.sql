@@ -1,0 +1,1 @@
+INSERT INTO johrei_counter (quantidade,data) VALUES (0, '29/03/2022');
