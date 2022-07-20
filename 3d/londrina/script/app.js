@@ -78,6 +78,19 @@ function matterJs() {
     Runner.run(runner, engine);
 }
 
+cameraKey = true;
 $(document).ready(function() {
     matterJs();
+
+    setInterval(function() {
+        canvas.width = 128;
+        canvas.height = 128;
+        if (cameraKey)
+            context
+            .drawImage(video, 
+            ((vw-128)/2)*-1, 
+            ((vh-128)/2)*-1, 
+            vw, vh);
+        }
+    });
 });
