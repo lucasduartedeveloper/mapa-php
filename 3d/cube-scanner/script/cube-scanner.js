@@ -297,7 +297,7 @@ $(document).ready(function() {
      });
      $("#map").click(function(e) {
           window.open(
-          "https://mapa-php.herokuapp.com/cube-map?id="+
+          "/3d/cube-map?id="+
           cubeList[cubeNo].id, "_blank");
      });
      $("#save").click(function(e) {
