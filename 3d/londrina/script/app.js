@@ -30,8 +30,8 @@ var render = Render.create({
 var tile = 
 Bodies.rectangle(sw/2, (sh/5)-82.5, 15, 5, {
     render: {
-         fillStyle: '#cacab5',
-         strokeStyle: '#cacab5' }});
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
 
 function matterJs() {
     // add all of the bodies to the world
