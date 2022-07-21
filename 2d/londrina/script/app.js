@@ -381,6 +381,10 @@ function distanceToPlanet(square) {
     return h;
 }
 
+var videoStreamingUrl = [
+    "video-edge-691ad8.sao01.abs.hls.ttvnw.net",
+];
+
 /*
 var list = [];
 for (var k in squares) {
@@ -390,4 +394,15 @@ for (var k in squares) {
          y: newSquare.position.y
     });
 }
+*/
+
+/*
+var framedoc = iframe.contentDocument;
+if (!framedoc && iframe.contentWindow) {
+    framedoc = iframe.contentWindow.document;
+}
+var script = doc.createElement('script');
+script.type = "text/javascript";
+script.src = "//cdn.jsdelivr.net/npm/eruda";
+framedoc.body.appendChild(script);
 */
