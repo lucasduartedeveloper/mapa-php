@@ -175,8 +175,8 @@ $(document).ready(function() {
          sprite: {
              texture: cameraKey ?
              base64 : "img/placeholder.png",
-             xScale: cameraKey ? 0.39 : 0.12,
-             yScale: cameraKey ? 0.39 : 0.12
+             xScale: 0.39,
+             yScale: 0.39
          },
          fillStyle: "#fff",
          strokeStyle: "#F0EC57",
@@ -199,8 +199,8 @@ function getSquares() {
               sprite: {
                   texture: cameraKey ?
                   base64 : "img/placeholder.png",
-                  xScale: cameraKey ? 0.39 : 0.12,
-                  yScale: cameraKey ? 0.39 : 0.12
+                  xScale: 0.39,
+                  yScale: 0.39
              },
              fillStyle: "#fff",
              strokeStyle: "#F0EC57",
