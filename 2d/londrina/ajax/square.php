@@ -2,7 +2,8 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["list"])) {
+  if (isset($_POST["base64"])) {
+    $base64 = $_POST["base64"];
     $list = $_POST["list"];
     $sql = "";
 

@@ -181,9 +181,9 @@ $(document).ready(function() {
          fillStyle: "#fff",
          strokeStyle: "#F0EC57",
          lineWidth: 2}});
-         squares.push(newSquare);
 
-         saveSquares();
+         squares.push(newSquare);
+         saveSquare(newSquare);
 
          Composite.add(engine.world, [newSquare]);
      });
@@ -211,9 +211,11 @@ function getSquares() {
     Composite.add(engine.world, [squares]);
 }
 
-function saveSquares(callback=false) {
+function saveSquare(newSquare, callback=false) {
+     log("save", newSquare);
+     return;
      $.post("ajax/square.php", {
-          list: squares,
+          item: squares,
           }).done(function(data) { 
               log("post", data);
               if (callback) callback();
