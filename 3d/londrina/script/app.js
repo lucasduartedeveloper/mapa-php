@@ -60,7 +60,7 @@ Bodies.rectangle(((sw/4)*3)+12.5, (sh/3)*2,
          strokeStyle: "#000" }});
 
 var left = 
-Bodies.rectangle(5, (sh/6),
+Bodies.rectangle(5, ((sh/3)*2)/2,
     10, (sh/3)*2, {
     isStatic: true,
     render: {
@@ -68,7 +68,7 @@ Bodies.rectangle(5, (sh/6),
          strokeStyle: "#000" }});
 
 var right = 
-Bodies.rectangle(sw-5, (sh/6),
+Bodies.rectangle(sw-5, ((sh/3)*2)/2,
     10, (sh/3)*2, {
     isStatic: true,
     render: {
