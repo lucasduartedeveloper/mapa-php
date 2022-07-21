@@ -139,7 +139,7 @@ $(document).ready(function() {
          toDataURL();
 
          Composite.add(engine.world,
-         [Bodies.rectangle(49, 49, 50, 50, {
+         [Bodies.rectangle(74, 74, 50, 50, {
          render: {
          sprite: {
              texture: base64,
