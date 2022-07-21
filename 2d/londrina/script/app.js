@@ -129,6 +129,7 @@ function stopCamera() {
 
 $(document).ready(function() {
     matterJs();
+    getSquares();
     startCamera("environment");
 
     setInterval(function() {
@@ -208,7 +209,7 @@ var saveSquares(callback=false) {
 
 var deleteSquare(id) {   
      $.post("ajax/square.php",
-         { squareId: id }
+         { squareId: id },
          function(data) {
          log("post", data);
      });
