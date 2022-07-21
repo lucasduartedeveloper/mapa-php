@@ -161,14 +161,6 @@ $(document).ready(function() {
             vw, vh);
         }
 
-        if (squares.length > 0) {
-             var hero = squares[0];
-             Render.lookAt(render, hero, {
-             x: sw*3,
-             y: sh*3
-             });
-        }
-
         var deadSquares = [];
         for(var k in squares) {
             if ((squares[k].position.x > sw+25 ||
