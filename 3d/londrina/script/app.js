@@ -59,6 +59,30 @@ Bodies.rectangle(((sw/4)*3)+12.5, (sh/3)*2,
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
+var left = 
+Bodies.rectangle(5, 5,
+    10, (sh/3)*2, {
+    isStatic: true,
+    render: {
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
+
+var right = 
+Bodies.rectangle(sw-5, 5,
+    10, (sh/3)*2, {
+    isStatic: true,
+    render: {
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
+
+var top = 
+Bodies.rectangle(5, 5,
+    sw, 10, {
+    isStatic: true,
+    render: {
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
+
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
