@@ -224,6 +224,7 @@ $(document).ready(function() {
             bodyB: newSquare,
             pointB: { x: 0, y: 0 },
             stiffness: 0.5,
+            length: 75,
             render: {
                 strokeStyle: '#fff',
                 lineWidth: 1,
@@ -263,6 +264,7 @@ function getSquares() {
                 bodyB: newSquare,
                 pointB: { x: 0, y: 0 },
                 stiffness: 0.5,
+                length: 75,
                 render: {
                     strokeStyle: '#fff',
                     lineWidth: 1,
