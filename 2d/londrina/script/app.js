@@ -227,7 +227,7 @@ function saveSquare(newSquare, callback=false) {
           base64: newSquare.render.sprite.texture,
           x: newSquare.position.x,
           y: newSquare.position.y,
-          
+          list: list
           }).done(function(data) { 
               log("post", data);
               if (callback) callback();
