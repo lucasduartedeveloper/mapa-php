@@ -6,8 +6,9 @@ try {
     $list = $_POST["list"];
     foreach($list as $square) {
         $sql = "INSERT INTO square ".
-        "(base64,x,y) VALUES ".
+        "(square_id,base64,x,y) VALUES ".
         "('".
+        $square["squareId"]."',".
         $square["base64"]."',".
         $square["x"].",".
         $square["y"].
@@ -20,12 +21,11 @@ try {
   }
   else if (isset($_POST["squareId"])) {
     $squareId = $_POST["squareId"];
-    $sql = "";
+    $sql = "DELETE FROM square ".
+    "WHERE square_id='".$squareId."'";
 
-    /*
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
-    */
 
     echo $squareId;
   }

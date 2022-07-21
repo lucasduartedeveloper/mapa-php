@@ -182,9 +182,9 @@ $(document).ready(function() {
          strokeStyle: "#F0EC57",
          lineWidth: 2}});
 
-         squares.push(newSquare);
-         saveSquares();
-
+         newSquare.squareId = new Date().getTime();
+         saveSquares([newSquare]);
+         squares.push(newSquare);        
          Composite.add(engine.world, [newSquare]);
      });
 });
@@ -204,26 +204,25 @@ function getSquares() {
              fillStyle: "#fff",
              strokeStyle: "#F0EC57",
              lineWidth: 2}});
+             square.squareId = new Date().getTime();
              squares.push(square);
          }
         Composite.add(engine.world, squares);
     });
 }
 
-function saveSquare(callback=false) {
+function saveSquares(newList, callback=false) {
      var list = [];
-     for (var k in squares) {
+     for (var k in newList) {
          list.push({
-             base64: newSquare.render.sprite.texture,
+             squareId: newList[k].squareId,
+             base64: newList[k].render.sprite.texture,
              x: newSquare.position.x,
              y: newSquare.position.y
          });
      }
 
      $.post("ajax/square.php", {
-          base64: newSquare.render.sprite.texture,
-          x: newSquare.position.x,
-          y: newSquare.position.y,
           list: list
           }).done(function(data) { 
               log("post", data);
