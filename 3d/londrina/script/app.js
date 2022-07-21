@@ -172,6 +172,6 @@ $(document).ready(function() {
          },
          fillStyle: "#fff",
          strokeStyle: "#F0EC57",
-         lineWidth: 1}})])
+         lineWidth: 2}})])
      });
 });
