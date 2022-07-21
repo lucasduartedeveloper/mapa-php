@@ -78,7 +78,7 @@ Bodies.rectangle(sw/2, 5,
 
 var planet =
 Bodies.circle(sw/2, sh/2,
-    100, {
+    50, {
     isStatic: true,
     render: {
          fillStyle: "#fff",
@@ -217,10 +217,25 @@ $(document).ready(function() {
          strokeStyle: "#F0EC57",
          lineWidth: 2}});
 
+         newSquare.gravity =
+         Matter.Constraint.create({
+            bodyA: planet,
+            pointA: { x: 0, y: 0 },
+            bodyB: newSquare,
+            pointB: { x: 0, y: 0 },
+            stiffness: 0.5,
+            render: {
+                strokeStyle: '#fff',
+                lineWidth: 1,
+                type: 'line'
+            }
+         });
+
          newSquare.squareId = new Date().getTime();
          saveSquares([newSquare]);
          squares.push(newSquare);        
-         Composite.add(engine.world, [newSquare]);
+         Composite.add(engine.world,
+         [newSquare, newSquare.gravity]);
      });
 });
 
@@ -239,9 +254,24 @@ function getSquares() {
              fillStyle: "#fff",
              strokeStyle: "#F0EC57",
              lineWidth: 2}});
+
              square.squareId = data[k].square_id;
-             squares.push(square);
-         }
+             square.gravity =
+                Matter.Constraint.create({
+                bodyA: planet,
+                pointA: { x: 0, y: 0 },
+                bodyB: newSquare,
+                pointB: { x: 0, y: 0 },
+                stiffness: 0.5,
+                render: {
+                    strokeStyle: '#fff',
+                    lineWidth: 1,
+                    type: 'line'
+                }
+             });
+            squares.push(square);
+            Composite.add(engine.world, square.gravity);
+        }
         Composite.add(engine.world, squares);
     });
 }
@@ -270,7 +300,8 @@ function deleteSquare(deadSquare) {
          { squareId: deadSquare.squareId },
          function(data) {
          log("post", data);
-         Composite.remove(engine.world, deadSquare);
+         Composite.remove(engine.world,
+         [deadSquare, deadSquare.gravity]);
      });
 }
 
