@@ -195,12 +195,16 @@ $(document).ready(function() {
                  squares[k].position.y < -25)) {
                  deadSquares.push(squares[k]);
             }
-            if (distanceToPlanet(squares[k]) > 100) {
+            if (squares[k].connected &&
+                 distanceToPlanet(squares[k]) > 100) {
                  stringBreak.play();
+                 squares[k].connected = false;
                  Composite.remove(engine.world,
                  [squares[k].gravity]);
             }
-            else {
+            else if (!squares[k].connected && 
+                 distanceToPlanet(squares[k]) <= 100) {
+                 squares[k].connected = true;
                  Composite.add(engine.world,
                  [squares[k].gravity]);
             }
@@ -233,6 +237,8 @@ $(document).ready(function() {
          strokeStyle: "#F0EC57",
          lineWidth: 2}});
 
+         newSquare.connected = true;
+         newSquare.squareId = new Date().getTime();
          newSquare.gravity =
          Matter.Constraint.create({
             bodyA: planet,
@@ -248,7 +254,6 @@ $(document).ready(function() {
             }
          });
 
-         newSquare.squareId = new Date().getTime();
          saveSquares([newSquare]);
          squares.push(newSquare);        
          Composite.add(engine.world,
@@ -342,6 +347,7 @@ $(document).on("imageResized", function(e) {
     strokeStyle: "#F0EC57",
     lineWidth: 2}});
 
+    newSquare.connected = true;
     newSquare.squareId = new Date().getTime();
     newSquare.gravity =
                 Matter.Constraint.create({
