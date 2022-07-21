@@ -164,8 +164,8 @@ $(document).ready(function() {
         if (squares.length > 0) {
              var hero = squares[0];
              Render.lookAt(render, hero, {
-             x: 1080,
-             y: 1920
+             x: sw*3;
+             y: sh*3;
              });
         }
 
