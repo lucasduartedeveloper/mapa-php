@@ -177,6 +177,7 @@ $(document).ready(function() {
             ((vw-128)/2)*-1, 
             vh, vw);
 
+            /*
             context
             .globalCompositeOperation='destination-in';
             context.beginPath();
@@ -188,6 +189,7 @@ $(document).ready(function() {
             canvas.toDataURL();
             planet.render.sprite.xScale = 0.78;
             planet.render.sprite.yScale = 0.78;
+            */
         }
 
         var deadSquares = [];
