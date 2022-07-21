@@ -89,7 +89,7 @@ Bodies.rectangle(sw/2, 5,
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [..square, floor0, floor1, left, right, ceiling]);
+    [..squares, floor0, floor1, left, right, ceiling]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
