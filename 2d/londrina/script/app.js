@@ -37,16 +37,16 @@ var render = Render.create({
 var squares = [];
 
 var floor0 = 
-Bodies.rectangle((sw/4)-12.5, (sh/3)*2,
-    (sw/2)-25, 10, {
+Bodies.rectangle((sw/4)-15, (sh/3)*2,
+    (sw/2)-30, 10, {
     isStatic: true,
     render: {
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
 var floor1 = 
-Bodies.rectangle(((sw/4)*3)+12.5, (sh/3)*2,
-    (sw/2)-25, 10, {
+Bodies.rectangle(((sw/4)*3)+15, (sh/3)*2,
+    (sw/2)-30, 10, {
     isStatic: true,
     render: {
          fillStyle: "#fff",
@@ -160,6 +160,15 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             vw, vh);
         }
+
+       /*
+       if (squares.length > 0) {
+           Render.lookAt(render, squares[0]{
+              min: { x: 0, y: 0 },
+              max: { x: 800, y: 600 }
+           });
+        }
+        */
 
         var deadSquares = [];
         for(var k in squares) {
