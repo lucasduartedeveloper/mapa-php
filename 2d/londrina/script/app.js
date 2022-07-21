@@ -170,7 +170,9 @@ $(document).ready(function() {
                  deadSquares.push(squares[k]);
             }
         }
-        for(var k in deadSquares) { 
+        for(var k in deadSquares) {
+            squares = squares.filter((s) => { 
+            s.squareId != deadSquare.squareId; });
             deleteSquare(deadSquares[k]);
         }
     }, 100);
@@ -248,8 +250,6 @@ function deleteSquare(deadSquare) {
          { squareId: deadSquare.squareId },
          function(data) {
          log("post", data);
-         squares = squares.filter((s) => { 
-         s.squareId != deadSquare.squareId; });
          Composite.remove(engine.world, deadSquare);
      });
 }
