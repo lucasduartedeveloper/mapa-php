@@ -206,8 +206,8 @@ function getSquares() {
              lineWidth: 2}});
              squares.push(square);
          }
+        Composite.add(engine.world, squares);
     });
-    Composite.add(engine.world, squares);
 }
 
 function saveSquare(callback=false) {
