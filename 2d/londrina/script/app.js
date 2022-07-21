@@ -186,8 +186,8 @@ $(document).ready(function() {
  
             planet.render.sprite.texture =
             canvas.toDataURL();
-            planet.render.sprite.xScale = 0.39;
-            planet.render.sprite.yScale = 0.39;
+            planet.render.sprite.xScale = 0.78;
+            planet.render.sprite.yScale = 0.78;
         }
 
         var deadSquares = [];
