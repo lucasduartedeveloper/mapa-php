@@ -255,6 +255,33 @@ function deleteSquare(deadSquare) {
      });
 }
 
+$("#upload").click(function(e) {
+     $("#file-upload").click();
+});
+$("#file-upload").on("change", function(e) {
+     uploadImage();
+});
+$(document).on("imageResized", function(e) {
+    var newSquare =
+    Bodies.rectangle(74, 74, 50, 50, {
+    render: {
+    sprite: {
+        texture: e.url,
+        xScale: 0.39,
+        yScale: 0.39
+    },
+    fillStyle: "#fff",
+    strokeStyle: "#F0EC57",
+    lineWidth: 2}});
+
+    newSquare.squareId = new Date().getTime();
+    saveSquares([newSquare]);
+    squares.push(newSquare);        
+    Composite.add(engine.world, [newSquare]);
+    log("info", "Image resized.");
+});
+
+
 /*
 var list = [];
 for (var k in squares) {

@@ -11,6 +11,7 @@ $script = [
     0 => "thirdpart/matter.js",
     1 => "debug.js",
     2 => "gyro.js",
+    3 => "image-upload.js",
     3 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
@@ -61,6 +62,7 @@ echo "\n";
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <span id="controls">
+<i id="upload" class="fa-solid fa-upload"></i>
 <i id="cut" class="fa-solid fa-scissors"></i>
 <i id="key" class="fa-solid fa-key"></i>
 </span>
