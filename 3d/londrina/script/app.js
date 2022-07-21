@@ -33,7 +33,7 @@ var render = Render.create({
 
 // create two boxes and a ground
 var square = 
-Bodies.rectangle((sw/2), (sh/2), 50, 50, {
+Bodies.rectangle((sw/2)+50, (sh/2), 50, 50, {
     render: {
          sprite: {
              texture: "img/placeholder.png",
@@ -44,7 +44,7 @@ Bodies.rectangle((sw/2), (sh/2), 50, 50, {
          strokeStyle: "#000" }});
 
 var floor0 = 
-Bodies.rectangle((sw/4)-25, (sh/3)*2,
+Bodies.rectangle((sw/4)-12.5, (sh/3)*2,
     (sw/2)-25, 10, {
     isStatic: true,
     render: {
@@ -52,7 +52,7 @@ Bodies.rectangle((sw/4)-25, (sh/3)*2,
          strokeStyle: "#000" }});
 
 var floor1 = 
-Bodies.rectangle(((sw/4)*3)+25, (sh/3)*2,
+Bodies.rectangle(((sw/4)*3)+12.5, (sh/3)*2,
     (sw/2)-25, 10, {
     isStatic: true,
     render: {
