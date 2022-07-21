@@ -183,8 +183,6 @@ $(document).ready(function() {
          lineWidth: 2}});
 
          squares.push(newSquare);
-
-         log("save", newSquare);
          saveSquare(newSquare);
 
          Composite.add(engine.world, [newSquare]);

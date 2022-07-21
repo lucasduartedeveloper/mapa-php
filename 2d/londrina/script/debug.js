@@ -1,4 +1,4 @@
-var debug = false;
+var debug = true;
 var logTypesDisabled = [];
 
 function disableLogs(type) {
