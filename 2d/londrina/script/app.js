@@ -161,8 +161,13 @@ $(document).ready(function() {
             vw, vh);
         }
 
-        if (squares.lengrh > 0)
-        Matter.Render.lookAt(render, squares[0]);
+        if (squares.length > 0) {
+             var hero = squares[0];
+             Render.lookAt(render, hero, {
+             x: 1080,
+             y: 1920
+             });
+        }
 
         var deadSquares = [];
         for(var k in squares) {
