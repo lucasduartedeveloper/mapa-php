@@ -76,10 +76,20 @@ Bodies.rectangle(sw/2, 5,
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
+var planet =
+Bodies.circle(sw/2, sh/2,
+    100, {
+    isStatic: true,
+    render: {
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
+
 function matterJs() {
     // add all of the bodies to the world
+    //Composite.add(engine.world,
+    //[floor0, floor1, left, right, ceiling]);
     Composite.add(engine.world,
-    [floor0, floor1, left, right, ceiling]);
+    [planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
