@@ -22,7 +22,7 @@ try {
   else if (isset($_POST["squareId"])) {
     $squareId = $_POST["squareId"];
     $sql = "DELETE FROM square ".
-    "WHERE square_id='".$squareId."'";
+    "WHERE square_id='".$squareId."';";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
