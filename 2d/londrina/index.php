@@ -60,7 +60,10 @@ echo "\n";
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
+<span id="controls">
 <i id="cut" class="fa-solid fa-scissors"></i>
+<i id="key" class="fa-solid fa-key"></i>
+</span>
 
 <canvas id="matter-js"></canvas>
 
