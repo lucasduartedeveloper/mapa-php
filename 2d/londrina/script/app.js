@@ -177,7 +177,8 @@ $(document).ready(function() {
             ((vw-128)/2)*-1, 
             vh, vw);
 
-            planet.sprite.texture = canvas.toDataURL();
+            planet.render
+            .sprite.texture = canvas.toDataURL();
         }
 
         var deadSquares = [];
