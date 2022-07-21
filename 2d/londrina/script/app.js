@@ -173,9 +173,9 @@ $(document).ready(function() {
         if (cameraKey) {
             context
             .drawImage(video, 
-            ((vw-128)/2)*-1, 
             ((vh-128)/2)*-1, 
-            vw, vh);
+            ((vw-128)/2)*-1, 
+            vh, vw);
         }
 
        /*
