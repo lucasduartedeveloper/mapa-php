@@ -172,7 +172,7 @@ $(document).ready(function() {
         }
         for(var k in deadSquares) {
             squares = squares.filter((s) => { 
-            s.squareId != deadSquare.squareId; });
+            s.squareId != deadSquares[k].squareId; });
             deleteSquare(deadSquares[k]);
         }
     }, 100);
