@@ -161,13 +161,17 @@ $(document).ready(function() {
             vw, vh);
         }
 
+        var deadSquares = [];
         for(var k in squares) {
             if ((squares[k].position.x > sw+25 ||
-                 squares[k].position.x < -25) &&
+                 squares[k].position.x < -25) || 
                  (squares[k].position.y > sh+25 ||
                  squares[k].position.y < -25)) {
-                 deleteSquare(square[k]);
+                 deadSquares.push(squares[k]);
             }
+        }
+        for(var k in deadSquares) { 
+            deleteSquare(deadSquares[k]);
         }
     }, 100);
 
@@ -239,14 +243,14 @@ function saveSquares(newList, callback=false) {
      });
 }
 
-function deleteSquare(square) {   
+function deleteSquare(deadSquare) {   
      $.post("ajax/square.php",
-         { squareId: square.squareId },
+         { squareId: deadSquare.squareId },
          function(data) {
          log("post", data);
          squares = squares.filter((s) => { 
-         s.squareId != square.squareId; });
-         Composite.remove(engine.world, square);
+         s.squareId != deadSquare.squareId; });
+         Composite.remove(engine.world, deadSquare);
      });
 }
 
