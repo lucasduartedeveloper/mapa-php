@@ -40,10 +40,10 @@ function accHandler(acc) {
          rotationYspeed += distY;
          rotationZspeed += distZ;
 
-         console.clear();
+         /*console.clear();
          log("motion-x", rotationXspeed);
          log("motion-y", rotationYspeed);
-         log("motion-z", rotationZspeed);
+         log("motion-z", rotationZspeed);*/
     }
 
     gyro = {
