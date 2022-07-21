@@ -176,16 +176,9 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             ((vw-128)/2)*-1, 
             vh, vw);
-        }
 
-       /*
-       if (squares.length > 0) {
-           Render.lookAt(render, squares[0], {
-               x: (sw/2)-50,
-               y: (sh/2)-50
-           });
+            planet.sprite.texture = canvas.toDataURL();
         }
-        */
 
         var deadSquares = [];
         for(var k in squares) {
@@ -380,29 +373,3 @@ function distanceToPlanet(square) {
     Math.pow(ca,2)));
     return h;
 }
-
-var videoStreamingUrl = [
-    "video-edge-691ad8.sao01.abs.hls.ttvnw.net",
-];
-
-/*
-var list = [];
-for (var k in squares) {
-    list.push({
-         base64: newSquare.render.sprite.texture,
-         x: newSquare.position.x,
-         y: newSquare.position.y
-    });
-}
-*/
-
-/*
-var framedoc = iframe.contentDocument;
-if (!framedoc && iframe.contentWindow) {
-    framedoc = iframe.contentWindow.document;
-}
-var script = doc.createElement('script');
-script.type = "text/javascript";
-script.src = "//cdn.jsdelivr.net/npm/eruda";
-framedoc.body.appendChild(script);
-*/
