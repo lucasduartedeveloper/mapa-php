@@ -194,6 +194,10 @@ $(document).ready(function() {
                  squares[k].position.y < -25)) {
                  deadSquares.push(squares[k]);
             }
+            if (distanceToPlanet(squares[k]) > 100) {
+                 Composite.remove(engine.world,
+                 [squares[k].gravity]);
+            }
         }
         for(var k in deadSquares) {
             squares = squares.filter((s) => {
@@ -355,6 +359,14 @@ $(document).on("imageResized", function(e) {
     log("info", "Image resized.");
 });
 
+function distanceToPlanet(square) {
+    var co = square.position.x - planet.position.x;
+    var ca = square.position.y - planet.position.y;
+    var h = Math.abs(Math.sqrt(
+    Math.pow(co,2)+
+    Math.pow(ca,2)));
+    return h;
+}
 
 /*
 var list = [];
