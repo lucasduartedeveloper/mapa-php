@@ -161,6 +161,9 @@ $(document).ready(function() {
             vw, vh);
         }
 
+        if (squares.lengrh > 0)
+        Matter.Render.lookAt(render, squares[0]);
+
         var deadSquares = [];
         for(var k in squares) {
             if ((squares[k].position.x > sw+25 ||
