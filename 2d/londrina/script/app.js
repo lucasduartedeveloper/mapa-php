@@ -347,7 +347,6 @@ $(document).on("imageResized", function(e) {
                     type: 'line'
                 }
      });
-    squares.push(square);
     Composite.add(engine.world, newSquare.gravity)
 
     saveSquares([newSquare]);
