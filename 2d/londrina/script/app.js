@@ -217,8 +217,8 @@ function saveSquares(newList, callback=false) {
          list.push({
              squareId: newList[k].squareId,
              base64: newList[k].render.sprite.texture,
-             x: newSquare.position.x,
-             y: newSquare.position.y
+             x: newList[k].position.x,
+             y: newList[k].position.y
          });
      }
 
