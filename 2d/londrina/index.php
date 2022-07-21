@@ -67,6 +67,8 @@ echo "\n";
 <i id="key" class="fa-solid fa-key"></i>
 </span>
 
+<input style="display:none" type="file" id="file-upload" name="UploadFiles">
+
 <canvas id="matter-js"></canvas>
 <span id="hab">0 squares</span>
 
