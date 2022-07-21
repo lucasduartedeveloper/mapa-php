@@ -217,7 +217,7 @@ $(document).ready(function() {
          toDataURL();
 
          var newSquare =
-         Bodies.rectangle(74, 74, 50, 50, {
+         Bodies.rectangle(sw/2, sh/2, 50, 50, {
          render: {
          sprite: {
              texture: cameraKey ?
@@ -327,7 +327,7 @@ $("#file-upload").on("change", function(e) {
 });
 $(document).on("imageResized", function(e) {
     var newSquare =
-    Bodies.rectangle(74, 74, 50, 50, {
+    Bodies.rectangle(sw/2, sh/2, 50, 50, {
     render: {
     sprite: {
         texture: e.url,
