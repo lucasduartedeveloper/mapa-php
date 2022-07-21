@@ -1,6 +1,7 @@
 CREATE TABLE square (
    id serial PRIMARY KEY,
-   latitude VARCHAR ( 50 ) NOT NULL,
-   longitude VARCHAR ( 50 ) NOT NULL,
+   x SMALLINT NOT NULL,
+   y SMALLINT NOT NULL,
+   base64 VARCHAR(500000) NOT NULL,
    data_hora TIMESTAMP default CURRENT_TIMESTAMP
 );

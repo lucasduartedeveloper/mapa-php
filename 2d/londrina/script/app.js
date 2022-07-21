@@ -34,17 +34,7 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var squares = [
-Bodies.rectangle((sw/2)+50, (sh/2), 50, 50, {
-    render: {
-         sprite: {
-             texture: "img/placeholder.png",
-             xScale: 0.12,
-             yScale: 0.12
-         },
-         fillStyle: "#fff",
-         strokeStyle: "#000" }})
-];
+var squares = [];
 
 var floor0 = 
 Bodies.rectangle((sw/4)-12.5, (sh/3)*2,
@@ -89,7 +79,7 @@ Bodies.rectangle(sw/2, 5,
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [squares[0], floor0, floor1, left, right, ceiling]);
+    [floor0, floor1, left, right, ceiling]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
@@ -171,9 +161,10 @@ $(document).ready(function() {
          Bodies.rectangle(74, 74, 50, 50, {
          render: {
          sprite: {
-             texture: base64,
-             xScale: 0.39,
-             yScale: 0.39
+             texture: cameraKey ?
+             base64 : "img/placeholder.png",
+             xScale: cameraKey ? 0.39 : 0.12,
+             yScale: cameraKey ? 0.39 : 0.12
          },
          fillStyle: "#fff",
          strokeStyle: "#F0EC57",
@@ -183,3 +174,42 @@ $(document).ready(function() {
          Composite.add(engine.world, [newSquare]);
      });
 });
+
+var getSquares() {
+     $.getJSON("ajax/square.php", function(data) {
+          log("get", data);
+          for (var k in data) {
+              var square = 
+              Bodies.rectangle(data[k].x, data[k].y, 50, 50, {
+              render: {
+              sprite: {
+                  texture: cameraKey ?
+                  base64 : "img/placeholder.png",
+                  xScale: cameraKey ? 0.39 : 0.12,
+                  yScale: cameraKey ? 0.39 : 0.12
+             },
+             fillStyle: "#fff",
+             strokeStyle: "#F0EC57",
+             lineWidth: 2}});
+             squares.push(square);
+         }
+    });
+    Composite.add(engine.world, [squares]);
+}
+
+var saveSquares(callback=false) {
+     $.post("ajax/square.php", {
+          list: squares,
+          }).done(function(data) { 
+              log("post", data);
+              if (callback) callback();
+     });
+}
+
+var deleteSquare(id) {   
+     $.post("ajax/square.php",
+         { squareId: id }
+         function(data) {
+         log("post", data);
+     });
+}
