@@ -261,7 +261,7 @@ function getSquares() {
                 Matter.Constraint.create({
                 bodyA: planet,
                 pointA: { x: 0, y: 0 },
-                bodyB: newSquare,
+                bodyB: square,
                 pointB: { x: 0, y: 0 },
                 stiffness: 0.3,
                 length: 75,
