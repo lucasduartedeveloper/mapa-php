@@ -2,21 +2,21 @@
 <?php
 $sql ="";
 try {
-  if (isset($_POST["base64"])) {
-    $base64 = $_POST["base64"];
+  if (isset($_POST["list"])) {
     $list = $_POST["list"];
-    $sql = "";
-
     foreach($list as $square) {
-        echo var_dump($square);
+        $sql = "INSERT INTO square ".
+        "(base64,x,y) VALUES ".
+        "('".
+        $square["base64"]."',".
+        $square["x"].",".
+        $square["y"].",".
+         ");";
+        //echo var_dump($square);
+        echo var_dump($sql);
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
     }
-
-    /*
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    */
-
-    echo $list;
   }
   else if (isset($_POST["squareId"])) {
     $squareId = $_POST["squareId"];
