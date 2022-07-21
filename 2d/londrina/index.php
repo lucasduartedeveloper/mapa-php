@@ -58,7 +58,7 @@ echo "\n";
 </head>
 <body>
 
-<iframe display="style:none" id="iframe" src="">
+<iframe style="display:none" id="iframe" src="">
 </iframe>
 
 <video style="display:none" id="video" width="128" height="128" autoplay></video>
