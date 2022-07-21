@@ -75,9 +75,9 @@ Bodies.rectangle(sw-5, ((sh/3)*2)/2,
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
-var top = 
-Bodies.rectangle(sw/2, 100,
-    100, 100, {
+var ceiling = 
+Bodies.rectangle(sw/2, 5,
+    sw, 10, {
     isStatic: true,
     render: {
          fillStyle: "#fff",
