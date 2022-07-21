@@ -2,18 +2,7 @@
 <?php
 $sql ="";
 try {
-. if (isset($_POST["list"])) {
-    $squareId = $_POST["squareId"]
-    $sql = "";
-
-    /*
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    */
-
-    echo $squareId;
-  }
-  else if (isset($_POST["list"])) {
+  if (isset($_POST["list"])) {
     $list = $_POST["list"]
     $sql = "";
 
@@ -23,6 +12,17 @@ try {
     */
 
     echo $list;
+  }
+  else if (isset($_POST["squareId"])) {
+    $squareId = $_POST["squareId"]
+    $sql = "";
+
+    /*
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    */
+
+    echo $squareId;
   }
   else {
     $sql = "SELECT * FROM square ".
