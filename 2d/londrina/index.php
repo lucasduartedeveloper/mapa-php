@@ -61,8 +61,8 @@ echo "\n";
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <span id="controls">
-<i id="key" class="fa-solid fa-key"></i>
 <i id="cut" class="fa-solid fa-scissors"></i>
+<i id="key" class="fa-solid fa-key disabled"></i>
 </span>
 
 <canvas id="matter-js"></canvas>
