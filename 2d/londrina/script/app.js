@@ -154,8 +154,8 @@ $(document).ready(function() {
     startCamera("environment");
 
     setInterval(function() {
-        engine.gravity.x = (gyro.accX / 9.8) *-1;
-        engine.gravity.y = gyro.accY / 9.8;
+        engine.gravity.x = (gyro.accX / 9.8);
+        engine.gravity.y = (gyro.accY / 9.8) *-1;
 
         var canvas = 
         document.getElementById("camera-canvas");
