@@ -8,7 +8,7 @@ try {
         $sql = "INSERT INTO square ".
         "(square_id,base64,x,y) VALUES ".
         "('".
-        $square["squareId"]."',".
+        $square["squareId"]."','".
         $square["base64"]."',".
         $square["x"].",".
         $square["y"].
