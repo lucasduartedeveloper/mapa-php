@@ -1,4 +1,5 @@
 var scissorsSFX = new Audio("audio/scissors.wav");
+var stringBreak = new Audio("audio/string-break.wav");
 
 var sw = window.innerWidth;
 var sh = window.innerHeight;
@@ -195,6 +196,7 @@ $(document).ready(function() {
                  deadSquares.push(squares[k]);
             }
             if (distanceToPlanet(squares[k]) > 100) {
+                 stringBreak.play();
                  Composite.remove(engine.world,
                  [squares[k].gravity]);
             }
