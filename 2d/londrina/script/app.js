@@ -219,7 +219,7 @@ function getSquares() {
              fillStyle: "#fff",
              strokeStyle: "#F0EC57",
              lineWidth: 2}});
-             square.squareId = new Date().getTime();
+             square.squareId = data[k].square_id;
              squares.push(square);
          }
         Composite.add(engine.world, squares);
