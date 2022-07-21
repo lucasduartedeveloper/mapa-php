@@ -10,7 +10,7 @@ try {
         "('".
         $square["base64"]."',".
         $square["x"].",".
-        $square["y"].",".
+        $square["y"].
          ");";
         //echo var_dump($square);
         echo var_dump($sql);
