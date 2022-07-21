@@ -176,6 +176,18 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             ((vw-128)/2)*-1, 
             vh, vw);
+
+            context
+            .globalCompositeOperation='destination-in';
+            context.beginPath();
+            context.arc(128/2,128/2,128/2,0,Math.PI*2);
+            context.closePath();
+            context.fill();
+ 
+            planet.render.sprite.texture =
+            canvas.toDataURL();
+            planet.render.sprite.xScale = 0.39;
+            planet.render.sprite.yScale = 0.39;
         }
 
         var deadSquares = [];
