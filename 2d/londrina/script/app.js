@@ -200,6 +200,10 @@ $(document).ready(function() {
                  Composite.remove(engine.world,
                  [squares[k].gravity]);
             }
+            else {
+                 Composite.add(engine.world,
+                 [squares[k].gravity]);
+            }
         }
         for(var k in deadSquares) {
             squares = squares.filter((s) => {
