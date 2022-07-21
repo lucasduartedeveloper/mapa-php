@@ -212,8 +212,7 @@ function getSquares() {
               var square = 
               Bodies.rectangle(data[k].x, data[k].y, 50, 50, {
               render: {
-squares = squares.filter((s) => { 
-         s.squareId != deadSquare.squareId; });              sprite: {
+              sprite: {
                   texture: data[k].base64,
                   xScale: 0.39,
                   yScale: 0.39
