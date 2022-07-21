@@ -176,7 +176,7 @@ $(document).ready(function() {
      });
 });
 
-var getSquares() {
+function getSquares() {
      $.getJSON("ajax/square.php", function(data) {
           log("get", data);
           for (var k in data) {
@@ -198,7 +198,7 @@ var getSquares() {
     Composite.add(engine.world, [squares]);
 }
 
-var saveSquares(callback=false) {
+function saveSquares(callback=false) {
      $.post("ajax/square.php", {
           list: squares,
           }).done(function(data) { 
@@ -207,7 +207,7 @@ var saveSquares(callback=false) {
      });
 }
 
-var deleteSquare(id) {   
+function deleteSquare(id) {   
      $.post("ajax/square.php",
          { squareId: id },
          function(data) {
