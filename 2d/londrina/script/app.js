@@ -277,6 +277,7 @@ function getSquares() {
              strokeStyle: "#F0EC57",
              lineWidth: 2}});
 
+             square.connected = true;
              square.squareId = data[k].square_id;
              square.gravity =
                 Matter.Constraint.create({
