@@ -160,6 +160,15 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             vw, vh);
         }
+
+        for(var k in squares) {
+            if ((squares[k].position.x > sw+25 ||
+                 squares[k].position.x < -25) &&
+                 (squares[k].position.y > sh+25 ||
+                 squares[k].position.y < -25)) {
+                 deleteSquare(square[k]);
+            }
+        }
     }, 100);
 
    $("#cut").click(function(e) {
@@ -230,11 +239,14 @@ function saveSquares(newList, callback=false) {
      });
 }
 
-function deleteSquare(id) {   
+function deleteSquare(square) {   
      $.post("ajax/square.php",
-         { squareId: id },
+         { squareId: square.squareId },
          function(data) {
          log("post", data);
+         squares = squares.filter((s) => { 
+         s.squareId != square.squareId; });
+         Composite.remove(engine.world, square);
      });
 }
 
