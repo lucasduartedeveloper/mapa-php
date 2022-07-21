@@ -102,7 +102,20 @@ function matterJs() {
     Runner.run(runner, engine);
 }
 
-var cameraKey = true;
+var cameraKey = false;
+$("#key").click(function() {
+    if (cameraKey) {
+        stopCamera();
+        $("#key").addClass("disabled");
+        cameraKey = false;
+    }
+    else {
+        startCamera("environment");
+        $("#key").removeClass("disabled");
+        cameraKey = true;
+    }
+});
+
 var cameraMode = "environment";
 function startCamera(mode) {
      if (navigator.mediaDevices) {
@@ -149,6 +162,7 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             vw, vh);
         }
+        saveSquares();
     }, 100);
 
    $("#cut").click(function(e) {

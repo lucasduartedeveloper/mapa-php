@@ -68,3 +68,6 @@ html, body {
 #controls #key {
    color: white;
 }
+#controls .disabled {
+   color: #000;
+}
