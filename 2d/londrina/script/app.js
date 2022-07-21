@@ -333,6 +333,23 @@ $(document).on("imageResized", function(e) {
     lineWidth: 2}});
 
     newSquare.squareId = new Date().getTime();
+    newSquare.gravity =
+                Matter.Constraint.create({
+                bodyA: planet,
+                pointA: { x: 0, y: 0 },
+                bodyB: newSquare,
+                pointB: { x: 0, y: 0 },
+                stiffness: 0.3,
+                length: 75,
+                render: {
+                    strokeStyle: '#fff',
+                    lineWidth: 1,
+                    type: 'line'
+                }
+     });
+    squares.push(square);
+    Composite.add(engine.world, newSquare.gravity)
+
     saveSquares([newSquare]);
     squares.push(newSquare);        
     Composite.add(engine.world, [newSquare]);
