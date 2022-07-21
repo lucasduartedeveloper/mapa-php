@@ -183,7 +183,7 @@ $(document).ready(function() {
          lineWidth: 2}});
 
          squares.push(newSquare);
-         saveSquare(newSquare);
+         saveSquares();
 
          Composite.add(engine.world, [newSquare]);
      });
@@ -197,8 +197,7 @@ function getSquares() {
               Bodies.rectangle(data[k].x, data[k].y, 50, 50, {
               render: {
               sprite: {
-                  texture: cameraKey ?
-                  base64 : "img/placeholder.png",
+                  texture: data[k].base64,
                   xScale: 0.39,
                   yScale: 0.39
              },
@@ -208,12 +207,10 @@ function getSquares() {
              squares.push(square);
          }
     });
-    Composite.add(engine.world, [squares]);
+    Composite.add(engine.world, squares);
 }
 
-function saveSquare(newSquare, callback=false) {
-     log("save", newSquare);
-     
+function saveSquare(callback=false) {
      var list = [];
      for (var k in squares) {
          list.push({
