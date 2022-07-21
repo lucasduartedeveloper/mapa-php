@@ -12,7 +12,7 @@ $script = [
     1 => "debug.js",
     2 => "gyro.js",
     3 => "image-upload.js",
-    3 => "app.js"
+    4 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
