@@ -106,12 +106,10 @@ var cameraKey = false;
 $("#key").click(function() {
     if (cameraKey) {
         stopCamera();
-        $("#key").addClass("disabled");
         cameraKey = false;
     }
     else {
         startCamera("environment");
-        $("#key").removeClass("disabled");
         cameraKey = true;
     }
 });
@@ -162,7 +160,6 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             vw, vh);
         }
-        saveSquares();
     }, 100);
 
    $("#cut").click(function(e) {
@@ -185,6 +182,8 @@ $(document).ready(function() {
          strokeStyle: "#F0EC57",
          lineWidth: 2}});
          squares.push(newSquare);
+
+         saveSquares();
 
          Composite.add(engine.world, [newSquare]);
      });

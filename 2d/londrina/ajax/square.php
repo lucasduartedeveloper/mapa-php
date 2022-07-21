@@ -6,6 +6,10 @@ try {
     $list = $_POST["list"];
     $sql = "";
 
+    foreach($list as $square) {
+        echo $square;
+    }
+
     /*
     $stmt = $pdo->prepare($sql);
     $stmt->execute();

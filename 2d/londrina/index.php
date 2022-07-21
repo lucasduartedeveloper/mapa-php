@@ -62,7 +62,7 @@ echo "\n";
 
 <span id="controls">
 <i id="cut" class="fa-solid fa-scissors"></i>
-<i id="key" class="fa-solid fa-key disabled"></i>
+<i id="key" class="fa-solid fa-key"></i>
 </span>
 
 <canvas id="matter-js"></canvas>
