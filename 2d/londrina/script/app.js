@@ -223,7 +223,7 @@ $(document).ready(function() {
             pointA: { x: 0, y: 0 },
             bodyB: newSquare,
             pointB: { x: 0, y: 0 },
-            stiffness: 0.5,
+            stiffness: 0.3,
             length: 75,
             render: {
                 strokeStyle: '#fff',
@@ -263,7 +263,7 @@ function getSquares() {
                 pointA: { x: 0, y: 0 },
                 bodyB: newSquare,
                 pointB: { x: 0, y: 0 },
-                stiffness: 0.5,
+                stiffness: 0.3,
                 length: 75,
                 render: {
                     strokeStyle: '#fff',
