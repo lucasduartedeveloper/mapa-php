@@ -171,7 +171,7 @@ $(document).ready(function() {
              yScale: 0.39
          },
          fillStyle: "#fff",
-         strokeStyle: "#F0EC57" 
+         strokeStyle: "#F0EC57",
          lineWidth: 1}})])
      });
 });
