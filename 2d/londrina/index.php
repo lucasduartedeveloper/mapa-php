@@ -66,10 +66,11 @@ echo "\n";
 </span>
 
 <canvas id="matter-js"></canvas>
+<span id="hab">0 squares</span>
 
 <p id="version-info">
      <span>
-     v0
+     LONDRINA 2D v0
      </span>
      <br>
      <span id="server-info">

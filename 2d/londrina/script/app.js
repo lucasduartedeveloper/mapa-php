@@ -171,8 +171,9 @@ $(document).ready(function() {
             }
         }
         for(var k in deadSquares) {
-            squares = squares.filter((s) => { 
-            s.squareId != deadSquares[k].squareId; });
+            squares = squares.filter((s) => {
+            return s.squareId != 
+            deadSquares[k].squareId; });
             deleteSquare(deadSquares[k]);
         }
     }, 100);
@@ -211,7 +212,8 @@ function getSquares() {
               var square = 
               Bodies.rectangle(data[k].x, data[k].y, 50, 50, {
               render: {
-              sprite: {
+squares = squares.filter((s) => { 
+         s.squareId != deadSquare.squareId; });              sprite: {
                   texture: data[k].base64,
                   xScale: 0.39,
                   yScale: 0.39
