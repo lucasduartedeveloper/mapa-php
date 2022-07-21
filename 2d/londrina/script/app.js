@@ -214,10 +214,20 @@ function getSquares() {
 function saveSquare(newSquare, callback=false) {
      log("save", newSquare);
      
+     var list = [];
+     for (var k in squares) {
+         list.push({
+             base64: newSquare.render.sprite.texture,
+             x: newSquare.position.x,
+             y: newSquare.position.y
+         });
+     }
+
      $.post("ajax/square.php", {
           base64: newSquare.render.sprite.texture,
           x: newSquare.position.x,
-          y: newSquare.position.y
+          y: newSquare.position.y,
+          
           }).done(function(data) { 
               log("post", data);
               if (callback) callback();

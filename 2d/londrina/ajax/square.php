@@ -8,7 +8,7 @@ try {
     $sql = "";
 
     foreach($list as $square) {
-        echo $square;
+        echo var_dump($square);
     }
 
     /*
