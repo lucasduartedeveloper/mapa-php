@@ -213,9 +213,9 @@ function getSquares() {
 
 function saveSquare(newSquare, callback=false) {
      log("save", newSquare);
-     return;
      $.post("ajax/square.php", {
-          item: squares,
+          base64: newSquare.render.sprite.texture,
+          list: squares,
           }).done(function(data) { 
               log("post", data);
               if (callback) callback();
