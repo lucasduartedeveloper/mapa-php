@@ -1,3 +1,5 @@
+var scissorsSFX = new Audio("audio/scissors.wav");
+
 var sw = window.innerWidth;
 var sh = window.innerHeight;
 var ar = sh/sw;
@@ -32,7 +34,7 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var square = 
+var squares = [
 Bodies.rectangle((sw/2)+50, (sh/2), 50, 50, {
     render: {
          sprite: {
@@ -41,7 +43,8 @@ Bodies.rectangle((sw/2)+50, (sh/2), 50, 50, {
              yScale: 0.12
          },
          fillStyle: "#fff",
-         strokeStyle: "#000" }});
+         strokeStyle: "#000" }})
+]
 
 var floor0 = 
 Bodies.rectangle((sw/4)-12.5, (sh/3)*2,
@@ -158,12 +161,14 @@ $(document).ready(function() {
     }, 100);
 
    $("#cut").click(function(e) {
+         scissorsSFX.play();
+
          var base64 = 
          document.getElementById("camera-canvas").
          toDataURL();
 
-         Composite.add(engine.world,
-         [Bodies.rectangle(74, 74, 50, 50, {
+         var newSquare =
+         Bodies.rectangle(74, 74, 50, 50, {
          render: {
          sprite: {
              texture: base64,
@@ -172,6 +177,9 @@ $(document).ready(function() {
          },
          fillStyle: "#fff",
          strokeStyle: "#F0EC57",
-         lineWidth: 2}})])
+         lineWidth: 2}});
+         squares.push(newSquare);
+
+         Composite.add(engine.world, [newSquare]);
      });
 });
