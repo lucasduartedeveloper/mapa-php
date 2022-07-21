@@ -161,14 +161,13 @@ $(document).ready(function() {
             vw, vh);
         }
 
-       /*
+       
        if (squares.length > 0) {
-           Render.lookAt(render, squares[0]{
-              min: { x: 0, y: 0 },
-              max: { x: 800, y: 600 }
+           Render.lookAt(render, squares[0], {
+               x: (sw/2)-50,
+               y: (sh/2)-50
            });
         }
-        */
 
         var deadSquares = [];
         for(var k in squares) {
