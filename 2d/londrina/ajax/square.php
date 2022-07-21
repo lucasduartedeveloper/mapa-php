@@ -27,7 +27,7 @@ try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
-    echo $squareId;
+    echo $sql;
   }
   else {
     $sql = "SELECT * FROM square ORDER BY id;";
