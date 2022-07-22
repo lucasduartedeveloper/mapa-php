@@ -56,8 +56,7 @@ function matterJs() {
     // add all of the bodies to the world
     //Composite.add(engine.world,
     //[floor0, floor1, left, right, ceiling]);
-    Composite.add(engine.world,
-    [planets]);
+    Composite.add(engine.world, planets);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
