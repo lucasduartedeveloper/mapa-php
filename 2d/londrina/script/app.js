@@ -253,7 +253,7 @@ $(document).ready(function() {
             bodyB: newSquare,
             pointB: { x: 0, y: 0 },
             stiffness: 0.3,
-            length: 75*k,
+            length: 75*(squares.length),
             render: {
                 strokeStyle: '#fff',
                 lineWidth: 1,
