@@ -94,8 +94,6 @@ $("#key").click(function() {
 
 $(document).ready(function() {
     matterJs();
-    getSquares();
-    startCamera("environment");
 
     setInterval(function() {
         if (motion) {
