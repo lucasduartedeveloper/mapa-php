@@ -35,7 +35,19 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var squares = [];
+var squares = [
+    Bodies.rectangle(sw/2, 
+    sh/2-75, 50, 67, {
+    render: {
+    sprite: {
+        texture: "img/rocket.png",
+        xScale: 1,
+        yScale: 1
+    },
+    fillStyle: "#fff",
+    strokeStyle: "#F0EC57",
+    lineWidth: 2}});
+];
 
 var planets = [
     Bodies.circle(sw/2, sh/2,
@@ -93,7 +105,6 @@ $("#key").click(function() {
 
 $(document).ready(function() {
     matterJs();
-
     setInterval(function() {
         if (motion) {
             engine.gravity.x = (gyro.accX / 9.8);
