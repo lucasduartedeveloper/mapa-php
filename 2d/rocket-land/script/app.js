@@ -46,7 +46,7 @@ var squares = [
     },
     fillStyle: "#fff",
     strokeStyle: "#F0EC57",
-    lineWidth: 2}});
+    lineWidth: 2}})
 ];
 
 var planets = [
