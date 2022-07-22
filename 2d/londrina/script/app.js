@@ -232,7 +232,8 @@ $(document).ready(function() {
          toDataURL();
 
          var newSquare =
-         Bodies.rectangle(sw/2-75, sh/2-75, 50, 50, {
+         Bodies.rectangle(sw/2, 
+         sh/2-(squares.length*75), 50, 50, {
          render: {
          sprite: {
              texture: cameraKey ?
@@ -273,7 +274,8 @@ function getSquares() {
           log("get", data);
           for (var k in data) {
               var square = 
-              Bodies.rectangle(data[k].x, data[k].y, 50, 50, {
+              Bodies.rectangle(data[k].x, 
+              data[k].y-(k*75), 50, 50, {
               render: {
               sprite: {
                   texture: data[k].base64,
@@ -344,7 +346,8 @@ $("#file-upload").on("change", function(e) {
 });
 $(document).on("imageResized", function(e) {
     var newSquare =
-    Bodies.rectangle(sw/2-75, sh/2-75, 50, 50, {
+    Bodies.rectangle(sw/2, 
+    sh/2-(squares.length*75), 50, 50, {
     render: {
     sprite: {
         texture: e.url,
