@@ -201,14 +201,16 @@ $(document).ready(function() {
                  deadSquares.push(squares[k]);
             }
             if (squares[k].connected &&
-                 distanceToPlanet(squares[k]) > 100) {
+                 distanceToPlanet(squares[k]) >
+                 (squares[k].gravity.length + 25)) {
                  stringBreak.play();
                  squares[k].connected = false;
                  Composite.remove(engine.world,
                  [squares[k].gravity]);
             }
             else if (!squares[k].connected && 
-                 distanceToPlanet(squares[k]) <= 100) {
+                 distanceToPlanet(squares[k]) <=
+                 (squares[k].gravity.length + 25)) {
                  squares[k].connected = true;
                  Composite.add(engine.world,
                  [squares[k].gravity]);
@@ -251,7 +253,7 @@ $(document).ready(function() {
             bodyB: newSquare,
             pointB: { x: 0, y: 0 },
             stiffness: 0.3,
-            length: 75,
+            length: 75*k,
             render: {
                 strokeStyle: '#fff',
                 lineWidth: 1,
@@ -291,7 +293,7 @@ function getSquares() {
                 bodyB: square,
                 pointB: { x: 0, y: 0 },
                 stiffness: 0.3,
-                length: 75,
+                length: 75*k,
                 render: {
                     strokeStyle: '#fff',
                     lineWidth: 1,
