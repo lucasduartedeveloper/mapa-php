@@ -58,16 +58,6 @@ echo "\n";
 </head>
 <body>
 
-<!--
-<iframe style="display:none" id="iframe" src="">
-</iframe>
--->
-
-<video style="display:none" id="videoStream" width="128" height="128" autoplay></video>
-
-<video style="display:none" id="video" width="128" height="128" autoplay></video>
-<canvas width="128" height="128" id="camera-canvas"></canvas>
-
 <span id="controls">
 <i id="power" class="fa-solid fa-power-off"></i>
 <i id="upload" class="fa-solid fa-upload"></i>
@@ -75,14 +65,11 @@ echo "\n";
 <i id="key" class="fa-solid fa-key"></i>
 </span>
 
-<input style="display:none" type="file" id="file-upload" name="UploadFiles">
-
 <canvas id="matter-js"></canvas>
-<span id="hab">0 squares</span>
 
 <p id="version-info">
      <span>
-     LONDRINA 2D v0
+     ROCKET LAND 2D
      </span>
      <br>
      <span id="server-info">
