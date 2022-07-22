@@ -364,7 +364,7 @@ $(document).on("imageResized", function(e) {
                 bodyB: newSquare,
                 pointB: { x: 0, y: 0 },
                 stiffness: 0.3,
-                length: 75,
+                length: 75*squares.length,
                 render: {
                     strokeStyle: '#fff',
                     lineWidth: 1,
