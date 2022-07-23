@@ -66,7 +66,9 @@ for (var k in convexPolygons) {
         });
     }
     squares.push(
-    Bodies.fromVertices(sw/2, sh/2-100, 
+    Bodies.fromVertices(
+    polygon[0].x, 
+    polygon[0].y, 
     polygon, {
     isStatic: false,
     render: {
