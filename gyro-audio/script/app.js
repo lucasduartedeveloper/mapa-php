@@ -3,6 +3,10 @@ var audio = new Audio(
 
 $(document).ready(function() {
     audio.play();
-    $("#volume").text("VOLUME: "+
-    gyro.accY/9.8);
+    
+    setInterval(function() {
+       audio.volume(gyro.accY/9.8);
+       $("#volume").text("VOLUME: "+
+       gyro.accY/9.8);
+    }, 100);
 });
