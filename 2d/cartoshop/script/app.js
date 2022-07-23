@@ -90,7 +90,7 @@ function matterJs() {
     //Composite.add(engine.world,
     //[floor0, floor1, left, right, ceiling]);
     Composite.add(engine.world,
-    [rearWheel, frontWheel, planet]);
+    [squares, rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
