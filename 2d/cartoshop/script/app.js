@@ -48,7 +48,9 @@ Bodies.fromVertices(sw/2, sh/2-100,
     { x: sw/2+25, y: sh/2+30}, 
     { x: sw/2+80, y: sh/2+30}, 
     { x: sw/2+80, y: sh/2+50}, 
-    { x: sw/2+100, y: sh/2+50}], {
+    { x: sw/2+100, y: sh/2+50}], 
+     false, 1,
+    {
     isStatic: false,
     render: {
          /*sprite: {
