@@ -58,13 +58,17 @@ echo "\n";
 </head>
 <body>
 
+<!--
+<iframe style="display:none" id="iframe" src="">
+</iframe>
+-->
+
 <span id="controls">
 <i id="power" class="fa-solid fa-power-off"></i>
 </span>
 
 <p id="version-info">
-     <span>
-     
+     <span id="volume">
      </span>
      <br>
      <span id="server-info">
