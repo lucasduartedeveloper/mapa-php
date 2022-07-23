@@ -35,8 +35,21 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var squares = [];
-
+var squares = 
+Bodies.fromVertices(sw/2, sh/2-100,
+    [{ x: sw/2-100, y: sh/2-50}, 
+    { x: sw/2+100, y: sh/2-50}, 
+    { x: sw/2-100, y: sh/2+50}, 
+    { x: sw/2+100, y: sh/2+50}], {
+    isStatic: false,
+    render: {
+         /*sprite: {
+             texture: "img/wheel.png",
+             xScale: 0.476,
+             yScale: 0.476
+         },*/
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
 
 var rearWheel =
 Bodies.circle(sw/2-100, sh/2-25,
