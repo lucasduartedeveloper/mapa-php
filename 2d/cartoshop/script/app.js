@@ -35,18 +35,18 @@ var render = Render.create({
 });
 
 var kitePolygon = [
-    [+100, -50], 
-    [-100, -50], 
-    [-100, 50], 
-    [-80, +50], 
-    [-80, +30], 
-    [-25, +30], 
-    [-25, +50], 
-    [+25, +50],  
-    [+25, +30], 
-    [+80, +30], 
-    [+80, +50], 
-    [+100, +50]
+    [+1, -0.5], 
+    [-1, -0.5], 
+    [-1, 0.5], 
+    [-0.8, +0.5], 
+    [-0.8, +0.3], 
+    [-0.25, +0.3], 
+    [-0.25, +0.5], 
+    [+0.25, +0.5],  
+    [+0.25, +0.3], 
+    [+0.8, +0.3], 
+    [+0.8, +0.5], 
+    [+1, +0.5]
 ];
 
 function polygonCenter(p) {
@@ -75,8 +75,8 @@ for (var k in convexPolygons) {
     var polygon = [];
     for (var n in convexPolygons[k]) {
         polygon.push({
-            x: convexPolygons[k][n][0],
-            y: convexPolygons[k][n][1]
+            x: (sw/2) + convexPolygons[k][n][0] * 100,
+            y: (sh/2) + convexPolygons[k][n][1] * 100
         });
     }
     var center = polygonCenter(polygon);
