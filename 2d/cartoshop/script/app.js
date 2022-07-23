@@ -34,23 +34,33 @@ var render = Render.create({
     }
 });
 
+var kitePolygon = [
+    [sw/2-100, sh/2-50], 
+    [sw/2+100, sh/2-50], 
+    [sw/2-100, sh/2+50], 
+    [sw/2-80, sh/2+50], 
+    [sw/2-80, sh/2+30], 
+    [sw/2-25, sh/2+30], 
+    [sw/2-25, sh/2+50], 
+    [sw/2+25, sh/2+50],  
+    [sw/2+25, sh/2+30], 
+    [sw/2+80, sh/2+30], 
+    [sw/2+80, sh/2+50], 
+    [sw/2+100, sh/2+50]
+];
+
+// Make sure the polygon has counter-clockwise winding. Skip this step if you know it's already counter-clockwise.
+decomp.makeCCW(concavePolygon);
+
+// Decompose using the slow (but optimal) algorithm
+var convexPolygons = decomp.decomp(concavePolygon);
+
 // create two boxes and a ground
-var squares = 
-Bodies.fromVertices(sw/2, sh/2-100,
-    [{ x: sw/2-100, y: sh/2-50}, 
-    { x: sw/2+100, y: sh/2-50}, 
-    { x: sw/2-100, y: sh/2+50}, 
-    { x: sw/2-80, y: sh/2+50}, 
-    { x: sw/2-80, y: sh/2+30}, 
-    { x: sw/2-25, y: sh/2+30}, 
-    { x: sw/2-25, y: sh/2+50}, 
-    { x: sw/2+25, y: sh/2+50},  
-    { x: sw/2+25, y: sh/2+30}, 
-    { x: sw/2+80, y: sh/2+30}, 
-    { x: sw/2+80, y: sh/2+50}, 
-    { x: sw/2+100, y: sh/2+50}], 
-     false, 1,
-    {
+var squares = [];
+for (var k in convexPolygons) {
+    squares.push(
+    Bodies.fromVertices(sw/2, sh/2-100, 
+    convexPolygons[k], {
     isStatic: false,
     render: {
          /*sprite: {
@@ -59,7 +69,8 @@ Bodies.fromVertices(sw/2, sh/2-100,
              yScale: 0.476
          },*/
          fillStyle: "#fff",
-         strokeStyle: "#000" }});
+         strokeStyle: "#000" }}));
+}
 
 var rearWheel =
 Bodies.circle(sw/2-100, sh/2-25,
@@ -112,10 +123,9 @@ Bodies.rectangle(sw/2, (sh/4)*3,
 
 function matterJs() {
     // add all of the bodies to the world
-    //Composite.add(engine.world,
-    //[floor0, floor1, left, right, ceiling]);
+    Composite.add(engine.world, squares);
     Composite.add(engine.world,
-    [squares, rearWheel, frontWheel, planet]);
+    [rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 

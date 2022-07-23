@@ -8,6 +8,7 @@ $style = [
     0 => "index.css"
 ];
 $script = [
+    0 => "thirdpart/poly-decomp.js",
     0 => "thirdpart/matter.js",
     1 => "debug.js",
     2 => "gyro.js",
