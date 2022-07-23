@@ -89,39 +89,15 @@ var cage = [
 Matter.Constraint.create({
      bodyA: rearWheel,
      pointA: { x: 0, y: 0 },
-     bodyB: newSquare,
+     bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.3,
-     length: 75*(squares.length),
+     /*length: 75*(squares.length),*/
      render: {
           strokeStyle: '#fff',
           lineWidth: 1,
           type: 'line'
-     }})/*,
-Matter.Constraint.create({
-     bodyA: planet,
-     pointA: { x: 0, y: 0 },
-     bodyB: newSquare,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
-     length: 75*(squares.length),
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 1,
-          type: 'line'
-     }}),
-Matter.Constraint.create({
-     bodyA: planet,
-     pointA: { x: 0, y: 0 },
-     bodyB: newSquare,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
-     length: 75*(squares.length),
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 1,
-          type: 'line'
-     }})*/
+     }})/*,*/
 ];
 
 var planet =
