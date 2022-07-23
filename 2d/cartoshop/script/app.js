@@ -148,9 +148,9 @@ Bodies.rectangle(sw/2, (sh/4)*3,
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, 
-    crankShaft, squares);
+    squares);
     Composite.add(engine.world,
-    [rearWheel, frontWheel, planet]);
+    [crankShaft, rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
