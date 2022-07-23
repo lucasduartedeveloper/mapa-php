@@ -58,20 +58,9 @@ echo "\n";
 </head>
 <body>
 
-<!--
-<iframe style="display:none" id="iframe" src="">
-</iframe>
--->
-
-<video style="display:none" id="videoStream" width="128" height="128" autoplay></video>
-
-<video style="display:none" id="video" width="128" height="128" autoplay></video>
-<canvas width="128" height="128" id="camera-canvas"></canvas>
-
 <span id="controls">
 <i id="power" class="fa-solid fa-power-off"></i>
 </span>
-
 
 <p id="version-info">
      <span>
