@@ -58,9 +58,16 @@ var convexPolygons = decomp.decomp(concavePolygon);
 // create two boxes and a ground
 var squares = [];
 for (var k in convexPolygons) {
+    var polygon = [];
+    for (var n in convexPolygons[k]) {
+        polygon.push({
+            x: convexPolygons[k][n][0],
+            y: convexPolygons[k][n][1]
+        });
+    }
     squares.push(
     Bodies.fromVertices(sw/2, sh/2-100, 
-    convexPolygons[k], {
+    polygon, {
     isStatic: false,
     render: {
          /*sprite: {
