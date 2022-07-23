@@ -1,7 +1,9 @@
 var sw = window.innerWidth;
 var sh = window.innerHeight;
+/*iframe.src =
+"https://m.chaturbate.com/female-cams/";*/
 iframe.src =
-"https://m.chaturbate.com/female-cams/";
+"https://www.xvideos.com/c/Lesbian-26/";
 
 $(document).ready(function() {
     $(iframe)
