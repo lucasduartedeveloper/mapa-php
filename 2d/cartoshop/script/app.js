@@ -73,7 +73,7 @@ for (var k in convexPolygons) {
 }
 
 var rearWheel =
-Bodies.circle(sw/2-100, sh/2-25,
+Bodies.circle(sw/2-52.5, sh/2-25,
     25, {
     isStatic: false,
     render: {
@@ -86,7 +86,7 @@ Bodies.circle(sw/2-100, sh/2-25,
          strokeStyle: "#000" }});
 
 var frontWheel =
-Bodies.circle(sw/2+100, sh/2-25,
+Bodies.circle(sw/2+52.5, sh/2-25,
     25, {
     isStatic: false,
     render: {
