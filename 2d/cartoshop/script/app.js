@@ -122,7 +122,7 @@ Bodies.circle(sw/2+52.5, sh/2-25,
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
-var cage = [
+var crankShaft = 
 Matter.Constraint.create({
      bodyA: rearWheel,
      pointA: { x: 0, y: 0 },
@@ -135,7 +135,7 @@ Matter.Constraint.create({
           lineWidth: 1,
           type: 'line'
      }})/*,*/
-];
+;
 
 var planet =
 Bodies.rectangle(sw/2, (sh/4)*3,
@@ -147,7 +147,8 @@ Bodies.rectangle(sw/2, (sh/4)*3,
 
 function matterJs() {
     // add all of the bodies to the world
-    Composite.add(engine.world, squares);
+    Composite.add(engine.world, 
+    crankShaft, squares);
     Composite.add(engine.world,
     [rearWheel, frontWheel, planet]);
 
