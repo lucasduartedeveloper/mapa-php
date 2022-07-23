@@ -67,7 +67,7 @@ function polygonCenter(p) {
 //decomp.makeCCW(kitePolygon);
 
 // Decompose using the slow (but optimal) algorithm
-var convexPolygons = decomp.decomp(kitePolygon);
+var convexPolygons = decomp.quickDecomp(kitePolygon);
 
 // create two boxes and a ground
 var squares = [];
