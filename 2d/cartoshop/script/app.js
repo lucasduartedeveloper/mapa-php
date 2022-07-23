@@ -57,8 +57,8 @@ function polygonCenter(p) {
     for (var k in p) {
         minX = p[k].x < minX ? p[k].x : minX;
         minY = p[k].y < minY ? p[k].y : minY;
-        maxX = p[k].x < maxX ? p[k].x : maxX;
-        maxY = p[k].y < maxY ? p[k].y : maxY;
+        maxX = p[k].x > maxX ? p[k].x : maxX;
+        maxY = p[k].y > maxY ? p[k].y : maxY;
     }
     return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
 }
