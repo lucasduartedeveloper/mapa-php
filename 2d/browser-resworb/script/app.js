@@ -1,7 +1,11 @@
 var sw = window.innerWidth;
 var sh = window.innerHeight;
+iframe.src =
+"https://m.chaturbate.com/female-cams/";
 
 $(document).ready(function() {
+    $(iframe)
+    .css({ "width" : sw+"px", "heigth" : sh+"px" });
     setInterval(function() {
         $(iframe)
         .css("transform",
