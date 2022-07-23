@@ -9,11 +9,11 @@ $style = [
 ];
 $script = [
     0 => "thirdpart/poly-decomp.js",
-    0 => "thirdpart/matter.js",
-    1 => "debug.js",
-    2 => "gyro.js",
-    3 => "image-upload.js",
-    4 => "app.js"
+    1 => "thirdpart/matter.js",
+    2 => "debug.js",
+    3 => "gyro.js",
+    4 => "image-upload.js",
+    5 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
