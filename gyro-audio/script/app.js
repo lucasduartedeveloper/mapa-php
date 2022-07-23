@@ -5,7 +5,7 @@ $(document).ready(function() {
     audio.play();
     
     setInterval(function() {
-       audio.volume(gyro.accY/9.8);
+       audio.volume = gyro.accY/9.8;
        $("#volume").text("VOLUME: "+
        gyro.accY/9.8);
     }, 100);
