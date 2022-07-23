@@ -40,6 +40,14 @@ Bodies.fromVertices(sw/2, sh/2-100,
     [{ x: sw/2-100, y: sh/2-50}, 
     { x: sw/2+100, y: sh/2-50}, 
     { x: sw/2-100, y: sh/2+50}, 
+    { x: sw/2-80, y: sh/2+50}, 
+    { x: sw/2-80, y: sh/2+30}, 
+    { x: sw/2-25, y: sh/2+30}, 
+    { x: sw/2-25, y: sh/2+50}, 
+    { x: sw/2+25, y: sh/2+50},  
+    { x: sw/2+25, y: sh/2+30}, 
+    { x: sw/2+80, y: sh/2+30}, 
+    { x: sw/2+80, y: sh/2+50}, 
     { x: sw/2+100, y: sh/2+50}], {
     isStatic: false,
     render: {
@@ -76,6 +84,45 @@ Bodies.circle(sw/2+100, sh/2-25,
          },
          fillStyle: "#fff",
          strokeStyle: "#000" }});
+
+var cage = [
+Matter.Constraint.create({
+     bodyA: rearWheel,
+     pointA: { x: 0, y: 0 },
+     bodyB: newSquare,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     length: 75*(squares.length),
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 1,
+          type: 'line'
+     }})/*,
+Matter.Constraint.create({
+     bodyA: planet,
+     pointA: { x: 0, y: 0 },
+     bodyB: newSquare,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     length: 75*(squares.length),
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 1,
+          type: 'line'
+     }}),
+Matter.Constraint.create({
+     bodyA: planet,
+     pointA: { x: 0, y: 0 },
+     bodyB: newSquare,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     length: 75*(squares.length),
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 1,
+          type: 'line'
+     }})*/
+];
 
 var planet =
 Bodies.rectangle(sw/2, (sh/4)*3,
