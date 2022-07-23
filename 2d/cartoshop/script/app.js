@@ -41,7 +41,7 @@ var squares = [];
 var rearWheel =
 Bodies.circle(sw/2-100, sh/2-25,
     25, {
-    isStatic: true,
+    isStatic: false,
     render: {
          fillStyle: "#fff",
          strokeStyle: "#000" }});
@@ -49,7 +49,7 @@ Bodies.circle(sw/2-100, sh/2-25,
 var frontWheel =
 Bodies.circle(sw/2+100, sh/2-25,
     25, {
-    isStatic: true,
+    isStatic: false,
     render: {
          fillStyle: "#fff",
          strokeStyle: "#000" }});
