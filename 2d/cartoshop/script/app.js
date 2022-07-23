@@ -132,8 +132,8 @@ $(document).ready(function() {
 
     setInterval(function() {
         if (motion) {
-            engine.gravity.x = (gyro.accX / 9.8);
-            engine.gravity.y = (gyro.accY / 9.8) *-1;
+            engine.gravity.x = (gyro.accX / 9.8)*-1;
+            engine.gravity.y = (gyro.accY / 9.8);
         }
         else {
             engine.gravity.x = 0;
