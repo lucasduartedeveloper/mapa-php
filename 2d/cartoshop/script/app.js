@@ -50,10 +50,10 @@ var kitePolygon = [
 ];
 
 // Make sure the polygon has counter-clockwise winding. Skip this step if you know it's already counter-clockwise.
-decomp.makeCCW(concavePolygon);
+decomp.makeCCW(kitePolygon);
 
 // Decompose using the slow (but optimal) algorithm
-var convexPolygons = decomp.decomp(concavePolygon);
+var convexPolygons = decomp.decomp(kitePolygon);
 
 // create two boxes and a ground
 var squares = [];
