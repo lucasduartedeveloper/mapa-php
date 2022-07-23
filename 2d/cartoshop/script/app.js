@@ -50,7 +50,7 @@ var kitePolygon = [
 ];
 
 // Make sure the polygon has counter-clockwise winding. Skip this step if you know it's already counter-clockwise.
-decomp.makeCCW(kitePolygon);
+//decomp.makeCCW(kitePolygon);
 
 // Decompose using the slow (but optimal) algorithm
 var convexPolygons = decomp.decomp(kitePolygon);
