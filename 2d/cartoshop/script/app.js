@@ -50,10 +50,10 @@ var kitePolygon = [
 ];
 
 function polygonCenter(p) {
-    var minX = p[k].x;
-    var minY = p[k].y;
-    var maxX = p[k].x;
-    var maxY = p[k].y;
+    var minX = p[0].x;
+    var minY = p[0].y;
+    var maxX = p[0].x;
+    var maxY = p[0].y;
     for (var k in p) {
         minX = p[k].x < minX ? p[k].x : minX;
         minY = p[k].y < minY ? p[k].y : minY;
