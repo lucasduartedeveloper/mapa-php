@@ -49,6 +49,20 @@ var kitePolygon = [
     [sw/2+100, sh/2+50]
 ];
 
+function polygonCenter(p) {
+    var minX = p[k].x;
+    var minY = p[k].y;
+    var maxX = p[k].x;
+    var maxY = p[k].y;
+    for (var k in p) {
+        minX = p[k].x < minX ? p[k].x : minX;
+        minY = p[k].y < minY ? p[k].y : minY;
+        maxX = p[k].x < maxX ? p[k].x : maxX;
+        maxY = p[k].y < maxY ? p[k].y : maxY;
+    }
+    return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
+}
+
 // Make sure the polygon has counter-clockwise winding. Skip this step if you know it's already counter-clockwise.
 //decomp.makeCCW(kitePolygon);
 
@@ -65,10 +79,11 @@ for (var k in convexPolygons) {
             y: convexPolygons[k][n][1]
         });
     }
+    var center = polygonCenter(polygon);
     squares.push(
     Bodies.fromVertices(
-    polygon[0].x, 
-    polygon[0].y, 
+    center.x, 
+    center.y, 
     polygon, {
     isStatic: false,
     render: {
