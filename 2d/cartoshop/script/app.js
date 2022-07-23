@@ -55,7 +55,7 @@ Bodies.circle(sw/2+100, sh/2-25,
          strokeStyle: "#000" }});
 
 var planet =
-Bodies.rectangle(sw/2, sh/2,
+Bodies.rectangle(sw/2, (sh/4)*3,
     sw, sh/2, {
     isStatic: true,
     render: {
