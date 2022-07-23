@@ -128,7 +128,6 @@ function stopCamera() {
 
 $(document).ready(function() {
     matterJs();
-    getSquares();
     startCamera("environment");
 
     setInterval(function() {
