@@ -43,6 +43,11 @@ Bodies.circle(sw/2-100, sh/2-25,
     25, {
     isStatic: false,
     render: {
+         sprite: {
+             texture: "img/wheel.png",
+             xScale: 0.476,
+             yScale: 0.476
+         },
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
@@ -51,6 +56,11 @@ Bodies.circle(sw/2+100, sh/2-25,
     25, {
     isStatic: false,
     render: {
+         sprite: {
+             texture: "img/wheel.png",
+             xScale: 0.476,
+             yScale: 0.476
+         },
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
