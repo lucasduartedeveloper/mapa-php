@@ -37,18 +37,6 @@ var render = Render.create({
     }
 });
 
-var arrayOfColorFunctions = 
-"0123456789abcdef".split('');
-function randomColor() {
-    var randomColorString = "#";
-    for (var x = 0; x < 6; x++) {
-        var index = Math.floor(Math.random() * 16);
-        var value = arrayOfColorFunctions[index];
-        randomColorString += value;
-    }
-    return randomColorString;
-}
-
 var rawPolygon = [
     [-0.5, -0.5], 
     [-1, -0], 
@@ -247,8 +235,8 @@ for (var k in rawPolygon) {
     });
 }
 var sign = 
-Matter.Bodies.fromVertices({
-    (sw/2), (sh/2)-300, //
+Matter.Bodies.fromVertices(
+    (sw/2), (sh/2)-300,
     signPolygon, {
     isStatic: false,
     mass: 20,
@@ -484,6 +472,7 @@ Matter.Events.on(engine, "beforeUpdate", function() {
     { x: (sw/2) - 125, y: (sh/2) - 87.5 });
 });
 
+// ---
 function polygonCenter(p) {
     var minX = p[0].x;
     var minY = p[0].y;
@@ -496,4 +485,16 @@ function polygonCenter(p) {
         maxY = p[k].y > maxY ? p[k].y : maxY;
     }
     return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
+}
+
+var arrayOfColorFunctions = 
+"0123456789abcdef".split('');
+function randomColor() {
+    var randomColorString = "#";
+    for (var x = 0; x < 6; x++) {
+        var index = Math.floor(Math.random() * 16);
+        var value = arrayOfColorFunctions[index];
+        randomColorString += value;
+    }
+    return randomColorString;
 }
