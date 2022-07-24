@@ -395,10 +395,24 @@ $("#power").on("touchend", function() {
 $("#scissors").click(function() {
     var canvas = document
     .getElementById("camera-canvas");
-    rearWheel.render.texture = 
+    var context = canvas.getContext("2D");
+
+    context
+    .globalCompositeOperation='destination-in';
+    context.beginPath();
+    context.arc(128/2,128/2,128/2,0,Math.PI*2);
+    context.closePath();
+    context.fill();
+ 
+    rearWheel.render.sprite.texture =
     canvas.toDataURL();
-    frontWheel.render.texture = 
+    rearWheel.render.sprite.xScale = 0.78;
+    rearWheel.render.sprite.yScale = 0.78;
+
+    frontWheel.render.sprite.texture =
     canvas.toDataURL();
+    frontWheel.render.sprite.xScale = 0.78;
+    frontWheel.render.sprite.yScale = 0.78;
 });
 
 var lockCamera = false;
