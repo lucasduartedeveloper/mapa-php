@@ -91,13 +91,12 @@ for (var k in kitePolygon) {
 var center = polygonCenter(polygon);
 var bodywork = 
 Bodies.fromVertices(
-    (sw/2), (sh/2)-65, 
+    (sw/2), (sh/2)-65, //
     polygon, {
     isStatic: false,
     mass: 20,
     render: {
         fillStyle: "rgba(255,255,255,0)",
-        /*randomColor(),*/
         strokeStyle: "#fff",
         lineWidth: 2,
     }
@@ -105,7 +104,7 @@ Bodies.fromVertices(
 
 var painting = 
 Bodies.rectangle(
-    (sw/2), (sh/2)-65, 
+    (sw/2), (sh/2)-65, //
     250, 100, {
     isSensor: true,
     isStatic: false,
@@ -210,6 +209,24 @@ Matter.Constraint.create({
      }
 });
 
+// Loop
+var loopPolygon = [
+    [-0.5, -0.5], 
+    [-1, -0], 
+    [-1, +0.4], 
+    [-0.98, +0.4], 
+    [-0.98, +0.1], 
+    [-0.55, +0.1], 
+    [-0.55, +0.4], 
+    [+0.38, +0.4],  
+    [+0.38, +0.1], 
+    [+0.81, +0.1], 
+    [+0.81, +0.4], 
+    [+1, +0.4], 
+    [+1, -0],
+    [+0.2, -0.5]
+];
+
 var rearWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
@@ -252,6 +269,8 @@ Bodies.rectangle(sw/2, (sh/4)*3,
        strokeStyle: "#000" 
     }
 });
+
+
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
@@ -349,7 +368,7 @@ $(document).ready(function() {
         }
         else {
             engine.gravity.x = 0;
-            engine.gravity.y = -1;
+            engine.gravity.y = 1;
         }
 
         var canvas = 
