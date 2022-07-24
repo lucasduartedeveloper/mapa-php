@@ -376,13 +376,13 @@ $(document).ready(function() {
 
 
 var touching = false;
-/*
-$(document).on("touchstart", function() {
+Events.on(mouseConstraint, "mousedown", function() {
     touching = true;
 });
-$(document).on("touchend", function() {
+Events.on(mouseConstraint, "mouseup", function() {
     touching = false;
-});*/
+});
+
 var accelerating = false;
 $("#power").on("touchstart", function() {
     accelerating = true;
