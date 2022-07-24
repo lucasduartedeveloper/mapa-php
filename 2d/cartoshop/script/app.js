@@ -64,7 +64,7 @@ var kitePolygon = [
     [+0.81, +0.35], 
     [+1, +0.35], 
     [+1, -0],
-    [+0.2, -0.35]
+    [+0.2, -0.5]
 ];
 
 function polygonCenter(p) {
