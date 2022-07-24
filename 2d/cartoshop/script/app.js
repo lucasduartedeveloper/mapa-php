@@ -236,7 +236,7 @@ Bodies.rectangle(sw/2, (sh/4)*3,
     isStatic: true,
     render: {
        sprite: {
-            texture: "img/map.jpg",
+            texture: "img/map2.jpg",
             xScale: 1.22,
             yScale: 1.22
         },
