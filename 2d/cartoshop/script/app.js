@@ -94,6 +94,7 @@ Bodies.fromVertices(
     (sw/2), (sh/2)-65, 
     polygon, {
     isStatic: false,
+    mass: 50,
     render: {
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
