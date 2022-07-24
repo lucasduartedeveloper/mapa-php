@@ -1,5 +1,11 @@
 var music = new Audio("audio/sou-vitorioso.mp3");
 
+var buttons = {
+    power: {  value: false, timesUsed: 0 },
+    borders: {  value: false, timesUsed: 0 },
+    cameraSwitch: {  value: false, timesUsed: 0 }
+};
+
 var sw = window.innerWidth;
 var sh = window.innerHeight;
 var ar = sh/sw;
@@ -99,8 +105,7 @@ Bodies.fromVertices(
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
         strokeStyle: "#fff",
-        //lineWidth: 2,
-        lineWidth: 0,
+        lineWidth: borders ? 2 : 0,
     }
 });
 
@@ -130,8 +135,7 @@ Matter.Constraint.create({
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
-        //lineWidth: 2,
-        lineWidth: 0,
+        lineWidth: borders ? 2 : 0,
         type: 'line'
     }
 });
@@ -145,8 +149,7 @@ Matter.Constraint.create({
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
-        //lineWidth: 2,
-        lineWidth: 0,
+        lineWidth: borders ? 2 : 0,
         type: 'line'
     }
 });
@@ -160,8 +163,7 @@ Matter.Constraint.create({
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
-        //lineWidth: 2,
-        lineWidth: 0,
+        lineWidth: borders ? 2 : 0,
         type: 'line'
     }
 });
@@ -178,8 +180,7 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
             yScale: 0.476
         },
         fillStyle: "#fff",
-        //lineWidth: 2,
-        lineWidth: 0,
+        lineWidth: borders ? 2 : 0,
         strokeStyle: "#000" 
     }
 });
@@ -209,8 +210,7 @@ Matter.Constraint.create({
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
-          //lineWidth: 2,
-          lineWidth: 0,
+          lineWidth: borders ? 2 : 0,
           type: 'line'
      }
 });
@@ -224,8 +224,7 @@ Matter.Constraint.create({
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
-          //lineWidth: 2,
-          lineWidth: 0,
+          lineWidth: borders ? 2 : 0,
           type: 'line'
      }
 });
@@ -239,8 +238,7 @@ Matter.Constraint.create({
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
-          //lineWidth: 2,
-          lineWidth: 0,
+          lineWidth: borders ? 2 : 0,
           type: 'line'
      }
 });
@@ -373,6 +371,14 @@ $(document).ready(function() {
             vh, vw);
         }
     }, 100);
+});
+
+var borders = false;
+$("#borders").on("touchstart", function() {
+    borders = true;
+});
+$("#borders").on("touchend", function() {
+    borders = false;
 });
 
 var accelerating = false;

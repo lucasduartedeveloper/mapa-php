@@ -71,8 +71,7 @@ echo "\n";
 
 <span id="controls">
 <i id="power" class="fa-solid fa-power-off"></i>
-<i id="upload" class="fa-solid fa-upload"></i>
-<i id="cut" class="fa-solid fa-scissors"></i>
+<i id="borders" class="fa-solid fa-border-all"></i>
 <i id="key" class="fa-solid fa-key"></i>
 </span>
 
