@@ -392,6 +392,15 @@ $("#power").on("touchend", function() {
     accelerating = false;
 });
 
+$("#scissors").click(function() {
+    var canvas = document
+    .getElementById("camera-canvas");
+    rearWheel.render.texture = 
+    canvas.toDataURL();
+    frontWheel.render.texture = 
+    canvas.toDataURL();
+});
+
 var lockCamera = false;
 Matter.Events.on(mouseConstraint, "mousedown", function() {
     lockCamera = true;
