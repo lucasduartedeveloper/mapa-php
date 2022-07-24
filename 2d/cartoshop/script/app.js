@@ -234,7 +234,7 @@ for (var k in rawPolygon) {
 }
 var sign = 
 Matter.Bodies.fromVertices(
-    (sw/2), (sh/2)-300,
+    ((sh/2)*2.55)-50, (sh/2)-100,
     signPolygon, {
     isStatic: false,
     mass: 20,
