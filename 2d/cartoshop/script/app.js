@@ -223,7 +223,7 @@ function matterJs() {
      rearWheel,
      rearWheelShockAbsorber,
      frontWheel,
-     frontWheelShockAbsorber
+     frontWheelShockAbsorber,
      planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
