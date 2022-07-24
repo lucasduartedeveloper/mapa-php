@@ -97,6 +97,20 @@ for (var k in convexPolygons) {
          strokeStyle: "#000" }}));
 }
 
+var texture = 
+Bodies.rectangle(sw/2, (sh/4)*3-100,
+    250, 100, {
+    isStatic: false,
+    isSensor: true,
+    render: {
+         sprite: {
+             texture: "img/newbeetle.png",
+             xScale: 0.347,
+             yScale: 0.366
+         },
+         fillStyle: "#fff",
+         strokeStyle: "#000" }});
+
 var rearWheel =
 Bodies.circle(sw/2-52.5, sh/2-25,
     25, {
@@ -151,7 +165,7 @@ function matterJs() {
     Composite.add(engine.world, 
     squares);
     Composite.add(engine.world,
-    [crankShaft, rearWheel, frontWheel, planet]);
+    [texture, crankShaft, rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
