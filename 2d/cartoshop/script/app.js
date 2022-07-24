@@ -13,12 +13,15 @@ canvas.width = sw;
 canvas.height = sh;
 
 // module aliases
-var Engine = Matter.Engine,
+var Common = Matter.Common,
+    Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
     Bodies = Matter.Bodies,
     Composite = Matter.Composite;
     
+Common.setDecomp(decomp);
+
 // create an engine
 var engine = Engine.create();
     
@@ -77,15 +80,9 @@ function polygonCenter(p) {
     return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
 }
 
-// Make sure the polygon has counter-clockwise winding. Skip this step if you know it's already counter-clockwise.
-//decomp.makeCCW(kitePolygon);
-
-// Decompose using the slow (but optimal) algorithm
-var convexPolygons = decomp.decomp(kitePolygon);
-
 // create two boxes and a ground
 var squares = [];
-for (var k in convexPolygons) {
+for (var k in kitePolygon) {
     var polygon = [];
     for (var n in convexPolygons[k]) {
         polygon.push({
