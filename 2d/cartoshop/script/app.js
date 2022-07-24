@@ -49,7 +49,7 @@ function randomColor() {
     return randomColorString;
 }
 
-var kitePolygon = [
+var rawPolygon = [
     [-0.5, -0.5], 
     [-1, -0], 
     [-1, +0.4], 
@@ -81,18 +81,18 @@ function polygonCenter(p) {
 }
 
 // create two boxes and a ground
-var polygon = [];
-for (var k in kitePolygon) {
-    polygon.push({
-        x: (sw/2) + kitePolygon[k][0] * 125,
-        y: (sh/2) + kitePolygon[k][1] * 100
+var bodyworkPolygon = [];
+for (var k in rawPolygon) {
+    bodyworkPolygon.push({
+        x: (sw/2) + rawPolygon[k][0] * 125,
+        y: (sh/2) + rawPolygon[k][1] * 100
     });
 }
 var center = polygonCenter(polygon);
 var bodywork = 
 Bodies.fromVertices(
     (sw/2), (sh/2)-65, //
-    polygon, {
+    bodyworkPolygon, {
     isStatic: false,
     mass: 20,
     render: {
@@ -209,6 +209,44 @@ Matter.Constraint.create({
      }
 });
 
+/*
+var rawPolygon = [
+    [-1, -1.9], 
+    [-1, -0.9], 
+    [-0.1, +0.], 
+    [-0.98, +0.4], 
+    [-0.98, +0.1], 
+    [-0.55, +0.1], 
+    [-0.55, +0.4], 
+    [+0.38, +0.4],  
+    [+0.38, +0.1], 
+    [+0.81, +0.1], 
+    [+0.81, +0.4], 
+    [+1, +0.4], 
+    [+1, -0],
+    [+0.2, -0.5]
+];
+var signPolygon = [];
+for (var k in rawPolygon) {
+    signPolygon.push({
+        x: (sw/2) + rawPolygon[k][0] * 125,
+        y: (sh/2) + rawPolygon[k][1] * 100
+    });
+}
+var sign = 
+Matter.Bodies.fromVertices({
+    (sw/2), (sh/2)-300, //
+    signPolygon, {
+    isStatic: false,
+    mass: 20,
+    render: {
+        fillStyle: "rgba(255,255,255,0)",
+        strokeStyle: "#fff",
+        lineWidth: 2,
+    }
+});
+*/
+
 // Loop
 var loopPolygon = [
     [-0.5, -0.5], 
@@ -294,7 +332,7 @@ function matterJs() {
         rearWheelShockAbsorber,
         frontWheel,
         frontWheelShockAbsorber,
-        planet
+        sign, planet
     ]);
 
     render.mouse = mouse;
