@@ -127,13 +127,13 @@ Matter.Constraint.create({
     stiffness: 0.3,
     render: {
         strokeStyle: '#fff',
-        lineWidth: 2,
         type: 'line'
     }
 });
 
 var rearWheel =
-Bodies.circle((sw/2)-(0.98*125)-25, sh/2-25, 25, {
+Bodies.circle(((sw/2)-(0.98*125))-25, 
+    sh/2-25, 25, {
     isStatic: false,
     render: {
         sprite: {
@@ -147,7 +147,8 @@ Bodies.circle((sw/2)-(0.98*125)-25, sh/2-25, 25, {
 });
 
 var frontWheel =
-Bodies.circle((sw/2)+(0.81*125)-25, sh/2-25, 25, {
+Bodies.circle(((sw/2)+(0.81*125))-25, 
+    sh/2-25, 25, {
     isStatic: false,
     render: {
         sprite: {
@@ -169,7 +170,7 @@ Matter.Constraint.create({
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
-          lineWidth: 1,
+          lineWidth: 2,
           type: 'line'
      }
 });
