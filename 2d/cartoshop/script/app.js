@@ -82,9 +82,8 @@ function polygonCenter(p) {
 }
 
 // create two boxes and a ground
-var squares = [];
 var polygon = [];
-for (var n in kitePolygon[k]) {
+for (var n in kitePolygon) {
     polygon.push({
         x: (sw/2) + kitePolygon[k][0] * 100,
         y: (sh/2) + kitePolygon[k][1] * 100
@@ -105,16 +104,6 @@ render: {
     },
     fillStyle: randomColor(),
     strokeStyle: "#000" }});
-
-var texture = 
-Bodies.rectangle(sw/2, (sh/4)*3-100,
-    250, 100, {
-    isStatic: false,
-    isSensor: true,
-    render: {
-         
-         fillStyle: "#fff",
-         strokeStyle: "#000" }});
 
 var rearWheel =
 Bodies.circle(sw/2-52.5, sh/2-25,
