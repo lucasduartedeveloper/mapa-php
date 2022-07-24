@@ -371,7 +371,7 @@ $(document).ready(function() {
 var borders = true;
 var wireframes = false;
 $("#borders").click(function() {
-    borders = wireframes ? !borders : false;
+    borders = !wireframes ? borders : !borders;
     wireframes = borders ? !wireframes : false;
     render.options.wireframes = wireframes;
 
