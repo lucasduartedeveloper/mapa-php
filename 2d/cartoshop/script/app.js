@@ -133,7 +133,7 @@ Matter.Constraint.create({
 });
 
 var rearWheel =
-Bodies.circle(sw/2-60.625, sh/2-25, 25, {
+Bodies.circle(sw/2-70.625, sh/2-25, 25, {
     isStatic: false,
     render: {
         sprite: {
@@ -147,7 +147,7 @@ Bodies.circle(sw/2-60.625, sh/2-25, 25, {
 });
 
 var frontWheel =
-Bodies.circle(sw/2+60.625, sh/2-25, 25, {
+Bodies.circle(sw/2+70.625, sh/2-25, 25, {
     isStatic: false,
     render: {
         sprite: {
