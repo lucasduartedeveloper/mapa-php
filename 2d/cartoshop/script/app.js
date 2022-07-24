@@ -91,28 +91,30 @@ for (var k in kitePolygon) {
 }
 var center = polygonCenter(polygon);
 var bodywork = 
-Bodies.fromVertices(
-center.x, 
-center.y, 
-polygon, {
+Bodies.fromVertices(center.x, center.y, 
+    polygon, {
     isStatic: false,
     render: {
         fillStyle: randomColor(),
-        strokeStyle: "#000" }});
+        strokeStyle: "#000" 
+    }
+});
 
 var painting = 
-Bodies.rectangle(center.x, center.y
+Bodies.rectangle(center.x, center.y,
 250, 100, {
     isSensor: true,
     isStatic: true,
     render: {
-    sprite: {
-         texture: "img/newbeetle.png",
-         xScale: 0.347,
-         yScale: 0.366
-    },
-    fillStyle: "#fff",
-    strokeStyle: "#000" }});
+        sprite: {
+            texture: "img/newbeetle.png",
+            xScale: 0.347,
+            yScale: 0.366 
+        },
+        fillStyle: "#fff",
+        strokeStyle: "#000" 
+    }
+});
 
 var paintingConstraint = 
 Matter.Constraint.create({
@@ -132,25 +134,29 @@ var rearWheel =
 Bodies.circle(sw/2-52.5, sh/2-25, 25, {
     isStatic: false,
     render: {
-    sprite: {
-        texture: "img/wheel.png",
-        xScale: 0.476,
-        yScale: 0.476
-    },
-    fillStyle: "#fff",
-    strokeStyle: "#000" }});
+        sprite: {
+            texture: "img/wheel.png",
+            xScale: 0.476,
+            yScale: 0.476
+        },
+        fillStyle: "#fff",
+        strokeStyle: "#000" 
+    }
+});
 
 var frontWheel =
 Bodies.circle(sw/2+52.5, sh/2-25, 25, {
     isStatic: false,
     render: {
-    sprite: {
-        texture: "img/wheel.png",
-        xScale: 0.476,
-        yScale: 0.476
-    },
-    fillStyle: "#fff",
-    strokeStyle: "#000" }});
+        sprite: {
+            texture: "img/wheel.png",
+            xScale: 0.476,
+            yScale: 0.476
+        },
+        fillStyle: "#fff",
+        strokeStyle: "#000" 
+    }
+});
 
 var crankshaft = 
 Matter.Constraint.create({
@@ -163,16 +169,18 @@ Matter.Constraint.create({
           strokeStyle: '#fff',
           lineWidth: 1,
           type: 'line'
-     }})
-;
+     }
+});
 
 var planet =
 Bodies.rectangle(sw/2, (sh/4)*3,
 sw, sh/2, {
-isStatic: true,
-render: {
-     fillStyle: "#fff",
-     strokeStyle: "#000" }});
+    isStatic: true,
+    render: {
+       fillStyle: "#fff",
+       strokeStyle: "#000" 
+    }
+});
 
 function matterJs() {
     // add all of the bodies to the world
