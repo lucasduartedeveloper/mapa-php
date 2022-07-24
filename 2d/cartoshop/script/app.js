@@ -97,7 +97,8 @@ Bodies.fromVertices(center.x, center.y,
     render: {
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
-        strokeStyle: "#000" 
+        strokeStyle: "#fff",
+        lineWidth: 1
     }
 });
 
@@ -114,7 +115,6 @@ Bodies.rectangle(center.x, center.y,
         },
         fillStyle: "#fff",
         strokeStyle: "#000",
-        lineWidth: 1,
     }
 });
 
