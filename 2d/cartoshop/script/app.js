@@ -232,13 +232,13 @@ Matter.Constraint.create({
 
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
-(sh/2)*1.98, sh/2, {
+(sh/2)*2.55, sh/2, {
     isStatic: true,
     render: {
        sprite: {
             texture: "img/map.jpg",
-            xScale: 1.6,
-            yScale: 1.6
+            xScale: 1.22,
+            yScale: 1.22
         },
        fillStyle: "#fff",
        strokeStyle: "#000" 
@@ -321,8 +321,15 @@ function stopCamera() {
 $(document).ready(function() {
     matterJs();
     startCamera("environment");
+    music play();
 
     setInterval(function() {
+        var vol = Math.abs(gyro.accX/9.8);
+        vol = vol > 1 ? 1 :
+        //vol < 0 ? 0 : vol;
+
+        music.volume = vol;
+
         if (motion) {
             engine.gravity.x = (gyro.accX / 9.8)*-1;
             engine.gravity.y = (gyro.accY / 9.8);
