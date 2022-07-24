@@ -96,7 +96,7 @@ Bodies.fromVertices(center.x, center.y,
     isStatic: false,
     render: {
         fillStyle: "rgba(255,255,255,0)",
-        //randomColor(),
+        /*randomColor(),*/
         strokeStyle: "#000" 
     }
 });
