@@ -169,6 +169,7 @@ var rearWheel =
 Bodies.circle(((sw/2)-(0.55*125))-28, 
     sh/2-25, 25, {
     isStatic: false,
+    friction: 0.8,
     render: {
         sprite: {
             texture: "img/wheel.png",
@@ -186,6 +187,7 @@ var frontWheel =
 Bodies.circle(((sw/2)+(0.38*125))+28, 
     sh/2-25, 25, {
     isStatic: false,
+    friction: 0.8,
     render: {
         sprite: {
             texture: "img/wheel.png",
@@ -339,7 +341,7 @@ $(document).ready(function() {
     setInterval(function() {
         if (accelerating) {
            Matter.Body.set(
-           rearWheel, "angularVelocity", 10);
+           rearWheel, "angularVelocity", 1);
         }
 
         var vol = Math.abs(gyro.accX/4.9);
