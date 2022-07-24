@@ -116,7 +116,8 @@ Bodies.rectangle(
             yScale: 0.366 
         },
         fillStyle: "#fff",
-        strokeStyle: "#000",
+        lineWidth: 2,
+        strokeStyle: "#fff",
     }
 });
 
