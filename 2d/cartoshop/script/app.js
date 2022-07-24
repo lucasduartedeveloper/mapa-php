@@ -175,20 +175,6 @@ Matter.Constraint.create({
      }
 });
 
-var crankshaftConstraint = 
-Matter.Constraint.create({
-     bodyA: crankshaft,
-     pointA: { x: 0, y: 0 },
-     bodyB: bodywork,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
-
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
 sw*3, sh/2, {
