@@ -125,7 +125,7 @@ Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: -100, y: 0 },
     bodyB: bodywork,
-    pointB: { x: 0, y: 0 },
+    pointB: { x: -50, y: -25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -138,7 +138,7 @@ Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: 100, y: 0 },
     bodyB: bodywork,
-    pointB: { x: 0, y: 0 },
+    pointB: { x: 50, y: 25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
