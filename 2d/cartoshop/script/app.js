@@ -105,7 +105,7 @@ var painting =
 Bodies.rectangle(center.x, center.y,
 250, 100, {
     isSensor: true,
-    isStatic: true,
+    isStatic: false,
     render: {
         sprite: {
             texture: "img/newbeetle.png",
