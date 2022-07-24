@@ -95,10 +95,10 @@ Bodies.fromVertices(
 center.x, 
 center.y, 
 polygon, {
-sStatic: false,
-render: {
-    fillStyle: randomColor(),
-    strokeStyle: "#000" }});
+    isStatic: false,
+    render: {
+        fillStyle: randomColor(),
+        strokeStyle: "#000" }});
 
 var painting = 
 Bodies.rectangle(center.x, center.y
