@@ -85,7 +85,7 @@ function polygonCenter(p) {
 var polygon = [];
 for (var k in kitePolygon) {
     polygon.push({
-        x: (sw/2) + kitePolygon[k][0] * 100,
+        x: (sw/2) + kitePolygon[k][0] * 125,
         y: (sh/2) + kitePolygon[k][1] * 100
     });
 }
