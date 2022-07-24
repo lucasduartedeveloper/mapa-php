@@ -126,7 +126,7 @@ Matter.Constraint.create({
     pointA: { x: -100, y: 0 },
     bodyB: bodywork,
     pointB: { x: 0, y: 0 },
-    stiffness: 0.3,
+    stiffness: 0,
     render: {
         strokeStyle: '#fff',
         type: 'line'
@@ -139,7 +139,7 @@ Matter.Constraint.create({
     pointA: { x: 100, y: 0 },
     bodyB: bodywork,
     pointB: { x: 0, y: 0 },
-    stiffness: 0.3,
+    stiffness: 0,
     render: {
         strokeStyle: '#fff',
         type: 'line'
@@ -193,10 +193,10 @@ Matter.Constraint.create({
 var rearWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: -(0.55*125)-25, y: 0 },
+     pointA: { x: -(0.55*125)-25, y: 25 },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
+     stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
           lineWidth: 2,
@@ -207,10 +207,10 @@ Matter.Constraint.create({
 var frontWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: (0.38*125)+25, y: 0 },
+     pointA: { x: (0.38*125)+25, y: 25 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
+     stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
           //lineWidth: 2,
