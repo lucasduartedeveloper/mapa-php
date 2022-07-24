@@ -95,7 +95,8 @@ Bodies.fromVertices(center.x, center.y,
     polygon, {
     isStatic: false,
     render: {
-        fillStyle: randomColor(),
+        fillStyle: "rgba(255,255,255,0)",
+        //randomColor(),
         strokeStyle: "#000" 
     }
 });
