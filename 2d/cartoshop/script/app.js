@@ -1,5 +1,4 @@
-var scissorsSFX = new Audio("audio/scissors.wav");
-var stringBreak = new Audio("audio/string-break.wav");
+var music = new Audio("audio/sou-vitorioso.mp3");
 
 var sw = window.innerWidth;
 var sh = window.innerHeight;
