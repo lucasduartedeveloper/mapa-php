@@ -374,15 +374,6 @@ $(document).ready(function() {
     }, 100);
 });
 
-
-var touching = false;
-Events.on(mouseConstraint, "mousedown", function() {
-    touching = true;
-});
-Events.on(mouseConstraint, "mouseup", function() {
-    touching = false;
-});
-
 var accelerating = false;
 $("#power").on("touchstart", function() {
     accelerating = true;
@@ -391,8 +382,16 @@ $("#power").on("touchend", function() {
     accelerating = false;
 });
 
+var lockCamera = false;
+Events.on(mouseConstraint, "mousedown", function() {
+    lockCamera = true;
+});
+Events.on(mouseConstraint, "mouseup", function() {
+    lockCamera = false;
+});
+
 Matter.Events.on(engine, "beforeUpdate", function() {
-    if (touching) return;
+    if (lockCamera) return;
     Render.lookAt(render, bodywork,
     { x: (sw/2) - 125, y: (sh/2) - 87.5 });
 });
