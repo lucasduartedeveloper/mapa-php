@@ -160,7 +160,7 @@ Matter.Constraint.create({
 });
 
 var rearWheel =
-Bodies.circle(((sw/2)-(0.55*125))-25, 
+Bodies.circle(((sw/2)-(0.55*125))-28, 
     sh/2-25, 25, {
     isStatic: false,
     render: {
@@ -175,7 +175,7 @@ Bodies.circle(((sw/2)-(0.55*125))-25,
 });
 
 var frontWheel =
-Bodies.circle(((sw/2)+(0.38*125))+25, 
+Bodies.circle(((sw/2)+(0.38*125))+28, 
     sh/2-25, 25, {
     isStatic: false,
     render: {
@@ -206,7 +206,7 @@ Matter.Constraint.create({
 var rearWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: -(0.55*125)-25, y: 0 },
+     pointA: { x: -(0.55*125)-28, y: 0 },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
@@ -220,7 +220,7 @@ Matter.Constraint.create({
 var frontWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: (0.38*125)+25, y: 0 },
+     pointA: { x: (0.38*125)+28, y: 0 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
