@@ -226,7 +226,7 @@ Matter.Constraint.create({
 var rawPolygon = [
     [-1, -1.9], 
     [-1, -0.9], 
-    [-0.1, +0.], 
+    [-0.1, +0.5], 
     [-0.98, +0.4], 
     [-0.98, +0.1], 
     [-0.55, +0.1], 
@@ -242,7 +242,7 @@ var rawPolygon = [
 var signPolygon = [];
 for (var k in rawPolygon) {
     signPolygon.push({
-        x: (sw/2) + rawPolygon[k][0] * 125,
+        x: (sw/2) + rawPolygon[k][0] * 50,
         y: (sh/2) + rawPolygon[k][1] * 100
     });
 }
