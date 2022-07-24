@@ -189,9 +189,9 @@ Matter.Constraint.create({
      }
 });
 
-var planet =
+var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
-sw, sh/2, {
+sw*3, sh/2, {
     isStatic: true,
     render: {
        fillStyle: "#fff",
@@ -202,7 +202,7 @@ sw, sh/2, {
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [painting, paintingConstraint, bodywork, crankshaft, crankshaftConstraint, rearWheel, frontWheel, planet]);
+    [painting, paintingConstraint, bodywork, crankshaft, rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
