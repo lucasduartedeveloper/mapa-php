@@ -193,7 +193,7 @@ Matter.Constraint.create({
 var rearWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: 0, y: 0 },
+     pointA: { x: ((sw/2)-(0.55*125))-25, y: 0 },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.3,
@@ -207,7 +207,7 @@ Matter.Constraint.create({
 var frontWheelShockAbsorber = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: 0, y: 0 },
+     pointA: { x: ((sw/2)+(0.38*125))+25, y: 0 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.3,
@@ -220,7 +220,7 @@ Matter.Constraint.create({
 
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
-sw*3, sh/2, {
+sw*5, sh/2, {
     isStatic: true,
     render: {
        fillStyle: "#fff",
