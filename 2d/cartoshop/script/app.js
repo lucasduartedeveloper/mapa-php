@@ -175,6 +175,20 @@ Matter.Constraint.create({
      }
 });
 
+var crankshaftConstraint = 
+Matter.Constraint.create({
+     bodyA: crankshaft,
+     pointA: { x: 0, y: 0 },
+     bodyB: bodywork,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
 var planet =
 Bodies.rectangle(sw/2, (sh/4)*3,
 sw, sh/2, {
@@ -188,7 +202,7 @@ sw, sh/2, {
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [painting, paintingConstraint, bodywork, crankshaft, rearWheel, frontWheel, planet]);
+    [painting, paintingConstraint, bodywork, crankshaft, crankshaftConstraint, rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
