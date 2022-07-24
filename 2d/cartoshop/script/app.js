@@ -330,5 +330,5 @@ $(document).ready(function() {
             planet.render.sprite.yScale = 0.78;
             */
         }
-    }, 100);
+    }, 33);
 });
