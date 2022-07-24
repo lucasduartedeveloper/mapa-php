@@ -330,7 +330,7 @@ $(document).ready(function() {
     }, 100);
 });
 
-Matter.Events.on(engine, "beforeupdate", function() {
+Matter.Events.on(engine, "beforeUpdate", function() {
     Render.lookAt(render, bodywork,
     { x: (sw/2) - 125, y: (sh/2) - 87.5 });
 });
