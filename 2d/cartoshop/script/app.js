@@ -35,7 +35,7 @@ var render = Render.create({
 });
 
 var arrayOfColorFunctions = 
-"0123456789abcdef".split();
+"0123456789abcdef".split('');
 function randomColor() {
     var randomColorString = "#";
     for (var x = 0; x < 6; x++) {
