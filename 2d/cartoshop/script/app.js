@@ -113,7 +113,8 @@ Bodies.rectangle(center.x, center.y,
             yScale: 0.366 
         },
         fillStyle: "#fff",
-        strokeStyle: "#000" 
+        strokeStyle: "#000",
+        lineWidth: 1,
     }
 });
 
