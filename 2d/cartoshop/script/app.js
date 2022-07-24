@@ -369,19 +369,22 @@ $(document).ready(function() {
 });
 
 var borders = true;
-$("#borders").on("touchstart", function() {
-    /*
+$("#borders").click(function() {
+    borders = !borders;
     bodywork
+    .render.lineWidth =  borders ? 2 : 0;
     paintingConstraintA
+    .render.lineWidth =  borders ? 2 : 0;
     paintingConstraintB
+    .render.lineWidth =  borders ? 2 : 0;
     paintingConstraintZ
+    .render.lineWidth =  borders ? 2 : 0;
     crankshaft
+    .render.lineWidth =  borders ? 2 : 0;
     rearWheelShockAbsorber
-    frontWheelShockAbsorber*/
-    borders = true;
-});
-$("#borders").on("touchend", function() {
-    borders = false;
+    .render.lineWidth =  borders ? 2 : 0;
+    frontWheelShockAbsorber
+    .render.lineWidth =  borders ? 2 : 0;
 });
 
 var accelerating = false;
