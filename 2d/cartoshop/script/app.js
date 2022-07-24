@@ -61,7 +61,7 @@ for (var k in rawPolygon) {
         y: (sh/2) + rawPolygon[k][1] * 100
     });
 }
-var center = polygonCenter(polygon);
+var center = polygonCenter(bodyworkPolygon);
 var bodywork = 
 Bodies.fromVertices(
     (sw/2), (sh/2)-65, //
