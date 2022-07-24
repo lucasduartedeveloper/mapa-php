@@ -84,10 +84,10 @@ function polygonCenter(p) {
 var squares = [];
 for (var k in kitePolygon) {
     var polygon = [];
-    for (var n in convexPolygons[k]) {
+    for (var n in kitePolygon[k]) {
         polygon.push({
-            x: (sw/2) + convexPolygons[k][n][0] * 100,
-            y: (sh/2) + convexPolygons[k][n][1] * 100
+            x: (sw/2) + kitePolygon[k][n][0] * 100,
+            y: (sh/2) + kitePolygon[k][n][1] * 100
         });
     }
     var center = polygonCenter(polygon);
