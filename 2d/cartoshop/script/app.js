@@ -175,6 +175,34 @@ Matter.Constraint.create({
      }
 });
 
+var rearWheelShockAbsorber = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: 0, y: 0 },
+     bodyB: rearWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var frontWheelShockAbsorber = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: 0, y: 0 },
+     bodyB: frontWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
 sw*3, sh/2, {
@@ -188,7 +216,15 @@ sw*3, sh/2, {
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world,
-    [painting, paintingConstraint, bodywork, crankshaft, rearWheel, frontWheel, planet]);
+    [painting, 
+     paintingConstraint, 
+     bodywork,
+     crankshaft, 
+     rearWheel,
+     rearWheelShockAbsorber,
+     frontWheel,
+     frontWheelShockAbsorber
+     planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
