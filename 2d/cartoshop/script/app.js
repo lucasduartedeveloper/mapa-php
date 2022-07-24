@@ -98,7 +98,7 @@ Bodies.fromVertices(center.x, center.y,
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
         strokeStyle: "#fff",
-        lineWidth: 1
+        lineWidth: 2
     }
 });
 
@@ -127,7 +127,7 @@ Matter.Constraint.create({
     stiffness: 0.3,
     render: {
         strokeStyle: '#fff',
-        lineWidth: 1,
+        lineWidth: 2,
         type: 'line'
     }
 });
