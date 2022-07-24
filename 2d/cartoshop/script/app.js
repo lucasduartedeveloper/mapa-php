@@ -98,7 +98,8 @@ Bodies.fromVertices(
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
         strokeStyle: "#fff",
-        lineWidth: 2
+        //lineWidth: 2,
+        lineWidth: 0,
     }
 });
 
@@ -128,6 +129,8 @@ Matter.Constraint.create({
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
+        //lineWidth: 2,
+        lineWidth: 0,
         type: 'line'
     }
 });
@@ -141,6 +144,8 @@ Matter.Constraint.create({
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
+        //lineWidth: 2,
+        lineWidth: 0,
         type: 'line'
     }
 });
@@ -154,6 +159,8 @@ Matter.Constraint.create({
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
+        //lineWidth: 2,
+        lineWidth: 0,
         type: 'line'
     }
 });
@@ -169,6 +176,8 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
             yScale: 0.476
         },
         fillStyle: "#fff",
+        //lineWidth: 2,
+        lineWidth: 0,
         strokeStyle: "#000" 
     }
 });
@@ -197,7 +206,8 @@ Matter.Constraint.create({
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
-          lineWidth: 2,
+          //lineWidth: 2,
+          lineWidth: 0,
           type: 'line'
      }
 });
@@ -211,7 +221,8 @@ Matter.Constraint.create({
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
-          lineWidth: 2,
+          //lineWidth: 2,
+          lineWidth: 0,
           type: 'line'
      }
 });
@@ -225,7 +236,8 @@ Matter.Constraint.create({
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
-          lineWidth: 2,
+          //lineWidth: 2,
+          lineWidth: 0,
           type: 'line'
      }
 });
