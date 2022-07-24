@@ -232,9 +232,14 @@ Matter.Constraint.create({
 
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
-sw*5, sh/2, {
+(sh/2)*1.98, sh/2, {
     isStatic: true,
     render: {
+       sprite: {
+            texture: "img/map.jpg",
+            xScale: 1.6,
+            yScale: 1.6
+        },
        fillStyle: "#fff",
        strokeStyle: "#000" 
     }
