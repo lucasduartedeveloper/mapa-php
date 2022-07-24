@@ -83,7 +83,7 @@ function polygonCenter(p) {
 
 // create two boxes and a ground
 var polygon = [];
-for (var n in kitePolygon) {
+for (var k in kitePolygon) {
     polygon.push({
         x: (sw/2) + kitePolygon[k][0] * 100,
         y: (sh/2) + kitePolygon[k][1] * 100
