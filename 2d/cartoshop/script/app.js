@@ -117,7 +117,7 @@ Bodies.rectangle(
         },
         fillStyle: "#fff",
         lineWidth: 2,
-        strokeStyle: "#fff",
+        strokeStyle: "#ccc",
     }
 });
 
