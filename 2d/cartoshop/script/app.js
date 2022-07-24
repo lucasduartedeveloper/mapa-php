@@ -246,14 +246,14 @@ Matter.Bodies.fromVertices(
 });
 
 var planet = 
-Bodies.rectangle(sw/2, (sh/4)*3,
-(sh/2)*(0.00205*(sh/ar)), sh/2, {
+Bodies.rectangle(sw/2, (sh/2)+274,
+1400, 548, {
     isStatic: true,
     render: {
        sprite: {
             texture: "img/map2.jpg",
-            xScale: 0.00098*(sh/ar),
-            yScale: 0.00098*(sh/ar)
+            xScale: 2,
+            yScale: 2
         },
        fillStyle: "#fff",
        strokeStyle: "#000" 
