@@ -99,7 +99,7 @@ Bodies.fromVertices(
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
         strokeStyle: "#fff",
-        //lineWidth: 2
+        lineWidth: 2
     }
 });
 
@@ -120,7 +120,7 @@ Bodies.rectangle(
     }
 });
 
-var paintingConstraintB = 
+var paintingConstraintA = 
 Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: -25, y: -25 },
@@ -133,12 +133,25 @@ Matter.Constraint.create({
     }
 });
 
-var paintingConstraintZ = 
+var paintingConstraintB = 
 Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: 25, y: -25 },
     bodyB: bodywork,
     pointB: { x: -25, y: 25 },
+    stiffness: 0,
+    render: {
+        strokeStyle: '#fff',
+        type: 'line'
+    }
+});
+
+var paintingConstraintZ = 
+Matter.Constraint.create({
+    bodyA: painting,
+    pointA: { x: -25, y: 25 },
+    bodyB: bodywork,
+    pointB: { x: 25, y: 25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -185,7 +198,7 @@ Matter.Constraint.create({
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
-          //lineWidth: 2,
+          lineWidth: 2,
           type: 'line'
      }
 });
@@ -213,7 +226,7 @@ Matter.Constraint.create({
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
-          //lineWidth: 2,
+          lineWidth: 2,
           type: 'line'
      }
 });
@@ -232,6 +245,7 @@ function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
         painting, 
+        paintingConstraintA,
         paintingConstraintB, 
         paintingConstraintZ, 
         bodywork,
