@@ -120,12 +120,12 @@ Bodies.rectangle(
     }
 });
 
-var paintingConstraintA = 
+var paintingConstraintB = 
 Matter.Constraint.create({
     bodyA: painting,
-    pointA: { x: -25, y: -25 },
+    pointA: { x: 25, y: -25 },
     bodyB: bodywork,
-    pointB: { x: 25, y: 25 },
+    pointB: { x: -25, y: 25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -133,12 +133,12 @@ Matter.Constraint.create({
     }
 });
 
-var paintingConstraintB = 
+var paintingConstraintZ = 
 Matter.Constraint.create({
     bodyA: painting,
-    pointA: { x: 25, y: 25 },
+    pointA: { x: -25, y: 25 },
     bodyB: bodywork,
-    pointB: { x: -25, y: -25 },
+    pointB: { x: 25, y: -25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -232,8 +232,8 @@ function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
         painting, 
-        paintingConstraintA, 
         paintingConstraintB, 
+        paintingConstraintZ, 
         bodywork,
         crankshaft, 
         rearWheel,
@@ -330,7 +330,16 @@ $(document).ready(function() {
     }, 100);
 });
 
+var touching = false;
+$(document).on("touchstart", function() {
+    touching = true;
+});
+$(document).on("touchend", function() {
+    touching = false;
+});
+
 Matter.Events.on(engine, "beforeUpdate", function() {
+    if (touching) return;
     Render.lookAt(render, bodywork,
     { x: (sw/2) - 125, y: (sh/2) - 87.5 });
 });
