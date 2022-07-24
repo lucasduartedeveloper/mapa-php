@@ -325,9 +325,8 @@ $(document).ready(function() {
 
     setInterval(function() {
         var vol = Math.abs(gyro.accX/9.8);
-        vol = vol > 1 ? 1 :
+        vol = vol > 1 ? 1 : vol;
         //vol < 0 ? 0 : vol;
-
         music.volume = vol;
 
         if (motion) {
