@@ -257,6 +257,15 @@ Bodies.rectangle(sw/2, (sh/4)*3,
     }
 });
 
+var mouse = Matter.Mouse.create(render.canvas);
+var mouseConstraint = 
+Matter.MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+        render: {visible: true}
+    }
+});
+
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
@@ -273,14 +282,6 @@ function matterJs() {
         planet
     ]);
 
-    var mouse = Matter.Mouse.create(render.canvas);
-    var mouseConstraint = 
-    Matter.MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-            render: {visible: true}
-        }
-    });
     render.mouse = mouse;
     Composite.add(engine.world, mouseConstraint);
 
@@ -336,6 +337,11 @@ $(document).ready(function() {
     music.play();
 
     setInterval(function() {
+        if (accelerating) {
+           Matter.Body.set(
+           rearWheel, "angularVelocity", 10);
+        }
+
         var vol = Math.abs(gyro.accX/4.9);
         vol = vol > 1 ? 1 : vol;
         //vol < 0 ? 0 : vol;
@@ -366,12 +372,21 @@ $(document).ready(function() {
     }, 100);
 });
 
+
 var touching = false;
+/*
 $(document).on("touchstart", function() {
     touching = true;
 });
 $(document).on("touchend", function() {
     touching = false;
+});*/
+var accelerating = false;
+$("#power").on("touchstart", function() {
+    accelerating = true;
+});
+$("#power").on("touchend", function() {
+    accelerating = false;
 });
 
 Matter.Events.on(engine, "beforeUpdate", function() {
