@@ -371,15 +371,18 @@ $(document).ready(function() {
 var borders = true;
 var wireframes = false;
 $("#borders").click(function() {
-    borders = !wireframes ? !borders : borders;
-    wireframes = !borders ? !wireframes : false;
+    borders = !wireframes ?
+    !borders : borders;
+    wireframes = !borders ?
+    !wireframes : wireframes;
     render.options.wireframes = wireframes;
 
    // X
-   // A B C
+   // A B C D
    // borders = false; wireframes = true;
    // borders = true; wireframes = false;
    // borders = false; wireframes = false;
+   // borders = true; wireframes = true;
 
     bodywork
     .render.lineWidth =  borders ? 2 : 0;
@@ -387,6 +390,20 @@ $("#borders").click(function() {
         bodywork.parts[k]
         .render.lineWidth =  borders ? 2 : 0;
     }
+
+    paintingConstraintA
+    .render.anchors =  borders;
+    paintingConstraintB
+    .render.anchors =  borders;
+    paintingConstraintZ
+    .render.anchors =  borders;
+    crankshaft
+    .render.anchors =  borders;
+    rearWheelShockAbsorber
+    .render.anchors =  borders;
+    frontWheelShockAbsorber
+    .render.anchors =  borders;
+
     paintingConstraintA
     .render.lineWidth =  borders ? 2 : 0;
     paintingConstraintB
