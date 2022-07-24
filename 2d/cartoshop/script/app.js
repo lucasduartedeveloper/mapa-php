@@ -252,7 +252,7 @@ Bodies.rectangle(sw/2, (sh/4)*3,
     render: {
        sprite: {
             texture: "img/map2.jpg",
-            xScale: 0.00098*(sh/ar,) 
+            xScale: 0.00098*(sh/ar),
             yScale: 0.00098*(sh/ar)
         },
        fillStyle: "#fff",
