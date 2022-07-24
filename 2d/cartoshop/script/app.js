@@ -65,21 +65,6 @@ var rawPolygon = [
     [+1, -0],
     [+0.2, -0.5]
 ];
-
-function polygonCenter(p) {
-    var minX = p[0].x;
-    var minY = p[0].y;
-    var maxX = p[0].x;
-    var maxY = p[0].y;
-    for (var k in p) {
-        minX = p[k].x < minX ? p[k].x : minX;
-        minY = p[k].y < minY ? p[k].y : minY;
-        maxX = p[k].x > maxX ? p[k].x : maxX;
-        maxY = p[k].y > maxY ? p[k].y : maxY;
-    }
-    return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
-}
-
 // create two boxes and a ground
 var bodyworkPolygon = [];
 for (var k in rawPolygon) {
@@ -209,7 +194,35 @@ Matter.Constraint.create({
      }
 });
 
-/*
+var rearWheelShockAbsorber = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: -(0.55*125)-28, y: 0 },
+     bodyB: rearWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var frontWheelShockAbsorber = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: (0.38*125)+28, y: 0 },
+     bodyB: frontWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+// Sign
 var rawPolygon = [
     [-1, -1.9], 
     [-1, -0.9], 
@@ -245,53 +258,6 @@ Matter.Bodies.fromVertices({
         lineWidth: 2,
     }
 });
-*/
-
-// Loop
-var loopPolygon = [
-    [-0.5, -0.5], 
-    [-1, -0], 
-    [-1, +0.4], 
-    [-0.98, +0.4], 
-    [-0.98, +0.1], 
-    [-0.55, +0.1], 
-    [-0.55, +0.4], 
-    [+0.38, +0.4],  
-    [+0.38, +0.1], 
-    [+0.81, +0.1], 
-    [+0.81, +0.4], 
-    [+1, +0.4], 
-    [+1, -0],
-    [+0.2, -0.5]
-];
-
-var rearWheelShockAbsorber = 
-Matter.Constraint.create({
-     bodyA: bodywork,
-     pointA: { x: -(0.55*125)-28, y: 0 },
-     bodyB: rearWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.5,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
-
-var frontWheelShockAbsorber = 
-Matter.Constraint.create({
-     bodyA: bodywork,
-     pointA: { x: (0.38*125)+28, y: 0 },
-     bodyB: frontWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.5,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
 
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
@@ -307,8 +273,6 @@ Bodies.rectangle(sw/2, (sh/4)*3,
        strokeStyle: "#000" 
     }
 });
-
-
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
@@ -519,3 +483,17 @@ Matter.Events.on(engine, "beforeUpdate", function() {
     Render.lookAt(render, bodywork,
     { x: (sw/2) - 125, y: (sh/2) - 87.5 });
 });
+
+function polygonCenter(p) {
+    var minX = p[0].x;
+    var minY = p[0].y;
+    var maxX = p[0].x;
+    var maxY = p[0].y;
+    for (var k in p) {
+        minX = p[k].x < minX ? p[k].x : minX;
+        minY = p[k].y < minY ? p[k].y : minY;
+        maxX = p[k].x > maxX ? p[k].x : maxX;
+        maxY = p[k].y > maxY ? p[k].y : maxY;
+    }
+    return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
+}
