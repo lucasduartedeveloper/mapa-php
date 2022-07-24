@@ -97,11 +97,11 @@ center.y,
 polygon, {
 sStatic: false,
 render: {
-    sprite: {
+    /*sprite: {
         texture: "img/newbeetle.png",
         xScale: 0.347,
         yScale: 0.366
-    },
+    },*/
     fillStyle: randomColor(),
     strokeStyle: "#000" }});
 
