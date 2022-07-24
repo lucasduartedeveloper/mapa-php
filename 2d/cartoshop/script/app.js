@@ -373,6 +373,10 @@ $("#borders").click(function() {
     borders = !borders;
     bodywork
     .render.lineWidth =  borders ? 2 : 0;
+    for (var k in bodywork.parts) {
+        bodywork.parts[k]
+        .render.lineWidth =  borders ? 2 : 0;
+    }
     paintingConstraintA
     .render.lineWidth =  borders ? 2 : 0;
     paintingConstraintB
