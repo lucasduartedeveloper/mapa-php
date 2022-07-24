@@ -383,10 +383,10 @@ $("#power").on("touchend", function() {
 });
 
 var lockCamera = false;
-Events.on(mouseConstraint, "mousedown", function() {
+Matter.Events.on(mouseConstraint, "mousedown", function() {
     lockCamera = true;
 });
-Events.on(mouseConstraint, "mouseup", function() {
+Matter.Events.on(mouseConstraint, "mouseup", function() {
     lockCamera = false;
 });
 
