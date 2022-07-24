@@ -300,9 +300,6 @@ $(document).ready(function() {
             engine.gravity.y = -1;
         }
 
-        Render.lookAt(render, bodywork,
-        { x: (sw/2) - 125, y: (sh/2) - 87.5 });
-
         var canvas = 
         document.getElementById("camera-canvas");
         var context = canvas.getContext("2d");
@@ -315,20 +312,11 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             ((vw-128)/2)*-1, 
             vh, vw);
-
-            /*
-            context
-            .globalCompositeOperation='destination-in';
-            context.beginPath();
-            context.arc(128/2,128/2,128/2,0,Math.PI*2);
-            context.closePath();
-            context.fill();
- 
-            planet.render.sprite.texture =
-            canvas.toDataURL();
-            planet.render.sprite.xScale = 0.78;
-            planet.render.sprite.yScale = 0.78;
-            */
         }
-    }, 33);
+    }, 100);
+});
+
+Matter.Events.on(engine, "beforeupdate", function() {
+    Render.lookAt(render, bodywork,
+    { x: (sw/2) - 125, y: (sh/2) - 87.5 });
 });
