@@ -406,13 +406,13 @@ $("#cut").click(function() {
  
     rearWheel.render.sprite.texture =
     canvas.toDataURL();
-    rearWheel.render.sprite.xScale = 0.78;
-    rearWheel.render.sprite.yScale = 0.78;
+    rearWheel.render.sprite.xScale = 0.39;
+    rearWheel.render.sprite.yScale = 0.39;
 
     frontWheel.render.sprite.texture =
     canvas.toDataURL();
-    frontWheel.render.sprite.xScale = 0.78;
-    frontWheel.render.sprite.yScale = 0.78;
+    frontWheel.render.sprite.xScale = 0.39;
+    frontWheel.render.sprite.yScale = 0.39;
 });
 
 var lockCamera = false;
