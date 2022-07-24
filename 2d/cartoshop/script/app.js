@@ -369,8 +369,12 @@ $(document).ready(function() {
 });
 
 var borders = true;
+var wireframes = false;
 $("#borders").click(function() {
     borders = !borders;
+    wireframes = borders ? !wireframes : false;
+    render.options.wireframes = wireframes;
+
     bodywork
     .render.lineWidth =  borders ? 2 : 0;
     for (var k in bodywork.parts) {
