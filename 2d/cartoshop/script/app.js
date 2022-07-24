@@ -392,7 +392,7 @@ $("#power").on("touchend", function() {
     accelerating = false;
 });
 
-$("#scissors").click(function() {
+$("#cut").click(function() {
     var canvas = document
     .getElementById("camera-canvas");
     var context = canvas.getContext("2D");
