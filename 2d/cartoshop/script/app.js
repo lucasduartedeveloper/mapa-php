@@ -300,6 +300,9 @@ $(document).ready(function() {
             engine.gravity.y = -1;
         }
 
+        Render.lookAt(render, bodywork,
+        { x: (sw/2) - 125, y: (sh/2) - 87.5 });
+
         var canvas = 
         document.getElementById("camera-canvas");
         var context = canvas.getContext("2d");
