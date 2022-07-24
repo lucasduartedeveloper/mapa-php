@@ -2,7 +2,7 @@ var music = new Audio("audio/sou-vitorioso.mp3");
 
 var sw = window.innerWidth;
 var sh = window.innerHeight;
-var ar = sh/sw;
+var ar = sw/sh;
 var vw = 0;
 var vh = 0;
 var vr = 0;
@@ -247,13 +247,13 @@ Matter.Bodies.fromVertices(
 
 var planet = 
 Bodies.rectangle(sw/2, (sh/4)*3,
-(sh/2)*2.55, sh/2, {
+(sh/2)*(4.73*ar), sh/2, {
     isStatic: true,
     render: {
        sprite: {
             texture: "img/map2.jpg",
-            xScale: 1.22,
-            yScale: 1.22
+            xScale: 2.26*ar, 
+            yScale: 2.26*ar
         },
        fillStyle: "#fff",
        strokeStyle: "#000" 
