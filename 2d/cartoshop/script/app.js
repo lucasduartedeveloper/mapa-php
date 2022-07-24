@@ -371,9 +371,15 @@ $(document).ready(function() {
 var borders = true;
 var wireframes = false;
 $("#borders").click(function() {
-    borders = !wireframes ? borders : !borders;
-    wireframes = borders ? !wireframes : false;
+    borders = !wireframes ? !borders : borders;
+    wireframes = !borders ? !wireframes : false;
     render.options.wireframes = wireframes;
+
+   // X
+   // A B C
+   // borders = false; wireframes = true;
+   // borders = true; wireframes = false;
+   // borders = false; wireframes = false;
 
     bodywork
     .render.lineWidth =  borders ? 2 : 0;
