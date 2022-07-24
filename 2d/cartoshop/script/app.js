@@ -82,30 +82,28 @@ function polygonCenter(p) {
 
 // create two boxes and a ground
 var squares = [];
-for (var k in kitePolygon) {
-    var polygon = [];
-    for (var n in kitePolygon[k]) {
-        polygon.push({
-            x: (sw/2) + kitePolygon[k][n][0] * 100,
-            y: (sh/2) + kitePolygon[k][n][1] * 100
-        });
-    }
-    var center = polygonCenter(polygon);
-    squares.push(
-    Bodies.fromVertices(
-    center.x, 
-    center.y, 
-    polygon, {
-    isStatic: false,
-    render: {
-         /*sprite: {
-             texture: "img/wheel.png",
-             xScale: 0.476,
-             yScale: 0.476
-         },*/
-         fillStyle: randomColor(),
-         strokeStyle: "#000" }}));
+var polygon = [];
+for (var n in kitePolygon[k]) {
+    polygon.push({
+        x: (sw/2) + kitePolygon[k][n][0] * 100,
+        y: (sh/2) + kitePolygon[k][n][1] * 100
+    });
 }
+var center = polygonCenter(polygon);
+squares.push(
+Bodies.fromVertices(
+center.x, 
+center.y, 
+polygon, {
+sStatic: false,
+render: {
+    /*sprite: {
+         texture: "img/wheel.png",
+         xScale: 0.476,
+         yScale: 0.476
+    },*/
+    fillStyle: randomColor(),
+    strokeStyle: "#000" }}));
 
 var texture = 
 Bodies.rectangle(sw/2, (sh/4)*3-100,
