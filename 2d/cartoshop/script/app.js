@@ -92,7 +92,7 @@ for (var k in kitePolygon) {
 var center = polygonCenter(polygon);
 var bodywork = 
 Bodies.fromVertices(
-    (sw/2), (sh/2)-50, 
+    (sw/2), (sh/2)-75, 
     polygon, {
     isStatic: false,
     render: {
@@ -104,8 +104,9 @@ Bodies.fromVertices(
 });
 
 var painting = 
-Bodies.rectangle(center.x, center.y,
-250, 100, {
+Bodies.rectangle(
+    (sw/2), (sh/2)-75, 
+    250, 100, {
     isSensor: true,
     isStatic: false,
     render: {
