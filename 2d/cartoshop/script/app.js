@@ -123,9 +123,9 @@ Bodies.rectangle(
 var paintingConstraintB = 
 Matter.Constraint.create({
     bodyA: painting,
-    pointA: { x: 25, y: -25 },
+    pointA: { x: -25, y: -25 },
     bodyB: bodywork,
-    pointB: { x: -25, y: 25 },
+    pointB: { x: 25, y: 25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -136,9 +136,9 @@ Matter.Constraint.create({
 var paintingConstraintZ = 
 Matter.Constraint.create({
     bodyA: painting,
-    pointA: { x: -25, y: 25 },
+    pointA: { x: 25, y: -25 },
     bodyB: bodywork,
-    pointB: { x: 25, y: -25 },
+    pointB: { x: -25, y: 25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
