@@ -91,7 +91,8 @@ for (var k in kitePolygon) {
 }
 var center = polygonCenter(polygon);
 var bodywork = 
-Bodies.fromVertices(center.x, center.y, 
+Bodies.fromVertices(
+    (sw/2), (sh/2)-50, 
     polygon, {
     isStatic: false,
     render: {
@@ -215,16 +216,17 @@ sw*3, sh/2, {
 
 function matterJs() {
     // add all of the bodies to the world
-    Composite.add(engine.world,
-    [painting, 
-     paintingConstraint, 
-     bodywork,
-     crankshaft, 
-     rearWheel,
-     rearWheelShockAbsorber,
-     frontWheel,
-     frontWheelShockAbsorber,
-     planet]);
+    Composite.add(engine.world, [
+        painting, 
+        paintingConstraint, 
+        bodywork,
+        crankshaft, 
+        rearWheel,
+        rearWheelShockAbsorber,
+        frontWheel,
+        frontWheelShockAbsorber,
+        planet
+    ]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
