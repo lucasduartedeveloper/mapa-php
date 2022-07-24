@@ -99,7 +99,7 @@ Bodies.fromVertices(
         fillStyle: "rgba(255,255,255,0)",
         /*randomColor(),*/
         strokeStyle: "#fff",
-        lineWidth: 2
+        //lineWidth: 2
     }
 });
 
@@ -120,10 +120,23 @@ Bodies.rectangle(
     }
 });
 
-var paintingConstraint = 
+var paintingConstraintA = 
 Matter.Constraint.create({
     bodyA: painting,
-    pointA: { x: 0, y: 0 },
+    pointA: { x: -100, y: 0 },
+    bodyB: bodywork,
+    pointB: { x: 0, y: 0 },
+    stiffness: 0.3,
+    render: {
+        strokeStyle: '#fff',
+        type: 'line'
+    }
+});
+
+var paintingConstraintB = 
+Matter.Constraint.create({
+    bodyA: painting,
+    pointA: { x: 100, y: 0 },
     bodyB: bodywork,
     pointB: { x: 0, y: 0 },
     stiffness: 0.3,
@@ -172,7 +185,7 @@ Matter.Constraint.create({
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
-          lineWidth: 2,
+          //lineWidth: 2,
           type: 'line'
      }
 });
@@ -200,7 +213,7 @@ Matter.Constraint.create({
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
-          lineWidth: 2,
+          //lineWidth: 2,
           type: 'line'
      }
 });
@@ -219,7 +232,8 @@ function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
         painting, 
-        paintingConstraint, 
+        paintingConstraintA, 
+        paintingConstraintB, 
         bodywork,
         crankshaft, 
         rearWheel,
