@@ -395,7 +395,7 @@ $("#power").on("touchend", function() {
 $("#cut").click(function() {
     var canvas = document
     .getElementById("camera-canvas");
-    var context = canvas.getContext("2D");
+    var context = canvas.getContext("2d");
 
     context
     .globalCompositeOperation='destination-in';
