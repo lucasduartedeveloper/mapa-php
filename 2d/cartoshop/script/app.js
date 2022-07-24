@@ -13,7 +13,8 @@ canvas.width = sw;
 canvas.height = sh;
 
 // module aliases
-var Common = Matter.Common,
+var 
+    Common = Matter.Common,
     Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
@@ -85,25 +86,25 @@ var squares = [];
 var polygon = [];
 for (var n in kitePolygon[k]) {
     polygon.push({
-        x: (sw/2) + kitePolygon[k][n][0] * 100,
-        y: (sh/2) + kitePolygon[k][n][1] * 100
+        x: (sw/2) + kitePolygon[k][0] * 100,
+        y: (sh/2) + kitePolygon[k][1] * 100
     });
 }
 var center = polygonCenter(polygon);
-squares.push(
+var bodywork = 
 Bodies.fromVertices(
 center.x, 
 center.y, 
 polygon, {
 sStatic: false,
 render: {
-    /*sprite: {
-         texture: "img/wheel.png",
-         xScale: 0.476,
-         yScale: 0.476
-    },*/
+    sprite: {
+        texture: "img/newbeetle.png",
+        xScale: 0.347,
+        yScale: 0.366
+    },
     fillStyle: randomColor(),
-    strokeStyle: "#000" }}));
+    strokeStyle: "#000" }});
 
 var texture = 
 Bodies.rectangle(sw/2, (sh/4)*3-100,
@@ -111,11 +112,7 @@ Bodies.rectangle(sw/2, (sh/4)*3-100,
     isStatic: false,
     isSensor: true,
     render: {
-         sprite: {
-             texture: "img/newbeetle.png",
-             xScale: 0.347,
-             yScale: 0.366
-         },
+         
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
@@ -145,34 +142,18 @@ Bodies.circle(sw/2+52.5, sh/2-25,
          fillStyle: "#fff",
          strokeStyle: "#000" }});
 
-var crankShaft = 
+var crankshaft = 
 Matter.Constraint.create({
      bodyA: rearWheel,
      pointA: { x: 0, y: 0 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.3,
-     /*length: 75*(squares.length),*/
      render: {
           strokeStyle: '#fff',
           lineWidth: 1,
           type: 'line'
-     }})/*,*/
-;
-
-var textureConstraint = 
-Matter.Constraint.create({
-     bodyA: rearWheel,
-     pointA: { x: 0, y: 0 },
-     bodyB: frontWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
-     /*length: 75*(squares.length),*/
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 1,
-          type: 'line'
-     }})/*,*/
+     }})
 ;
 
 var planet =
@@ -185,10 +166,8 @@ Bodies.rectangle(sw/2, (sh/4)*3,
 
 function matterJs() {
     // add all of the bodies to the world
-    Composite.add(engine.world, 
-    squares);
     Composite.add(engine.world,
-    [texture, crankShaft, rearWheel, frontWheel, planet]);
+    [bodywork, crankshaft, rearWheel, frontWheel, planet]);
 
     var mouse = Matter.Mouse.create(render.canvas);
     var mouseConstraint = 
