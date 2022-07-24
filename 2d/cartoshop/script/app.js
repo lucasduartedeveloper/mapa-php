@@ -34,6 +34,18 @@ var render = Render.create({
     }
 });
 
+var arrayOfColorFunctions = 
+"0123456789abcdef".split();
+function randomColor() {
+    var randomColorString = "#";
+    for (var x = 0; x < 6; x++) {
+        var index = Math.floor(Math.random() * 16);
+        var value = arrayOfColorFunctions[index];
+        randomColorString += value;
+    }
+    return randomColorString;
+}
+
 var kitePolygon = [
     [-1, -0.5], 
     [-1, 0.5], 
@@ -93,7 +105,7 @@ for (var k in convexPolygons) {
              xScale: 0.476,
              yScale: 0.476
          },*/
-         fillStyle: "#fff",
+         fillStyle: randomColor(),
          strokeStyle: "#000" }}));
 }
 
