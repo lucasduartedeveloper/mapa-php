@@ -68,7 +68,7 @@ function polygonCenter(p) {
 //decomp.makeCCW(kitePolygon);
 
 // Decompose using the slow (but optimal) algorithm
-var convexPolygons = decomp.decomp(kitePolygon);
+var convexPolygons = decomp.quickDecomp(kitePolygon);
 
 // create two boxes and a ground
 var squares = [];
@@ -138,6 +138,21 @@ Bodies.circle(sw/2+52.5, sh/2-25,
          strokeStyle: "#000" }});
 
 var crankShaft = 
+Matter.Constraint.create({
+     bodyA: rearWheel,
+     pointA: { x: 0, y: 0 },
+     bodyB: frontWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.3,
+     /*length: 75*(squares.length),*/
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 1,
+          type: 'line'
+     }})/*,*/
+;
+
+var textureConstraint = 
 Matter.Constraint.create({
      bodyA: rearWheel,
      pointA: { x: 0, y: 0 },
