@@ -270,6 +270,21 @@ Matter.Bodies.fromVertices(
         lineWidth: 2,
     }
 });
+// Géssica
+var signConstraint = 
+Matter.Constraint.create({
+     bodyA: sign,
+     pointA: { x: 0, y: 90 },
+     bodyB: planet,
+     pointB: { x: (-350+50), y: -264 },
+     stiffness: 0.3,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
 
 var planet = 
 Bodies.rectangle(sw/2, (sh/2)+274,
@@ -360,7 +375,9 @@ function matterJs() {
         rearWheelShockAbsorber,
         frontWheel,
         frontWheelShockAbsorber,
-        sign, planet, loop
+        sign,
+        signConstraint,
+        planet, loop
     ]);
 
     render.mouse = mouse;
