@@ -276,7 +276,7 @@ Matter.Constraint.create({
      bodyA: sign,
      pointA: { x: 0, y: 90 },
      bodyB: planet,
-     pointB: { x: (-350+50), y: -264 },
+     pointB: { x: 0, y: 0 },//{ x: (-350+50), y: -264 },
      stiffness: 0.3,
      render: {
           strokeStyle: '#fff',
