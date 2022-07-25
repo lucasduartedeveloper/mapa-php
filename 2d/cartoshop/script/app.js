@@ -452,7 +452,7 @@ Matter.Events.on(engine, "beforeUpdate", function() {
 
 
 // Test
-function test() {
+window.test = function() {
 accelerating = true;
 motion = false;
 Matter.Body.set(bodywork,"mass",200);
