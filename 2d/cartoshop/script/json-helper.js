@@ -9,7 +9,7 @@ const getCircularReplacer = () => {
     }
     return value;
   };
-};
+}; // ** Find circular property **
 
 function bodyToJSON(body) {
     var string = JSON.stringify(body, getCircularReplacer());
