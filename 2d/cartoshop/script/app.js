@@ -320,6 +320,7 @@ for (var a = 0; a < 270; a+=90) {
         }
     }
 }
+loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop = 
 Matter.Bodies.fromVertices(
