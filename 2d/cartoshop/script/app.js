@@ -323,7 +323,7 @@ function matterJs() {
         rearWheelShockAbsorber,
         frontWheel,
         frontWheelShockAbsorber,
-        sign, planet, loop
+        sign, planet
     ]);
 
     render.mouse = mouse;
