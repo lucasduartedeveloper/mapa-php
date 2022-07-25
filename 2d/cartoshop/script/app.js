@@ -182,7 +182,7 @@ Matter.Constraint.create({
      }
 });
 
-var rearWheelShockAbsorber = 
+var rearWheelShockAbsorberA = 
 Matter.Constraint.create({
      bodyA: bodywork,
      pointA: { x: -(0.55*125)-28, y: 0 },
@@ -196,7 +196,35 @@ Matter.Constraint.create({
      }
 });
 
-var frontWheelShockAbsorber = 
+var rearWheelShockAbsorberB = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: -(0.55*125)-20, y: 0 },
+     bodyB: rearWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var frontWheelShockAbsorberA = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: (0.38*125)+20, y: 0 },
+     bodyB: frontWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var frontWheelShockAbsorberB = 
 Matter.Constraint.create({
      bodyA: bodywork,
      pointA: { x: (0.38*125)+28, y: 0 },
@@ -350,9 +378,11 @@ function matterJs() {
         bodywork,
         crankshaft, 
         rearWheel,
-        rearWheelShockAbsorber,
+        rearWheelShockAbsorberA,
+        rearWheelShockAbsorberB,
         frontWheel,
-        frontWheelShockAbsorber,
+        frontWheelShockAbsorberA,
+        frontWheelShockAbsorberB,
         sign,
         signConstraint,
         planet,

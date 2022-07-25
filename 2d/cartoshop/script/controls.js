@@ -41,9 +41,13 @@ $("#borders").click(function() {
     .render.anchors =  borders;
     crankshaft
     .render.anchors =  borders;
-    rearWheelShockAbsorber
+    rearWheelShockAbsorberA
     .render.anchors =  borders;
-    frontWheelShockAbsorber
+    rearWheelShockAbsorberB
+    .render.anchors =  borders;
+    frontWheelShockAbsorberA
+    .render.anchors =  borders;
+    frontWheelShockAbsorberB
     .render.anchors =  borders;
 
     paintingConstraintA
@@ -54,9 +58,13 @@ $("#borders").click(function() {
     .render.lineWidth =  borders ? 2 : 0;
     crankshaft
     .render.lineWidth =  borders ? 2 : 0;
-    rearWheelShockAbsorber
+    rearWheelShockAbsorberA
     .render.lineWidth =  borders ? 2 : 0;
-    frontWheelShockAbsorber
+    rearWheelShockAbsorberB
+    .render.lineWidth =  borders ? 2 : 0;
+    frontWheelShockAbsorberA
+    .render.lineWidth =  borders ? 2 : 0;
+    frontWheelShockAbsorberB
     .render.lineWidth =  borders ? 2 : 0;
 });
 
