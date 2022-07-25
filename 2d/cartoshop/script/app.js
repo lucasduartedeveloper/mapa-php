@@ -305,7 +305,7 @@ function rotate(cx, cy, x, y, angle) {
         sin = Math.sin(radians),
         nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
         ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
-    return { x: nx, y: ny };
+    return { x: 800+nx, y: (sh/2)-100+ny };
 }
 
 // Loop
@@ -319,15 +319,15 @@ for (var a = 0; a < 270; a+=45) {
     for (var k in rawPolygon) {
         if (k % 2 == 0) {
             loopPolygon.push(
-                rotate(800, (sh/2)-100, 
+                rotate(0, 0,
                 rawPolygon[k][0]*100, 
                 rawPolygon[k][1]*100, a)
             );
         }
         else {
             oddVertices.push(
-                rotate(800,  (sh/2)-100,
-                rawPolygon[k][0]*100, 
+                rotate(0, 0,
+                rawPolygon[k][0]*100,
                 rawPolygon[k][1]*100, a)
             );
         }
