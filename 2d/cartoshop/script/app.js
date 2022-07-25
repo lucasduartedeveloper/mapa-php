@@ -296,7 +296,7 @@ Matter.Bodies.fromVertices(
         lineWidth: 2,
     }
 });
-for (var k in loop parts) {
+for (var k in loop.parts) {
    loop.parts[k].render.fillStyle = 
    randomColor();
 }
