@@ -266,7 +266,7 @@ var rawPolygon = [
     [-0, +1]
 ];
 var loopPolygon = [];
-for (var a = 0; a < 270; a++) {
+for (var a = 0; a < 270; a+=5) {
     var theta = a * (Math.PI/180);
 
     var x = rawPolygon[0][0];
@@ -278,7 +278,7 @@ for (var a = 0; a < 270; a++) {
     x = x * cosTheta - y * sinTheta;
     x = x * sinTheta + y * cosTheta;
 
-    signPolygon.push({
+    loopPolygon.push({
         x: ((1250) + x) * 500,
         y: (((sh/2)-250) + y) * 500
     });
