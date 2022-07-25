@@ -251,6 +251,16 @@ Bodies.rectangle(sw/2, (sh/2)+274,
     }
 });
 
+var line = 
+Bodies.rectangle(sw/2+1200, (sh/2)+25
+1000, 50, {
+    isStatic: true,
+    render: {
+       fillStyle: "#fff",
+       strokeStyle: "#000" 
+    }
+});
+
 // Sign
 var rawPolygon = [
     [-1, -0.9], 
@@ -305,7 +315,7 @@ function rotate(cx, cy, x, y, angle) {
         sin = Math.sin(radians),
         nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
         ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
-    return { x: 1200+nx, y: (sh/2)-500+ny };
+    return { x: 2400+nx, y: (sh/2)-500+ny };
 }
 
 // Loop
@@ -337,7 +347,7 @@ loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop = 
 Matter.Bodies.fromVertices(
-    1200, (sh/2)-500,
+    2400, (sh/2)-500,
     loopPolygon, {
     isStatic: true,
     render: {
@@ -375,7 +385,8 @@ function matterJs() {
         frontWheelShockAbsorber,
         sign,
         signConstraint,
-        planet, loop
+        planet,
+        line, loop
     ]);
 
     render.mouse = mouse;
