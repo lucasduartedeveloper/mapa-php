@@ -63,6 +63,24 @@ var render = Render.create({
     }
 });
 
+var painting = 
+Bodies.rectangle(
+    (sw/2), (sh/2)-65, //
+    250, 100, {
+    isSensor: true,
+    isStatic: false,
+    render: {
+        sprite: {
+            texture: "img/newbeetle.png",
+            xScale: 0.347,
+            yScale: 0.366 
+        },
+        fillStyle: "#fff",
+        lineWidth: 2,
+        strokeStyle: "#ccc",
+    }
+});
+
 var rawPolygon = [
     [-0.5, -0.5], 
     [-1, -0], 
@@ -93,29 +111,12 @@ Bodies.fromVertices(
     (sw/2), (sh/2)-65, //
     bodyworkPolygon, {
     isStatic: false,
+    bounds: painting.bounds,
     mass: 20,
     render: {
         fillStyle: "rgba(255,255,255,0)",
         strokeStyle: "#fff",
         lineWidth: 2,
-    }
-});
-
-var painting = 
-Bodies.rectangle(
-    (sw/2), (sh/2)-65, //
-    250, 100, {
-    isSensor: true,
-    isStatic: false,
-    render: {
-        sprite: {
-            texture: "img/newbeetle.png",
-            xScale: 0.347,
-            yScale: 0.366 
-        },
-        fillStyle: "#fff",
-        lineWidth: 2,
-        strokeStyle: "#ccc",
     }
 });
 
@@ -278,7 +279,6 @@ Matter.Bodies.fromVertices(
     (-350+50), (sh/2)-100,
     signPolygon, {
     isStatic: true,
-    mass: 20,
     render: {
         fillStyle: "rgba(255,255,255,0)",
         strokeStyle: "#fff",
