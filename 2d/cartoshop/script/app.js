@@ -304,7 +304,7 @@ for (var a = 0; a < 270; a+=10) {
         var sinTheta = Math.sin(theta);
     
         x = x * cosTheta - y * sinTheta;
-        x = x * sinTheta + y * cosTheta;
+        x = y * sinTheta + y * cosTheta;
 
         if (k==0) {
             loopPolygon.push({
