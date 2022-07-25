@@ -234,7 +234,7 @@ for (var k in rawPolygon) {
 }
 var sign = 
 Matter.Bodies.fromVertices(
-    (((sh/2)*2.55)/2)-50, (sh/2)-100,
+    (-700+50, (sh/2)-100,
     signPolygon, {
     isStatic: false,
     mass: 20,
@@ -260,6 +260,42 @@ Bodies.rectangle(sw/2, (sh/2)+274,
     }
 });
 
+// Loop
+var rawPolygon = [
+    [-0, +0.9], 
+    [-0, +1]
+];
+var loopPolygon = [];
+for (var a = 0; a < 270; a++) {
+    var theta = a * (Math.PI/180);
+
+    var x = rawPolygon[k][0];
+    var y = rawPolygon[k][1];
+
+    var cosTheta = Math.cos(theta);
+    var sinTheta = Math.sin(theta);
+    
+    x = x * cosTheta - y * sinTheta;
+    x = x * sinTheta + y * cosTheta;
+
+    signPolygon.push({
+        x: ((1250) + x) * 500,
+        y: (((sh/2)-250) + y) * 500
+    });
+}
+var loop = 
+Matter.Bodies.fromVertices(
+    1250, (sh/2)-250,
+    loopPolygon, {
+    isStatic: false,
+    mass: 20,
+    render: {
+        fillStyle: "rgba(255,255,255,0)",
+        strokeStyle: "#fff",
+        lineWidth: 2,
+    }
+});
+
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
 Matter.MouseConstraint.create(engine, {
@@ -282,7 +318,7 @@ function matterJs() {
         rearWheelShockAbsorber,
         frontWheel,
         frontWheelShockAbsorber,
-        sign, planet
+        sign, planet, loop
     ]);
 
     render.mouse = mouse;
