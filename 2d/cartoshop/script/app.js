@@ -1,3 +1,29 @@
+function polygonCenter(p) {
+    var minX = p[0].x;
+    var minY = p[0].y;
+    var maxX = p[0].x;
+    var maxY = p[0].y;
+    for (var k in p) {
+        minX = p[k].x < minX ? p[k].x : minX;
+        minY = p[k].y < minY ? p[k].y : minY;
+        maxX = p[k].x > maxX ? p[k].x : maxX;
+        maxY = p[k].y > maxY ? p[k].y : maxY;
+    }
+    return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
+}
+
+var arrayOfColorFunctions = 
+"0123456789abcdef".split('');
+function randomColor() {
+    var randomColorString = "#";
+    for (var x = 0; x < 6; x++) {
+        var index = Math.floor(Math.random() * 16);
+        var value = arrayOfColorFunctions[index];
+        randomColorString += value;
+    }
+    return randomColorString;
+}
+
 var music = new Audio("audio/sou-vitorioso.mp3");
 
 var sw = window.innerWidth;
@@ -296,10 +322,11 @@ Matter.Bodies.fromVertices(
         lineWidth: 2,
     }
 });
+/*
 for (var k in loop.parts) {
    loop.parts[k].render.fillStyle = 
    randomColor();
-}
+}*/
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
@@ -379,7 +406,7 @@ $(document).ready(function() {
     matterJs();
     startCamera("environment");
     //music.play();
-    log("log", "$(document).ready");
+    log("log", "$(document).ready(...");
 
     setInterval(function() {
         var vol = Math.abs(gyro.accX/4.9);
@@ -511,30 +538,3 @@ Matter.Events.on(engine, "beforeUpdate", function() {
        rearWheel, "angularVelocity", 1);
     }
 });
-
-// ---
-function polygonCenter(p) {
-    var minX = p[0].x;
-    var minY = p[0].y;
-    var maxX = p[0].x;
-    var maxY = p[0].y;
-    for (var k in p) {
-        minX = p[k].x < minX ? p[k].x : minX;
-        minY = p[k].y < minY ? p[k].y : minY;
-        maxX = p[k].x > maxX ? p[k].x : maxX;
-        maxY = p[k].y > maxY ? p[k].y : maxY;
-    }
-    return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
-}
-
-var arrayOfColorFunctions = 
-"0123456789abcdef".split('');
-function randomColor() {
-    var randomColorString = "#";
-    for (var x = 0; x < 6; x++) {
-        var index = Math.floor(Math.random() * 16);
-        var value = arrayOfColorFunctions[index];
-        randomColorString += value;
-    }
-    return randomColorString;
-}
