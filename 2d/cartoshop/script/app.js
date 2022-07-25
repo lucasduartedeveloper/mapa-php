@@ -328,7 +328,7 @@ for (var a = 0; a < 270; a+=45) {
             oddVertices.push(
                 rotate(800,  (sh/2)-100,
                 rawPolygon[k][0]*100, 
-                rawPolygon[k][1]*100, a);
+                rawPolygon[k][1]*100, a)
             );
         }
     }
