@@ -23,6 +23,15 @@ function randomColor() {
     }
     return randomColorString;
 }
+function gradientColor(n, total) {
+    var colorString = "rgb(";
+    for (var x = 0; x < 3; x++) {
+        var value = Math.floor((255/total)*n);
+        colorString += value;
+        colorString += x < 2 ? "," : "";
+    }
+    return colorString+")";
+}
 
 var music = new Audio("audio/sou-vitorioso.mp3");
 
@@ -294,6 +303,11 @@ Matter.Bodies.fromVertices(
         lineWidth: 2,
     }
 });
+for (var k in sign.parts) {
+    sign.parts[k].render.fillStyle = 
+    gradientColor(k, sign.parts.length);
+}
+
 // Géssica
 var signConstraint = 
 Matter.Constraint.create({
