@@ -299,6 +299,15 @@ Matter.Constraint.create({
      }
 });
 
+function rotate(cx, cy, x, y, angle) {
+    var radians = (Math.PI / 180) * angle,
+        cos = Math.cos(radians),
+        sin = Math.sin(radians),
+        nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
+        ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
+    return [nx, ny];
+}
+
 // Loop
 var rawPolygon = [
     [-0, +0.9], 
@@ -308,28 +317,19 @@ var loopPolygon = [];
 var oddVertices = [];
 for (var a = 0; a < 270; a+=45) {
     for (var k in rawPolygon) {
-        var theta = a * (Math.PI/180);
-
-        var x = rawPolygon[k][0];
-        var y = rawPolygon[k][1];
-
-        var cosTheta = Math.cos(theta);
-        var sinTheta = Math.sin(theta);
-    
-        x = x * cosTheta - y * sinTheta;
-        y = x * sinTheta + y * cosTheta;
-
-        if (k==0) {
-            loopPolygon.push({
-                x: (1250) + (x * 100),
-                y: ((sh/2)-250) + (y * 100)
-            });
+        if (k % 2 == 0) {
+            loopPolygon.push(
+                rotate(800, (sh/2)-100, 
+                rawPolygon[k][0]*100, 
+                rawPolygon[k][1]*100, a)
+            );
         }
         else {
-            oddVertices.push({
-                x: (1250) + (x * 500),
-                y: ((sh/2)-250) + (y * 500)
-            });
+            oddVertices.push(
+                rotate(800,  (sh/2)-100,
+                rawPolygon[k][0]*100, 
+                rawPolygon[k][1]*100, a);
+            );
         }
     }
 }
