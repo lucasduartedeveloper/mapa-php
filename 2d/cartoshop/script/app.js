@@ -293,7 +293,7 @@ var rawPolygon = [
 ];
 var loopPolygon = [];
 var oddVertices = [];
-for (var a = 0; a < 270; a+=10) {
+for (var a = 0; a < 270; a+=90) {
     for (var k in rawPolygon) {
         var theta = a * (Math.PI/180);
 
