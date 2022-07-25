@@ -99,6 +99,10 @@ $("#cut").click(function() {
     frontWheel.render.sprite.yScale = 0.39;
 });
 
+$("#run-test").click(function() {
+    test();
+});
+
 var lockCamera = false;
 Matter.Events.on(mouseConstraint, "mousedown", function() {
     lockCamera = true;
