@@ -315,7 +315,7 @@ function rotate(cx, cy, x, y, angle) {
         sin = Math.sin(radians),
         nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
         ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
-    return { x: 2400+nx, y: (sh/2)-500+ny };
+    return { x: 2450+nx, y: (sh/2)-500+ny };
 }
 
 // Loop
@@ -347,7 +347,7 @@ loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop = 
 Matter.Bodies.fromVertices(
-    2400, (sh/2)-500,
+    2450, (sh/2)-450,
     loopPolygon, {
     isStatic: true,
     render: {
