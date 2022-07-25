@@ -11,11 +11,12 @@ $script = [
     0 => "thirdpart/poly-decomp.js",
     1 => "thirdpart/matter.js",
     2 => "debug.js",
-    3 => "color-helper.js",
-    4 => "gyro-helper.js",
-    5 => "image-helper.js",
-    6 => "polygon-helper.js",
-    7 => "app.js"
+    3 => "camera-helper.js",
+    4 => "color-helper.js",
+    5 => "gyro-helper.js",
+    6 => "image-helper.js",
+    7 => "polygon-helper.js",
+    8 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
