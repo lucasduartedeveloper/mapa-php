@@ -234,7 +234,7 @@ for (var k in rawPolygon) {
 }
 var sign = 
 Matter.Bodies.fromVertices(
-    (-700+50, (sh/2)-100,
+    (-700+50), (sh/2)-100,
     signPolygon, {
     isStatic: false,
     mass: 20,
@@ -269,8 +269,8 @@ var loopPolygon = [];
 for (var a = 0; a < 270; a++) {
     var theta = a * (Math.PI/180);
 
-    var x = rawPolygon[k][0];
-    var y = rawPolygon[k][1];
+    var x = rawPolygon[0][0];
+    var y = rawPolygon[0][1];
 
     var cosTheta = Math.cos(theta);
     var sinTheta = Math.sin(theta);
@@ -287,7 +287,7 @@ var loop =
 Matter.Bodies.fromVertices(
     1250, (sh/2)-250,
     loopPolygon, {
-    isStatic: false,
+    isStatic: true,
     mass: 20,
     render: {
         fillStyle: "rgba(255,255,255,0)",
