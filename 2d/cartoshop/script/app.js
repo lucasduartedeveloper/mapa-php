@@ -165,7 +165,7 @@ var rearWheel =
 Bodies.circle(((sw/2)-(0.55*125))-28, 
     sh/2-25, 25, {
     isStatic: false,
-    friction: 0.8,
+    friction: 1,
     render: {
         sprite: {
             texture: "img/wheel.png",
@@ -182,7 +182,7 @@ var frontWheel =
 Bodies.circle(((sw/2)+(0.38*125))+28, 
     sh/2-25, 25, {
     isStatic: false,
-    friction: 0.8,
+    friction: 1,
     render: {
         sprite: {
             texture: "img/wheel.png",
@@ -571,6 +571,6 @@ Matter.Events.on(engine, "beforeUpdate", function() {
 
     if (accelerating) {
        Matter.Body.set(
-       rearWheel, "angularVelocity", 10);
+       rearWheel, "angularVelocity", 2);
     }
 });
