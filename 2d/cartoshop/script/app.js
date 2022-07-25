@@ -174,7 +174,7 @@ Matter.Constraint.create({
      pointA: { x: 0, y: 0 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
-     stiffness: 0.3,
+     stiffness: 1,
      render: {
           strokeStyle: '#fff',
           lineWidth: 2,
@@ -185,7 +185,7 @@ Matter.Constraint.create({
 var rearWheelShockAbsorberA = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: -(0.55*125)-28, y: 0 },
+     pointA: { x: -(0.55*125)-30, y: 0 },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
@@ -199,7 +199,7 @@ Matter.Constraint.create({
 var rearWheelShockAbsorberB = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: -(0.55*125)-20, y: 0 },
+     pointA: { x: -(0.55*125)-15, y: 0 },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
@@ -213,7 +213,7 @@ Matter.Constraint.create({
 var frontWheelShockAbsorberA = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: (0.38*125)+20, y: 0 },
+     pointA: { x: (0.38*125)+15, y: 0 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
@@ -227,7 +227,7 @@ Matter.Constraint.create({
 var frontWheelShockAbsorberB = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: (0.38*125)+28, y: 0 },
+     pointA: { x: (0.38*125)+30, y: 0 },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
@@ -449,3 +449,23 @@ Matter.Events.on(engine, "beforeUpdate", function() {
        rearWheel, "angularVelocity", 2);
     }
 });
+
+
+// Test
+function test() {
+accelerating = true;
+motion = false;
+Matter.Body.set(bodywork,"mass",200);
+Matter.Body.set(rearWheel,"mass",200);
+Matter.Body.set(rearWheel,"friction",200);
+Matter.Body.set(frontWheel,"mass",200);
+Matter.Body.set(frontWheel,"friction",200);
+Matter.Body.set(rearWheelShockAbsorberA,
+"stiffness",0.5);
+Matter.Body.set(rearWheelShockAbsorberB,
+"stiffness",0.5);
+Matter.Body.set(frontWheelShockAbsorberA,
+"stiffness",0.5);
+Matter.Body.set(frontWheelShockAbsorberB,
+"stiffness",0.5);
+}
