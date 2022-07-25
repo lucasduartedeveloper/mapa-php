@@ -252,7 +252,7 @@ Bodies.rectangle(sw/2, (sh/2)+274,
 });
 
 var line = 
-Bodies.rectangle(sw/2+1200, (sh/2)+25
+Bodies.rectangle(sw/2+1200, (sh/2)+25,
 1000, 50, {
     isStatic: true,
     render: {
