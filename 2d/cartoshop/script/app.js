@@ -409,18 +409,38 @@ $("#key").click(function() {
         cameraKey = false;
     }
     else {
-        startCamera("environment");
+        startCamera();
         cameraKey = true;
     }
 });
 
-var cameraMode = "environment";
-function startCamera(mode) {
+var videoDevices = [];
+if (navigator.mediaDevices) {
+    navigator.mediaDevices.enumerateDevices()
+    .then(function(devices) {
+      devices.forEach(function(device) {
+         if (device.kind == "videoinput")
+         videoDevices.push({
+             kind: device.kind,
+             label: device.label,
+             deviceId: device.deviceId
+         });
+      });
+    })
+    .catch(function(err) {
+      console.log(err.name + ": " + err.message);
+    });
+}
+
+var deviceNo = 1;
+function startCamera() {
      if (navigator.mediaDevices) {
           navigator.mediaDevices
           .getUserMedia({ 
           video: {
-          facingMode: { exact: mode } }, 
+          deviceId: { 
+               exact: videoDevices[deviceNo].deviceId
+          } }, 
           audio: false })
           .then((stream) => {
                video.srcObject = stream;
@@ -440,8 +460,6 @@ function stopCamera() {
 
 $(document).ready(function() {
     matterJs();
-    startCamera("environment");
-    //music.play();
     log("log", "$(document).ready(...");
 
     setInterval(function() {
