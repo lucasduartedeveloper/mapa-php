@@ -236,6 +236,21 @@ Matter.Constraint.create({
      }
 });
 
+var planet = 
+Bodies.rectangle(sw/2, (sh/2)+274,
+1400, 548, {
+    isStatic: true,
+    render: {
+       sprite: {
+            texture: "img/map2.jpg",
+            xScale: 2,
+            yScale: 2
+        },
+       fillStyle: "#fff",
+       strokeStyle: "#000" 
+    }
+});
+
 // Sign
 var rawPolygon = [
     [-1, -0.9], 
@@ -262,7 +277,7 @@ var sign =
 Matter.Bodies.fromVertices(
     (-350+50), (sh/2)-100,
     signPolygon, {
-    isStatic: false,
+    isStatic: true,
     mass: 20,
     render: {
         fillStyle: "rgba(255,255,255,0)",
@@ -270,22 +285,6 @@ Matter.Bodies.fromVertices(
         lineWidth: 2,
     }
 });
-
-var planet = 
-Bodies.rectangle(sw/2, (sh/2)+274,
-1400, 548, {
-    isStatic: true,
-    render: {
-       sprite: {
-            texture: "img/map2.jpg",
-            xScale: 2,
-            yScale: 2
-        },
-       fillStyle: "#fff",
-       strokeStyle: "#000" 
-    }
-});
-
 // Géssica
 var signConstraint = 
 Matter.Constraint.create({
