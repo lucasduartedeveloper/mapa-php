@@ -266,35 +266,40 @@ var rawPolygon = [
     [-0, +1]
 ];
 var loopPolygon = [];
-for (var a = 0; a < 270; a+=5) {
-    var theta = a * (Math.PI/180);
+for (var a = 0; a < 270; a+=45) {
+    for (var k in rawPolygon) {
+        var theta = a * (Math.PI/180);
 
-    var x = rawPolygon[0][0];
-    var y = rawPolygon[0][1];
+        var x = rawPolygon[k][0];
+        var y = rawPolygon[k][1];
 
-    var cosTheta = Math.cos(theta);
-    var sinTheta = Math.sin(theta);
+        var cosTheta = Math.cos(theta);
+        var sinTheta = Math.sin(theta);
     
-    x = x * cosTheta - y * sinTheta;
-    x = x * sinTheta + y * cosTheta;
+        x = x * cosTheta - y * sinTheta;
+        x = x * sinTheta + y * cosTheta;
 
-    loopPolygon.push({
-        x: ((1250) + x) * 500,
-        y: (((sh/2)-250) + y) * 500
-    });
+        loopPolygon.push({
+            x: (1250) + (x * 500),
+            y: ((sh/2)-250) + (y * 500)
+        });
+    }
 }
 var loop = 
 Matter.Bodies.fromVertices(
     1250, (sh/2)-250,
     loopPolygon, {
     isStatic: true,
-    mass: 20,
     render: {
         fillStyle: "rgba(255,255,255,0)",
         strokeStyle: "#fff",
         lineWidth: 2,
     }
 });
+for (var k in loop parts) {
+   loop.parts[k].render.fillStyle = 
+   randomColor();
+}
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
