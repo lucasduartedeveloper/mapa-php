@@ -260,7 +260,7 @@ for (var k in rawPolygon) {
 }
 var sign = 
 Matter.Bodies.fromVertices(
-    (-700+50), (sh/2)-100,
+    (-350+50), (sh/2)-100,
     signPolygon, {
     isStatic: false,
     mass: 20,
@@ -292,7 +292,7 @@ var rawPolygon = [
     [-0, +1]
 ];
 var loopPolygon = [];
-for (var a = 0; a < 270; a+=45) {
+for (var a = 0; a < 270; a+=10) {
     for (var k in rawPolygon) {
         var theta = a * (Math.PI/180);
 
