@@ -323,7 +323,7 @@ function matterJs() {
         rearWheelShockAbsorber,
         frontWheel,
         frontWheelShockAbsorber,
-        sign, planet
+        sign, planet, loop
     ]);
 
     render.mouse = mouse;
@@ -378,27 +378,13 @@ function stopCamera() {
 $(document).ready(function() {
     matterJs();
     startCamera("environment");
-    music.play();
+    //music.play();
 
     setInterval(function() {
-        if (accelerating) {
-           Matter.Body.set(
-           rearWheel, "angularVelocity", 1);
-        }
-
         var vol = Math.abs(gyro.accX/4.9);
         vol = vol > 1 ? 1 : vol;
         //vol < 0 ? 0 : vol;
         music.volume = vol;
-
-        if (motion) {
-            engine.gravity.x = (gyro.accX / 9.8)*-1;
-            engine.gravity.y = (gyro.accY / 9.8);
-        }
-        else {
-            engine.gravity.x = 0;
-            engine.gravity.y = 1;
-        }
 
         var canvas = 
         document.getElementById("camera-canvas");
@@ -509,6 +495,20 @@ Matter.Events.on(engine, "beforeUpdate", function() {
     if (lockCamera) return;
     Render.lookAt(render, bodywork,
     { x: (sw/2) - 125, y: (sh/2) - 87.5 });
+
+    if (accelerating) {
+       Matter.Body.set(
+       rearWheel, "angularVelocity", 1);
+    }
+
+    if (motion) {
+        engine.gravity.x = (gyro.accX / 9.8)*-1;
+        engine.gravity.y = (gyro.accY / 9.8);
+    }
+    else {
+        engine.gravity.x = 0;
+        engine.gravity.y = 1;
+    }
 });
 
 // ---
