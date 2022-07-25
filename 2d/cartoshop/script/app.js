@@ -293,6 +293,7 @@ var rawPolygon = [
 ];
 var loopPolygon = [];
 for (var a = 0; a < 270; a+=10) {
+    var oddVertices = [];
     for (var k in rawPolygon) {
         var theta = a * (Math.PI/180);
 
@@ -305,12 +306,21 @@ for (var a = 0; a < 270; a+=10) {
         x = x * cosTheta - y * sinTheta;
         x = x * sinTheta + y * cosTheta;
 
-        loopPolygon.push({
-            x: (1250) + (x * 500),
-            y: ((sh/2)-250) + (y * 500)
-        });
+        if (k==0) {
+            loopPolygon.push({
+                x: (1250) + (x * 500),
+                y: ((sh/2)-250) + (y * 500)
+            });
+        }
+        else {
+            oddVertices.push({
+                x: (1250) + (x * 500),
+                y: ((sh/2)-250) + (y * 500)
+            });
+        }
     }
 }
+loopPolygon.push(oddVertices);
 var loop = 
 Matter.Bodies.fromVertices(
     1250, (sh/2)-250,
