@@ -571,6 +571,6 @@ Matter.Events.on(engine, "beforeUpdate", function() {
 
     if (accelerating) {
        Matter.Body.set(
-       rearWheel, "angularVelocity", 1);
+       rearWheel, "angularVelocity", 10);
     }
 });
