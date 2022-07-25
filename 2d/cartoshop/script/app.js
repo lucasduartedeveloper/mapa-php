@@ -386,6 +386,15 @@ $(document).ready(function() {
         //vol < 0 ? 0 : vol;
         music.volume = vol;
 
+        if (motion) {
+            engine.gravity.x = (gyro.accX / 9.8)*-1;
+            engine.gravity.y = (gyro.accY / 9.8);
+        }
+        else {
+            engine.gravity.x = 0;
+            engine.gravity.y = 1;
+        }
+
         var canvas = 
         document.getElementById("camera-canvas");
         var context = canvas.getContext("2d");
@@ -499,15 +508,6 @@ Matter.Events.on(engine, "beforeUpdate", function() {
     if (accelerating) {
        Matter.Body.set(
        rearWheel, "angularVelocity", 1);
-    }
-
-    if (motion) {
-        engine.gravity.x = (gyro.accX / 9.8)*-1;
-        engine.gravity.y = (gyro.accY / 9.8);
-    }
-    else {
-        engine.gravity.x = 0;
-        engine.gravity.y = 1;
     }
 });
 
