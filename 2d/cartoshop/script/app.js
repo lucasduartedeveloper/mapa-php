@@ -1,17 +1,3 @@
-function polygonCenter(p) {
-    var minX = p[0].x;
-    var minY = p[0].y;
-    var maxX = p[0].x;
-    var maxY = p[0].y;
-    for (var k in p) {
-        minX = p[k].x < minX ? p[k].x : minX;
-        minY = p[k].y < minY ? p[k].y : minY;
-        maxX = p[k].x > maxX ? p[k].x : maxX;
-        maxY = p[k].y > maxY ? p[k].y : maxY;
-    }
-    return { x: (maxX-minX)/2, y: (maxY-minY)/2 };
-}
-
 var music = new Audio("audio/sou-vitorioso.mp3");
 
 var sw = window.innerWidth;
@@ -302,15 +288,6 @@ Matter.Constraint.create({
      }
 });
 
-function rotate(cx, cy, x, y, angle) {
-    var radians = (Math.PI / 180) * angle,
-        cos = Math.cos(radians),
-        sin = Math.sin(radians),
-        nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
-        ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
-    return { x: 2450+nx, y: (sh/2)-500+ny };
-}
-
 // Loop
 var rawPolygon = [
     [-0, +0.9], 
@@ -395,18 +372,6 @@ function matterJs() {
     Runner.run(runner, engine);
 }
 
-var cameraKey = false;
-$("#key").click(function() {
-    if (cameraKey) {
-        stopCamera();
-        cameraKey = false;
-    }
-    else {
-        startCamera();
-        cameraKey = true;
-    }
-});
-
 $(document).ready(function() {
     matterJs();
     log("log", "$(document).ready(...");
@@ -440,95 +405,6 @@ $(document).ready(function() {
             vh, vw);
         }
     }, 100);
-});
-
-var borders = true;
-var wireframes = false;
-$("#borders").click(function() {
-    borders = !wireframes ?
-    !borders : borders;
-    wireframes = !borders ?
-    !wireframes : wireframes;
-    render.options.wireframes = wireframes;
-
-   // X
-   // A B C D
-   // borders = false; wireframes = true;
-   // borders = true; wireframes = false;
-   // borders = false; wireframes = false;
-   // borders = true; wireframes = true;
-
-    bodywork
-    .render.lineWidth =  borders ? 2 : 0;
-    for (var k in bodywork.parts) {
-        bodywork.parts[k]
-        .render.lineWidth =  borders ? 2 : 0;
-    }
-
-    paintingConstraintA
-    .render.anchors =  borders;
-    paintingConstraintB
-    .render.anchors =  borders;
-    paintingConstraintZ
-    .render.anchors =  borders;
-    crankshaft
-    .render.anchors =  borders;
-    rearWheelShockAbsorber
-    .render.anchors =  borders;
-    frontWheelShockAbsorber
-    .render.anchors =  borders;
-
-    paintingConstraintA
-    .render.lineWidth =  borders ? 2 : 0;
-    paintingConstraintB
-    .render.lineWidth =  borders ? 2 : 0;
-    paintingConstraintZ
-    .render.lineWidth =  borders ? 2 : 0;
-    crankshaft
-    .render.lineWidth =  borders ? 2 : 0;
-    rearWheelShockAbsorber
-    .render.lineWidth =  borders ? 2 : 0;
-    frontWheelShockAbsorber
-    .render.lineWidth =  borders ? 2 : 0;
-});
-
-var accelerating = false;
-$("#power").on("touchstart", function() {
-    accelerating = true;
-});
-$("#power").on("touchend", function() {
-    accelerating = false;
-});
-
-$("#cut").click(function() {
-    var canvas = document
-    .getElementById("camera-canvas");
-    var context = canvas.getContext("2d");
-
-    context
-    .globalCompositeOperation='destination-in';
-    context.beginPath();
-    context.arc(128/2,128/2,128/2,0,Math.PI*2);
-    context.closePath();
-    context.fill();
- 
-    rearWheel.render.sprite.texture =
-    canvas.toDataURL();
-    rearWheel.render.sprite.xScale = 0.39;
-    rearWheel.render.sprite.yScale = 0.39;
-
-    frontWheel.render.sprite.texture =
-    canvas.toDataURL();
-    frontWheel.render.sprite.xScale = 0.39;
-    frontWheel.render.sprite.yScale = 0.39;
-});
-
-var lockCamera = false;
-Matter.Events.on(mouseConstraint, "mousedown", function() {
-    lockCamera = true;
-});
-Matter.Events.on(mouseConstraint, "mouseup", function() {
-    lockCamera = false;
 });
 
 Matter.Events.on(engine, "beforeUpdate", function() {
