@@ -320,7 +320,7 @@ for (var a = 0; a < 270; a+=10) {
         }
     }
 }
-loopPolygon.push(oddVertices.reverse());
+loopPolygon.concat(oddVertices.reverse());
 var loop = 
 Matter.Bodies.fromVertices(
     1250, (sh/2)-250,
