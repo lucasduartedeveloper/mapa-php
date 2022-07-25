@@ -320,8 +320,8 @@ for (var a = 0; a < 270; a+=5) {
         if (k % 2 == 0) {
             loopPolygon.push(
                 rotate(0, 0,
-                rawPolygon[k][0]*100, 
-                rawPolygon[k][1]*100, a)
+                rawPolygon[k][0]*250, 
+                rawPolygon[k][1]*250, a)
             );
         }
         else {
