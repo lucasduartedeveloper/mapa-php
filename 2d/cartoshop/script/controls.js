@@ -10,14 +10,6 @@ $("#key").click(function() {
     }
 });
 
-var lockCamera = false;
-Matter.Events.on(mouseConstraint, "mousedown", function() {
-    lockCamera = true;
-});
-Matter.Events.on(mouseConstraint, "mouseup", function() {
-    lockCamera = false;
-});
-
 var borders = true;
 var wireframes = false;
 $("#borders").click(function() {
@@ -97,4 +89,12 @@ $("#cut").click(function() {
     canvas.toDataURL();
     frontWheel.render.sprite.xScale = 0.39;
     frontWheel.render.sprite.yScale = 0.39;
+});
+
+var lockCamera = false;
+Matter.Events.on(mouseConstraint, "mousedown", function() {
+    lockCamera = true;
+});
+Matter.Events.on(mouseConstraint, "mouseup", function() {
+    lockCamera = false;
 });
