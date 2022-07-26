@@ -10,18 +10,19 @@ $style = [
 $script = [
     0 => "thirdpart/poly-decomp.js",
     1 => "thirdpart/matter.js",
-    2 => "websocket.js",
-    3 => "debug.js",
-    4 => "audio-helper.js",
-    5 => "camera-helper.js",
-    6 => "color-helper.js",
-    7 => "gyro-helper.js",
-    8 => "image-helper.js",
-    9 => "polygon-helper.js",
-    10 => "json-helper.js",
-    11 => "controls.js",
-    12 => "2d-objects.js",
-    13 => "app.js"
+    2 => "debug.js",
+    3 => "heroku.js",
+    4 => "websocket.js",
+    5 => "audio-helper.js",
+    6 => "camera-helper.js",
+    7 => "color-helper.js",
+    8 => "gyro-helper.js",
+    9 => "image-helper.js",
+    10 => "polygon-helper.js",
+    11 => "json-helper.js",
+    12 => "controls.js",
+    13 => "2d-objects.js",
+    14 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
@@ -93,7 +94,8 @@ echo "\n";
 
 <p id="version-info">
      <span>
-     LONDRINA 2D v0
+     LONDRINA 2D 
+     <span id="heroku-version">v0</span>
      </span>
      <br>
      <span id="server-info">
