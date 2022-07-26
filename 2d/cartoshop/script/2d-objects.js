@@ -95,9 +95,9 @@ Bodies.fromVertices(
         lineWidth: 2,
     }
 });
-log("bounds-before", bodywork.bounds);
+log("bounds-before", bodywork.bounds.min.x);
 polygonFixPosition(bodywork, car.position);
-log("bounds-after", bodywork.bounds);
+log("bounds-after", bodywork.bounds.min.x);
 
 var painting = 
 Bodies.rectangle(
