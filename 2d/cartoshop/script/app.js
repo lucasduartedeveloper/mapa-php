@@ -42,7 +42,7 @@ $(document).ready(function() {
                  frontWheelShockAbsorberA,
                  frontWheelShockAbsorberB : 
                  frontWheelShockAbsorberB
-            });
+            })
         );
     }, 100);
 
