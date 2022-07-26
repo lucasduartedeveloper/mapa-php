@@ -30,10 +30,10 @@ var car = {
      wheel: "img/wheel_18.png"
   },
   width: 250,
-  height: 100,
+  height: 200,
   wheelSize: 50,
-  rearWheel: { x: 50, y: 50 },
-  frontWheel: { x: 200, y: 50 }
+  rearWheel: { x: 50, y: 150 },
+  frontWheel: { x: 200, y: 150 }
 };
 
 var canvas = document.getElementById("matter-js");
@@ -91,7 +91,7 @@ Bodies.fromVertices(
 
 var painting = 
 Bodies.rectangle(
-    car.width, car.height-65, //
+    (sw/2), (sh/2)-65, //
     250, 100, {
     isSensor: true,
     isStatic: false,

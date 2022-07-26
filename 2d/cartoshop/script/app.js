@@ -28,7 +28,7 @@ function matterJs() {
     Render.run(render);
     
     // create runner
-    var runner = Runner.create();
+    //var runner = Runner.create();
 
     // run the engine
     //Runner.run(runner, engine);
@@ -134,6 +134,7 @@ Matter.Events.on(engine, "beforeUpdate", function() {
 
 // Test
 window.test = function() {
+    var runner = Runner.create();
     Runner.run(runner, engine);
     return;
     //-- Annotations
