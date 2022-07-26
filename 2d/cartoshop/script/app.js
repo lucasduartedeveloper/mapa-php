@@ -154,13 +154,20 @@ window.test = function() {
     //-- Annotations
     accelerating = true;
     motion = false;
-    Matter.Body.set(bodywork,"mass",300);
-    Matter.Body.set(rearWheel,"mass",50);
-    Matter.Body.set(rearWheel,"friction",1);
-    Matter.Body.set(rearWheel,"frictionStatic",10);
-    Matter.Body.set(frontWheel,"mass",50);
-    Matter.Body.set(frontWheel,"friction",1);
-    Matter.Body.set(rearWheel,"frictionStatic",10);
+    Matter.Body.set(bodywork,
+    "mass", car.mass);
+    Matter.Body.set(rearWheel,
+    "mass", car.wheels.mass);
+    Matter.Body.set(rearWheel,
+    "friction", car.wheels.friction);
+    Matter.Body.set(rearWheel,
+    "frictionStatic",car.wheels.frictionStatic);
+    Matter.Body.set(frontWheel, 
+    "mass", car.wheels.mass);
+    Matter.Body.set(frontWheel, 
+    "friction", car.wheels.friction);
+    Matter.Body.set(rearWheel,
+    "frictionStatic", car.wheels.frictionStatic);
     Matter.Body.set(rearWheelPivot,
     "stiffness",0.5);
     Matter.Body.set(frontWheelPivot,

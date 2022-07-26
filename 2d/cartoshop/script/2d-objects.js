@@ -95,7 +95,6 @@ Bodies.fromVertices(
     car.position.x, car.position.y,
     bodyworkPolygon, {
     isStatic: false,
-    mass: car.mass,
     collisionFilter: {
         category: objectCategory,
         //mask: scenarioCategory | objectCategory
@@ -174,9 +173,6 @@ Bodies.circle(
     (sh/2) - (car.wheels.size/2), 
     car.wheels.size/2, {
     isStatic: false,
-    mass: car.wheels.mass,
-    //friction: car.wheels.friction,
-    //frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
@@ -199,9 +195,6 @@ Bodies.circle(
     car.position.y + car.wheels.rear.y, 
     car.wheels.size/2, {
     isStatic: false,
-    mass: car.wheels.mass,
-    //friction: car.wheels.friction,
-    //frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
@@ -224,9 +217,6 @@ Bodies.circle(
     car.position.y + car.wheels.front.y, 
     car.wheels.size/2, {
     isStatic: false,
-    mass: car.wheels.mass,
-    //friction: car.wheels.friction,
-    //frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
