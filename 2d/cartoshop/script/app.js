@@ -84,7 +84,7 @@ $(document).ready(function() {
         }
 
         if (accelerating) {
-            fuel -= 1;
+            fuel -= 5;
             fuel = fuel < 0 ? 0 : fuel;
             $("#fuel-ammount").css("width", (fuel/2)+"vw");
         }
