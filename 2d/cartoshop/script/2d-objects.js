@@ -413,6 +413,52 @@ for (var k in loop.parts) {
    randomColor();
 }
 
+// Loop
+var rawPolygon = [
+    [-0, +0.9], 
+    [-0, +1]
+];
+var loopPolygon = [];
+var oddVertices = [];
+for (var a = -90; a < 90; a+=5) {
+    for (var k in rawPolygon) {
+        if (k % 2 == 0) {
+            loopPolygon.push(
+                rotate(0, 0,
+                rawPolygon[k][0]*1000, 
+                rawPolygon[k][1]*1000, a)
+            );
+        }
+        else {
+            oddVertices.push(
+                rotate(0, 0,
+                rawPolygon[k][0]*1000,
+                rawPolygon[k][1]*1000, a)
+            );
+        }
+    }
+}
+loopPolygon =
+loopPolygon.concat(oddVertices.reverse());
+var loop1 = 
+Matter.Bodies.fromVertices(
+    2450, (sh/2),
+    loopPolygon, {
+    isStatic: true,
+    collisionFilter: {
+        category: scenarioCategory
+    },
+    render: {
+        fillStyle: "rgba(255,255,255,0)",
+        strokeStyle: "#fff",
+        lineWidth: 2,
+    }
+});
+for (var k in loop.parts) {
+   loop.parts[k].render.fillStyle = 
+   randomColor();
+}
+
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
 Matter.MouseConstraint.create(engine, {
