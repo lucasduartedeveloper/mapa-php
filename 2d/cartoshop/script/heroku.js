@@ -36,6 +36,7 @@ $.ajax({
              heroku_version =
              xhr.responseText.substring(n +9, n+14); 
              if (heroku_buildStatus == "pending") 
+             heroku_version += "*";
              setTimeout(() => {
                  location.reload();
              }, 15000);
