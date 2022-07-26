@@ -370,6 +370,7 @@ Matter.MouseConstraint.create(engine, {
 // Grid
 var grid = [];
 for (var n = -150; n < 150; n++) {
+    return;
     grid.push(
        Bodies.rectangle(
        (sw/2), 
@@ -399,7 +400,7 @@ for (var n = -150; n < 150; n++) {
 
 function matterJs() {
     // add all of the bodies to the world
-    Composite.add(engine.world, grid);
+    //Composite.add(engine.world, grid);
 
     Composite.add(engine.world, [
         painting, 
