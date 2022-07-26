@@ -29,7 +29,7 @@ html, body {
     text-align: left;
     position: fixed;
     left: 10px;
-    bottom: 40px;
+    bottom: 60px;
     margin: 0px;
     z-index: 9999;
 }
@@ -67,7 +67,7 @@ html, body {
 }
 
 #controls i {
-   margin: 20px 0px;
+   margin: 20px;
 }
 
 /* */
