@@ -150,13 +150,33 @@ Matter.Constraint.create({
     }
 });
 
+var testWheel =
+Bodies.circle(((sw/2), 
+    sh/2-25, 25, {
+    isStatic: false,
+    friction: 1,
+    collisionFilter: {
+        mask: wheelCategory
+    },
+    render: {
+        sprite: {
+            texture: "img/wheel_18.png",
+            xScale: 0.069, //0.476,
+            yScale: 0.069 //0.476
+        },
+        fillStyle: "#fff",
+        lineWidth: 2,
+        strokeStyle: "#000" 
+    }
+});
+
 var rearWheel =
 Bodies.circle(((sw/2)-(0.55*125))-28, 
     sh/2-25, 25, {
     isStatic: false,
     friction: 1,
     collisionFilter: {
-        mask: bodyworkCategory
+        mask: wheelCategory
     },
     render: {
         sprite: {
@@ -175,6 +195,9 @@ Bodies.circle(((sw/2)+(0.38*125))+28,
     sh/2-25, 25, {
     isStatic: false,
     friction: 1,
+    collisionFilter: {
+        mask: wheelCategory
+    },
     render: {
         sprite: {
             texture: "img/wheel_18.png",
