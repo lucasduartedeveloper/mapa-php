@@ -89,7 +89,7 @@ Bodies.fromVertices(
     }
 });
 polygonFixPosition(bodywork,
-{ x: (sw/2), y: (sh/2)-65) });
+{ x: (sw/2), y: (sh/2)-65 });
 
 var painting = 
 Bodies.rectangle(
