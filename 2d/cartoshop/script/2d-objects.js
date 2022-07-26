@@ -393,3 +393,67 @@ Matter.MouseConstraint.create(engine, {
         render: {visible: true}
     }
 });
+
+var canvas = document.getElementById("matter-js");
+canvas.width = sw;
+canvas.height = sh;
+
+// module aliases
+var 
+    Common = Matter.Common,
+    Engine = Matter.Engine,
+    Render = Matter.Render,
+    Runner = Matter.Runner,
+    Bodies = Matter.Bodies,
+    Composite = Matter.Composite;
+    
+Common.setDecomp(decomp);
+
+// create an engine
+var engine = Engine.create();
+    
+// create a renderer
+var render = Render.create({
+    engine: engine,
+    canvas: canvas,
+    options: {
+         width: sw,
+         height: sh,
+         wireframes: false
+         //showPerformance: true
+    }
+});
+
+function matterJs() {
+    // add all of the bodies to the world
+    Composite.add(engine.world, [
+        painting, 
+        paintingConstraintA,
+        paintingConstraintB, 
+        paintingConstraintZ, 
+        bodywork,
+        crankshaft, 
+        rearWheel,
+        rearWheelShockAbsorberA,
+        rearWheelShockAbsorberB,
+        frontWheel,
+        frontWheelShockAbsorberA,
+        frontWheelShockAbsorberB,
+        sign,
+        signConstraint,
+        planet,
+        line, loop
+    ]);
+
+    render.mouse = mouse;
+    Composite.add(engine.world, mouseConstraint);
+
+    // run the renderer
+    Render.run(render);
+    
+    // create runner
+    var runner = Runner.create();
+
+    // run the engine
+    Runner.run(runner, engine);
+}
