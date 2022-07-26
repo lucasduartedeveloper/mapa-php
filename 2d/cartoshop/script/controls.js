@@ -107,7 +107,7 @@ $("#cut").click(function() {
     frontWheel.render.sprite.yScale = 0.39;
 });
 
-$("#run-test").click(function() {
+$("#test-run").click(function() {
     test();
 });
 
