@@ -1,5 +1,3 @@
-var music = new Audio("audio/sou-vitorioso.mp3");
-
 var sw = window.innerWidth;
 var sh = window.innerHeight;
 var ar = sw/sh;
