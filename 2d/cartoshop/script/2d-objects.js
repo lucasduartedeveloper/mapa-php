@@ -175,8 +175,8 @@ Bodies.circle(
     car.wheels.size/2, {
     isStatic: false,
     mass: car.wheels.mass,
-    friction: car.wheels.friction,
-    frictionStatic: car.wheels.frictionStatic,
+    //friction: car.wheels.friction,
+    //frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
@@ -200,8 +200,8 @@ Bodies.circle(
     car.wheels.size/2, {
     isStatic: false,
     mass: car.wheels.mass,
-    friction: car.wheels.friction,
-    frictionStatic: car.wheels.frictionStatic,
+    //friction: car.wheels.friction,
+    //frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
