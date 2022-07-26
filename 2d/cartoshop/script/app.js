@@ -50,22 +50,22 @@ $(document).ready(function() {
         var msg = e.data.split("|");
         if (msg[0] == "LONDRINA-2D" &&
             playerId != msg[1]) {
-            log("ws", msg);
+            //log("ws", msg);
 
             if (msg[2] == "CAR-UPD") {
                  var car = JSON.parse(msg[3]);
-                 bodywork = car.bodywork;
-                 crankshaft = car.crankshaft;
-                 rearWheel = car.rearWheel;
-                 frontWheel = car.frontWheel;
-                 rearWheelShockAbsorberA 
-                 = car.rearWheelShockAbsorberA;
-                 rearWheelShockAbsorberB
-                 = car.rearWheelShockAbsorberB;
-                 frontWheelShockAbsorberA
-                 = car.frontWheelShockAbsorberA;
-                 frontWheelShockAbsorberB
-                 = car.frontWheelShockAbsorberB;
+                 setValue(bodywork, car.bodywork)
+                 setValue(crankshaft, car.crankshaft);
+                 setValue(rearWheel, car.rearWheel);
+                 setValue(frontWheel, car.frontWheel);
+                 setValue(rearWheelShockAbsorberA,
+                 car.rearWheelShockAbsorberA);
+                 setValue(rearWheelShockAbsorberB,
+                 car.rearWheelShockAbsorberB);
+                 setValue(frontWheelShockAbsorberA,
+                 car.frontWheelShockAbsorberA);
+                 setValue(frontWheelShockAbsorberB,
+                 car.frontWheelShockAbsorberB);
             }
         }
     };

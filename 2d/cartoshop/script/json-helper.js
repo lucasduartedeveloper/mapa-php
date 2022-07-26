@@ -16,5 +16,9 @@ function bodyToJSON(body) {
     return string;
 }
 
+function setValue(obj, objUpdated) {
+   Object.assign(obj, objUpdated);
+}
+
 // Test
 //bodyToJSON(bodywork);
