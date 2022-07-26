@@ -1,3 +1,5 @@
+var playerId = new Date().getTime();
+
 $(document).ready(function() {
     matterJs();
     log("log", "$(document).ready(...");
@@ -25,7 +27,47 @@ $(document).ready(function() {
             ((vw-128)/2)*-1, 
             vh, vw);
         }
+
+        ws.send("LONDRINA-2D|"+playerId+"|CAR-UPD|"+
+            bodyToJSON({
+                 bodywork : bodywork,
+                 crankshaft : crankshaft,
+                 rearWheel : rearWheel,
+                 frontWheel : frontWheel,
+                 rearWheelShockAbsorberA : 
+                 rearWheelShockAbsorberA,
+                 rearWheelShockAbsorberB : 
+                 rearWheelShockAbsorberB,
+                 frontWheelShockAbsorberA : 
+                 frontWheelShockAbsorberA,
+                 frontWheelShockAbsorberB : 
+                 frontWheelShockAbsorberB
+            });
+        );
     }, 100);
+
+    ws.onmessage = function(e) {
+        var msg = e.data.split("|");
+        if (msg[0] == "LONDRINA-2D" &&
+            playerId != msg[1]) {
+            log("ws", msg);
+
+            if (msg[2] == "CAR-UPD") {
+                 var car = JSON.parse(msg[3]);
+                 bodywork = car.bodywork;
+                 crankshaft = car.crankshaft;
+                 rearWheel = car.rearWheel;
+                 frontWheel = car.frontWheel;
+                 rearWheelShockAbsorberA 
+                 = car.rearWheelShockAbsorberA;
+                 rearWheelShockAbsorberB
+                 = car.rearWheelShockAbsorberB;
+                 frontWheelShockAbsorberA
+                 = car.frontWheelShockAbsorberA;
+                 frontWheelShockAbsorberB
+                 = car.frontWheelShockAbsorberB;
+            }
+        }
 });
 
 Matter.Events.on(engine, "beforeUpdate", function() {
