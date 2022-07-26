@@ -46,7 +46,7 @@ $.ajax({
     }
     xhr.send();
 });
-
+console.log("0123456789");
 // Get build state
 // If newer version available
 // Update all clients
