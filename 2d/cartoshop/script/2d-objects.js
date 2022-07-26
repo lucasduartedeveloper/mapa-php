@@ -119,6 +119,7 @@ Bodies.rectangle(
         strokeStyle: "#ccc",
     }
 });
+log("bounds-before", bodywork.bounds.min.x);
 
 var paintingConstraintA = 
 Matter.Constraint.create({
