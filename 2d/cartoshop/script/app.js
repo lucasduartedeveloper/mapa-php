@@ -3,6 +3,40 @@ var playerId = new Date().getTime();
 engine.gravity.x = 0;
 engine.gravity.y = 0;
 
+function matterJs() {
+    // add all of the bodies to the world
+    Composite.add(engine.world, [
+        painting, 
+        paintingConstraintA,
+        paintingConstraintB, 
+        paintingConstraintZ, 
+        bodywork,
+        crankshaft, 
+        rearWheel,
+        rearWheelShockAbsorberA,
+        rearWheelShockAbsorberB,
+        frontWheel,
+        frontWheelShockAbsorberA,
+        frontWheelShockAbsorberB,
+        sign,
+        signConstraint,
+        planet,
+        line, loop
+    ]);
+
+    render.mouse = mouse;
+    Composite.add(engine.world, mouseConstraint);
+
+    // run the renderer
+    Render.run(render);
+    
+    // create runner
+    var runner = Runner.create();
+
+    // run the engine
+    //Runner.run(runner, engine);
+}
+
 $(document).ready(function() {
     matterJs();
     log("log", "$(document).ready(...");
@@ -109,7 +143,7 @@ Matter.Body.set(bodywork,"mass",500);
 Matter.Body.set(rearWheel,"mass",200);
 Matter.Body.set(rearWheel,"friction",1);
 Matter.Body.set(frontWheel,"mass",200);
-Matter.Body.set(frontWheel,"friction",200);
+Matter.Body.set(frontWheel,"friction",1);
 Matter.Body.set(rearWheelShockAbsorberA,
 "stiffness",0.5);
 Matter.Body.set(rearWheelShockAbsorberB,

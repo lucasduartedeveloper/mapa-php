@@ -366,37 +366,3 @@ Matter.MouseConstraint.create(engine, {
         render: {visible: true}
     }
 });
-
-function matterJs() {
-    // add all of the bodies to the world
-    Composite.add(engine.world, [
-        painting, 
-        paintingConstraintA,
-        paintingConstraintB, 
-        paintingConstraintZ, 
-        bodywork,
-        crankshaft, 
-        rearWheel,
-        rearWheelShockAbsorberA,
-        rearWheelShockAbsorberB,
-        frontWheel,
-        frontWheelShockAbsorberA,
-        frontWheelShockAbsorberB,
-        sign,
-        signConstraint,
-        planet,
-        line, loop
-    ]);
-
-    render.mouse = mouse;
-    Composite.add(engine.world, mouseConstraint);
-
-    // run the renderer
-    Render.run(render);
-    
-    // create runner
-    var runner = Runner.create();
-
-    // run the engine
-    Runner.run(runner, engine);
-}
