@@ -30,10 +30,9 @@ $("#borders").click(function() {
 
    // X
    // A B C D
-   // borders = false; wireframes = true;
    // borders = true; wireframes = false;
+   // borders = false; wireframes = true;
    // borders = false; wireframes = false;
-   // borders = true; wireframes = true;
 
     bodywork
     .render.lineWidth =  borders ? 2 : 0;
@@ -43,21 +42,21 @@ $("#borders").click(function() {
     }
 
     paintingConstraintA
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     paintingConstraintB
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     paintingConstraintZ
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     crankshaft
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     rearWheelShockAbsorberA
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     rearWheelShockAbsorberB
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     frontWheelShockAbsorberA
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
     frontWheelShockAbsorberB
-    .render.anchors =  borders;
+    .render.anchors =  borders || wireframes;
 
     paintingConstraintA
     .render.lineWidth =  borders ? 2 : 0;
