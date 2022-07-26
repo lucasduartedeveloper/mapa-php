@@ -125,7 +125,7 @@ Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: -25, y: -25 },
     bodyB: bodywork,
-    pointB: { x: 25, y: 25 },
+    pointB: { x: car.centre.x+25, y: car.centre.y+25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -139,7 +139,7 @@ Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: 25, y: -25 },
     bodyB: bodywork,
-    pointB: { x: -25, y: 25 },
+    pointB: { x: car.centre.x-25, y: car.centre.y+25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -153,7 +153,7 @@ Matter.Constraint.create({
     bodyA: painting,
     pointA: { x: -25, y: 25 },
     bodyB: bodywork,
-    pointB: { x: 25, y: 25 },
+    pointB: { x: car.centre.x+25, y: car.centre.y+25 },
     stiffness: 0,
     render: {
         strokeStyle: '#fff',
@@ -187,8 +187,8 @@ Bodies.circle(
 
 var rearWheel =
 Bodies.circle(
-    car.position.x + car.rearWheel.x, 
-    car.position.y + car.rearWheel.y, 
+    car.centre.x + car.position.x + car.rearWheel.x, 
+    car.centre.y + car.position.y + car.rearWheel.y, 
     car.wheelSize/2, {
     isStatic: false,
     friction: 1,
@@ -210,8 +210,8 @@ Bodies.circle(
 
 var frontWheel =
 Bodies.circle(
-    car.position.x + car.frontWheel.x, 
-    car.position.y + car.frontWheel.y, 
+    car.centre.x + car.position.x + car.frontWheel.x, 
+    car.centre.y + car.position.y + car.frontWheel.y, 
     car.wheelSize/2, {
     isStatic: false,
     friction: 1,
@@ -247,7 +247,10 @@ Matter.Constraint.create({
 var rearWheelPivot = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: car.rearWheel.x, y: car.rearWheel.y },
+     pointA: {
+         x: car.centre.x + car.rearWheel.x, 
+         y: car.centre.y + car.rearWheel.y
+     },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
@@ -261,7 +264,10 @@ Matter.Constraint.create({
 var frontWheelPivot = 
 Matter.Constraint.create({
      bodyA: bodywork,
-     pointA: { x: car.frontWheel.x, y: car.frontWheel.y },
+     pointA: {
+        x: car.centre.x + car.frontWheel.x, 
+        y: car.centre.y + car.frontWheel.y 
+     },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
