@@ -96,8 +96,7 @@ Bodies.fromVertices(
         lineWidth: 2,
     }
 });
-polygonFixPosition(bodywork,
-{ x: (sw/2), y: (sh/2) - car.bottom });
+polygonFixPosition(bodywork, car.position);
 
 var painting = 
 Bodies.rectangle(
