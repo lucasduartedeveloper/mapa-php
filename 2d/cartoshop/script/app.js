@@ -68,6 +68,7 @@ $(document).ready(function() {
                  = car.frontWheelShockAbsorberB;
             }
         }
+    };
 });
 
 Matter.Events.on(engine, "beforeUpdate", function() {
