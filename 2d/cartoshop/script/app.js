@@ -1,8 +1,5 @@
 var playerId = new Date().getTime();
 
-engine.gravity.x = 0;
-engine.gravity.y = 0;
-
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
@@ -43,8 +40,8 @@ $(document).ready(function() {
 
     setInterval(function() {
         if (motion) { 
-            //engine.gravity.x = (gyro.accX / 9.8)*-1;
-            //engine.gravity.y = (gyro.accY / 9.8);
+            engine.gravity.x = (gyro.accX / 9.8)*-1;
+            engine.gravity.y = (gyro.accY / 9.8);
              
         }
         else {
@@ -137,19 +134,22 @@ Matter.Events.on(engine, "beforeUpdate", function() {
 
 // Test
 window.test = function() {
-accelerating = true;
-motion = false;
-Matter.Body.set(bodywork,"mass",500);
-Matter.Body.set(rearWheel,"mass",200);
-Matter.Body.set(rearWheel,"friction",1);
-Matter.Body.set(frontWheel,"mass",200);
-Matter.Body.set(frontWheel,"friction",1);
-Matter.Body.set(rearWheelShockAbsorberA,
-"stiffness",0.5);
-Matter.Body.set(rearWheelShockAbsorberB,
-"stiffness",0.5);
-Matter.Body.set(frontWheelShockAbsorberA,
-"stiffness",0.5);
-Matter.Body.set(frontWheelShockAbsorberB,
-"stiffness",0.5);
+    Runner.run(runner, engine);
+    return;
+    //-- Annotations
+    accelerating = true;
+    motion = false;
+    Matter.Body.set(bodywork,"mass",500);
+    Matter.Body.set(rearWheel,"mass",200);
+    Matter.Body.set(rearWheel,"friction",1);
+    Matter.Body.set(frontWheel,"mass",200);
+    Matter.Body.set(frontWheel,"friction",1);
+    Matter.Body.set(rearWheelShockAbsorberA,
+    "stiffness",0.5);
+    Matter.Body.set(rearWheelShockAbsorberB,
+    "stiffness",0.5);
+    Matter.Body.set(frontWheelShockAbsorberA,
+    "stiffness",0.5);
+    Matter.Body.set(frontWheelShockAbsorberB,
+    "stiffness",0.5);
 }

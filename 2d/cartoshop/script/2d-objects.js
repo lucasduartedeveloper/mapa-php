@@ -28,7 +28,7 @@ var car = {
   textures: { 
      chassis: "img/camaro.png",
      wheel: "img/wheel_18.png"
-  }
+  },
   width: 250,
   height: 100,
   wheelSize: 50,
