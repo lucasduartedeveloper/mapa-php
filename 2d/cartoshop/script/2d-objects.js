@@ -79,7 +79,6 @@ for (var k in car.polygon) {
         y: (sh/2) + car.polygon[k][1] * (car.height/2)
     });
 }
-var center = polygonCenter(bodyworkPolygon);
 var bodywork = 
 Bodies.fromVertices(
     car.position.x, car.position.y,
