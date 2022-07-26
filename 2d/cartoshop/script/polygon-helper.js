@@ -25,7 +25,7 @@ function polygonFixPosition(body, pos) {
     var width = body.bounds.max.x - body.bounds.min.x;
     var height = body.bounds.max.y - body.bounds.min.y;
     var xOffset = (pos.x - (width/2)) - body.bounds.min.x;
-    varyOffset = (pos.y - (height/2)) - body.bounds.min.y;
+    var yOffset = (pos.y - (height/2)) - body.bounds.min.y;
     pos.x += xOffset;
     pos.y += yOffset;
     Matter.Body.setPosition(body, pos);
