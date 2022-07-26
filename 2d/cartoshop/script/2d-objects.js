@@ -9,7 +9,7 @@ var p2m = 1/100;
 
 // Collision categories
 var bodyworkCategory = 0x0001,
-       wheelCategory = 0x0002,
+       wheelCategory = 0x0002;
 
 var car = {
   name: "Camaro",
