@@ -3,11 +3,6 @@ $(document).ready(function() {
     log("log", "$(document).ready(...");
 
     setInterval(function() {
-        var vol = Math.abs(gyro.accX/4.9);
-        vol = vol > 1 ? 1 : vol;
-        //vol < 0 ? 0 : vol;
-        music.volume = vol;
-
         if (motion) { 
             engine.gravity.x = (gyro.accX / 9.8)*-1;
             engine.gravity.y = (gyro.accY / 9.8);
