@@ -401,36 +401,6 @@ Matter.MouseConstraint.create(engine, {
     }
 });
 
-var canvas = document.getElementById("matter-js");
-canvas.width = sw;
-canvas.height = sh;
-
-// module aliases
-var 
-    Common = Matter.Common,
-    Engine = Matter.Engine,
-    Render = Matter.Render,
-    Runner = Matter.Runner,
-    Bodies = Matter.Bodies,
-    Composite = Matter.Composite;
-    
-Common.setDecomp(decomp);
-
-// create an engine
-var engine = Engine.create();
-    
-// create a renderer
-var render = Render.create({
-    engine: engine,
-    canvas: canvas,
-    options: {
-         width: sw,
-         height: sh,
-         wireframes: false
-         //showPerformance: true
-    }
-});
-
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
