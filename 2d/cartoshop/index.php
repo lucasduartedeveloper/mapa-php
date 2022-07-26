@@ -10,16 +10,17 @@ $style = [
 $script = [
     0 => "thirdpart/poly-decomp.js",
     1 => "thirdpart/matter.js",
-    2 => "debug.js",
-    3 => "camera-helper.js",
-    4 => "color-helper.js",
-    5 => "gyro-helper.js",
-    6 => "image-helper.js",
-    7 => "polygon-helper.js",
-    8 => "json-helper.js",
-    9 => "controls.js",
-    10 => "2d-objects.js",
-    11 => "app.js"
+    2 => "websocket.js",
+    3 => "debug.js",
+    4 => "camera-helper.js",
+    5 => "color-helper.js",
+    6 => "gyro-helper.js",
+    7 => "image-helper.js",
+    8 => "polygon-helper.js",
+    9 => "json-helper.js",
+    10 => "controls.js",
+    11 => "2d-objects.js",
+    12 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
