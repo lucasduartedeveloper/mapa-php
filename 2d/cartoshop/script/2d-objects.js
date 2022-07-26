@@ -87,7 +87,7 @@ Bodies.fromVertices(
     mass: 20,
     collisionFilter: {
         category: objectCategory,
-        mask: scenarioCategory | objectCategory
+        //mask: scenarioCategory | objectCategory
     },
     render: {
         fillStyle: "rgba(255,255,255,0)",
