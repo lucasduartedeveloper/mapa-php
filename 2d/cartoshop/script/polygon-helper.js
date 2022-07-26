@@ -22,6 +22,7 @@ function rotate(cx, cy, x, y, angle) {
 }
 
 function polygonFixPosition(body, pos) {
+    log("bounds-before", body.min.x);
     var width = body.bounds.max.x - body.bounds.min.x;
     var height = body.bounds.max.y - body.bounds.min.y;
     var xOffset = (pos.x - (width/2)) - body.bounds.min.x;
@@ -29,6 +30,6 @@ function polygonFixPosition(body, pos) {
     pos.x += xOffset;
     pos.y += yOffset;
     Matter.Body.setPosition(body, pos);
-    console.log("0123456789");
+    log("bounds-after", body.max.x);
     return body;
 }

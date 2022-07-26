@@ -83,6 +83,7 @@ for (var k in car.polygon) {
     });
 }
 var bodywork = 
+polygonFixPosition(
 Bodies.fromVertices(
     car.position.x, car.position.y,
     bodyworkPolygon, {
@@ -97,10 +98,7 @@ Bodies.fromVertices(
         strokeStyle: "#fff",
         lineWidth: 2,
     }
-});
-log("bounds-before", bodywork.bounds.min.x);
-var test = polygonFixPosition(bodywork, car.position);
-log("bounds-after", bodywork.bounds.min.x);
+}), car.position);
 
 var painting = 
 Bodies.rectangle(
