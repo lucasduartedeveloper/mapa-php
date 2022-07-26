@@ -39,9 +39,15 @@ var car = {
   },
   width: 250,
   height: 200,
-  wheelSize: 50,
-  rearWheel: { x: -75, y: 25 },
-  frontWheel: { x: 85, y: 25 }
+  mass: 300,
+  wheels: {
+      size: 50,
+      mass: 50,
+      friction: 1,
+      friction: 10,
+      rear: { x: -75, y: 25 },
+      front: { x: 85, y: 25 }
+  }
 };
 
 var canvas = document.getElementById("matter-js");
@@ -89,7 +95,7 @@ Bodies.fromVertices(
     car.position.x, car.position.y,
     bodyworkPolygon, {
     isStatic: false,
-    mass: 20,
+    mass: car.mass,
     collisionFilter: {
         category: objectCategory,
         //mask: scenarioCategory | objectCategory
@@ -165,10 +171,12 @@ Matter.Constraint.create({
 var testWheel =
 Bodies.circle(
     (sw/2), 
-    (sh/2) - (car.wheelSize/2), 
-    car.wheelSize/2, {
+    (sh/2) - (car.wheels.size/2), 
+    car.wheels.size/2, {
     isStatic: false,
-    friction: 1,
+    mass: car.wheels.mass,
+    friction: car.wheels.friction,
+    frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
@@ -187,11 +195,13 @@ Bodies.circle(
 
 var rearWheel =
 Bodies.circle(
-    car.position.x + car.rearWheel.x, 
-    car.position.y + car.rearWheel.y, 
-    car.wheelSize/2, {
+    car.position.x + car.wheels.rear.x, 
+    car.position.y + car.wheels.rear.y, 
+    car.wheels.size/2, {
     isStatic: false,
-    friction: 1,
+    mass: car.wheels.mass,
+    friction: car.wheels.friction,
+    frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
@@ -210,11 +220,13 @@ Bodies.circle(
 
 var frontWheel =
 Bodies.circle(
-    car.position.x + car.frontWheel.x, 
-    car.position.y + car.frontWheel.y, 
-    car.wheelSize/2, {
+    car.position.x + car.wheels.front.x, 
+    car.position.y + car.wheels.front.y, 
+    car.wheels.size/2, {
     isStatic: false,
-    friction: 1,
+    mass: car.wheels.mass,
+    friction: car.wheels.friction,
+    frictionStatic: car.wheels.frictionStatic,
     collisionFilter: {
         category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
@@ -248,8 +260,8 @@ var rearWheelPivot =
 Matter.Constraint.create({
      bodyA: bodywork,
      pointA: {
-         x: -car.centre.x + car.rearWheel.x, 
-         y: -car.centre.y + car.rearWheel.y
+         x: -car.centre.x + car.wheels.rear.x, 
+         y: -car.centre.y + car.wheels.rear.y
      },
      bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
@@ -265,8 +277,8 @@ var frontWheelPivot =
 Matter.Constraint.create({
      bodyA: bodywork,
      pointA: {
-        x: -car.centre.x + car.frontWheel.x, 
-        y: -car.centre.y + car.frontWheel.y 
+        x: -car.centre.x + car.wheels.front.x, 
+        y: -car.centre.y + car.wheels.front.y 
      },
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },

@@ -154,11 +154,13 @@ window.test = function() {
     //-- Annotations
     accelerating = true;
     motion = false;
-    Matter.Body.set(bodywork,"mass",500);
-    Matter.Body.set(rearWheel,"mass",200);
+    Matter.Body.set(bodywork,"mass",300);
+    Matter.Body.set(rearWheel,"mass",50);
     Matter.Body.set(rearWheel,"friction",1);
-    Matter.Body.set(frontWheel,"mass",200);
+    Matter.Body.set(rearWheel,"frictionStatic",10);
+    Matter.Body.set(frontWheel,"mass",50);
     Matter.Body.set(frontWheel,"friction",1);
+    Matter.Body.set(rearWheel,"frictionStatic",10);
     Matter.Body.set(rearWheelPivot,
     "stiffness",0.5);
     Matter.Body.set(frontWheelPivot,
