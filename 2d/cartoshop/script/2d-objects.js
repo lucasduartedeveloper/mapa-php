@@ -92,7 +92,7 @@ Bodies.fromVertices(
 var painting = 
 Bodies.rectangle(
     (sw/2), (sh/2)-65, //
-    250, 100, {
+    car.width, car.height, {
     isSensor: true,
     isStatic: false,
     render: {
