@@ -44,7 +44,7 @@ var car = {
       size: 50,
       mass: 50,
       friction: 1,
-      friction: 10,
+      frictionStatic: 10,
       rear: { x: -75, y: 25 },
       front: { x: 85, y: 25 }
   }
