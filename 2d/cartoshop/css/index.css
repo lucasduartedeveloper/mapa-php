@@ -29,7 +29,7 @@ html, body {
     text-align: left;
     position: fixed;
     left: 10px;
-    bottom: 10px;
+    bottom: 40px;
     margin: 0px;
     z-index: 9999;
 }
