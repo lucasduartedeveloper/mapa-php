@@ -1,4 +1,5 @@
 var playerId = new Date().getTime();
+var fuel = 100;
 
 function matterJs() {
     // add all of the bodies to the world

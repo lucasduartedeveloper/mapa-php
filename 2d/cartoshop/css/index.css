@@ -70,13 +70,17 @@ html, body {
    margin: 20px 10px;
 }
 
-/* */
-#iframe {
+#fuel {
    position: fixed;
-   width: 80vw;
-   height: 80vh;
-   left: 10vw;
-   top: 10vw;
-   border: 4px black dashed;
-   z-index: 99999;
+   right: 10px;
+   top: 10px;
+   width: 50vw;
+   height: 20px;
+   border: 2px solid white;
+}
+
+#fuel {
+   width: 50vw;
+   height: 20px;
+   background: orange;
 }
