@@ -83,7 +83,7 @@ Bodies.rectangle(
     isStatic: false,
     render: {
         sprite: {
-            texture: "img/newbeetle.png",
+            texture: "img/camaro.png",
             xScale: 0.347,
             yScale: 0.366 
         },
