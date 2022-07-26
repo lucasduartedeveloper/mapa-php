@@ -78,6 +78,7 @@ echo "\n";
 
 <span id="controls">
 <i id="run-test" class="fa-solid fa-play"></i>
+<i id="rocket" class="fa-solid fa-rocket"></i>
 <i id="power" class="fa-solid fa-power-off"></i>
 <i id="borders" class="fa-solid fa-border-all"></i>
 <i id="cut" class="fa-solid fa-scissors"></i>

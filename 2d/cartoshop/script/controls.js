@@ -10,6 +10,12 @@ $("#key").click(function() {
     }
 });
 
+$("#rocket").click(function() {
+    Matter.Body.applyForce(bodywork, 
+    { x: -100, y: 0 },
+    { x: 10, y: 0 });
+})
+
 var borders = true;
 var wireframes = false;
 $("#borders").click(function() {
