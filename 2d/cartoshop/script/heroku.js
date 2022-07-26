@@ -35,11 +35,12 @@ $.ajax({
         if (n > -1) {
              heroku_version =
              xhr.responseText.substring(n +9, n+14); 
-             if (heroku_buildStatus == "pending") 
-             heroku_version += "*";
-             setTimeout(() => {
-                 location.reload();
-             }, 15000);
+             if (heroku_buildStatus == "pending") {
+                 heroku_version += "*";
+                 setTimeout(() => {
+                     location.reload();
+                 }, 15000);
+             }
          }
         $("#heroku-version").text(heroku_version);
     }
