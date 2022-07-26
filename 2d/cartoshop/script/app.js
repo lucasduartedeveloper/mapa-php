@@ -2,6 +2,25 @@ var playerId = new Date().getTime();
 var fuel = 100;
 
 function matterJs() {
+     Matter.Body.set(bodywork,
+    "mass", car.mass);
+    Matter.Body.set(rearWheel,
+    "mass", car.wheels.mass);
+    Matter.Body.set(rearWheel,
+    "friction", car.wheels.friction);
+    Matter.Body.set(rearWheel,
+    "frictionStatic",car.wheels.frictionStatic);
+    Matter.Body.set(frontWheel, 
+    "mass", car.wheels.mass);
+    Matter.Body.set(frontWheel, 
+    "friction", car.wheels.friction);
+    Matter.Body.set(rearWheel,
+    "frictionStatic", car.wheels.frictionStatic);
+    Matter.Body.set(rearWheelPivot,
+    "stiffness",0.5);
+    Matter.Body.set(frontWheelPivot,
+    "stiffness",0.5);
+
     // add all of the bodies to the world
     Composite.add(engine.world, [
         painting,
@@ -62,6 +81,12 @@ $(document).ready(function() {
             ((vh-128)/2)*-1, 
             ((vw-128)/2)*-1, 
             vh, vw);
+        }
+
+        if (accelerating) {
+            fuel -= 0.1;
+            fuel = fuel < 0 ? 0 : fuel;
+            $("#fuel-ammount").css("width", (fuel/2)+"vw");
         }
 
         /*

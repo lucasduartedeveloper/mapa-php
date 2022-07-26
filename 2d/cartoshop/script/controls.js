@@ -70,6 +70,7 @@ $("#borders").click(function() {
 
 var accelerating = false;
 $("#power").on("touchstart", function() {
+    if (fuel == 0) return;
     accelerating = true;
 });
 $("#power").on("touchend", function() {
