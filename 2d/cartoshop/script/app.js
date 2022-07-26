@@ -143,8 +143,8 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
     render: {
         sprite: {
             texture: "img/wheel_18.png",
-            xScale: 14.4, //0.476,
-            yScale: 14.4 //0.476
+            xScale: 0.069, //0.476,
+            yScale: 0.069 //0.476
         },
         fillStyle: "#fff",
         lineWidth: 2,
@@ -160,8 +160,8 @@ Bodies.circle(((sw/2)+(0.38*125))+28,
     render: {
         sprite: {
             texture: "img/wheel_18.png",
-            xScale: 14.4, //0.476,
-            yScale: 14.4 //0.476
+            xScale: 0.069, //0.476,
+            yScale: 0.069 //0.476
         },
         fillStyle: "#fff",
         strokeStyle: "#000" 
