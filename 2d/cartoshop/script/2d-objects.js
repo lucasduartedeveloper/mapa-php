@@ -23,11 +23,11 @@ var car = {
   position: { x: (sw/2), y: (sh/2)-80 },
   polygon: [
       [-0.4, -0.4], 
-      [-1, -0.1], // min x
+      [-1, -0.2], // min x
       [-1, +0.3], 
       [+1, +0.3], 
       [+1, -0], // max x
-      [+0.2, -0.5]
+      [+0.2, -0.4]
   ],
   textures: { 
      chassis: "img/camaro.png",
