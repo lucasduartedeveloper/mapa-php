@@ -36,8 +36,8 @@ var car = {
   width: 250,
   height: 200,
   wheelSize: 50,
-  rearWheel: { x: -100, y: 50 },
-  frontWheel: { x: 100, y: 50 }
+  rearWheel: { x: -75, y: 25 },
+  frontWheel: { x: 85, y: 25 }
 };
 
 var canvas = document.getElementById("matter-js");
