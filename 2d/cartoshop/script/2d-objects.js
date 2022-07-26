@@ -99,7 +99,7 @@ Bodies.fromVertices(
     }
 });
 log("bounds-before", bodywork.bounds.min.x);
-polygonFixPosition(bodywork, car.position);
+var test = polygonFixPosition(bodywork, car.position);
 log("bounds-after", bodywork.bounds.min.x);
 
 var painting = 
