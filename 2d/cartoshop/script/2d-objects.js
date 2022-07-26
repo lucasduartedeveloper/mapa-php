@@ -1,4 +1,4 @@
-log("bounds-before", bodywork.bounds.min.x);
+log("bounds-before", 0);
 
 var sw = window.innerWidth;
 var sh = window.innerHeight;
