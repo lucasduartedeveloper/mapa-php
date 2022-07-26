@@ -3,6 +3,7 @@
 var heroku_version = "[BUILDING]";
 var heroku_outputStreamUrl = "";
 var heroku_buildStatus = "";
+var heroku_buildLogs = "";
 
 $.ajax({
     beforeSend: function(request) {
@@ -27,8 +28,8 @@ $.ajax({
     xhr.open("GET", heroku_outputStreamUrl, true);
     xhr.onprogress = function () {
         console.clear();
-        log("heroku-api : build logs", 
-        xhr.responseText);
+        //log("heroku-api : build logs", xhr.responseText);
+        heroku_buildLogs = xhr.responseText;
         var n = xhr.responseText.indexOf("Released");
 
         if (n > -1) {
