@@ -23,13 +23,11 @@ function matterJs() {
         planet,
         line, loop
     ]);
-
-    render.mouse = mouse;
-    Composite.add(engine.world, mouseConstraint);
-
-    // run the renderer
-    Render.run(render);
     
+    // add mouse
+    //render.mouse = mouse;
+    //Composite.add(engine.world, mouseConstraint)
+
     // create runner
     //var runner = Runner.create();
 
@@ -136,9 +134,22 @@ Matter.Events.on(engine, "beforeUpdate", function() {
 });
 
 // Test
+// create runner
+var started = false;
+var runner = Runner.create();
+
 window.test = function() {
-    var runner = Runner.create();
+    if (started) return;
+
+    // add mouse
+    render.mouse = mouse;
+    Composite.add(engine.world, mouseConstraint);
+
+    // run the renderer
+    Render.run(render);
     Runner.run(runner, engine);
+
+    started = true;
     return;
     //-- Annotations
     accelerating = true;
