@@ -21,6 +21,7 @@ scenarioCategory | objectPartCategory
 var car = {
   name: "Camaro",
   position: { x: (sw/2), y: (sh/2)-80 },
+  centre: { x: 85, y: 0 },
   polygon: [
       [-0.4, -0.4], 
       [-1, -0.3], // min x
@@ -99,6 +100,7 @@ Bodies.fromVertices(
         lineWidth: 2,
     }
 }), car.position);
+Matter.Body.setCentre(body, car.centre, true)
 
 var painting = 
 Bodies.rectangle(
