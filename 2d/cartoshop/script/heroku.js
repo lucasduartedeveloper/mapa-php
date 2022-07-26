@@ -45,6 +45,7 @@ $.ajax({
         $("#heroku-version").text(heroku_version);
     }
     xhr.send();
+    console.log("0123456789");
 });
 console.log("0123456789");
 // Get build state
