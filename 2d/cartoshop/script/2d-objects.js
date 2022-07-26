@@ -20,6 +20,7 @@ scenarioCategory | objectPartCategory
 
 var car = {
   name: "Camaro",
+  position: { x: (sw/2), y: (sh/2)-80 },
   polygon: [
       [-0.5, -0.5], 
       [-1, -0], // min x
@@ -34,7 +35,6 @@ var car = {
   },
   width: 250,
   height: 200,
-  bottom: 65,
   wheelSize: 50,
   rearWheel: { x: -100, y: 50 },
   frontWheel: { x: 100, y: 50 }
@@ -82,7 +82,7 @@ for (var k in car.polygon) {
 var center = polygonCenter(bodyworkPolygon);
 var bodywork = 
 Bodies.fromVertices(
-    (sw/2), (sh/2) - car.bottom,
+    car.position.x, car.position.y
     bodyworkPolygon, {
     isStatic: false,
     mass: 20,
@@ -97,11 +97,11 @@ Bodies.fromVertices(
     }
 });
 polygonFixPosition(bodywork,
-{ x: (sw/2), y: (sh/2)-65 });
+{ x: (sw/2), y: (sh/2) - car.bottom });
 
 var painting = 
 Bodies.rectangle(
-    (sw/2), (sh/2) - car.bottom,
+    car.position.x, car.position.y,
     car.width, car.height, {
     isSensor: true,
     isStatic: false,
@@ -184,8 +184,8 @@ Bodies.circle(
 
 var rearWheel =
 Bodies.circle(
-    (sw/2) + car.rearWheel.x, 
-    (sh/2) + car.rearWheel.y, 
+    car.position.x + car.rearWheel.x, 
+    car.position.y + car.rearWheel.y, 
     car.wheelSize/2, {
     isStatic: false,
     friction: 1,
@@ -207,8 +207,8 @@ Bodies.circle(
 
 var frontWheel =
 Bodies.circle(
-    (sw/2) + car.frontWheel.x, 
-    (sh/2) + car.frontWheel.y, 
+    car.position.x + car.frontWheel.x, 
+    car.position.y + car.frontWheel.y, 
     car.wheelSize/2, {
     isStatic: false,
     friction: 1,
