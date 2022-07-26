@@ -75,13 +75,13 @@ var render = Render.create({
 var bodyworkPolygon = [];
 for (var k in car.polygon) {
     bodyworkPolygon.push({
-        x: (sw/2) + car.polygon[k][0] * (car.width/2),
-        y: (sh/2) + car.polygon[k][1] * (car.height/2)
+        x: car.position.x + car.polygon[k][0] * (car.width/2),
+        y: car.position.y + car.polygon[k][1] * (car.height/2)
     });
 }
 var bodywork = 
 Bodies.fromVertices(
-    car.position.x-7.6, car.position.y,
+    car.position.x, car.position.y,
     bodyworkPolygon, {
     isStatic: false,
     mass: 20,
