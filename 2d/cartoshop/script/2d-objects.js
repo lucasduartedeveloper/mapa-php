@@ -86,6 +86,7 @@ Bodies.fromVertices(
     isStatic: false,
     mass: 20,
     collisionFilter: {
+        category: objectCategory,
         mask: scenarioCategory | objectCategory
     },
     render: {
@@ -163,6 +164,7 @@ Bodies.circle((sw/2),
     isStatic: false,
     friction: 1,
     collisionFilter: {
+        category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
     },
     render: {
@@ -183,6 +185,7 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
     isStatic: false,
     friction: 1,
     collisionFilter: {
+        category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
     },
     render: {
@@ -203,6 +206,7 @@ Bodies.circle(((sw/2)+(0.38*125))+28,
     isStatic: false,
     friction: 1,
     collisionFilter: {
+        category: objectPartCategory,
         mask: scenarioCategory | objectPartCategory
     },
     render: {
@@ -291,7 +295,7 @@ Bodies.rectangle(sw/2, (sh/2)+274,
 1400, 548, {
     isStatic: true,
     collisionFilter: {
-        mask: scenarioCategory
+        category: scenarioCategory
     },
     render: {
        sprite: {
@@ -309,7 +313,7 @@ Bodies.rectangle(sw/2+1200, (sh/2)+25,
 1000, 50, {
     isStatic: true,
     collisionFilter: {
-        mask: scenarioCategory
+        category: scenarioCategory
     },
     render: {
        fillStyle: "#fff",
@@ -345,7 +349,7 @@ Matter.Bodies.fromVertices(
     signPolygon, {
     isStatic: true,
     collisionFilter: {
-        mask: scenarioCategory
+        category: scenarioCategory
     },
     render: {
         fillStyle: "rgba(255,255,255,0)",
@@ -406,7 +410,7 @@ Matter.Bodies.fromVertices(
     loopPolygon, {
     isStatic: true,
     collisionFilter: {
-        mask: scenarioCategory
+        category: scenarioCategory
     },
     render: {
         fillStyle: "rgba(255,255,255,0)",
