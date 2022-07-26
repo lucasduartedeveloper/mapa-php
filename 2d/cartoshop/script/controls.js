@@ -11,6 +11,7 @@ $("#key").click(function() {
 });
 
 $("#rocket").click(function() {
+    explosion.play();
     Matter.Body.applyForce(bodywork, 
     { x: -100, y: 0 },
     { x: 10, y: 0 });
