@@ -367,41 +367,8 @@ Matter.MouseConstraint.create(engine, {
     }
 });
 
-// Grid
-var grid = [];
-for (var n = -150; n < 150; n++) {
-    return;
-    grid.push(
-       Bodies.rectangle(
-       (sw/2), 
-       (sh/2)+(n*10),
-       3000, 1, {
-       isSensor: true,
-       isStatic: true,
-       render: {
-           fillStyle: "#ccc",
-           strokeStyle: "#000" 
-       }
-    }));
-
-    grid.push(
-       Bodies.rectangle(
-       (sw/2)+(n*10), 
-       (sh/2),
-       1, 3000, {
-       isSensor: true,
-       isStatic: true,
-       render: {
-           fillStyle: "#ccc",
-           strokeStyle: "#000" 
-       }
-    }));
-}
-
 function matterJs() {
     // add all of the bodies to the world
-    //Composite.add(engine.world, grid);
-
     Composite.add(engine.world, [
         painting, 
         paintingConstraintA,
