@@ -5,6 +5,37 @@ var vw = 0;
 var vh = 0;
 var vr = 0;
 
+var p2m = 1/100;
+
+var car {
+  name: "Camaro",
+  polygon: [
+      [-0.5, -0.5], 
+      [-1, -0], 
+      [-1, +0.4], 
+      [-0.98, +0.4], 
+      [-0.98, +0.1], 
+      [-0.55, +0.1], 
+      [-0.55, +0.4], 
+      [+0.38, +0.4],  
+      [+0.38, +0.1], 
+      [+0.81, +0.1], 
+      [+0.81, +0.4], 
+      [+1, +0.4], 
+      [+1, -0],
+      [+0.2, -0.5]
+  ];
+  textures: { 
+     chassis: "img/camaro.png",
+     wheel: "img/wheel_18.png"
+  }
+  width: 250,
+  height: 100,
+  wheelSize: 50,
+  rearWheel: { x: 50, y: 50 },
+  frontWheel: { x: 200, y: 50 },
+}
+
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
 canvas.height = sh;
@@ -35,29 +66,13 @@ var render = Render.create({
     }
 });
 
-//Create car
-var rawPolygon = [
-    [-0.5, -0.5], 
-    [-1, -0], 
-    [-1, +0.4], 
-    [-0.98, +0.4], 
-    [-0.98, +0.1], 
-    [-0.55, +0.1], 
-    [-0.55, +0.4], 
-    [+0.38, +0.4],  
-    [+0.38, +0.1], 
-    [+0.81, +0.1], 
-    [+0.81, +0.4], 
-    [+1, +0.4], 
-    [+1, -0],
-    [+0.2, -0.5]
-];
+// Create car
 // create two boxes and a ground
 var bodyworkPolygon = [];
-for (var k in rawPolygon) {
+for (var k in car.polygon) {
     bodyworkPolygon.push({
-        x: (sw/2) + rawPolygon[k][0] * 125,
-        y: (sh/2) + rawPolygon[k][1] * 100
+        x: (sw/2) + car.polygon[k][0] * (car.width/2),
+        y: (sh/2) + car.polygon[k][1] * (car.height/2)
     });
 }
 var center = polygonCenter(bodyworkPolygon);
@@ -76,7 +91,7 @@ Bodies.fromVertices(
 
 var painting = 
 Bodies.rectangle(
-    (sw/2), (sh/2)-65, //
+    car.width, car.height-65, //
     250, 100, {
     isSensor: true,
     isStatic: false,
