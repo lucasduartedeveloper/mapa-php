@@ -7,7 +7,7 @@ var vr = 0;
 
 var p2m = 1/100;
 
-var car {
+var car = {
   name: "Camaro",
   polygon: [
       [-0.5, -0.5], 
@@ -24,7 +24,7 @@ var car {
       [+1, +0.4], 
       [+1, -0],
       [+0.2, -0.5]
-  ];
+  ],
   textures: { 
      chassis: "img/camaro.png",
      wheel: "img/wheel_18.png"
@@ -33,8 +33,8 @@ var car {
   height: 100,
   wheelSize: 50,
   rearWheel: { x: 50, y: 50 },
-  frontWheel: { x: 200, y: 50 },
-}
+  frontWheel: { x: 200, y: 50 }
+};
 
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
