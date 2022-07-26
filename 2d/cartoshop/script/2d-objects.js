@@ -1,6 +1,3 @@
-log("bounds-before", 0);
-console.log("0123456789");
-
 var sw = window.innerWidth;
 var sh = window.innerHeight;
 var ar = sw/sh;

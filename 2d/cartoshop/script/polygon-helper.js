@@ -1,5 +1,3 @@
-console.log("0123456789");
-
 function polygonCenter(p) {
     var minX = p[0].x;
     var minY = p[0].y;
@@ -31,4 +29,5 @@ function polygonFixPosition(body, pos) {
     pos.x += xOffset;
     pos.y += yOffset;
     Matter.Body.setPosition(body, pos);
+    console.log("0123456789");
 }
