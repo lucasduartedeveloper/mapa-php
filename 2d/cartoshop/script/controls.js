@@ -12,10 +12,11 @@ $("#key").click(function() {
 
 $("#rocket").click(function() {
     explosion.play();
+    var a = bodywork.angle;
+    var v = { x : Math.cos(a), y : Math.sin(a) };
 
     Matter.Body.applyForce(bodywork, 
-    { x: 0, y: 0 },
-    { x: 2, y: 0 });
+    { x: 0, y: 0 }, v);
 })
 
 var borders = true;
