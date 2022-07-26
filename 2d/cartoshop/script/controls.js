@@ -12,9 +12,10 @@ $("#key").click(function() {
 
 $("#rocket").click(function() {
     explosion.play();
+
     Matter.Body.applyForce(bodywork, 
-    { x: 100, y: -30 },
-    { x: 5, y: 0 });
+    { x: 0, y: 0 },
+    { x: 2, y: 0 });
 })
 
 var borders = true;
