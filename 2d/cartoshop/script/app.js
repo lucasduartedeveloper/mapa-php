@@ -1,13 +1,17 @@
 var playerId = new Date().getTime();
 
+engine.gravity.x = 0;
+engine.gravity.y = 0;
+
 $(document).ready(function() {
     matterJs();
     log("log", "$(document).ready(...");
 
     setInterval(function() {
         if (motion) { 
-            engine.gravity.x = (gyro.accX / 9.8)*-1;
-            engine.gravity.y = (gyro.accY / 9.8);
+            //engine.gravity.x = (gyro.accX / 9.8)*-1;
+            //engine.gravity.y = (gyro.accY / 9.8);
+             
         }
         else {
             engine.gravity.x = 0;
