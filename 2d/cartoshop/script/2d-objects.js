@@ -269,62 +269,6 @@ Matter.Constraint.create({
      }
 });
 
-var rearWheelShockAbsorberA = 
-Matter.Constraint.create({
-     bodyA: bodywork,
-     pointA: { x: -(0.55*125)-30, y: 0 },
-     bodyB: rearWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.5,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
-
-var rearWheelShockAbsorberB = 
-Matter.Constraint.create({
-     bodyA: bodywork,
-     pointA: { x: -(0.55*125)-15, y: 0 },
-     bodyB: rearWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.5,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
-
-var frontWheelShockAbsorberA = 
-Matter.Constraint.create({
-     bodyA: bodywork,
-     pointA: { x: (0.38*125)+15, y: 0 },
-     bodyB: frontWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.5,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
-
-var frontWheelShockAbsorberB = 
-Matter.Constraint.create({
-     bodyA: bodywork,
-     pointA: { x: (0.38*125)+30, y: 0 },
-     bodyB: frontWheel,
-     pointB: { x: 0, y: 0 },
-     stiffness: 0.5,
-     render: {
-          strokeStyle: '#fff',
-          lineWidth: 2,
-          type: 'line'
-     }
-});
-
 var planet = 
 Bodies.rectangle(sw/2, (sh/2)+274,
 1400, 548, {
