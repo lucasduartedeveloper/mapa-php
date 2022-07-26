@@ -66,6 +66,10 @@ html, body {
    z-index: 9999;
 }
 
+#controls i {
+   margin: 20px 0px;
+}
+
 /* */
 #iframe {
    position: fixed;

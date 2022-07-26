@@ -149,6 +149,8 @@ window.test = function() {
     Render.run(render);
     Runner.run(runner, engine);
 
+    $("#test").removeClass("fa-play");
+    $("#test").addClass("fa-pause");
     started = true;
     return;
     //-- Annotations
