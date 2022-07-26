@@ -1,1 +1,1 @@
-var explosion = nee Audio("audio/explosion.wav");
+var explosion = new Audio("audio/explosion.wav");
