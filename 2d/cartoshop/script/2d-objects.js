@@ -1,3 +1,5 @@
+log("bounds-before", bodywork.bounds.min.x);
+
 var sw = window.innerWidth;
 var sh = window.innerHeight;
 var ar = sw/sh;
@@ -119,7 +121,6 @@ Bodies.rectangle(
         strokeStyle: "#ccc",
     }
 });
-log("bounds-before", bodywork.bounds.min.x);
 
 var paintingConstraintA = 
 Matter.Constraint.create({
