@@ -159,12 +159,8 @@ window.test = function() {
     Matter.Body.set(rearWheel,"friction",1);
     Matter.Body.set(frontWheel,"mass",200);
     Matter.Body.set(frontWheel,"friction",1);
-    Matter.Body.set(rearWheelShockAbsorberA,
+    Matter.Body.set(rearWheelPivot,
     "stiffness",0.5);
-    Matter.Body.set(rearWheelShockAbsorberB,
-    "stiffness",0.5);
-    Matter.Body.set(frontWheelShockAbsorberA,
-    "stiffness",0.5);
-    Matter.Body.set(frontWheelShockAbsorberB,
+    Matter.Body.set(frontWheelPivot,
     "stiffness",0.5);
 }
