@@ -18,7 +18,8 @@ $script = [
     7 => "polygon-helper.js",
     8 => "json-helper.js",
     9 => "controls.js",
-    10 => "app.js"
+    10 => "2d-objects.js",
+    11 => "app.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
