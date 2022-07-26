@@ -1,3 +1,5 @@
+console.log("0123456789");
+
 var cameraKey = false;
 $("#key").click(function() {
     if (cameraKey) {
