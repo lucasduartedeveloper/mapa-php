@@ -38,8 +38,8 @@ function matterJs() {
 }
 
 $(document).ready(function() {
-    matterJs();
     log("log", "$(document).ready(...");
+    matterJs();
 
     setInterval(function() {
         if (motion) { 

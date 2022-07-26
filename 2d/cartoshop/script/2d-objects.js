@@ -81,7 +81,7 @@ for (var k in car.polygon) {
 }
 var bodywork = 
 Bodies.fromVertices(
-    car.position.x, car.position.y,
+    car.position.x-7.6, car.position.y,
     bodyworkPolygon, {
     isStatic: false,
     mass: 20,
