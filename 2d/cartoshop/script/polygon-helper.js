@@ -30,4 +30,5 @@ function polygonFixPosition(body, pos) {
     pos.y += yOffset;
     Matter.Body.setPosition(body, pos);
     console.log("0123456789");
+    return body;
 }
