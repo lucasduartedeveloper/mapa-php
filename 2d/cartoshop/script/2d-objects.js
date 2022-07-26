@@ -151,7 +151,7 @@ Matter.Constraint.create({
 });
 
 var testWheel =
-Bodies.circle(((sw/2), 
+Bodies.circle((sw/2), 
     sh/2-25, 25, {
     isStatic: false,
     friction: 1,
