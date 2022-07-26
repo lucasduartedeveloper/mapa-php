@@ -59,21 +59,21 @@ $("#borders").click(function() {
     .render.anchors =  borders || wireframes;
 
     paintingConstraintA
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     paintingConstraintB
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     paintingConstraintZ
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     crankshaft
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     rearWheelShockAbsorberA
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     rearWheelShockAbsorberB
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     frontWheelShockAbsorberA
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
     frontWheelShockAbsorberB
-    .render.lineWidth =  borders ? 2 : 0;
+    .render.lineWidth =  borders || wireframes ? 2 : 0;
 });
 
 var accelerating = false;
