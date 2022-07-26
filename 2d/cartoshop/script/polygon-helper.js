@@ -30,6 +30,6 @@ function polygonFixPosition(body, pos) {
     pos.x += xOffset;
     pos.y += yOffset;
     Matter.Body.setPosition(body, pos);
-    log("bounds-after", body.bounds.max.x);
+    log("bounds-after", body.bounds.min.x);
     return body;
 }
