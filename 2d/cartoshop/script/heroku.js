@@ -27,7 +27,7 @@ $.ajax({
     var xhr = new XMLHttpRequest();
     xhr.open("GET", heroku_outputStreamUrl, true);
     xhr.onprogress = function () {
-        console.clear();
+        //console.clear();
         //log("heroku-api : build logs", xhr.responseText);
         heroku_buildLogs = xhr.responseText;
         var n = xhr.responseText.indexOf("Released");

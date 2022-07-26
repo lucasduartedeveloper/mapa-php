@@ -11,7 +11,7 @@ var car = {
   name: "Camaro",
   polygon: [
       [-0.5, -0.5], 
-      [-1, -0], 
+      [-1, -0], // min x
       [-1, +0.4], 
       [-0.98, +0.4], 
       [-0.98, +0.1], 
@@ -22,7 +22,7 @@ var car = {
       [+0.81, +0.1], 
       [+0.81, +0.4], 
       [+1, +0.4], 
-      [+1, -0],
+      [+1, -0], // max x
       [+0.2, -0.5]
   ],
   textures: { 
@@ -88,6 +88,8 @@ Bodies.fromVertices(
         lineWidth: 2,
     }
 });
+polygonFixPosition(bodywork,
+{ x: (sw/2), y: (sh/2)-65) });
 
 var painting = 
 Bodies.rectangle(
