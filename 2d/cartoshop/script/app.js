@@ -24,6 +24,9 @@ function matterJs() {
         line, loop
     ]);
     
+    // run the renderer
+    Render.run(render);
+
     // add mouse
     //render.mouse = mouse;
     //Composite.add(engine.world, mouseConstraint)
@@ -146,7 +149,6 @@ window.test = function() {
     Composite.add(engine.world, mouseConstraint);
 
     // run the renderer
-    Render.run(render);
     Runner.run(runner, engine);
 
     $("#test").removeClass("fa-play");
