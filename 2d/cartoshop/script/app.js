@@ -31,6 +31,10 @@ $(document).ready(function() {
         ws.send("LONDRINA-2D|"+playerId+"|CAR-UPD|"+
             bodyToJSON({
                  bodywork : bodywork,
+                 painting : painting,
+                 paintingConstraintA : paintingConstraintA,
+                 paintingConstraintB : paintingConstraintB,
+                 paintingConstraintZ : paintingConstraintZ,
                  crankshaft : crankshaft,
                  rearWheel : rearWheel,
                  frontWheel : frontWheel,
@@ -55,6 +59,13 @@ $(document).ready(function() {
             if (msg[2] == "CAR-UPD") {
                  var car = JSON.parse(msg[3]);
                  setValue(bodywork, car.bodywork)
+                 setValue(painting , car.painting);
+                 setValue(paintingConstraintA,
+                 car.paintingConstraintA);
+                 setValue(paintingConstraintB,
+                 car.paintingConstraintB);
+                 setValue(paintingConstraintZ,
+                 car.paintingConstraintZ);
                  setValue(crankshaft, car.crankshaft);
                  setValue(rearWheel, car.rearWheel);
                  setValue(frontWheel, car.frontWheel);
