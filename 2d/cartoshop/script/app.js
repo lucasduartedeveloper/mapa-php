@@ -1,10 +1,3 @@
-var sw = window.innerWidth;
-var sh = window.innerHeight;
-var ar = sw/sh;
-var vw = 0;
-var vh = 0;
-var vr = 0;
-
 $(document).ready(function() {
     matterJs();
     log("log", "$(document).ready(...");
