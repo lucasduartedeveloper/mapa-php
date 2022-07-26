@@ -100,7 +100,7 @@ Bodies.fromVertices(
         lineWidth: 2,
     }
 }), car.position);
-Matter.Body.setCentre(body, car.centre, true);
+Matter.Body.setCentre(bodywork, car.centre, true);
 
 var painting = 
 Bodies.rectangle(
