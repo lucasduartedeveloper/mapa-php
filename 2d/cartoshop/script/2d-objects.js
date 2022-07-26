@@ -34,6 +34,7 @@ var car = {
   },
   width: 250,
   height: 200,
+  bottom: 65,
   wheelSize: 50,
   rearWheel: { x: 50, y: 150 },
   frontWheel: { x: 200, y: 150 }
@@ -81,7 +82,7 @@ for (var k in car.polygon) {
 var center = polygonCenter(bodyworkPolygon);
 var bodywork = 
 Bodies.fromVertices(
-    (sw/2), (sh/2)-65, //
+    (sw/2), (sh/2) - car.bottom,
     bodyworkPolygon, {
     isStatic: false,
     mass: 20,
@@ -100,7 +101,7 @@ polygonFixPosition(bodywork,
 
 var painting = 
 Bodies.rectangle(
-    (sw/2), (sh/2)-65, //
+    (sw/2), (sh/2) - car.bottom,
     car.width, car.height, {
     isSensor: true,
     isStatic: false,
@@ -159,8 +160,10 @@ Matter.Constraint.create({
 });
 
 var testWheel =
-Bodies.circle((sw/2), 
-    sh/2-25, 25, {
+Bodies.circle(
+    (sw/2), 
+    (sh/2) - (car.wheelSize/2), 
+    car.wheelSize/2, {
     isStatic: false,
     friction: 1,
     collisionFilter: {
@@ -180,8 +183,10 @@ Bodies.circle((sw/2),
 });
 
 var rearWheel =
-Bodies.circle(((sw/2)-(0.55*125))-28, 
-    sh/2-25, 25, {
+Bodies.circle(
+    (sw/2) - car.width + car.rearWheel.x, 
+    (sh/2) - car.height + car.rearWheel.y, 
+    car.wheelSize/2, {
     isStatic: false,
     friction: 1,
     collisionFilter: {
@@ -201,8 +206,10 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
 });
 
 var frontWheel =
-Bodies.circle(((sw/2)+(0.38*125))+28, 
-    sh/2-25, 25, {
+Bodies.circle(
+    (sw/2) - car.width + car.fronWheel.x, 
+    (sh/2) - car.height + car.fronWheel.y - car.bottom, 
+    car.wheelSize/2, {
     isStatic: false,
     friction: 1,
     collisionFilter: {
@@ -227,6 +234,34 @@ Matter.Constraint.create({
      bodyB: frontWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 1,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var rearWheelPivot = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: car.rearWheel.x, y: car.rearWheel.y },
+     bodyB: rearWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var frontWheelPivot = 
+Matter.Constraint.create({
+     bodyA: bodywork,
+     pointA: { x: car.frontWheel.x, y: car.frontWheel.y },
+     bodyB: frontWheel,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
           lineWidth: 2,
