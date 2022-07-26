@@ -96,6 +96,9 @@ Bodies.fromVertices(
         lineWidth: 2,
     }
 });
+log("bounds-before", bodywork.bounds);
+polygonFixPosition(bodywork, car.position);
+log("bounds-after", bodywork.bounds);
 
 var painting = 
 Bodies.rectangle(
@@ -114,7 +117,6 @@ Bodies.rectangle(
         strokeStyle: "#ccc",
     }
 });
-polygonFixPosition(bodywork, car.position);
 
 var paintingConstraintA = 
 Matter.Constraint.create({
