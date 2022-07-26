@@ -28,6 +28,7 @@ $(document).ready(function() {
             vh, vw);
         }
 
+        /*
         ws.send("LONDRINA-2D|"+playerId+"|CAR-UPD|"+
             bodyToJSON({
                  bodywork : bodywork,
@@ -47,9 +48,10 @@ $(document).ready(function() {
                  frontWheelShockAbsorberB : 
                  frontWheelShockAbsorberB
             })
-        );
+        );*/
     }, 100);
 
+    /*
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
         if (msg[0] == "LONDRINA-2D" &&
@@ -59,7 +61,7 @@ $(document).ready(function() {
             if (msg[2] == "CAR-UPD") {
                  var car = JSON.parse(msg[3]);
                  setValue(bodywork, car.bodywork)
-                 setValue(painting , car.painting);
+                 setValue(painting, car.painting);
                  setValue(paintingConstraintA,
                  car.paintingConstraintA);
                  setValue(paintingConstraintB,
@@ -79,7 +81,7 @@ $(document).ready(function() {
                  car.frontWheelShockAbsorberB);
             }
         }
-    };
+    };*/
 });
 
 Matter.Events.on(engine, "beforeUpdate", function() {
