@@ -184,8 +184,8 @@ Bodies.circle(
 
 var rearWheel =
 Bodies.circle(
-    (sw/2) - car.width + car.rearWheel.x, 
-    (sh/2) - car.height + car.rearWheel.y, 
+    (sw/2) + car.rearWheel.x, 
+    (sh/2) + car.rearWheel.y, 
     car.wheelSize/2, {
     isStatic: false,
     friction: 1,
@@ -207,8 +207,8 @@ Bodies.circle(
 
 var frontWheel =
 Bodies.circle(
-    (sw/2) - car.width + car.frontWheel.x, 
-    (sh/2) - car.height + car.frontWheel.y - car.bottom, 
+    (sw/2) + car.frontWheel.x, 
+    (sh/2) + car.frontWheel.y, 
     car.wheelSize/2, {
     isStatic: false,
     friction: 1,
