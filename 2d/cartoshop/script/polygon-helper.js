@@ -13,6 +13,7 @@ function polygonCenter(p) {
 }
 
 function rotate(cx, cy, x, y, angle) {
+    log("angle", angle+"°");
     var radians = (Math.PI / 180) * angle,
     cos = Math.cos(radians),
     sin = Math.sin(radians),
