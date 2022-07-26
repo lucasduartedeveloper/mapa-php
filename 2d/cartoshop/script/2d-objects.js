@@ -8,8 +8,15 @@ var vr = 0;
 var p2m = 1/100;
 
 // Collision categories
-var bodyworkCategory = 0x0001,
-       wheelCategory = 0x0002;
+var scenarioCategory = 0x0001,
+       objectCategory = 0x0002,
+       objectPartCategory = 0x0004;
+
+/*
+scenarioCategory
+scenarioCategory | objectCategory
+scenarioCategory | objectPartCategory
+*/
 
 var car = {
   name: "Camaro",
@@ -79,7 +86,7 @@ Bodies.fromVertices(
     isStatic: false,
     mass: 20,
     collisionFilter: {
-        mask: bodyworkCategory
+        mask: scenarioCategory | objectCategory
     },
     render: {
         fillStyle: "rgba(255,255,255,0)",
@@ -156,7 +163,7 @@ Bodies.circle((sw/2),
     isStatic: false,
     friction: 1,
     collisionFilter: {
-        mask: wheelCategory
+        mask: scenarioCategory | objectPartCategory
     },
     render: {
         sprite: {
@@ -176,7 +183,7 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
     isStatic: false,
     friction: 1,
     collisionFilter: {
-        mask: wheelCategory
+        mask: scenarioCategory | objectPartCategory
     },
     render: {
         sprite: {
@@ -196,7 +203,7 @@ Bodies.circle(((sw/2)+(0.38*125))+28,
     isStatic: false,
     friction: 1,
     collisionFilter: {
-        mask: wheelCategory
+        mask: scenarioCategory | objectPartCategory
     },
     render: {
         sprite: {
@@ -283,6 +290,9 @@ var planet =
 Bodies.rectangle(sw/2, (sh/2)+274,
 1400, 548, {
     isStatic: true,
+    collisionFilter: {
+        mask: scenarioCategory
+    },
     render: {
        sprite: {
             texture: "img/map2.jpg",
@@ -298,6 +308,9 @@ var line =
 Bodies.rectangle(sw/2+1200, (sh/2)+25,
 1000, 50, {
     isStatic: true,
+    collisionFilter: {
+        mask: scenarioCategory
+    },
     render: {
        fillStyle: "#fff",
        strokeStyle: "#000" 
@@ -331,6 +344,9 @@ Matter.Bodies.fromVertices(
     (-350+50), (sh/2)-100,
     signPolygon, {
     isStatic: true,
+    collisionFilter: {
+        mask: scenarioCategory
+    },
     render: {
         fillStyle: "rgba(255,255,255,0)",
         strokeStyle: "#fff",
@@ -389,6 +405,9 @@ Matter.Bodies.fromVertices(
     2450, (sh/2)-450,
     loopPolygon, {
     isStatic: true,
+    collisionFilter: {
+        mask: scenarioCategory
+    },
     render: {
         fillStyle: "rgba(255,255,255,0)",
         strokeStyle: "#fff",
