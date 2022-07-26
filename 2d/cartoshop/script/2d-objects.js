@@ -7,20 +7,16 @@ var vr = 0;
 
 var p2m = 1/100;
 
+// Collision categories
+var bodyworkCategory = 0x0001,
+       wheelCategory = 0x0002,
+
 var car = {
   name: "Camaro",
   polygon: [
       [-0.5, -0.5], 
       [-1, -0], // min x
       [-1, +0.4], 
-      [-0.98, +0.4], 
-      [-0.98, +0.1], 
-      [-0.55, +0.1], 
-      [-0.55, +0.4], 
-      [+0.38, +0.4],  
-      [+0.38, +0.1], 
-      [+0.81, +0.1], 
-      [+0.81, +0.4], 
       [+1, +0.4], 
       [+1, -0], // max x
       [+0.2, -0.5]
@@ -82,6 +78,9 @@ Bodies.fromVertices(
     bodyworkPolygon, {
     isStatic: false,
     mass: 20,
+    collisionFilter: {
+        mask: bodyworkCategory
+    },
     render: {
         fillStyle: "rgba(255,255,255,0)",
         strokeStyle: "#fff",
@@ -156,6 +155,9 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
     sh/2-25, 25, {
     isStatic: false,
     friction: 1,
+    collisionFilter: {
+        mask: bodyworkCategory
+    },
     render: {
         sprite: {
             texture: "img/wheel_18.png",
