@@ -142,7 +142,7 @@ Bodies.circle(((sw/2)-(0.55*125))-28,
     friction: 1,
     render: {
         sprite: {
-            texture: "img/wheel.png",
+            texture: "img/wheel_18.png",
             xScale: 0.476,
             yScale: 0.476
         },
@@ -159,7 +159,7 @@ Bodies.circle(((sw/2)+(0.38*125))+28,
     friction: 1,
     render: {
         sprite: {
-            texture: "img/wheel.png",
+            texture: "img/wheel_18.png",
             xScale: 0.476,
             yScale: 0.476
         },
