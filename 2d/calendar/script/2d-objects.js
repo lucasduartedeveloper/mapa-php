@@ -90,6 +90,26 @@ Bodies.circle(
     }
 });
 
+var hourCircle =
+Bodies.circle(
+    0, 0, sw/4, {
+    isStatic: false,
+    collisionFilter: {
+        category: hourCategory,
+        mask: hourCategory
+    },
+    render: {
+        sprite: {
+            texture: "",
+            xScale: 0.5, //0.476,
+            yScale: 0.5 //0.476
+        },
+        fillStyle: "#fff",
+        lineWidth: 2,
+        strokeStyle: "#000" 
+    }
+});
+
 var secondPivot = 
 Matter.Constraint.create({
      pointA: {
@@ -113,6 +133,23 @@ Matter.Constraint.create({
          y: 0
      },
      bodyB: minuteCircle,
+     pointB: { x: 0, y: 0 },
+     length: sw/2,
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
+var hourPivot = 
+Matter.Constraint.create({
+     pointA: {
+         x: 0, 
+         y: 0
+     },
+     bodyB: hourCircle,
      pointB: { x: 0, y: 0 },
      length: sw/2,
      stiffness: 0.5,

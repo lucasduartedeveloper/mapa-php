@@ -3,6 +3,8 @@ var playerId = new Date().getTime();
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
+        hourCircle,
+        hourPivot,
         minuteCircle,
         minutePivot,
         secondCircle,
