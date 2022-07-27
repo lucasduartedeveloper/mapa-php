@@ -18,7 +18,7 @@ scenarioCategory | objectCategory
 scenarioCategory | objectPartCategory
 */
 
-var car = {
+var cars = [{
   name: "Camaro",
   position: { x: (sw/2), y: (sh/2)-80 },
   centre: { x: 85, y: 0 },
@@ -47,8 +47,40 @@ var car = {
       frictionStatic: 10,
       rear: { x: -75, y: 25 },
       front: { x: 85, y: 25 }
-  }
-};
+  }},
+  {
+  name: "Celta",
+  position: { x: (sw/2), y: (sh/2)-80 },
+  centre: { x: 85, y: 0 },
+  polygon: [
+      [-0.4, -0.4], 
+      [-1, -0.3], // min x
+      [-1, +0.2], 
+      [-0.8, +0.3], 
+      [+1, +0.3], 
+      [+1, -0.1], // max x
+      [+0.8, -0.2],
+      [+0.4, -0.2],
+      [+0.2, -0.4]
+  ],
+  textures: { 
+     chassis: "img/celta.png",
+     wheel: "img/wheel.png"
+  },
+  width: 250,
+  height: 200,
+  mass: 300,
+  wheels: {
+      size: 50,
+      mass: 50,
+      friction: 1,
+      frictionStatic: 10,
+      rear: { x: -75, y: 25 },
+      front: { x: 85, y: 25 }
+  }},
+];
+
+var car = cars[1];
 
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
@@ -115,7 +147,7 @@ Bodies.rectangle(
     isStatic: false,
     render: {
         sprite: {
-            texture: "img/camaro.png",
+            texture: car.textures.chassis,
             xScale: 0.347,
             yScale: 0.366 
         },
@@ -179,7 +211,7 @@ Bodies.circle(
     },
     render: {
         sprite: {
-            texture: "img/wheel_18.png",
+            texture: car.textures.wheel,
             xScale: 0.069, //0.476,
             yScale: 0.069 //0.476
         },
@@ -201,7 +233,7 @@ Bodies.circle(
     },
     render: {
         sprite: {
-            texture: "img/wheel_18.png",
+            texture: car.textures.wheel,
             xScale: 0.069, //0.476,
             yScale: 0.069 //0.476
         },
@@ -223,7 +255,7 @@ Bodies.circle(
     },
     render: {
         sprite: {
-            texture: "img/wheel_18.png",
+            texture: car.textures.wheel,
             xScale: 0.069, //0.476,
             yScale: 0.069 //0.476
         },
