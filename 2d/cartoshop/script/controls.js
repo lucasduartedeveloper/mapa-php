@@ -19,7 +19,7 @@ $("#rocket").click(function() {
     { x: 0, y: 0 }, v);
 })
 
-var borders = false;
+var borders = true;
 var wireframes = false;
 $("#borders").click(function() {
     borders = !wireframes ?

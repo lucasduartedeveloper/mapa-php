@@ -57,6 +57,7 @@ function matterJs() {
 
 $(document).ready(function() {
     log("log", "$(document).ready(...");
+    $("#borders").click();
     matterJs();
 
     setInterval(function() {
