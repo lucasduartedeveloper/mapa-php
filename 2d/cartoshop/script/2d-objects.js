@@ -454,9 +454,9 @@ Matter.Bodies.fromVertices(
         lineWidth: 2,
     }
 });
-for (var k in loop.parts) {
+for (var k in loop1.parts) {
    loop1.parts[k].render.fillStyle = 
-   gradientColor(k, loop.parts.length);
+   gradientColor(k, loop1.parts.length);
 }
 
 var mouse = Matter.Mouse.create(render.canvas);
