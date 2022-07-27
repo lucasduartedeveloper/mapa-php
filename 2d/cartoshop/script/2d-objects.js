@@ -212,8 +212,8 @@ Bodies.circle(
     render: {
         sprite: {
             texture: car.textures.wheel,
-            xScale: 0.069, //0.476,
-            yScale: 0.069 //0.476
+            xScale: 0.5, //0.476,
+            yScale: 0.5 //0.476
         },
         fillStyle: "#fff",
         lineWidth: 2,
@@ -234,8 +234,8 @@ Bodies.circle(
     render: {
         sprite: {
             texture: car.textures.wheel,
-            xScale: 0.069, //0.476,
-            yScale: 0.069 //0.476
+            xScale: 0.5, //0.476,
+            yScale: 0.5 //0.476
         },
         fillStyle: "#fff",
         lineWidth: 2,
@@ -256,8 +256,8 @@ Bodies.circle(
     render: {
         sprite: {
             texture: car.textures.wheel,
-            xScale: 0.069, //0.476,
-            yScale: 0.069 //0.476
+            xScale: 0.5, //0.476,
+            yScale: 0.5 //0.476
         },
         fillStyle: "#fff",
         strokeStyle: "#000" 
