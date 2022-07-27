@@ -8,11 +8,9 @@ var vr = 0;
 var p2m = 1/100;
 
 // Collision categories
-var secondCategory = 0x0001,
-       minuteCategory = 0x0002,
-       hourCategory = 0x0004,
-       dayCategory = 0x0008,
-       weekCategory = 0x0016;
+var scenarioCategory = 0x0001,
+       objectCategory = 0x0002,
+       objectPartCategory = 0x0004;
 
 /*
 scenarioCategory
@@ -20,16 +18,18 @@ scenarioCategory | objectCategory
 scenarioCategory | objectPartCategory
 */
 
-var secondCircle =
+var secondWheel =
 Bodies.circle(
-    0, 0, sw/4, {
+    0, - (car.wheels.size/2), 
+    car.wheels.size/2, {
     isStatic: false,
     collisionFilter: {
-        category: secondCategory
+        category: objectPartCategory,
+        mask: scenarioCategory | objectPartCategory
     },
     render: {
         sprite: {
-            texture: ""l,
+            texture: car.textures.wheel,
             xScale: 0.5, //0.476,
             yScale: 0.5 //0.476
         },
@@ -39,32 +39,14 @@ Bodies.circle(
     }
 });
 
-var minuteCircle =
-Bodies.circle(
-    0, 0, sw/4, {
-    isStatic: false,
-    collisionFilter: {
-        category: secondCategory
-    },
-    render: {
-        sprite: {
-            texture: ""l,
-            xScale: 0.5, //0.476,
-            yScale: 0.5 //0.476
-        },
-        fillStyle: "#fff",
-        lineWidth: 2,
-        strokeStyle: "#000" 
-    }
-});
-
-var secondPivot = 
+var rearWheelPivot = 
 Matter.Constraint.create({
+     bodyA: bodywork,
      pointA: {
-         x: 0, 
-         y: 0
+         x: -car.centre.x + car.wheels.rear.x, 
+         y: -car.centre.y + car.wheels.rear.y
      },
-     bodyB: secondCircle,
+     bodyB: rearWheel,
      pointB: { x: 0, y: 0 },
      stiffness: 0.5,
      render: {
