@@ -471,7 +471,7 @@ var rawPolygon = [
     [+1, -0.1], 
     [-0.9, -0.1],  
     [-0.6, -0.5], 
-    [-0.5, -0.6]
+    //[-0.5, -0.6]
 ];
 var startIndicatorPolygon = [];
 for (var k in rawPolygon) {
