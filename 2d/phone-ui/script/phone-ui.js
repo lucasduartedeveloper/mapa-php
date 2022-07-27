@@ -4,9 +4,12 @@ $(document).ready(function() {
     
 });
 
+var number = "";
 $("#numbers button").click(function(e) {
     //log("click", e);
     say(e.target.innerText);
+    number += e.target.innerText;
+    $("#number").text(number);
 });
 
 var speaking = false;

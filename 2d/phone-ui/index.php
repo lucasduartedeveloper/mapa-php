@@ -66,6 +66,9 @@ echo "\n";
 </head>
 <body>
 
+<div id="number">
+</div>
+
 <div id="numbers">
 <button>7</button>
 <button>8</button>
