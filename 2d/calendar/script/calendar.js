@@ -41,7 +41,7 @@ Matter.Events.on(engine, "beforeUpdate", function() {
       y: (sh/zoomLevel) - hourCircle.bounds.min.y });
 
     if (motion) {
-        engine.gravity.x = gyro.accX/9.8;
+        engine.gravity.x = (gyro.accX/9.8)*-1;
         engine.gravity.y = gyro.accY/9.8;
     }
 });
