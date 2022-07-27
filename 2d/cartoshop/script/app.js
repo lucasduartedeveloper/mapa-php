@@ -173,6 +173,11 @@ var runner = Runner.create();
 
 window.test = function() {
     if (started) return;
+    carStart.play();
+    setTimeout(function() {
+        carRunning.loop = true;
+        carRunning.play();
+    }, 3000);
 
     // add mouse
     render.mouse = mouse;
