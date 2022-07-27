@@ -38,7 +38,7 @@ function matterJs() {
         signConstraint,
         startIndicator,
         planet,
-        line, loop, loop1, fuel
+        line, loop, loop1, fuelRefill
     ]);
     
     // run the renderer

@@ -343,7 +343,7 @@ Bodies.rectangle(1200, 25,
     }
 });
 
-var fuel =
+var fuelRefill =
 Bodies.circle(
     350, -100, 50, {
     isStatic: true,
