@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 $("#numbers button").click(function(e) {
     //log("click", e);
-    say(e.target.text());
+    say(e.target.innerText);
 });
 
 var speaking = false;
