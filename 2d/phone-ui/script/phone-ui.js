@@ -1,5 +1,10 @@
 var playerId = new Date().getTime();
 
+var contacts = [
+    { no: "11999999999",
+     url: "https://m.chaturbate.com/ronny_ponny/" }
+];
+
 $(document).ready(function() {
     
 });
@@ -14,6 +19,17 @@ $("#numbers button").click(function(e) {
 
     if (number.length >= 11) {
         calling.play();
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", 
+        contacts[0].url, true);
+        xhr.onprogress = function () {
+            log("GET", xhr.responseText);
+            var n = xhr.responseText.indexOf("Offline");
+            if (n > -1) {
+                 
+            }
+        }
+        xhr.send();
     }
 });
 
