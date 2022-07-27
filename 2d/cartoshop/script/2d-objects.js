@@ -20,7 +20,7 @@ scenarioCategory | objectPartCategory
 
 var cars = [{
   name: "Camaro",
-  position: { x: (sw/2), y: (sh/2)-80 },
+  position: { x: 0, y: -80 },
   centre: { x: 85, y: 0 },
   polygon: [
       [-0.4, -0.4], 
@@ -50,7 +50,7 @@ var cars = [{
   }},
   {
   name: "Celta",
-  position: { x: (sw/2), y: (sh/2)-80 },
+  position: { x: 0, y: -80 },
   centre: { x: 85, y: 0 },
   polygon: [
       [-0.4, -0.2], 
@@ -202,8 +202,7 @@ Matter.Constraint.create({
 
 var testWheel =
 Bodies.circle(
-    (sw/2), 
-    (sh/2) - (car.wheels.size/2), 
+    0, - (car.wheels.size/2), 
     car.wheels.size/2, {
     isStatic: false,
     collisionFilter: {
@@ -314,7 +313,7 @@ Matter.Constraint.create({
 });
 
 var planet = 
-Bodies.rectangle(sw/2, (sh/2)+274,
+Bodies.rectangle(0, 274,
 1400, 548, {
     isStatic: true,
     collisionFilter: {
@@ -332,7 +331,7 @@ Bodies.rectangle(sw/2, (sh/2)+274,
 });
 
 var line = 
-Bodies.rectangle(sw/2+1200, (sh/2)+25,
+Bodies.rectangle(1200, 25,
 1000, 50, {
     isStatic: true,
     collisionFilter: {
@@ -341,6 +340,27 @@ Bodies.rectangle(sw/2+1200, (sh/2)+25,
     render: {
        fillStyle: "#fff",
        strokeStyle: "#000" 
+    }
+});
+
+var fuel =
+Bodies.circle(
+    350, -100, 50, {
+    isStatic: true,
+    isSensor: true,
+    collisionFilter: {
+        category: scenarioCategory,
+        //mask: scenarioCategory | objectPartCategory
+    },
+    render: {
+        sprite: {
+            texture: "img/fuel.png",
+            xScale: 0.138, //0.476,
+            yScale: 0.138 //0.476
+        },
+        fillStyle: "#fff",
+        lineWidth: 2,
+        strokeStyle: "#000" 
     }
 });
 
@@ -362,14 +382,14 @@ var rawPolygon = [
 var signPolygon = [];
 for (var k in rawPolygon) {
     signPolygon.push({
-        x: (sw/2) + rawPolygon[k][0] * 50,
-        y: (sh/2) + rawPolygon[k][1] * 100
+        x: rawPolygon[k][0] * 50,
+        y: rawPolygon[k][1] * 100
     });
 }
 var sign = 
 polygonFixPosition(
 Matter.Bodies.fromVertices(
-    (sw/2)-(350+50), (sh/2)-100,
+    -(350+50), -100,
     signPolygon, {
     isStatic: true,
     collisionFilter: {
@@ -380,7 +400,7 @@ Matter.Bodies.fromVertices(
         strokeStyle: "#fff",
         lineWidth: 2,
     }
-}), { x: (sw/2)-(350+50), y: (sh/2)-100 });
+}), { x: -(350+50), y: -100 });
 for (var k in sign.parts) {
     sign.parts[k].render.fillStyle = 
     gradientColor(k, sign.parts.length);
@@ -430,7 +450,7 @@ loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop = 
 Matter.Bodies.fromVertices(
-    2550, (sh/2)-550,
+    2550, -550,
     loopPolygon, {
     isStatic: true,
     collisionFilter: {
@@ -476,7 +496,7 @@ loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop1 = 
 Matter.Bodies.fromVertices(
-    2850, (sh/2),
+    2850, 0,
     loopPolygon, {
     isStatic: true,
     collisionFilter: {
@@ -509,13 +529,13 @@ var rawPolygon = [
 var startIndicatorPolygon = [];
 for (var k in rawPolygon) {
     startIndicatorPolygon.push({
-        x: (sw/2) + rawPolygon[k][0] * 25,
-        y: (sh/2) + rawPolygon[k][1] * 25
+        x: rawPolygon[k][0] * 25,
+        y: rawPolygon[k][1] * 25
     });
 }
 var startIndicator = 
 Matter.Bodies.fromVertices(
-    (sw/2), (sh/2),
+    0, 0,
     startIndicatorPolygon, {
     isSensor: true,
     isStatic: true,
