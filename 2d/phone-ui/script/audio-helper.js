@@ -1,5 +1,5 @@
 var dial = [
-    new Audio("audio/phone-dial-0.wav"),
+    //new Audio("audio/phone-dial-0.wav"),
     new Audio("audio/phone-dial-1.mp3"),
     new Audio("audio/phone-dial-2.mp3"),
     new Audio("audio/phone-dial-3.mp3"),
@@ -15,6 +15,6 @@ function playRandomDialSound() {
 }
 
 function playDialSound(n) {
-    n = n > 7 ? 7 : n;
+    n = n > 6 ? 6 : n;
     dial[n].play();
 }
