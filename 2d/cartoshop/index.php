@@ -79,10 +79,10 @@ echo "\n";
 <canvas width="128" height="128" id="camera-canvas"></canvas>
 
 <i class="fa-solid fa-gas-pump"></i>
-<span id="fuel">
-    <span id="fuel-ammount">
-    </span>
-</span>
+<div id="fuel">
+    <div id="fuel-ammount">
+    </div>
+</div>
 
 <span id="controls">
 <i id="test-run" class="fa-solid fa-play"></i>
