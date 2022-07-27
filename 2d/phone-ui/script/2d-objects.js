@@ -44,7 +44,7 @@ Bodies.circle(
     0, 0, sw/4, {
     isStatic: false,
     collisionFilter: {
-        category: secondCategory
+        category: minuteCategory
     },
     render: {
         sprite: {
