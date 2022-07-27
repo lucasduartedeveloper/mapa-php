@@ -12,7 +12,7 @@ $("#numbers button").click(function(e) {
     playDialSound(parseInt(e.target.innerText));
     $("#number").text(number);
 
-    if (number >= 11) {
+    if (number.lengtht >= 11) {
         calling.play();
     }
 });
