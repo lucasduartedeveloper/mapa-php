@@ -5,7 +5,7 @@ $rnd =
     strval(rand(0,999999)), 
     6, "0", STR_PAD_LEFT);
 $style = [
-    0 => "index.css"
+    0 => "phone-ui.css"
 ];
 $script = [
     0 => "thirdpart/poly-decomp.js",
