@@ -7,7 +7,8 @@ $(document).ready(function() {
 var number = "";
 $("#numbers button").click(function(e) {
     //log("click", e);
-    say(e.target.innerText);
+    //say(e.target.innerText);
+    playRandomDialSound();
     number += e.target.innerText;
     $("#number").text(number);
 });
@@ -18,7 +19,7 @@ function say(text) {
          speaking = true;
          var msg = new SpeechSynthesisUtterance();
          //msg.lang = "pt-BR";
-         msg.lang = "en-US";
+         //msg.lang = "en-US";
          //msg.lang = "ja-JP";
          //msg.lang = "ko-KR";
          //msg.lang = "cmn-CN";
