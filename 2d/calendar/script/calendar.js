@@ -36,9 +36,9 @@ $(document).ready(function() {
 var zoomLevel = 2;
 Matter.Events.on(engine, "beforeUpdate", function() {
     if (lockCamera) return;
-    Render.lookAt(render, minuteCircle,
-    { x: (sw/zoomLevel) - minuteCircle.bounds.min.x, 
-      y: (sh/zoomLevel) - minuteCircle.bounds.min.y });
+    Render.lookAt(render, hourCircle,
+    { x: (sw/zoomLevel) - hourCircle.bounds.min.x, 
+      y: (sh/zoomLevel) - hourCircle.bounds.min.y });
 });
 
 // Test
