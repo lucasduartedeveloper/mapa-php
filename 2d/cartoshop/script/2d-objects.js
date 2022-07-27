@@ -396,7 +396,7 @@ loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop = 
 Matter.Bodies.fromVertices(
-    2550, (sh/2)-350,
+    2550, (sh/2)-550,
     loopPolygon, {
     isStatic: true,
     collisionFilter: {
