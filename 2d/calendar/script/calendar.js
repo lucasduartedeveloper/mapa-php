@@ -1,6 +1,36 @@
 var playerId = new Date().getTime();
 var fuel = 100;
 
+var canvas = document.getElementById("matter-js");
+canvas.width = sw;
+canvas.height = sh;
+
+// module aliases
+var 
+    Common = Matter.Common,
+    Engine = Matter.Engine,
+    Render = Matter.Render,
+    Runner = Matter.Runner,
+    Bodies = Matter.Bodies,
+    Composite = Matter.Composite;
+    
+Common.setDecomp(decomp);
+
+// create an engine
+var engine = Engine.create();
+    
+// create a renderer
+var render = Render.create({
+    engine: engine,
+    canvas: canvas,
+    options: {
+         width: sw,
+         height: sh,
+         wireframes: false
+         //showPerformance: true
+    }
+});
+
 function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
@@ -57,24 +87,5 @@ window.test = function() {
     started = true;
     return;
     //-- Annotations
-    accelerating = true;
     motion = false;
-    Matter.Body.set(bodywork,
-    "mass", car.mass);
-    Matter.Body.set(rearWheel,
-    "mass", car.wheels.mass);
-    Matter.Body.set(rearWheel,
-    "friction", car.wheels.friction);
-    Matter.Body.set(rearWheel,
-    "frictionStatic",car.wheels.frictionStatic);
-    Matter.Body.set(frontWheel, 
-    "mass", car.wheels.mass);
-    Matter.Body.set(frontWheel, 
-    "friction", car.wheels.friction);
-    Matter.Body.set(rearWheel,
-    "frictionStatic", car.wheels.frictionStatic);
-    Matter.Body.set(rearWheelPivot,
-    "stiffness",0.5);
-    Matter.Body.set(frontWheelPivot,
-    "stiffness",0.5);
 }
