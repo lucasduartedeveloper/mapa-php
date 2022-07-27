@@ -71,6 +71,7 @@ html, body {
 }
 
 #fuel {
+   transform: rotateY(180);
    position: fixed;
    right: 10px;
    top: 10px;
@@ -82,6 +83,6 @@ html, body {
 
 #fuel-ammount {
    width: 50vw;
-   height: 20px;
+   height: 16px;
    background: orange;
 }
