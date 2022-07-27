@@ -499,7 +499,6 @@ for (var a = -45; a < 180; a+=5) {
         }
     }
 }
-startIndicatorPolygon =
 var startIndicator = 
 Matter.Bodies.fromVertices(
     (sw/2), (sh/2),
