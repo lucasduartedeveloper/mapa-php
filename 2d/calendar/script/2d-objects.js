@@ -78,7 +78,7 @@ Bodies.circle(
     },
     render: {
         sprite: {
-            texture: ""l,
+            texture: "",
             xScale: 0.5, //0.476,
             yScale: 0.5 //0.476
         },
