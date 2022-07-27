@@ -98,7 +98,6 @@ Matter.Constraint.create({
      },
      bodyB: secondCircle,
      pointB: { x: 0, y: 0 },
-     lenght: sw/4,
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
@@ -115,6 +114,7 @@ Matter.Constraint.create({
      },
      bodyB: minuteCircle,
      pointB: { x: 0, y: 0 },
+     lenght: sw/4,
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
