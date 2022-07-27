@@ -101,9 +101,9 @@ Bodies.circle(
     },
     render: {
         sprite: {
-            texture: "",
-            xScale: 0.5, //0.476,
-            yScale: 0.5 //0.476
+            texture: "img/sun.png",
+            xScale: (1/(sw/4))*360, //0.476,
+            yScale: (1/(sw/4))*360 //0.476
         },
         fillStyle: "#fff",
         lineWidth: 2,
