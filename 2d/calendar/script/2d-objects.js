@@ -167,11 +167,7 @@ var mouseConstraint =
 Matter.MouseConstraint.create(engine, {
     mouse: mouse,
     collisionFilter: {
-        category: testCategory,
-        mask: 
-        secondCategory |
-        minuteCategory |
-        hourCategory
+        category: testCategory
     },
     constraint: {
         render: {visible: true}
