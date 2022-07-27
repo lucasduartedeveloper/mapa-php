@@ -72,7 +72,7 @@ Bodies.circle(
 
 var minuteCircle =
 Bodies.circle(
-    0, 0, sw/3, {
+    0, 0, sw/4, {
     isStatic: false,
     collisionFilter: {
         category: minuteCategory,
@@ -98,6 +98,7 @@ Matter.Constraint.create({
      },
      bodyB: secondCircle,
      pointB: { x: 0, y: 0 },
+     lenght: sw/4,
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
