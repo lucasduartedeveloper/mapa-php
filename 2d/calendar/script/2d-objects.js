@@ -106,6 +106,22 @@ Matter.Constraint.create({
      }
 });
 
+var minutePivot = 
+Matter.Constraint.create({
+     pointA: {
+         x: 0, 
+         y: 0
+     },
+     bodyB: minuteCircle,
+     pointB: { x: 0, y: 0 },
+     stiffness: 0.5,
+     render: {
+          strokeStyle: '#fff',
+          lineWidth: 2,
+          type: 'line'
+     }
+});
+
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
