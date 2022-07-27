@@ -37,7 +37,7 @@ html, body {
 /* Controls */
 #numbers {
    position: fixed;
-   top: 10px;
+   top: 100px;
    background: #2f2e40;
    width: 100vw;
    height: 100vw;
@@ -73,5 +73,5 @@ html, body {
    background: #2f2e40;
    color: white;
    width: 100vw;
-   height: 50px;
+   height: 90px;
 }
