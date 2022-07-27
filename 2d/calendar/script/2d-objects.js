@@ -165,7 +165,7 @@ var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
 Matter.MouseConstraint.create(engine, {
     mouse: mouse,
-     collisionFilter: {
+    collisionFilter: {
         mask: 
         secondCategory |
         minuteCategory |
