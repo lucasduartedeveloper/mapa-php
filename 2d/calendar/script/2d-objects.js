@@ -162,9 +162,9 @@ Matter.Constraint.create({
 });
 
 Matter.Body.setCentre(secondCircle,
-   { x: 0, y: -sw }, true);
+   { x: 0, y: 0 }, false);
 Matter.Body.setCentre(minuteCircle, 
-   { x: 0, y: -(sw/2) }, true);
+   { x: 0, y: 0 }, false);
 
 Matter.Body.setAngularVelocity(secondCircle, 10);
 Matter.Body.setAngularVelocity(minuteCircle, 10);
