@@ -53,7 +53,7 @@ scenarioCategory | objectPartCategory
 
 var secondCircle =
 Bodies.circle(
-    0, 0, (sw/4)/2, {
+    0, 0, (sw/4), {
     isStatic: false,
     collisionFilter: {
         category: secondCategory,
@@ -73,7 +73,7 @@ Bodies.circle(
 
 var minuteCircle =
 Bodies.circle(
-    0, 0, (sw/4)/2, {
+    0, 0, (sw/4), {
     isStatic: false,
     collisionFilter: {
         category: minuteCategory,
@@ -82,8 +82,8 @@ Bodies.circle(
     render: {
         sprite: {
             texture: "img/earth.png",
-            xScale: (1/835)*(sw/2), //0.476,
-            yScale: (1/835)*(sw/2) //0.476
+            xScale: (1/835)*(sw/4), //0.476,
+            yScale: (1/835)*(sw/4) //0.476
         },
         fillStyle: "#fff",
         lineWidth: 2,
