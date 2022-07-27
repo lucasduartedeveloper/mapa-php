@@ -420,7 +420,7 @@ var rawPolygon = [
 ];
 var loopPolygon = [];
 var oddVertices = [];
-for (var a = -90; a < 180; a+=5) {
+for (var a = -45; a < 180; a+=5) {
     for (var k in rawPolygon) {
         if (k % 2 == 0) {
             loopPolygon.push(
@@ -442,7 +442,7 @@ loopPolygon =
 loopPolygon.concat(oddVertices.reverse());
 var loop1 = 
 Matter.Bodies.fromVertices(
-    2950, (sh/2)+450,
+    2750, (sh/2)+250,
     loopPolygon, {
     isStatic: true,
     collisionFilter: {
