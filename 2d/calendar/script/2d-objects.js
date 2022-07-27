@@ -42,7 +42,8 @@ var secondCategory = 0x0001,
        minuteCategory = 0x0002,
        hourCategory = 0x0004,
        dayCategory = 0x0008,
-       weekCategory = 0x0016;
+       weekCategory = 0x0016,
+       testCategory = 0x0032;
 
 /*
 scenarioCategory
@@ -56,7 +57,7 @@ Bodies.circle(
     isStatic: false,
     collisionFilter: {
         category: secondCategory,
-        mask: secondCategory
+        mask: testCategory | secondCategory
     },
     render: {
         sprite: {
@@ -76,7 +77,7 @@ Bodies.circle(
     isStatic: false,
     collisionFilter: {
         category: minuteCategory,
-        mask: minuteCategory
+        mask: testCategory | minuteCategory
     },
     render: {
         sprite: {
@@ -96,7 +97,7 @@ Bodies.circle(
     isStatic: false,
     collisionFilter: {
         category: hourCategory,
-        mask: hourCategory
+        mask: testCategory | hourCategory
     },
     render: {
         sprite: {
@@ -166,6 +167,7 @@ var mouseConstraint =
 Matter.MouseConstraint.create(engine, {
     mouse: mouse,
     collisionFilter: {
+        category: testCategory,
         mask: 
         secondCategory |
         minuteCategory |
