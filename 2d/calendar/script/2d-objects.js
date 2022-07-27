@@ -97,7 +97,7 @@ Bodies.circle(
     isStatic: false,
     collisionFilter: {
         category: hourCategory,
-        mask: testCategory | hourCategory
+        mask: hourCategory
     },
     render: {
         sprite: {
