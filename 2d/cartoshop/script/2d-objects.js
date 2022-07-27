@@ -480,29 +480,10 @@ for (var k in rawPolygon) {
         y: (sh/2) + rawPolygon[k][1] * 25
     });
 }
-var oddVertices = [];
-for (var a = -45; a < 180; a+=5) {
-    for (var k in rawPolygon) {
-        if (k % 2 == 0) {
-            loopPolygon.push(
-                rotate(0, 0,
-                rawPolygon[k][0]*1000, 
-                rawPolygon[k][1]*1000, a)
-            );
-        }
-        else {
-            oddVertices.push(
-                rotate(0, 0,
-                rawPolygon[k][0]*1000,
-                rawPolygon[k][1]*1000, a)
-            );
-        }
-    }
-}
 var startIndicator = 
 Matter.Bodies.fromVertices(
     (sw/2), (sh/2),
-    loopPolygon, {
+    startIndicatorPolygon, {
     isSensor: true,
     isStatic: true,
     collisionFilter: {
