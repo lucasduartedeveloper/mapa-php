@@ -52,7 +52,7 @@ scenarioCategory | objectPartCategory
 
 var secondCircle =
 Bodies.circle(
-    0, 0, sw/4, {
+    0, 0, (sw/4)/36, {
     isStatic: false,
     collisionFilter: {
         category: secondCategory,
@@ -72,7 +72,7 @@ Bodies.circle(
 
 var minuteCircle =
 Bodies.circle(
-    0, 0, (sw/4)/60, {
+    0, 0, (sw/4)/6, {
     isStatic: false,
     collisionFilter: {
         category: minuteCategory,
@@ -92,7 +92,7 @@ Bodies.circle(
 
 var hourCircle =
 Bodies.circle(
-    0, 0, (sw/4)/3600, {
+    0, 0, (sw/4), {
     isStatic: false,
     collisionFilter: {
         category: hourCategory,
