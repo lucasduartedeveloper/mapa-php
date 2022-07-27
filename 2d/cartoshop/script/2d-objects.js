@@ -420,7 +420,7 @@ var rawPolygon = [
 ];
 var loopPolygon = [];
 var oddVertices = [];
-for (var a = -90; a < 90; a+=5) {
+for (var a = -90; a < 180; a+=5) {
     for (var k in rawPolygon) {
         if (k % 2 == 0) {
             loopPolygon.push(
