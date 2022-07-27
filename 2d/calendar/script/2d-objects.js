@@ -93,7 +93,7 @@ Bodies.circle(
 
 var hourCircle =
 Bodies.circle(
-    0, 0, (sw/4), {
+    0, 0, (sw/2), {
     isStatic: false,
     collisionFilter: {
         category: hourCategory,
@@ -102,8 +102,8 @@ Bodies.circle(
     render: {
         sprite: {
             texture: "img/sun.png",
-            xScale: (1/(sw/4))*660, //0.476,
-            yScale: (1/(sw/4))*660 //0.476
+            xScale: (1/660)*(sw/2), //0.476,
+            yScale: (1/660)*(sw/2) //0.476
         },
         fillStyle: "#fff",
         lineWidth: 2,
