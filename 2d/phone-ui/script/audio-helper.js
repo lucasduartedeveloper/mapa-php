@@ -11,5 +11,10 @@ var dial = [
 
 function playRandomDialSound() {
     var n = Math.floor(Math.random() * 8);
-     dial[n].play();
+    dial[n].play();
+}
+
+function playDialSound(n) {
+    n = n > 8 ? 0 : n;
+    dial[n].play();
 }

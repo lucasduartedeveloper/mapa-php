@@ -8,8 +8,8 @@ var number = "";
 $("#numbers button").click(function(e) {
     //log("click", e);
     //say(e.target.innerText);
-    playRandomDialSound();
     number += e.target.innerText;
+    playDialSound(parseInt(e.target.innerText));
     $("#number").text(number);
 });
 
