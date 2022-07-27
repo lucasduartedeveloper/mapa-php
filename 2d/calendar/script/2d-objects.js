@@ -65,7 +65,7 @@ Bodies.circle(
             xScale: 0.5, //0.476,
             yScale: 0.5 //0.476
         },
-        fillStyle: "green",
+        fillStyle: "#fff",
         lineWidth: 2,
         strokeStyle: "#000" 
     }
@@ -85,7 +85,7 @@ Bodies.circle(
             xScale: 0.5, //0.476,
             yScale: 0.5 //0.476
         },
-        fillStyle: "yellow",
+        fillStyle: "#fff",
         lineWidth: 2,
         strokeStyle: "#000" 
     }
@@ -105,7 +105,7 @@ Bodies.circle(
             xScale: 0.5, //0.476,
             yScale: 0.5 //0.476
         },
-        fillStyle: "red",
+        fillStyle: "#fff",
         lineWidth: 2,
         strokeStyle: "#000" 
     }
