@@ -104,7 +104,7 @@ Bodies.circle(
             xScale: 0.5, //0.476,
             yScale: 0.5 //0.476
         },
-        fillStyle: "#fff",
+        fillStyle: "red",
         lineWidth: 2,
         strokeStyle: "#000" 
     }
@@ -121,7 +121,7 @@ Matter.Constraint.create({
      stiffness: 0.5,
      length: sw,
      render: {
-          strokeStyle: '#fff',
+          strokeStyle: "yellow",
           lineWidth: 2,
           type: 'line'
      }
@@ -138,7 +138,7 @@ Matter.Constraint.create({
      stiffness: 0.5,
      length: sw/2,
      render: {
-          strokeStyle: '#fff',
+          strokeStyle: "green",
           lineWidth: 2,
           type: 'line'
      }
