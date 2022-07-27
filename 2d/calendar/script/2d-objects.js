@@ -151,7 +151,7 @@ Matter.Constraint.create({
      },
      bodyB: hourCircle,
      pointB: { x: 0, y: 0 },
-     length: sw/2,
+     length: sw,
      stiffness: 0.5,
      render: {
           strokeStyle: '#fff',
