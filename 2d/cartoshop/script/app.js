@@ -36,6 +36,7 @@ function matterJs() {
         //testWheel,
         sign,
         signConstraint,
+        startIndicator,
         planet,
         line, loop, loop1
     ]);
@@ -157,6 +158,12 @@ Matter.Events.on(engine, "beforeUpdate", function() {
        Matter.Body.set(
        rearWheel, "angularVelocity", 2);
     }
+
+    Matter.Body.setPosition(
+    startIndicator, {
+        x: bodywork.position.x,
+        y: bodywork.position.y - 100
+    });
 });
 
 // Test

@@ -460,6 +460,66 @@ for (var k in loop1.parts) {
    gradientColor(k, loop1.parts.length);
 }
 
+// Home indicator
+var rawPolygon = [
+    [-1, -0.1], 
+    [-1, +0.1], 
+    [-0.5, +0.6], 
+    [-0.6, +0.5], 
+    [-0.9, +0.1], 
+    [+1, +0.1], 
+    [+1, -0.1], 
+    [-0.9, -0.1],  
+    [-0.6, -0.5], 
+    [-0.5, -0.6]
+];
+var startIndicatorPolygon = [];
+for (var k in rawPolygon) {
+    startIndicatorPolygon.push({
+        x: (sw/2) + rawPolygon[k][0] * 25,
+        y: (sh/2) + rawPolygon[k][1] * 25
+    });
+}
+var oddVertices = [];
+for (var a = -45; a < 180; a+=5) {
+    for (var k in rawPolygon) {
+        if (k % 2 == 0) {
+            loopPolygon.push(
+                rotate(0, 0,
+                rawPolygon[k][0]*1000, 
+                rawPolygon[k][1]*1000, a)
+            );
+        }
+        else {
+            oddVertices.push(
+                rotate(0, 0,
+                rawPolygon[k][0]*1000,
+                rawPolygon[k][1]*1000, a)
+            );
+        }
+    }
+}
+startIndicatorPolygon =
+var startIndicator = 
+Matter.Bodies.fromVertices(
+    (sw/2), (sh/2),
+    loopPolygon, {
+    isSensor: true,
+    isStatic: true,
+    collisionFilter: {
+        category: scenarioCategory
+    },
+    render: {
+        fillStyle: "rgba(255,255,255,0)",
+        strokeStyle: "#fff",
+        lineWidth: 2,
+    }
+});
+for (var k in startIndicator.parts) {
+   startIndicator.parts[k].render.fillStyle = 
+   gradientColor(k, startIndicator.parts.length);
+}
+
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
 Matter.MouseConstraint.create(engine, {
