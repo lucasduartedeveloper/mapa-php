@@ -72,7 +72,7 @@ Bodies.circle(
 
 var minuteCircle =
 Bodies.circle(
-    0, 0, sw/4, {
+    0, 0, (sw/4)/60, {
     isStatic: false,
     collisionFilter: {
         category: minuteCategory,
@@ -92,7 +92,7 @@ Bodies.circle(
 
 var hourCircle =
 Bodies.circle(
-    0, 0, sw/4, {
+    0, 0, (sw/4)/3600, {
     isStatic: false,
     collisionFilter: {
         category: hourCategory,
