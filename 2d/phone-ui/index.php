@@ -66,17 +66,6 @@ echo "\n";
 </head>
 <body>
 
-<video style="display:none" id="videoStream" width="128" height="128" autoplay></video>
-
-<video style="display:none" id="video" width="128" height="128" autoplay></video>
-<canvas width="128" height="128" id="camera-canvas"></canvas>
-
-<i class="fa-solid fa-gas-pump"></i>
-<div id="fuel">
-    <div id="fuel-ammount">
-    </div>
-</div>
-
 <div id="numbers">
 <button>7</button>
 <button>8</button>
