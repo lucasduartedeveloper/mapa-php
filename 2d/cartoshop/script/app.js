@@ -148,7 +148,7 @@ $(document).ready(function() {
 Matter.Events.on(engine, "beforeUpdate", function() {
     if (lockCamera) return;
     Render.lookAt(render, bodywork,
-    { x: (sw/2) - 125, y: (sh/2) - 87.5 });
+    { x: (sw*2) - 125, y: (sh*2) - 87.5 });
 
     if (accelerating) {
        Matter.Body.set(
