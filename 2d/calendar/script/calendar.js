@@ -4,7 +4,7 @@ function matterJs() {
     // add all of the bodies to the world
     Composite.add(engine.world, [
         minuteCircle,
-        sencondCircle
+        secondCircle
     ]);
     
     // run the renderer
