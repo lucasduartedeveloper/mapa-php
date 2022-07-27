@@ -11,6 +11,10 @@ $("#numbers button").click(function(e) {
     number += e.target.innerText;
     playDialSound(parseInt(e.target.innerText));
     $("#number").text(number);
+
+    if (e.target.innerText.length == 11) {
+        calling.play();
+    }
 });
 
 var speaking = false;
