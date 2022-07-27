@@ -166,8 +166,8 @@ Matter.Body.setCentre(secondCircle,
 Matter.Body.setCentre(minuteCircle, 
    { x: 0, y: 0 }, false);
 
-Matter.Body.setAngularVelocity(secondCircle, 10);
-Matter.Body.setAngularVelocity(minuteCircle, 10);
+//Matter.Body.setAngularVelocity(secondCircle, 10);
+//Matter.Body.setAngularVelocity(minuteCircle, 10);
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
