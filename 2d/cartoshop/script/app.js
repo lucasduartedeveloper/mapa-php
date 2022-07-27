@@ -85,9 +85,10 @@ $(document).ready(function() {
             ((vw-128)/2)*-1, 
             vh, vw);
         }
-
-        if (Matter.Collision
-            .collides(bodywork, fuelRefill).collided
+    
+        var refillCollision = 
+        Matter.Collision.collides(bodywork, fuelRefill)
+        if (refillCollision && refillCollision.collided
             && fuel <= 100) {
             meterFill.play();
             fuel += 5;
