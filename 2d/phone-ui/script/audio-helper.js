@@ -15,6 +15,6 @@ function playRandomDialSound() {
 }
 
 function playDialSound(n) {
-    n = n > 8 ? 0 : n;
+    n = n > 7 ? 7 : n;
     dial[n].play();
 }
