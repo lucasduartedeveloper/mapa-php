@@ -57,3 +57,9 @@ html, body {
    height: 33vw;
    border: 2px solid #ccc;
 }
+
+#number {
+   background: #2f2e40;
+   color: white;
+   width: 100vw;
+}
