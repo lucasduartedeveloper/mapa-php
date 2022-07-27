@@ -80,7 +80,7 @@ html, body {
    z-index: 9999;
 }
 
-#fuel {
+#fuel-ammount {
    width: 50vw;
    height: 20px;
    background: orange;
