@@ -175,8 +175,8 @@ window.test = function() {
     if (started) return;
     carStart.play();
     setTimeout(function() {
-        carRunning.loop = true;
-        carRunning.play();
+        //carRunning.loop = true;
+        //carRunning.play();
     }, 3000);
 
     // add mouse
