@@ -5,6 +5,36 @@ var vw = 0;
 var vh = 0;
 var vr = 0;
 
+var canvas = document.getElementById("matter-js");
+canvas.width = sw;
+canvas.height = sh;
+
+// module aliases
+var 
+    Common = Matter.Common,
+    Engine = Matter.Engine,
+    Render = Matter.Render,
+    Runner = Matter.Runner,
+    Bodies = Matter.Bodies,
+    Composite = Matter.Composite;
+    
+Common.setDecomp(decomp);
+
+// create an engine
+var engine = Engine.create();
+    
+// create a renderer
+var render = Render.create({
+    engine: engine,
+    canvas: canvas,
+    options: {
+         width: sw,
+         height: sh,
+         wireframes: false
+         //showPerformance: true
+    }
+});
+
 var p2m = 1/100;
 
 // Collision categories
