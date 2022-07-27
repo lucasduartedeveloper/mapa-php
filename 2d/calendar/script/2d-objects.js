@@ -161,6 +161,10 @@ Matter.Constraint.create({
      }
 });
 
+Matter.Body.setCentre(secondCircle,
+   { x: 0, y: -sw }, true);
+Matter.Body.setCentre(minuteCircle, 
+   { x: 0, y: -(sw/2) }, true);
 
 var mouse = Matter.Mouse.create(render.canvas);
 var mouseConstraint = 
