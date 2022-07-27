@@ -4,7 +4,7 @@ $(document).ready(function() {
     
 });
 
-$("#sumbers button").click(function(e) {
+$("#numbers button").click(function(e) {
     log("click", e);
 });
 
