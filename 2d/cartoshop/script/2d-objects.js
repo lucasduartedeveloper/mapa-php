@@ -336,7 +336,7 @@ for (var k in rawPolygon) {
 var sign = 
 polygonFixPosition(
 Matter.Bodies.fromVertices(
-    (-350+50), (sh/2)-100,
+    (sw/2)-(350+50), (sh/2)-100,
     signPolygon, {
     isStatic: true,
     collisionFilter: {
@@ -347,7 +347,7 @@ Matter.Bodies.fromVertices(
         strokeStyle: "#fff",
         lineWidth: 2,
     }
-}), { x: (-350+50), y: (sh/2)-100 });
+}), { x: (sw/2)-(350+50), y: (sh/2)-100 });
 for (var k in sign.parts) {
     sign.parts[k].render.fillStyle = 
     gradientColor(k, sign.parts.length);
