@@ -58,6 +58,14 @@ html, body {
    border: 2px solid #ccc;
 }
 
+#numbers button:hover {
+   background: white;
+   color: #2f2e40;
+   width: 33vw;
+   height: 33vw;
+   border: 2px solid #ccc;
+}
+
 #number {
    background: #2f2e40;
    color: white;
