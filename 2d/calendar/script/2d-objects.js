@@ -52,7 +52,7 @@ scenarioCategory | objectPartCategory
 
 var secondCircle =
 Bodies.circle(
-    0, 0, (sw/4)/12, {
+    0, 0, (sw/4)/2, {
     isStatic: false,
     collisionFilter: {
         category: secondCategory,
