@@ -41,7 +41,7 @@ Bodies.circle(
 
 var minuteCircle =
 Bodies.circle(
-    0, 0, sw/4, {
+    0, 0, sw/3, {
     isStatic: false,
     collisionFilter: {
         category: minuteCategory
