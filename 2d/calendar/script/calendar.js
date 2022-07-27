@@ -33,8 +33,8 @@ var zoomLevel = 2;
 Matter.Events.on(engine, "beforeUpdate", function() {
     if (lockCamera) return;
     Render.lookAt(render, minuteCircle,
-    { x: (sw/zoomLevel) - minuteCircle.min.x, 
-      y: (sh/zoomLevel) - minuteCircle.min.y });
+    { x: (sw/zoomLevel) - minuteCircle.bounds.min.x, 
+      y: (sh/zoomLevel) - minuteCircle.bounds.min.y });
 });
 
 // Test
