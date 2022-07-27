@@ -68,6 +68,9 @@ html, body {
 }
 
 #number {
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
    position: fixed;
    top: 10px;
    background: #2f2e40;
