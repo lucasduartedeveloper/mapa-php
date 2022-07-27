@@ -55,7 +55,8 @@ Bodies.circle(
     0, 0, sw/4, {
     isStatic: false,
     collisionFilter: {
-        category: secondCategory
+        category: secondCategory,
+        mask: secondCategory
     },
     render: {
         sprite: {
@@ -74,7 +75,8 @@ Bodies.circle(
     0, 0, sw/3, {
     isStatic: false,
     collisionFilter: {
-        category: minuteCategory
+        category: minuteCategory,
+        mask: minuteCategory
     },
     render: {
         sprite: {
