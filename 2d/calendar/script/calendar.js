@@ -39,6 +39,11 @@ Matter.Events.on(engine, "beforeUpdate", function() {
     Render.lookAt(render, hourCircle,
     { x: (sw/zoomLevel) - hourCircle.bounds.min.x, 
       y: (sh/zoomLevel) - hourCircle.bounds.min.y });
+
+    if (motion) {
+        engine.gravity.x = gyro.accX/9.8;
+        engine.gravity.y = gyro.accY/9.8;
+    }
 });
 
 // Test
