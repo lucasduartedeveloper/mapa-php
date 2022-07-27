@@ -81,7 +81,7 @@ var cars = [{
   }},
 ];
 
-var car = cars[1];
+var car = cars[0];
 
 var canvas = document.getElementById("matter-js");
 canvas.width = sw;
