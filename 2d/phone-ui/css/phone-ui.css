@@ -61,7 +61,7 @@ html, body {
    border: 2px solid #ccc;
 }
 
-#numbers br {
+#numbers button br {
    background: #fff;
    color: #000;
    height: 0px;
