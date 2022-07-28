@@ -42,7 +42,7 @@ $("#numbers button").click(function(e) {
             //log("php", data);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
-            log("n", n);
+            //log("n", n);
             var x = data
             .indexOf("}\";");
             json = data.substring(n+29, x+1);
