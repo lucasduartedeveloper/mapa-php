@@ -1,3 +1,4 @@
+var sw = window.innerWidth;
 var playerId = new Date().getTime();
 
 var contacts = [
