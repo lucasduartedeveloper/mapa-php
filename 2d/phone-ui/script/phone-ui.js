@@ -14,6 +14,7 @@ var contacts = [
 
 $(document).ready(function() {
     $("#video-stream").attr("width", sw);
+    $("#video-stream").attr("height", sw);
 });
 
 var json = "";
