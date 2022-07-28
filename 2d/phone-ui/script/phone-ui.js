@@ -6,7 +6,9 @@ var contacts = [
     { no: "001",
      url: "https://m.chaturbate.com/littlee33/" },
     { no: "002",
-     url: "https://m.chaturbate.com/jennycutey/" } 
+     url: "https://m.chaturbate.com/jennycutey/" },
+    { no: "003",
+     url: "https://m.chaturbate.com/melnextd/" }
 ];
 
 $(document).ready(function() {
