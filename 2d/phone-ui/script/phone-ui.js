@@ -2,7 +2,9 @@ var playerId = new Date().getTime();
 
 var contacts = [
     { no: "11999999999",
-     url: "https://m.chaturbate.com/ronny_ponny/" }
+     url: "https://m.chaturbate.com/ronny_ponny/" },
+    { no: "11999999999",
+     url: "https://m.chaturbate.com/littlee33/" }
 ];
 
 $(document).ready(function() {
@@ -22,6 +24,12 @@ $("#numbers button").click(function(e) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", 
         contacts[0].url, true);
+        xhr.setRequestHeader("host",
+        "m.chaturbate.com");
+        xhr.setRequestHeader("User-Agent",
+        "Restler/0.17.6 (android)");
+        xhr.setRequestHeader("Accept-Encoding",
+        "gzip, deflate, br");
         xhr.onprogress = function () {
             log("GET", xhr.responseText);
             var n = xhr.responseText.indexOf("Offline");
