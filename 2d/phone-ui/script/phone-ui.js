@@ -1,3 +1,9 @@
+var audio = new Audio("audio/heart-beat.wav");
+var jovemPan = new Audio(
+"https:\/\/ice.fabricahost.com.br\/jovempanlondrina");
+
+var timeStreaming = 0;
+
 var sw = window.innerWidth;
 var playerId = new Date().getTime();
 
@@ -13,7 +19,11 @@ var contacts = [
     { no: "004",
      url: "https://m.chaturbate.com/w0wgirls/" },
     { no: "005",
-     url: "https://m.chaturbate.com/artoftease/" }
+     url: "https://m.chaturbate.com/artoftease/" },
+     { no: "006",
+     url: "https://m.chaturbate.com/_blackbee_/" },
+    { no: "999",
+     url: "video/trailer.mp4" }
 ];
 
 $(document).ready(function() {
@@ -29,8 +39,6 @@ $("#numbers button").click(function(e) {
        return;
     }
 
-    //log("click", e.target);
-    //say(e.target.innerText);
     var value = e.target.value;
     number += value;
     playDialSound(parseInt(value));
@@ -40,15 +48,11 @@ $("#numbers button").click(function(e) {
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;
-        //log("search", search);
         calling.play();
         $.post("ajax/http-get.php", {
         url : search[0].url }, function(data) {
-            //data = unescape(data);
-            //log("php", data);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
-            //log("n", n);
             var x = data
             .indexOf("}\";");
             json = data.substring(n+29, x+1);
@@ -61,7 +65,6 @@ $("#numbers button").click(function(e) {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-            //log("json", json);
             if (json.hls_source.length > 0) {
                 $("#video-layer").show();
                 $("#broadcaster-username")
@@ -70,6 +73,8 @@ $("#numbers button").click(function(e) {
                 json.hls_source);
                 $("#video-stream")[0].load();
                 $("#video-stream")[0].play();
+
+                timeStreaming = new Date().getTime();
             }
             else {
                log("info", 
@@ -79,6 +84,22 @@ $("#numbers button").click(function(e) {
         });
     }
 });
+
+setTimeout(function() {
+    timeStreaming = 
+    new Date().getTime() - 
+    timeStreaming;
+
+    var hours = 
+    Math.floor(timeStreaming / 3600000);
+    var minutes = 
+    Math.floor(timeStreaming / 60000);
+    var seconds = 
+    Math.floor(timeStreaming / 1000);
+
+    $("#time-streaming").text(
+    hours+":"+minutes+":"+seconds);
+}, 1000);
 
 $("#hang-phone").click(function() {
     $("#video-stream")[0].pause();

@@ -67,6 +67,7 @@ echo "\n";
 <body>
 
 <div id="video-layer" style="display:none">
+<span id="time-streaming"></span>
 <span id="broadcaster-username"></span>
 <video id="video-stream" width="100" height="100" autoplay></video>
 <span id="controls">
