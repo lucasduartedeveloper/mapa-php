@@ -21,12 +21,13 @@ $("#numbers button").click(function(e) {
     $("#number").text(number);
 
     if (number.length >= 3) {
-        var n = contacts.filter(c => c.no == number);
-        log("n", n);
+        var search = contacts.filter(c => c.no == number);
+        if (search.length == 0) return;
+        log("search", search);
         number = "";
         calling.play();
         $.post("ajax/http-get.php", {
-        url : contacts[1].url }, function(data) {
+        url : search[0].url }, function(data) {
             //data = unescape(data);
             //log("php", data);
             var n = data
