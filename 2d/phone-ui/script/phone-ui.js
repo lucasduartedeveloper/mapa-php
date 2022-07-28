@@ -16,7 +16,7 @@ $(document).ready(function() {
 var json = "";
 var number = "";
 $("#numbers button").click(function(e) {
-    log("click", e.currentTarget.attr("value"));
+    log("click", e.target.value);
     //say(e.target.innerText);
     var value = e.target.value;
     number += value;
