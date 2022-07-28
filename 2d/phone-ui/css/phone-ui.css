@@ -61,14 +61,8 @@ html, body {
    border: 2px solid #ccc;
 }
 
-#numbers button br {
-   background: #fff;
-   color: #000;
-   height: 0px !important;
-}
-
 #numbers button span {
-   background: #fff;
+   background: rgba(1,1,1,0);
    color: #000;
    font-size: 20px;
 }
