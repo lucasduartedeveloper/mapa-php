@@ -23,7 +23,9 @@ $("#numbers button").click(function(e) {
         calling.play();
         $.post("ajax/http-get.php", {
         url : contacts[1].url }, function(data) {
+            data = unescape(data);
             log("php", data);
+            var hlsSource = data.
         });
     }
 });
