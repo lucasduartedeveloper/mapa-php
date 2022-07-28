@@ -48,7 +48,7 @@ $("#numbers button").click(function(e) {
            JSON.parse(json) || $.parseJSON(json);
 
             //log("json", json);
-            if (json.hls_source > 0) {
+            if (json.hls_source.length > 0) {
                 $("#videoStream").src =
                 json.hls_source;
             }
