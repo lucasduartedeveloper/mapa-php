@@ -31,10 +31,10 @@ $("#numbers button").click(function(e) {
             //data = unescape(data);
             log("php", data);
             var n = data
-            .indexOf("hls_source\u0022:");
+            .indexOf("window.initialRoomDossier = \"{");
             log("n", n);
             var x = data
-            .indexOf("\u0022dismissible_messages");
+            .indexOf("}\";");
             var hlsSource = unescape(data.substring(n, x));
             log("hls", hlsSource);
         });
