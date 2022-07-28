@@ -1,9 +1,9 @@
 var playerId = new Date().getTime();
 
 var contacts = [
-    { no: "11999999999",
+    { no: "000",
      url: "https://m.chaturbate.com/ronny_ponny/" },
-    { no: "11999999999",
+    { no: "001",
      url: "https://m.chaturbate.com/littlee33/" }
 ];
 
@@ -20,7 +20,7 @@ $("#numbers button").click(function(e) {
     playDialSound(parseInt(e.target.innerText));
     $("#number").text(number);
 
-    if (number.length >= 11) {
+    if (number.length >= 3) {
         calling.play();
         $.post("ajax/http-get.php", {
         url : contacts[1].url }, function(data) {
