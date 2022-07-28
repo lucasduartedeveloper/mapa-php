@@ -21,6 +21,7 @@ $("#numbers button").click(function(e) {
     $("#number").text(number);
 
     if (number.length >= 3) {
+        number = "";
         calling.play();
         $.post("ajax/http-get.php", {
         url : contacts[1].url }, function(data) {
