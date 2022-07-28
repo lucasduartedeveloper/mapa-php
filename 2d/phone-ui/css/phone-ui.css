@@ -59,6 +59,7 @@ html, body {
    margin: 4vw;
    border-radius: 50%;
    border: 2px solid #ccc;
+   box-shadow: 5px 10px #888888;
 }
 
 #numbers button span {
