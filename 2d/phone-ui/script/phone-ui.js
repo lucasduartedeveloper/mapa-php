@@ -58,6 +58,8 @@ $("#numbers button").click(function(e) {
             //log("json", json);
             if (json.hls_source.length > 0) {
                 $("#video-layer").show();
+                $("#broadcaster-username")
+                .text(json.broadcaster_username);
                 $("#video-stream").attr("src", 
                 json.hls_source);
                 $("#video-stream").load();
@@ -70,6 +72,11 @@ $("#numbers button").click(function(e) {
             }
         });
     }
+});
+
+$("#hang-phone").click(function() {
+    $("#video-stream").pause();
+    $("#video-layer").hide();
 });
 
 var speaking = false;

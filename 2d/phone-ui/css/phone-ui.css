@@ -101,10 +101,16 @@ html, body {
    text-align: center;
 }
 
+#broadcaster-username,
+#controls {
+  width: 100vw;
+  color: white;
+  font-size: 50px;
+}
+
 #video-stream {
    background: rgba(0,0,0,1);
    width: 100vw;
-   height: 100vh;
    position: fixed;
    right: 0px;
    bottom: 0px;
