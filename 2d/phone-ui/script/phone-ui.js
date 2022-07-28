@@ -19,6 +19,7 @@ $("#numbers button").click(function(e) {
     //log("click", e);
     //say(e.target.innerText);
     number += e.target.innerText;
+    log("clicked",e);
     playDialSound(parseInt(e.target.innerText));
     $("#number").text(number);
 
