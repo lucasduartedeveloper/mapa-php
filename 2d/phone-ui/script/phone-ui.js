@@ -16,11 +16,10 @@ $(document).ready(function() {
 var json = "";
 var number = "";
 $("#numbers button").click(function(e) {
-    log("click", e);
+    log("click", e.currentTarget.attr("value"));
     //say(e.target.innerText);
     var value = e.target.value;
     number += value;
-    log("clicked",e);
     //playDialSound(parseInt(value));
     $("#number").text(number);
 
