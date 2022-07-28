@@ -57,12 +57,11 @@ $("#numbers button").click(function(e) {
 
             //log("json", json);
             if (json.hls_source.length > 0) {
-                $("#videoStream").attr("src", 
+                $("#video-layer").show();
+                $("#video-stream").attr("src", 
                 json.hls_source);
-                $("#videoStream").css("z-index","99999");
-                $("#videoStream").show();
-                $("#videoStream").load();
-                $("#videoStream").play();
+                $("#video-stream").load();
+                $("#video-stream").play();
             }
             else {
                log("info", 
