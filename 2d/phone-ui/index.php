@@ -66,8 +66,8 @@ echo "\n";
 </head>
 <body>
 
-<div style="display:none" width="100" height="100" id="video-layer">
-<video id="video-stream" autoplay></video>
+<div id="video-layer" style="display:none">
+<video id="video-stream" width="100" height="100" autoplay></video>
 </div>
 
 <div id="number">
