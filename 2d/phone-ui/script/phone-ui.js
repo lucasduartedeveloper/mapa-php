@@ -23,20 +23,20 @@ $("#numbers button").click(function(e) {
     if (number.length >= 3) {
         var search = contacts.filter(c => c.no == number);
         if (search.length == 0) return;
-        log("search", search);
+        //log("search", search);
         number = "";
         calling.play();
         $.post("ajax/http-get.php", {
         url : search[0].url }, function(data) {
             //data = unescape(data);
-            log("php", data);
+            //log("php", data);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
             log("n", n);
             var x = data
             .indexOf("}\";");
-            var json = unescape(
-            data.substring(n+29, x+1));
+            var json = JSON.parse(unescape(
+            data.substring(n+29, x+1)));
             log("json", json);
         });
     }
