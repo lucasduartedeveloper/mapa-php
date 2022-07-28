@@ -11,7 +11,7 @@ $(document).ready(function() {
     
 });
 
-var unescapedData = "";
+var json = "";
 var number = "";
 $("#numbers button").click(function(e) {
     //log("click", e);
@@ -35,8 +35,7 @@ $("#numbers button").click(function(e) {
             log("n", n);
             var x = data
             .indexOf("}\";");
-            var json = JSON.parse(
-            data.substring(n+29, x+1));
+            json = data.substring(n+29, x+1);
             log("json", json);
         });
     }
