@@ -89,15 +89,17 @@ setTimeout(function() {
     var timeStreaming = 
     new Date().getTime() - timeStarted;
 
-    var seconds = 
-    Math.floor((timeStreaming % 60000) / 1000);
-    var minutes = 
-    Math.floor((timeStreaming % 3600000) / 60000);
     var hours = 
     Math.floor(timeStreaming / 3600000);
-
+    var minutes = 
+    Math.floor((timeStreaming % 3600000) / 60000);
+    var seconds = 
+    Math.floor((timeStreaming % 60000) / 1000);
+    
     $("#time-streaming").text(
-    hours+":"+minutes+":"+seconds);
+    hours.padStart(2,"0")+":"+
+    minutes.padStart(2,"0")+":"+
+    seconds.padStart(2,"0"));
 }, 1000);
 
 $("#hang-phone").click(function() {
