@@ -24,7 +24,7 @@ $("#numbers button").click(function(e) {
         $.post("ajax/http-get.php", {
         url : contacts[1].url }, function(data) {
             log("php", data);
-        }
+        });
     }
 });
 
