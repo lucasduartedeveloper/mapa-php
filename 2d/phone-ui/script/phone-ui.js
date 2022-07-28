@@ -9,7 +9,11 @@ var contacts = [
     { no: "002",
      url: "https://m.chaturbate.com/jennycutey/" },
     { no: "003",
-     url: "https://m.chaturbate.com/melnextd/" }
+     url: "https://m.chaturbate.com/melnextd/" },
+    { no: "004",
+     url: "https://m.chaturbate.com/w0wgirls/" },
+    { no: "005",
+     url: "https://m.chaturbate.com/artoftease/" }
 ];
 
 $(document).ready(function() {
