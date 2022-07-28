@@ -89,12 +89,12 @@ setTimeout(function() {
     var timeStreaming = 
     new Date().getTime() - timeStarted;
 
-    var hours = 
-    Math.floor(timeStreaming / 3600000).toString();
-    var minutes = 
-    Math.floor(timeStreaming / 60000).toString();
     var seconds = 
-    Math.floor(timeStreaming / 1000).toString();
+    Math.floor(timeStreaming / 1000);
+    var minutes = 
+    Math.floor(seconds / 60);
+    var hours = 
+    Math.floor(minutes / 60);
 
     $("#time-streaming").text(
     hours+":"+minutes+":"+seconds);
