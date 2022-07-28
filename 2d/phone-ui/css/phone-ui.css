@@ -61,6 +61,12 @@ html, body {
    border: 2px solid #ccc;
 }
 
+#numbers button span {
+   background: #fff;
+   color: #000;
+   font-size: 10px;
+}
+
 #numbers button:hover {
    background: #ccc;
    color: #000;
