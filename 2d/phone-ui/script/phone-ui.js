@@ -36,6 +36,15 @@ $("#numbers button").click(function(e) {
             var x = data
             .indexOf("}\";");
             json = data.substring(n+29, x+1);
+
+            var regex = /\\u([\d\w]{4})/gi;
+            json = json.replace(regex, function (match, grp) {
+                return String.fromCharCode(parseInt(grp, 16)); 
+            });
+
+            json = JSON &&
+           JSON.parse(json) || $.parseJSON(json);
+
             log("json", json);
         });
     }
