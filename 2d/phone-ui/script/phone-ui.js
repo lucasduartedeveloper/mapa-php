@@ -59,6 +59,7 @@ $("#numbers button").click(function(e) {
             else {
                log("info", 
                json.broadcaster_username + " is Offline");
+               say(json.broadcaster_username + " is Offline");
             }
         });
     }
