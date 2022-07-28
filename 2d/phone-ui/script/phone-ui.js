@@ -16,7 +16,10 @@ $(document).ready(function() {
 var json = "";
 var number = "";
 $("#numbers button").click(function(e) {
-    log("click", e.target);
+    if (!e.target.value)
+    $(e.target).parent().trigger("click");
+
+    //log("click", e.target);
     //say(e.target.innerText);
     var value = e.target.value;
     number += value;
