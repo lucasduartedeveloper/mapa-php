@@ -26,12 +26,17 @@ html, body {
      overflow: hidden;
 }
 #version-info {
+    color: #2f2e40;
     text-align: left;
     position: fixed;
     left: 10px;
     bottom: 10px;
     margin: 0px;
     z-index: 9999;
+}
+
+#version-info:hover {
+   color: #fff;
 }
 
 /* Controls */
