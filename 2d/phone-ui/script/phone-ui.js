@@ -18,9 +18,10 @@ var number = "";
 $("#numbers button").click(function(e) {
     //log("click", e);
     //say(e.target.innerText);
-    number += e.target.innerText;
-    log("clicked",e);
-    playDialSound(parseInt(e.target.innerText));
+    var value = e.target.attr("value");
+    number += value;
+    //log("clicked",e);
+    playDialSound(parseInt(value));
     $("#number").text(number);
 
     if (number.length >= 3) {
