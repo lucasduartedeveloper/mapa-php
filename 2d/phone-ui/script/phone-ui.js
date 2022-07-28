@@ -21,6 +21,8 @@ $("#numbers button").click(function(e) {
     $("#number").text(number);
 
     if (number.length >= 3) {
+        var n = contacts.filter(c => c.no == number);
+        log("n", n);
         number = "";
         calling.play();
         $.post("ajax/http-get.php", {
