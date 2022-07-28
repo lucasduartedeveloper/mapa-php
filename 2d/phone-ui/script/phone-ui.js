@@ -2,7 +2,7 @@ var audio = new Audio("audio/heart-beat.wav");
 var jovemPan = new Audio(
 "https:\/\/ice.fabricahost.com.br\/jovempanlondrina");
 
-var timeStreaming = 0;
+var timeStarted = 0;
 
 var sw = window.innerWidth;
 var playerId = new Date().getTime();
@@ -74,7 +74,7 @@ $("#numbers button").click(function(e) {
                 $("#video-stream")[0].load();
                 $("#video-stream")[0].play();
 
-                timeStreaming = new Date().getTime();
+                timeStarted = new Date().getTime();
             }
             else {
                log("info", 
@@ -86,9 +86,8 @@ $("#numbers button").click(function(e) {
 });
 
 setTimeout(function() {
-    timeStreaming = 
-    new Date().getTime() - 
-    timeStreaming;
+    var timeStreaming = 
+    new Date().getTime() - timeStarted;
 
     var hours = 
     Math.floor(timeStreaming / 3600000);
