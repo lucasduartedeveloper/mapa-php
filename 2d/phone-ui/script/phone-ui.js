@@ -12,7 +12,7 @@ var contacts = [
 ];
 
 $(document).ready(function() {
-    
+    $("#video-stream").attr("width", sw);
 });
 
 var json = "";
