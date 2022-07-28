@@ -16,14 +16,16 @@ $(document).ready(function() {
 var json = "";
 var number = "";
 $("#numbers button").click(function(e) {
-    if (!e.target.value)
-    $(e.target).parent().trigger("click");
+    if (!e.target.value) {
+       $(e.target).parent().trigger("click");
+       return;
+    }
 
     //log("click", e.target);
     //say(e.target.innerText);
     var value = e.target.value;
     number += value;
-    //playDialSound(parseInt(value));
+    playDialSound(parseInt(value));
     $("#number").text(number);
 
     if (number.length >= 3) {
