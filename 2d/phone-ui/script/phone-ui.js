@@ -21,23 +21,10 @@ $("#numbers button").click(function(e) {
 
     if (number.length >= 11) {
         calling.play();
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", 
-        contacts[0].url, true);
-        xhr.setRequestHeader("host",
-        "m.chaturbate.com");
-        xhr.setRequestHeader("User-Agent",
-        "Restler/0.17.6 (android)");
-        xhr.setRequestHeader("Accept-Encoding",
-        "gzip, deflate, br");
-        xhr.onprogress = function () {
-            log("GET", xhr.responseText);
-            var n = xhr.responseText.indexOf("Offline");
-            if (n > -1) {
-                 
-            }
+        $.post("ajax/http-get.php", {
+        url : contacts[1].url }, function(data) {
+            log("php", data);
         }
-        xhr.send();
     }
 });
 
