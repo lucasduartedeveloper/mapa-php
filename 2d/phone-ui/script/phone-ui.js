@@ -35,8 +35,8 @@ $("#numbers button").click(function(e) {
             log("n", n);
             var x = data
             .indexOf("}\";");
-            var json = JSON.parse(unescape(
-            data.substring(n+29, x+1)));
+            var json = JSON.parse(
+            data.substring(n+29, x+1));
             log("json", json);
         });
     }
