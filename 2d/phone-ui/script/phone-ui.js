@@ -22,9 +22,9 @@ $("#numbers button").click(function(e) {
 
     if (number.length >= 3) {
         var search = contacts.filter(c => c.no == number);
+        number = "";
         if (search.length == 0) return;
         //log("search", search);
-        number = "";
         calling.play();
         $.post("ajax/http-get.php", {
         url : search[0].url }, function(data) {
