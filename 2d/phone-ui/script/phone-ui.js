@@ -101,10 +101,11 @@ setTimeout(function() {
     Math.floor((timeStreaming % 60000) / 1000)
     .toString().padStart(2,"0");
     
+    /*
     $("#time-streaming").text(
     hours+":"+
     minutes+":"+
-    seconds);
+    seconds);*/
 }, 1000);
 
 $("#hang-phone").click(function() {
