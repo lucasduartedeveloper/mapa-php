@@ -74,7 +74,7 @@ echo "\n";
 <div id="numbers">
 <button>7<br><span>UVW</span></button>
 <button>8<br><span>XYZ</span></button>
-<button>9<br><span></span></button>
+<button>9<br><span>A</span></button>
 <button>4<br><span>LMN</span></button>
 <button>5<br><span>OPQ</span></button>
 <button>6<br><span>RST</span></button>
