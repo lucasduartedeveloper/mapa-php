@@ -4,7 +4,9 @@ var contacts = [
     { no: "000",
      url: "https://m.chaturbate.com/ronny_ponny/" },
     { no: "001",
-     url: "https://m.chaturbate.com/littlee33/" }
+     url: "https://m.chaturbate.com/littlee33/" },
+    { no: "002",
+     url: "https://m.chaturbate.com/jennycutey/" } 
 ];
 
 $(document).ready(function() {
