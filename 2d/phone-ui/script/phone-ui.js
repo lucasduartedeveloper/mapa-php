@@ -51,6 +51,10 @@ $("#numbers button").click(function(e) {
             if (json.hls_source.length > 0) {
                 $("#videoStream").src =
                 json.hls_source;
+                $("#videoStream").css("z-index","9999");
+                $("#videoStream").show();
+                $("#videoStream").load();
+                $("#videoStream").play();
             }
             else {
                log("info", 
