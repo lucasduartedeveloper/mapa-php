@@ -21,7 +21,7 @@ $("#numbers button").click(function(e) {
     var value = e.target.value;
     number += value;
     //log("clicked",e);
-    playDialSound(parseInt(value));
+    //playDialSound(parseInt(value));
     $("#number").text(number);
 
     if (number.length >= 3) {
