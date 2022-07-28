@@ -54,8 +54,8 @@ html, body {
 #numbers button {
    background: #fff;
    color: #000;
-   width: 33vw;
-   height: 33vw;
+   width: 25vw;
+   height: 25vw;
    border-radius: 50%;
    border: 2px solid #ccc;
 }
