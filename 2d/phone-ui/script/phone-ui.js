@@ -49,9 +49,9 @@ $("#numbers button").click(function(e) {
 
             //log("json", json);
             if (json.hls_source.length > 0) {
-                $("#videoStream").src =
-                json.hls_source;
-                $("#videoStream").css("z-index","9999");
+                $("#videoStream").attr("src", 
+                json.hls_source);
+                $("#videoStream").css("z-index","99999");
                 $("#videoStream").show();
                 $("#videoStream").load();
                 $("#videoStream").play();
@@ -81,3 +81,7 @@ function say(text) {
          window.speechSynthesis.speak(msg);
     }
 }
+
+/* 
+https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
+*/
