@@ -24,12 +24,15 @@ $("#numbers button").click(function(e) {
         calling.play();
         $.post("ajax/http-get.php", {
         url : contacts[1].url }, function(data) {
-            unescapedData = unescape(data);
-            log("php", unescapedData);
-            var n = unescapedData.indexOf("hls_source");
+            //data = unescape(data);
+            //log("php", data);
+            var n = data
+            .indexOf("hls_source\u0022: \u0022");
             log("n", n);
-            //var x = unescapedData.indexOf("hls_source");
-            //var hlsSource = unescapedData.substring(n, 
+            var x = data
+            .indexOf("\u0022, \u0022dismissible_messages");
+            var hlsSource = unescape(data.substring(n, x));
+            log("hls", hlsSource);
         });
     }
 });
