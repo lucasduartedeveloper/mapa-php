@@ -29,12 +29,12 @@ $("#numbers button").click(function(e) {
         $.post("ajax/http-get.php", {
         url : search[0].url }, function(data) {
             //data = unescape(data);
-            //log("php", data);
+            log("php", data);
             var n = data
-            .indexOf("hls_source\u0022: \u0022");
+            .indexOf("hls_source\u0022:");
             log("n", n);
             var x = data
-            .indexOf("\u0022, \u0022dismissible_messages");
+            .indexOf("\u0022dismissible_messages");
             var hlsSource = unescape(data.substring(n, x));
             log("hls", hlsSource);
         });
