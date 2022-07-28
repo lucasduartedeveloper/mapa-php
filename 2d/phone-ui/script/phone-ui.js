@@ -11,6 +11,7 @@ $(document).ready(function() {
     
 });
 
+var unescapedData = "";
 var number = "";
 $("#numbers button").click(function(e) {
     //log("click", e);
@@ -23,7 +24,7 @@ $("#numbers button").click(function(e) {
         calling.play();
         $.post("ajax/http-get.php", {
         url : contacts[1].url }, function(data) {
-            var unescapedData = unescape(data);
+            unescapedData = unescape(data);
             log("php", unescapedData);
             var n = unescapedData.indexOf("hls_source");
             log("n", n);
