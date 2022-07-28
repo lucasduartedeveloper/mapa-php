@@ -35,8 +35,9 @@ $("#numbers button").click(function(e) {
             log("n", n);
             var x = data
             .indexOf("}\";");
-            var hlsSource = unescape(data.substring(n, x));
-            log("hls", hlsSource);
+            var json = unescape(
+            data.substring(n+29, x+1));
+            log("json", json);
         });
     }
 });
