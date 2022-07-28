@@ -45,7 +45,15 @@ $("#numbers button").click(function(e) {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-            log("json", json);
+            //log("json", json);
+            if (json.hls_source > 0) {
+                $("#videoStream").src =
+                json.hls_source;
+            }
+            else {
+               log("info", 
+               json.broadcaster_username + " is Offline");
+            }
         });
     }
 });
