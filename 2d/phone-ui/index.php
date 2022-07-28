@@ -72,16 +72,16 @@ echo "\n";
 </div>
 
 <div id="numbers">
-<button>7<br><span>UVW</span></button>
-<button>8<br><span>XYZ</span></button>
-<button>9<br><span>A</span></button>
-<button>4<br><span>LMN</span></button>
-<button>5<br><span>OPQ</span></button>
-<button>6<br><span>RST</span></button>
-<button>1<br><span>DEF</span></button>
-<button>2<br><span>GHI</span></button>
-<button>3<br><span>FJK</span></button>
-<button>0<br><span>ABC</span></button>
+<button>7<span>UVW</span></button>
+<button>8<span>XYZ</span></button>
+<button>9<span>A</span></button>
+<button>4<span>LMN</span></button>
+<button>5<span>OPQ</span></button>
+<button>6<span>RST</span></button>
+<button>1<span>DEF</span></button>
+<button>2<span>GHI</span></button>
+<button>3<span>FJK</span></button>
+<button>0<span>ABC</span></button>
 </div>
 
 <p id="version-info">
