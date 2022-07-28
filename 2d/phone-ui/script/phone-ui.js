@@ -62,8 +62,8 @@ $("#numbers button").click(function(e) {
                 .text(json.broadcaster_username);
                 $("#video-stream").attr("src", 
                 json.hls_source);
-                $("#video-stream").load();
-                $("#video-stream").play();
+                $("#video-stream")[0].load();
+                $("#video-stream")[0].play();
             }
             else {
                log("info", 
@@ -75,7 +75,7 @@ $("#numbers button").click(function(e) {
 });
 
 $("#hang-phone").click(function() {
-    $("#video-stream").pause();
+    $("#video-stream")[0].pause();
     $("#video-layer").hide();
 });
 
