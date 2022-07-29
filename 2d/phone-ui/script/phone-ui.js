@@ -72,6 +72,7 @@ $(document).ready(function() {
                  handleDial(msg[3]);
             }
         }
+    };
 });
 
 var number = "";
