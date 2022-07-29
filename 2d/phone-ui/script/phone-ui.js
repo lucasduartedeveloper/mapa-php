@@ -96,6 +96,12 @@ $("#hang-phone").click(function() {
     $("#video-layer").hide();
 });
 
+$("#online-count").click(function() {
+    $('#contact,-list-modal').modal({
+        keyboard: true
+     });
+});
+
 var speaking = false;
 function say(text) {
     if (!speaking) {
