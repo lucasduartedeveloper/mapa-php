@@ -147,7 +147,8 @@ function checkStatus() {
     var html = "<ul>";
     for (var k = 0; k < (contacts.length-3); k++) {
         $.post("ajax/http-get.php", {
-        url : contacts[k].url }, function(data) {
+        url : contacts[k].url }, function(data, status, k) {
+            log("k", k);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
@@ -172,7 +173,6 @@ function checkStatus() {
                json.broadcaster_username+"</li>";
                onlineCount++;
            }
-           log("k", k);
            if (k == (contacts.length-4)) {               
                $("#online-count").text(
                onlineCount + "/" + (contacts.length-3)+ " online");
