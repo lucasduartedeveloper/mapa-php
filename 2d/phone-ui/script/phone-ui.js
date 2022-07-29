@@ -144,6 +144,7 @@ function say(text) {
 
 function checkStatus() {
     var onlineCount = 0;
+    var html = "<ul>";
     for (var k = 0; k < (contacts.length-3); k++) {
         $.post("ajax/http-get.php", {
         url : contacts[k].url }, function(data) {
@@ -166,10 +167,15 @@ function checkStatus() {
 
            contacts[k].json = json;
            if (json.hls_source.length > 0) {
+               html += "<li>"+json.broadcaster_username+"</li>";
                onlineCount++;
+           }           
+           if (k == (contacts.length-4)) {               
+               $("#online-count").text(
+               onlineCount + "/" + (contacts.length-3)+ " online");
+               html += "</ul>";
+               $("#contact-list").html(html);
            }
-           $("#online-count").text(
-           onlineCount + "/" + (contacts.length-3)+ " online");
         });
     }
 }

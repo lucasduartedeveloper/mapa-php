@@ -149,7 +149,6 @@ html, body {
 .modal-backdrop {
    z-index: 99998;
 }
-
 #contact-list-modal {
    z-index: 99999;
 }
