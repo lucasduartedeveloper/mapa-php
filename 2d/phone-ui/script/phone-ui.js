@@ -200,7 +200,7 @@ function checkStatus() {
            onlineCount + "/" +total+ " online");
            html += "</ul>";
            $("#contact-list").html(html+"</ul>");
-        });}.bind(k),500);
+        });}.bind(k),2000);
     }
 }
 
