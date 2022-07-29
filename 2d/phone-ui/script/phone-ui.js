@@ -235,7 +235,9 @@ function checkStatus() {
            cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
-               "<li><img src=\"img/placeholder.png\"/>"+
+               "<li click=\"handleDial(\""+
+               cbList[xhr.k].no+"\")\">"+
+               "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
                json.broadcaster_username+"</li>";
                onlineCount++;
