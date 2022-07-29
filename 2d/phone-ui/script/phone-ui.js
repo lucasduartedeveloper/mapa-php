@@ -362,8 +362,15 @@ function download(filename, text) {
     element.click();
 }
 
+var counter = 0;
+var lastLightValue = 0;
 window.addEventListener('devicelight', function(event) {
-    //log("'devicelight'",event.value)
+    log("'devicelight'",event.value)
+    // ------------ x --------
+    counter++;
+    $("#counter").text(counter);
+
+    return;
     var value = event.value;
     if (value > 1000 && lastContact.length > 0) {
        handleDial(lastContact);

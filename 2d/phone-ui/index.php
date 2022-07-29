@@ -96,6 +96,7 @@ echo "\n";
 </div>
 
 <p id="version-info">
+     <span id="counter">0</span>
      <span>
      PHONE UI 
      <span id="heroku-version">v0</span>
