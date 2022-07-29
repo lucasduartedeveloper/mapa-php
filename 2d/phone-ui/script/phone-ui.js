@@ -200,23 +200,6 @@ function checkStatus() {
 }
 
 function loadCbStream(json) {
-     /*var n = data
-     .indexOf("window.initialRoomDossier = \"{");
-
-     if (n < 0) return;
-     var x = data
-     .indexOf("}\";");
-     var json = data.substring(n+29, x+1);
-
-     var regex = /\\u([\d\w]{4})/gi;
-     json = json.replace(regex, function (match, grp) {
-        return String.fromCharCode(parseInt(grp, 16)); 
-     });
-
-     json = JSON &&
-    JSON.parse(json) || $.parseJSON(json);*/
-    //log("json", json);
-
     if (json.hls_source.length > 0) {
         $("#video-layer").show();
         $("#broadcaster-username")
@@ -245,6 +228,8 @@ function loadUploadedVideo(url) {
     $("#video-stream").attr("src", url);
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
+
+    timeStarted = new Date().getTime();
 }
 
 function loadAudio(url) {
