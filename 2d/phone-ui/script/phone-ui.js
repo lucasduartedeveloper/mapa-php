@@ -263,7 +263,9 @@ function checkStatus() {
             .indexOf("/");
 
             html += 
-            "<li><img src=\"img/placeholder.png\"/>"+
+            "<li click=\"handleDial(\""+
+            twList[xhr.k].no+"\")\">"+
+            "<img src=\"img/placeholder.png\"/>"+
             twList[xhr.k].no+": "+
             twList[xhr.k].url.substring(n+4)+"</li>";
             onlineCount++;
