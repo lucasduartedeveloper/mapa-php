@@ -233,9 +233,15 @@ function checkStatus() {
         .done(function(data, status, xhr) {
             twList[xhr.k].data;
 
+            var n = twList[xhr.k].url
+            .indexOf(".tv/");
+
+            var x = twList[xhr.k].url
+            .indexOf("/");
+
             html += 
             "<li>"+twList[xhr.k].no+": "+
-            twList[xhr.k].url+"</li>";
+            twList[xhr.k].url.substring(n+4)+"</li>";
             onlineCount++;
 
             total++;
