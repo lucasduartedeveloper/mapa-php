@@ -30,6 +30,8 @@ var contacts = [
       url: "https://m.chaturbate.com/iren_wagner/" },
     { no: "010",
       url: "https://m.chaturbate.com/lilypixel/" },
+    { no: "011",
+      url: "https://m.chaturbate.com/sasha_ursx/" },
     { no: "998",
       url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "999",
