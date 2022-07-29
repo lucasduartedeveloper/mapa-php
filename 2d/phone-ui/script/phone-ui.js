@@ -59,6 +59,8 @@ $("#numbers button").click(function(e) {
     $("#number").text(number);
 
     if (number.length >= 3) {
+        audio.pause(); // Stop audio stream
+
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;       
@@ -199,7 +201,7 @@ function loadCbStream(data) {
     }
 }
 
-function loadTwitchStream(data) {
+function loadTwitchStream(data) {    
     log("twitch", data);
 }
 
