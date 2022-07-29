@@ -105,34 +105,18 @@ echo "\n";
      </span>
 </p>
 
-<div id="contact-list-modal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 id="cube-modal-title" 
-        class="modal-title">CONTACT LIST</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p id="contact-list">
-        </p>
-      </div>
-      <div class="modal-footer">
-        <span id="modal-footer-left">
-            <i id="get-location"
-            class="fa-solid fa-location-dot"></i>
-            <i id="map"
-            class="fa-regular fa-map"></i>
-        </span>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+<!-- Modal HTML embedded directly into document -->
+<div id="contact-list" class="modal">
+  <p>Contact list:</p>
+  <a href="#" rel="modal:close">Close</a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
