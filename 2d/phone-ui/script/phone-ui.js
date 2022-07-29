@@ -137,7 +137,7 @@ function checkStatus() {
    var onlineCount = 0;
    for (var k in contacts) {
        $.post("ajax/http-get.php", {
-       url : search[0].url }, function(data) {
+       url : contacts[k].url }, function(data) {
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
             var x = data
