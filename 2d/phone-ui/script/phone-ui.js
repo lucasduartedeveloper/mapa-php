@@ -227,7 +227,7 @@ function checkStatus() {
             xhr.k = this;
         }.bind(this)})
         .done(function(data, status, xhr) {
-            twList[xhr.k].data;
+            twList[xhr.k].data = data;
 
             var n = twList[xhr.k].url
             .indexOf(".tv/");
