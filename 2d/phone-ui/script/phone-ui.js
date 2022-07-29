@@ -218,6 +218,17 @@ function loadAudio(url) {
     audio.play();
 }
 
+if ('AmbientLightSensor' in window) {
+  const sensor = new AmbientLightSensor();
+  sensor.addEventListener('reading', (event) => {
+    console.log('Current light level:', sensor.illuminance);
+  });
+  sensor.addEventListener('error', (event) => {
+    console.log(event.error.name, event.error.message);
+  });
+  sensor.start();
+}
+
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
