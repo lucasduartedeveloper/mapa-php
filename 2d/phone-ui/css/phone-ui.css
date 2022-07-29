@@ -145,3 +145,7 @@ html, body {
    text-align: right;
    z-index: 99999;
 }
+
+#contact-list {
+   z-index: 99999;
+}
