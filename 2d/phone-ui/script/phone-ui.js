@@ -177,6 +177,10 @@ function loadCbStream(data) {
     }
 }
 
+function loadTwitchStream(data) {
+    log("twitch", data);
+}
+
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
