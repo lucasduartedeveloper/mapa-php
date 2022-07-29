@@ -161,7 +161,7 @@ function checkStatus() {
                 return String.fromCharCode(parseInt(grp, 16)); 
             });
 
-            log("json: "+contacts[k].no, json);
+            //log("json: "+contacts[k].no, json);
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
@@ -171,7 +171,8 @@ function checkStatus() {
               "<li>"+contacts[k].no+": "+
                json.broadcaster_username+"</li>";
                onlineCount++;
-           }           
+           }
+           log("k", k);
            if (k == (contacts.length-4)) {               
                $("#online-count").text(
                onlineCount + "/" + (contacts.length-3)+ " online");
