@@ -79,6 +79,7 @@ echo "\n";
 </div>
 
 <div id="online-count">
+0/0 online
 </div>
 
 <div id="numbers">
