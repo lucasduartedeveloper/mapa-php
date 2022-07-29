@@ -158,7 +158,7 @@ function checkStatus() {
     var html = "<ul>";
     for (var k = 0; k < cbList.length; k++) {
         setTimeout(function() {
-        log("this", this);
+        //log("this", this);
         $.ajax({
         url: "ajax/http-get.php",
         method: "POST",
