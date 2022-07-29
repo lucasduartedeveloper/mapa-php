@@ -143,6 +143,7 @@ function say(text) {
 }
 
 function checkStatus() {
+    var total = 0;
     var onlineCount = 0;
     var html = "<ul>";
     for (var k = 0; k < (contacts.length-3); k++) {
@@ -155,7 +156,7 @@ function checkStatus() {
             xhr.k = k;
         }})
         .done(function(data, status, xhr) {
-            //log("k", k);
+            log("k", xhr.k);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
@@ -180,7 +181,9 @@ function checkStatus() {
                json.broadcaster_username+"</li>";
                onlineCount++;
            }
-           if (xhr.k == (contacts.length-4)) {               
+
+           total++;
+           if (total == (contacts.length-4)) {
                $("#online-count").text(
                onlineCount + "/" + (contacts.length-3)+ " online");
                html += "</ul>";
