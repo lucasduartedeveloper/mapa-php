@@ -70,10 +70,18 @@ $("#borders").click(function() {
 
 var accelerating = false;
 $("#power").on("touchstart", function() {
+    Matter.Body.set(
+    frontWheel, "angularVelocity", 10);
+    Matter.Body.set(
+    rearWheel, "angularVelocity", 10);
     if (fuel == 0) return;
     accelerating = true;
 });
 $("#power").on("touchend", function() {
+    Matter.Body.set(
+    frontWheel, "angularVelocity", 10);
+    Matter.Body.set(
+    rearWheel, "angularVelocity", 10);
     accelerating = false;
 });
 
