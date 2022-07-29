@@ -146,9 +146,9 @@ function checkStatus() {
     var onlineCount = 0;
     var html = "<ul>";
     for (var k = 0; k < (contacts.length-3); k++) {
-        var m = k;
+        var n = k;
         $.post("ajax/http-get.php", {
-        url : contacts[k].url }, function(data, status, xhr, m=m) {
+        url : contacts[k].url }, function(data, status, xhr, m=n) {
             log("k", m);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
