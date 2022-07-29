@@ -51,6 +51,8 @@ var contacts = [
 
 var screens = "";
 $(document).ready(function() {
+    log("screen size", sw +"x"+ sh);
+
     $("#video-stream").attr("width", sw);
     $("#video-stream").attr("height", sw);
     checkStatus();
