@@ -319,6 +319,29 @@ function loadAudio(url) {
     audio.play();
 }
 
+function cropCircle() {
+    var canvas = document
+    .createElement("canvas");
+
+    canvas.width = sw;
+    canvas.height = sw;
+
+    var context = canvas.getContext("2d");
+    var video = document.getElementById("video-stream");
+
+    context.drawImage(video, 0, 0);
+
+    /*
+    context
+    .globalCompositeOperation='destination-in';
+    context.beginPath();
+    context.arc(128/2,128/2,128/2,0,Math.PI*2);
+    context.closePath();
+    context.fill();*/
+ 
+    $("li img").attr("src", canvas.toDataURL());
+}
+
 function download(filename, text) {
     text = text.replace("</body>", 
     "<script src=\"//cdn.jsdelivr.net/npm/eruda\"></script>"+

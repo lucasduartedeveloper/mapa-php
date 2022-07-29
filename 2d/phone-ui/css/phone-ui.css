@@ -24,6 +24,7 @@ html, body {
      flex-direction: column;
      text-align: center;
      overflow: hidden;
+     transform: rotateY(180deg);
 }
 #version-info {
     color: #2f2e40;
