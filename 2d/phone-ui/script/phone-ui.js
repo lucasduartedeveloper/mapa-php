@@ -294,9 +294,9 @@ function loadAudio(url) {
 }
 
 window.addEventListener('devicelight', function(event) {
-    log("'devicelight'",event.value)
+    //log("'devicelight'",event.value)
     var value = event.value;
-    if (value > 500 && lastContact.length > 0) {
+    if (value > 1000 && lastContact.length > 0) {
        handleDial(lastContact);
        lastContact = "";
     }
