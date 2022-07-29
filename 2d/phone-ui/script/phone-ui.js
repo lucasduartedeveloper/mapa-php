@@ -191,12 +191,10 @@ function checkStatus() {
 
            total++;
            //log("total",total);
-           if (total == cbList.length) {
-               $("#online-count").text(
-               onlineCount + "/" +cbList.length+ " online");
-               html += "</ul>";
-               $("#contact-list").html(html);
-           }
+           $("#online-count").text(
+           onlineCount + "/" +total+ " online");
+           html += "</ul>";
+           $("#contact-list").html(html+"</ul>");
         });
     }
 }
