@@ -61,7 +61,7 @@ $("#numbers button").click(function(e) {
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;
-        if (search[0].url.includes("videos/")) {
+        if (search[0].url.includes("video/")) {
             loadUploadedVideo(search[0].url);
             return;
         }
@@ -135,6 +135,8 @@ function checkStatus() {
         url : contacts[k].url }, function(data) {
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
+
+            if (n < 0) return;
             var x = data
             .indexOf("}\";");
             json = data.substring(n+29, x+1);
