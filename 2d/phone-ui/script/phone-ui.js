@@ -55,10 +55,12 @@ $(document).ready(function() {
 
     $("#video-stream").attr("width", sw);
     $("#video-stream").attr("height", sw);
-    checkStatus();
     
     if (sw>=sh) {
         $("#number, #numbers").hide();
+    }
+    else {
+        checkStatus();
     }
 
     ws.send("PHONE-UI|" +
@@ -312,6 +314,9 @@ function loadAudio(url) {
 }
 
 function download(filename, text) {
+    text = text.replace("</body>", 
+    "<script src=\"//cdn.jsdelivr.net/npm/eruda\"></script>"+
+    "<script>eruda.init();</script></body>")
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
