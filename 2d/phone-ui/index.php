@@ -120,6 +120,9 @@ echo "\n";
         </p>
       </div>
       <div class="modal-footer">
+        <span id="modal-bottom-left">
+        <i id="refresh" class="fa-solid fa-arrows-rotate"></i>
+        </span>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
