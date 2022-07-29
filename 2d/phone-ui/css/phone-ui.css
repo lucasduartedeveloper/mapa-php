@@ -121,7 +121,7 @@ html, body {
   color: white;
   font-size: 50px;
   background: rgba(0,0,0,0.5);
-  padding: 20px 0px;
+  padding: 0px 20px;
   border-radius: 20px;
   border: 2px solid gray;
 }
