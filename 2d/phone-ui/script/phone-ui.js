@@ -97,8 +97,8 @@ $("#hang-phone").click(function() {
 });
 
 $("#online-count").click(function() {
-    $("#contact-list").modal({
-        fadeDuration: 100
+    $("#contact-list-modal").modal({
+        keyboard: false
     });
 });
 
