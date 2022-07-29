@@ -110,7 +110,6 @@ html, body {
    z-index: 99999;
 }
 
-#time-streaming,
 #broadcaster-username,
 #controls {
   width: 100vw;
@@ -119,6 +118,9 @@ html, body {
 }
 
 #time-streaming {
+  width: 100vw;
+  color: white;
+  font-size: 50px;
   background: #000;
   border-radius: 25%;
   border: 2px solid gray;
