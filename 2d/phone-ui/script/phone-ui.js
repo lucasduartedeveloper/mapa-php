@@ -270,6 +270,7 @@ function loadCbStream(json) {
 
 function loadTwitchStream(data) {    
     log("twitch", data);
+    download(data, "teste.html");
 }
 
 function loadUploadedVideo(url) {
@@ -286,6 +287,13 @@ function loadAudio(url) {
     audio.pause();
     audio.src = url;
     audio.play();
+}
+
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttridownloadbute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+    element.click();
 }
 
 window.addEventListener('devicelight', function(event) {
