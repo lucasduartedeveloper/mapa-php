@@ -49,15 +49,29 @@ var contacts = [
       url: "video/upload-test.abc" }
 ];
 
+var screens = "";
 $(document).ready(function() {
     $("#video-stream").attr("width", sw);
     $("#video-stream").attr("height", sw);
     checkStatus();
     
+    if (sw>sh) {
+        $("#number, #numbers").hide();
+    }
 
     ws.send("PHONE-UI|" +
          playerId + "|" + 
          ((sw>sh) ? "CONTROLLER" : "SCREEN"));
+
+    ws.onmessage = function(e) {
+        var msg = e.data.split("|");
+        if (msg[0] == "PHONE-UI" &&
+            playerId != msg[1]) {
+            //log("ws", msg);
+            if (msg[2] == "DIAL") {
+                 handleDial(msg[3]);
+            }
+        }
 });
 
 var number = "";
@@ -71,6 +85,9 @@ $("#numbers button").click(function(e) {
 });
 
 function handleDial(value) {
+    ws.send("PHONE-UI|" +
+        playerId + "|DIAL|" + value);
+
     number += value;
     playDialSound(parseInt(value));
     $("#number").text(number);
