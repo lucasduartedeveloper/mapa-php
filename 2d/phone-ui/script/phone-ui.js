@@ -147,7 +147,7 @@ function checkStatus() {
     var html = "<ul>";
     for (var k = 0; k < (contacts.length-3); k++) {
         $.post("ajax/http-get.php", {
-        url : contacts[k].url }, function(data) {
+        url : contacts[k].url }, function(data, k) {
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
