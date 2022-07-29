@@ -6,6 +6,7 @@ var timeStarted = 0;
 var sw = window.innerWidth;
 var playerId = new Date().getTime();
 
+var lastContact = "";
 var contacts = [
     { no: "000", type: "cb",
      url: "https://m.chaturbate.com/ronny_ponny/" },
@@ -62,8 +63,9 @@ $("#numbers button").click(function(e) {
 
     if (number.length >= 3) {
         var search = contacts.filter(c => c.no == number);
+        lastContact = number;
         number = "";
-        if (search.length == 0) return;       
+        if (search.length == 0) return;
         if (search[0].url.includes("audio/") ||
             search[0].type == "audio-stream") {
             loadAudio(search[0].url);
