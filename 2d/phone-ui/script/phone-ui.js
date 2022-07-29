@@ -166,7 +166,7 @@ function checkStatus() {
         data: { url : cbList[this].url },
         beforeSend: function(xhr) {
             xhr.k = this;
-        }})
+        }.bind(this)})
         .done(function(data, status, xhr) {
             //log("k", xhr.k);
             var n = data
