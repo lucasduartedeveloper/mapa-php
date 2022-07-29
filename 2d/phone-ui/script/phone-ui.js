@@ -32,10 +32,10 @@ var contacts = [
       url: "https://m.chaturbate.com/lilypixel/" },
     { no: "011",
       url: "https://m.chaturbate.com/sasha_ursx/" },
-    { no: "998",
+    { no: "300",
       url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "999",
-     url: "video/trailer.mp4" }
+     url: "video/xvideos.mp4" }
 ];
 
 $(document).ready(function() {
@@ -61,6 +61,10 @@ $("#numbers button").click(function(e) {
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;
+        if (search[0].url.includes("videos/") {
+            loadUploadedVideo(search[0].url);
+            return;
+        }
         calling.play();
         $.post("ajax/http-get.php", {
         url : search[0].url }, function(data) {
@@ -189,6 +193,15 @@ function loadCbStream(data) {
 
 function loadTwitchStream(data) {
     log("twitch", data);
+}
+
+function loadUploadedVideo(url) {
+    $("#video-layer").show();
+    $("#broadcaster-username")
+    .text(url);
+    $("#video-stream").attr("src", url);
+    $("#video-stream")[0].load();
+    $("#video-stream")[0].play();
 }
 
 /* 
