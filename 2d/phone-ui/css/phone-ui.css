@@ -118,10 +118,9 @@ html, body {
 }
 
 #time-streaming {
-  width: 100vw;
   color: white;
   font-size: 50px;
-  background: #000;
+  background: rgba(0,0,0,0.5);
   border-radius: 25%;
   border: 2px solid gray;
 }
