@@ -69,6 +69,7 @@ function handleDial(value) {
         var search = contacts.filter(c => c.no == number);
         lastContact = number;
         number = "";
+        log("search", search[0]);
         calling.play();
         if (search.length == 0) return;
         if (search[0].url.includes("audio/") ||
