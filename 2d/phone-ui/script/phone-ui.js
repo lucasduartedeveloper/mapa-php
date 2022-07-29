@@ -48,7 +48,6 @@ $(document).ready(function() {
     checkStatus();
 });
 
-var json = "";
 var number = "";
 $("#numbers button").click(function(e) {
     if (!e.target.value) {
@@ -169,7 +168,7 @@ function checkStatus() {
             if (n < 0) return;
             var x = data
             .indexOf("}\";");
-            json = data.substring(n+29, x+1);
+            var json = data.substring(n+29, x+1);
 
             var regex = /\\u([\d\w]{4})/gi;
             json = json.replace(regex, function (match, grp) {
@@ -207,7 +206,7 @@ function loadCbStream(data) {
      if (n < 0) return;
      var x = data
      .indexOf("}\";");
-     json = data.substring(n+29, x+1);
+     var json = data.substring(n+29, x+1);
 
      var regex = /\\u([\d\w]{4})/gi;
      json = json.replace(regex, function (match, grp) {
