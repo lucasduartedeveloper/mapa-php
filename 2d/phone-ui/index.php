@@ -117,7 +117,6 @@ echo "\n";
       </div>
       <div class="modal-body">
         <p>
-        
         </p>
       </div>
       <div class="modal-footer">
