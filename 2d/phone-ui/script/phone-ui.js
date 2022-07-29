@@ -28,6 +28,8 @@ var contacts = [
       url: "https://m.chaturbate.com/anabel054/" },
     { no: "009",
       url: "https://m.chaturbate.com/iren_wagner/" },
+    { no: "998",
+      url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "999",
      url: "video/trailer.mp4" }
 ];
@@ -58,35 +60,11 @@ $("#numbers button").click(function(e) {
         calling.play();
         $.post("ajax/http-get.php", {
         url : search[0].url }, function(data) {
-            var n = data
-            .indexOf("window.initialRoomDossier = \"{");
-            var x = data
-            .indexOf("}\";");
-            json = data.substring(n+29, x+1);
-
-            var regex = /\\u([\d\w]{4})/gi;
-            json = json.replace(regex, function (match, grp) {
-                return String.fromCharCode(parseInt(grp, 16)); 
-            });
-
-            json = JSON &&
-           JSON.parse(json) || $.parseJSON(json);
-
-            if (json.hls_source.length > 0) {
-                $("#video-layer").show();
-                $("#broadcaster-username")
-                .text(json.broadcaster_username);
-                $("#video-stream").attr("src", 
-                json.hls_source);
-                $("#video-stream")[0].load();
-                $("#video-stream")[0].play();
-
-                timeStarted = new Date().getTime();
+            if (search[0].url.includes("twitch")) {
+                loadTwitchStream(data);
             }
             else {
-               log("info", 
-               json.broadcaster_username + " is Offline");
-               say(json.broadcaster_username + " is Offline");
+                loadCbStream(data);
             }
         });
     }
@@ -138,7 +116,7 @@ function say(text) {
 
 function checkStatus() {
     var onlineCount = 0;
-    for (var k = 0; k < (contacts.length-1); k++) {
+    for (var k = 0; k < (contacts.length-2); k++) {
         $.post("ajax/http-get.php", {
         url : contacts[k].url }, function(data) {
             var n = data
@@ -163,6 +141,39 @@ function checkStatus() {
            $("#online-count").text(
            onlineCount + "/" + (contacts.length-1)+ " online");
         });
+    }
+}
+
+function loadCbStream(data) {
+     var n = data
+     .indexOf("window.initialRoomDossier = \"{");
+     var x = data
+     .indexOf("}\";");
+     json = data.substring(n+29, x+1);
+
+     var regex = /\\u([\d\w]{4})/gi;
+     json = json.replace(regex, function (match, grp) {
+        return String.fromCharCode(parseInt(grp, 16)); 
+     });
+
+     json = JSON &&
+    JSON.parse(json) || $.parseJSON(json);
+
+    if (json.hls_source.length > 0) {
+        $("#video-layer").show();
+        $("#broadcaster-username")
+        .text(json.broadcaster_username);
+        $("#video-stream").attr("src", 
+        json.hls_source);
+        $("#video-stream")[0].load();
+        $("#video-stream")[0].play();
+
+        timeStarted = new Date().getTime();
+    }
+    else {
+        log("info", 
+        json.broadcaster_username + " is Offline");
+        say(json.broadcaster_username + " is Offline");
     }
 }
 
