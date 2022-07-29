@@ -84,7 +84,7 @@ function handleDial(value) {
             loadTwitchStream(data);
             return
         }
-        if (search[0].type == "cb") {
+        if (search[0].type == "cb" && search[0].json) {
             loadCbStream(search[0].json);
             return
         }
