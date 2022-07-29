@@ -155,3 +155,7 @@ html, body {
 #contact-list {
    text-align: left;
 }
+#modal-bottom-left {
+   text-align: left;
+   font-size: 40px;
+}
