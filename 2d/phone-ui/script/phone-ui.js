@@ -227,7 +227,8 @@ function checkStatus() {
            cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
-              "<li>"+cbList[xhr.k].no+": "+
+               "<li><img src=\"img/placeholder.png\"/>"+
+               cbList[xhr.k].no+": "+
                json.broadcaster_username+"</li>";
                onlineCount++;
            }
