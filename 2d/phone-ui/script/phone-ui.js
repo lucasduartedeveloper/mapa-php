@@ -7,35 +7,35 @@ var sw = window.innerWidth;
 var playerId = new Date().getTime();
 
 var contacts = [
-    { no: "000",
+    { no: "000", type: "cb",
      url: "https://m.chaturbate.com/ronny_ponny/" },
-    { no: "001",
+    { no: "001", type: "cb",
      url: "https://m.chaturbate.com/littlee33/" },
-    { no: "002",
+    { no: "002", type: "cb",
      url: "https://m.chaturbate.com/jennycutey/" },
-    { no: "003",
+    { no: "003", type: "cb",
      url: "https://m.chaturbate.com/melnextd/" },
-    { no: "004",
+    { no: "004", type: "cb",
      url: "https://m.chaturbate.com/w0wgirls/" },
-    { no: "005",
+    { no: "005", type: "cb",
      url: "https://m.chaturbate.com/artoftease/" },
-    { no: "006",
+    { no: "006", type: "cb",
      url: "https://m.chaturbate.com/_blackbee_/" },
-    { no: "007",
+    { no: "007", type: "cb",
      url: "https://m.chaturbate.com/emyii/" },
-    { no: "008",
+    { no: "008", type: "cb",
      url: "https://m.chaturbate.com/anabel054/" },
-    { no: "009",
+    { no: "009", type: "cb",
      url: "https://m.chaturbate.com/iren_wagner/" },
-    { no: "010",
+    { no: "010", type: "cb",
       url: "https://m.chaturbate.com/lilypixel/" },
-    { no: "011",
+    { no: "011", type: "cb",
      url: "https://m.chaturbate.com/sasha_ursx/" },
-    { no: "300",
+    { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "800", type: "radio", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
-    { no: "900",
+    { no: "900", type: "uploaded-video", 
       url: "video/upload-test.abc" }
 ];
 
@@ -62,8 +62,8 @@ $("#numbers button").click(function(e) {
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;       
-        if (search[0].url.includes("audio/")
-            search[0].type = "radio") {
+        if (search[0].url.includes("audio/") ||
+            search[0].type == "radio") {
             loadAudio(search[0].url);
             return;
         }
