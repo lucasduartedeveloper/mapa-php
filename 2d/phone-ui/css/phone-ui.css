@@ -152,3 +152,6 @@ html, body {
 #contact-list-modal {
    z-index: 99999;
 }
+#contact-list {
+   text-align: left;
+}
