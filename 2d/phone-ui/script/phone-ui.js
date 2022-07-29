@@ -33,6 +33,7 @@ var contacts = [
 $(document).ready(function() {
     $("#video-stream").attr("width", sw);
     $("#video-stream").attr("height", sw);
+    checkStatus();
 });
 
 var json = "";
@@ -149,6 +150,7 @@ function checkStatus() {
                 return String.fromCharCode(parseInt(grp, 16)); 
             });
 
+            log("json", json);
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
