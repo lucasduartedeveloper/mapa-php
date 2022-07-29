@@ -59,8 +59,6 @@ $("#numbers button").click(function(e) {
     $("#number").text(number);
 
     if (number.length >= 3) {
-        audio.pause(); // Stop audio stream
-
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;       
@@ -108,6 +106,7 @@ setTimeout(function() {
 }, 1000);
 
 $("#hang-phone").click(function() {
+    audio.pause();
     $("#video-stream")[0].pause();
     $("#video-layer").hide();
 });
