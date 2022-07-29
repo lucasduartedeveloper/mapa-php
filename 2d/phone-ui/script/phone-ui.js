@@ -250,7 +250,7 @@ window.addEventListener('devicelight', function(event) {
        handleDial(lastContact);
        lastContact = "";
     }
-    else if (value > 800) {
+    else if (value > 1000) {
        $("#hang-phone").trigger("click");
     }
 });
