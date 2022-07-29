@@ -214,6 +214,7 @@ function loadCbStream(json) {
 
      json = JSON &&
     JSON.parse(json) || $.parseJSON(json);*/
+     log("json", json);
 
     if (json.hls_source.length > 0) {
         $("#video-layer").show();
