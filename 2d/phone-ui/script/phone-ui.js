@@ -133,6 +133,38 @@ function say(text) {
     }
 }
 
+function checkStatus() {
+   var onlineCount = 0;
+   for (var k in contacts) {
+       $.post("ajax/http-get.php", {
+       url : search[0].url }, function(data) {
+            var n = data
+            .indexOf("window.initialRoomDossier = \"{");
+            var x = data
+            .indexOf("}\";");
+            json = data.substring(n+29, x+1);
+
+            var regex = /\\u([\d\w]{4})/gi;
+            json = json.replace(regex, function (match, grp) {
+                return String.fromCharCode(parseInt(grp, 16)); 
+            });
+
+            json = JSON &&
+           JSON.parse(json) || $.parseJSON(json);
+
+            if (json.hls_source.length > 0) {
+                contacts[k].online = true;
+                onlineCount++;
+            }
+            else {
+               contacts[k].online = false;
+            }
+            $("#online-count").text(
+            onlineCount + "/" + (contacts.length-1)+ " online");
+        });
+    }
+}
+
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */

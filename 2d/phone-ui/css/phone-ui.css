@@ -130,3 +130,11 @@ html, body {
    background: rgba(0,0,0,1);
    width: 100vw;
 }
+
+#online-count {
+   color: white;
+   font-size: 50px;
+   right: 10px;
+   bottom: 10px;
+   text-align: right;
+}
