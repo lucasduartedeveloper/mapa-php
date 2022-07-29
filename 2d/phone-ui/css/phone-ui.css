@@ -156,6 +156,8 @@ html, body {
    text-align: left;
 }
 #modal-bottom-left {
+   position: absolute;
+   left: 10px;
    text-align: left;
    font-size: 40px;
 }

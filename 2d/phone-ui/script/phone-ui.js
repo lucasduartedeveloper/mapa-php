@@ -157,6 +157,7 @@ function checkStatus() {
     var onlineCount = 0;
     var html = "<ul>";
     for (var k = 0; k < cbList.length; k++) {
+        setTimeout(function() {
         $.ajax({
         url: "ajax/http-get.php",
         method: "POST",
@@ -198,7 +199,7 @@ function checkStatus() {
            onlineCount + "/" +total+ " online");
            html += "</ul>";
            $("#contact-list").html(html+"</ul>");
-        });
+        });},1000);
     }
 }
 
