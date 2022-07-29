@@ -229,7 +229,8 @@ window.addEventListener('devicelight', function(event) {
     log("'devicelight'",event.value)
     var value = event.value;
     if (value > 500 && lastContact.length > 0) {
-       handleDial("0");
+       handleDial(lastContact);
+       lastContact = "";
     }
     else if (value > 500) {
        $("#hang-phone").trigger("click");
