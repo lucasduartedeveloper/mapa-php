@@ -186,9 +186,9 @@ function checkStatus() {
 
            total++;
            log("total",total);
-           if (total == cbList.length)) {
+           if (total == cbList.length) {
                $("#online-count").text(
-               onlineCount + "/" + cbList.length+ " online");
+               onlineCount + "/" +cbList.length+ " online");
                html += "</ul>";
                $("#contact-list").html(html);
            }
