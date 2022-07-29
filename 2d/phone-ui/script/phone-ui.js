@@ -55,8 +55,11 @@ $("#numbers button").click(function(e) {
        $(e.target).parent().trigger("click");
        return;
     }
-
     var value = e.target.value;
+    handleDial(value);
+});
+
+function handleDial(value) {
     number += value;
     playDialSound(parseInt(value));
     $("#number").text(number);
@@ -86,7 +89,7 @@ $("#numbers button").click(function(e) {
             }
         });
     }
-});
+}
 
 setTimeout(function() {
     var timeStreaming = 
@@ -225,7 +228,10 @@ function loadAudio(url) {
 window.addEventListener('devicelight', function(event) {
     log("'devicelight'",event.value)
     var value = event.value;
-    if (value > 500) {
+    if (value > 500 && lastContact.length > 0) {
+       handleDial("0");
+    }
+    else if (value > 500) {
        $("#hang-phone").trigger("click");
     }
 });
