@@ -150,7 +150,7 @@ function checkStatus() {
                 return String.fromCharCode(parseInt(grp, 16)); 
             });
 
-            log("json: "+contacts[k].no, json);
+            ///log("json: "+contacts[k].no, json);
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
