@@ -33,7 +33,7 @@ var contacts = [
      url: "https://m.chaturbate.com/sasha_ursx/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
-    { no: "800", type: "radio", 
+    { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
       url: "video/upload-test.abc" }
@@ -63,7 +63,7 @@ $("#numbers button").click(function(e) {
         number = "";
         if (search.length == 0) return;       
         if (search[0].url.includes("audio/") ||
-            search[0].type == "radio") {
+            search[0].type == "audio-stream") {
             loadAudio(search[0].url);
             return;
         }
