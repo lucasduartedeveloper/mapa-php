@@ -198,7 +198,7 @@ function checkStatus() {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-           streamList[xhr.k].json = json;
+           cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
               "<li>"+cbList[xhr.k].no+": "+
