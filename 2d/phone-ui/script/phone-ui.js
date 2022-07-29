@@ -136,7 +136,7 @@ function say(text) {
 
 function checkStatus() {
     var onlineCount = 0;
-    for (var k = 0; k < (contacts.length-2); k++) {
+    for (var k = 0; k < (contacts.length-3); k++) {
         $.post("ajax/http-get.php", {
         url : contacts[k].url }, function(data) {
             var n = data
