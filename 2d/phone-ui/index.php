@@ -106,9 +106,32 @@ echo "\n";
 </p>
 
 <!-- Modal HTML embedded directly into document -->
-<div id="contact-list" class="modal">
-  <p>Contact list:</p>
-  <a href="#" rel="modal:close">Close</a>
+<div id="contact-list-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5  class="modal-title">CONTACT LIST</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+        <b>ABCDEFGHIJKLMN</b><br>
+        <b>
+        <i class="fa-regular fa-square"></i>&nbsp;
+        OPQRSTUVWXYZ
+        <i style="transform:rotateZ(-90deg)" 
+        class="fa-solid fa-play"></i>&nbsp;
+        </b><br> 
+        <b>0123456789</b><br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
