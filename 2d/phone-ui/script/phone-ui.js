@@ -218,16 +218,13 @@ function loadAudio(url) {
     audio.play();
 }
 
-if ('AmbientLightSensor' in window) {
-  const sensor = new AmbientLightSensor();
-  sensor.addEventListener('reading', (event) => {
-    console.log('Current light level:', sensor.illuminance);
-  });
-  sensor.addEventListener('error', (event) => {
-    console.log(event.error.name, event.error.message);
-  });
-  sensor.start();
-}
+window.addEventListener('devicelight', function(event) {
+    log("'devicelight'",event.value)
+    var value = event.value;
+    if (value > 500) {
+       $("#hang-phone").trigger("click");
+    }
+});
 
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
