@@ -110,7 +110,7 @@ echo "\n";
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5  class="modal-title">CONTACT LIST</h5>
+        <h5  class="modal-title"><b>CONTACT LIST</b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
