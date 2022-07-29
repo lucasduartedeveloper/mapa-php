@@ -203,6 +203,8 @@ function checkStatus() {
 function loadCbStream(data) {
      var n = data
      .indexOf("window.initialRoomDossier = \"{");
+
+     if (n < 0) return;
      var x = data
      .indexOf("}\";");
      json = data.substring(n+29, x+1);
