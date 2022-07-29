@@ -43,6 +43,8 @@ var contacts = [
      url: "https://m.twitch.tv/woohankyung" },
     { no: "302", type: "tw",
      url: "https://m.twitch.tv/kandyland" },
+    { no: "303", type: "tw",
+     url: "https://m.twitch.tv/lydia_violet" },
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
