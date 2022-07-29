@@ -78,6 +78,9 @@ echo "\n";
 <div id="number">
 </div>
 
+<div id="online-count">
+</div>
+
 <div id="numbers">
 <button value="7">7<span>UVW</span></button>
 <button value="8">8<span>XYZ</span></button>
