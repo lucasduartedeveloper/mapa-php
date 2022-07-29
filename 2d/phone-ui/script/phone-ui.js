@@ -161,13 +161,15 @@ function checkStatus() {
                 return String.fromCharCode(parseInt(grp, 16)); 
             });
 
-            ///log("json: "+contacts[k].no, json);
+            log("json: "+contacts[k].no, json);
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
            contacts[k].json = json;
            if (json.hls_source.length > 0) {
-               html += "<li>"+json.broadcaster_username+"</li>";
+               html += 
+              "<li>"+contacts[k].no+": "+
+               json.broadcaster_username+"</li>";
                onlineCount++;
            }           
            if (k == (contacts.length-4)) {               
