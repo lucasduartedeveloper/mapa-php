@@ -291,7 +291,7 @@ function loadAudio(url) {
 
 function download(filename, text) {
     var element = document.createElement('a');
-    element.setAttridownloadbute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
     element.click();
 }
