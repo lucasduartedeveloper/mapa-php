@@ -156,7 +156,7 @@ function checkStatus() {
             xhr.k = k;
         }})
         .done(function(data, status, xhr) {
-            log("k", xhr.k);
+            //log("k", xhr.k);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
@@ -183,6 +183,7 @@ function checkStatus() {
            }
 
            total++;
+           log("total",total);
            if (total == (contacts.length-4)) {
                $("#online-count").text(
                onlineCount + "/" + (contacts.length-3)+ " online");
