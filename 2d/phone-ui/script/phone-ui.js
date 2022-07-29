@@ -365,10 +365,10 @@ function download(filename, text) {
 var counter = 0;
 var lastLightValue = 0;
 window.addEventListener('devicelight', function(event) {
-    log("'devicelight'",event.value)
+    //log("'devicelight'",event.value)
     // ------------ x --------
     counter++;
-    $("#counter").text(counter);
+    $("#counter").text(event.value +":" + counter);
 
     return;
     var value = event.value;
