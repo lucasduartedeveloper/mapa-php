@@ -35,7 +35,7 @@ var contacts = [
     { no: "300",
       url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "999",
-     url: "video/xvideos.mp4" }
+     url: "video/upload-test.abc" }
 ];
 
 $(document).ready(function() {
