@@ -69,26 +69,25 @@ function handleDial(value) {
         var search = contacts.filter(c => c.no == number);
         lastContact = number;
         number = "";
+        calling.play();
         if (search.length == 0) return;
         if (search[0].url.includes("audio/") ||
             search[0].type == "audio-stream") {
             loadAudio(search[0].url);
             return;
         }
-        if (search[0].url.includes("video/")) {
+        if (search[0].type = "uploaded-video") {
             loadUploadedVideo(search[0].url);
             return;
         }
-        calling.play();
-        $.post("ajax/http-get.php", {
-        url : search[0].url }, function(data) {
-            if (search[0].url.includes("twitch")) {
-                loadTwitchStream(data);
-            }
-            else {
-                loadCbStream(data);
-            }
-        });
+        if (search[0].type = "tw") {
+            loadTwitchStream(data);
+            return
+        }
+        if (search[0].type == "cb") {
+            loadCbStream(search[0].json);
+            return
+        }
     }
 }
 
@@ -199,8 +198,8 @@ function checkStatus() {
     }
 }
 
-function loadCbStream(data) {
-     var n = data
+function loadCbStream(json) {
+     /*var n = data
      .indexOf("window.initialRoomDossier = \"{");
 
      if (n < 0) return;
@@ -214,7 +213,7 @@ function loadCbStream(data) {
      });
 
      json = JSON &&
-    JSON.parse(json) || $.parseJSON(json);
+    JSON.parse(json) || $.parseJSON(json);*/
 
     if (json.hls_source.length > 0) {
         $("#video-layer").show();
