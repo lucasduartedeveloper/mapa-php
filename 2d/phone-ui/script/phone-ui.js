@@ -57,7 +57,7 @@ $(document).ready(function() {
     $("#video-stream").attr("height", sw);
     checkStatus();
     
-    if (sw>sh) {
+    if (sw>=sh) {
         $("#number, #numbers").hide();
     }
 
