@@ -210,7 +210,6 @@ function checkStatus() {
            //log("total",total);
            $("#online-count").text(
            onlineCount + "/" +total+ " online");
-           html += "</ul>";
            $("#contact-list").html(html+"</ul>");
         });}.bind(k),500*k);
     }
@@ -248,7 +247,6 @@ function checkStatus() {
             //log("total",total);
             $("#online-count").text(
             onlineCount + "/" +total+ " online");
-            html += "</ul>";
             $("#contact-list").html(html+"</ul>");
         });}.bind(k),500*k);
     }
