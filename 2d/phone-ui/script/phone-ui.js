@@ -146,10 +146,16 @@ function checkStatus() {
     var onlineCount = 0;
     var html = "<ul>";
     for (var k = 0; k < (contacts.length-3); k++) {
-        var n = k;
-        $.post("ajax/http-get.php", {
-        url : contacts[k].url }, function(data, status, xhr, m=n) {
-            log("k", m);
+        $.ajax({
+        url: "ajax/http-get.php",
+        method: "POST",
+        datatype: "json",
+        data: { url : contacts[k].url },
+        beforeSend: function(xhr) {
+            xhr.k = k;
+        }})
+        .done(function(data, status, xhr) {
+            //log("k", k);
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
@@ -167,14 +173,14 @@ function checkStatus() {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-           contacts[k].json = json;
+           contacts[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
-              "<li>"+contacts[k].no+": "+
+              "<li>"+contacts[xhr.k].no+": "+
                json.broadcaster_username+"</li>";
                onlineCount++;
            }
-           if (k == (contacts.length-4)) {               
+           if (xhr.k == (contacts.length-4)) {               
                $("#online-count").text(
                onlineCount + "/" + (contacts.length-3)+ " online");
                html += "</ul>";
