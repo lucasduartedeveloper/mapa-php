@@ -4,6 +4,7 @@ var radio = new Audio();
 var timeStarted = 0;
 
 var sw = window.innerWidth;
+var sh = window.innerWidth;
 var playerId = new Date().getTime();
 
 var lastContact = "";
@@ -38,6 +39,10 @@ var contacts = [
      url: "https://m.chaturbate.com/mynameisnikki/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
+    { no: "301", type: "tw",
+     url: "https://m.twitch.tv/woohankyung" },
+    { no: "302", type: "tw",
+     url: "https://m.twitch.tv/kandyland" },
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
@@ -48,6 +53,11 @@ $(document).ready(function() {
     $("#video-stream").attr("width", sw);
     $("#video-stream").attr("height", sw);
     checkStatus();
+    
+
+    ws.send("PHONE-UI|" +
+         playerId + "|" + 
+         ((sw>sh) ? "CONTROLLER" : "SCREEN"));
 });
 
 var number = "";
@@ -82,7 +92,7 @@ function handleDial(value) {
             return;
         }
         if (search[0].type == "tw") {
-            loadTwitchStream(data);
+            loadTwitchStream(search[0].data);
             return
         }
         if (search[0].type == "cb" && search[0].json) {
@@ -152,7 +162,9 @@ function say(text) {
 }
 
 function checkStatus() {
-    var cbList = contacts.filter(c => c.type == "cb");
+    var cbList = 
+    contacts.filter(c => c.type == "cb");
+
     var total = 0;
     var onlineCount = 0;
     var html = "<ul>";
@@ -186,7 +198,7 @@ function checkStatus() {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-           cbList[xhr.k].json = json;
+           streamList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
               "<li>"+cbList[xhr.k].no+": "+
@@ -200,6 +212,38 @@ function checkStatus() {
            onlineCount + "/" +total+ " online");
            html += "</ul>";
            $("#contact-list").html(html+"</ul>");
+        });}.bind(k),500*k);
+    }
+
+    var twList = contacts.filter(c => c.type == "tw");
+    var total = 0;
+    var onlineCount = 0;
+    var html = "<ul>";
+    for (var k = 0; k < twList.length; k++) {
+        setTimeout(function() {
+        //log("this", this);
+        $.ajax({
+        url: "ajax/http-get.php",
+        method: "POST",
+        datatype: "json",
+        data: { url : twList[this].url },
+        beforeSend: function(xhr) {
+            xhr.k = this;
+        }.bind(this)})
+        .done(function(data, status, xhr) {
+            twList[xhr.k].data;
+
+            html += 
+            "<li>"+twList[xhr.k].no+": "+
+            twList[xhr.k].url+"</li>";
+            onlineCount++;
+
+            total++;
+            //log("total",total);
+            $("#online-count").text(
+            onlineCount + "/" +total+ " online");
+            html += "</ul>";
+            $("#contact-list").html(html+"</ul>");
         });}.bind(k),500*k);
     }
 }
