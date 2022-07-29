@@ -33,7 +33,7 @@ var contacts = [
     { no: "011", type: "cb",
      url: "https://m.chaturbate.com/sasha_ursx/" },
     { no: "012", type: "cb",
-     url:: "https://m.chaturbate.com/girl_of_yourdreams/" },
+     url: "https://m.chaturbate.com/girl_of_yourdreams/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "800", type: "audio-stream", 
