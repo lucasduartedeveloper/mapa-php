@@ -116,7 +116,7 @@ echo "\n";
         </button>
       </div>
       <div class="modal-body">
-        <p>
+        <p id="contact-list">
         </p>
       </div>
       <div class="modal-footer">
