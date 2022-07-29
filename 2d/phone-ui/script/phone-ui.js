@@ -119,6 +119,7 @@ $("#hang-phone").click(function() {
 });
 
 $("#online-count").click(function() {
+    checkStatus();
     $("#contact-list-modal").modal({
         keyboard: false
     });
