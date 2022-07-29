@@ -184,7 +184,7 @@ function checkStatus() {
 
            total++;
            log("total",total);
-           if (total == (contacts.length-4)) {
+           if (total == (contacts.length-3)) {
                $("#online-count").text(
                onlineCount + "/" + (contacts.length-3)+ " online");
                html += "</ul>";
