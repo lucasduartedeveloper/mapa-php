@@ -263,7 +263,8 @@ function checkStatus() {
             .indexOf("/");
 
             html += 
-            "<li>"+twList[xhr.k].no+": "+
+            "<li><img src=\"img/placeholder.png\"/>"+
+            twList[xhr.k].no+": "+
             twList[xhr.k].url.substring(n+4)+"</li>";
             onlineCount++;
 
