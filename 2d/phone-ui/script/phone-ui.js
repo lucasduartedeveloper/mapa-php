@@ -71,7 +71,7 @@ $(document).ready(function() {
             playerId != msg[1]) {
             //log("ws", msg);
             if (msg[2] == "DIAL") {
-                 handleDial(msg[3]);
+                 handleDial(msg[3], false);
             }
         }
     };
@@ -84,12 +84,14 @@ $("#numbers button").click(function(e) {
        return;
     }
     var value = e.target.value;
-    handleDial(value);
+    handleDial(value, true);
 });
 
-function handleDial(value) {
-    ws.send("PHONE-UI|" +
-        playerId + "|DIAL|" + value);
+function handleDial(value, typed=false) {
+    if (typed) {
+        ws.send("PHONE-UI|" +
+            playerId + "|DIAL|" + value);
+    }
 
     number += value;
     playDialSound(parseInt(value));
