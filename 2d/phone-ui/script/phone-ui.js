@@ -105,11 +105,15 @@ setTimeout(function() {
     Math.floor((timeStreaming % 60000) / 1000)
     .toString().padStart(2,"0");
     
-    /*
+    log("time", 
+    hours+":"+
+    minutes+":"+
+    seconds);
+
     $("#time-streaming").text(
     hours+":"+
     minutes+":"+
-    seconds);*/
+    seconds);
 }, 1000);
 
 $("#hang-phone").click(function() {
@@ -185,7 +189,7 @@ function checkStatus() {
            }
 
            total++;
-           log("total",total);
+           //log("total",total);
            if (total == cbList.length) {
                $("#online-count").text(
                onlineCount + "/" +cbList.length+ " online");
