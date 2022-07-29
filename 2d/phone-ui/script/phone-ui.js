@@ -90,7 +90,7 @@ function handleDial(value) {
     }
 }
 
-setTimeout(function() {
+setInterval(function() {
     var timeStreaming = 
     new Date().getTime() - timeStarted;
 
@@ -104,10 +104,10 @@ setTimeout(function() {
     Math.floor((timeStreaming % 60000) / 1000)
     .toString().padStart(2,"0");
     
-    log("time", 
+    /*log("time", 
     hours+":"+
     minutes+":"+
-    seconds);
+    seconds);*/
 
     $("#time-streaming").text(
     hours+":"+
