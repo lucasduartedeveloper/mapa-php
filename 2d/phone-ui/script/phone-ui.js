@@ -144,15 +144,16 @@ function say(text) {
 }
 
 function checkStatus() {
+    var cbList = contacts.filter(c => c.type == "cb");
     var total = 0;
     var onlineCount = 0;
     var html = "<ul>";
-    for (var k = 0; k < (contacts.length-3); k++) {
+    for (var k = 0; k < cbList.length; k++) {
         $.ajax({
         url: "ajax/http-get.php",
         method: "POST",
         datatype: "json",
-        data: { url : contacts[k].url },
+        data: { url : cbList[k].url },
         beforeSend: function(xhr) {
             xhr.k = k;
         }})
@@ -175,19 +176,19 @@ function checkStatus() {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-           contacts[xhr.k].json = json;
+           cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
-              "<li>"+contacts[xhr.k].no+": "+
+              "<li>"+cbList[xhr.k].no+": "+
                json.broadcaster_username+"</li>";
                onlineCount++;
            }
 
            total++;
            log("total",total);
-           if (total == (contacts.length-3)) {
+           if (total == cbList.length)) {
                $("#online-count").text(
-               onlineCount + "/" + (contacts.length-3)+ " online");
+               onlineCount + "/" + cbList.length+ " online");
                html += "</ul>";
                $("#contact-list").html(html);
            }
