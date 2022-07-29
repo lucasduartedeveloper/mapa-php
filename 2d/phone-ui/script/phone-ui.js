@@ -4,7 +4,7 @@ var radio = new Audio();
 var timeStarted = 0;
 
 var sw = window.innerWidth;
-var sh = window.innerWidth;
+var sh = window.innerHeight;
 var playerId = new Date().getTime();
 
 var lastContact = "";
