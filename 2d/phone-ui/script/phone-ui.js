@@ -61,7 +61,7 @@ $("#numbers button").click(function(e) {
         var search = contacts.filter(c => c.no == number);
         number = "";
         if (search.length == 0) return;
-        if (search[0].url.includes("videos/") {
+        if (search[0].url.includes("videos/")) {
             loadUploadedVideo(search[0].url);
             return;
         }
@@ -197,8 +197,7 @@ function loadTwitchStream(data) {
 
 function loadUploadedVideo(url) {
     $("#video-layer").show();
-    $("#broadcaster-username")
-    .text(url);
+    $("#broadcaster-username").text(url);
     $("#video-stream").attr("src", url);
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
