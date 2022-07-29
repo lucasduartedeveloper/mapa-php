@@ -110,8 +110,14 @@ html, body {
    z-index: 99999;
 }
 
-#broadcaster-username,
+#broadcaster-username {
+  width: 100vw;
+  color: white;
+  font-size: 50px;
+}
+
 #controls {
+  text-align: left;
   width: 100vw;
   color: white;
   font-size: 50px;
