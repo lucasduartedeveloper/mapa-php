@@ -162,7 +162,7 @@ function checkStatus() {
         url: "ajax/http-get.php",
         method: "POST",
         datatype: "json",
-        data: { url : cbList[k].url },
+        data: { url : cbList[this].url },
         beforeSend: function(xhr) {
             xhr.k = this;
         }})
