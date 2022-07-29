@@ -161,7 +161,7 @@ function checkStatus() {
                onlineCount++;
            }
            $("#online-count").text(
-           onlineCount + "/" + (contacts.length-1)+ " online");
+           onlineCount + "/" + (contacts.length-3)+ " online");
         });
     }
 }
