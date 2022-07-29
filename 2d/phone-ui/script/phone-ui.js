@@ -164,7 +164,7 @@ function checkStatus() {
         datatype: "json",
         data: { url : cbList[k].url },
         beforeSend: function(xhr) {
-            xhr.k = k;
+            xhr.k = this;
         }})
         .done(function(data, status, xhr) {
             //log("k", xhr.k);
@@ -199,7 +199,7 @@ function checkStatus() {
            onlineCount + "/" +total+ " online");
            html += "</ul>";
            $("#contact-list").html(html+"</ul>");
-        });},1000);
+        });}.bind(k),1000);
     }
 }
 
