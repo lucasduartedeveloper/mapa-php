@@ -1,6 +1,5 @@
 var audio = new Audio("audio/heart-beat.wav");
-var jovemPan = new Audio(
-"https:\/\/ice.fabricahost.com.br\/jovempanlondrina");
+var radio = new Audio();
 
 var timeStarted = 0;
 
@@ -25,17 +24,19 @@ var contacts = [
     { no: "007",
      url: "https://m.chaturbate.com/emyii/" },
     { no: "008",
-      url: "https://m.chaturbate.com/anabel054/" },
+     url: "https://m.chaturbate.com/anabel054/" },
     { no: "009",
-      url: "https://m.chaturbate.com/iren_wagner/" },
+     url: "https://m.chaturbate.com/iren_wagner/" },
     { no: "010",
       url: "https://m.chaturbate.com/lilypixel/" },
     { no: "011",
-      url: "https://m.chaturbate.com/sasha_ursx/" },
+     url: "https://m.chaturbate.com/sasha_ursx/" },
     { no: "300",
-      url: "https://m.twitch.tv/rafaelariggs/home" },
-    { no: "999",
-     url: "video/upload-test.abc" }
+     url: "https://m.twitch.tv/rafaelariggs/home" },
+    { no: "800", type: "radio", 
+     url: "https://ice.fabricahost.com.br/jovempanlondrina" },
+    { no: "900",
+      url: "video/upload-test.abc" }
 ];
 
 $(document).ready(function() {
@@ -60,7 +61,12 @@ $("#numbers button").click(function(e) {
     if (number.length >= 3) {
         var search = contacts.filter(c => c.no == number);
         number = "";
-        if (search.length == 0) return;
+        if (search.length == 0) return;       
+        if (search[0].url.includes("audio/")
+            search[0].type = "radio") {
+            loadAudio(search[0].url);
+            return;
+        }
         if (search[0].url.includes("video/")) {
             loadUploadedVideo(search[0].url);
             return;
@@ -203,6 +209,12 @@ function loadUploadedVideo(url) {
     $("#video-stream").attr("src", url);
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
+}
+
+function loadAudio(url) {
+    audio.pause();
+    audio.src = url;
+    audio.play();
 }
 
 /* 
