@@ -137,10 +137,10 @@ function say(text) {
 }
 
 function checkStatus() {
-   var onlineCount = 0;
-   for (var k = 0; k < (contacts.length-1); k++) {
-       $.post("ajax/http-get.php", {
-       url : contacts[k].url }, function(data) {
+    var onlineCount = 0;
+    for (var k = 0; k < (contacts.length-1); k++) {
+        $.post("ajax/http-get.php", {
+        url : contacts[k].url }, function(data) {
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
             var x = data
@@ -156,15 +156,12 @@ function checkStatus() {
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
 
-            if (json.hls_source.length > 0) {
-                contacts[k].online = true;
-                onlineCount++;
-            }
-            else {
-               contacts[k].online = false;
-            }
-            $("#online-count").text(
-            onlineCount + "/" + (contacts.length-1)+ " online");
+           contacts[k].json = json;
+           if (json.hls_source.length > 0) {
+               onlineCount++;
+           }
+           $("#online-count").text(
+           onlineCount + "/" + (contacts.length-1)+ " online");
         });
     }
 }
