@@ -270,7 +270,7 @@ function loadCbStream(json) {
 
 function loadTwitchStream(data) {    
     log("twitch", data);
-    download(data, "teste.html");
+    download("teste.html", data);
 }
 
 function loadUploadedVideo(url) {
