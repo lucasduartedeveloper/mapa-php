@@ -128,6 +128,8 @@ echo "\n";
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+
 <script src="https://momentjs.com/downloads/moment.min.js"></script>
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
