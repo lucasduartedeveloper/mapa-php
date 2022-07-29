@@ -69,7 +69,7 @@ function handleDial(value) {
         var search = contacts.filter(c => c.no == number);
         lastContact = number;
         number = "";
-        log("search", search[0]);
+        //log("search", search[0]);
         calling.play();
         if (search.length == 0) return;
         if (search[0].url.includes("audio/") ||
@@ -77,11 +77,11 @@ function handleDial(value) {
             loadAudio(search[0].url);
             return;
         }
-        if (search[0].type = "uploaded-video") {
+        if (search[0].type == "uploaded-video") {
             loadUploadedVideo(search[0].url);
             return;
         }
-        if (search[0].type = "tw") {
+        if (search[0].type == "tw") {
             loadTwitchStream(data);
             return
         }
@@ -215,7 +215,7 @@ function loadCbStream(json) {
 
      json = JSON &&
     JSON.parse(json) || $.parseJSON(json);*/
-     log("json", json);
+    //log("json", json);
 
     if (json.hls_source.length > 0) {
         $("#video-layer").show();
