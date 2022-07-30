@@ -193,5 +193,7 @@ html, body {
 li img {
    width: 50px;
    height: 50px;
-   bord-radius: 50%;
+   border: 2px solid purple;
+   padding: 2px;
+   border-radius: 50%;
 }
