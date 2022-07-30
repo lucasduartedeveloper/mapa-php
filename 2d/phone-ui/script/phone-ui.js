@@ -352,21 +352,28 @@ function checkStatus() {
             avatarImg = data.substring(n+38, x+4);
             log("avt-img", data.substring(n+33, x+4));
 
-            var online = false;
+            n = data.indexOf("ChannelStatusTextIndicator");
+            x = data.indexOf("</p>", n);
 
-            html += 
-            "<li onclick=\"handleDial('"+
-            twList[xhr.k].no+"')\">"+
-            "<img src=\""+avatarImg+"\"/>"+
-            twList[xhr.k].no+": "+
-            twList[xhr.k].url.substring(n+4)+"</li>";
-            onlineCount++;
+            var online = 
+            data.substring(n, x).includes("LIVE");
+            log("status-text", data.substring(n, x));
 
-            total++;
-            //log("total",total);
+            if (online) {
+                html += 
+                "<li onclick=\"handleDial('"+
+                twList[xhr.k].no+"')\">"+
+                "<img src=\""+avatarImg+"\"/>"+
+                twList[xhr.k].no+": "+
+                twList[xhr.k].url.substring(n+4)+"</li>";
+                onlineCount++;
+
+                total++;
+                //log("total",total);
+                $("#contact-list").html(html+"</ul>");
+            }
             $("#online-count").text(
             onlineCount + "/" +total+ " online");
-            $("#contact-list").html(html+"</ul>");
         });}.bind(k),500*k);
     }
 
