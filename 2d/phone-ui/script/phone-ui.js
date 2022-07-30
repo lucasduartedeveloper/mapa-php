@@ -49,6 +49,10 @@ var contacts = [
      url: "https://m.chaturbate.com/emilygrey_/" },
     { no: "019", type: "cb",
      url: "https://m.chaturbate.com/princess_sofiaa/" },
+    /*{ no: "020", type: "cb",
+     url: "https://m.chaturbate.com/princess_sofiaa/" },
+    { no: "021", type: "cb",
+     url: "https://m.chaturbate.com/princess_sofiaa/" },*/
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "301", type: "tw",
