@@ -403,7 +403,9 @@ function loadCbStream(json) {
 function loadTwitchStream(info) {    
     log("twitch", info.data);
     download("teste.html", info.data);
+
     loadVideoOnIframe(info.url);
+    timeStarted = new Date().getTime();
 }
 
 function loadVideoStream(info) {    
