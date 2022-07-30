@@ -64,7 +64,7 @@ var contacts = [
     { no: "304", type: "tw",
      url: "https://m.twitch.tv/melina" },
     { no: "500", type: "tv", title: "SBT", 
-     url: "https://tvonline.fm/sbt-ao-vivo-online/" },
+     url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
@@ -415,7 +415,14 @@ function loadVideoStream(info) {
     log("video", info.data);  
     download("teste.html", info.data);
     
+    $("#temporary-workaround").hide();
+    $("#video-layer").show();
     $("#broadcaster-username").text(info.title);
+    $("#video-stream").attr("src", 
+    json.url);
+    $("#video-stream")[0].load();
+    $("#video-stream")[0].play();
+
     loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
 }
