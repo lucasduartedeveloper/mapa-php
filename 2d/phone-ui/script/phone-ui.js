@@ -110,7 +110,7 @@ $(document).ready(function() {
         if (msg[0] == "PHONE-UI" &&
             playerId != msg[1]) {
             //log("ws", msg);
-            if (msg[2] == "DIAL") {
+            if (msg[2] == "DIAL" && (sw>=sh)) {
                  handleDial(msg[3], false);
             }
         }
