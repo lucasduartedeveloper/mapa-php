@@ -413,6 +413,7 @@ function loadVideoStream(info) {
     log("video", info.data);  
     download("teste.html", info.data);
     
+    $("#broadcaster-username").text(info.title);
     loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
 }
@@ -434,12 +435,12 @@ function loadAudio(url) {
     audio.play();
 }
 
-function loadVideoOnIframe(url) {
+function loadVideoOnIframe(url) {  
+    $("#temporary-workaround").show();
     var iframe = 
     document.getElementById("temporary-workaround");
     iframe.src = url;
     $("#video-layer").show();
-    $("#broadcaster-username").text(url);
     $("#video-stream").hide();
 }
 
