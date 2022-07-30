@@ -339,14 +339,24 @@ function checkStatus() {
 
             var n = twList[xhr.k].url
             .indexOf(".tv/");
-
             var x = twList[xhr.k].url
-            .indexOf("/");
+            .lastIndexOf("/");
+
+            var channelName = 
+            twList[xhr.k].url.substring(n+4);
+
+            n = data.indexOf("image-avatar.tw-image");
+            x = data.indexOf(".png", n);
+
+            var avatarImg = "img/placeholder.png";
+            avatarImg = data.substring(n+33, x+4);
+
+            var online = false;
 
             html += 
             "<li onclick=\"handleDial('"+
             twList[xhr.k].no+"')\">"+
-            "<img src=\"img/placeholder.png\"/>"+
+            "<img src=\""+avatarImg+"\"/>"+
             twList[xhr.k].no+": "+
             twList[xhr.k].url.substring(n+4)+"</li>";
             onlineCount++;
