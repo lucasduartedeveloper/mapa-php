@@ -195,5 +195,6 @@ li img {
    height: 50px;
    border: 2px solid purple;
    padding: 2px;
+   margin-right: 20px;
    border-radius: 50%;
 }
