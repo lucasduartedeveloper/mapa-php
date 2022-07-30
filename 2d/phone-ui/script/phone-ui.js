@@ -69,6 +69,8 @@ var contacts = [
      url: "https://m.twitch.tv/paulanobre/home" },
     { no: "307", type: "tw",
      url: "https://m.twitch.tv/jinjinn00/home" },
+    { no: "308", type: "tw",
+     url: "https://m.twitch.tv/stpeach/home" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
     { no: "800", type: "audio-stream", 
