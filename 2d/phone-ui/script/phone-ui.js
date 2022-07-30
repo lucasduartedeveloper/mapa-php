@@ -145,7 +145,12 @@ function handleDial(value, typed=false) {
     }
 }
 
+var angle = 0;
 setInterval(function() {
+    angle++;
+    $("#video-stream")
+    .css("transform", "rotateZ("+angle+"deg)");
+
     var timeStreaming = 
     new Date().getTime() - timeStarted;
 
