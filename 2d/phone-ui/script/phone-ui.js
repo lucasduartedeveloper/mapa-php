@@ -412,8 +412,8 @@ function loadTwitchStream(info) {
 }
 
 function loadVideoStream(info) {    
-    log("video", info.data);  
-    download("teste.html", info.data);
+    //log("video", info.data);  
+    //download("teste.html", info.data);
     
     $("#temporary-workaround").hide();
     $("#video-layer").show();
