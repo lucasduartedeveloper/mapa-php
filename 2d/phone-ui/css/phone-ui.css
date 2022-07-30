@@ -8,7 +8,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: #2f2e40;
+    background: #fff;
     color: #000;
     background-position: center;
     background-size: cover;
@@ -44,7 +44,7 @@ html, body {
 #numbers {
    position: fixed;
    top: 100px;
-   background: #2f2e40;
+   background: #ccccce;
    width: 100vw;
    height: 100vw;
    font-size: 40px;
@@ -174,3 +174,4 @@ li img {
    height: 50px;
    bord-radius: 50%;
 }
+
