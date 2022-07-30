@@ -423,7 +423,7 @@ function loadVideoStream(info) {
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
 
-    loadVideoOnIframe(info.url);
+    //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
 }
 
