@@ -61,6 +61,8 @@ var contacts = [
      url: "https://m.twitch.tv/kandyland" },
     { no: "303", type: "tw",
      url: "https://m.twitch.tv/lydia_violet" },
+    { no: "304", type: "tw",
+     url: "https://m.twitch.tv/melina" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://tvonline.fm/sbt-ao-vivo-online/" },
     { no: "800", type: "audio-stream", 
