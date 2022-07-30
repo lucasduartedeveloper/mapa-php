@@ -62,10 +62,14 @@ html, body {
    color: #000;
    width: 23vw;
    height: 23vw;
-   margin: 6vw;
+   margin: 5vw;
    border-radius: 50%;
    border: 2px solid #ccc;
    --box-shadow: 5px 10px #888888;
+}
+
+#numbers i {
+   
 }
 
 #numbers button span {
@@ -78,9 +82,9 @@ html, body {
 #numbers button:hover {
    background: #ccc;
    color: #000;
-   width: 25vw;
-   height: 25vw;
-   margin: 4vw;
+   width: 23vw;
+   height: 23vw;
+   margin: 5vw;
    border-radius: 50%;
    border: 2px solid #ccc;
 }
