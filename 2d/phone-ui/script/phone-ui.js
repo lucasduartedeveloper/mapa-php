@@ -419,7 +419,7 @@ function loadVideoStream(info) {
     $("#video-layer").show();
     $("#broadcaster-username").text(info.title);
     $("#video-stream").attr("src", 
-    json.url);
+    info.url);
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
 
