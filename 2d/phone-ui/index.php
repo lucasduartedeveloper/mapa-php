@@ -69,9 +69,12 @@ echo "\n";
 <div id="video-layer" style="display:none">
 <span id="broadcaster-username"></span>
 <span id="time-streaming">00:00:00</span>
-<video id="video-stream" controls="true" width="100" height="100" autoplay></video>
+<video id="video-stream" style="display:none" 
+width="100" height="100" autoplay></video>
 <span id="controls">
+<i id="toggle-video" class="fa-solid fa-video"></i>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
+<i id="video-controls" class="fa-solid fa-gamepad"></i>
 </span>
 </div>
 

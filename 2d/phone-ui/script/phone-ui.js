@@ -191,6 +191,23 @@ $("#hang-phone").click(function() {
     $("#video-layer").hide();
 });
 
+var videoControls = false;
+$("#toggle-controls").click(function () {
+    videoControls = !videoControls;
+    $("#video-stream")[0].controls = videoControls;
+});
+
+var video = false;
+$("#toggle-video").click(function () {
+    video = !video;
+    if (video) {
+        $("#video-stream").hide();
+    }
+    else {
+        $("#video-stream").show();
+    }
+});
+
 $("#online-count").click(function() {
     $("#contact-list-modal").modal({
         keyboard: false
