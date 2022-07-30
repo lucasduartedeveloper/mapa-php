@@ -148,7 +148,7 @@ function handleDial(value, typed=false) {
             loadTwitchStream(search[0].data);
             return
         }
-        if (search[0].type == "tv" && search[0].json) {
+        if (search[0].type == "tv") {
             loadVideoStream(search[0]);
             return
         }
