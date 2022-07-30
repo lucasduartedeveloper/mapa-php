@@ -55,6 +55,8 @@ var contacts = [
      url: "https://m.twitch.tv/kandyland" },
     { no: "303", type: "tw",
      url: "https://m.twitch.tv/lydia_violet" },
+    { no: "500", type: "tv", title: "SBT", 
+     url: "https://tvonline.fm/sbt-ao-vivo-online/" },
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
@@ -138,12 +140,16 @@ function handleDial(value, typed=false) {
             loadUploadedVideo(search[0].url);
             return;
         }
+        if (search[0].type == "cb" && search[0].json) {
+            loadCbStream(search[0].json);
+            return
+        }
         if (search[0].type == "tw") {
             loadTwitchStream(search[0].data);
             return
         }
-        if (search[0].type == "cb" && search[0].json) {
-            loadCbStream(search[0].json);
+        if (search[0].type == "tv" && search[0].json) {
+            loadVideoStream(search[0]);
             return
         }
     }
@@ -305,6 +311,37 @@ function checkStatus() {
             $("#contact-list").html(html+"</ul>");
         });}.bind(k),500*k);
     }
+
+   var tvList = contacts.filter(c => c.type == "tv");
+    for (var k = 0; k < tvList.length; k++) {
+        setTimeout(function() {
+        //log("this", this);
+        $.ajax({
+        url: "ajax/http-get.php",
+        method: "POST",
+        datatype: "json",
+        data: { url : tvList[this].url },
+        beforeSend: function(xhr) {
+            xhr.k = this;
+        }.bind(this)})
+        .done(function(data, status, xhr) {
+            tvList[xhr.k].data = data;
+
+            html += 
+            "<li onclick=\"handleDial('"+
+            tvList[xhr.k].no+"')\">"+
+            "<img src=\"img/placeholder.png\"/>"+
+            tvList[xhr.k].no+": "+
+            tvList[xhr.k].title+"</li>";
+            onlineCount++;
+
+            total++;
+            //log("total",total);
+            $("#online-count").text(
+            onlineCount + "/" +total+ " online");
+            $("#contact-list").html(html+"</ul>");
+        });}.bind(k),500*k);
+    }
 }
 
 function loadCbStream(json) {
@@ -329,6 +366,19 @@ function loadCbStream(json) {
 function loadTwitchStream(data) {    
     log("twitch", data);
     download("teste.html", data);
+}
+
+function loadVideoStream(info) {    
+    log("video", info.data);  
+    download("teste.html", info.data);
+    return;
+
+    $("#video-layer").show();
+    $("#broadcaster-username")
+    .text(info.title);
+    $("#video-stream").attr("src", info.url);
+    $("#video-stream")[0].load();
+    $("#video-stream")[0].play();
 }
 
 function loadUploadedVideo(url) {
