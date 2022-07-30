@@ -235,8 +235,8 @@ function checkStatus() {
            cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
-               "<li click=\"handleDial(\""+
-               cbList[xhr.k].no+"\")\">"+
+               "<li click=\"handleDial('"+
+               cbList[xhr.k].no+"')\">"+
                "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
                json.broadcaster_username+"</li>";
@@ -273,8 +273,8 @@ function checkStatus() {
             .indexOf("/");
 
             html += 
-            "<li click=\"handleDial(\""+
-            twList[xhr.k].no+"\")\">"+
+            "<li click=\"handleDial('"+
+            twList[xhr.k].no+"')\">"+
             "<img src=\"img/placeholder.png\"/>"+
             twList[xhr.k].no+": "+
             twList[xhr.k].url.substring(n+4)+"</li>";
