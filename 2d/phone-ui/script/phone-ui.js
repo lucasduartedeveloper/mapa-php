@@ -383,6 +383,7 @@ function checkStatus() {
 
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
+        $("#temporary-workaround").hide();
         $("#video-layer").show();
         $("#broadcaster-username")
         .text(json.broadcaster_username);
@@ -411,17 +412,13 @@ function loadTwitchStream(info) {
 function loadVideoStream(info) {    
     log("video", info.data);  
     download("teste.html", info.data);
-    return;
-
-    $("#video-layer").show();
-    $("#broadcaster-username")
-    .text(info.title);
-    $("#video-stream").attr("src", info.url);
-    $("#video-stream")[0].load();
-    $("#video-stream")[0].play();
+    
+    loadVideoOnIframe(info.url);
+    timeStarted = new Date().getTime();
 }
 
 function loadUploadedVideo(url) {
+    $("#temporary-workaround").hide();
     $("#video-layer").show();
     $("#broadcaster-username").text(url);
     $("#video-stream").attr("src", url);
