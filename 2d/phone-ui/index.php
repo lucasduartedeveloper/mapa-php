@@ -95,9 +95,9 @@ width="100" height="100" autoplay></video>
 <button value="1">1<span>DEF</span></button>
 <button value="2">2<span>GHI</span></button>
 <button value="3">3<span>FJK</span></button>
-<button value="*">0<span></span></button>
+<button value="*">*<span></span></button>
 <button value="0">0<span></span></button>
-<button value="#">0<span></span></button>
+<button value="#">#<span></span></button>
 <i id="phone" class="fa-solid fa-phone"></i>
 </div>
 
