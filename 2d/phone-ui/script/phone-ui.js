@@ -235,7 +235,7 @@ function checkStatus() {
            cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
                html += 
-               "<li click=\"handleDial('"+
+               "<li onclick=\"handleDial('"+
                cbList[xhr.k].no+"')\">"+
                "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
@@ -273,7 +273,7 @@ function checkStatus() {
             .indexOf("/");
 
             html += 
-            "<li click=\"handleDial('"+
+            "<li onclick=\"handleDial('"+
             twList[xhr.k].no+"')\">"+
             "<img src=\"img/placeholder.png\"/>"+
             twList[xhr.k].no+": "+
