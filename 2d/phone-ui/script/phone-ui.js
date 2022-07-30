@@ -95,8 +95,8 @@ $(document).ready(function() {
 
     $("#video-stream").attr("width", sw);
     $("#video-stream").attr("height", sw);
-    $("#temporary-workaround").attr("width", sw);
-    $("#temporary-workaround").attr("height", sw);
+    $("#temporary-workaround").css("width", sw+"px");
+    $("#temporary-workaround").css("height", sw+"px");
     
     if (sw>=sh) {
         $("#number, #numbers").hide();
