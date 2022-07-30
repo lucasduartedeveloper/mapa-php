@@ -159,6 +159,10 @@ html, body {
    width: 100vw;
 }
 
+#temporary-workaround {
+   border: none;
+}
+
 #online-count {
    position: fixed;
    color: white;
@@ -191,4 +195,3 @@ li img {
    height: 50px;
    bord-radius: 50%;
 }
-
