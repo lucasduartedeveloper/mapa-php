@@ -44,7 +44,7 @@ html, body {
 #numbers {
    position: fixed;
    top: 100px;
-   background: #ccccce;
+   background: #fff;
    width: 100vw;
    height: 100vw;
    font-size: 40px;
@@ -58,7 +58,7 @@ html, body {
 }
 
 #numbers button {
-   background: #fff;
+   background: #ccccce;
    color: #000;
    width: 25vw;
    height: 25vw;
