@@ -105,9 +105,11 @@ html, body {
    flex-direction: column;
    position: fixed;
    top: 10px;
-   background: #2f2e40;
-   color: white;
+   background: #fff;
+   color: black;
    width: 100vw;
+   font-size: 30px;
+   font-weight: 900;
    height: 90px;
 }
 
