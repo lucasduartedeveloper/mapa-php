@@ -63,7 +63,7 @@ html, body {
    color: #000;
    width: 20vw;
    height: 20vw;
-   margin: 5vw;
+   margin: 5vw 3vw;
    border-radius: 50%;
    border: 2px solid #ccc;
    --box-shadow: 5px 10px #888888;
@@ -76,6 +76,7 @@ html, body {
    flex-direction: row;
    width: 20vw;
    height: 20vw;
+   margin: 5vw 3vw;
    background: #38C75E;
    color: #fff;
    border-radius: 50%;
@@ -93,7 +94,7 @@ html, body {
    color: #000;
    width: 20vw;
    height: 20vw;
-   margin: 5vw;
+   margin: 5vw 3vw;
    border-radius: 50%;
    border: 2px solid #ccc;
 }
