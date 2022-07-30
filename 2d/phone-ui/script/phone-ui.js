@@ -42,7 +42,7 @@ var contacts = [
     { no: "015", type: "cb",
      url: "https://m.chaturbate.com/vany_love/" },
     { no: "016", type: "cb",
-     url: "https://m.chaturbate.com/vany_love/" },
+     url: "https://m.chaturbate.com/emyii/" },
     { no: "017", type: "cb",
      url: "https://m.chaturbate.com/uindi/" },
     { no: "300", type: "tw",
