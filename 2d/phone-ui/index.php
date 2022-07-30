@@ -74,7 +74,7 @@ width="100" height="100" autoplay></video>
 <span id="controls">
 <i id="toggle-video" class="fa-solid fa-video"></i>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
-<i id="video-controls" class="fa-solid fa-gamepad"></i>
+<i id="toggle-controls" class="fa-solid fa-gamepad"></i>
 </span>
 </div>
 
