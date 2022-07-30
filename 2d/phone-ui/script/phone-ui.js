@@ -199,6 +199,11 @@ setInterval(function() {
     seconds);
 }, 1000);
 
+var darkTheme = true;
+$("#dark-theme").click(function() {
+    
+});
+
 $("#hang-phone").click(function() {
     audio.pause();
     $("#video-stream")[0].pause();

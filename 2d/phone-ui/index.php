@@ -43,9 +43,9 @@ echo "<!-- ".$rnd." -->";
 <link rel="icon" type="image/png" sizes="32x32" href="webapp/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="webapp/favicon-16x16.png">
 <link rel="manifest" href="webapp/site.webmanifest?v=0">
-<link rel="mask-icon" href="webapp/safari-pinned-tab.svg" color="#fff">
-<meta name="msapplication-TileColor" content="#fff">
-<meta name="theme-color" content="#fff">
+<link rel="mask-icon" href="webapp/safari-pinned-tab.svg" color="#343434">
+<meta name="msapplication-TileColor" content="#343434">
+<meta name="theme-color" content="#343434">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
