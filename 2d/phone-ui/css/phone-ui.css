@@ -69,7 +69,11 @@ html, body {
 }
 
 #numbers i {
-   
+   width: 23vw;
+   height: 23vw;
+   background: #38C75E;
+   color: #fff;
+   border-radius: 50%;
 }
 
 #numbers button span {
