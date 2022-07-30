@@ -345,7 +345,7 @@ function checkStatus() {
             var channelName = 
             twList[xhr.k].url.substring(n+4);
 
-            n = data.indexOf("image-avatar.tw-image");
+            n = data.indexOf("tw-image-avatar tw-image");
             x = data.indexOf(".png", n);
 
             var avatarImg = "img/placeholder.png";
