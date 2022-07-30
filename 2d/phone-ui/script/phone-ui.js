@@ -376,7 +376,7 @@ function checkStatus() {
 }
 
 function loadCbStream(json) {
-    if (json.hls_source.length > 0) {
+    if (json && json.hls_source.length > 0) {
         $("#video-layer").show();
         $("#broadcaster-username")
         .text(json.broadcaster_username);
