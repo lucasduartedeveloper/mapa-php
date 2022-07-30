@@ -100,6 +100,7 @@ $("#numbers button").click(function(e) {
 });
 
 function handleDial(value, typed=false) {
+    $("#contact-list-modal").modal("hide");
     if (typed) {
         ws.send("PHONE-UI|" +
             playerId + "|DIAL|" + value);
