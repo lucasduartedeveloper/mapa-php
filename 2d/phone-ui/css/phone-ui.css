@@ -60,12 +60,12 @@ html, body {
 #numbers button {
    background: #ccccce;
    color: #000;
-   width: 25vw;
-   height: 25vw;
-   margin: 4vw;
+   width: 23vw;
+   height: 23vw;
+   margin: 6vw;
    border-radius: 50%;
    border: 2px solid #ccc;
-   box-shadow: 5px 10px #888888;
+   --box-shadow: 5px 10px #888888;
 }
 
 #numbers button span {
