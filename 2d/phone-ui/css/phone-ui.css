@@ -54,6 +54,7 @@ html, body {
    align-items: center;
    flex-direction: row;
    flex-wrap: wrap;
+   font-weight: 900;
    z-index: 9999;
 }
 
@@ -84,14 +85,14 @@ html, body {
    display: block;
    background: rgba(1,1,1,0);
    color: #000;
-   font-size: 20px;
+   font-size: 15px;
 }
 
 #numbers button:hover {
    background: #ccc;
    color: #000;
-   width: 23vw;
-   height: 23vw;
+   width: 20vw;
+   height: 20vw;
    margin: 5vw;
    border-radius: 50%;
    border: 2px solid #ccc;
