@@ -161,7 +161,7 @@ function handleDial(value, typed=false) {
             return
         }
         if (search[0].type == "tw") {
-            loadTwitchStream(search[0].data);
+            loadTwitchStream(search[0]);
             return
         }
         if (search[0].type == "tv") {
@@ -201,15 +201,14 @@ setInterval(function() {
     seconds);
 }, 1000);
 
-var darkTheme = true;
-$("#dark-theme").click(function() {
-    
-});
-
 $("#hang-phone").click(function() {
     audio.pause();
     $("#video-stream")[0].pause();
     $("#video-layer").hide();
+    
+    var iframe = 
+    document.getElementById("temporary-workaround");
+    iframe.src = "about:blank";
 });
 
 var videoControls = false;
@@ -401,9 +400,10 @@ function loadCbStream(json) {
     }
 }
 
-function loadTwitchStream(data) {    
-    log("twitch", data);
-    download("teste.html", data);
+function loadTwitchStream(info) {    
+    log("twitch", info.data);
+    download("teste.html", info.data);
+    loadVideoOnIframe(info.url);
 }
 
 function loadVideoStream(info) {    
@@ -433,6 +433,15 @@ function loadAudio(url) {
     audio.pause();
     audio.src = url;
     audio.play();
+}
+
+function loadVideoOnIframe(url) {
+    var iframe = 
+    document.getElementById("temporary-workaround");
+    iframe.src = url;
+    $("#video-layer").show();
+    $("#broadcaster-username").text(url);
+    $("#video-stream").hide();
 }
 
 function cropCircle() {

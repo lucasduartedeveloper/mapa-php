@@ -69,6 +69,7 @@ echo "\n";
 <div id="video-layer" style="display:none">
 <span id="broadcaster-username"></span>
 <span id="time-streaming">00:00:00</span>
+<iframe id="temporary-workaround"></iframe>
 <video id="video-stream" style="display:none" 
 width="100" height="100" autoplay></video>
 <span id="controls">
