@@ -56,13 +56,19 @@ var contacts = [
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     { no: "301", type: "tw",
-     url: "https://m.twitch.tv/woohankyung" },
+     url: "https://m.twitch.tv/woohankyung/home" },
     { no: "302", type: "tw",
-     url: "https://m.twitch.tv/kandyland" },
+     url: "https://m.twitch.tv/kandyland/home" },
     { no: "303", type: "tw",
-     url: "https://m.twitch.tv/lydia_violet" },
+     url: "https://m.twitch.tv/lydia_violet/home" },
     { no: "304", type: "tw",
-     url: "https://m.twitch.tv/melina" },
+     url: "https://m.twitch.tv/melina/home" },
+    { no: "305", type: "tw",
+     url: "https://m.twitch.tv/jinnytty/home" },
+    { no: "306", type: "tw",
+     url: "https://m.twitch.tv/paulanobre/home" },
+    { no: "307", type: "tw",
+     url: "https://m.twitch.tv/jinjinn00/home" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
     { no: "800", type: "audio-stream", 
@@ -407,7 +413,8 @@ function loadTwitchStream(info) {
     log("twitch", info.data);
     download("teste.html", info.data);
 
-    loadVideoOnIframe(info.url);
+    
+    //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
 }
 
