@@ -58,7 +58,11 @@ var contacts = [
     { no: "900", type: "uploaded-video", 
       url: "video/upload-test.abc" },
     { no: "950", type: "uploaded-video", 
-      url: "video/iron-man-1-ending.abc" }
+      url: "video/iron-man-1-ending.abc" },
+    { no: "951", type: "uploaded-video", 
+      url: "video/pitty.mp4" },
+    { no: "952", type: "uploaded-video", 
+      url: "video/avril.mp4" }
 ];
 
 var screens = "";
