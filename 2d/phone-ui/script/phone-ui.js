@@ -313,6 +313,9 @@ function checkStatus() {
             //log("json: "+contacts[k].no, json);
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
+            json.chat_password = JSON &&
+           JSON.parse(json.chat_password) ||
+           $.parseJSON(json.chat_password);
 
            cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
@@ -427,7 +430,24 @@ function checkStatus() {
 
 var connectJson = {
    method: "connect",
-   data: {  }
+   data: { 
+       user: "__anonymous__tt0QRJ",
+       password: { 
+       username: "__anonymous__tt0QRJ",
+       room: "anabel054",
+       expire :1659295385,
+       org: "A",
+       sig:"e5f8e146f8bcabce6ebd67a1b90e839b14fd9fcf49ca0f993760ee74562c5571" }, 
+       room: "anabel054",
+       room_password:"3305f779c7ab67ade91baf16a5f21fd13e9938ec5aa4412f50d72934ba34dd11" }
+};
+
+var joinJson = {
+   method: "joinRoom",
+   data: { 
+   room: "anabel054",
+   exploringHashTag: "",
+   source_name: "un" }
 };
 
 var sock = {};
@@ -436,8 +456,16 @@ function loadCbStream(json) {
         sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
             console.log('open');
-            connectJson.data = this.chat_password;
-            sock.send(JSON.stringify(connectJson));
+            connectJson.data.user = 
+            this.chat_password.username;
+            connectJson.data.password = 
+            this.chat_password;
+            connectJson.data.room = 
+            this.chat_password;
+            connectJson.data.room_password = 
+            this.chat_password;
+
+            sock.send(connectJson);
         }.bind(json);
         sock.onmessage = function(e) {
            console.log('message', e.data);
