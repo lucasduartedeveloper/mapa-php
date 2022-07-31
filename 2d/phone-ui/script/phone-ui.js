@@ -342,10 +342,10 @@ function checkStatus() {
             var n = twList[xhr.k].url
             .indexOf(".tv/");
             var x = twList[xhr.k].url
-            .indexOf("/", n);
+            .indexOf("/", n+4);
 
             var channelName = 
-            twList[xhr.k].url.substring(n+4);
+            twList[xhr.k].url.substring(n+4, x);
 
             n = data.indexOf("</h3>");
             x = data.indexOf("</h3>");
