@@ -73,6 +73,8 @@ var contacts = [
      url: "https://m.twitch.tv/jinjinn00/home" },
     { no: "308", type: "tw",
      url: "https://m.twitch.tv/stpeach/home" },
+    { no: "309", type: "tw",
+     url: "https://m.twitch.tv/lorylives/home" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
     { no: "501", type: "tv-iframe", title: "CARTOON",
@@ -423,7 +425,8 @@ function checkStatus() {
 var cbWs = {};
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
-        cbWs = new WebSocket(json.wschat_host);
+        cbWs = new WebSocket(
+        json.wschat_host.replace("https", "ws");
         cbWs.onopen = function (e) {
             log("wschat-open", "opened");
         };
