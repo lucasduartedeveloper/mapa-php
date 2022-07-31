@@ -340,19 +340,24 @@ function checkStatus() {
             var n = twList[xhr.k].url
             .indexOf(".tv/");
             var x = twList[xhr.k].url
-            .lastIndexOf("/");
+            .indexOf("/", n);
 
             var channelName = 
-            twList[xhr.k].url.substring(n+4);
+            twList[xhr.k].url.substring(n+4, x);
+
+            n = data.indexOf("</h3>");
+            x = data.indexOf("</h3>");
+            //channelName = data.substring(n+38, x+4);
 
             n = data.indexOf("tw-image-avatar");
             x = data.indexOf(".png", n);
 
             var avatarImg = "img/placeholder.png";
             avatarImg = data.substring(n+38, x+4);
-            log("avt-img", data.substring(n+33, x+4));
+            //log("avt-img", data.substring(n+33, x+4));
 
-            n = data.indexOf("ChannelStatusTextIndicator");
+            n = data
+            .indexOf("class=\"ScChannelStatusTextIndicator");
             x = data.indexOf("</p>", n);
 
             var online = 
@@ -365,7 +370,7 @@ function checkStatus() {
                 twList[xhr.k].no+"')\">"+
                 "<img src=\""+avatarImg+"\"/>"+
                 twList[xhr.k].no+": "+
-                twList[xhr.k].url.substring(n+4)+"</li>";
+                channelName+"</li>";
                 onlineCount++;
 
                 total++;
