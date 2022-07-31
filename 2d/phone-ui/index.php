@@ -20,7 +20,8 @@ $script = [
     9 => "image-helper.js",
     10 => "json-helper.js",
     11 => "controls.js",
-    12 => "phone-ui.js"
+    12 => "2d-objects.js",
+    13 => "phone-ui.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
@@ -83,7 +84,7 @@ width="100" height="100" autoplay></video>
 </div>
 
 <div id="online-count">
-0/0 online
+0/0 online <!-- <i class="fa-solid fa-circle"></i> -->
 </div>
 
 <div id="numbers">
@@ -101,6 +102,9 @@ width="100" height="100" autoplay></video>
 <button value="#">#<span></span></button>
 <i id="phone" class="fa-solid fa-phone"></i>
 </div>
+
+<canvas id="mini-skate">
+</canvas>
 
 <p id="version-info">
      <span id="counter">0</span>

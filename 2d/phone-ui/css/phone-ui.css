@@ -207,3 +207,9 @@ li img {
    margin-right: 20px;
    border-radius: 50%;
 }
+
+#mini-skate {
+   position: fixed;
+   width: 100vw;
+   height: 100vw;
+}
