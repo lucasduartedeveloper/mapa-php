@@ -471,7 +471,7 @@ function loadCbStream(json) {
            var msgJson = JSON.parse(e.data);
            log('message', msgJson); 
 
-           if (e.data.includes("args")) {
+           if (msgJson.args[0] == "1") {
                joinJson.room =
                json.broadcaster_username;
                
