@@ -100,7 +100,8 @@ width="100" height="100" autoplay></video>
 <button value="*">*<span></span></button>
 <button value="0">0<span>+</span></button>
 <button value="#">#<span></span></button>
-<i id="phone" class="fa-solid fa-phone"></i>
+<!-- <i id="phone" class="fa-solid fa-phone"></i> -->
+<img id="phone" src="img/ball.png" />
 </div>
 
 <!-- 
