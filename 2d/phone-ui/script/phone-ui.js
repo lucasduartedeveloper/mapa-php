@@ -445,10 +445,10 @@ function loadCbStream(json) {
         sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
             console.log('open');
-            connectJson.room = json.broadcaster_username;
+            connectJson.room = this.broadcaster_username;
             
-            sock.send(json.chat_password);
-        };
+            sock.send(this.chat_password);
+        }.bind(json);
         sock.onmessage = function(e) {
            console.log('message', e.data);
            //sock.close();
