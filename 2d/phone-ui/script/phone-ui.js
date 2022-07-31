@@ -224,6 +224,7 @@ $("#hang-phone").click(function() {
     $("#video-stream")[0].pause();
     $("#video-layer").hide();
     
+    sock.close();
     var iframe = 
     document.getElementById("temporary-workaround");
     iframe.src = "about:blank";
@@ -422,9 +423,10 @@ function checkStatus() {
     }
 }
 
+var sock = {};
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
-        var sock = new SockJS(json.wschat_host);
+        sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
             console.log('open');
             //sock.send('test');
