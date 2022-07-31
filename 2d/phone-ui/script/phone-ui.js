@@ -343,7 +343,7 @@ function checkStatus() {
             .indexOf("/", n);
 
             var channelName = 
-            twList[xhr.k].url.substring(n+4, x);
+            twList[xhr.k].url.substring(n+4);
 
             n = data.indexOf("</h3>");
             x = data.indexOf("</h3>");
