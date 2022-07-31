@@ -469,18 +469,18 @@ function loadCbStream(json) {
         }.bind(json);
         sock.onmessage = function(e) {
            var msgJson = JSON.parse(e.data);
-           log('message', msgJson); 
-
            if (msgJson.args[0] == "1") {
+               log('message', msgJson); 
                joinJson.room =
                json.broadcaster_username;
                
                sock.send(JSON.stringify(joinJson));
                return;
            }
-           //if (msgJson[0] == json.broadcaster_username) {
+           if (msgJson.method == "onRoomMsg" &&
+               msgJson.args[0] == json.broadcaster_username) {
                log('message', msgJson); 
-           //}
+           }
            //sock.close();
         };
         sock.onclose = function() {
