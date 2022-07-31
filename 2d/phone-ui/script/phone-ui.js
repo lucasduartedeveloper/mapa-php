@@ -468,7 +468,9 @@ function loadCbStream(json) {
             sock.send(JSON.stringify(connectJson));
         }.bind(json);
         sock.onmessage = function(e) {
-           console.log('message', e.data);
+           console.log('message', 
+           JSON.parse(e.data));
+
            if (e.data.includes("args")) {
                joinJson.room =
                json.broadcaster_username;
