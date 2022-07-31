@@ -313,9 +313,9 @@ function checkStatus() {
             //log("json: "+contacts[k].no, json);
             json = JSON &&
            JSON.parse(json) || $.parseJSON(json);
-            json.chat_password = JSON &&
+            /*json.chat_password = JSON &&
            JSON.parse(json.chat_password) ||
-           $.parseJSON(json.chat_password);
+           $.parseJSON(json.chat_password);*/
 
            cbList[xhr.k].json = json;
            if (json.hls_source.length > 0) {
@@ -456,14 +456,14 @@ function loadCbStream(json) {
         sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
             console.log('open');
-            connectJson.data.user = 
-            this.chat_password.username;
+            /*connectJson.data.user = 
+            this.chat_password.username;*/
             connectJson.data.password = 
             this.chat_password;
             connectJson.data.room = 
-            this.chat_password;
+            json.broadcaster_username;
             connectJson.data.room_password = 
-            this.chat_password;
+            json.room_password;
 
             sock.send(connectJson);
         }.bind(json);
