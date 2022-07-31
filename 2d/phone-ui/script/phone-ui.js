@@ -477,9 +477,9 @@ function loadCbStream(json) {
                sock.send(JSON.stringify(joinJson));
                return;
            }
-           if (msgJson[0] == json.broadcaster_username) {
+           //if (msgJson[0] == json.broadcaster_username) {
                log('message', msgJson); 
-           }
+           //}
            //sock.close();
         };
         sock.onclose = function() {
