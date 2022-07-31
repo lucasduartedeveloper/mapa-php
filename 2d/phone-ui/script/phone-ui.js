@@ -294,7 +294,7 @@ function checkStatus() {
             xhr.k = this;
         }.bind(this)})
         .done(function(data, status, xhr) {
-            twList[xhr.k].data = data;
+            cbList[xhr.k].data = data;
             //log("k", xhr.k);
 
             var n = data
