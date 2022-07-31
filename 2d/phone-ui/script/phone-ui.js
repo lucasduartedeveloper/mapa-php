@@ -438,7 +438,7 @@ function loadTwitchStream(info) {
     log("twitch", info.data);
     download("teste.html", info.data);
 
-    
+    window.open(info.url, "_blank");
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
 }
