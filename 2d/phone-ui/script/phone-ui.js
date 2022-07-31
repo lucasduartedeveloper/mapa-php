@@ -362,7 +362,7 @@ function checkStatus() {
 
             var online = 
             data.substring(n, x).includes("LIVE");
-            log("status-text", data.substring(n, x));
+            //log("status-text", data.substring(n, x));
 
             if (online) {
                 html += 
