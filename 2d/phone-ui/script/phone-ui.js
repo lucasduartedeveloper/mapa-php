@@ -450,6 +450,13 @@ var joinJson = {
    source_name: "un" }
 };
 
+var msgJson = {
+   method: "messageRoom",
+   data: { 
+   room: "emma_lu1",
+   msg: "{\\\"m\\\":\\\"hi\\\",\\\"f\\\":\\\"\\\",\\\"c\\\":\\\"\\\",\\\"tid\\\":\\\"16593014434:38054\\\",\\\"sig\\\":\\\"eyJfX3Jvb21fdXNlcm5hbWUiOiJlbW1hX2x1MSIsIl9fdXNlcm5hbWUiOiJjYWRpbGxhYzE5NTgiLCJtIjoiaGkiLCJmIjoiZGVmYXVsdCIsImMiOiIiLCJpIjoiUVpaNFM2NUJOSEcyTkwiLCJ0aWQiOiIiLCJtZWRpYSI6W10sInVzZXIiOiJjYWRpbGxhYzE5NTgiLCJnZW5kZXIiOiJtIiwiaXNfbW9kIjpmYWxzZSwiaW5fZmFuY2x1YiI6ZmFsc2UsImlzX2ZvbGxvd2luZyI6ZmFsc2UsInRpcHBlZF90b25zX3JlY2VudGx5IjpmYWxzZSwidGlwcGVkX2Fsb3RfcmVjZW50bHkiOmZhbHNlLCJ0aXBwZWRfcmVjZW50bHkiOmZhbHNlLCJoYXNfdG9rZW5zIjpmYWxzZSwiWC1TcGFtIjp0cnVlLCJYLURlbmllZCI6IkR1cGxpY2F0ZSBtZXNzYWdlIG5vdCBzZW50LiIsIlgtU3VjY2Vzc2Z1bCI6dHJ1ZX0:1oIG6V:fLPvqrcaqSzFuWc6Y6prTQy5HRk\\\"}\"}}"
+}};
+
 var sock = false;
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
