@@ -427,16 +427,7 @@ function checkStatus() {
 
 var connectJson = {
    method: "connect",
-   data: { 
-   user: "__anonymous__fVbW4WmV1e",
-   password: {  username: "__anonymous__fVbW4WmV1e",
-   room: "anabel054",
-   expire: 1659292644,
-   org:"A", 
-   sig:  "6f151dc287314a3060e05e9030c0336a57a78b5902227fea6b0306ea8d8e4a4c" },
-   room: "anabel054", 
-   room_password:
-"3305f779c7ab67ade91baf16a5f21fd13e9938ec5aa4412f50d72934ba34dd11" }
+   data: {  }
 };
 
 var sock = {};
@@ -445,9 +436,8 @@ function loadCbStream(json) {
         sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
             console.log('open');
-            connectJson.room = this.broadcaster_username;
-            
-            sock.send(this.chat_password);
+            connectJson.data = this.chat_password;
+            sock.send(connectJson.data);
         }.bind(json);
         sock.onmessage = function(e) {
            console.log('message', e.data);
