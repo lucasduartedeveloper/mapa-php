@@ -53,8 +53,8 @@ var contacts = [
      url: "https://m.chaturbate.com/_feli_/" },
     { no: "021", type: "cb",
      url: "https://m.chaturbate.com/milawolfy/" },
-    /*{ no: "021", type: "cb",
-     url: "https://m.chaturbate.com/princess_sofiaa/" },*/
+    { no: "022", type: "cb",
+     url: "https://m.chaturbate.com/kimilee22/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     /*{ no: "301", type: "tw",
