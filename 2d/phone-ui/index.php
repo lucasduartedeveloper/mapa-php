@@ -20,7 +20,7 @@ $script = [
     9 => "image-helper.js",
     10 => "json-helper.js",
     11 => "controls.js",
-    12 => "2d-objects.js",
+    //12 => "2d-objects.js",
     13 => "phone-ui.js"
 ];
 echo "<!-- ".$rnd." -->";

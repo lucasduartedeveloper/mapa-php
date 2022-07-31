@@ -548,6 +548,7 @@ window.addEventListener('devicelight', function(event) {
     }
 });
 
+/*
 function matterJs() {
      /*Matter.Body.set(bodywork,
     "mass", car.mass);
@@ -597,7 +598,7 @@ Matter.Events.on(engine, "beforeUpdate", function() {
     if (lockCamera) return;
     Render.lookAt(render, testWheel,
     { x: (sw/zoomLevel) - 25, y: (sw/zoomLevel) - 25 });
-});
+});*/
 
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
