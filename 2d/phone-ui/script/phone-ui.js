@@ -431,7 +431,10 @@ function loadCbStream(json) {
             log("wschat-open", "opened");
         };
         cbWs.onclose = function(e) {
-            log("wschat-close", e.data);
+            log("wschat-close", e);
+        };
+        cbWs.onerror = function(e) {
+            log("wschat-error", e);
         };
         cbWs.onmessage = function(e) {
             log("wschat-msg", e.data);
