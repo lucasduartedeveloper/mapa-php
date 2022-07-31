@@ -152,6 +152,8 @@ width="100" height="100" autoplay></video>
 
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+
 <!-- PHP: Inject script files -->
 <?php
 foreach ($script as $a) {

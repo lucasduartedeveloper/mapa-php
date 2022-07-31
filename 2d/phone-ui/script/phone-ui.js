@@ -422,22 +422,19 @@ function checkStatus() {
     }
 }
 
-var cbWs = {};
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
-        cbWs = new WebSocket(
-        json.wschat_host.replace("https", "wss"));
-        cbWs.onopen = function (e) {
-            log("wschat-open", "opened");
+        var sock = new SockJS(json.wschat_host.);
+        sock.onopen = function() {
+            console.log('open');
+            //sock.send('test');
         };
-        cbWs.onclose = function(e) {
-            log("wschat-close", e);
+        sock.onmessage = function(e) {
+           console.log('message', e.data);
+           //sock.close();
         };
-        cbWs.onerror = function(e) {
-            log("wschat-error", e);
-        };
-        cbWs.onmessage = function(e) {
-            log("wschat-msg", e.data);
+        sock.onclose = function() {
+           console.log('close');
         };
 
         $("#temporary-workaround").hide();
