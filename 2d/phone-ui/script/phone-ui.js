@@ -336,7 +336,7 @@ function checkStatus() {
         });}.bind(k),500*k);
     }
 
-    var twList = contacts.filter(c => c.type == "tw");
+    var twList = contacts.filter(c => c.type == "tw-");
     for (var k = 0; k < twList.length; k++) {
         setTimeout(function() {
         //log("this", this);
