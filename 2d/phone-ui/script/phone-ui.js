@@ -51,6 +51,8 @@ var contacts = [
      url: "https://m.chaturbate.com/princess_sofiaa/" },
     { no: "020", type: "cb",
      url: "https://m.chaturbate.com/_feli_/" },
+    { no: "021", type: "cb",
+     url: "https://m.chaturbate.com/milawolfy/" },
     /*{ no: "021", type: "cb",
      url: "https://m.chaturbate.com/princess_sofiaa/" },*/
     { no: "300", type: "tw",
