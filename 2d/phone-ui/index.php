@@ -103,8 +103,9 @@ width="100" height="100" autoplay></video>
 <i id="phone" class="fa-solid fa-phone"></i>
 </div>
 
+<!-- 
 <canvas id="mini-skate">
-</canvas>
+</canvas> -->
 
 <p id="version-info">
      <span id="counter">0</span>

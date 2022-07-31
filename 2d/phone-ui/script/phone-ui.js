@@ -188,15 +188,6 @@ setInterval(function() {
     /*angle++;
     $("#video-stream")
     .css("transform", "rotateZ("+angle+"deg)");*/
-    
-    if (motion) { 
-        engine.gravity.x = (gyro.accX / 9.8)*-1;
-        engine.gravity.y = (gyro.accY / 9.8);
-    }
-    else {
-        engine.gravity.x = 0;
-        engine.gravity.y = 1;
-    }
 
     var timeStreaming = 
     new Date().getTime() - timeStarted;
@@ -547,58 +538,6 @@ window.addEventListener('devicelight', function(event) {
        $("#hang-phone").trigger("click");
     }
 });
-
-/*
-function matterJs() {
-     /*Matter.Body.set(bodywork,
-    "mass", car.mass);
-    Matter.Body.set(rearWheel,
-    "mass", car.wheels.mass);
-    Matter.Body.set(rearWheel,
-    "friction", car.wheels.friction);
-    Matter.Body.set(rearWheel,
-    "frictionStatic",car.wheels.frictionStatic);
-    Matter.Body.set(frontWheel, 
-    "mass", car.wheels.mass);
-    Matter.Body.set(frontWheel, 
-    "friction", car.wheels.friction);
-    Matter.Body.set(rearWheel,
-    "frictionStatic", car.wheels.frictionStatic);
-    Matter.Body.set(rearWheelPivot,
-    "stiffness",0.5);
-    Matter.Body.set(frontWheelPivot,
-    "stiffness",0.5);*/
-
-    // add all of the bodies to the world
-    Composite.add(engine.world, [
-        //rearWheelPivot,
-        //frontWheelPivot,
-        //rearWheel,
-        //frontWheel,
-        testWheel,
-        planet,
-    ]);
-    
-    // run the renderer
-    Render.run(render);
-
-    // add mouse
-    render.mouse = mouse;
-    Composite.add(engine.world, mouseConstraint)
-
-    // create runner
-    var runner = Runner.create();
-
-    // run the engine
-    Runner.run(runner, engine);
-}
-
-var zoomLevel = 2;
-Matter.Events.on(engine, "beforeUpdate", function() {
-    if (lockCamera) return;
-    Render.lookAt(render, testWheel,
-    { x: (sw/zoomLevel) - 25, y: (sw/zoomLevel) - 25 });
-});*/
 
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
