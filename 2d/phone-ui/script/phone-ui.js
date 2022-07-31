@@ -426,7 +426,7 @@ var cbWs = {};
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
         cbWs = new WebSocket(
-        json.wschat_host.replace("https", "ws"));
+        json.wschat_host.replace("https", "wss"));
         cbWs.onopen = function (e) {
             log("wschat-open", "opened");
         };
