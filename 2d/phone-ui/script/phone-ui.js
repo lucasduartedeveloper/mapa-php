@@ -224,7 +224,7 @@ $("#hang-phone").click(function() {
     $("#video-stream")[0].pause();
     $("#video-layer").hide();
     
-    sock.close();
+    if (sock) sock.close();
     var iframe = 
     document.getElementById("temporary-workaround");
     iframe.src = "about:blank";
@@ -450,12 +450,12 @@ var joinJson = {
    source_name: "un" }
 };
 
-var sock = {};
+var sock = false;
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
         sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
-            console.log('open');
+            log("open", json.broadcaster_username);
             /*connectJson.data.user = 
             this.chat_password.username;*/
             connectJson.data.password = 
@@ -478,14 +478,14 @@ function loadCbStream(json) {
                return;
            }
            if (msgJson.method == "onRoomMsg" &&
-               msgJson.args[0] == json.broadcaster_username) {
+               msgJson.args[0] == this.broadcaster_username) {
                log('message', msgJson); 
            }
            //sock.close();
-        };
+        }.bind(json);
         sock.onclose = function() {
-           console.log('close');
-        };
+           console.log("close", this.broadcaster_username);
+        }.bind(json);
 
         $("#temporary-workaround").hide();
         $("#video-layer").show();
