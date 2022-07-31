@@ -437,7 +437,7 @@ function loadCbStream(json) {
         sock.onopen = function() {
             console.log('open');
             connectJson.data = this.chat_password;
-            sock.send(connectJson.data);
+            sock.send(JSON.stringify(connectJson));
         }.bind(json);
         sock.onmessage = function(e) {
            console.log('message', e.data);
