@@ -469,6 +469,7 @@ function loadCbStream(json) {
         }.bind(json);
         sock.onmessage = function(e) {
            var msgJson = JSON.parse(e.data);
+           log('message', msgJson); 
 
            if (e.data.includes("args")) {
                joinJson.room =
