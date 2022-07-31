@@ -465,7 +465,7 @@ function loadCbStream(json) {
             connectJson.data.room_password = 
             json.room_password;
 
-            sock.send(connectJson);
+            sock.send(JSON.stringify(connectJson));
         }.bind(json);
         sock.onmessage = function(e) {
            console.log('message', e.data);
