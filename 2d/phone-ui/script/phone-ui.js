@@ -75,8 +75,8 @@ var contacts = [
      url: "https://m.twitch.tv/stpeach/home" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
-    { no: "501", type: "tv", title: "CARTOON",
-     url: "https://ak.hetaint.com/4/4785492" },
+    /*{ no: "501", type: "tv", title: "CARTOON",
+     url: "https://ak.hetaint.com/4/4785492" },*/
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
