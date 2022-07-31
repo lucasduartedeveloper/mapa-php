@@ -469,6 +469,12 @@ function loadCbStream(json) {
         }.bind(json);
         sock.onmessage = function(e) {
            console.log('message', e.data);
+           if (e.data.includes("args")) {
+               joinJson.room =
+               json.broadcaster_username;
+               
+               sock.send(JSON.stringify(joinJson));
+           }
            //sock.close();
         };
         sock.onclose = function() {
