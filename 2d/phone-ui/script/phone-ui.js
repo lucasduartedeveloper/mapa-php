@@ -424,7 +424,7 @@ function checkStatus() {
 
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
-        var sock = new SockJS(json.wschat_host.);
+        var sock = new SockJS(json.wschat_host);
         sock.onopen = function() {
             console.log('open');
             //sock.send('test');
