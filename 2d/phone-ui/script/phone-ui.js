@@ -435,7 +435,7 @@ function loadCbStream(json) {
 }
 
 function loadTwitchStream(info) {    
-    log("twitch", info.data);
+    //log("twitch", info.data);
     download("teste.html", info.data);
 
     window.open(info.url, "_blank");
