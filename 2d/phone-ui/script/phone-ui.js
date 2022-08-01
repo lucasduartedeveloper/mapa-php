@@ -617,6 +617,22 @@ window.addEventListener('devicelight', function(event) {
     }
 });
 
+function cbLogin() {
+     $.ajax({
+        url: "ajax/http-post.php",
+        method: "POST",
+        datatype: "json",
+        data: { 
+            url: "https://m.chaturbate.com",
+            token: "'
+        },
+        beforeSend: function(xhr) {
+        }})
+        .done(function(data, status, xhr) {
+        log("status", status);
+    });
+}
+
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
