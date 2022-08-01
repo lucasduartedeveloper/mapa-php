@@ -270,7 +270,7 @@ $("#refresh").click(function() {
     checkStatus();
 });
 
-var ballRadius = sw * 0.2;
+var ballRadius = sw * 0.1;
 var ballX = 0;
 var ballY = 0;
 $("#ball").on("touchstart", function(e) {
@@ -280,8 +280,8 @@ $("#ball").on("touchstart", function(e) {
     e.originalEvent.touches[0].pageY;
 
     $("#ball").css("position", "fixed");
-    $("#ball").css("left", ballX+"px");
-    $("#ball").css("top", ballY+"px");
+    $("#ball").css("left", (ballX-(ballRadius))+"px");
+    $("#ball").css("top", (ballY-(ballRadius))+"px");
 });
 
 $("#ball").on("touchmove", function(e) {
@@ -291,8 +291,8 @@ $("#ball").on("touchmove", function(e) {
     e.originalEvent.touches[0].pageY;
 
     $("#ball").css("position", "fixed");
-    $("#ball").css("left", ballX+"px");
-    $("#ball").css("top", ballY+"px");
+    $("#ball").css("left", (ballX-(ballRadius))+"px");
+    $("#ball").css("top", (ballY-(ballRadius))+"px");
 });
 
 $("#ball").on("touchend", function(e) {
