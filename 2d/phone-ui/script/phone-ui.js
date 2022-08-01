@@ -624,7 +624,7 @@ function cbLogin() {
         datatype: "json",
         data: { 
             url: "https://m.chaturbate.com",
-            token: "'
+            token: ""
         },
         beforeSend: function(xhr) {
         }})
