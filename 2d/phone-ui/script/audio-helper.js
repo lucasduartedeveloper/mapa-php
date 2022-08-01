@@ -10,6 +10,7 @@ var dial = [
 ];
 
 var calling = new Audio("audio/phone-dial-calling.mp3");
+calling.loop = true;
 
 function playRandomDialSound() {
     var n = Math.floor(Math.random() * 8);

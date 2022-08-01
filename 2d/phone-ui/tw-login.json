@@ -1,0 +1,1577 @@
+[
+   [
+      {
+         "Entry": 1,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "2ms",
+         "Response time": "3ms",
+         "Latency": "431ms",
+         "Total time": "440ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "2.1 kB",
+         "Response body size": "0B",
+         "Total size": "3.7 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 2053\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:51:37 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 2,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://pubsub-edge.twitch.tv/v1",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.11.164.110",
+         "Domain": "pubsub-edge.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "214ms",
+         "HandShake": "683ms",
+         "request time": "-",
+         "Response time": "5ms",
+         "Latency": "210ms",
+         "Total time": "220ms"
+      },
+      {
+         "Request header size": "930B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET /v1 HTTP/1.1\r\nHost: pubsub-edge.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; server_session_id=3486b163540247f1a476ab14defca64c; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c\r\nSec-WebSocket-Key: iLzs62JJgmu2fda2NrBtfA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:51:37 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: ad8RiJgZmHM+aOgzy/UL0ZQSoqY=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 3,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://irc-ws.chat.twitch.tv/",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.43.192.60",
+         "Domain": "irc-ws.chat.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "213ms",
+         "HandShake": "678ms",
+         "request time": "1ms",
+         "Response time": "4ms",
+         "Latency": "210ms",
+         "Total time": "220ms"
+      },
+      {
+         "Request header size": "928B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET / HTTP/1.1\r\nHost: irc-ws.chat.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; server_session_id=3486b163540247f1a476ab14defca64c; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c\r\nSec-WebSocket-Key: QwKY01UbJHEvpyEf5GMJLQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:51:37 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: Y6qbh5Br4MkAxIbudXmJvnGefqg=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 4,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://www.twitch.tv/",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "www.twitch.tv",
+         "Content type": "text/html",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "45ms",
+         "HandShake": "172ms",
+         "request time": "1ms",
+         "Response time": "27ms",
+         "Latency": "57ms",
+         "Total time": "93ms"
+      },
+      {
+         "Request header size": "1.2 kB",
+         "Response header size": "874B",
+         "Request body size": "0B",
+         "Response body size": "40.8 kB",
+         "Total size": "42.9 kB"
+      },
+      {
+         "Request headers": "GET / HTTP/1.1\r\nHost: www.twitch.tv\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nSec-Fetch-Site: none\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; server_session_id=3486b163540247f1a476ab14defca64c; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; session_id=32b32b328d76ae0351b9b0e101b89067\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Type: text/html\r\nContent-Encoding: br\r\nSet-Cookie: server_session_id=7d2cc3b0d8d24148a775647e14757f22; domain=.twitch.tv; path=/; secure; samesite=none\r\nSet-Cookie: unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; expires=Fri, 01 Sep 2023 12:51:39 GMT; domain=.twitch.tv; path=/; secure; samesite=none\r\nSet-Cookie: unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; expires=Fri, 01 Sep 2023 12:51:39 GMT; domain=.twitch.tv; path=/; secure; samesite=none; httponly\r\nX-Frame-Options: SAMEORIGIN\r\nX-XSS-Protection: 1; mode=block\r\nX-Content-Type-Options: nosniff\r\nStrict-Transport-Security: max-age=31536000\r\nCache-Control: private, max-age=0\r\nDate: Mon, 01 Aug 2022 12:51:39 GMT\r\nSet-Cookie: twitch.lohp.countryCode=BR; domain=.twitch.tv; expires=Sat, 26 Aug 2023 12:51:39 GMT;\r\nVary: Accept-Encoding\r\ntransfer-encoding: chunked\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 5,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "1ms",
+         "Response time": "3ms",
+         "Latency": "510ms",
+         "Total time": "519ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "387B",
+         "Response body size": "0B",
+         "Total size": "2.0 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 387\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:51:40 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: OPTIONS, GET, POST\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 6,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://pubsub-edge.twitch.tv/v1",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.11.164.110",
+         "Domain": "pubsub-edge.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "315ms",
+         "HandShake": "443ms",
+         "request time": "-",
+         "Response time": "3ms",
+         "Latency": "231ms",
+         "Total time": "237ms"
+      },
+      {
+         "Request header size": "930B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET /v1 HTTP/1.1\r\nHost: pubsub-edge.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nSec-WebSocket-Key: npj6JZrLaAK9+zVWqpAVug==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:51:41 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: 2XzZfAcDxGY80RE8cFO5BanPfvA=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 7,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "53ms",
+         "HandShake": "51ms",
+         "request time": "1ms",
+         "Response time": "4ms",
+         "Latency": "324ms",
+         "Total time": "332ms"
+      },
+      {
+         "Request header size": "764B",
+         "Response header size": "220B",
+         "Request body size": "1.7 kB",
+         "Response body size": "2.6 kB",
+         "Total size": "5.3 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 1748\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nContent-Encoding: gzip\r\nDate: Mon, 01 Aug 2022 12:51:43 GMT\r\nTiming-Allow-Origin: *\r\ntransfer-encoding: chunked\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 8,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://irc-ws.chat.twitch.tv/",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.43.192.60",
+         "Domain": "irc-ws.chat.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "305ms",
+         "HandShake": "442ms",
+         "request time": "-",
+         "Response time": "3ms",
+         "Latency": "208ms",
+         "Total time": "216ms"
+      },
+      {
+         "Request header size": "928B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET / HTTP/1.1\r\nHost: irc-ws.chat.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nSec-WebSocket-Key: lzHRidQbyeBVFqnY1nMOyw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:51:43 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: WwwophRGgBr7bRrT2D8PXJcqiVM=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 9,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "53ms",
+         "HandShake": "51ms",
+         "request time": "1ms",
+         "Response time": "3ms",
+         "Latency": "363ms",
+         "Total time": "368ms"
+      },
+      {
+         "Request header size": "764B",
+         "Response header size": "220B",
+         "Request body size": "1.4 kB",
+         "Response body size": "5.9 kB",
+         "Total size": "8.3 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 1414\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nContent-Encoding: gzip\r\nDate: Mon, 01 Aug 2022 12:51:43 GMT\r\nTiming-Allow-Origin: *\r\ntransfer-encoding: chunked\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 10,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-70x70.png",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/png",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "158ms",
+         "request time": "1ms",
+         "Response time": "2ms",
+         "Latency": "43ms",
+         "Total time": "51ms"
+      },
+      {
+         "Request header size": "657B",
+         "Response header size": "673B",
+         "Request body size": "0B",
+         "Response body size": "11.2 kB",
+         "Total size": "12.5 kB"
+      },
+      {
+         "Request headers": "GET /jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-70x70.png HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/png\r\nContent-Length: 11152\r\nConnection: keep-alive\r\nServer: nginx\r\nLast-Modified: Mon, 23 Mar 2020 17:58:30 GMT\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nDate: Mon, 01 Aug 2022 09:17:16 GMT\r\nExpires: Mon, 01 Aug 2022 13:15:46 GMT\r\nCache-Control: max-age=14400\r\nETag: \"de681633ecde2e74be70db22d94ffb2f\"\r\nVary: Accept-Encoding\r\nX-Cache: Hit from cloudfront\r\nVia: 1.1 5ce364e30dcfb61805012dae39f02ed4.cloudfront.net (CloudFront)\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: Jm206sgH_g7_iM0-g0lBOo3csETpGGQcPdoqUaRUACBwMcXw221j8w==\r\nAge: 12960\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 11,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kennzy-440x248.jpg",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/jpeg",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "64ms",
+         "HandShake": "49ms",
+         "request time": "-",
+         "Response time": "4ms",
+         "Latency": "42ms",
+         "Total time": "44ms"
+      },
+      {
+         "Request header size": "620B",
+         "Response header size": "629B",
+         "Request body size": "0B",
+         "Response body size": "21.1 kB",
+         "Total size": "22.3 kB"
+      },
+      {
+         "Request headers": "GET /previews-ttv/live_user_kennzy-440x248.jpg HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/jpeg\r\nContent-Length: 21089\r\nConnection: keep-alive\r\nDate: Mon, 01 Aug 2022 12:50:36 GMT\r\nServer: nginx\r\nX-Varnish: 567001605 567815256\r\nVia: 1.1 varnish-v4, 1.1 4dc2701dd8948cc0ef36d7f0c488f858.cloudfront.net (CloudFront)\r\nX-Varnish: 348484705\r\nExpires: Mon, 01 Aug 2022 12:55:36 GMT\r\nCache-Control: max-age=300\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nX-Cache: Hit from cloudfront\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: OO1SEKC_wbQMRxIGv-QmJpa0DXcMtZzgDnKwaY5zQ_fqvm5cX3yExg==\r\nAge: 104\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 12,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-50x50.png",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/png",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "158ms",
+         "request time": "-",
+         "Response time": "3ms",
+         "Latency": "36ms",
+         "Total time": "51ms"
+      },
+      {
+         "Request header size": "657B",
+         "Response header size": "672B",
+         "Request body size": "0B",
+         "Response body size": "5.9 kB",
+         "Total size": "7.3 kB"
+      },
+      {
+         "Request headers": "GET /jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-50x50.png HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/png\r\nContent-Length: 5921\r\nConnection: keep-alive\r\nServer: nginx\r\nLast-Modified: Mon, 23 Mar 2020 17:58:30 GMT\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nDate: Mon, 01 Aug 2022 08:53:51 GMT\r\nExpires: Mon, 01 Aug 2022 12:53:51 GMT\r\nCache-Control: max-age=14400\r\nETag: \"7aead90d45a939e1c7126997202ce3ec\"\r\nVary: Accept-Encoding\r\nX-Cache: Hit from cloudfront\r\nVia: 1.1 5ce364e30dcfb61805012dae39f02ed4.cloudfront.net (CloudFront)\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: kh_JS-BBold-U3BjzeHvNc-NsswNNKl0uNwJNSv4VeaEUu00DIuHTw==\r\nAge: 14275\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 13,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "4ms",
+         "Response time": "2ms",
+         "Latency": "650ms",
+         "Total time": "658ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "56.1 kB",
+         "Response body size": "0B",
+         "Total size": "57.8 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 56125\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:51:47 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 14,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "53ms",
+         "HandShake": "51ms",
+         "request time": "1ms",
+         "Response time": "9ms",
+         "Latency": "484ms",
+         "Total time": "499ms"
+      },
+      {
+         "Request header size": "763B",
+         "Response header size": "220B",
+         "Request body size": "666B",
+         "Response body size": "5.2 kB",
+         "Total size": "6.8 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 666\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nContent-Encoding: gzip\r\nDate: Mon, 01 Aug 2022 12:51:47 GMT\r\nTiming-Allow-Origin: *\r\ntransfer-encoding: chunked\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 15,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lionheartx10-320x180.jpg",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/jpeg",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "64ms",
+         "HandShake": "49ms",
+         "request time": "1ms",
+         "Response time": "2ms",
+         "Latency": "48ms",
+         "Total time": "55ms"
+      },
+      {
+         "Request header size": "626B",
+         "Response header size": "629B",
+         "Request body size": "0B",
+         "Response body size": "16.6 kB",
+         "Total size": "17.9 kB"
+      },
+      {
+         "Request headers": "GET /previews-ttv/live_user_lionheartx10-320x180.jpg HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/jpeg\r\nContent-Length: 16626\r\nConnection: keep-alive\r\nDate: Mon, 01 Aug 2022 12:48:26 GMT\r\nServer: nginx\r\nX-Varnish: 352009212 341644648\r\nVia: 1.1 varnish-v4, 1.1 4dc2701dd8948cc0ef36d7f0c488f858.cloudfront.net (CloudFront)\r\nX-Varnish: 351048491\r\nExpires: Mon, 01 Aug 2022 12:53:26 GMT\r\nCache-Control: max-age=300\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nX-Cache: Hit from cloudfront\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: JyrMyphumMirtzpG7XiuJKXgC9lIBPpDLx-JtPNhg1nrLX69ZSVOdA==\r\nAge: 237\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 16,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_break-320x180.jpg",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/jpeg",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "158ms",
+         "request time": "-",
+         "Response time": "6ms",
+         "Latency": "38ms",
+         "Total time": "51ms"
+      },
+      {
+         "Request header size": "619B",
+         "Response header size": "629B",
+         "Request body size": "0B",
+         "Response body size": "10.2 kB",
+         "Total size": "11.4 kB"
+      },
+      {
+         "Request headers": "GET /previews-ttv/live_user_break-320x180.jpg HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/jpeg\r\nContent-Length: 10196\r\nConnection: keep-alive\r\nDate: Mon, 01 Aug 2022 12:49:57 GMT\r\nServer: nginx\r\nX-Varnish: 789361650 794012174\r\nVia: 1.1 varnish-v4, 1.1 5ce364e30dcfb61805012dae39f02ed4.cloudfront.net (CloudFront)\r\nX-Varnish: 460877904\r\nExpires: Mon, 01 Aug 2022 12:54:57 GMT\r\nCache-Control: max-age=300\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nX-Cache: Hit from cloudfront\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: fcOe1J_PLnLdUeYQbRS5E_iDLCV3UrwejECNq4Zt8EtuJzF3qrv4RA==\r\nAge: 163\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 17,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/jtv_user_pictures/940dbd56-3905-4e63-8a2a-5e082f51f1c6-profile_image-150x150.png",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/png",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "64ms",
+         "HandShake": "49ms",
+         "request time": "-",
+         "Response time": "4ms",
+         "Latency": "45ms",
+         "Total time": "53ms"
+      },
+      {
+         "Request header size": "659B",
+         "Response header size": "672B",
+         "Request body size": "0B",
+         "Response body size": "33.4 kB",
+         "Total size": "34.8 kB"
+      },
+      {
+         "Request headers": "GET /jtv_user_pictures/940dbd56-3905-4e63-8a2a-5e082f51f1c6-profile_image-150x150.png HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/png\r\nContent-Length: 33445\r\nConnection: keep-alive\r\nServer: nginx\r\nLast-Modified: Thu, 09 Dec 2021 19:02:49 GMT\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nDate: Mon, 01 Aug 2022 11:41:38 GMT\r\nExpires: Mon, 01 Aug 2022 15:39:07 GMT\r\nCache-Control: max-age=14400\r\nETag: \"2d2ec87942bd0c1ae4d3883752b7ac4d\"\r\nVary: Accept-Encoding\r\nX-Cache: Hit from cloudfront\r\nVia: 1.1 4dc2701dd8948cc0ef36d7f0c488f858.cloudfront.net (CloudFront)\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: D-Fq_B8f8NPirEU3JvuPeejCMKkQ7blnzIJJiTwIyQkdbhZjkUzCxw==\r\nAge: 4362\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 18,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tru3ta1ent-320x180.jpg",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/jpeg",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "158ms",
+         "request time": "1ms",
+         "Response time": "2ms",
+         "Latency": "31ms",
+         "Total time": "40ms"
+      },
+      {
+         "Request header size": "624B",
+         "Response header size": "629B",
+         "Request body size": "0B",
+         "Response body size": "12.1 kB",
+         "Total size": "13.3 kB"
+      },
+      {
+         "Request headers": "GET /previews-ttv/live_user_tru3ta1ent-320x180.jpg HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/jpeg\r\nContent-Length: 12070\r\nConnection: keep-alive\r\nDate: Mon, 01 Aug 2022 12:47:45 GMT\r\nServer: nginx\r\nX-Varnish: 660274942 665552346\r\nVia: 1.1 varnish-v4, 1.1 5ce364e30dcfb61805012dae39f02ed4.cloudfront.net (CloudFront)\r\nX-Varnish: 497522399\r\nExpires: Mon, 01 Aug 2022 12:52:45 GMT\r\nCache-Control: max-age=300\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nX-Cache: Hit from cloudfront\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: 5y4A0acbeYLpywkIO6yS7b-JL-2CufRRuPMLYy6dvABeuEBzR5NQvw==\r\nAge: 255\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 19,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "53ms",
+         "HandShake": "51ms",
+         "request time": "2ms",
+         "Response time": "6ms",
+         "Latency": "395ms",
+         "Total time": "407ms"
+      },
+      {
+         "Request header size": "763B",
+         "Response header size": "189B",
+         "Request body size": "264B",
+         "Response body size": "986B",
+         "Total size": "2.2 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 264\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Length: 986\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nDate: Mon, 01 Aug 2022 12:51:50 GMT\r\nTiming-Allow-Origin: *\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 20,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "50ms",
+         "request time": "2ms",
+         "Response time": "3ms",
+         "Latency": "371ms",
+         "Total time": "390ms"
+      },
+      {
+         "Request header size": "764B",
+         "Response header size": "214B",
+         "Request body size": "4.0 kB",
+         "Response body size": "1.5 kB",
+         "Total size": "6.5 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 3983\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Length: 1501\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nContent-Encoding: gzip\r\nDate: Mon, 01 Aug 2022 12:51:50 GMT\r\nTiming-Allow-Origin: *\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 21,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "30ms",
+         "Response time": "3ms",
+         "Latency": "426ms",
+         "Total time": "462ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "30.5 kB",
+         "Response body size": "0B",
+         "Total size": "32.2 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 30539\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:51:50 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: OPTIONS, GET, POST\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 22,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "50ms",
+         "request time": "1ms",
+         "Response time": "5ms",
+         "Latency": "296ms",
+         "Total time": "307ms"
+      },
+      {
+         "Request header size": "763B",
+         "Response header size": "189B",
+         "Request body size": "197B",
+         "Response body size": "221B",
+         "Total size": "1.4 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 197\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Length: 221\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nDate: Mon, 01 Aug 2022 12:51:50 GMT\r\nTiming-Allow-Origin: *\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 23,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_freyzplayz-1280x720.jpg",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "13.227.101.166",
+         "Domain": "static-cdn.jtvnw.net",
+         "Content type": "image/jpeg",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "64ms",
+         "HandShake": "49ms",
+         "request time": "-",
+         "Response time": "53ms",
+         "Latency": "217ms",
+         "Total time": "281ms"
+      },
+      {
+         "Request header size": "625B",
+         "Response header size": "631B",
+         "Request body size": "0B",
+         "Response body size": "188.9 kB",
+         "Total size": "190.1 kB"
+      },
+      {
+         "Request headers": "GET /previews-ttv/live_user_freyzplayz-1280x720.jpg HTTP/1.1\r\nHost: static-cdn.jtvnw.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: image/jpeg\r\nContent-Length: 188869\r\nConnection: keep-alive\r\nDate: Mon, 01 Aug 2022 12:51:51 GMT\r\nServer: nginx\r\nX-Varnish: 792517270 791659606\r\nVia: 1.1 varnish-v4, 1.1 4dc2701dd8948cc0ef36d7f0c488f858.cloudfront.net (CloudFront)\r\nX-Varnish: 1025148557\r\nExpires: Mon, 01 Aug 2022 12:56:51 GMT\r\nCache-Control: max-age=300\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET, OPTIONS\r\nTiming-Allow-Origin: https://www.twitch.tv\r\nAccept-Ranges: bytes\r\nX-Cache: Miss from cloudfront\r\nX-Amz-Cf-Pop: GRU1-C1\r\nX-Amz-Cf-Id: mTsTb7beM5QHCQI9b_pnz0gDjMrRrVB0cHWheWvQl7476bL7rhSqzw==\r\nAge: 67\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 24,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://usher.ttvnw.net/api/channel/hls/freyzplayz.m3u8?allow_source=true&fast_bread=true&p=6101681&play_session_id=74c39b0775ae552094eb14f213663033&player_backend=mediaplayer&playlist_include_framerate=true&reassignments_supported=true&sig=36a95ca6c591e5f1a1f02852c2e8b495498f3893&supported_codecs=avc1&token=%7B%22adblock%22%3Afalse%2C%22authorization%22%3A%7B%22forbidden%22%3Afalse%2C%22reason%22%3A%22%22%7D%2C%22blackout_enabled%22%3Afalse%2C%22channel%22%3A%22freyzplayz%22%2C%22channel_id%22%3A409760532%2C%22chansub%22%3A%7B%22restricted_bitrates%22%3A%5B%5D%2C%22view_until%22%3A1924905600%7D%2C%22ci_gb%22%3Afalse%2C%22geoblock_reason%22%3A%22%22%2C%22device_id%22%3A%22rvn8CIi72zSwtnnpetl9LGbAIh2awimb%22%2C%22expires%22%3A1659359509%2C%22extended_history_allowed%22%3Afalse%2C%22game%22%3A%22%22%2C%22hide_ads%22%3Afalse%2C%22https_required%22%3Atrue%2C%22mature%22%3Afalse%2C%22partner%22%3Afalse%2C%22platform%22%3A%22web%22%2C%22player_type%22%3A%22frontpage%22%2C%22private%22%3A%7B%22allowed_to_view%22%3Atrue%7D%2C%22privileged%22%3Afalse%2C%22role%22%3A%22%22%2C%22server_ads%22%3Atrue%2C%22show_ads%22%3Atrue%2C%22subscriber%22%3Afalse%2C%22turbo%22%3Afalse%2C%22user_id%22%3Anull%2C%22user_ip%22%3A%22201.21.188.108%22%2C%22version%22%3A2%7D&cdm=wv&player_version=1.12.0",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "23.160.0.254",
+         "Domain": "usher.ttvnw.net",
+         "Content type": "application/vnd.apple.mpegurl",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "35ms",
+         "HandShake": "225ms",
+         "request time": "1ms",
+         "Response time": "2ms",
+         "Latency": "424ms",
+         "Total time": "429ms"
+      },
+      {
+         "Request header size": "1.7 kB",
+         "Response header size": "327B",
+         "Request body size": "0B",
+         "Response body size": "9.0 kB",
+         "Total size": "11.0 kB"
+      },
+      {
+         "Request headers": "GET /api/channel/hls/freyzplayz.m3u8?allow_source=true&fast_bread=true&p=6101681&play_session_id=74c39b0775ae552094eb14f213663033&player_backend=mediaplayer&playlist_include_framerate=true&reassignments_supported=true&sig=36a95ca6c591e5f1a1f02852c2e8b495498f3893&supported_codecs=avc1&token=%7B%22adblock%22%3Afalse%2C%22authorization%22%3A%7B%22forbidden%22%3Afalse%2C%22reason%22%3A%22%22%7D%2C%22blackout_enabled%22%3Afalse%2C%22channel%22%3A%22freyzplayz%22%2C%22channel_id%22%3A409760532%2C%22chansub%22%3A%7B%22restricted_bitrates%22%3A%5B%5D%2C%22view_until%22%3A1924905600%7D%2C%22ci_gb%22%3Afalse%2C%22geoblock_reason%22%3A%22%22%2C%22device_id%22%3A%22rvn8CIi72zSwtnnpetl9LGbAIh2awimb%22%2C%22expires%22%3A1659359509%2C%22extended_history_allowed%22%3Afalse%2C%22game%22%3A%22%22%2C%22hide_ads%22%3Afalse%2C%22https_required%22%3Atrue%2C%22mature%22%3Afalse%2C%22partner%22%3Afalse%2C%22platform%22%3A%22web%22%2C%22player_type%22%3A%22frontpage%22%2C%22private%22%3A%7B%22allowed_to_view%22%3Atrue%7D%2C%22privileged%22%3Afalse%2C%22role%22%3A%22%22%2C%22server_ads%22%3Atrue%2C%22show_ads%22%3Atrue%2C%22subscriber%22%3Afalse%2C%22turbo%22%3Afalse%2C%22user_id%22%3Anull%2C%22user_ip%22%3A%22201.21.188.108%22%2C%22version%22%3A2%7D&cdm=wv&player_version=1.12.0 HTTP/1.1\r\nHost: usher.ttvnw.net\r\nConnection: keep-alive\r\nAccept: application/x-mpegURL, application/vnd.apple.mpegurl, application/json, text/plain\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\naccess-control-allow-origin: https://www.twitch.tv\r\ncontent-length: 8977\r\ncontent-type: application/vnd.apple.mpegurl\r\ndate: Mon, 01 Aug 2022 12:51:51 GMT\r\nx-amzn-trace-id: Root=1-00000000-000000000000000000000000\r\nx-amzn-trace-id: Root=1-00000000-000000000000000000000000\r\ncache-control: no-cache,no-store\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 25,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://gql.twitch.tv/gql",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "gql.twitch.tv",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "40ms",
+         "HandShake": "50ms",
+         "request time": "-",
+         "Response time": "4ms",
+         "Latency": "380ms",
+         "Total time": "393ms"
+      },
+      {
+         "Request header size": "763B",
+         "Response header size": "214B",
+         "Request body size": "616B",
+         "Response body size": "2.0 kB",
+         "Total size": "3.6 kB"
+      },
+      {
+         "Request headers": "POST /gql HTTP/1.1\r\nHost: gql.twitch.tv\r\nConnection: keep-alive\r\nContent-Length: 616\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nAccept-Language: en-GB\r\nsec-ch-ua-mobile: ?0\r\nClient-Version: 89dddef5-eb51-4f53-ada7-fabb35735c84\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nContent-Type: text/plain;charset=UTF-8\r\nClient-Session-Id: 4fd7e7e789d7ca76\r\nClient-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\r\nX-Device-Id: rvn8CIi72zSwtnnpetl9LGbAIh2awimb\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Length: 1957\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\nContent-Encoding: gzip\r\nDate: Mon, 01 Aug 2022 12:51:51 GMT\r\nTiming-Allow-Origin: *\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 26,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "1ms",
+         "Response time": "2ms",
+         "Latency": "439ms",
+         "Total time": "444ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "21.7 kB",
+         "Response body size": "0B",
+         "Total size": "23.4 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 21741\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:51:51 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 27,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://s.amazon-adsystem.com/iu3?cs=rvn8CIi72zSwtnnpetl9LGbAIh2awimb&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AcA0yHCBtLgxnGoHm3vznnUnU_3VjMAVOrPbgY7N1qAX&ts=1659358309914",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "52.46.130.91",
+         "Domain": "s.amazon-adsystem.com",
+         "Content type": "text/html;charset=ISO-8859-1",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "163ms",
+         "HandShake": "488ms",
+         "request time": "-",
+         "Response time": "2ms",
+         "Latency": "164ms",
+         "Total time": "176ms"
+      },
+      {
+         "Request header size": "896B",
+         "Response header size": "908B",
+         "Request body size": "0B",
+         "Response body size": "65B",
+         "Total size": "1.9 kB"
+      },
+      {
+         "Request headers": "GET /iu3?cs=rvn8CIi72zSwtnnpetl9LGbAIh2awimb&cu=&d=twitch.tv&pid=49226e71-48b6-4ccb-bf4c-f82acb404220&s=AcA0yHCBtLgxnGoHm3vznnUnU_3VjMAVOrPbgY7N1qAX&ts=1659358309914 HTTP/1.1\r\nHost: s.amazon-adsystem.com\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Dest: iframe\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: ad-id=AyUIKPz5F0uYqxcgM2uD7Q8; ad-privacy=0\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nServer: Server\r\nDate: Mon, 01 Aug 2022 12:51:51 GMT\r\nContent-Type: text/html;charset=ISO-8859-1\r\nContent-Length: 65\r\nConnection: keep-alive\r\nx-amz-rid: F9GGTWKDG8N6Q4VNXFV0\r\nSet-Cookie: ad-id=AyUIKPz5F0uYqxcgM2uD7Q8; Domain=.amazon-adsystem.com; Expires=Sat, 01-Apr-2023 12:51:51 GMT; Path=/; Secure; HttpOnly; SameSite=None\r\nSet-Cookie: ad-privacy=0; Domain=.amazon-adsystem.com; Expires=Fri, 01-Oct-2027 12:51:51 GMT; Path=/; Secure; HttpOnly; SameSite=None\r\nCache-Control: max-age=0, no-cache, no-store, private, must-revalidate, s-maxage=0\r\nPragma: no-cache\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\np3p: policyref=\"https://www.amazon.com/w3c/p3p.xml\", CP=\"PSAo PSDo OUR SAM OTR DSP COR\"\r\nVary: Content-Type,Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent\r\nStrict-Transport-Security: max-age=47474747; includeSubDomains; preload\r\nPermissions-Policy: interest-cohort=()\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 28,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://static.twitchcdn.net/assets/sentry-ba3fc3d65d02003d5757.js",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "108.139.185.181",
+         "Domain": "static.twitchcdn.net",
+         "Content type": "application/x-javascript",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "34ms",
+         "HandShake": "47ms",
+         "request time": "-",
+         "Response time": "3ms",
+         "Latency": "46ms",
+         "Total time": "59ms"
+      },
+      {
+         "Request header size": "584B",
+         "Response header size": "863B",
+         "Request body size": "0B",
+         "Response body size": "38.3 kB",
+         "Total size": "39.7 kB"
+      },
+      {
+         "Request headers": "GET /assets/sentry-ba3fc3d65d02003d5757.js HTTP/1.1\r\nHost: static.twitchcdn.net\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nOrigin: https://www.twitch.tv\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nAccept: */*\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: script\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nContent-Type: application/x-javascript\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nDate: Wed, 13 Jul 2022 20:30:46 GMT\r\nAccess-Control-Allow-Methods: GET\r\nAccess-Control-Max-Age: 86400\r\nLast-Modified: Wed, 13 Jul 2022 19:30:54 GMT\r\nX-Vicarius-Origin: iad\r\nX-Vicarius-Region: gru\r\nCache-Control: public, max-age=31536000, immutable\r\nETag: W/\"f1216ae439d0fbd745591f32c4dd9e8a\"\r\nContent-Encoding: gzip\r\nX-Vicarius-TransactionID: 45068837\r\nX-Vicarius-Hits: -1\r\nAccess-Control-Allow-Origin: *\r\nTiming-Allow-Origin: *\r\nAccept-Ranges: bytes\r\nVary: Origin,Access-Control-Request-Headers,Access-Control-Request-Method,Accept-Encoding\r\nX-Cache: Hit from cloudfront\r\nVia: 1.1 071a100b70811081a393c7b4228a4288.cloudfront.net (CloudFront)\r\nX-Amz-Cf-Pop: GRU3-P2\r\nX-Amz-Cf-Id: vV1Db0e7uUfNnquONI7lZzbxXpssHau2rp5xm6G-x7N5SzRlkojJag==\r\nAge: 1614066\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 29,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://secure-dcr.imrworldwide.com/cgi-bin/gn?prd=session&c9=devid,&c13=asid,P34D56F9D-5684-4C83-8EE1-5EA7DE9CF45D&sessionId=pxkc5hbnbfdptzg0zk858vc7ia1ns1659358310&c16=sdkv,bj.6.0.0&uoo=&fp_id=&fp_cr_tm=&fp_acc_tm=&fp_emm_tm=&ve_id=&c30=bldv,6.0.0.623&uid2=&uid2_token=&hem_sha256=&hem_sha1=&hem_md5=&hem_unknown=&sdd=&retry=0",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "3.134.54.2",
+         "Domain": "secure-dcr.imrworldwide.com",
+         "Content type": "image/gif",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "182ms",
+         "HandShake": "469ms",
+         "request time": "1ms",
+         "Response time": "3ms",
+         "Latency": "181ms",
+         "Total time": "191ms"
+      },
+      {
+         "Request header size": "970B",
+         "Response header size": "761B",
+         "Request body size": "0B",
+         "Response body size": "44B",
+         "Total size": "1.8 kB"
+      },
+      {
+         "Request headers": "GET /cgi-bin/gn?prd=session&c9=devid,&c13=asid,P34D56F9D-5684-4C83-8EE1-5EA7DE9CF45D&sessionId=pxkc5hbnbfdptzg0zk858vc7ia1ns1659358310&c16=sdkv,bj.6.0.0&uoo=&fp_id=&fp_cr_tm=&fp_acc_tm=&fp_emm_tm=&ve_id=&c30=bldv,6.0.0.623&uid2=&uid2_token=&hem_sha256=&hem_sha1=&hem_md5=&hem_unknown=&sdd=&retry=0 HTTP/1.1\r\nHost: secure-dcr.imrworldwide.com\r\nConnection: keep-alive\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?1\r\nUser-Agent: Mozilla/5.0 (Linux; Android 10; M2006C3MI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36\r\nsec-ch-ua-platform: \"Android\"\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nSec-Fetch-Site: same-site\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Dest: image\r\nReferer: https://cdn-gl.imrworldwide.com/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: SSCVER=v2; IMRID=22790120-0dc4-11ed-a93c-1f31108afbf1\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nDate: Mon, 01 Aug 2022 12:51:52 GMT\r\nContent-Type: image/gif\r\nContent-Length: 44\r\nConnection: keep-alive\r\nServer: nginx\r\nExpires: Thu, 01 Dec 1994 16:00:00 GMT\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nP3P: P3P policyref=\"http://secure-dcr.imrworldwide.com/w3c/p3p.xml\", CP=\"NOI DSP COR NID PSA ADM OUR IND UNI NAV COM\"\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, OPTIONS\r\ncross-origin-resource-policy: cross-origin\r\nAccept-CH: Sec-CH-Save-Data, Sec-CH-DPR, Sec-CH-Width, Sec-CH-Viewport-Width, Sec-CH-Viewport-Height, Sec-CH-Device-Memory, Sec-CH-RTT, Sec-CH-Downlink, Sec-CH-ECT, Sec-CH-Prefers-Color-Scheme, Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 30,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "2ms",
+         "Response time": "5ms",
+         "Latency": "425ms",
+         "Total time": "435ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "6.4 kB",
+         "Response body size": "0B",
+         "Total size": "8.0 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 6401\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:51:53 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 31,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://sentry.io/api/1517394/envelope/?sentry_key=26325509987e418db03e96d12352a731&sentry_version=7",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "35.188.42.15",
+         "Domain": "sentry.io",
+         "Content type": "application/json",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "182ms",
+         "HandShake": "607ms",
+         "request time": "1ms",
+         "Response time": "5ms",
+         "Latency": "380ms",
+         "Total time": "397ms"
+      },
+      {
+         "Request header size": "680B",
+         "Response header size": "402B",
+         "Request body size": "1.6 kB",
+         "Response body size": "41B",
+         "Total size": "2.7 kB"
+      },
+      {
+         "Request headers": "POST /api/1517394/envelope/?sentry_key=26325509987e418db03e96d12352a731&sentry_version=7 HTTP/1.1\r\nHost: sentry.io\r\nConnection: keep-alive\r\nContent-Length: 1585\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: text/plain;charset=UTF-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nServer: nginx\r\nDate: Mon, 01 Aug 2022 12:51:53 GMT\r\nContent-Type: application/json\r\nContent-Length: 41\r\nConnection: keep-alive\r\naccess-control-allow-origin: https://www.twitch.tv\r\naccess-control-expose-headers: x-sentry-error, x-sentry-rate-limits, retry-after\r\nvary: Origin\r\nx-envoy-upstream-service-time: 5\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains; preload\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 32,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://www.twitch.tv/service-worker.js",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "200 OK",
+         "Remote address": "199.232.114.167",
+         "Domain": "www.twitch.tv",
+         "Content type": "application/x-javascript",
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "45ms",
+         "HandShake": "172ms",
+         "request time": "1ms",
+         "Response time": "11ms",
+         "Latency": "40ms",
+         "Total time": "60ms"
+      },
+      {
+         "Request header size": "1.1 kB",
+         "Response header size": "504B",
+         "Request body size": "0B",
+         "Response body size": "13.2 kB",
+         "Total size": "14.7 kB"
+      },
+      {
+         "Request headers": "GET /service-worker.js HTTP/1.1\r\nHost: www.twitch.tv\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nAccept: */*\r\nService-Worker: script\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: same-origin\r\nSec-Fetch-Dest: serviceworker\r\nReferer: https://www.twitch.tv/service-worker.js\r\nUser-Agent: Mozilla/5.0 (Linux; Android 10; M2006C3MI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; session_id=32b32b328d76ae0351b9b0e101b89067; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nIf-None-Match: \"dc0949c37b7c691410dce47574100286\"\r\n\r\n",
+         "Response headers": "HTTP/1.1 200 OK\r\nConnection: keep-alive\r\nContent-Length: 13161\r\nContent-Type: application/x-javascript\r\nContent-Encoding: br\r\nETag: \"dc0949c37b7c691410dce47574100286\"\r\nX-Frame-Options: SAMEORIGIN\r\nX-XSS-Protection: 1; mode=block\r\nX-Content-Type-Options: nosniff\r\nStrict-Transport-Security: max-age=31536000\r\nCache-Control: private, max-age=0\r\nDate: Mon, 01 Aug 2022 12:51:54 GMT\r\nSet-Cookie: twitch.lohp.countryCode=BR; domain=.twitch.tv; expires=Sat, 26 Aug 2023 12:51:54 GMT;\r\nVary: Accept-Encoding\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 33,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "2ms",
+         "Response time": "2ms",
+         "Latency": "422ms",
+         "Total time": "427ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "7.2 kB",
+         "Response body size": "0B",
+         "Total size": "8.8 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 7201\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:00 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 34,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://irc-ws.chat.twitch.tv/",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.43.192.60",
+         "Domain": "irc-ws.chat.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "216ms",
+         "HandShake": "468ms",
+         "request time": "-",
+         "Response time": "5ms",
+         "Latency": "216ms",
+         "Total time": "245ms"
+      },
+      {
+         "Request header size": "928B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET / HTTP/1.1\r\nHost: irc-ws.chat.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nSec-WebSocket-Key: 9HEbHRmcVDW8juXrjaO7oQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:52:01 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: oNAFOsSaqlnTXSGAH5Ty9tyihkY=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 35,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "3ms",
+         "Response time": "5ms",
+         "Latency": "211ms",
+         "Total time": "224ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "793B",
+         "Response body size": "0B",
+         "Total size": "2.4 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 793\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:05 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 36,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "1ms",
+         "Response time": "4ms",
+         "Latency": "431ms",
+         "Total time": "442ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "767B",
+         "Response body size": "0B",
+         "Total size": "2.4 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 767\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:11 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 37,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "2ms",
+         "Response time": "4ms",
+         "Latency": "244ms",
+         "Total time": "256ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "1.5 kB",
+         "Response body size": "0B",
+         "Total size": "3.2 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 1529\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:17 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: OPTIONS, GET, POST\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 38,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://irc-ws.chat.twitch.tv/",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.43.192.60",
+         "Domain": "irc-ws.chat.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "299ms",
+         "HandShake": "454ms",
+         "request time": "-",
+         "Response time": "5ms",
+         "Latency": "214ms",
+         "Total time": "225ms"
+      },
+      {
+         "Request header size": "928B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET / HTTP/1.1\r\nHost: irc-ws.chat.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nSec-WebSocket-Key: pQT4GSvj5xgZ8EgQhuYlRw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:52:21 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: nHdYQTQgJP+pSIgW9Jp1V4YBTgI=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 39,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "1ms",
+         "Response time": "3ms",
+         "Latency": "250ms",
+         "Total time": "257ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "1.5 kB",
+         "Response body size": "0B",
+         "Total size": "3.2 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 1529\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:23 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 40,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://pubsub-edge.twitch.tv/v1",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "52.11.164.110",
+         "Domain": "pubsub-edge.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "208ms",
+         "HandShake": "425ms",
+         "request time": "1ms",
+         "Response time": "5ms",
+         "Latency": "200ms",
+         "Total time": "210ms"
+      },
+      {
+         "Request header size": "930B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET /v1 HTTP/1.1\r\nHost: pubsub-edge.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nSec-WebSocket-Key: 97ZpORu88dmk7+SAJRovLw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:52:25 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: sVTZDV5+NHa9Tw3ngsfIsy1+krI=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 41,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "1ms",
+         "Response time": "5ms",
+         "Latency": "259ms",
+         "Total time": "271ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "767B",
+         "Response body size": "0B",
+         "Total size": "2.4 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 767\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:31 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: OPTIONS, GET, POST\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 42,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "2ms",
+         "Response time": "4ms",
+         "Latency": "304ms",
+         "Total time": "316ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "1.5 kB",
+         "Response body size": "0B",
+         "Total size": "3.2 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 1529\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:35 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: POST, OPTIONS, GET\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 43,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://irc-ws.chat.twitch.tv/",
+         "Request method": "GET",
+         "Version": "HTTP/1.1",
+         "Status code": "101 Switching Protocols",
+         "Remote address": "34.214.68.39",
+         "Domain": "irc-ws.chat.twitch.tv",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "242ms",
+         "HandShake": "454ms",
+         "request time": "-",
+         "Response time": "5ms",
+         "Latency": "234ms",
+         "Total time": "244ms"
+      },
+      {
+         "Request header size": "928B",
+         "Response header size": "166B",
+         "Request body size": "0B",
+         "Response body size": "0B",
+         "Total size": "1.1 kB"
+      },
+      {
+         "Request headers": "GET / HTTP/1.1\r\nHost: irc-ws.chat.twitch.tv\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nUpgrade: websocket\r\nOrigin: https://www.twitch.tv\r\nSec-WebSocket-Version: 13\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\nCookie: twitch.lohp.countryCode=BR; unique_id=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_durable=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; unique_id_samesite_compat=rvn8CIi72zSwtnnpetl9LGbAIh2awimb; tachyon-prefers-color-scheme=dark_preferred; tachyon-mature=true; experiment_overrides={%22experiments%22:{}%2C%22disabled%22:[]}; api_token=twilight.f1f9cbc0f45d78789a94cc3a231dc50c; server_session_id=7d2cc3b0d8d24148a775647e14757f22\r\nSec-WebSocket-Key: cIgXW5afecNaDVKq8TQLqw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\r\n\r\n",
+         "Response headers": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 01 Aug 2022 12:52:43 GMT\r\nConnection: upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Accept: wftSUjX2gTpMbY/6CHI6XykwaP4=\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 44,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "2ms",
+         "Response time": "5ms",
+         "Latency": "279ms",
+         "Total time": "289ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "2.3 kB",
+         "Response body size": "0B",
+         "Total size": "3.9 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 2313\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:50 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ],
+   [
+      {
+         "Entry": 45,
+         "Application": "Unkown",
+         "Application package name ": "Unkown",
+         "Request url": "https://video-edge-731636.pdx01.abs.hls.ttvnw.net/v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts",
+         "Request method": "POST",
+         "Version": "HTTP/1.1",
+         "Status code": "204 No Content",
+         "Remote address": "44.239.234.245",
+         "Domain": "video-edge-731636.pdx01.abs.hls.ttvnw.net",
+         "Content type": null,
+         "Port": "443",
+         "SSL": "TLS_AES_128_GCM_SHA256"
+      },
+      {
+         "Connection": "218ms",
+         "HandShake": "808ms",
+         "request time": "-",
+         "Response time": "3ms",
+         "Latency": "358ms",
+         "Total time": "364ms"
+      },
+      {
+         "Request header size": "1.4 kB",
+         "Response header size": "184B",
+         "Request body size": "767B",
+         "Response body size": "0B",
+         "Total size": "2.4 kB"
+      },
+      {
+         "Request headers": "POST /v1/segment/CrG0gJArHFBegnKG3QgDWSSHOBmGiJAQUJIGoyIBECXdp9RBimQDByXivb4nKPHDUDT5F8b44HZy8nONJJNeaNfw_c9TjNHCjAjs77lWiC1iBlET86o-YOZhGfAhteczSEsDXwoQg_t9__pY_1oqGfoZiZMn0Wq3JPZUuDY3txk8oWanJzwRKprp4o41RNcBw47KWOKDsJgqZhP59dLRsuLOhTJOwEl89vLDN_EUgt7ETF2lE3GvEv5XINxo-EJdma1ujlAo8RooGRvq7LqJ96H7nm3I_9pAhgUcR184hWPTHy7WFaKBMdPFOGxYKiZA0lKsw24vG57PDBzQXNufZvFeizqAXNRcraHsureUzvD27KeeDpM9EpU5a7N9oZucfBp9GB0vLVVLcO5YpDpV1bUlc62W2_IJ-7UegToGxIw8BfykS4_NLIGZddwj2su9OMgBum1ot4Uotmusr2qbVgdth3XTJIE0Px0K6FJJicZkQGgkddAiWu6ou1eDk_gvpqMo8ZM5L3T5ufbJpFb3FyNM-4LPcs1LBrm17hWH9GFQ62q_N58DXS9urKMYHJz-jWIP2KheRxXaSCLRx2Draxp0boi1ojPtwZgt1stHW3eTj-pQval-mvtC2Kk26o3T0zgkmCe9ON9A5HnL6qGd0L8d8_eYF-pGS31v8hMeDMX9AzjPFDo5oKUdO7lCpQF-zV7DIRdn16uckkP2l5Mw-bG53iQc_Lplr7OdWKX2osdnEJAr-2KcZcYsNt_NIKDz0HRqfdrOjr.ts HTTP/1.1\r\nHost: video-edge-731636.pdx01.abs.hls.ttvnw.net\r\nConnection: keep-alive\r\nContent-Length: 767\r\nsec-ch-ua: \".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"\r\nsec-ch-ua-mobile: ?0\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\r\nsec-ch-ua-platform: \"Linux\"\r\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\r\nAccept: */*\r\nOrigin: https://www.twitch.tv\r\nSec-Fetch-Site: cross-site\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\nReferer: https://www.twitch.tv/\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-GB,en-US;q=0.9,en;q=0.8\r\n\r\n",
+         "Response headers": "HTTP/1.1 204 No Content\r\nDate: Mon, 01 Aug 2022 12:52:53 GMT\r\nConnection: keep-alive\r\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\r\nAccess-Control-Allow-Origin: *\r\nVary: Origin\r\n\r\n"
+      }
+   ]
+]

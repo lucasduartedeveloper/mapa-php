@@ -115,6 +115,12 @@ $(document).ready(function() {
     $("#video-stream").attr("height", sw);
     $("#temporary-workaround").css("width", sw+"px");
     $("#temporary-workaround").css("height", sw+"px");
+
+    $("#video-stream")[0].oncanplay = 
+    radio.oncanplay = function() {
+        calling pause();
+        calling.currentTime = 0;
+    }
     
     if (sw>=sh) {
         $("#number, #numbers").hide();
