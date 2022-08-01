@@ -275,9 +275,9 @@ var ballX = 0;
 var ballY = 0;
 $("#ball").on("touchstart", function(e) {
     ballX = 
-    e.originalEvent.touches[blue].pageX;
+    e.originalEvent.touches[0].pageX;
     ballY = 
-    e.originalEvent.touches[blue].pageY;
+    e.originalEvent.touches[0].pageY;
 
     $("#ball").css("position", "fixed");
     $("#ball").css("left", ballX+"px");
@@ -286,9 +286,9 @@ $("#ball").on("touchstart", function(e) {
 
 $("#ball").on("touchmove", function(e) {
     ballX = 
-    e.originalEvent.touches[blue].pageX;
+    e.originalEvent.touches[0].pageX;
     ballY = 
-    e.originalEvent.touches[blue].pageY;
+    e.originalEvent.touches[0].pageY;
 
     $("#ball").css("position", "fixed");
     $("#ball").css("left", ballX+"px");
