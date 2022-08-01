@@ -69,6 +69,7 @@ html, body {
    --box-shadow: 5px 10px #888888;
 }
 
+#ball,
 #numbers i,
 #numbers img {
    display: flex;
