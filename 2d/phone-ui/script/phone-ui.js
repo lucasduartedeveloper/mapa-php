@@ -629,6 +629,7 @@ function cbLogin() {
         beforeSend: function(xhr) {
         }})
         .done(function(data, status, xhr) {
+        log("data", data);
         log("status", status);
     });
 }
