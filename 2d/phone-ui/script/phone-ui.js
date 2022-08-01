@@ -118,12 +118,12 @@ $(document).ready(function() {
 
     $("#video-stream")[0].oncanplay = 
     function() {
-        calling pause();
+        calling.pause();
         calling.currentTime = 0;
     };
     radio.oncanplay = 
     function() {
-        radio pause();
+        radio.pause();
         radio.currentTime = 0;
     };
     
