@@ -189,15 +189,15 @@ function handleDial(value, typed=false) {
         }
         if (search[0].type == "cb" && search[0].json) {
             loadCbStream(search[0].json);
-            return
+            return;
         }
         if (search[0].type == "tw") {
             loadTwitchStream(search[0]);
-            return
+            return;
         }
         if (search[0].type == "tv") {
             loadVideoStream(search[0]);
-            return
+            return;
         }
     }
 }
