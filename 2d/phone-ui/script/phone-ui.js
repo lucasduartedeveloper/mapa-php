@@ -299,7 +299,7 @@ $("#ball").on("touchend", function(e) {
     ballX = 0;
     ballY = 0;
 
-    S("#ball").css("position", "initial");
+    $("#ball").css("position", "initial");
     $("#ball").css("left", ballX+"px");
     $("#ball").css("top", ballY+"px");
 });
