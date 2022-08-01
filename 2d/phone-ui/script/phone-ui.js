@@ -279,6 +279,7 @@ $("#ball, #video-layer").on("touchstart", function(e) {
     ballY = 
     e.originalEvent.touches[0].pageY;
 
+    $("#ball").appendTo("#video-layer");
     $("#ball").css("position", "fixed");
     $("#ball").css("left", (ballX-(ballRadius))+"px");
     $("#ball").css("top", (ballY-(ballRadius))+"px");
@@ -299,6 +300,7 @@ $("#ball").on("touchend", function(e) {
     ballX = 0;
     ballY = 0;
 
+    $("#ball").appendTo("#numbers");
     $("#ball").css("position", "initial");
     $("#ball").css("left", ballX+"px");
     $("#ball").css("top", ballY+"px");
