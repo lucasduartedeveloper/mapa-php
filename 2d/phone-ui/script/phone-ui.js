@@ -117,10 +117,15 @@ $(document).ready(function() {
     $("#temporary-workaround").css("height", sw+"px");
 
     $("#video-stream")[0].oncanplay = 
-    radio.oncanplay = function() {
+    function() {
         calling pause();
         calling.currentTime = 0;
-    }
+    };
+    radio.oncanplay = 
+    function() {
+        radio pause();
+        radio.currentTime = 0;
+    };
     
     if (sw>=sh) {
         $("#number, #numbers").hide();
