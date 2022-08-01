@@ -270,6 +270,40 @@ $("#refresh").click(function() {
     checkStatus();
 });
 
+var ballRadius = sw * 0.2;
+var ballX = 0;
+var ballY = 0;
+$("#ball").on("touchstart", function(e) {
+    ballX = 
+    e.originalEvent.touches[blue].pageX;
+    ballY = 
+    e.originalEvent.touches[blue].pageY;
+
+    $("#ball").css("position", "fixed");
+    $("#ball").css("left", ballX+"px");
+    $("#ball").css("top", ballY+"px");
+});
+
+$("#ball").on("touchmove", function(e) {
+    ballX = 
+    e.originalEvent.touches[blue].pageX;
+    ballY = 
+    e.originalEvent.touches[blue].pageY;
+
+    $("#ball").css("position", "fixed");
+    $("#ball").css("left", ballX+"px");
+    $("#ball").css("top", ballY+"px");
+});
+
+$("#ball").on("touchend", function(e) {
+    ballX = 0;
+    ballY = 0;
+
+    S("#ball").css("position", "initial");
+    $("#ball").css("left", ballX+"px");
+    $("#ball").css("top", ballY+"px");
+});
+
 var speaking = false;
 function say(text) {
     if (!speaking) {
