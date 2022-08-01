@@ -273,7 +273,7 @@ $("#refresh").click(function() {
 var ballRadius = sw * 0.2;
 var ballX = 0;
 var ballY = 0;
-$("#ball").on("touchstart", function(e) {
+$("#ball, #video-layer").on("touchstart", function(e) {
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
