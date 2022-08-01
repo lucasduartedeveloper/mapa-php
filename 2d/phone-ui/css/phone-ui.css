@@ -209,6 +209,10 @@ li img {
    border-radius: 50%;
 }
 
+#ball {
+   z-index: 99999;
+}
+
 #mini-skate {
    position: fixed;
    width: 100vw;
