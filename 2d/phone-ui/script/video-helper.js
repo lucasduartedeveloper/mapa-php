@@ -75,6 +75,15 @@ function loadVideoStream(info) {
     //log("video", info.data);  
     //download("teste.html", info.data);
     
+    $("#temporary-workaround").hide();
+    $("#video-layer").show();
+    $("#broadcaster-username")
+    .text(info.title);
+    $("#video-stream").attr("src", 
+    info.url);
+    $("#video-stream")[0].load();
+    $("#video-stream")[0].play();
+
     // configuration for video.js
     var options = {
            controls: true,
@@ -99,15 +108,6 @@ function loadVideoStream(info) {
           }
     };
 
-    $("#temporary-workaround").hide();
-    $("#video-layer").show();
-    $("#broadcaster-username")
-    .text(info.title);
-    $("#video-stream").attr("src", 
-    info.url);
-    $("#video-stream")[0].load();
-    $("#video-stream")[0].play();
-
     window.player = videojs("video-js", options);
     // print version information at startup
     var msg = "Using video.js " + videojs.VERSION +
@@ -117,11 +117,11 @@ function loadVideoStream(info) {
     videojs.log(msg);
 
     // load video from url
-    player.src({ 
+    /*player.src({ 
         src: info.url, 
         type: info.type,
         withCredentials: true
-    });
+    });*/
 
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();

@@ -25,7 +25,7 @@ $("#toggle-video").click(function () {
     }
     else {
         $("#video-stream").show();      
-        $("#video-js").show();
+        //$("#video-js").show();
     }
 });
 
