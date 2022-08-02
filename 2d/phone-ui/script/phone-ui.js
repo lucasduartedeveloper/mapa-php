@@ -581,7 +581,32 @@ function loadCbStream(json) {
            console.log("close", this.broadcaster_username);
         }.bind(json);
 
-        // configuration for video.js
+        loadVideoStream({
+            title: json.broadcaster_username,
+            url: json.hls_source
+        });
+    }
+    else {
+        log("info", 
+        json.broadcaster_username + " is Offline");
+        say(json.broadcaster_username + " is Offline");
+    }
+}
+
+function loadTwitchStream(info) {    
+    //log("twitch", info.data);
+    download("teste.html", info.data);
+
+    window.open(info.url, "_blank");
+    //loadVideoOnIframe(info.url);
+    timeStarted = new Date().getTime();
+}
+
+function loadVideoStream(info) {    
+    //log("video", info.data);  
+    //download("teste.html", info.data);
+    
+   // configuration for video.js
         var options = {
            controls: true,
            bigPlayButton: false,
@@ -608,9 +633,9 @@ function loadCbStream(json) {
         $("#temporary-workaround").hide();
         $("#video-layer").show();
         $("#broadcaster-username")
-        .text(json.broadcaster_username);
+        .text(json.title);
         $("#video-stream").attr("src", 
-        json.hls_source);
+        json.url);
         $("#video-stream")[0].load();
         $("#video-stream")[0].play();
 
@@ -636,34 +661,6 @@ function loadCbStream(json) {
         });
 
         timeStarted = new Date().getTime();
-    }
-    else {
-        log("info", 
-        json.broadcaster_username + " is Offline");
-        say(json.broadcaster_username + " is Offline");
-    }
-}
-
-function loadTwitchStream(info) {    
-    //log("twitch", info.data);
-    download("teste.html", info.data);
-
-    window.open(info.url, "_blank");
-    //loadVideoOnIframe(info.url);
-    timeStarted = new Date().getTime();
-}
-
-function loadVideoStream(info) {    
-    //log("video", info.data);  
-    //download("teste.html", info.data);
-    
-    $("#temporary-workaround").hide();
-    $("#video-layer").show();
-    $("#broadcaster-username").text(info.title);
-    $("#video-stream").attr("src", 
-    info.url);
-    $("#video-stream")[0].load();
-    $("#video-stream")[0].play();
 
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
