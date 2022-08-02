@@ -236,7 +236,7 @@ setInterval(function() {
 
 $("#hang-phone").click(function() {
     audio.pause();
-    //$("#video-stream")[0].pause();
+    $("#video-stream")[0].pause();
     window.player.pause();
     $("#video-layer").hide();
     
@@ -609,10 +609,10 @@ function loadCbStream(json) {
         $("#video-layer").show();
         $("#broadcaster-username")
         .text(json.broadcaster_username);
-        /*$("#video-stream").attr("src", 
+        $("#video-stream").attr("src", 
         json.hls_source);
         $("#video-stream")[0].load();
-        $("#video-stream")[0].play();*/
+        $("#video-stream")[0].play();
 
         window.player = videojs("video-js");
            // print version information at startup
