@@ -565,7 +565,7 @@ function loadCbStream(json) {
                    .substring(n+6, x);
                if (!msg.toLowerCase().includes("lovense") && 
                     !msg.toLowerCase().includes("tipper") && 
-                    !msg.toLowerCase().includes("emoticon")) {
+                    !msg.toLowerCase().includes("[emoticon")) {
                    $("#broadcaster-msg").html(
                        "<i class=\"fa-solid fa-comment-dots\"></i>"+
                        "&nbsp;"+msg
