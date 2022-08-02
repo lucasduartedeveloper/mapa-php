@@ -698,11 +698,12 @@ var screenOff = false;
 var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
-   if (elapsed > 10000 && !contactWaiting) {
+   window.requestAnimationFrame(step);
+   log("elapsed", elapsed);
+   if (elapsed > 10000) {
        screenOff = true;
        checkStatus();
    }
-   window.requestAnimationFrame(step);
    if (screenOff  && !contactWaiting) {
        handleBrowserState(false);
    }
