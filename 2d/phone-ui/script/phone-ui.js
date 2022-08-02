@@ -684,11 +684,11 @@ function cbLogin() {
     });
 }
 
-var start, previousTimeStamp;
+var previousTimeStamp;
 var screenActive = false;
 
 function step(timestamp) {
-   start = timestamp;
+   previousTimeStamp = new Date().getTime();
    if (contactWaiting) {
       handleBrowserState(true);
    }
@@ -697,7 +697,7 @@ function step(timestamp) {
 var screenOff = false;
 var contactWaiting = false;
 setInterval(function() {
-   var elapsed = new Date().getTime() - start;
+   var elapsed = new Date().getTime() - previousTimeStamp;
    window.requestAnimationFrame(step);
    log("elapsed", elapsed);
    if (elapsed > 10000) {
