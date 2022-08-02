@@ -376,8 +376,16 @@ function checkStatus() {
                cbList[xhr.k].no+"')\">"+
                "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
-               json.broadcaster_username+"</li>";
+               json.broadcaster_username+" [online]</li>";
                onlineCount++;
+           }
+          else  {
+               html += 
+               "<li onclick=\"handleDial('"+
+               cbList[xhr.k].no+"')\">"+
+               "<img src=\"img/placeholder.png\"/>"+
+               cbList[xhr.k].no+": "+
+               json.broadcaster_username+"</li>";
            }
 
            total++;
