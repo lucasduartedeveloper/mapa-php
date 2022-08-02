@@ -48,14 +48,15 @@ $("#ball, #video-stream").on("touchstart", function(e) {
     ballY = 
     e.originalEvent.touches[0].pageY;
 
-    log("touchstart", e.target);
-    $("#ball").appendTo("#video-layer");
+    log("touchstart", e.target.id);
+    if (e.target.id == "video-layer")
+        $("#ball").appendTo("#video-layer");
     $("#ball").css("position", "fixed");
     $("#ball").css("left", (ballX-(ballRadius))+"px");
     $("#ball").css("top", (ballY-(ballRadius))+"px");
 });
 
-$("#ball").on("touchmove", function(e) {
+$("#ball, #video-stream").on("touchmove", function(e) {
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
@@ -66,11 +67,12 @@ $("#ball").on("touchmove", function(e) {
     $("#ball").css("top", (ballY-(ballRadius))+"px");
 });
 
-$("#ball").on("touchend", function(e) {
+$("#ball, #video-stream").on("touchend", function(e) {
     ballX = 0;
     ballY = 0;
 
-    $("#ball").appendTo("#numbers");
+    if (e.target.id == "ball")
+        $("#ball").appendTo("#numbers");
     $("#ball").css("position", "initial");
     $("#ball").css("left", ballX+"px");
     $("#ball").css("top", ballY+"px");
