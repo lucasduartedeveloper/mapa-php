@@ -703,6 +703,7 @@ var autoNo = -1;
 function setAuto(no) {
     $("#contact-list-modal").modal("hide");
     autoNo = no;
+    checkStatus();
     log("auto", no);
     $("#auto").trigger("click");
 }
