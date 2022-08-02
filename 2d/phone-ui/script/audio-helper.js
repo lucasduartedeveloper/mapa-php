@@ -9,7 +9,7 @@ var dial = [
     new Audio("audio/phone-dial-7.mp3")
 ];
 
-var ringing = new Audio("audio/phone-ringing.mp3");
+var ringing = new Audio("audio/phone-ringing.wav");
 ringing.loop = true;
 
 var calling = new Audio("audio/phone-dial-calling.mp3");
