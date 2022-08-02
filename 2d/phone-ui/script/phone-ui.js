@@ -700,17 +700,20 @@ setInterval(function() {
    window.requestAnimationFrame(step);
 }, 1000);
 
+var contactWaiting = false;
 function handleBrowserState(isActive) {
-   if (isActive) {
+   if (isActive && contactWaiting) {
       ringing.pause();
       ringing.currentTime = 0;
       log("answered", "");
-      //loadCbStream(contacts[k].json);
+      loadCbStream(contactWaiting[k].json);
+      contactWaiting = false;
    }
    else {
       for (var k in contacts) {
           if (contacts[k].type == "cb" && 
               contacts[k].json.room_status == "online") {
+              contactWaiting = contacts[k];
               ringing.play();
               return;
           }
