@@ -543,6 +543,8 @@ function loadCbStream(json) {
             json.room_password;
 
             sock.send(JSON.stringify(connectJson));
+            $("#broadcaster-msg").html("");
+            
         }.bind(json);
         sock.onmessage = function(e) {
            var msgJson = JSON.parse(e.data);
