@@ -726,7 +726,7 @@ function handleBrowserState(isActive) {
               contacts[k].json &&
               contacts[k].json.room_status == "public") {
               contactWaiting = contacts[k];
-              log("contactWaiting", contactWaiting);
+              //log("contactWaiting", contactWaiting);
               ringing.play();
               return;
           }
