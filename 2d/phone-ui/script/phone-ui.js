@@ -725,7 +725,11 @@ $("#auto").click(function() {
            }
        }, 10000);
     }
-    else { clearInterval(autoInterval); }
+    else { 
+       autoNo = -1;
+       checkStatus();
+       clearInterval(autoInterval); 
+    }
 });
 
 var previousTimeStamp;
