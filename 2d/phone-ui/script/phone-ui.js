@@ -697,11 +697,12 @@ function step(timestamp) {
 var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
-   if (elapsed > 2000 && !contactWaiting) {
+   if (elapsed > 5000 && !contactWaiting) {
        handleBrowserState(false);
    }
    window.requestAnimationFrame(step);
-}, 1000);
+   checkStatus();
+}, 5000);
 
 function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
