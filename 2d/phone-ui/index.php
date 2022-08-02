@@ -77,8 +77,9 @@ echo "\n";
 <span id="time-streaming">00:00:00</span>
 <iframe id="temporary-workaround"></iframe>
 <video id="video-stream" style="display:none" 
-width="100" height="100" autoplay 
-class="video-js vjs-default-skin"></video>
+width="100" height="100" autoplay></video>
+video id="video-js" style="display:none" 
+width="100" height="100" autoplay></video>
 <span id="controls">
 <i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>

@@ -612,8 +612,7 @@ function loadCbStream(json) {
         $("#video-stream")[0].load();
         $("#video-stream")[0].play();*/
 
-        window.player = videojs("video-stream", options, 
-        function() {
+        window.player = videojs("video-js");
            // print version information at startup
            var msg = "Using video.js " + videojs.VERSION +
            " with videojs-wavesurfer " +
@@ -627,7 +626,6 @@ function loadCbStream(json) {
               type: "application/x-mpegURL",
               withCredentials: true
            });
-        });
 
         timeStarted = new Date().getTime();
     }
