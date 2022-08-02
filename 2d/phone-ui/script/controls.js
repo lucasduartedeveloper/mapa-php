@@ -74,6 +74,6 @@ $("#ball, #video-stream").on("touchend", function(e) {
         $("#ball").appendTo("#numbers");
         $("#ball").css("position", "initial");
     }
-    $("#ball").css("left", ballX+"px");
-    $("#ball").css("top", ballY+"px");
+    $("#ball").css("left", (ballX-(ballRadius))+"px");
+    $("#ball").css("top", (ballY-(ballRadius))+"px");
 });
