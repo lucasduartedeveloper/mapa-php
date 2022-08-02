@@ -717,7 +717,7 @@ function handleBrowserState(isActive) {
       for (var k in contacts) {
           if (contacts[k].type == "cb" && 
               contacts[k].json &&
-              contacts[k].json.room_status == "online") {
+              contacts[k].json.room_status == "public") {
               contactWaiting = contacts[k];
               log("contactWaiting", contactWaiting);
               ringing.play();
