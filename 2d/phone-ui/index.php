@@ -13,15 +13,17 @@ $script = [
     2 => "debug.js",
     3 => "heroku.js",
     4 => "websocket.js",
-    5 => "audio-helper.js",
-    6 => "camera-helper.js",
-    7 => "color-helper.js",
-    8 => "gyro-helper.js",
+    5 => "http-helper.js",
+    6 => "video-helper.js",
+    7 => "audio-helper.js",
+    8 => "camera-helper.js",
     9 => "image-helper.js",
-    10 => "json-helper.js",
-    11 => "controls.js",
+    10 => "color-helper.js",
+    11 => "gyro-helper.js",
+    12 => "json-helper.js",
+    13 => "controls.js",
     //12 => "2d-objects.js",
-    13 => "phone-ui.js"
+    14 => "phone-ui.js"
 ];
 echo "<!-- ".$rnd." -->";
 ?>
