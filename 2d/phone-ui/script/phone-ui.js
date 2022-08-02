@@ -693,7 +693,7 @@ function step(timestamp) {
 
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
-   if (elapsed > 2000) {
+   if (elapsed > 2000 && !contactWaiting) {
        log("screen","off");
        handleBrowserState(false);
    }
@@ -705,7 +705,8 @@ function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
       ringing.pause();
       ringing.currentTime = 0;
-      log("answered", "");
+      log("answered", 
+      contactWaiting[k].json.broadcaster_username);
       loadCbStream(contactWaiting[k].json);
       contactWaiting = false;
    }
