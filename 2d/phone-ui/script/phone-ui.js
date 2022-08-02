@@ -338,7 +338,7 @@ function checkStatus() {
 
             if (autoAnswer &&
                 autoNo >= 0 &&
-                autoNo != xhr.k) {
+                autoNo != k) {
                 return;
             }
 
