@@ -560,7 +560,7 @@ function loadCbStream(json) {
                var n = msgJson.args[1].indexOf("\"m\":");
                var x = msgJson.args[1].indexOf("\",", n+6);
                $("#bradcaster-msg").text(
-                   msgJson.args[1].substring(n+6, x);
+                   msgJson.args[1].substring(n+6, x)
                );
            }
            //sock.close();
