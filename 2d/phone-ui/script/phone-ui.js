@@ -712,7 +712,9 @@ var autoAnswer = false;
 var contactWaiting = false;
 $("#auto").click(function() {
     autoAnswer = !autoAnswer;
-    $("#auto").text("AUTO: "+(autoAnswer?"ON":"OFF"));
+    $("#auto")
+    .text("AUTO: "+
+    (autoAnswer?(autoNo>0?autoNo:"ON"):"OFF"));
     if (autoAnswer) {
         autoInterval = setInterval(function() {
            var elapsed = 
