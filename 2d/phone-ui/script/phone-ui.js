@@ -622,11 +622,17 @@ function loadCbStream(json) {
         " and wavesurfer.js " + WaveSurfer.VERSION;
         videojs.log(msg);
 
-        // load wav file from url
+        /*// load wav file from url
         player.src({ 
             src: json.hls_source, 
             type: "application/x-mpegURL",
             withCredentials: true
+        });*/
+
+        player.src({
+           src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+           type: 'application/x-mpegURL',
+           withCredentials: true
         });
 
         timeStarted = new Date().getTime();
