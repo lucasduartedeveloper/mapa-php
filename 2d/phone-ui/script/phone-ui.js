@@ -335,6 +335,13 @@ function checkStatus() {
     var onlineCount = 0;
     var html = "<ul>";
     for (var k = 0; k < cbList.length; k++) {
+
+            if (autoAnswer &&
+                autoNo > 0 &&
+                autoNo != xhr.k) {
+                return;
+            }
+
         setTimeout(function() {
         //log("this", this);
         $.ajax({
