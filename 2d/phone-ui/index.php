@@ -76,11 +76,18 @@ echo "\n";
 <span id="broadcaster-username"></span>
 <span id="time-streaming">00:00:00</span>
 <iframe id="temporary-workaround"></iframe>
+
 <video id="video-stream" style="display:none" 
 width="100" height="100" autoplay></video>
+
 <video-js id="video-js" style="display:none" 
 width="100" height="100" class="vjs-default-skin" 
-autoplay></video-js>
+autoplay>
+   <source
+     src="https://example.com/index.m3u8"
+     type="application/x-mpegURL">
+</video-js>
+
 <span id="controls">
 <i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>

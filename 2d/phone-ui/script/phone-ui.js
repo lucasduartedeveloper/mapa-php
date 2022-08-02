@@ -615,19 +615,19 @@ function loadCbStream(json) {
         $("#video-stream")[0].play();
 
         window.player = videojs("video-js");
-           // print version information at startup
-           var msg = "Using video.js " + videojs.VERSION +
-           " with videojs-wavesurfer " +
-           videojs.getPluginVersion("wavesurfer") +
-           " and wavesurfer.js " + WaveSurfer.VERSION;
-           videojs.log(msg);
+        // print version information at startup
+        var msg = "Using video.js " + videojs.VERSION +
+        " with videojs-wavesurfer " +
+        videojs.getPluginVersion("wavesurfer") +
+        " and wavesurfer.js " + WaveSurfer.VERSION;
+        videojs.log(msg);
 
-           // load wav file from url
-           player.src({ 
-              src: json.hls_source, 
-              type: "application/x-mpegURL",
-              withCredentials: true
-           });
+        // load wav file from url
+        player.src({ 
+            src: json.hls_source, 
+            type: "application/x-mpegURL",
+            withCredentials: true
+        });
 
         timeStarted = new Date().getTime();
     }
