@@ -95,6 +95,7 @@ var options = {
    }
 };
 
+$(document).ready(function () {
 window.player = videojs("video-js", options);
     // print version information at startup
     var msg = "Using video.js " + videojs.VERSION +
@@ -102,6 +103,7 @@ window.player = videojs("video-js", options);
     videojs.getPluginVersion("wavesurfer") +
     " and wavesurfer.js " + WaveSurfer.VERSION;
     videojs.log(msg);
+});
 
 function loadVideoStream(info) {    
     //log("video", info.data);  
