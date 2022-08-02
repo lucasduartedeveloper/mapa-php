@@ -339,7 +339,7 @@ function checkStatus() {
             if (autoAnswer &&
                 autoNo != "ANY" &&
                 autoNo != cbList[k].no) {
-                return;
+                break;
             }
 
         setTimeout(function() {
@@ -773,5 +773,9 @@ function handleBrowserState(isActive) {
 }
 
 /* 
+autoAnswer = true;
+autoNo = "025";
+checkStatus();
+
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
