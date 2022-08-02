@@ -320,7 +320,8 @@ function handleBrowserState(isActive) {
    else {
       log("screen","off");
       for (var k in contacts) {
-          if (contacts[k].type == "cb" && 
+          if ((autoNo == "ANY" || contacts[k].no == autoNo) && 
+              contacts[k].type == "cb" && 
               contacts[k].json &&
               contacts[k].json.room_status == "public") {
               contactWaiting = contacts[k];
