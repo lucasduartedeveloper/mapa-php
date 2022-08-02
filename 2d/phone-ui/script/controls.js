@@ -49,7 +49,7 @@ $("#ball, #video-stream").on("touchstart", function(e) {
     e.originalEvent.touches[0].pageY;
 
     log("touchstart", e.target.id);
-    if (e.target.id == "video-layer")
+    if (e.target.id == "video-stream")
         $("#ball").appendTo("#video-layer");
     $("#ball").css("position", "fixed");
     $("#ball").css("left", (ballX-(ballRadius))+"px");
