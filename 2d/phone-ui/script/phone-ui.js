@@ -684,18 +684,23 @@ function cbLogin() {
 }
 
 var screenOffInterval = false;
-document.addEventListener('visibilitychange', function() {
-  if(document.visiblityState == 'hidden') {
-      /*setInterval(function() {
-          checkStatus();
-      }, 5000);*/
+window.addEventListener("focus", handleBrowserState.bind(context, true));
+window.addEventListener("blur", handleBrowserState.bind(context, false));
+
+function handleBrowserState(isActive) {
+   if (isActive) {
       ringing.play();
-  }
-  else if(document.visibilityState == 'visible') {
-      ringing.pause();
-      ringing.cuurentTime = 0;
-  }
-});
+   }
+   else {
+      for (var k in contacts) {
+          if (contacts[k].type == "cb" && contacts[k].json) {
+              ringing.pause();
+              ringing.currentTime = 0;
+              loadCbStream(contacts[k].json);
+          }
+      }
+   }
+}
 
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
