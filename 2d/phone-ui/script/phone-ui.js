@@ -236,7 +236,8 @@ setInterval(function() {
 
 $("#hang-phone").click(function() {
     audio.pause();
-    $("#video-stream")[0].pause();
+    //$("#video-stream")[0].pause();
+    window.pause();
     $("#video-layer").hide();
     
     if (sock) sock.close();
@@ -611,7 +612,7 @@ function loadCbStream(json) {
         $("#video-stream")[0].load();
         $("#video-stream")[0].play();*/
 
-        var player = videojs("video-stream", options, 
+        window.player = videojs("video-stream", options, 
         function() {
            // print version information at startup
            var msg = "Using video.js " + videojs.VERSION +
