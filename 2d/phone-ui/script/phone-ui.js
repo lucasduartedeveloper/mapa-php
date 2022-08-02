@@ -382,8 +382,7 @@ function checkStatus() {
                var x = cbList[xhr.k].url.indexOf("/", n+5);
 
                html += 
-               "<li onclick=\"handleDial('"+
-               cbList[xhr.k].no+"')\">"+
+               "<li onclick=\"setAuto("+xhr.k+")\">"+
                "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
                cbList[xhr.k].url.substring(n+5, x)+"</li>";
@@ -691,6 +690,13 @@ function cbLogin() {
         log("data", data);
         log("status", status);
     });
+}
+
+var autoNo = undefined;
+function setAuto(no) {
+    autoNo = no;
+    log("auto", no);
+    $("#auto").trigger("click");
 }
 
 var autoInterval = 0;
