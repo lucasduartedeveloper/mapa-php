@@ -11,6 +11,8 @@ var lastContact = "";
 var contacts = [
     { no: "000", type: "cb",
      url: "https://m.chaturbate.com/ronny_ponny/" },
+    { no: "025", type: "cb",
+     url: "https://m.chaturbate.com/kittycaitlin/" },
     { no: "001", type: "cb",
      url: "https://m.chaturbate.com/littlee33/" },
     { no: "002", type: "cb",
@@ -57,8 +59,6 @@ var contacts = [
      url: "https://m.chaturbate.com/vanandjuani/" },
     { no: "023", type: "cb",
      url: "https://m.chaturbate.com/kimilee22/" },
-    { no: "025", type: "cb",
-     url: "https://m.chaturbate.com/kittycaitlin/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     /*{ no: "301", type: "tw",
@@ -384,7 +384,7 @@ function checkStatus() {
            $("#online-count").text(
            onlineCount + "/" +total+ " online");
            $("#contact-list").html(html+"</ul>");
-        });}.bind(k),3000*k);
+        });}.bind(k),500*k);
     }
 
     var twList = contacts.filter(c => c.type == "tw-");
