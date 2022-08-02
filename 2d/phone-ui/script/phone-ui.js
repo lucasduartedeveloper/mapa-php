@@ -337,8 +337,8 @@ function checkStatus() {
     for (var k = 0; k < cbList.length; k++) {
 
             if (autoAnswer &&
-                autoNo >= 0 &&
-                autoNo != k) {
+                autoNo != "ANY" &&
+                autoNo != cbList[k].no) {
                 return;
             }
 
@@ -699,10 +699,10 @@ function cbLogin() {
     });
 }
 
-var autoNo = -1;
+var autoNo = "ANY";
 function setAuto(no) {
     $("#contact-list-modal").modal("hide");
-    autoNo = no;
+    autoNo = cbList[no].no;
     checkStatus();
     log("auto", no);
     $("#auto").trigger("click");
@@ -715,7 +715,7 @@ $("#auto").click(function() {
     autoAnswer = !autoAnswer;
     $("#auto")
     .text("AUTO"+
-    (autoNo>0?" "+contacts[autoNo].no:"")+": "+
+    (autoNo!="ANY"?" "+autoNo:"")+": "+
     (autoAnswer?"ON":"OFF"));
     if (autoAnswer) {
         autoInterval = setInterval(function() {
@@ -730,7 +730,7 @@ $("#auto").click(function() {
        }, 10000);
     }
     else { 
-       autoNo = -1;
+       autoNo = "ANY";
        checkStatus();
        clearInterval(autoInterval); 
     }
