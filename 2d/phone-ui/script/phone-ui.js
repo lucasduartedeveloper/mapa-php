@@ -372,7 +372,8 @@ function checkStatus() {
                   cbList[xhr.k].no+"')\">"+
                   "<img src=\"img/placeholder.png\"/>"+
                   cbList[xhr.k].no+": "+
-                  json.broadcaster_username+" [online]</li>";
+                  json.broadcaster_username+
+                  " <b>[online]</b></li>";
                   onlineCount++;
                }
            }
