@@ -712,6 +712,7 @@ function handleBrowserState(isActive) {
    else {
       for (var k in contacts) {
           if (contacts[k].type == "cb" && 
+              contacts[k].json &&
               contacts[k].json.room_status == "online") {
               contactWaiting = contacts[k];
               ringing.play();
