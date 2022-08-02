@@ -710,7 +710,7 @@ function handleBrowserState(isActive) {
       ringing.currentTime = 0;
       log("answered", 
       contactWaiting.json.broadcaster_username);
-      loadCbStream(contactWaiting[k].json);
+      loadCbStream(contactWaiting.json);
       contactWaiting = false;
    }
    else {
