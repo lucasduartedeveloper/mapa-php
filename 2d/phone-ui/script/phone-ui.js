@@ -606,8 +606,8 @@ function loadVideoStream(info) {
     //log("video", info.data);  
     //download("teste.html", info.data);
     
-   // configuration for video.js
-        var options = {
+    // configuration for video.js
+    var options = {
            controls: true,
            bigPlayButton: false,
            autoplay: false,
@@ -628,39 +628,37 @@ function loadVideoStream(info) {
                  hideScrollbar: true
              }
           }
-        };
+    };
 
-        $("#temporary-workaround").hide();
-        $("#video-layer").show();
-        $("#broadcaster-username")
-        .text(json.title);
-        $("#video-stream").attr("src", 
-        json.url);
-        $("#video-stream")[0].load();
-        $("#video-stream")[0].play();
+    $("#temporary-workaround").hide();
+    $("#video-layer").show();
+    $("#broadcaster-username")
+    .text(info.title);
+    $("#video-stream").attr("src", 
+    info.url);
+    $("#video-stream")[0].load();
+    $("#video-stream")[0].play();
 
-        window.player = videojs("video-js");
-        // print version information at startup
-        var msg = "Using video.js " + videojs.VERSION +
-        " with videojs-wavesurfer " +
-        videojs.getPluginVersion("wavesurfer") +
-        " and wavesurfer.js " + WaveSurfer.VERSION;
-        videojs.log(msg);
+    window.player = videojs("video-js");
+    // print version information at startup
+    var msg = "Using video.js " + videojs.VERSION +
+    " with videojs-wavesurfer " +
+    videojs.getPluginVersion("wavesurfer") +
+    " and wavesurfer.js " + WaveSurfer.VERSION;
+    videojs.log(msg);
 
-        /*// load wav file from url
-        player.src({ 
-            src: json.hls_source, 
-            type: "application/x-mpegURL",
-            withCredentials: true
-        });*/
+    /*// load wav file from url
+    player.src({ 
+        src: json.hls_source, 
+        type: "application/x-mpegURL",
+        withCredentials: true
+    });*/
 
-        player.src({
-           src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-           type: 'application/x-mpegURL',
-           withCredentials: true
-        });
-
-        timeStarted = new Date().getTime();
+    player.src({
+       src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+       type: 'application/x-mpegURL',
+       withCredentials: true
+    });
 
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
