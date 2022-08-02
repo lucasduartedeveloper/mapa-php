@@ -352,40 +352,40 @@ function checkStatus() {
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
-            if (n < 0) return;
-            var x = data
-            .indexOf("}\";");
-            var json = data.substring(n+29, x+1);
+            if (n > 0) {
+                var x = data
+                .indexOf("}\";");
+                var json = data.substring(n+29, x+1);
 
-            var regex = /\\u([\d\w]{4})/gi;
-            json = json.replace(regex, function (match, grp) {
-                return String.fromCharCode(parseInt(grp, 16)); 
-            });
+                var regex = /\\u([\d\w]{4})/gi;
+                json = json.replace(regex, function (match, grp) {
+                    return String.fromCharCode(parseInt(grp, 16)); 
+                });
 
-            //log("json: "+contacts[k].no, json);
-            json = JSON &&
-           JSON.parse(json) || $.parseJSON(json);
-            /*json.chat_password = JSON &&
-           JSON.parse(json.chat_password) ||
-           $.parseJSON(json.chat_password);*/
+                json = JSON &&
+               JSON.parse(json) || $.parseJSON(json);
 
-           cbList[xhr.k].json = json;
-           if (json.hls_source.length > 0) {
-               html += 
-               "<li onclick=\"handleDial('"+
-               cbList[xhr.k].no+"')\">"+
-               "<img src=\"img/placeholder.png\"/>"+
-               cbList[xhr.k].no+": "+
-               json.broadcaster_username+" [online]</li>";
-               onlineCount++;
+               cbList[xhr.k].json = json;
+               if (json.hls_source.length > 0) {
+                  html += 
+                  "<li onclick=\"handleDial('"+
+                  cbList[xhr.k].no+"')\">"+
+                  "<img src=\"img/placeholder.png\"/>"+
+                  cbList[xhr.k].no+": "+
+                  json.broadcaster_username+" [online]</li>";
+                  onlineCount++;
+               }
            }
-          else  {
+           else  {
+               var n = cbList[xhr.k].url.indexOf(".com/");
+               var x = cbList[xhr.k].url.indexOf("/", n+5);
+
                html += 
                "<li onclick=\"handleDial('"+
                cbList[xhr.k].no+"')\">"+
                "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
-               json.broadcaster_username+"</li>";
+               cbList[xhr.k].url.substring(n+5, x)+"</li>";
            }
 
            total++;
