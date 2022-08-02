@@ -200,7 +200,12 @@ function handleDial(value, typed=false) {
             return;
         }
         if (search[0].type == "tv") {
-            loadVideoStream(search[0]);
+            $("#broadcaster-msg").html("");
+            loadVideoStream({
+                title: search[0].title,
+                url: search[0].url, 
+                type: "'application/x-mpegURL"
+            });
             return;
         }
     }
