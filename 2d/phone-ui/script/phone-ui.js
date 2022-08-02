@@ -256,10 +256,12 @@ var video = false;
 $("#toggle-video").click(function () {
     video = !video;
     if (video) {
-        $("#video-stream").hide();
+        $("#video-stream").hide(); 
+        $("#video-js").hide();
     }
     else {
-        $("#video-stream").show();
+        $("#video-stream").show();      
+        $("#video-js").show();
     }
 });
 
