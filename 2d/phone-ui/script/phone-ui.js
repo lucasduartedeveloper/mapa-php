@@ -327,6 +327,7 @@ function say(text) {
 }
 
 function checkStatus() {
+    log("checkStatus", "");
     var cbList = 
     contacts.filter(c => c.type == "cb");
 
