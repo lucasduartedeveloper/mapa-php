@@ -702,7 +702,7 @@ function cbLogin() {
 var autoNo = "ANY";
 function setAuto(no) {
     $("#contact-list-modal").modal("hide");
-    autoNo = cbList[no].no;
+    autoNo = no;
     checkStatus();
     log("auto", no);
     $("#auto").trigger("click");
