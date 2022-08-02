@@ -69,9 +69,8 @@ html, body {
    --box-shadow: 5px 10px #888888;
 }
 
-#ball,
-#numbers i,
-#numbers img {
+#numbers #ball,
+#numbers i {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -82,6 +81,18 @@ html, body {
    background: #38C75E;
    color: #fff;
    border-radius: 50%;
+}
+
+#numbers #money {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   width: 40vw;
+   height: 20vw;
+   margin: 3vw 5vw;
+   background: #38C75E;
+   color: #fff;
 }
 
 #numbers button span {
