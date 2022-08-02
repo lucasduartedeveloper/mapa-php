@@ -384,7 +384,7 @@ function checkStatus() {
            $("#online-count").text(
            onlineCount + "/" +total+ " online");
            $("#contact-list").html(html+"</ul>");
-        });}.bind(k),500*k);
+        });}.bind(k),3000*k);
     }
 
     var twList = contacts.filter(c => c.type == "tw-");
