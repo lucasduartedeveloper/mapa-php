@@ -694,16 +694,15 @@ function step(timestamp) {
    }
 }
 
+var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
    if (elapsed > 2000 && !contactWaiting) {
-       log("screen","off");
        handleBrowserState(false);
    }
    window.requestAnimationFrame(step);
 }, 1000);
 
-var contactWaiting = false;
 function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
       ringing.pause();
@@ -714,6 +713,7 @@ function handleBrowserState(isActive) {
       contactWaiting = false;
    }
    else {
+      log("screen","off");
       for (var k in contacts) {
           if (contacts[k].type == "cb" && 
               contacts[k].json &&
