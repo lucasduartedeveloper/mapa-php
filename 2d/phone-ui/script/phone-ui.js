@@ -701,16 +701,17 @@ setInterval(function() {
 }, 1000);
 
 function handleBrowserState(isActive) {
-   if (!isActive) {
-      ringing.play();
+   if (isActive) {
+      ringing.pause();
+      ringing.currentTime = 0;
+      log("answered", "");
+      //loadCbStream(contacts[k].json);
    }
    else {
       for (var k in contacts) {
           if (contacts[k].type == "cb" && 
               contacts[k].json.room_status == "online") {
-              ringing.pause();
-              ringing.currentTime = 0;
-              loadCbStream(contacts[k].json);
+              ringing.play();
               return;
           }
       }
