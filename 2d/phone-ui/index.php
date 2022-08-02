@@ -52,6 +52,11 @@ echo "<!-- ".$rnd." -->";
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
+<!-- load css -->
+<link href="https://vjs.zencdn.net/7.20.1/video-js.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="//unpkg.com/videojs-wavesurfer/dist/css/videojs.wavesurfer.min.css">
+
 <!-- PHP: Inject style files -->
 <?php
 foreach ($style as $a) {
@@ -72,7 +77,8 @@ echo "\n";
 <span id="time-streaming">00:00:00</span>
 <iframe id="temporary-workaround"></iframe>
 <video id="video-stream" style="display:none" 
-width="100" height="100" autoplay></video>
+width="100" height="100" autoplay 
+class="video-js vjs-default-skin"></video>
 <span id="controls">
 <i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>
@@ -159,6 +165,11 @@ width="100" height="100" autoplay></video>
 <script src="https://kit.fontawesome.com/147bb12bad.js" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+
+<!-- load script -->
+<script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script src="//unpkg.com/videojs-wavesurfer/dist/videojs.wavesurfer.min.js"></script>
 
 <!-- PHP: Inject script files -->
 <?php

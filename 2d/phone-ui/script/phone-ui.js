@@ -578,14 +578,51 @@ function loadCbStream(json) {
            console.log("close", this.broadcaster_username);
         }.bind(json);
 
+        // configuration for video.js
+        var options = {
+           controls: true,
+           bigPlayButton: false,
+           autoplay: false,
+           loop: false,
+           fluid: false,
+           width: 600,
+           height: 300,
+           plugins: {
+              // enable videojs-wavesurfer plugin
+              wavesurfer: {
+                 // configure videojs-wavesurfer
+                 backend: 'MediaElement',
+                 displayMilliseconds: true,
+                 debug: true,
+                 waveColor: 'grey',
+                 progressColor: 'black',
+                 cursorColor: 'black',
+                 hideScrollbar: true
+             }
+          }
+        };
+
         $("#temporary-workaround").hide();
         $("#video-layer").show();
         $("#broadcaster-username")
         .text(json.broadcaster_username);
-        $("#video-stream").attr("src", 
+        /*$("#video-stream").attr("src", 
         json.hls_source);
         $("#video-stream")[0].load();
-        $("#video-stream")[0].play();
+        $("#video-stream")[0].play();*/
+
+        var player = videojs("video-stream", options, 
+        function() {
+           // print version information at startup
+           var msg = "Using video.js " + videojs.VERSION +
+           " with videojs-wavesurfer " +
+           videojs.getPluginVersion("wavesurfer") +
+           " and wavesurfer.js " + WaveSurfer.VERSION;
+           videojs.log(msg);
+
+           // load wav file from url
+           player.src({ src: json.hls_source });
+        });
 
         timeStarted = new Date().getTime();
     }
