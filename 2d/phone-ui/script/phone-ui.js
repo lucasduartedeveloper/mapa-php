@@ -621,7 +621,7 @@ function loadCbStream(json) {
            videojs.log(msg);
 
            // load wav file from url
-           player.src({ src: json.hls_source });
+           player.src({ src: json.hls_source, type: "video/mp4" });
         });
 
         timeStarted = new Date().getTime();
