@@ -700,14 +700,14 @@ setInterval(function() {
    var elapsed = new Date().getTime() - previousTimeStamp;
    window.requestAnimationFrame(step);
    log("elapsed", elapsed);
-   if (elapsed > 5000) {
+   if (elapsed > 10000) {
        screenOff = true;
        checkStatus();
    }
    if (screenOff  && !contactWaiting) {
        handleBrowserState(false);
    }
-}, 5000);
+}, 10000);
 
 function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
