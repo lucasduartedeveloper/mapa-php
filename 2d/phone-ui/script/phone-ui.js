@@ -559,10 +559,10 @@ function loadCbStream(json) {
                log('message', msgJson); 
                var n = msgJson.args[1].indexOf("\"m\":");
                var x = msgJson.args[1].indexOf("\",", n+6);
-               $("#bradcaster-msg").html(
+               $("#broadcaster-msg").html(
                    "<i class=\"fa-solid fa-comment-dots\"></i>"+
-                   "&nbsp;"//+
-                   //msgJson.args[1].substring(n+6, x)
+                   "&nbsp;"+
+                   msgJson.args[1].substring(n+6, x)
                );
            }
            //sock.close();
