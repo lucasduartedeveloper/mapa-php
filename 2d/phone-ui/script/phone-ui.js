@@ -113,8 +113,8 @@ var screens = "";
 $(document).ready(function() {
     log("screen size", sw +"x"+ sh);
 
-    $("#video-stream").attr("width", sw);
-    $("#video-stream").attr("height", sw*0.8);
+    $("#video-stream, #video-js").attr("width", sw);
+    $("#video-stream, #video-js").attr("height", sw*0.8);
     $("#temporary-workaround").css("width", sw+"px");
     $("#temporary-workaround").css("height", sw+"px");
 
