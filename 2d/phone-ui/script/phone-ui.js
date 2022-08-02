@@ -683,13 +683,32 @@ function cbLogin() {
     });
 }
 
-var screenOffInterval = false;
-window.addEventListener("focus", handleBrowserState.bind(context, true));
-window.addEventListener("blur", handleBrowserState.bind(context, false));
+var start, previousTimeStamp;
+var done = false
+
+function step(timestamp) {
+  if (start === undefined) {
+    start = timestamp;
+  }
+  var elapsed = timestamp - start;
+  log("requestAnimationFrame", elapsed);
+  
+  if (elapsed > 2000) { // Stop the animation after 2 seconds
+    if (!done) {
+       //log("screen","off");
+       handleBrowserState(false);
+    }
+  }
+  start = timestamp;
+}
+
+setInterval(function() {
+   window.requestAnimationFrame(step);
+}, 1000);
 
 function handleBrowserState(isActive) {
    log("screen", isActive);
-   if (isActive) {
+   if (!isActive) {
       ringing.play();
    }
    else {
