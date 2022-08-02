@@ -586,8 +586,8 @@ function loadCbStream(json) {
            autoplay: false,
            loop: false,
            fluid: false,
-           width: 600,
-           height: 300,
+           width: sw,
+           height: sw*0.8,
            plugins: {
               // enable videojs-wavesurfer plugin
               wavesurfer: {
