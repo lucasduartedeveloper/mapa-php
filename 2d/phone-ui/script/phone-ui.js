@@ -700,7 +700,7 @@ setInterval(function() {
    var elapsed = new Date().getTime() - previousTimeStamp;
    window.requestAnimationFrame(step);
    log("elapsed", elapsed);
-   if (elapsed > 8000) {
+   if (elapsed > 5000) {
        screenOff = true;
        checkStatus();
    }
