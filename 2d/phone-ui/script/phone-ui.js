@@ -237,7 +237,7 @@ setInterval(function() {
 $("#hang-phone").click(function() {
     audio.pause();
     //$("#video-stream")[0].pause();
-    window.pause();
+    window.player.pause();
     $("#video-layer").hide();
     
     if (sock) sock.close();
