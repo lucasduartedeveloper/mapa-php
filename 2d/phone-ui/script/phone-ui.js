@@ -692,17 +692,19 @@ function step(timestamp) {
   }
   var elapsed = timestamp - start;
   log("requestAnimationFrame", elapsed);
-  
-  if (elapsed > 2000) { // Stop the animation after 2 seconds
+ 
+  start = timestamp;
+}
+
+setInterval(function() {
+   var elapsed = new Date().getTime() - start;
+   if (elapsed > 2000) {
     if (!done) {
        //log("screen","off");
        handleBrowserState(false);
     }
   }
-  start = timestamp;
-}
 
-setInterval(function() {
    window.requestAnimationFrame(step);
 }, 1000);
 
@@ -713,10 +715,12 @@ function handleBrowserState(isActive) {
    }
    else {
       for (var k in contacts) {
-          if (contacts[k].type == "cb" && contacts[k].json) {
+          if (contacts[k].type == "cb" && 
+              contacts[k].json.room_status == "online") {
               ringing.pause();
               ringing.currentTime = 0;
               loadCbStream(contacts[k].json);
+              return;
           }
       }
    }
