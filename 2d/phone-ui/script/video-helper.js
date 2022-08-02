@@ -108,7 +108,7 @@ function loadVideoStream(info) {
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
 
-    window.player = videojs("video-js");
+    window.player = videojs("video-js", options);
     // print version information at startup
     var msg = "Using video.js " + videojs.VERSION +
     " with videojs-wavesurfer " +
