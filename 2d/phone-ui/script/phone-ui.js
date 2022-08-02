@@ -606,10 +606,10 @@ function loadCbStream(json) {
         $("#video-layer").show();
         $("#broadcaster-username")
         .text(json.broadcaster_username);
-        $("#video-stream").attr("src", 
+        /*$("#video-stream").attr("src", 
         json.hls_source);
         $("#video-stream")[0].load();
-        $("#video-stream")[0].play();
+        $("#video-stream")[0].play();*/
 
         var player = videojs("video-stream", options, 
         function() {
@@ -621,7 +621,10 @@ function loadCbStream(json) {
            videojs.log(msg);
 
            // load wav file from url
-           //player.src({ src: json.hls_source, type: "video/mp4" });
+           player.src({ 
+              src: json.hls_source, 
+              type: "application/x-mpegURL" 
+           });
         });
 
         timeStarted = new Date().getTime();
