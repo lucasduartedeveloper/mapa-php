@@ -217,9 +217,17 @@ setInterval(function() {
     $("#video-stream")
     .css("transform", "rotateZ("+angle+"deg)");*/
 
+    var timeWaiting = 
+    new Date().getTime() - previousTimeStamp;
+
     var timeStreaming = 
     new Date().getTime() - timeStarted;
 
+   $("#time-waiting").text(convertTime(timeWaiting));
+   $("#time-streaming").text(convertTime(timeStreaming));
+}, 1000);
+
+function convertTime() {
     var hours = 
     Math.floor(timeStreaming / 3600000)
     .toString().padStart(2,"0");
@@ -229,17 +237,9 @@ setInterval(function() {
     var seconds = 
     Math.floor((timeStreaming % 60000) / 1000)
     .toString().padStart(2,"0");
-    
-    /*log("time", 
-    hours+":"+
-    minutes+":"+
-    seconds);*/
 
-    $("#time-streaming").text(
-    hours+":"+
-    minutes+":"+
-    seconds);
-}, 1000);
+    return hours+":"+minutes+":"+seconds;
+}
 
 var counter = 0;
 var lastLightValue = 0;
@@ -303,7 +303,11 @@ var screenActive = false;
 function step(timestamp) {
    previousTimeStamp = new Date().getTime();
    if (contactWaiting) {
-      handleBrowserState(true);
+      //handleBrowserState(true);
+      
+      $("#broadcaster-username-waiting").text(
+      contactWaiting.json.broadcaster_username);
+      $("#call-layer").show();
    }
 }
 

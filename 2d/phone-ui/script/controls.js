@@ -1,3 +1,7 @@
+$("#answer-phone").click(function() {
+    handleBrowserState(true);
+});
+
 $("#hang-phone").click(function() {
     audio.pause();
     $("#video-stream")[0].pause();

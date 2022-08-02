@@ -74,6 +74,12 @@ echo "\n";
 </head>
 <body>
 
+<div id="call-layer" style="display:none">
+    <span id="broadcaster-username-waiting"></span>
+    <span id="time-waiting">00:00:00</span>
+    <i id="answer-phone" class="fa-solid fa-phone-slash"></i>
+</div>
+
 <div id="video-layer" style="display:none">
 <span id="broadcaster-username"></span>
 <span id="time-streaming">00:00:00</span>
