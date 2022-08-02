@@ -121,8 +121,8 @@ controls autoplay>
 <button value="0">0<span>+</span></button>
 <button value="#">#<span></span></button>
 <!-- <i id="phone" class="fa-solid fa-phone"></i> -->
-<img id="ball" src="img/ball.png" />
 <img id="money" src="img/money.jpeg" />
+<img id="ball" src="img/ball.png" />
 </div>
 
 <!-- 
