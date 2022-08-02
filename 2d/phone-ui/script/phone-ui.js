@@ -684,6 +684,13 @@ function cbLogin() {
     });
 }
 
+var screenOff = false;
+var contactWaiting = false;
+$("#auto").click(function() {
+   screenOff = !screenOff;
+   $("#auto").text("AUTO: "+(screenOff?"ON":"OFF"));
+});
+
 var previousTimeStamp;
 var screenActive = false;
 
@@ -694,16 +701,14 @@ function step(timestamp) {
    }
 }
 
-var screenOff = false;
-var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - previousTimeStamp;
    window.requestAnimationFrame(step);
    log("elapsed", elapsed);
-   if (elapsed > 10000) {
+   //if (elapsed > 10000) {
        screenOff = true;
        checkStatus();
-   }
+   //}
    if (screenOff  && !contactWaiting) {
        handleBrowserState(false);
    }

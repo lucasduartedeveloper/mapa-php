@@ -109,6 +109,8 @@ width="100" height="100" autoplay></video>
 </canvas> -->
 
 <p id="version-info">
+     <span id="auto">AUTO: OFF</span>
+     <br>
      <span id="counter">0</span>
      <br>
      <span>
