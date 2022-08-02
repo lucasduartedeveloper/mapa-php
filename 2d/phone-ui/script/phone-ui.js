@@ -698,13 +698,13 @@ var screenOff = false;
 var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
-   if (elapsed > 5000 && !contactWaiting) {
+   if (elapsed > 10000) {
        screenOff = true;
-       handleBrowserState(false);
+       checkStatus();
    }
    window.requestAnimationFrame(step);
-   if (screenOff) {
-       checkStatus();
+   if (screenOff  && !contactWaiting) {
+       handleBrowserState(false);
    }
 }, 5000);
 
