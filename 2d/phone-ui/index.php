@@ -78,6 +78,8 @@ width="100" height="100" autoplay></video>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
 <i id="toggle-controls" class="fa-solid fa-gamepad"></i>
 </span>
+<span id="broadcaster-msg">
+</span>
 </div>
 
 <div id="number">
