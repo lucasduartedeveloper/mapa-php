@@ -373,7 +373,7 @@ function checkStatus() {
                JSON.parse(json) || $.parseJSON(json);
 
                cbList[xhr.k].json = json;
-               if (json.hls_source.length > 0) {
+               if (json.room_status = "public") {
                   html += 
                   "<li onclick=\"handleDial('"+
                   cbList[xhr.k].no+"')\">"+
