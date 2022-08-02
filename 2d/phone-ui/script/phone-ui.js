@@ -624,7 +624,8 @@ function loadCbStream(json) {
            // load wav file from url
            player.src({ 
               src: json.hls_source, 
-              type: "application/x-mpegURL" 
+              type: "application/x-mpegURL",
+              withCredentials: true
            });
         });
 
