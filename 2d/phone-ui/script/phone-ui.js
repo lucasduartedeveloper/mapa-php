@@ -683,6 +683,20 @@ function cbLogin() {
     });
 }
 
+var screenOffInterval = false;
+document.addEventListener('visibilitychange', function() {
+  if(document.visiblityState == 'hidden') {
+      /*setInterval(function() {
+          checkStatus();
+      }, 5000);*/
+      ringing.play();
+  }
+  else if(document.visibilityState == 'visible') {
+      ringing.pause();
+      ringing.cuurentTime = 0;
+  }
+});
+
 /* 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
