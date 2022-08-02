@@ -708,7 +708,7 @@ function handleBrowserState(isActive) {
       ringing.pause();
       ringing.currentTime = 0;
       log("answered", 
-      contactWaiting[k].json.broadcaster_username);
+      contactWaiting.json.broadcaster_username);
       loadCbStream(contactWaiting[k].json);
       contactWaiting = false;
    }
