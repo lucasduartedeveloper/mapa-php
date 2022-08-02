@@ -694,18 +694,23 @@ function step(timestamp) {
    }
 }
 
+var screenOff = false;
 var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
    if (elapsed > 5000 && !contactWaiting) {
+       screenOff = true;
        handleBrowserState(false);
    }
    window.requestAnimationFrame(step);
-   checkStatus();
+   if (screenOff) {
+       checkStatus();
+   }
 }, 5000);
 
 function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
+      screenOff = false;
       ringing.pause();
       ringing.currentTime = 0;
       log("answered", 
