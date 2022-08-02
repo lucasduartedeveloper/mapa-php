@@ -562,7 +562,7 @@ function loadCbStream(json) {
                $("#bradcaster-msg").html(
                    "<i class=\"fa-solid fa-comment-dots\"></i>"+
                    "&nbsp;"+
-                   msgJson.args[1].substring(n+6, x)
+                   //msgJson.args[1].substring(n+6, x)
                );
            }
            //sock.close();
