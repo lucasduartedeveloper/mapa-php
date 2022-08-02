@@ -563,7 +563,7 @@ function loadCbStream(json) {
                var x = msgJson.args[1].indexOf("\",", n+6);
                var msg = msgJson.args[1]
                    .substring(n+6, x);
-               if (!msg.toLowerCase().includes("lovense") &&
+               if (!msg.toLowerCase().includes("lovense") || 
                     !msg.toLowerCase().includes("tipper")) {
                    $("#broadcaster-msg").html(
                        "<i class=\"fa-solid fa-comment-dots\"></i>"+
