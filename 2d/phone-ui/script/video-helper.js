@@ -79,7 +79,7 @@ function loadVideoStream(info) {
     var options = {
            controls: true,
            bigPlayButton: false,
-           autoplay: false,
+           autoplay: true,
            loop: false,
            fluid: false,
            width: sw,
