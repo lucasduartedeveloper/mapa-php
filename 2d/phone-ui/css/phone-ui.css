@@ -162,8 +162,10 @@ html, body {
   border: 2px solid gray;
 }
 
-#video-stream {
+#video-stream,
+#video-js {
    background: rgba(0,0,0,1);
+   border: 2px solid gray;
    width: 100vw;
 }
 
