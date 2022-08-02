@@ -714,7 +714,8 @@ var contactWaiting = false;
 $("#auto").click(function() {
     autoAnswer = !autoAnswer;
     $("#auto")
-    .text("AUTO"+(autoNo>0?" "+autoNo:"")+": "+
+    .text("AUTO"+
+    (autoNo>0?" "+contacts[autoNo].no:"")+": "+
     (autoAnswer?"ON":"OFF"));
     if (autoAnswer) {
         autoInterval = setInterval(function() {
