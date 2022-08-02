@@ -71,6 +71,38 @@ function loadTwitchStream(info) {
     timeStarted = new Date().getTime();
 }
 
+// configuration for video.js
+var options = {
+    controls: true,
+    bigPlayButton: false,
+    autoplay: true,
+    loop: false,
+    fluid: false,
+    width: sw,
+    height: sw*0.8,
+    plugins: {
+       // enable videojs-wavesurfer plugin
+       wavesurfer: {
+           // configure videojs-wavesurfer
+           backend: 'MediaElement',
+           displayMilliseconds: true,
+           debug: true,
+           waveColor: 'grey',
+           progressColor: 'black',
+           cursorColor: 'black',
+           hideScrollbar: true
+       }
+   }
+};
+
+window.player = videojs("video-js", options);
+    // print version information at startup
+    var msg = "Using video.js " + videojs.VERSION +
+    " with videojs-wavesurfer " +
+    videojs.getPluginVersion("wavesurfer") +
+    " and wavesurfer.js " + WaveSurfer.VERSION;
+    videojs.log(msg);
+
 function loadVideoStream(info) {    
     //log("video", info.data);  
     //download("teste.html", info.data);
@@ -83,38 +115,6 @@ function loadVideoStream(info) {
     info.url);
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
-
-    // configuration for video.js
-    var options = {
-           controls: true,
-           bigPlayButton: false,
-           autoplay: true,
-           loop: false,
-           fluid: false,
-           width: sw,
-           height: sw*0.8,
-           plugins: {
-              // enable videojs-wavesurfer plugin
-              wavesurfer: {
-                 // configure videojs-wavesurfer
-                 backend: 'MediaElement',
-                 displayMilliseconds: true,
-                 debug: true,
-                 waveColor: 'grey',
-                 progressColor: 'black',
-                 cursorColor: 'black',
-                 hideScrollbar: true
-             }
-          }
-    };
-
-    window.player = videojs("video-js", options);
-    // print version information at startup
-    var msg = "Using video.js " + videojs.VERSION +
-    " with videojs-wavesurfer " +
-    videojs.getPluginVersion("wavesurfer") +
-    " and wavesurfer.js " + WaveSurfer.VERSION;
-    videojs.log(msg);
 
     // load video from url
     /*player.src({ 
