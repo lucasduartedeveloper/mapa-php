@@ -39,7 +39,7 @@ $("#refresh").click(function() {
     checkStatus();
 });
 
-var ballRadius = sw * 0.2;
+var ballRadius = window.innerWidth * 0.2;
 var ballX = 0;
 var ballY = 0;
 $("#ball, #video-stream").on("touchstart", function(e) {
