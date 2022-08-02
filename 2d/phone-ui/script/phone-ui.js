@@ -684,32 +684,22 @@ function cbLogin() {
 }
 
 var start, previousTimeStamp;
-var done = false
+var screenActive = false;
 
 function step(timestamp) {
-  if (start === undefined) {
-    start = timestamp;
-  }
-  var elapsed = timestamp - start;
-  log("requestAnimationFrame", elapsed);
- 
-  start = timestamp;
+   start = timestamp;
 }
 
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
    if (elapsed > 2000) {
-    if (!done) {
-       //log("screen","off");
+       log("screen","off");
        handleBrowserState(false);
-    }
-  }
-
+   }
    window.requestAnimationFrame(step);
 }, 1000);
 
 function handleBrowserState(isActive) {
-   log("screen", isActive);
    if (!isActive) {
       ringing.play();
    }
