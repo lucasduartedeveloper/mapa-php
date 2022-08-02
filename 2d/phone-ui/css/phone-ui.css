@@ -220,6 +220,10 @@ li img {
    overflow-x: scroll;
 }
 
+#broadcaster-msg i {
+   color: #eae509;
+}
+
 #mini-skate {
    position: fixed;
    width: 100vw;
