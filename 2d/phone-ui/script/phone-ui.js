@@ -561,7 +561,7 @@ function loadCbStream(json) {
                var x = msgJson.args[1].indexOf("\",", n+6);
                $("#bradcaster-msg").html(
                    "<i class=\"fa-solid fa-comment-dots\"></i>"+
-                   "&nbsp;"+
+                   "&nbsp;"//+
                    //msgJson.args[1].substring(n+6, x)
                );
            }
