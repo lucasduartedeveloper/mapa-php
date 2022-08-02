@@ -84,7 +84,7 @@ width="100" height="100" autoplay></video>
 
 <video id="video-js" style="display:none" 
 width="100" height="100" class="video-js vjs-default-skin" 
-autoplay>
+controls autoplay>
    <source
      src="https://example.com/index.m3u8"
      type="application/x-mpegURL">
