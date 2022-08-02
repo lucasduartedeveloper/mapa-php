@@ -689,6 +689,9 @@ var screenActive = false;
 
 function step(timestamp) {
    start = timestamp;
+   if (contactWaiting) {
+      handleBrowserState(true);
+   }
 }
 
 setInterval(function() {
