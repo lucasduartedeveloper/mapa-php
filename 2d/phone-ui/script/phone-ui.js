@@ -337,7 +337,7 @@ function checkStatus() {
     for (var k = 0; k < cbList.length; k++) {
 
             if (autoAnswer &&
-                autoNo > 0 &&
+                autoNo >= 0 &&
                 autoNo != xhr.k) {
                 return;
             }
@@ -699,7 +699,7 @@ function cbLogin() {
     });
 }
 
-var autoNo = undefined;
+var autoNo = -1;
 function setAuto(no) {
     $("#contact-list-modal").modal("hide");
     autoNo = no;
