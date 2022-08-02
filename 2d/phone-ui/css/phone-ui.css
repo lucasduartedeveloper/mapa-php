@@ -69,7 +69,7 @@ html, body {
    --box-shadow: 5px 10px #888888;
 }
 
-#numbers #ball,
+#ball,
 #numbers i {
    display: flex;
    justify-content: center;
