@@ -68,12 +68,12 @@ $("#ball, #video-stream").on("touchmove", function(e) {
 });
 
 $("#ball, #video-stream").on("touchend", function(e) {
-    ballX = 0;
-    ballY = 0;
-
-    if (e.target.id == "ball")
+    if (e.target.id == "ball") {
+        ballX = 0;
+        ballY = 0;
         $("#ball").appendTo("#numbers");
-    $("#ball").css("position", "initial");
+        $("#ball").css("position", "initial");
+    }
     $("#ball").css("left", ballX+"px");
     $("#ball").css("top", ballY+"px");
 });
