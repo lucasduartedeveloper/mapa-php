@@ -698,7 +698,7 @@ var screenOff = false;
 var contactWaiting = false;
 setInterval(function() {
    var elapsed = new Date().getTime() - start;
-   if (elapsed > 10000) {
+   if (elapsed > 10000 && !contactWaiting) {
        screenOff = true;
        checkStatus();
    }
