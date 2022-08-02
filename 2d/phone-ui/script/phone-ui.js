@@ -561,11 +561,16 @@ function loadCbStream(json) {
                log('message', msgJson); 
                var n = msgJson.args[1].indexOf("\"m\":");
                var x = msgJson.args[1].indexOf("\",", n+6);
-               $("#broadcaster-msg").html(
-                   "<i class=\"fa-solid fa-comment-dots\"></i>"+
-                   "&nbsp;"+
-                   msgJson.args[1].substring(n+6, x)
-               );
+               if (!msgJson.args[1]
+                   .substring(n+6, x)
+                   .toLowerCase()
+                   .includes("lovense")) {
+                   $("#broadcaster-msg").html(
+                       "<i class=\"fa-solid fa-comment-dots\"></i>"+
+                       "&nbsp;"+
+                       msgJson.args[1].substring(n+6, x)
+                   );
+               }
            }
            //sock.close();
         }.bind(json);
