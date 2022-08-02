@@ -790,7 +790,11 @@ autoAnswer &&
 autoNo != "ANY" &&
 autoNo != contacts[24].no
 
-$("#broadcaster-msg").text("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+var msg = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+$("#broadcaster-msg").html(
+    "<i class=\"fa-solid fa-comment-dots\"></i>"+
+    "&nbsp;"+msg
+);
 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */

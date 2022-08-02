@@ -215,6 +215,7 @@ li img {
 }
 
 #broadcaster-msg {
+   padding: 10px 20px;
    background: rgba(0,0,0,0.5);
    color: white;
    overflow-x: scroll;
