@@ -706,7 +706,7 @@ setInterval(function() {
    window.requestAnimationFrame(step);
    log("elapsed", elapsed);
    //if (elapsed > 10000) {
-       screenOff = true;
+       //screenOff = true;
        checkStatus();
    //}
    if (screenOff  && !contactWaiting) {
@@ -716,7 +716,7 @@ setInterval(function() {
 
 function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
-      screenOff = false;
+      $("#auto").trigger("click");
       ringing.pause();
       ringing.currentTime = 0;
       log("answered", 
