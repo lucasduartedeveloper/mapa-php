@@ -557,8 +557,8 @@ function loadCbStream(json) {
            if (msgJson.method == "onRoomMsg" &&
                msgJson.args[0] == this.broadcaster_username) {
                log('message', msgJson); 
-               var n = msgJson.indexOf("\"m\":");
-               var x = msgJson.indexOf("\",", n+6);
+               var n = msgJson.args[1].indexOf("\"m\":");
+               var x = msgJson.args[1].indexOf("\",", n+6);
                $("#bradcaster-msg").text(
                    msgJson.args[1].substring(n+6, x);
                );
