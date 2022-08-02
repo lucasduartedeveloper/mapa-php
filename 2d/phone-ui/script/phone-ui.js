@@ -339,7 +339,7 @@ function checkStatus() {
             if (autoAnswer &&
                 autoNo != "ANY" &&
                 autoNo != cbList[k].no) {
-                break;
+                continue;
             }
 
         setTimeout(function() {
@@ -776,6 +776,10 @@ function handleBrowserState(isActive) {
 autoAnswer = true;
 autoNo = "025";
 checkStatus();
+
+autoAnswer &&
+autoNo != "ANY" &&
+autoNo != contacts[24].no
 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
