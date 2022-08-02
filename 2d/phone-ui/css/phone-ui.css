@@ -147,6 +147,11 @@ html, body {
   font-size: 30px;
 }
 
+#like {
+  color: "red";
+  font-size: 30px;
+}
+
 #time-streaming {
   color: white;
   font-size: 50px;

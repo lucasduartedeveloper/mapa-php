@@ -74,6 +74,7 @@ echo "\n";
 <video id="video-stream" style="display:none" 
 width="100" height="100" autoplay></video>
 <span id="controls">
+<i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
 <i id="toggle-controls" class="fa-solid fa-gamepad"></i>
