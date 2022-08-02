@@ -692,11 +692,25 @@ function cbLogin() {
     });
 }
 
-var screenOff = false;
+var autoInterval = 0;
+var autoAnswer = false;
 var contactWaiting = false;
 $("#auto").click(function() {
-   screenOff = !screenOff;
-   $("#auto").text("AUTO: "+(screenOff?"ON":"OFF"));
+    autoAnswer = !autoAnswer;
+    $("#auto").text("AUTO: "+(autoAnswer?"ON":"OFF"));
+    if (autoAnswer) {
+        autoInterval = setInterval(function() {
+           var elapsed = 
+           new Date().getTime() - previousTimeStamp;
+           window.requestAnimationFrame(step);
+           log("elapsed", elapsed);
+           checkStatus();
+           if (!contactWaiting) {
+               handleBrowserState(false);
+           }
+       }, 10000);
+    }
+    else { clearInterval(autoInterval); }
 });
 
 var previousTimeStamp;
@@ -708,19 +722,6 @@ function step(timestamp) {
       handleBrowserState(true);
    }
 }
-
-setInterval(function() {
-   var elapsed = new Date().getTime() - previousTimeStamp;
-   window.requestAnimationFrame(step);
-   log("elapsed", elapsed);
-   //if (elapsed > 10000) {
-       //screenOff = true;
-       checkStatus();
-   //}
-   if (screenOff  && !contactWaiting) {
-       handleBrowserState(false);
-   }
-}, 10000);
 
 function handleBrowserState(isActive) {
    if (isActive && contactWaiting) {
