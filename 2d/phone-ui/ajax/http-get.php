@@ -4,7 +4,18 @@ $sql ="";
 try {
   if (isset($_POST["url"])) {
     $url = $_POST["url"];
-    echo file_get_contents($url);
+    if (isset($_POST["proxy"]) && $_POST["proxy"] != "none") {
+        $proxy = $_POST["proxy"];
+        $aContext = array(
+            "http" => array(
+                "proxy" => $proxy,
+             ),
+        );
+        echo file_get_contents($url, false, $aContext);
+    }
+    else {
+        echo file_get_contents($url);
+    }
   }
 }
 catch (PDOException $e) {
