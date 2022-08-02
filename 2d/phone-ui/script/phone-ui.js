@@ -373,7 +373,8 @@ function checkStatus() {
                JSON.parse(json) || $.parseJSON(json);
 
                cbList[xhr.k].json = json;
-               if (json.room_status = "public") {
+               if (json.room_status == "public" &&
+                  json.hls_source.length > 0) {
                   html += 
                   "<li onclick=\"handleDial('"+
                   cbList[xhr.k].no+"')\">"+
@@ -383,8 +384,9 @@ function checkStatus() {
                   " <b>[online]</b></li>";
                   onlineCount++;
                }
+               else { n = 1; }
            }
-           else  {
+           if (n < 0 || n == 1) {
                var n = cbList[xhr.k].url.indexOf(".com/");
                var x = cbList[xhr.k].url.indexOf("/", n+5);
 
