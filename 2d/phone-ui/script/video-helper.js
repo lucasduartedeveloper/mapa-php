@@ -51,7 +51,8 @@ function loadCbStream(json) {
 
         loadVideoStream({
             title: json.broadcaster_username,
-            url: json.hls_source
+            url: json.hls_source,
+            type: "'application/x-mpegURL"
         });
     }
     else {
@@ -115,17 +116,11 @@ function loadVideoStream(info) {
     " and wavesurfer.js " + WaveSurfer.VERSION;
     videojs.log(msg);
 
-    /*// load wav file from url
+    // load video from url
     player.src({ 
-        src: json.hls_source, 
-        type: "application/x-mpegURL",
+        src: info.url, 
+        type: info.type,
         withCredentials: true
-    });*/
-
-    player.src({
-       src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-       type: 'application/x-mpegURL',
-       withCredentials: true
     });
 
     //loadVideoOnIframe(info.url);
@@ -133,14 +128,11 @@ function loadVideoStream(info) {
 }
 
 function loadUploadedVideo(url) {
-    $("#temporary-workaround").hide();
-    $("#video-layer").show();
-    $("#broadcaster-username").text(url);
-    $("#video-stream").attr("src", url);
-    $("#video-stream")[0].load();
-    $("#video-stream")[0].play();
-
-    timeStarted = new Date().getTime();
+    loadVideoStream({
+         title: url,
+         url: url,
+         type: "video/mp4"
+    });
 }
 
 function loadAudio(url) {
