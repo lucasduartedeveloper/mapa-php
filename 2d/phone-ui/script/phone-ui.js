@@ -713,8 +713,8 @@ var contactWaiting = false;
 $("#auto").click(function() {
     autoAnswer = !autoAnswer;
     $("#auto")
-    .text("AUTO: "+
-    (autoAnswer?(autoNo>0?autoNo:"ON"):"OFF"));
+    .text("AUTO"+(autoNo>0?" "+autoNo:"")+": "+
+    (autoAnswer?"ON":"OFF"));
     if (autoAnswer) {
         autoInterval = setInterval(function() {
            var elapsed = 
