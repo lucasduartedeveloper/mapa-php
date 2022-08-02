@@ -694,6 +694,7 @@ function cbLogin() {
 
 var autoNo = undefined;
 function setAuto(no) {
+    $("#contact-list-modal").modal("hide");
     autoNo = no;
     log("auto", no);
     $("#auto").trigger("click");
