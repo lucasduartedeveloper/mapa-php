@@ -42,3 +42,7 @@ function uploadImage(){
         reader.readAsDataURL(file);
     }
 };
+
+function removeBackground() {
+    
+}
