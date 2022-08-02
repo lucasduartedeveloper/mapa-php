@@ -389,7 +389,8 @@ function checkStatus() {
                var x = cbList[xhr.k].url.indexOf("/", n+5);
 
                html += 
-               "<li onclick=\"setAuto("+xhr.k+")\">"+
+               "<li onclick=\"setAuto('"+
+               cbList[xhr.k].no+"')\">"+
                "<img src=\"img/placeholder.png\"/>"+
                cbList[xhr.k].no+": "+
                cbList[xhr.k].url.substring(n+5, x)+"</li>";
@@ -730,9 +731,9 @@ $("#auto").click(function() {
        }, 10000);
     }
     else { 
+       clearInterval(autoInterval); 
        autoNo = "ANY";
        checkStatus();
-       clearInterval(autoInterval); 
     }
 });
 
