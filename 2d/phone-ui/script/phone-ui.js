@@ -688,6 +688,7 @@ window.addEventListener("focus", handleBrowserState.bind(context, true));
 window.addEventListener("blur", handleBrowserState.bind(context, false));
 
 function handleBrowserState(isActive) {
+   log("screen", isActive);
    if (isActive) {
       ringing.play();
    }
