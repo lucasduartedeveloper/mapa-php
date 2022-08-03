@@ -97,6 +97,8 @@ var contacts = [
       url: "video/upload-test-2.abc" },
     { no: "903", type: "uploaded-video", 
       url: "video/upload-test-7.abc" },
+    { no: "904", type: "uploaded-video", 
+      url: "video/upload-test-8.abc" },
     { no: "910", type: "uploaded-video", 
       url: "video/upload-test-3.abc" },
     { no: "911", type: "uploaded-video", 
@@ -368,6 +370,10 @@ $("#broadcaster-msg").html(
     "<i class=\"fa-solid fa-comment-dots\"></i>"+
     "&nbsp;"+msg
 );
+
+previousTimeStamp = new Date().getTime();
+setAuto("010");
+contactWaiting = contacts[10];
 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
