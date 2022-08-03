@@ -77,6 +77,11 @@ function checkStatus() {
             var n = data
             .indexOf("window.initialRoomDossier = \"{");
 
+            var avatarImg = 
+            cbList[xhr.k].avatar ? 
+            cbList[xhr.k].avatar : 
+            "img/placeholder.png";
+
             if (n > 0) {
                 var x = data
                 .indexOf("}\";");
@@ -96,7 +101,7 @@ function checkStatus() {
                   html += 
                   "<li onclick=\"handleDial('"+
                   cbList[xhr.k].no+"')\">"+
-                  "<img src=\"img/placeholder.png\"/>"+
+                 "<img src=\""+avatarImg+"\"/>"+
                   cbList[xhr.k].no+": "+
                   json.broadcaster_username+
                   " <b>[online]</b></li>";
@@ -111,7 +116,7 @@ function checkStatus() {
                html += 
                "<li onclick=\"setAuto('"+
                cbList[xhr.k].no+"')\">"+
-               "<img src=\"img/placeholder.png\"/>"+
+               "<img src=\""+avatarImg+"\"/>"+
                cbList[xhr.k].no+": "+
                cbList[xhr.k].url.substring(n+5, x)+"</li>";
            }
