@@ -1,4 +1,5 @@
 $("#answer-phone").click(function() {
+    $("#call-layer").hide();
     handleBrowserState(true);
 });
 
