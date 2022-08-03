@@ -301,14 +301,13 @@ var previousTimeStamp;
 var screenActive = false;
 
 function step(timestamp) {
-   previousTimeStamp = new Date().getTime();
    if (contactWaiting) {
       //handleBrowserState(true);
-      
       $("#broadcaster-username-waiting").text(
       contactWaiting.json.broadcaster_username);
       $("#call-layer").show();
    }
+   else { previousTimeStamp = new Date().getTime(); }
 }
 
 function handleBrowserState(isActive) {
