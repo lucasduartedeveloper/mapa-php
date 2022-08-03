@@ -160,7 +160,7 @@ controls autoplay>
       <div class="modal-header">
         <h5  class="modal-title"><b>CONTACT LIST</b></h5>
         <br>
-        <div class="form-check">
+        <div style="display:none" class="form-check">
         <input class="form-check-input" 
         type="checkbox" value="" checked
         id="offline-checkbox">

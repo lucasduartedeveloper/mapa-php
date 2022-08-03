@@ -300,6 +300,9 @@ li img {
    opacity: 0.5;
 }
 
+.form-check {
+}
+
 .lds-circle {
   transform: translateZ(1px);
   --margin: 8px;
