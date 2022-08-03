@@ -50,7 +50,8 @@ function loadCbStream(json) {
         }.bind(json);
 
         loadVideoStream({
-            title: json.broadcaster_username,
+            title: json.broadcaster_username +
+            " ("+json.num_viewers+")",
             url: json.hls_source,
             type: "'application/x-mpegURL"
         });
