@@ -105,7 +105,7 @@ function checkStatus() {
                  "<span class=\"live-indicator\">LIVE</span>"+
                   cbList[xhr.k].no+": "+
                   json.broadcaster_username+
-                  " <b>[online]</b></li>";
+                  " ("+json.num_viewers+")</li>";
                   onlineCount++;
                }
                else { n = 1; }
@@ -179,7 +179,7 @@ function checkStatus() {
                 "<img src=\""+avatarImg+"\"/>"+  
                 "<span class=\"live-indicator\">LIVE</span>"+
                 twList[xhr.k].no+": "+
-                channelName+" [online]</li>";
+                channelName+" ("++")</li>";
                 onlineCount++;
 
                 total++;
