@@ -178,7 +178,8 @@ function checkStatus() {
             .indexOf(">", n+17);
             x = data.indexOf("viewers", n);
 
-            var viewers = n > 0  && (x-n)<10 ? data.substring(n+1, x) : 0;
+            var viewers = n > 0  && (x-n)<10 ? 
+            data.substring(n+1, x-1).replace(",","") : 0;
             //log("viewers", data.substring(n, x));
 
             if (online) {
