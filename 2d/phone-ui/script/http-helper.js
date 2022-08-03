@@ -179,7 +179,7 @@ function checkStatus() {
                 "<img src=\""+avatarImg+"\"/>"+  
                 "<span class=\"live-indicator\">LIVE</span>"+
                 twList[xhr.k].no+": "+
-                channelName+" ("++")</li>";
+                channelName+" ("+0+")</li>";
                 onlineCount++;
 
                 total++;
