@@ -249,7 +249,7 @@ ul li .live-indicator {
    padding: 2px 2px;
    width: 30px;
    left: 10px;
-   bottom: 0px;
+   bottom: -10px;
    border-radius: 3px;
    font-size: 10px;
    text-align: center;
