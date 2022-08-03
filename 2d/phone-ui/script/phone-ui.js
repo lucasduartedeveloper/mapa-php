@@ -304,7 +304,7 @@ function step(timestamp) {
    if (contactWaiting) {
       //handleBrowserState(true);
 
-      $("#broadcaster-username-waiting").text(
+      $("#broadcaster-waiting-username").text(
       contactWaiting.json.broadcaster_username);
       $("#call-layer").show();
    }

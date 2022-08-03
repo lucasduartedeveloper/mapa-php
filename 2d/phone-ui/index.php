@@ -75,9 +75,11 @@ echo "\n";
 <body>
 
 <div id="call-layer" style="display:none">
-    <span id="broadcaster-username-waiting"></span>
+    <span id="broadcaster-waiting-username"></span>
     <span id="time-waiting">00:00:00</span>
-    <i id="answer-phone" class="fa-solid fa-phone-slash"></i>
+    <span class="controls">
+        <i id="answer-phone" class="fa-solid fa-phone"></i>
+    </span>
 </div>
 
 <div id="video-layer" style="display:none">
@@ -96,7 +98,7 @@ controls autoplay>
      type="application/x-mpegURL">
 </video>
 
-<span id="controls">
+<span class="controls">
 <i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>

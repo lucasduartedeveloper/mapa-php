@@ -142,14 +142,15 @@ html, body {
    overflow-y: scroll;
    z-index: 99999;
 }
-
+,
+#broadcaster-waiting-username,
 #broadcaster-username {
   width: 100vw;
   color: white;
   font-size: 30px;
 }
 
-#controls {
+.controls {
   width: 100vw;
   color: white;
   font-size: 50px;
@@ -165,6 +166,7 @@ html, body {
   font-size: 30px;
 }
 
+#time-waiting,
 #time-streaming {
   color: white;
   font-size: 50px;
