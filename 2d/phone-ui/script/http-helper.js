@@ -176,7 +176,8 @@ function checkStatus() {
                 html += 
                 "<li onclick=\"handleDial('"+
                 twList[xhr.k].no+"')\">"+
-                "<img src=\""+avatarImg+"\"/>"+
+                "<img src=\""+avatarImg+"\"/>"+  
+                "<span class=\"live-indicator\">LIVE</span>"+
                 twList[xhr.k].no+": "+
                 channelName+" [online]</li>";
                 onlineCount++;
