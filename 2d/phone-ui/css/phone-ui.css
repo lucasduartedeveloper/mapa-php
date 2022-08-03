@@ -242,6 +242,7 @@ ul li {
 }
 
 ul li .live-indicator {
+   font-family: Helvetica, Arial, sans-serif;
    background: red;
    position: absolute;
    font-weight: 900;
@@ -251,6 +252,7 @@ ul li .live-indicator {
    bottom: 0px;
    border-radius: 3px;
    font-size: 10px;
+   text-align: center;
    color: white;
 }
 
