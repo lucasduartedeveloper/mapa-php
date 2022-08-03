@@ -37,7 +37,7 @@ var contacts = [
      url: "https://m.chaturbate.com/girl_of_yourdreams/" },
     { no: "013", type: "cb",
      url: "https://m.chaturbate.com/mynameisnikki/" },
-    { no: "014", type: "cb",
+    { no: "014", type: "cb", avatar: "emma_lu1.jpg",
      url: "https://m.chaturbate.com/emma_lu1/" },
     { no: "015", type: "cb",
      url: "https://m.chaturbate.com/vany_love/" },
