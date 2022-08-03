@@ -1,8 +1,5 @@
 $("#answer-phone").click(function() {
     $("#call-layer").hide();
-    video = false;
-    $("#toggle-video").trigger("click");
-
     handleBrowserState(true);
 });
 
