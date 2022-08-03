@@ -179,6 +179,7 @@ function checkStatus() {
             x = data.indexOf("viewers", n);
 
             var viewers = n > 0 ? data.substring(n, x) : 0;
+            log("status-text", data.substring(n, x));
 
             if (online) {
                 html += 
