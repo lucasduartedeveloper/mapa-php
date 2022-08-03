@@ -227,15 +227,15 @@ setInterval(function() {
    $("#time-streaming").text(convertTime(timeStreaming));
 }, 1000);
 
-function convertTime() {
+function convertTime(time) {
     var hours = 
-    Math.floor(timeStreaming / 3600000)
+    Math.floor(time / 3600000)
     .toString().padStart(2,"0");
     var minutes = 
-    Math.floor((timeStreaming % 3600000) / 60000)
+    Math.floor((time % 3600000) / 60000)
     .toString().padStart(2,"0");
     var seconds = 
-    Math.floor((timeStreaming % 60000) / 1000)
+    Math.floor((time % 60000) / 1000)
     .toString().padStart(2,"0");
 
     return hours+":"+minutes+":"+seconds;
