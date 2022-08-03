@@ -31,7 +31,7 @@ var contacts = [
      url: "https://m.chaturbate.com/iren_wagner/" },
     { no: "010", type: "cb", avatar: "lillypixel.jpg",
       url: "https://m.chaturbate.com/lilypixel/" },
-    { no: "011", type: "cb",
+    { no: "011", type: "cb", avatar: "sasha_ursx.jpg",
      url: "https://m.chaturbate.com/sasha_ursx/" },
     { no: "012", type: "cb", avatar: "girl_of_yourdreams.jpg",
      url: "https://m.chaturbate.com/girl_of_yourdreams/" },
