@@ -282,9 +282,9 @@ li img {
 
 .lds-circle {
   transform: translateZ(1px);
-  margin: 8px;
+  --margin: 8px;
   border-radius: 50%;
-  background: #fff;
+  --background: #fff;
   animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 @keyframes lds-circle {
