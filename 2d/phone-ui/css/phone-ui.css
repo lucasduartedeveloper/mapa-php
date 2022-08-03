@@ -283,7 +283,7 @@ li img {
 .lds-circle {
   transform: translateZ(1px);
 }
-.lds-circle > div {
+.lds-circle > img {
   margin: 8px;
   border-radius: 50%;
   background: #fff;
