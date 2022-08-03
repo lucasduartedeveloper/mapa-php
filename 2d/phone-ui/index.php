@@ -168,7 +168,6 @@ controls autoplay>
         for="flexCheckDefault">
         Offline
         </label>
-        <div class="form-check">
         <input class="form-check-input" 
         type="checkbox" value="" checked
         id="offline-checkbox">
@@ -176,7 +175,6 @@ controls autoplay>
         for="flexCheckDefault">
         Twitch
         </label>
-        <div class="form-check">
         <input class="form-check-input" 
         type="checkbox" value="" checked
         id="offline-checkbox">
@@ -184,7 +182,6 @@ controls autoplay>
         for="flexCheckDefault">
         Cb
         </label>
-        <div class="form-check">
         <input class="form-check-input" 
         type="checkbox" value="" checked
         id="offline-checkbox">
