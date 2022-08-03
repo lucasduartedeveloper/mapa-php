@@ -168,6 +168,30 @@ controls autoplay>
         for="flexCheckDefault">
         Offline
         </label>
+        <div class="form-check">
+        <input class="form-check-input" 
+        type="checkbox" value="" checked
+        id="offline-checkbox">
+        <label class="form-check-label" 
+        for="flexCheckDefault">
+        Twitch
+        </label>
+        <div class="form-check">
+        <input class="form-check-input" 
+        type="checkbox" value="" checked
+        id="offline-checkbox">
+        <label class="form-check-label" 
+        for="flexCheckDefault">
+        Cb
+        </label>
+        <div class="form-check">
+        <input class="form-check-input" 
+        type="checkbox" value="" checked
+        id="offline-checkbox">
+        <label class="form-check-label" 
+        for="flexCheckDefault">
+        Others
+        </label>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
