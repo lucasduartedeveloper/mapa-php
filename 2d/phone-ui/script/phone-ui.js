@@ -341,6 +341,7 @@ function handleBrowserState(isActive) {
               contacts[k].json &&
               contacts[k].json.room_status == "public") {
               contactWaiting = contacts[k];
+              previousTimeStamp = new Date().getTime();
               //log("contactWaiting", contactWaiting);
               ringing.play();
               return;
