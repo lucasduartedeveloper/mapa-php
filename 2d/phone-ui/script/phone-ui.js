@@ -304,6 +304,14 @@ function step(timestamp) {
    if (contactWaiting) {
       //handleBrowserState(true);
 
+     var avatarImg = 
+     contactWaiting.avatar ? 
+     "img/avatar/"+contactWaiting.avatar : 
+     "img/placeholder.png";
+
+     $("#broadcaster-avatar").attr("src",
+     avatarImg);
+
       $("#broadcaster-waiting-username").text(
       contactWaiting.json.broadcaster_username);
       $("#call-layer").show();

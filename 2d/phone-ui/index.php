@@ -75,6 +75,7 @@ echo "\n";
 <body>
 
 <div id="call-layer" style="display:none">
+    <img id="broadcaster-avatar" src=""/>
     <span id="broadcaster-waiting-username"></span>
     <span id="time-waiting">00:00:00</span>
     <span class="controls">

@@ -79,7 +79,7 @@ function checkStatus() {
 
             var avatarImg = 
             cbList[xhr.k].avatar ? 
-            cbList[xhr.k].avatar : 
+            "img/avatar/"+cbList[xhr.k].avatar : 
             "img/placeholder.png";
 
             if (n > 0) {
