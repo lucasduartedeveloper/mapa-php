@@ -242,7 +242,7 @@ ul li {
 }
 
 ul li .live-indicator {
-   background: purple;
+   background: red;
    position: absolute;
    padding: 10px 10px;
    left: -50px;
