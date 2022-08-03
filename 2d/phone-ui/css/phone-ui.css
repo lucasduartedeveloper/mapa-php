@@ -238,7 +238,15 @@ ul li {
    margin: 10px 0px;
 }
 
-#broadcaster-avatar, 
+#broadcaster-avatar, {
+   object-fit: fill;
+   width: 100px;
+   height: 100px;
+   border: 2px solid #eae509;
+   padding: 4px;
+   border-radius: 50%;
+}
+
 li img {
    object-fit: fill;
    width: 50px;
