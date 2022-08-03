@@ -126,7 +126,22 @@ html, body {
    height: 90px;
 }
 
-#call-layer, 
+#call-layer {
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   background: #343434;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   overflow-y: scroll;
+   z-index: 99999;
+}
+
 #video-layer {
    position: fixed;
    left: 0px;
