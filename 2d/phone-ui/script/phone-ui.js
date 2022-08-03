@@ -303,6 +303,7 @@ var screenActive = false;
 function step(timestamp) {
    if (contactWaiting) {
       //handleBrowserState(true);
+
       $("#broadcaster-username-waiting").text(
       contactWaiting.json.broadcaster_username);
       $("#call-layer").show();
