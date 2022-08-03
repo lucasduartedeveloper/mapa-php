@@ -172,6 +172,14 @@ function checkStatus() {
             data.substring(n, x).toLowerCase().includes("live");
             //log("status-text", data.substring(n, x));
 
+            n = data
+            .indexOf("</span> with <span");
+            n = data
+            .indexOf(">", n+17);
+            x = data.indexOf("viewers", n);
+
+            var viewers = n > 0 ? data.substring(n, x) : 0;
+
             if (online) {
                 html += 
                 "<li onclick=\"handleDial('"+
@@ -179,7 +187,7 @@ function checkStatus() {
                 "<img src=\""+avatarImg+"\"/>"+  
                 "<span class=\"live-indicator\">LIVE</span>"+
                 twList[xhr.k].no+": "+
-                channelName+" ("+0+")</li>";
+                channelName+" ("+viewers+")</li>";
                 onlineCount++;
 
                 total++;
