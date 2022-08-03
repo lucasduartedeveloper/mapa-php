@@ -238,7 +238,7 @@ ul li {
    margin: 10px 0px;
 }
 
-#broadcaster-avatar, {
+#broadcaster-avatar {
    object-fit: fill;
    width: 100px;
    height: 100px;
