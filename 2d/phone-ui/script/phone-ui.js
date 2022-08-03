@@ -215,9 +215,11 @@ function handleDial(value, typed=false) {
 
 var angle = 0;
 setInterval(function() {
-    /*angle++;
+    angle++;
     $("#video-stream")
-    .css("transform", "rotateZ("+angle+"deg)");*/
+    .css("transform", "translateX("+
+    ((9.8/gyro.accX)*sw)
+    +"px)");
 
     var timeWaiting = 
     new Date().getTime() - previousTimeStamp;
