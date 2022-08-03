@@ -218,7 +218,7 @@ setInterval(function() {
     angle++;
     $("#video-stream")
     .css("transform", "translateX("+
-    (((gyro.accX/18.6)*sw))
+    (((gyro.accX/-18.6)*sw))
     +"px)");
 
     var timeWaiting = 
