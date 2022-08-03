@@ -253,6 +253,10 @@ window.addEventListener('devicelight', function(event) {
     counter++;
     $("#counter").text(event.value +":" + counter);
 
+    if (value > 1000 && contactWaiting) {
+       $("#answer-phone").trigger("click");
+    }
+
     return;
     var value = event.value;
     if (value > 1000 && lastContact.length > 0) {
