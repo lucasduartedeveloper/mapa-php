@@ -244,7 +244,8 @@ ul li {
 ul li .live-indicator {
    background: red;
    position: absolute;
-   padding: 10px 10px;
+   font-weight: 900;
+   padding: 2px 2px;
    left: 0px;
    bottom: 0px;
    border-radius: 5px;
