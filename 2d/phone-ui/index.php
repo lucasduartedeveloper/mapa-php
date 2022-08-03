@@ -161,10 +161,11 @@ controls autoplay>
         <h5  class="modal-title"><b>CONTACT LIST</b></h5>
         <div class="form-check">
         <input class="form-check-input" 
-        type="checkbox" value="" id="flexCheckDefault">
+        type="checkbox" value="" checked
+        id="offline-checkbox">
         <label class="form-check-label" 
         for="flexCheckDefault">
-        Show Offline
+        Offline
         </label>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
