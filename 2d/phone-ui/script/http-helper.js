@@ -102,6 +102,7 @@ function checkStatus() {
                   "<li onclick=\"handleDial('"+
                   cbList[xhr.k].no+"')\">"+
                  "<img src=\""+avatarImg+"\"/>"+
+                 "<span class=\"live-indicator\">LIVE</span>"+
                   cbList[xhr.k].no+": "+
                   json.broadcaster_username+
                   " <b>[online]</b></li>";

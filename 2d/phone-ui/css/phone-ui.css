@@ -237,7 +237,15 @@ ul {
 }
 
 ul li {
+   position: relative;
    margin: 10px 0px;
+}
+
+ul li .live-indicator {
+   position: absolute;
+   padding: 10px 10px;
+   border-radius: 5px;
+   color: white;
 }
 
 #broadcaster-avatar {
