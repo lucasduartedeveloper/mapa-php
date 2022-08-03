@@ -1,5 +1,9 @@
 $("#answer-phone").click(function() {
     $("#call-layer").hide();
+
+    video = false;
+    $("#toggle-video").trigger("click");
+
     handleBrowserState(true);
 });
 
@@ -24,7 +28,7 @@ $("#toggle-controls").click(function () {
 var video = false;
 $("#toggle-video").click(function () {
     video = !video;
-    if (video) {
+    if (!video) {
         $("#video-stream").hide(); 
         $("#video-js").hide();
     }

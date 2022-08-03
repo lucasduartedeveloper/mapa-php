@@ -336,9 +336,6 @@ function handleBrowserState(isActive) {
       contactWaiting.json.broadcaster_username);
       loadCbStream(contactWaiting.json);
       contactWaiting = false;
-
-      video = false;
-      $("#toggle-video").trigger("click");
    }
    else {
       log("screen","off");
