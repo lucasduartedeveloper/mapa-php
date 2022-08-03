@@ -168,7 +168,7 @@ function checkStatus() {
             x = data.indexOf("</p>", n);
 
             var online = 
-            data.substring(n, x).includes("LIVE");
+            data.substring(n, x).toLowerCase().includes("live");
             //log("status-text", data.substring(n, x));
 
             if (online) {
