@@ -280,6 +280,10 @@ li img {
    height: 100vw;
 }
 
+.low-opacity {
+   opacity: 0.5;
+}
+
 .lds-circle {
   transform: translateZ(1px);
   --margin: 8px;

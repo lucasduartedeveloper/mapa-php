@@ -114,7 +114,7 @@ function checkStatus() {
                var x = cbList[xhr.k].url.indexOf("/", n+5);
 
                html += 
-               "<li onclick=\"setAuto('"+
+               "<li class=\"low-opacity\" onclick=\"setAuto('"+
                cbList[xhr.k].no+"')\">"+
                "<img src=\""+avatarImg+"\"/>"+
                cbList[xhr.k].no+": "+
@@ -167,13 +167,26 @@ function checkStatus() {
             .indexOf("class=\"ScChannelStatusTextIndicator");
             x = data.indexOf("</p>", n);
 
-            var online = 
+            var online = n > 0 && 
             data.substring(n, x).toLowerCase().includes("live");
             //log("status-text", data.substring(n, x));
 
             if (online) {
                 html += 
                 "<li onclick=\"handleDial('"+
+                twList[xhr.k].no+"')\">"+
+                "<img src=\""+avatarImg+"\"/>"+
+                twList[xhr.k].no+": "+
+                channelName+" [online]</li>";
+                onlineCount++;
+
+                total++;
+                //log("total",total);
+                $("#contact-list").html(html+"</ul>");
+            }
+            else {
+                html += 
+                "<li class=\"low-opacity\" onclick=\"handleDial('"+
                 twList[xhr.k].no+"')\">"+
                 "<img src=\""+avatarImg+"\"/>"+
                 twList[xhr.k].no+": "+
