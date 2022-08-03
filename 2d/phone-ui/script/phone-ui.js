@@ -21,7 +21,7 @@ var contacts = [
      url: "https://m.chaturbate.com/w0wgirls/" },
     { no: "005", type: "cb",
      url: "https://m.chaturbate.com/artoftease/" },
-    { no: "006", type: "cb", avatar: "_blackbee_.jpeg",
+    { no: "006", type: "cb", avatar: "_blackbee_.jpg",
      url: "https://m.chaturbate.com/_blackbee_/" },
     { no: "007", type: "cb",
      url: "https://m.chaturbate.com/emyii/" },
