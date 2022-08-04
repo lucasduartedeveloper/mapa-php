@@ -139,12 +139,15 @@ $(document).ready(function() {
     
     if (sw>=sh) {
         $("#app").css("width", (sw/1.858)+"px");
-        $("#number")
+        $("#numbers, #number")
         .css("width", (sw/1.858)+"px");
         $("#numbers button")
         .css("width", ((sw/1.858)*0.2)+"px");
         $("#numbers button")
         .css("height", ((sw/1.858)*0.2)+"px");
+        $("#numbers button")
+        .css("margin", 
+        ((sw/1.858)*0.03)+"px "+((sw/1.858)*0.05)+"px");
         //$("#number, #numbers").hide();
     }
     else {
