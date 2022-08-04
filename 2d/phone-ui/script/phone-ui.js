@@ -138,7 +138,8 @@ $(document).ready(function() {
     };
     
     if (sw>=sh) {
-        $("#number, #numbers").hide();
+        $("html, body").attr("width", (sw/1.858)+"px");
+        //$("#number, #numbers").hide();
     }
     else {
         checkStatus();
