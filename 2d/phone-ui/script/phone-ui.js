@@ -190,7 +190,7 @@ $(document).ready(function() {
                  //alarm.pause();
                  //alarm.currentTime = 0;
             }
-            if (msg[2] == "CHANNEL-LIST") {
+            if (msg[2] == "CHANNEL-LIST" && sw > sh) {
                  contacts = JSON.parse(msg[3]);
                  $("#online-count").text(
                  moment(new Date())
