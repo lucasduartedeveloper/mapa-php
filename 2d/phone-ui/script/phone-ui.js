@@ -150,6 +150,7 @@ $(document).ready(function() {
         $("#numbers button, #pointer")
         .css("margin", 
         ((sw/tv)*0.03)+"px "+((sw/tv)*0.05)+"px");
+        ballRadius = ((sw/tv)*0.2);
         //$("#number, #numbers").hide();
     }
     else {

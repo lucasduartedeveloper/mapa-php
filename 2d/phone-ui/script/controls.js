@@ -98,11 +98,16 @@ $("#pointer, #ball, #video-stream").on("dblclick", function(e) {
     returnCrystal(e);
 });
 
-function moveCrystal(x, y, e = false) {
+function moveCrystal(x, y, sw2 = sw, sh2 = sh, e = false) {
+    var wr = sw2/sw;
+    var hr =sh2/sh;
+    x = x*wr;
+    y = y*hr;
+
     log("move-crystal", "x: "+x+", y:"+y);
 
     if (!e || e.target.id == "video-stream")
-        $("#pointer, #ball").appendTo("#video-layer");
+        $("#pointer, #ball").appendTo("#video-stream");
     $("#pointer, #ball").css("position", "fixed");
     $("#pointer, #ball").css("left", (x-(ballRadius))+"px");
     $("#pointer, #ball").css("top", (y-(ballRadius))+"px");
