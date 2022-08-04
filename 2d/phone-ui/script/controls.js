@@ -98,10 +98,11 @@ $("#pointer, #ball, #video-stream").on("dblclick", function(e) {
     returnCrystal(e);
 });
 
-// 
+//  
 function moveCrystal(x, y, e = false) {
     moveCrystal(x, y, sw, sh, e);
 }
+
 function moveCrystal(x, y, sw2, sh2, e = false) {
     var wr = sw2/sw;
     var hr =sh2/sh;
