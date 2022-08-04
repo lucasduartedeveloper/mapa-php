@@ -155,7 +155,7 @@ $(document).ready(function() {
     else {
         checkStatus();
     }
-    $("#app").show();
+    $("#app").css("display", "flex");
 
     ws.send("PHONE-UI|" +
          playerId + "|" + 
