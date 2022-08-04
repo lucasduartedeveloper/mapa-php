@@ -137,17 +137,18 @@ $(document).ready(function() {
         radio.currentTime = 0;
     };
     
+    var tv = 2.500;
     if (sw>=sh) {
-        $("#app").css("width", (sw/1.858)+"px");
+        $("#app").css("width", (sw/tv)+"px");
         $("#numbers, #number")
-        .css("width", (sw/1.858)+"px");
+        .css("width", (sw/tv)+"px");
         $("#numbers button")
-        .css("width", ((sw/1.858)*0.2)+"px");
+        .css("width", ((sw/tv)*0.2)+"px");
         $("#numbers button")
-        .css("height", ((sw/1.858)*0.2)+"px");
+        .css("height", ((sw/tv)*0.2)+"px");
         $("#numbers button")
         .css("margin", 
-        ((sw/1.858)*0.03)+"px "+((sw/1.858)*0.05)+"px");
+        ((sw/tv)*0.03)+"px "+((sw/tv)*0.05)+"px");
         //$("#number, #numbers").hide();
     }
     else {
