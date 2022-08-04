@@ -1,6 +1,6 @@
 $("#heroku-version").click(function() {
     ws.send("PHONE-UI|" +
-         playerId + "|REFRESH"));
+         playerId + "|REFRESH");
 });
 
 $("#answer-phone").click(function() {
