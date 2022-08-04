@@ -74,6 +74,7 @@ echo "\n";
 </head>
 <body>
 
+<div id="app">
 <div id="call-layer" style="display:none">
     <img id="broadcaster-avatar" class="lds-circle" src=""/>
     <span id="broadcaster-waiting-username"></span>
@@ -210,6 +211,7 @@ controls autoplay>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
