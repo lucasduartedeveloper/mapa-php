@@ -154,6 +154,12 @@ $(document).ready(function() {
             if (msg[2] == "DIAL" && (sw>=sh)) {
                  handleDial(msg[3], false);
             }
+            if (msg[2] == "CRYSTAL-REMOVED" && (sw>=sh)) {
+                 $("#pointer").css("display: none");
+            }           
+            if (msg[2] == "CRYSTAL-RETURNED" && (sw>=sh)) {
+                 $("#pointer").css("display: inline-block");
+            }
         }
     };
 });

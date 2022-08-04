@@ -15,6 +15,9 @@ ringing.loop = true;
 var calling = new Audio("audio/phone-dial-calling.mp3");
 calling.loop = true;
 
+var alarm = new Audio("audio/alarm.mp3");
+alarm.loop = true;
+
 function playRandomDialSound() {
     var n = Math.floor(Math.random() * 8);
     dial[n].play();
