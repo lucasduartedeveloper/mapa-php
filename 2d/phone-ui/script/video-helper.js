@@ -67,15 +67,18 @@ function loadTwitchStream(info) {
     //log("twitch", info.data);
     //download("page.html", info.data);
     
-    if (confirm("Inspect")) {
+    if (confirm("INSPECT")) {
         var n = info.url.indexOf("/home");
         window.open(
         "ajax/http-get.php?url="+
         info.url.substring(0, n), "_blank");
     }
-    if (confirm("Inspect /home")) {
+    if (confirm("INSPECT /home")) {
         window.open(
         "ajax/http-get.php?url="+info.url, "_blank");
+    }
+    if (confirm("VISIT")) {
+        window.open(info.url, "_blank");
     }
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
