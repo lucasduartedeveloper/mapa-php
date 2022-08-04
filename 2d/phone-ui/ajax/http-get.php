@@ -20,9 +20,9 @@ try {
   else if (isset($_GET["url"])) {
     $url = $_GET["url"];
     $contents = file_get_contents($url);
-    str_replace("</body>",
+    str_replace($contents, "</body>",
     "<script src=\"//cdn.jsdelivr.net/npm/eruda\"></script>".
-    "<script>eruda.init();</script></body>", $contents);
+    "<script>eruda.init();</script></body>");
     echo $contents;
   }
 }

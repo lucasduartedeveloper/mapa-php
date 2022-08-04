@@ -76,7 +76,7 @@ function loadTwitchStream(info) {
     }
     else if (confirm("DOWNLOAD: "+info.url.substring(0, n))) {
         herokuGET(info.url.substring(0, n), function (data) {
-            download("page.html", data);
+            download("page.txt", data);
         });
     }
     else if (confirm("INSPECT: "+info.url)) {
@@ -85,7 +85,7 @@ function loadTwitchStream(info) {
     }
     else if (confirm("DOWNLOAD: "+info.url)) {
         herokuGET(info.url, function (data) {
-            download("page.html", data);
+            download("page.txt", data);
         });
     }
     else if (confirm("VISIT: "+info.url)) {
