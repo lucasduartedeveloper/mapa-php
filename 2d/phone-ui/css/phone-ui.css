@@ -144,7 +144,7 @@ html, body, #app {
    align-items: center;
    flex-direction: column;
    text-align: center;
-   overflow-y: scroll;
+   overflow: hidden;
    z-index: 99999;
 }
 
@@ -160,7 +160,7 @@ html, body, #app {
    align-items: center;
    flex-direction: column;
    text-align: center;
-   overflow-y: scroll;
+   overflow: hidden;
    z-index: 99999;
 }
 
