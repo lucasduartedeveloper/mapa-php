@@ -112,7 +112,7 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
     log("move-crystal", "x: "+x+", y:"+y);
 
     if (!e || e.target.id == "video-stream")
-        $("#pointer, #ball").appendTo("#video-stream");
+        $("#pointer, #ball").appendTo("#video-layer");
     $("#pointer, #ball").css("position", "fixed");
     $("#pointer, #ball").css("left", (x-(ballRadius))+"px");
     $("#pointer, #ball").css("top", (y-(ballRadius))+"px");
