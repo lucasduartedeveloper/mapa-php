@@ -5,7 +5,7 @@ function disableLogs(type) {
      logTypesDisabled.push(type);
 }
 
-function log(type, info) {
+function log(type, info = false) {
     if (debug) {
         for (var k in logTypesDisabled) {
              if (type == logTypesDisabled[k]) {
@@ -13,6 +13,6 @@ function log(type, info) {
              }
         }
         console.log(type + " --------------");
-        console.log(info);
+        if (info) console.log(info);
     }
 }

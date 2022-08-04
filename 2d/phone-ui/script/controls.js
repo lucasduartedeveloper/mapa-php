@@ -97,6 +97,7 @@ function moveCrystal(x, y, e = false) {
 }
 
 function returnCrystal(e = false) {
+    log("return-crystal");
     if (!e || e.target.id == "ball" || e.target.id == "pointer") {
         ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-RETURNED");
