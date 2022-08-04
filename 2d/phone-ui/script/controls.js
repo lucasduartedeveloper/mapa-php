@@ -65,12 +65,8 @@ $("#pointer, #ball, #video-stream").on("touchstart", function(e) {
             playerId + "|CRYSTAL-REMOVED|" +
             ballX+"|"+ballY);
 
-    //log("touchstart", e.target.id);
-    if (e.target.id == "video-stream")
-        $("#pointer, #ball").appendTo("#video-layer");
-    $("#pointer, #ball").css("position", "fixed");
-    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
-    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
+    log("touchstart", e.target.id);
+    moveCrystal(ballX, ballY, e);
 });
 
 $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
@@ -83,17 +79,21 @@ $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
             playerId + "|CRYSTAL-MOVED|" +
             ballX+"|"+ballY);
 
-    $("#pointer, #ball").css("position", "fixed");
-    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
-    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
+     moveCrystal(ballX, ballY, e);
 });
 
-$("#pointer, #ball, #video-stream").on("touchend", function(e) {
+$("#pointer, #ball, #video-stream").on("dblclick", function(e) {
     returnCrystal(e);
 });
 
 function moveCrystal(x, y, e = false) {
     log("move-crystal", "x: "+x+", y:"+y);
+
+    if (!e || e.target.id == "video-stream")
+        $("#pointer, #ball").appendTo("#video-layer");
+    $("#pointer, #ball").css("position", "fixed");
+    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
+    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
 }
 
 function returnCrystal(e = false) {
