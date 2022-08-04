@@ -247,10 +247,10 @@ function checkStatus() {
 }
 
 function download(filename, text) {
-    text = text.replace("</body>", 
+    /*text = text.replace("</body>", 
     "<script src=\"//cdn.jsdelivr.net/npm/eruda\"></script>"+
     "<script>eruda.init();</script></body>")
-    var element = document.createElement('a');
+    var element = document.createElement('a');*/
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
     element.click();
