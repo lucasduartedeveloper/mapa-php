@@ -30,6 +30,7 @@ html, body, #app {
 #app {
     display: none;
     background: #343434;
+    height: 100vh;
 }
 
 #version-info {
@@ -52,7 +53,6 @@ html, body, #app {
    top: 100px;
    background: #343434;
    width: 90vw;
-   --height: 100vw;
    font-size: 40px;
    color: white;
    display: flex;
