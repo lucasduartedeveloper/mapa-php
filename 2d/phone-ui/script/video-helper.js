@@ -85,7 +85,7 @@ function loadTwitchStream(info) {
         "ajax/http-get.php?url="+info.url, "_blank");
 
         if (confirm("DOWNLOAD: "+info.url)) {
-            herokuGET(info.url.substring(0, n), function (data) {
+            herokuGET(info.url, function (data) {
                 download("page.html", data);
             });
         }
