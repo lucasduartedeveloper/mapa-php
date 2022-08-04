@@ -21,7 +21,7 @@ try {
     $url = $_GET["url"];
     $contents = file_get_contents($url);
     $n = strrpos($url, "/", 8);
-    $baseUrl = substr($url, 0, n);
+    $baseUrl = substr($url, 0, $n);
 
     $contents = str_replace("src=\"",
     "src=\"".$baseUrl, $contents);
