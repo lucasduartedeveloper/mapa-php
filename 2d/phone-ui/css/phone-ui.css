@@ -30,7 +30,6 @@ html, body, #app {
 #app {
     display: none;
     background: #343434;
-    height: 100vh;
 }
 
 #version-info {

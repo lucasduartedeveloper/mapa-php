@@ -140,7 +140,7 @@ $(document).ready(function() {
     var tv = 3.500;
     if (sw>=sh) {
         $("#app").css("width", (sw/tv)+"px");
-        $("#app").css("height", (sh/2)+"px");
+        $("#app").css("height", (sh)+"px");
         $("#numbers, #number")
         .css("width", (sw/tv)+"px");
         $("#numbers button, #pointer")
