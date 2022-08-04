@@ -92,8 +92,8 @@ function moveCrystal(x, y, e = false) {
     if (!e || e.target.id == "video-stream")
         $("#pointer, #ball").appendTo("#video-layer");
     $("#pointer, #ball").css("position", "fixed");
-    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
-    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
+    $("#pointer, #ball").css("left", (x-(ballRadius))+"px");
+    $("#pointer, #ball").css("top", (y-(ballRadius))+"px");
 }
 
 function returnCrystal(e = false) {
