@@ -249,10 +249,9 @@ function checkStatus() {
 function herokuGET(url, callback) {
     $.ajax({
         url: "ajax/http-get.php?url="+url,
-        method: "GET")
-        .done(function(data, status, xhr) {
-            callback(data);
-        }
+        method: "GET"
+    }).done(function(data, status, xhr) {
+        callback(data);
     });
 }
 
