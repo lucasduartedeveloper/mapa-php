@@ -137,7 +137,7 @@ $(document).ready(function() {
         radio.currentTime = 0;
     };
     
-    var tv = 4.500;
+    var tv = 3.500;
     if (sw>=sh) {
         $("#app").css("width", (sw/tv)+"px");
         $("#app").css("height", (sh/2)+"px");
