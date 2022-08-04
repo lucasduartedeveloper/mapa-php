@@ -120,7 +120,7 @@ var contacts = [
     { no: "953", type: "uploaded-video", 
       url: "video/0-9.a-z" },
     { no: "990", type: "command", 
-      command: sendList }
+      command: sendList },
     { no: "991", type: "command", 
       command: startCamera }
 ];
