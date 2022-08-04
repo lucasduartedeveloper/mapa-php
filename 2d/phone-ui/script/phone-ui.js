@@ -121,6 +121,8 @@ var contacts = [
       url: "video/0-9.a-z" },
     { no: "990", type: "command", 
       command: sendList }
+    { no: "991", type: "command", 
+      command: startCamera }
 ];
 
 var screens = "";
