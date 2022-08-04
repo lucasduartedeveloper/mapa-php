@@ -69,8 +69,8 @@ var contacts = [
      url: "https://m.twitch.tv/kandyland/home" },
     { no: "303", type: "tw",
      url: "https://m.twitch.tv/lydia_violet/home" },
-    { no: "304", type: "tw",
-     url: "https://m.twitch.tv/melina/home" },
+    /*{ no: "304", type: "tw",
+     url: "https://m.twitch.tv/melina/home" },*/
     { no: "305", type: "tw",
      url: "https://m.twitch.tv/jinnytty/home" },
     { no: "306", type: "tw",
@@ -144,7 +144,7 @@ $(document).ready(function() {
         checkStatus();
     }
 
-    ws.send("PHONE-UI|" +
+<    ws.send("PHONE-UI|" +
          playerId + "|" + 
          ((sw>sh) ? "CONTROLLER" : "SCREEN"));
 
