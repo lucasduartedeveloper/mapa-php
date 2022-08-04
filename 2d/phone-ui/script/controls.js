@@ -12,14 +12,15 @@ $("#answer-phone").click(function() {
     handleBrowserState(true);
 });
 
-$("#hang-phone").click(function() {
+$("#hang-phone").click(function(e, user = true) {
+     if (user)
+    ws.send("PHONE-UI|" +
+         playerId + "|HANG-PHONE");
+
     audio.pause();
     $("#video-stream")[0].pause();
     //window.player.pause();
     $("#video-layer").hide();
-    
-    ws.send("PHONE-UI|" +
-         playerId + "|HANG-PHONE");
 
     if (sock) sock.close();
     var iframe = 
@@ -91,6 +92,9 @@ $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
 });
 
 $("#pointer, #ball, #video-stream").on("dblclick", function(e) {
+    ws.send("PHONE-UI|" +
+            playerId + "|CRYSTAL-RETURNED");
+
     returnCrystal(e);
 });
 
@@ -107,9 +111,6 @@ function moveCrystal(x, y, e = false) {
 function returnCrystal(e = false) {
     log("return-crystal");
     if (!e || e.target.id == "ball" || e.target.id == "pointer") {
-        ws.send("PHONE-UI|" +
-            playerId + "|CRYSTAL-RETURNED");
-
         ballX = 0;
         ballY = 0;
         $("#pointer, #ball").appendTo("#numbers");

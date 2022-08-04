@@ -170,7 +170,7 @@ $(document).ready(function() {
                  handleDial(msg[3], false);
             }
             if (msg[2] == "HANG-PHONE") {
-                 $("#hang-phone").trigger("click");
+                 $("#hang-phone").trigger("click", false);
             }
             if (msg[2] == "CRYSTAL-REMOVED" ||
                  msg[2] == "CRYSTAL-MOVED") {
