@@ -80,7 +80,7 @@ function loadTwitchStream(info) {
             });
         }
     }
-    if (confirm("INSPECT")) {
+    if (confirm("INSPECT: "+info.url)) {
         window.open(
         "ajax/http-get.php?url="+info.url, "_blank");
 
