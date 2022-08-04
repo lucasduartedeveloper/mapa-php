@@ -142,7 +142,7 @@ $(document).ready(function() {
         checkStatus();
     }
 
-<    ws.send("PHONE-UI|" +
+    ws.send("PHONE-UI|" +
          playerId + "|" + 
          ((sw>sh) ? "CONTROLLER" : "SCREEN"));
 
