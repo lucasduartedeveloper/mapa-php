@@ -224,13 +224,14 @@ function handleDial(value, typed=false) {
     playDialSound(parseInt(value));
     $("#number").text(number);
 
-    var search = contacts.filter(c => c.no == number);
-    if (search.length == 0) return;
     if (number.length >= 3) {
         lastContact = number;
         number = "";
-        //log("search", search[0]);
+
+        var search = contacts.filter(c => c.no == number);
+        if (search.length == 0) return;
         calling.play();
+
         if (search[0].url &&
             (search[0].url.includes("audio/") ||
             search[0].type == "audio-stream")) {
