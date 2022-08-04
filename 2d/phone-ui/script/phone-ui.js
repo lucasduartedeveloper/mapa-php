@@ -175,7 +175,12 @@ $(document).ready(function() {
             }
             if (msg[2] == "CRYSTAL-REMOVED" ||
                  msg[2] == "CRYSTAL-MOVED") {
-                 moveCrystal(parseInt(msg[3]), parseInt(msg[4]));
+                 moveCrystal(
+                     parseInt(msg[3]), 
+                     parseInt(msg[4]),
+                     parseInt(msg[5]), 
+                     parseInt(msg[6]),
+                 );
                  //alarm.play();
             }           
             if (msg[2] == "CRYSTAL-RETURNED") {
