@@ -21,7 +21,7 @@ function startCamera() {
      $("#temporary-workaround").hide();
      $("#video-layer").show();
      $("#broadcaster-username")
-     .text(info.title);
+     .text("CAMERA");
      $("#video-stream").show();
      var video = $("#video-stream")[0];
 
