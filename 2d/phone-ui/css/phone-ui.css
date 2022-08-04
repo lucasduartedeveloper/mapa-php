@@ -28,6 +28,7 @@ html, body, #app {
 }
 
 #app {
+    display: none;
     background: #343434;
 }
 

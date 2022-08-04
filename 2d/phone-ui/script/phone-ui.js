@@ -155,6 +155,7 @@ $(document).ready(function() {
     else {
         checkStatus();
     }
+    $("#app").show();
 
     ws.send("PHONE-UI|" +
          playerId + "|" + 
