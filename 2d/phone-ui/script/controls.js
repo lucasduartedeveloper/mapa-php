@@ -56,15 +56,16 @@ var ballRadius = window.innerWidth * 0.2;
 var ballX = 0;
 var ballY = 0;
 $("#pointer, #ball, #video-stream").on("touchstart", function(e) {
-    ws.send("PHONE-UI|" +
-            playerId + "|CRYSTAL-REMOVED");
-
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
     e.originalEvent.touches[0].pageY;
 
-    log("touchstart", e.target.id);
+    ws.send("PHONE-UI|" +
+            playerId + "|CRYSTAL-REMOVED|" +
+            ballX+"|"+ballY);
+
+    //log("touchstart", e.target.id);
     if (e.target.id == "video-stream")
         $("#pointer, #ball").appendTo("#video-layer");
     $("#pointer, #ball").css("position", "fixed");
@@ -78,13 +79,25 @@ $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
     ballY = 
     e.originalEvent.touches[0].pageY;
 
+    ws.send("PHONE-UI|" +
+            playerId + "|CRYSTAL-MOVED|" +
+            ballX+"|"+ballY);
+
     $("#pointer, #ball").css("position", "fixed");
     $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
     $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
 });
 
 $("#pointer, #ball, #video-stream").on("touchend", function(e) {
-    if (e.target.id == "ball" || e.target.id == "pointer") {
+    returnCrystal(e);
+});
+
+function moveCrystal(x, y, e = false) {
+    log("move-crystal", "x: "+x+", y:"+y);
+}
+
+function returnCrystal(e = false) {
+    if (!e || e.target.id == "ball" || e.target.id == "pointer") {
         ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-RETURNED");
 
@@ -95,4 +108,4 @@ $("#pointer, #ball, #video-stream").on("touchend", function(e) {
     }
     $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
     $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
-});
+}

@@ -156,14 +156,15 @@ $(document).ready(function() {
             if (msg[2] == "DIAL" && (sw>=sh)) {
                  handleDial(msg[3], false);
             }
-            if (msg[2] == "CRYSTAL-REMOVED") {
-                 $("#pointer").css("display", "none");
-                 alarm.play();
+            if (msg[2] == "CRYSTAL-REMOVED" ||
+                 msg[2] == "CRYSTAL-MOVED") {
+                 moveCrystal(parseInt(msg[3]), parseInt(msg[4]));
+                 //alarm.play();
             }           
             if (msg[2] == "CRYSTAL-RETURNED") {
-                 $("#pointer").css("display", "flex");
-                 alarm.pause();
-                 alarm.currentTime = 0;
+                 returnCrystal();
+                 //alarm.pause();
+                 //alarm.currentTime = 0;
             }
         }
     };
