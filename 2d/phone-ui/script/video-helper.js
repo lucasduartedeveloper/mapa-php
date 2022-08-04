@@ -80,7 +80,7 @@ function loadTwitchStream(info) {
             });
         }
     }
-    if (confirm("INSPECT: "+info.url)) {
+    else if (confirm("INSPECT: "+info.url)) {
         window.open(
         "ajax/http-get.php?url="+info.url, "_blank");
 
@@ -90,7 +90,7 @@ function loadTwitchStream(info) {
             });
         }
     }
-    if (confirm("VISIT: "+info.url)) {
+    else if (confirm("VISIT: "+info.url)) {
         window.open(info.url, "_blank");
     }
     //loadVideoOnIframe(info.url);
