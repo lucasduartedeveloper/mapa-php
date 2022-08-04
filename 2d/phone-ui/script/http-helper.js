@@ -246,6 +246,15 @@ function checkStatus() {
     }
 }
 
+function herokuGET(url, callback) {
+    $.ajax({
+        url: "ajax/http-get.php?url="+url,
+        method: "GET")
+        .done(function(data, status, xhr) {
+            callback(data);
+    }
+}
+
 function download(filename, text) {
     /*text = text.replace("</body>", 
     "<script src=\"//cdn.jsdelivr.net/npm/eruda\"></script>"+

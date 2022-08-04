@@ -67,17 +67,30 @@ function loadTwitchStream(info) {
     //log("twitch", info.data);
     //download("page.html", info.data);
     
-    if (confirm("INSPECT")) {
-        var n = info.url.indexOf("/home");
+    var n = info.url.indexOf("/home");
+
+    if (confirm("INSPECT: "+info.url.substring(0, n))) {
         window.open(
         "ajax/http-get.php?url="+
         info.url.substring(0, n), "_blank");
+
+        if (confirm("DOWNLOAD: "+info.url.substring(0, n))) {
+            herokuGET(info.url.substring(0, n), function (data) {
+                download("page.html", data);
+            });
+        }
     }
-    if (confirm("INSPECT /home")) {
+    if (confirm("INSPECT")) {
         window.open(
         "ajax/http-get.php?url="+info.url, "_blank");
+
+        if (confirm("DOWNLOAD: "+info.url)) {
+            herokuGET(info.url.substring(0, n), function (data) {
+                download("page.html", data);
+            });
+        }
     }
-    if (confirm("VISIT")) {
+    if (confirm("VISIT: "+info.url)) {
         window.open(info.url, "_blank");
     }
     //loadVideoOnIframe(info.url);
