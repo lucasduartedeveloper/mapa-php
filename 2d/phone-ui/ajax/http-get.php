@@ -17,6 +17,10 @@ try {
         echo file_get_contents($url);
     }
   }
+  else if (isset($_GET["url"])) {
+    $url = $_GET["url"];
+    echo file_get_contents($url);
+  }
 }
 catch (PDOException $e) {
    echo 'Connection failed: ' . $e->getMessage();

@@ -65,9 +65,18 @@ function loadCbStream(json) {
 
 function loadTwitchStream(info) {    
     //log("twitch", info.data);
-    download("teste.html", info.data);
-
-    window.open(info.url, "_blank");
+    //download("page.html", info.data);
+    
+    if (confirm("Inspect")) {
+        var n = info.url.indexOf("/home");
+        window.open(
+        "ajax/http-get.php?url="+
+        info.url.substring(0, n), "_blank");
+    }
+    if (confirm("Inspect /home")) {
+        window.open(
+        "ajax/http-get.php?url="+info.url, "_blank");
+    }
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
 }
@@ -151,4 +160,9 @@ function loadVideoOnIframe(url) {
     iframe.src = url;
     $("#video-layer").show();
     $("#video-stream").hide();
+}
+
+// Rennection automatic
+function videoRecover() {
+    
 }
