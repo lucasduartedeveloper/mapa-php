@@ -192,7 +192,9 @@ $(document).ready(function() {
             }
             if (msg[2] == "CHANNEL-LIST") {
                  contacts = JSON.parse(msg[3]);
-                 $("#online-count").text("00/00/0000 00:00:00");
+                 $("#online-count").text(
+                 moment(new Date())
+                .format("DD/MM/YYYY HH:mm:ss"));
             }
             if (msg[2] == "REFRESH") {
                  location.reload();
