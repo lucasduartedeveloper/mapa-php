@@ -138,7 +138,11 @@ $(document).ready(function() {
     };
     
     if (sw>=sh) {
-        $("#app").attr("width", (sw/1.858)+"px");
+        $("#app").css("width", (sw/1.858)+"px");
+        $("#numbers #number")
+        .css("width", ((sw/1.858)*0.2)+"px");
+        $("#numbers #number")
+        .css("height", ((sw/1.858)*0.2)+"px");
         //$("#number, #numbers").hide();
     }
     else {
