@@ -177,7 +177,7 @@ $(document).ready(function() {
                  msg[2] == "CRYSTAL-MOVED") {
                  moveCrystal(
                      parseInt(msg[3]), 
-                     parseInt(msg[4]),
+                     parseInt(msg[4]), false, 
                      parseInt(msg[5]), 
                      parseInt(msg[6]),
                  );
