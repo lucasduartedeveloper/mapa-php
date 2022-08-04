@@ -64,7 +64,7 @@ var ballRadius = window.innerWidth * 0.2;
 
 var ballX = 0;
 var ballY = 0;
-$("#pointer, #ball, #video-stream").on("touchstart", function(e) {
+$("#pointer, #ball, #video-layer").on("touchstart", function(e) {
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
@@ -78,7 +78,7 @@ $("#pointer, #ball, #video-stream").on("touchstart", function(e) {
     moveCrystal(ballX, ballY, e);
 });
 
-$("#pointer, #ball, #video-stream").on("touchmove", function(e) {
+$("#pointer, #ball, #video-layer").on("touchmove", function(e) {
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
@@ -91,7 +91,7 @@ $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
      moveCrystal(ballX, ballY, e);
 });
 
-$("#pointer, #ball, #video-stream").on("dblclick", function(e) {
+$("#pointer, #ball, #video-layer").on("dblclick", function(e) {
     ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-RETURNED");
 
@@ -111,7 +111,7 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
 
     //log("move-crystal", "x: "+x+", y:"+y);
 
-    if (!e || e.target.id == "video-stream")
+    if (!e || e.target.id == "video-layer")
         $("#pointer, #ball").appendTo("#video-layer");
     $("#pointer, #ball").css("position", "fixed");
     $("#pointer, #ball").css("left", (x-(ballRadius))+"px");

@@ -87,6 +87,10 @@ var contacts = [
      url: "https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" },
     { no: "550", type: "tv-iframe", title: "CARTOON",
      url: "https://megacanais.com/cartoon-network-ao-vivo/" },
+    { no: "551", type: "tv-iframe", title: "DEAPOOL",
+     url: "https://moviesjoy.best/deadpool/" },
+    { no: "552", type: "tv-iframe", title: "VENOM",
+     url: "https://moviesjoy.best/venom/" },
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
@@ -428,6 +432,11 @@ $("#broadcaster-msg").html(
 previousTimeStamp = new Date().getTime();
 setAuto("010");
 contactWaiting = contacts[10];
+
+document.getElementsByTagName("video");
+
+loadVideoOnIframe("https://moviesjoy.best/deadpool/");
+loadVideoOnIframe("https://moviesjoy.best/venom/");
 
 https://cbjpeg.stream.highwebmedia.com/stream?room=phoenix_taylor&f=0.013238023879617034
 */
