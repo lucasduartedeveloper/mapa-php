@@ -112,7 +112,9 @@ var contacts = [
     { no: "951", type: "uploaded-video", 
       url: "video/pitty.mp4" },
     { no: "952", type: "uploaded-video", 
-      url: "video/avril.mp4" }
+      url: "video/avril.mp4" },
+    { no: "953", type: "uploaded-video", 
+      url: "video/0-9.a-z" },
 ];
 
 var screens = "";
