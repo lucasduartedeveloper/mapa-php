@@ -139,9 +139,11 @@ $(document).ready(function() {
     
     if (sw>=sh) {
         $("#app").css("width", (sw/1.858)+"px");
-        $("#numbers #number")
+        $("#number")
+        .css("width", (sw/1.858)+"px");
+        $("#numbers button")
         .css("width", ((sw/1.858)*0.2)+"px");
-        $("#numbers #number")
+        $("#numbers button")
         .css("height", ((sw/1.858)*0.2)+"px");
         //$("#number, #numbers").hide();
     }
