@@ -169,6 +169,9 @@ $(document).ready(function() {
             if (msg[2] == "DIAL") {
                  handleDial(msg[3], false);
             }
+            if (msg[2] == "HANG-PHONE") {
+                 $("#hang-phone").trigger("click");
+            }
             if (msg[2] == "CRYSTAL-REMOVED" ||
                  msg[2] == "CRYSTAL-MOVED") {
                  moveCrystal(parseInt(msg[3]), parseInt(msg[4]));

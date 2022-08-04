@@ -18,6 +18,9 @@ $("#hang-phone").click(function() {
     //window.player.pause();
     $("#video-layer").hide();
     
+    ws.send("PHONE-UI|" +
+         playerId + "|HANG-PHONE");
+
     if (sock) sock.close();
     var iframe = 
     document.getElementById("temporary-workaround");
