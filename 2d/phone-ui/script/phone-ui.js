@@ -218,6 +218,7 @@ function handleDial(value, typed=false) {
 }
 
 var angle = 0;
+motion = false;
 setInterval(function() {
     angle++;
     $("#video-stream")

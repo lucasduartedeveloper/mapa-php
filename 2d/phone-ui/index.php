@@ -132,7 +132,8 @@ controls autoplay>
 <!-- <i id="phone" class="fa-solid fa-phone"></i> -->
 <img style="display: none" id="money" src="img/money.jpeg" />
 <img style="display: none" id="ball" src="img/ball.png" />
-<img id="pointer" src="img/pointer.png" />
+<img style="display: none" id="pointer" src="img/pointer.png" />
+<img id="pointer" src="img/diamond.gif" />
 </div>
 
 <!-- 
