@@ -56,7 +56,6 @@ var ballRadius = window.innerWidth * 0.2;
 var ballX = 0;
 var ballY = 0;
 $("#pointer, #ball, #video-stream").on("touchstart", function(e) {
-    alarm.play();
     ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-REMOVED");
 
@@ -85,12 +84,10 @@ $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
 });
 
 $("#pointer, #ball, #video-stream").on("touchend", function(e) {
-    alarm.pause();
-    alarm.currentTime = 0;
-    ws.send("PHONE-UI|" +
+    if (e.target.id == "ball" || e.target.id == "pointer") {
+        ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-RETURNED");
 
-    if (e.target.id == "ball" || e.target.id == "pointer") {
         ballX = 0;
         ballY = 0;
         $("#pointer, #ball").appendTo("#numbers");
