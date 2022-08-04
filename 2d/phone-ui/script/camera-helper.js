@@ -18,6 +18,13 @@ if (navigator.mediaDevices) {
 
 var deviceNo = 1;
 function startCamera() {
+     $("#temporary-workaround").hide();
+     $("#video-layer").show();
+     $("#broadcaster-username")
+     .text(info.title);
+     $("#video-stream").show();
+     var video = $("#video-stream")[0];
+
      if (navigator.mediaDevices) {
           navigator.mediaDevices
           .getUserMedia({ 

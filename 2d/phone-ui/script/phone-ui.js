@@ -265,6 +265,12 @@ function handleDial(value, typed=false) {
             });
             return;
         }
+        if (search[0].type == "tv-iframe") {
+            $("#broadcaster-msg").html("");
+            $("#broadcaster-username").text(search[0].title);
+            loadVideoOnIframe(search[0].url);
+            return;
+        }
         if (search[0].type == "command" && typed) {
             calling.pause();
             calling.currentTime = 0;
