@@ -213,10 +213,6 @@ $("#numbers button").click(function(e) {
 
 function handleDial(value, typed=false) {
     $("#contact-list-modal").modal("hide");
-    if (typed) {
-        ws.send("PHONE-UI|" +
-            playerId + "|DIAL|" + value);
-    }
 
     number += value;
     playDialSound(parseInt(value));
@@ -224,6 +220,11 @@ function handleDial(value, typed=false) {
 
     if (number.length >= 3) {
         var search = contacts.filter(c => c.no == number);
+        if (typed && search[0].type != "command") {
+            ws.send("PHONE-UI|" +
+                playerId + "|DIAL|" + value);
+        }
+
         lastContact = number;
         number = "";
         //log("search", search[0]);
