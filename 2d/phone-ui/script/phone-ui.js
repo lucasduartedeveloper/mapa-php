@@ -147,7 +147,7 @@ $(document).ready(function() {
 
     ws.send("PHONE-UI|" +
          playerId + "|" + 
-         ((sw>sh) ? "CONTROLLER" : "SCREEN"));
+         ((sh>sw) ? "CONTROLLER" : "SCREEN"));
 
     ws.onmessage = function(e) {
         var msg = e.data.split("|");
