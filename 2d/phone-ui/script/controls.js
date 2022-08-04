@@ -100,8 +100,8 @@ $("#pointer, #ball, #video-stream").on("dblclick", function(e) {
 
 // 
 function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
-    var wr = sw2/sw;
-    var hr =sh2/sh;
+    var wr = sw/sw2;
+    var hr =sh/sh2;
 
     log("move-crystal", "sw2: "+sw2+", sh2:"+sh2);
     log("move-crystal", "wr: "+wr+", hr:"+hr);
