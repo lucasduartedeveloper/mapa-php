@@ -19,10 +19,11 @@ try {
   }
   else if (isset($_GET["url"])) {
     $url = $_GET["url"];
+    $contents = file_get_contents($url);
     str_replace("</body>",
     "<script src=\"//cdn.jsdelivr.net/npm/eruda\"></script>".
-    "<script>eruda.init();</script></body>", $url);
-    echo file_get_contents($url);
+    "<script>eruda.init();</script></body>", $contents);
+    echo $contents;
   }
 }
 catch (PDOException $e) {
