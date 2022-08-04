@@ -256,6 +256,8 @@ function handleDial(value, typed=false) {
             return;
         }
         if (search[0].type == "command") {
+            calling.pause();
+            calling.currentTime = 0;
             search[0].command();
             return;
         }
