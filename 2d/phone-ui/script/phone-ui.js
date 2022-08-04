@@ -190,6 +190,10 @@ $(document).ready(function() {
                  //alarm.pause();
                  //alarm.currentTime = 0;
             }
+            if (msg[2] == "CHANNEL-LIST") {
+                 contacts = JSON.parse(msg[3]);
+                 $("#online-count").text("00/00/0000 00:00:00");
+            }
             if (msg[2] == "REFRESH") {
                  location.reload();
             }
@@ -249,6 +253,10 @@ function handleDial(value, typed=false) {
                 url: search[0].url, 
                 type: "'application/x-mpegURL"
             });
+            return;
+        }
+        if (search[0].type == "command") {
+            search[0].command();
             return;
         }
     }

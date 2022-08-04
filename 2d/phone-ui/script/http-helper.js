@@ -251,7 +251,8 @@ function sendList() {
         list[k].data = "removed";
     }
     ws.send("PHONE-UI|" +
-            playerId + "|" + JSON.parse(list));
+            playerId + "|CHANNEL-LIST|" +
+            JSON.stringify(list));
 }
 
 function herokuGET(url, callback) {
