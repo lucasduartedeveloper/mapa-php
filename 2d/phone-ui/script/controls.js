@@ -81,7 +81,7 @@ $("#pointer, #ball, #video-stream").on("touchmove", function(e) {
 });
 
 $("#pointer, #ball, #video-stream").on("touchend", function(e) {
-    if (e.target.id == "ball" && e.target.id == "pointer") {
+    if (e.target.id == "ball" || e.target.id == "pointer") {
         ballX = 0;
         ballY = 0;
         $("#pointer, #ball").appendTo("#numbers");
