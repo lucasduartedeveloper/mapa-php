@@ -138,7 +138,7 @@ $(document).ready(function() {
     };
     
     if (sw>=sh) {
-        $("html, body").attr("width", (sw/1.858)+"px");
+        $("#app").attr("width", (sw/1.858)+"px");
         //$("#number, #numbers").hide();
     }
     else {
@@ -166,6 +166,9 @@ $(document).ready(function() {
                  returnCrystal();
                  //alarm.pause();
                  //alarm.currentTime = 0;
+            }
+            if (msg[2] == "REFRESH") {
+                 location.reload();
             }
         }
     };

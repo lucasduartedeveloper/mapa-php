@@ -1,3 +1,8 @@
+$("#heroku-version").click(function() {
+    ws.send("PHONE-UI|" +
+         playerId + "|REFRESH"));
+});
+
 $("#answer-phone").click(function() {
     $("#call-layer").hide();
 
