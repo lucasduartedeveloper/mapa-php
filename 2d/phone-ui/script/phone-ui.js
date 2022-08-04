@@ -137,16 +137,16 @@ $(document).ready(function() {
         radio.currentTime = 0;
     };
     
-    var tv = 3.500;
+    var tv = 4.500;
     if (sw>=sh) {
         $("#app").css("width", (sw/tv)+"px");
         $("#numbers, #number")
         .css("width", (sw/tv)+"px");
-        $("#numbers button")
+        $("#numbers button, #pointer")
         .css("width", ((sw/tv)*0.2)+"px");
-        $("#numbers button")
+        $("#numbers button, #pointer")
         .css("height", ((sw/tv)*0.2)+"px");
-        $("#numbers button")
+        $("#numbers button, #pointer")
         .css("margin", 
         ((sw/tv)*0.03)+"px "+((sw/tv)*0.05)+"px");
         //$("#number, #numbers").hide();
