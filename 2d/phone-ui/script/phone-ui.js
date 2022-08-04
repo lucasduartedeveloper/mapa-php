@@ -226,9 +226,9 @@ function handleDial(value, typed=false) {
 
     if (number.length >= 3) {
         lastContact = number;
+        var search = contacts.filter(c => c.no == number);
         number = "";
 
-        var search = contacts.filter(c => c.no == number);
         if (search.length == 0) return;
         calling.play();
 
