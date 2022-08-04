@@ -156,11 +156,11 @@ $(document).ready(function() {
             if (msg[2] == "DIAL" && (sw>=sh)) {
                  handleDial(msg[3], false);
             }
-            if (msg[2] == "CRYSTAL-REMOVED" && (sw>=sh)) {
+            if (msg[2] == "CRYSTAL-REMOVED") {
                  $("#pointer").css("display: none");
                  alarm.play();
             }           
-            if (msg[2] == "CRYSTAL-RETURNED" && (sw>=sh)) {
+            if (msg[2] == "CRYSTAL-RETURNED") {
                  $("#pointer").css("display: inline-block");
                  alarm.pause();
                  alarm.currentTime = 0;
