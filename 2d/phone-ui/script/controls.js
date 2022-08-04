@@ -55,7 +55,7 @@ var ballRadius = window.innerWidth * 0.2;
 
 var ballX = 0;
 var ballY = 0;
-$("#ball, #video-stream").on("touchstart", function(e) {
+$("#pointer, #ball, #video-stream").on("touchstart", function(e) {
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
@@ -63,30 +63,30 @@ $("#ball, #video-stream").on("touchstart", function(e) {
 
     log("touchstart", e.target.id);
     if (e.target.id == "video-stream")
-        $("#ball").appendTo("#video-layer");
-    $("#ball").css("position", "fixed");
-    $("#ball").css("left", (ballX-(ballRadius))+"px");
-    $("#ball").css("top", (ballY-(ballRadius))+"px");
+        $("#pointer, #ball").appendTo("#video-layer");
+    $("#pointer, #ball").css("position", "fixed");
+    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
+    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
 });
 
-$("#ball, #video-stream").on("touchmove", function(e) {
+$("#pointer, #ball, #video-stream").on("touchmove", function(e) {
     ballX = 
     e.originalEvent.touches[0].pageX;
     ballY = 
     e.originalEvent.touches[0].pageY;
 
-    $("#ball").css("position", "fixed");
-    $("#ball").css("left", (ballX-(ballRadius))+"px");
-    $("#ball").css("top", (ballY-(ballRadius))+"px");
+    $("#pointer, #ball").css("position", "fixed");
+    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
+    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
 });
 
-$("#ball, #video-stream").on("touchend", function(e) {
+$("#pointer, #ball, #video-stream").on("touchend", function(e) {
     if (e.target.id == "ball") {
         ballX = 0;
         ballY = 0;
-        $("#ball").appendTo("#numbers");
-        $("#ball").css("position", "initial");
+        $("#pointer, #ball").appendTo("#numbers");
+        $("#pointer, #ball").css("position", "initial");
     }
-    $("#ball").css("left", (ballX-(ballRadius))+"px");
-    $("#ball").css("top", (ballY-(ballRadius))+"px");
+    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
+    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
 });

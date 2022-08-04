@@ -275,7 +275,20 @@ li img {
    border-radius: 50%;
 }
 
-#ball {
+#pointer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   width: 20vw;
+   height: 20vw;
+   margin: 3vw 5vw;
+   --background: #38C75E;
+   color: #fff;
+}
+
+#ball,
+#pointer {
    z-index: 999999;
 }
 
@@ -298,10 +311,7 @@ li img {
 
 .low-opacity {
    opacity: 0.5;
-}
-
-.form-check {
-}
+}}
 
 .lds-circle {
   transform: translateZ(1px);
