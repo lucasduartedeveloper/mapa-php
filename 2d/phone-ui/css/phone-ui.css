@@ -52,7 +52,7 @@ html, body, #app {
    top: 100px;
    background: #343434;
    width: 90vw;
-   height: 100vw;
+   --height: 100vw;
    font-size: 40px;
    color: white;
    display: flex;
