@@ -116,7 +116,7 @@ var contacts = [
     { no: "953", type: "uploaded-video", 
       url: "video/0-9.a-z" },
     { no: "990", type: "command", 
-      command: sendList },
+      command: sendList }
 ];
 
 var screens = "";
@@ -229,8 +229,9 @@ function handleDial(value, typed=false) {
         //log("search", search[0]);
         calling.play();
         if (search.length == 0) return;
-        if (search[0].url.includes("audio/") ||
-            search[0].type == "audio-stream") {
+        if (search[0].url &&
+            (search[0].url.includes("audio/") ||
+            search[0].type == "audio-stream")) {
             loadAudio(search[0].url);
             return;
         }
