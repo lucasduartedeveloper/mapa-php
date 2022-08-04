@@ -22,6 +22,7 @@ try {
     $contents = file_get_contents($url);
     $n = strrpos($url, "/", 8);
     $baseUrl = substr($url, 0, $n);
+    $baseUrl = "@";
 
     $contents = str_replace("src=\"",
     "src=\"".$baseUrl, $contents);
