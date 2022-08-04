@@ -129,10 +129,12 @@ controls autoplay>
 <button value="*">*<span></span></button>
 <button value="0">0<span>+</span></button>
 <button value="#">#<span></span></button>
-<!-- <i id="phone" class="fa-solid fa-phone"></i> -->
+<!-- 
+<i id="phone" class="fa-solid fa-phone"></i>
 <img style="display: none" id="money" src="img/money.jpeg" />
 <img style="display: none" id="ball" src="img/ball.png" />
-<img style="display: none" id="pointer" src="img/pointer.png" />
+<img style="display: none" id="pointer" src="img/pointer.png" /> 
+-->
 <img id="pointer" src="img/diamond.gif" />
 </div>
 
