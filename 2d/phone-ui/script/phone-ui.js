@@ -194,7 +194,7 @@ $(document).ready(function() {
                  contacts = JSON.parse(msg[3]);
                  $("#online-count").text(
                  moment(new Date())
-                .format("DD/MM/YYYY HH:mm:ss"));
+                 .format("DD/MM/YYYY HH:mm:ss"));
             }
             if (msg[2] == "REFRESH") {
                  location.reload();
@@ -222,6 +222,7 @@ function handleDial(value, typed=false) {
 
     if (number.length >= 3) {
         var search = contacts.filter(c => c.no == number);
+        if (search.length == 0) return;
         if (typed && search[0].type != "command") {
             ws.send("PHONE-UI|" +
                 playerId + "|DIAL|" + value);
@@ -231,7 +232,6 @@ function handleDial(value, typed=false) {
         number = "";
         //log("search", search[0]);
         calling.play();
-        if (search.length == 0) return;
         if (search[0].url &&
             (search[0].url.includes("audio/") ||
             search[0].type == "audio-stream")) {
