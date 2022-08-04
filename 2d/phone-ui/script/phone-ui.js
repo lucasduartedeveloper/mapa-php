@@ -157,11 +157,11 @@ $(document).ready(function() {
                  handleDial(msg[3], false);
             }
             if (msg[2] == "CRYSTAL-REMOVED") {
-                 $("#pointer").css("display: none");
+                 $("#pointer").css("display", "none");
                  alarm.play();
             }           
             if (msg[2] == "CRYSTAL-RETURNED") {
-                 $("#pointer").css("display: inline-block");
+                 $("#pointer").css("display", "flex");
                  alarm.pause();
                  alarm.currentTime = 0;
             }
