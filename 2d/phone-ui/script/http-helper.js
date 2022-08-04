@@ -252,6 +252,7 @@ function herokuGET(url, callback) {
         method: "GET")
         .done(function(data, status, xhr) {
             callback(data);
+        }
     });
 }
 
