@@ -103,13 +103,13 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
     var wr = sw/sw2;
     var hr =sh/sh2;
 
-    log("move-crystal", "sw2: "+sw2+", sh2:"+sh2);
-    log("move-crystal", "wr: "+wr+", hr:"+hr);
+    //log("move-crystal", "sw2: "+sw2+", sh2:"+sh2);
+    //log("move-crystal", "wr: "+wr+", hr:"+hr);
 
     x = x*wr;
     y = y*hr;
 
-    log("move-crystal", "x: "+x+", y:"+y);
+    //log("move-crystal", "x: "+x+", y:"+y);
 
     if (!e || e.target.id == "video-stream")
         $("#pointer, #ball").appendTo("#video-layer");

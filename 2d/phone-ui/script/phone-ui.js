@@ -115,6 +115,8 @@ var contacts = [
       url: "video/avril.mp4" },
     { no: "953", type: "uploaded-video", 
       url: "video/0-9.a-z" },
+    { no: "990", type: "command", 
+      command: sendList },
 ];
 
 var screens = "";
@@ -151,7 +153,7 @@ $(document).ready(function() {
         .css("margin", 
         ((sw/tv)*0.03)+"px "+((sw/tv)*0.05)+"px");
         ballRadius = ((sw/tv)*0.2);
-        //$("#number, #numbers").hide();
+        //$("#online-count").hide();
     }
     else {
         checkStatus();

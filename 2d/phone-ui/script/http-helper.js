@@ -46,8 +46,7 @@ function cbLogin() {
 
 function checkStatus() {
     log("checkStatus", "");
-    var cbList = 
-    contacts.filter(c => c.type == "cb");
+    var cbList = contacts.filter(c => c.type == "cb");
 
     var total = 0;
     var onlineCount = 0;
@@ -244,6 +243,15 @@ function checkStatus() {
             $("#contact-list").html(html+"</ul>");
         });}.bind(k),500*k);
     }
+}
+
+function sendList() {
+    var list = contacts.filter(c => c.type != "command");
+    for (var k in list) {
+        list[k].data = "removed";
+    }
+    ws.send("PHONE-UI|" +
+            playerId + "|" + JSON.parse(list));
 }
 
 function herokuGET(url, callback) {
