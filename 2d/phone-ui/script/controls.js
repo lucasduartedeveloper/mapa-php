@@ -17,8 +17,13 @@ $("#hang-phone").click(function(e, user = true) {
     ws.send("PHONE-UI|" +
          playerId + "|HANG-PHONE");
 
-    stopCamera();
     audio.pause();
+    audio.currentTime = 0;
+    calling.pause();
+    calling.currentTime = 0;
+
+    stopCamera();
+
     $("#video-stream")[0].pause();
     //window.player.pause();
     $("#video-layer").hide();
