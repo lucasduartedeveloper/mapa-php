@@ -103,9 +103,9 @@ function cameraConnect() {
            console.log("touchstart", e.touches[0]);
 
            displayX = 
-           e.touches[0].pageX;
+           e.touches[0].clientX;
            displayY = 
-           e.touches[0].pageY;
+           e.touches[0].clientY;
 
            ws.send("CAMERA-CONNECT|" +
                playerId + "|DISPLAY-REMOVED|" +
@@ -121,9 +121,9 @@ function cameraConnect() {
            console.log("touchmove", e.touches[0]);
 
            displayX = 
-           e.touches[0].pageX;
+           e.touches[0].clientX;
            displayY = 
-           e.touches[0].pageY;
+           e.touches[0].clientY;
 
           ws.send("CAMERA-CONNECT|" +
               playerId + "|DISPLAY-MOVED|" +
