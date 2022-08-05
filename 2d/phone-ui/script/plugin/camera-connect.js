@@ -84,6 +84,7 @@ function cameraConnect() {
    // -------
 
    display.style.position = "fixed";
+   display.style.border = "2px solid black";
    display.style.left = (displayX-(displayW/2))+"px";
    display.style.top = (displayY+(displayH/2))+"px";
    display.style.width = "50px";
