@@ -8,7 +8,7 @@ function takeScreenShot() {
     canvas.height = 100;
 
     context.drawImage(video, 0, 0, 100, 100);
-    console.log(canvas.toDataURL());
+    alert(canvas.toDataURL());
 }
 
 /*
