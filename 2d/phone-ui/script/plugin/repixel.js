@@ -99,6 +99,29 @@ function diamondPlugin() {
           console.log("dblclick", e);
           returnCrystal(e);
       });
+
+      ws.onmessage = function(e) {
+        var msg = e.data.split("|");
+        if (msg[0] == "PHONE-UI" &&
+            playerId != msg[1]) {
+            //log("ws", msg);
+            if (msg[2] == "CRYSTAL-REMOVED" ||
+                 msg[2] == "CRYSTAL-MOVED") {
+                 moveCrystal(
+                     parseInt(msg[3]), 
+                     parseInt(msg[4]), false, 
+                     parseInt(msg[5]), 
+                     parseInt(msg[6]),
+                 );
+                 //alarm.play();
+            }           
+            if (msg[2] == "CRYSTAL-RETURNED") {
+                 returnCrystal();
+                 //alarm.pause();
+                 //alarm.currentTime = 0;
+            }
+        }
+    };
    };
    //alert("the");
 }
