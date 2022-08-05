@@ -121,7 +121,7 @@ function diamondPlugin() {
                  //alarm.currentTime = 0;
             }
         }
-    };
+     };
    };
    //alert("the");
 }
@@ -146,6 +146,11 @@ function returnCrystal(e = false) {
 }
 
 /*
+   // Read this
+   7680 x 4320
+   var maxWidth = 7680;
+   var maxHeight = 4320;
+   
    javascript:(function () { var script = document.createElement('script'); script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js"; document.body.appendChild(script); script.onload = function () { takeScreenShot() } })();
 
    javascript:(function () { var script = document.createElement('script'); script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();
