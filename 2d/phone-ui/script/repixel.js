@@ -3,6 +3,7 @@ var playerId = new Date().getTime();
 function takeScreenShot() {
     var script = document.createElement('script'); 
     script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/websocket.js"; 
+    body.appendChild(script);
     script.onload = function () {
        setInterval(function() {
            var canvas = document.createElement("canvas");
@@ -14,7 +15,7 @@ function takeScreenShot() {
            canvas.height = 100;
 
            context.drawImage(video, 0, 0, 100, 100);
-           ws.send("PHONE-UI|"+playerId+"|VID-SCRNSHT|" +
+           ws.send("PHONE-UI|"+playerId+"|VID-SCRNSHT|"+
            canvas.toDataURL());
        }, 1000);
     };
