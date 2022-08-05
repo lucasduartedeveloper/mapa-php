@@ -25,7 +25,7 @@ function startCamera() {
      $("#video-stream").show();
      var video = $("#video-stream")[0];
 
-    startTime = new Date().getTime();
+    timeStarted = new Date().getTime();
 
      if (navigator.mediaDevices) {
           navigator.mediaDevices
