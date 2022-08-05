@@ -48,6 +48,7 @@ function startCamera() {
 function stopCamera() {
      var video = $("#video-stream")[0];
 
+     if (video.srcObject)
      video.srcObject
     .getTracks()
     .forEach(t => t.stop());
