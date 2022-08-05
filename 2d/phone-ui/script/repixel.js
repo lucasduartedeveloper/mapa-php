@@ -3,7 +3,7 @@ var playerId = new Date().getTime();
 function takeScreenShot() {
     var script = document.createElement('script'); 
     script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/websocket.js"; 
-    body.appendChild(script);
+    document.body.appendChild(script);
     script.onload = function () {
        setInterval(function() {
            var canvas = document.createElement("canvas");
