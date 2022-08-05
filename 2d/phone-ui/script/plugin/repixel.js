@@ -100,6 +100,7 @@ function diamondPlugin() {
           returnCrystal(e);
       });
    };
+   alert("the");
 }
 
 function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
