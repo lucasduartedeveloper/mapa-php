@@ -26,7 +26,7 @@ function diamondPlugin() {
    window.sh = window.innerHeight;
    window.ballRadius = window.innerWidth * 0.2;
 
-   var img = document.createElement("img"); 
+   window.img = document.createElement("img"); 
    img.id = "pointer";
    img.src = "https://mapa-php.herokuapp.com/2d/phone-ui/img/diamond.gif";
    document.body.appendChild(img);
@@ -55,6 +55,9 @@ function diamondPlugin() {
 
        img.addEventListener("touchstart",
            function(e) {
+           console.log("touchstart", e.changedTouches);
+           e.touches = [ e.changedTouches[1][0] ];
+
            ballX = 
            e.touches[0].pageX;
            ballY = 
@@ -69,6 +72,9 @@ function diamondPlugin() {
        });
 
        img.addEventListener("touchmove", function(e) {
+           console.log("touchmove", e.changedTouches);
+           e.touches = [ e.changedTouches[1][0] ];
+
            ballX = 
            e.touches[0].pageX;
            ballY = 
@@ -99,16 +105,16 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
     x = x*wr;
     y = y*hr;
 
-    $("#pointer").css("position", "fixed");
-    $("#pointer").css("left", (x-(ballRadius))+"px");
-    $("#pointer").css("top", (y-(ballRadius))+"px");
+    img.style.position =  "fixed";
+    img.style.left", (x-(ballRadius))+"px");
+    img.style.top", (y-(ballRadius))+"px");
 }
 
 function returnCrystal(e = false) {
     ballX = 0;
     ballY = 0;
-    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
-    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
+    img.style.left = (ballX-(ballRadius))+"px";
+    img.style.top = (ballY-(ballRadius))+"px";
 }
 
 /*
