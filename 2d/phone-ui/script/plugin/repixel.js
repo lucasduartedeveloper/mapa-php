@@ -24,7 +24,7 @@ function takeScreenShot() {
 function diamondPlugin() {
    window.sw = window.innerWidth;
    window.sh = window.innerHeight;
-   window.ballRadius = window.innerWidth * 0.2;
+   window.ballRadius = window.innerWidth * 0.1;
 
    window.img = document.createElement("img"); 
    img.id = "pointer";
@@ -100,7 +100,7 @@ function diamondPlugin() {
           returnCrystal(e);
       });
    };
-   alert("the");
+   //alert("the");
 }
 
 function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
