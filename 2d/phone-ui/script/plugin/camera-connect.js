@@ -79,7 +79,7 @@ function cameraConnect() {
    // -------
    window.displayX = sw/2;
    window.displayY = sh/2;
-   window.displayW = 50;
+   window.displayW = 30;
    window.displayH = 50;
    // -------
 
