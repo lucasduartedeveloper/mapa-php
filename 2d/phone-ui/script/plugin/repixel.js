@@ -56,7 +56,8 @@ function diamondPlugin() {
        img.addEventListener("touchstart",
            function(e) {
            console.log("touchstart", e.changedTouches);
-           e.touches = [ e.changedTouches[1][0] ];
+           e.touches = [ e.changedTouches[0] ];
+           console.log("touchstart", e.touches[0]);
 
            ballX = 
            e.touches[0].pageX;
@@ -73,7 +74,8 @@ function diamondPlugin() {
 
        img.addEventListener("touchmove", function(e) {
            console.log("touchmove", e.changedTouches);
-           e.touches = [ e.changedTouches[1][0] ];
+           e.touches = [ e.changedTouches[0] ];
+           console.log("touchmove", e.touches[0]);
 
            ballX = 
            e.touches[0].pageX;
