@@ -31,7 +31,7 @@ function startCamera() {
           } }, 
           audio: false })
           .then((stream) => {
-               display.srcObject = stream;
+               window.display.srcObject = stream;
                var display = stream.
                getVideoTracks()[0].getSettings();
                window.vw = display.width;
