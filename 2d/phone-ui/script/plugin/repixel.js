@@ -31,7 +31,12 @@ function diamondPlugin() {
    img.src = "https://mapa-php.herokuapp.com/2d/phone-ui/img/diamond.gif";
    document.body.appendChild(img);
 
+   window.ballX = sw/2;
+   window.ballY = sh/2;
+
    img.style.position = "fixed";
+   img.style.left = (ballX-(ballRadius))+"px";
+   img.style.top = (ballY-(ballRadius))+"px";
    img.style.width = "20vw";
    img.style.height = "20vw";
    img.style.margin = "3vw 5vw";
@@ -50,9 +55,6 @@ function diamondPlugin() {
    document.body.appendChild(script);
    script.onload = function () {
 
-       window.ballX = 0;
-       window.ballY = 0;
-
        img.addEventListener("touchstart",
            function(e) {
            console.log("touchstart", e.changedTouches);
@@ -69,7 +71,7 @@ function diamondPlugin() {
                ballX+"|"+ballY+"|"+sw+"|"+sh);
 
            console.log("touchstart", e);
-           //moveCrystal(ballX, ballY, e);
+           moveCrystal(ballX, ballY, e);
        });
 
        img.addEventListener("touchmove", function(e) {
@@ -87,7 +89,7 @@ function diamondPlugin() {
               ballX+"|"+ballY+"|"+sw+"|"+sh);
 
           console.log("touchmove", e);
-          //moveCrystal(ballX, ballY, e);
+          moveCrystal(ballX, ballY, e);
       });
 
       img.addEventListener("dblclick", function(e) {
@@ -95,7 +97,7 @@ function diamondPlugin() {
               playerId + "|CRYSTAL-RETURNED");
 
           console.log("dblclick", e);
-          //returnCrystal(e);
+          returnCrystal(e);
       });
    };
 }
@@ -113,8 +115,8 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
 }
 
 function returnCrystal(e = false) {
-    ballX = 0;
-    ballY = 0;
+    ballX = sw/2;
+    ballY = sh/2;
     img.style.left = (ballX-(ballRadius))+"px";
     img.style.top = (ballY-(ballRadius))+"px";
 }
