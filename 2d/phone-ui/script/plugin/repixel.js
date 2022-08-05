@@ -108,8 +108,8 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
     y = y*hr;
 
     img.style.position =  "fixed";
-    img.style.left", (x-(ballRadius))+"px");
-    img.style.top", (y-(ballRadius))+"px");
+    img.style.left = (x-(ballRadius))+"px";
+    img.style.top = (y-(ballRadius))+"px";
 }
 
 function returnCrystal(e = false) {
