@@ -290,7 +290,7 @@ li img {
    margin: 3vw 5vw;
    --background: #38C75E;
    color: #fff;
-   filter: invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%);
+   --filter: invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%);
 }
 
 #ball,
