@@ -13,7 +13,7 @@ $("#answer-phone").click(function() {
 });
 
 $("#hang-phone").click(function(e, user = true) {
-     if (user)
+    if (user)
     ws.send("PHONE-UI|" +
          playerId + "|HANG-PHONE");
 
