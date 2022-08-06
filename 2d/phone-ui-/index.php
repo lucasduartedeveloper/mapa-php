@@ -175,6 +175,7 @@ controls autoplay>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      </div>
       <div class="modal-body">
          <button type="button" class="btn btn-primary">
             Twitch <span class="badge badge-light">9</span>
