@@ -55,7 +55,7 @@ function loadCbStream(json) {
             title: json.broadcaster_username +
             " ("+json.num_viewers+")",
             url: json.hls_source,
-            type: "'application/x-mpegURL"
+            type: "application/x-mpegURL"
         });
     }
     else {
@@ -136,6 +136,9 @@ $(document).ready(function () {
 function loadVideoStream(info) {    
     //log("video", info.data);  
     //download("teste.html", info.data);
+    var streamView = document.createElement("div");
+    $(streamView).addClass("video-stream-view");
+
     var stream = document.createElement("video");
     $(stream).addClass("video-stream");
 
@@ -147,6 +150,7 @@ function loadVideoStream(info) {
     else {
         $(stream).attr("src", info.url);
     }
+    $(stream).appendTo(streamView);
     $(stream).appendTo("#video-streams-container");
     stream.type = info.type;
     stream.load();
@@ -154,10 +158,18 @@ function loadVideoStream(info) {
 
     streams.push(stream);
     if (streams.length > 1) {
+        $(".video-stream-view")
+        .css("width", (sw/2)+"px");
+        $(".video-stream-view")
+        .css("height", ((sw/2)*0.8)+"px");
         $(".video-stream").css("width", (sw/2)+"px");        
         $(".video-stream").css("height", ((sw/2)*0.8)+"px");
     }
-    else {  
+    else {
+        $(".video-stream-view")
+        .css("width", (sw)+"px");
+        $(".video-stream-view")
+        .css("height", ((sw)*0.8)+"px");
         $(".video-stream").css("width", (sw)+"px");        
         $(".video-stream").css("height", ((sw)*0.8)+"px");
     }

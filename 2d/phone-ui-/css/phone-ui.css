@@ -209,6 +209,13 @@ html, body, #app {
    overflow: hidden;
 }
 
+.video-stream-view {
+   background: rgba(0,0,0,1);
+   border: 2px solid orange;
+   width: 100vw;
+   --border-radius: 20px;
+}
+
 .video-stream,
 .video-js {
    background: rgba(0,0,0,1);
