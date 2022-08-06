@@ -56,6 +56,9 @@ $("#pointer").on("dblclick touchstart", function(e) {
     }
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
+       $("#pointer").css("filter",
+       "invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%)");
+
        browser.bookmarks.create({
            title: "PHONE-UI",
            url: "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
@@ -67,6 +70,7 @@ $("#pointer").on("dblclick touchstart", function(e) {
 });
 $("#pointer").on("touchend", function(e) {
     if (new Date().getTime() - bookmarkHoldTime < 5000) {
+        $("#pointer").css("filter","initial");
         clearTimeout(bookmarkTimeout);
     }
 });
