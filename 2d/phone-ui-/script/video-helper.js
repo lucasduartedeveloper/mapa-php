@@ -145,7 +145,7 @@ function loadVideoStream(info) {
     if (info.type == "camera") {
         stream.srcObject = info.url;
         log("camera-on");
-        getZoom();
+        getCameraZoom();
     }
     else {
         $(stream).attr("src", info.url);
