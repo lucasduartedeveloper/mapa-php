@@ -70,9 +70,9 @@ function getZoom() {
 
            log("camera-zoom-capabilities", 
            "min-zoom: "+window.minZoom+"\n"+
-           "min-zoom: "+window.maxZoom+"\n"+
-           "min-zoom: "+window.zoomStep+"\n"+
-           "min-zoom: "+window.zoomValue);
+           "max-zoom: "+window.maxZoom+"\n"+
+           "zoom-step: "+window.zoomStep+"\n"+
+           "zoom-value: "+window.zoomValue);
     };
 }
 function setZoom(value) {
