@@ -111,6 +111,7 @@ function checkStatus() {
                   json.broadcaster_username+
                   " ("+json.num_viewers+")</li>";
                   onlineCount++;
+                  $("#all-count").text(onlineCount);
 
                   cbCount++;
                   $("#cb-count").text(cbCount);
@@ -197,7 +198,8 @@ function checkStatus() {
                 "<span class=\"live-indicator\">LIVE</span>"+
                 twList[xhr.k].no+": "+
                 channelName+" ("+viewers+")</li>";
-                onlineCount++;
+                onlineCount++; 
+                $("#all-count").text(onlineCount);
 
                 twCount++;
                 $("#tw-count").text(twCount);
@@ -241,6 +243,7 @@ function checkStatus() {
             tvList[xhr.k].no+": "+
             tvList[xhr.k].title+"</li>";
             onlineCount++;
+            $("#all-count").text(onlineCount);
 
             tvCount++;
             $("#tv-count").text(tvCount);
