@@ -55,16 +55,13 @@ function filterList(type) {
         
         $(items[k]).css("display", 
         type == "all" ? "list-item" :
-        ((type+"-filter") == items[k].id ? "list-item" : "none"));
+        ((type+"-filter") == items[k].type ? "list-item" : "none"));
 
-        continue;
-        $(items[k]).removeClass(
-        ((type+"-filter") == items[k].id ? 
-        "btn-light" : "btn-secondary"));
+        $("#"+type+"-filter").removeClass(
+        "btn-light" : "btn-secondary");
 
-        $(items[k]).addClass(
-        ((type+"-filter") == items[k].id ? 
-        "btn-secondary" : "btn-light"));
+        $("#"+type+"-filter").addClass(
+        "btn-secondary" : "btn-light");
     }
     //$("ul li").
 }

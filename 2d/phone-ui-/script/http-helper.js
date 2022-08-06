@@ -103,7 +103,7 @@ function checkStatus() {
                if (json.room_status == "public" &&
                   json.hls_source.length > 0) {
                   html += 
-                  "<li onclick=\"handleDial('"+
+                  "<li type=\"cb\" onclick=\"handleDial('"+
                   cbList[xhr.k].no+"')\">"+
                  "<img src=\""+avatarImg+"\"/>"+
                  "<span class=\"live-indicator\">LIVE</span>"+
@@ -123,7 +123,8 @@ function checkStatus() {
                var x = cbList[xhr.k].url.indexOf("/", n+5);
 
                html += 
-               "<li class=\"low-opacity\" onclick=\"setAuto('"+
+               "<li type=\"cb\" "+
+               "class=\"low-opacity\" onclick=\"setAuto('"+
                cbList[xhr.k].no+"')\">"+
                "<img src=\""+avatarImg+"\"/>"+
                cbList[xhr.k].no+": "+
@@ -194,7 +195,8 @@ function checkStatus() {
 
             if (online) {
                 html += 
-                "<li onclick=\"handleDial('"+
+                "<li type=\"tw\" "+
+                "onclick=\"handleDial('"+
                 twList[xhr.k].no+"')\">"+
                 "<img src=\""+avatarImg+"\"/>"+  
                 "<span class=\"live-indicator\">LIVE</span>"+
@@ -208,7 +210,8 @@ function checkStatus() {
             }
             else {
                 html += 
-                "<li class=\"low-opacity\" onclick=\"handleDial('"+
+                "<li type=\"tw\" "+
+                "class=\"low-opacity\" onclick=\"handleDial('"+
                 twList[xhr.k].no+"')\">"+
                 "<img src=\""+avatarImg+"\"/>"+
                 twList[xhr.k].no+": "+
@@ -241,7 +244,7 @@ function checkStatus() {
             tvList[xhr.k].data = data;
 
             html += 
-            "<li onclick=\"handleDial('"+
+            "<li type=\"tv\"  onclick=\"handleDial('"+
             tvList[xhr.k].no+"')\">"+
             "<img src=\"img/placeholder.png\"/>"+
             tvList[xhr.k].no+": "+
