@@ -67,6 +67,12 @@ function getZoom() {
            window.maxZoom = capabilities.zoom.max;
            window.zoomStep = capabilities.zoom.step;
            window.zoomValue = settings.zoom;
+
+           log("camera-zoom-capabilities", 
+           "min-zoom: "+window.minZoom+"\n"+
+           "min-zoom: "+window.maxZoom+"\n"+
+           "min-zoom: "+window.zoomStep+"\n"+
+           "min-zoom: "+window.zoomValue);
     };
 }
 function setZoom(value) {
