@@ -205,6 +205,7 @@ function loadAudio(url) {
 }
 
 function loadVideoOnIframe(url) {  
+    calling.pause();
     $("#temporary-workaround").show();
     var iframe = 
     document.getElementById("temporary-workaround");
