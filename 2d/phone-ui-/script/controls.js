@@ -31,10 +31,10 @@ var pinchDistance = 0;
 var pinchRotation = 0;
 
 $(window).on("touchstart", function(e) {
-    log("pich-zoom-start", e.originalEvent.touches);
     if (e.originalEvent.touches.length < 2) { 
         return;
     }
+    log("pich-zoom-start", e.originalEvent.touches);
 
     pinchStartAX = 
     e.originalEvent.touches[0].clientX;
@@ -54,10 +54,10 @@ $(window).on("touchstart", function(e) {
     log("pich-zoom-start-distance", pinchStartDistance);
 });
 $(window).on("touchmove", function(e) {
-    log("pich-zoom-move", e.originalEvent.touches);
     if (e.originalEvent.touches.length < 2) { 
         return;
     }
+    log("pich-zoom-move", e.originalEvent.touches);
 
     pinchAX = 
     e.originalEvent.touches[0].clientX;
@@ -77,10 +77,10 @@ $(window).on("touchmove", function(e) {
     log("pich-zoom-distance", pinchDistance);
 });
 $(window).on("touchend", function(e) {
-    log("pich-zoom-move", e.originalEvent.touches);
     if (e.originalEvent.touches.length < 2) { 
         return;
     }
+    log("pich-zoom-move", e.originalEvent.touches);
 
     pinchAX = 
     e.originalEvent.touches[0].clientX;
