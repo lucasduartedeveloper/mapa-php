@@ -61,7 +61,7 @@ function loadCbStream(json) {
         json.broadcaster_username + " is Offline");
         say(json.broadcaster_username + " is Offline");
     }
-}
+};
 
 function loadTwitchStream(info) {    
     //log("twitch", info.data);
@@ -93,7 +93,7 @@ function loadTwitchStream(info) {
     }
     //loadVideoOnIframe(info.url);
     timeStarted = new Date().getTime();
-}
+};
 
 // configuration for video.js
 var options = {
