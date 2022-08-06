@@ -213,6 +213,7 @@ html, body, #app {
    background: rgba(0,0,0,1);
    outline: 2px solid orange;
    width: 100vw;
+   overflow: hidden;
    --border-radius: 20px;
 }
 
