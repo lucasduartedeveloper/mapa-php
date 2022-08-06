@@ -3,6 +3,16 @@ $("#heroku-version").click(function() {
          playerId + "|REFRESH");
 });
 
+var holdTime = 0;
+$(".video-stream").on("touchstart", function(e) {
+    holdTime = new Date().getTime();
+});
+$(".video-stream").on("touchend", function(e) {
+    if (new Date().getTime() - holdTime > 1000) {
+        log("remove-stream");
+    }
+});
+
 $("#minimize").click(function() {
     $("#video-layer").hide();
 });
