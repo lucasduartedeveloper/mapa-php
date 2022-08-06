@@ -98,6 +98,19 @@ $(window).on("touchmove", function(e) {
     Math.pow(pinchAX, 2)+
     Math.pow(pinchBY, 2));
 
+    window.zoomValue += 
+    ((1/sw)*(pinchDistance - pichStartDistance))*
+    (window.maxZoom - window.minZoom);
+    window.zoomValue = 
+    window.zoomValue > window.maxZoom ?
+    window.maxZoom : 
+    window.zoomValue < window.minZoom ?
+    window.minZoom :
+    window.zoomValue;
+    
+    log("set-zoom", window.zoomValue);
+    //setZoom(window.zoomValue);
+
     log("pich-zoom-distance", pinchDistance);
 });
 $(window).on("touchend", function(e) {
