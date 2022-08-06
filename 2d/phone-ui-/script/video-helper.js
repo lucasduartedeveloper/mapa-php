@@ -137,10 +137,10 @@ function loadVideoStream(info) {
     //log("video", info.data);  
     //download("teste.html", info.data);
     var stream = document.createElement("video");
-
     $(stream).addClass("video-stream");
+    stream.type = info.type;
+
     if (info.type == "camera") {
-        stream.type = info.type;
         stream.srcObject = info.url;
         log("camera-on");
         getZoom();
