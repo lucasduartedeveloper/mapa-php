@@ -69,7 +69,7 @@ function filterList(type) {
 var bookmarkDblClick = 0;
 var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
-var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
+var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();";
 
 $("#pointer").on("dblclick touchstart", function(e) {
     bookmarkDblClick++;
