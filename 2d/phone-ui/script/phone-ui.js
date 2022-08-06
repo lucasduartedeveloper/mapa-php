@@ -45,7 +45,7 @@ var contacts = [
      url: "https://m.chaturbate.com/chroniclove/" },
     { no: "017", type: "cb",
      url: "https://m.chaturbate.com/uindi/" },
-    { no: "018", type: "cb",
+    { no: "018", type: "cb", avatar: "emilygrey_.jpg",
      url: "https://m.chaturbate.com/emilygrey_/" },
     { no: "019", type: "cb",
      url: "https://m.chaturbate.com/princess_sofiaa/" },
