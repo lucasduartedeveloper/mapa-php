@@ -43,7 +43,7 @@ $(window).on("touchstart", function(e) {
 
     pinchStartBX = 
     e.originalEvent.touches[1].clientX;
-    pinchStartBX = 
+    pinchStartBY = 
     e.originalEvent.touches[1].clientY;
 
     pinchStartDistance =
@@ -66,7 +66,7 @@ $(window).on("touchmove", function(e) {
 
     pinchBX = 
     e.originalEvent.touches[1].clientX;
-    pinchBX = 
+    pinchBY = 
     e.originalEvent.touches[1].clientY;
 
     pinchDistance =
@@ -88,9 +88,9 @@ $(window).on("touchend", function(e) {
     e.originalEvent.touches[0].clientY;
 
     pinchBX = 
-    e.originalEvent.touches[0].clientX;
-    pinchBX = 
-    e.originalEvent.touches[0].clientY;
+    e.originalEvent.touches[1].clientX;
+    pinchBY = 
+    e.originalEvent.touches[1].clientY;
 
     pinchDistance =
     Math.sqrt(
