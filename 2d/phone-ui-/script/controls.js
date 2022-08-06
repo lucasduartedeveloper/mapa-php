@@ -76,11 +76,15 @@ var video = false;
 $("#toggle-video").click(function () {
     video = !video;
     if (!video) {
-        $("#video-stream").hide(); 
+        for (var k in streams) {
+           $(streams[k]).hide();
+        }
         $("#video-js").hide();
     }
     else {
-        $("#video-stream").show();
+        for (var k in streams) {
+           $(streams[k]).show();
+        }
         //$("#video-js").show();
     }
 });
