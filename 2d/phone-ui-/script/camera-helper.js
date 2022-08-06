@@ -56,6 +56,7 @@ function stopCamera() {
 function getZoom() {
     for (var k in streams) {
         if (streams[k].type == "camera")
+           log(streams[k].srcObject);
            var track = streams[k].srcObject.getVideoTracks()[0];
            var capabilities = track.getCapabilities();
 
