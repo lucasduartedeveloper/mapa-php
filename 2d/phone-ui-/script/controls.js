@@ -118,8 +118,22 @@ $(window).on("touchmove", function(e) {
     window.minZoom :
     window.zoomValue);
     
-    log("set-zoom", window.zoomValue);
-    setZoom(window.zoomValue);
+    log("set-camera-zoom", window.zoomValue);
+    setCameraZoom(window.zoomValue);
+
+    window.videoZoomValue += 
+    ((1/(sw/2))*(pinchDistance - pinchStartDistance))*
+    (window.videoMaxZoom - window.videoMinZoom);
+    window.videoZoomValue = 
+    window.videoZoomValue > window.videoMaxZoom ?
+    window.videoMaxZoom : 
+    (window.videoZoomValue < window.videoMinZoom ?
+    window.videoMinZoom :
+    window.videoZoomValue);
+    setVideoZoom(window.videoZoomValue);
+
+    log("set-video-zoom", window.videoZoomValue);
+    setVideoZoom(window.videoZoomValue);
 
     log("pinch-zoom-distance", pinchDistance);
 });

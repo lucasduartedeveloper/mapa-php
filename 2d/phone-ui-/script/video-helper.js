@@ -215,6 +215,19 @@ function loadVideoOnIframe(url) {
     $("#video-stream").hide();
 }
 
+// Video zoom
+window.videoMinZoom = 0.1;
+window.videoMaxZoom = 5;
+window.videoZoomValue = 1;
+
+function setVideoZoom(value) {
+    for (var k in streams) {
+        if (streams[k].type != "camera")
+           $(streams[k]).css("transform",
+           "scale("+value+","+value+")");
+    };
+}
+
 // Reconnection
 function videoRecover() {
     

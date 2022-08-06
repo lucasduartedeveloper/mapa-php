@@ -41,7 +41,8 @@ function startCamera(no = 1) {
                vw = settings.width;
                vh = settings.height;
                vr = vh/vw;
-               getZoom();
+
+               getCameraZoom();
           });
      }
 }
@@ -54,7 +55,7 @@ function stopCamera() {
      };
 }
 
-function getZoom() {
+function getCameraZoom() {
     for (var k in streams) {
         if (streams[k].type == "camera")
            log("stream", streams[k].srcObject
@@ -76,7 +77,7 @@ function getZoom() {
            "zoom-value: "+window.zoomValue);
     };
 }
-function setZoom(value) {
+function setCameraZoom(value) {
     for (var k in streams) {
         if (streams[k].type == "camera")
            var track = streams[k].srcObject.getVideoTracks()[0];

@@ -1,7 +1,7 @@
 var notification = new Audio("audio/game-notification.wav");
 
 var dial = [
-    //new Audio("audio/phone-dial-0.wav"),
+    new Audio("audio/phone-dial-0.wav"),
     new Audio("audio/phone-dial-1.mp3"),
     new Audio("audio/phone-dial-2.mp3"),
     new Audio("audio/phone-dial-3.mp3"),
