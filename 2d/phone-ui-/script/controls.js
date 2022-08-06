@@ -54,7 +54,15 @@ function filterList(type) {
     for (var k in items) {
         $(items[k]).css("display", 
         type == "all" ? "list-item" :
-        (type+"-filter" == items[k].id ? "list-item" : "none"));
+        ((type+"-filter") == items[k].id ? "list-item" : "none"));
+
+        $(items[k]).addClass(
+        ((type+"-filter") == items[k].id ? 
+        "btn-light" : "btn-secondary"));
+
+        $(items[k]).addClass(
+        ((type+"-filter") == items[k].id ? 
+        "btn-secondary" : "btn-light"));
     }
     //$("ul li").
 }
