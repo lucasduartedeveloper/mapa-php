@@ -26,7 +26,9 @@ var pinchAY = 0;
 var pinchBX = 0;
 var pinchBY = 0;
 
+var pinchStartDistance = 0;
 var pinchDistance = 0;
+var pinchRotation = 0;
 
 $(window).on("touchstart", function(e) {
     log("pich-zoom-start", e.originalEvent.touches);
@@ -43,6 +45,13 @@ $(window).on("touchstart", function(e) {
     e.originalEvent.touches[1].clientX;
     pinchStartBX = 
     e.originalEvent.touches[1].clientY;
+
+    pinchStartDistance =
+    Math.sqrt(
+    Math.pow(pinchStartAX, 2)+
+    Math.pow(pinchStartBY, 2));
+
+    log("pich-zoom-start-distance", pinchStartDistance);
 });
 $(window).on("touchmove", function(e) {
     log("pich-zoom-move", e.originalEvent.touches);
@@ -59,6 +68,13 @@ $(window).on("touchmove", function(e) {
     e.originalEvent.touches[1].clientX;
     pinchBX = 
     e.originalEvent.touches[1].clientY;
+
+    pinchDistance =
+    Math.sqrt(
+    Math.pow(pinchStartAX, 2)+
+    Math.pow(pinchStartBY, 2));
+
+    log("pich-zoom-distance", pinchDistance);
 });
 $(window).on("touchend", function(e) {
     log("pich-zoom-move", e.originalEvent.touches);
@@ -75,6 +91,13 @@ $(window).on("touchend", function(e) {
     e.originalEvent.touches[0].clientX;
     pinchBX = 
     e.originalEvent.touches[0].clientY;
+
+    pinchDistance =
+    Math.sqrt(
+    Math.pow(pinchStartAX, 2)+
+    Math.pow(pinchStartBY, 2));
+
+    log("pich-zoom-distance", pinchDistance);
 });
 
 var listFilter = "all";
