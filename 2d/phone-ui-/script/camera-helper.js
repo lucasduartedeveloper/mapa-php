@@ -35,28 +35,12 @@ function startCamera(no = 1) {
                    url: stream,
                    type: "camera"
                });
-               var track = getVideoTracks()[0];
-               var capabilities = track.getCapabilities();
+               var track = stream.getVideoTracks()[0];
                var settings = track.getSettings();
 
                vw = settings.width;
                vh = settings.height;
                vr = vh/vw;
-
-               // Map zoom to a slider element.
-               input.min = capabilities.zoom.min;
-               input.max = capabilities.zoom.max;
-               input.step = capabilities.zoom.step;
-               input.value = settings.zoom;
-               input.oninput = function(event) {
-                   track.applyConstraints({advanced: [ {zoom: event.target.value} ]});
-               }
-               
-               // Check whether zoom is supported or not.
-               if (!('zoom' in settings)) {
-                   log('Zoom is not supported by ' + track.label);
-                   return;
-               }
           });
      }
 }
@@ -67,4 +51,27 @@ function stopCamera() {
            .getTracks()
            .forEach(t => t.stop());
      };
+}
+
+function getZoom() {
+    for (var k in streams) {
+        if (streams[k].type == "camera")
+           var track = streams[k].srcObject.getVideoTracks()[0];
+           var capabilities = track.getCapabilities();
+
+           // Map zoom to a slider element.
+           window.minZoom = capabilities.zoom.min;
+           window.maxZoom = capabilities.zoom.max;
+           window.zoomStep = capabilities.zoom.step;
+           window.zoomValue = settings.zoom;
+    };
+}
+
+function setZoom(value) {
+    for (var k in streams) {
+        if (streams[k].type == "camera")
+           streams[k].srcObject
+           .applyConstraints(
+           {advanced: [ {zoom: event.target.value} ]});
+    };
 }
