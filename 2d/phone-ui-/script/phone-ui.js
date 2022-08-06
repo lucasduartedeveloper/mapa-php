@@ -67,8 +67,8 @@ var contacts = [
      url: "https://m.chaturbate.com/eleonora_linn/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
-    /*{ no: "301", type: "tw",
-     url: "https://m.twitch.tv/woohankyung/home" },*/
+    { no: "301", type: "tw",
+     url: "https://m.twitch.tv/kjanecaron/home" },
     { no: "302", type: "tw",
      url: "https://m.twitch.tv/kandyland/home" },
     { no: "303", type: "tw",
