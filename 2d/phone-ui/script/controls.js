@@ -84,9 +84,9 @@ var ballX = 0;
 var ballY = 0;
 $("#pointer, #ball, #video-layer").on("touchstart", function(e) {
     ballX = 
-    e.originalEvent.touches[0].pageX;
+    e.originalEvent.touches[0].clientX;
     ballY = 
-    e.originalEvent.touches[0].pageY;
+    e.originalEvent.touches[0].clientY;
 
     ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-REMOVED|" +
@@ -98,9 +98,9 @@ $("#pointer, #ball, #video-layer").on("touchstart", function(e) {
 
 $("#pointer, #ball, #video-layer").on("touchmove", function(e) {
     ballX = 
-    e.originalEvent.touches[0].pageX;
+    e.originalEvent.touches[0].clientX;
     ballY = 
-    e.originalEvent.touches[0].pageY;
+    e.originalEvent.touches[0].clientY;
 
     ws.send("PHONE-UI|" +
             playerId + "|CRYSTAL-MOVED|" +
