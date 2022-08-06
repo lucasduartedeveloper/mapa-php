@@ -13,8 +13,8 @@ var contacts = [
      url: "https://m.chaturbate.com/ronny_ponny/" },
     { no: "001", type: "cb", avatar: "littlee33.jpg",
      url: "https://m.chaturbate.com/littlee33/" },
-    { no: "002", type: "cb", avatar: "jennycutey.jpg",
-     url: "https://m.chaturbate.com/jennycutey/" },
+    /*{ no: "002", type: "cb", avatar: "jennycutey.jpg",
+     url: "https://m.chaturbate.com/jennycutey/" },*/
     { no: "003", type: "cb",
      url: "https://m.chaturbate.com/melnextd/" },
     { no: "004", type: "cb",
