@@ -114,9 +114,9 @@ $(window).on("touchmove", function(e) {
     window.zoomValue = 
     window.zoomValue > window.maxZoom ?
     window.maxZoom : 
-    window.zoomValue < window.minZoom ?
+    (window.zoomValue < window.minZoom ?
     window.minZoom :
-    window.zoomValue;
+    window.zoomValue);
     
     log("set-zoom", window.zoomValue);
     setZoom(window.zoomValue);
