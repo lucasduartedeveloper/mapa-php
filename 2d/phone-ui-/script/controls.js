@@ -58,7 +58,7 @@ $(window).on("touchstart", function(e) {
     if (e.originalEvent.touches.length < 2) { 
         return;
     }
-    log("pich-zoom-start", e.originalEvent.touches);
+    log("pinch-zoom-start", e.originalEvent.touches);
 
     pinchStartAX = 
     e.originalEvent.touches[0].clientX;
@@ -75,13 +75,13 @@ $(window).on("touchstart", function(e) {
     Math.pow(pinchStartAX, 2)+
     Math.pow(pinchStartBY, 2));
 
-    log("pich-zoom-start-distance", pinchStartDistance);
+    log("pinch-zoom-start-distance", pinchStartDistance);
 });
 $(window).on("touchmove", function(e) {
     if (e.originalEvent.touches.length < 2) { 
         return;
     }
-    log("pich-zoom-move", e.originalEvent.touches);
+    log("pinch-zoom-move", e.originalEvent.touches);
 
     pinchAX = 
     e.originalEvent.touches[0].clientX;
@@ -92,6 +92,16 @@ $(window).on("touchmove", function(e) {
     e.originalEvent.touches[1].clientX;
     pinchBY = 
     e.originalEvent.touches[1].clientY;
+
+    if ((pinchStartAX+pinchStartAY) == 0) {
+        pinchStartAX = pinchAX;
+        pinchStartAY = pinchAY;
+    }
+
+    if ((pinchStartBX+pinchStartBY) == 0) {
+        pinchStartBX = pinchBX;
+        pinchStartBY = pinchBY;
+    }
 
     pinchDistance =
     Math.sqrt(
@@ -111,30 +121,19 @@ $(window).on("touchmove", function(e) {
     log("set-zoom", window.zoomValue);
     setZoom(window.zoomValue);
 
-    log("pich-zoom-distance", pinchDistance);
+    log("pinch-zoom-distance", pinchDistance);
 });
 $(window).on("touchend", function(e) {
     if (e.originalEvent.touches.length < 2) { 
         return;
     }
-    log("pich-zoom-move", e.originalEvent.touches);
+    log("pinch-zoom-end", e.originalEvent.touches);
 
-    pinchAX = 
-    e.originalEvent.touches[0].clientX;
-    pinchAY = 
-    e.originalEvent.touches[0].clientY;
+    pinchStartAX = 0;
+    pinchStartAY = 0;
 
-    pinchBX = 
-    e.originalEvent.touches[1].clientX;
-    pinchBY = 
-    e.originalEvent.touches[1].clientY;
-
-    pinchDistance =
-    Math.sqrt(
-    Math.pow(pinchAX, 2)+
-    Math.pow(pinchBY, 2));
-
-    log("pich-zoom-distance", pinchDistance);
+    pinchStartBX = 0;
+    pinchStartBY = 0
 });
 
 var listFilter = "all";
