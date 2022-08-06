@@ -60,6 +60,7 @@ function getZoom() {
            .getVideoTracks()[0]);
            var track = streams[k].srcObject.getVideoTracks()[0];
            var capabilities = track.getCapabilities();
+           var settings = track.getSettings();
 
            // Map zoom to a slider element.
            window.minZoom = capabilities.zoom.min;
