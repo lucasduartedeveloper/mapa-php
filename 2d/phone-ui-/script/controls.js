@@ -53,51 +53,6 @@ $(window).on("touchmove", function(e) {
     e.originalEvent.touches[0].clientY;
 });
 
-/* Disable right click
-document.getElementById("pointer")
-.addEventListener("contextmenu", e => e.preventDefault());
-
-document.getElementById("pointer")
-.oncontextmenu = function() { return false; };
-
-$("#pointer").bind("contextmenu", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-});
-
-$("#pointer").mousedown(function(e) {
-   switch (e.which) {
-      case 1:
-      // Left mouse
-      break;
-
-      case 2:
-      // Middle mouse
-      break;
-
-      case 3:
-      // Right mouse.
-      log("right-click");
-      e.preventDefault();
-      e.stopPropagation();
-      break;
-   }
-});
-
-// Bookmark
-var bookmarkDblClick = 0;
-var bookmarkHoldTime = 0;
-var bookmarkTimeout = 0;
-var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();";
-
-$("#pointer").on("dblclick", function(e) {
-    bookmarkDblClick++;
-    if (bookmarkDblClick >= 2) {
-       $("#pointer").trigger("touchend");
-    }
-});*/
-
 var listFilter = "all";
 function filterList(type) {
     log("filter-list: ", type);
@@ -152,7 +107,7 @@ $("#pointer").on("touchend", function(e) {
             $("#pointer").css("filter","initial");
         }, 1000);
     }
-});*/
+});
 
 $("#minimize").click(function() {
     $("#video-layer").hide();
@@ -310,3 +265,48 @@ function returnCrystal(e = false) {
     $("#pointer, #ball").css("left", (ballX-ballRadius)+"px");
     $("#pointer, #ball").css("top", (ballY-ballRadius)+"px");
 }
+
+/* Disable right click
+document.getElementById("pointer")
+.addEventListener("contextmenu", e => e.preventDefault());
+
+document.getElementById("pointer")
+.oncontextmenu = function() { return false; };
+
+$("#pointer").bind("contextmenu", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+});
+
+$("#pointer").mousedown(function(e) {
+   switch (e.which) {
+      case 1:
+      // Left mouse
+      break;
+
+      case 2:
+      // Middle mouse
+      break;
+
+      case 3:
+      // Right mouse.
+      log("right-click");
+      e.preventDefault();
+      e.stopPropagation();
+      break;
+   }
+});
+
+// Bookmark
+var bookmarkDblClick = 0;
+var bookmarkHoldTime = 0;
+var bookmarkTimeout = 0;
+var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();";
+
+$("#pointer").on("dblclick", function(e) {
+    bookmarkDblClick++;
+    if (bookmarkDblClick >= 2) {
+       $("#pointer").trigger("touchend");
+    }
+});*/
