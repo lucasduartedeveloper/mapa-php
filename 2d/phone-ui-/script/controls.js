@@ -50,21 +50,19 @@ var listFilter = "all";
 function filterList(type) {
     log("filter-list: ", type);
     listFilter = type;
-    var items = $("ul li");
-    return;
-    for (var k in items) {
-        
-        $(items[k]).css("display", 
+
+    $("ul li").each(function(i) {
+        $(this).css("display", 
         type == "all" ? "list-item" :
         ((type+"-filter") == items[k].type ? "list-item" : "none"));
+     }
 
-        $(".modal-body button").removeClass(
-        "btn-secondary");
-        $(".modal-body button").removeClass(
-        "btn-light");
-        $("#"+type+"-filter").addClass(
-        "btn-secondary");
-    }
+     $(".modal-body button").removeClass(
+     "btn-secondary");
+     $(".modal-body button").removeClass(
+     "btn-light");
+     $("#"+type+"-filter").addClass(
+     "btn-secondary");
     //$("ul li").
 }
 
