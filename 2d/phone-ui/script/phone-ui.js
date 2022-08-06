@@ -104,7 +104,7 @@ var contacts = [
     { no: "903", type: "uploaded-video", 
       url: "video/upload-test-7.abc" },
     { no: "904", type: "uploaded-video", 
-      url: "video/upload-test-8.abc" },
+      url: "video/upload-test-8.abc" },l
     /*{ no: "910", type: "uploaded-video", 
       url: "video/upload-test-3.abc" },*/
     { no: "911", type: "uploaded-video",

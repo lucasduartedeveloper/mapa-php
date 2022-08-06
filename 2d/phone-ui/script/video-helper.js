@@ -1,4 +1,5 @@
 var sock = false;
+var streams = [];
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
         sock = new SockJS(json.wschat_host);
@@ -133,6 +134,19 @@ function loadVideoStream(info) {
     //log("video", info.data);  
     //download("teste.html", info.data);
     
+    /*
+    for (var k in streams) {
+       $("#video-streams-container").remove(streams[k]);
+    }
+    streams = [];*/
+
+    var stream = document
+    .createElementByTagName("video");
+
+    $(stream).addClass("video-stream");
+    $(stream).attr("src", nfo.url);
+    $(stream).appendTo("#video-streams-container");
+
     $("#temporary-workaround").hide();
     $("#video-layer").show();
     $("#broadcaster-username")
