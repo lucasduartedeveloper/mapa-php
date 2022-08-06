@@ -72,8 +72,8 @@ function getZoom() {
 function setZoom(value) {
     for (var k in streams) {
         if (streams[k].type == "camera")
-           streams[k].srcObject
-           .applyConstraints(
-           {advanced: [ {zoom: event.target.value} ]});
+           var track = streams[k].srcObject.getVideoTracks()[0];
+           track.applyConstraints(
+           { advanced: [ { zoom: event.target.value } ] });
     };
 }
