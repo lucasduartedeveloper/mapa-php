@@ -19,7 +19,11 @@ document.getElementById("pointer")
 .addEventListener("contextmenu", e => e.preventDefault());
 
 document.getElementById("pointer")
-oncontextmenu = function() { return false; }
+oncontextmenu = function() { return false; };
+
+$("#pointer").bind("contextmenu", function() {
+    return false;
+});
 
 var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
