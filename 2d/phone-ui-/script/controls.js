@@ -28,7 +28,7 @@ $("#pointer").bind("contextmenu", function(e) {
 });
 
 $("#pointer").mousedown(function(e) {
-   switch (e.which)
+   switch (e.which) {
       case 1:
       // Left mouse
       break;
