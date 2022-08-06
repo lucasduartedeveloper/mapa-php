@@ -89,8 +89,11 @@ echo "\n";
 <span id="time-streaming">00:00:00</span>
 <iframe id="temporary-workaround"></iframe>
 
-<video id="video-stream" style="display:none" 
-width="100" height="100" autoplay></video>
+<div id="video-streams-container">
+     <video id="video-stream" class="video-stream"
+     style="display:none" width="100" height="100"
+     autoplay></video>
+</div>
 
 <video id="video-js" style="display:none" 
 width="100" height="100" class="video-js vjs-default-skin" 

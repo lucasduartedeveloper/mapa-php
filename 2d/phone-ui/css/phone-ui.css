@@ -197,8 +197,18 @@ html, body, #app {
   border-radius: 20px;
 }
 
-#video-stream,
-#video-js {
+#video-stream-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: row-wrap;
+   text-align: center;
+   overflow: hidden;
+}
+
+.video-stream,
+.video-js {
    background: rgba(0,0,0,1);
    border: 2px solid gray;
    width: 100vw;
