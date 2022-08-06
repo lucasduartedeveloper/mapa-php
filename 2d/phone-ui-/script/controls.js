@@ -70,8 +70,10 @@ $("#pointer").on("dblclick touchstart", function(e) {
 });
 $("#pointer").on("touchend", function(e) {
     if (new Date().getTime() - bookmarkHoldTime < 5000) {
-        $("#pointer").css("filter","initial");
         clearTimeout(bookmarkTimeout);
+        setTimeout(function() {
+            $("#pointer").css("filter","initial");
+        }, 1000);
     }
 });
 
