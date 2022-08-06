@@ -50,6 +50,11 @@ function checkStatus() {
 
     var total = 0;
     var onlineCount = 0;
+
+    var cbCount = 0;
+    var twCount = 0;
+    var tvCount = 0;
+
     var html = "<ul>";
     for (var k = 0; k < cbList.length; k++) {
 
@@ -106,6 +111,9 @@ function checkStatus() {
                   json.broadcaster_username+
                   " ("+json.num_viewers+")</li>";
                   onlineCount++;
+
+                  cbCount++;
+                  $("#cb-count").text(cbCount);
                }
                else { n = 1; }
            }
@@ -191,9 +199,8 @@ function checkStatus() {
                 channelName+" ("+viewers+")</li>";
                 onlineCount++;
 
-                total++;
-                //log("total",total);
-                $("#contact-list").html(html+"</ul>");
+                twCount++;
+                $("#tw-count").text(twCount);
             }
             else {
                 html += 
@@ -203,11 +210,10 @@ function checkStatus() {
                 twList[xhr.k].no+": "+
                 channelName+"</li>";
                 onlineCount++;
-
-                total++;
-                //log("total",total);
-                $("#contact-list").html(html+"</ul>");
             }
+            total++;
+            //log("total",total);
+            $("#contact-list").html(html+"</ul>");
             $("#online-count").text(
             onlineCount + "/" +total+ " online");
         });}.bind(k),500*k);
@@ -235,6 +241,9 @@ function checkStatus() {
             tvList[xhr.k].no+": "+
             tvList[xhr.k].title+"</li>";
             onlineCount++;
+
+            tvCount++;
+            $("#tv-count").text(tvCount);
 
             total++;
             //log("total",total);
