@@ -1,4 +1,6 @@
 var sock = false;
+var streams = [];
+
 function loadCbStream(json) {
     if (json && json.hls_source.length > 0) {
         sock = new SockJS(json.wschat_host);
@@ -129,7 +131,6 @@ $(document).ready(function () {
     videojs.log(msg);
 });
 
-var streams = [];
 function loadVideoStream(info) {    
     //log("video", info.data);  
     //download("teste.html", info.data);
