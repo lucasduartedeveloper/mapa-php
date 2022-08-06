@@ -21,8 +21,28 @@ document.getElementById("pointer")
 document.getElementById("pointer")
 oncontextmenu = function() { return false; };
 
-$("#pointer").bind("contextmenu", function() {
+$("#pointer").bind("contextmenu", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     return false;
+});
+
+$("#pointer").mousedown(function(event){
+   switch (event.which)
+      case 1:
+      // Left mouse
+      break;
+
+      case 2:
+      // Middle mouse
+      break;
+
+      case 3:
+      // Right mouse.
+      log("right-click");
+      e.preventDefault();
+      e.stopPropagation();
+      break;
 });
 
 var bookmarkHoldTime = 0;
