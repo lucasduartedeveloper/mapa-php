@@ -109,7 +109,7 @@ $(window).on("touchmove", function(e) {
     window.zoomValue;
     
     log("set-zoom", window.zoomValue);
-    //setZoom(window.zoomValue);
+    setZoom(window.zoomValue);
 
     log("pich-zoom-distance", pinchDistance);
 });
