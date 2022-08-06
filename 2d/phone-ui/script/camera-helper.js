@@ -44,9 +44,10 @@ function startCamera(no = 1) {
      }
 }
 function stopCamera() {
-     return;
-     if (video.srcObject)
-     video.srcObject
-    .getTracks()
-    .forEach(t => t.stop());
+     for (var k in streams) {
+        if (streams[k].srcObject)
+           video.srcObject
+           .getTracks()
+           .forEach(t => t.stop());
+     };
 }
