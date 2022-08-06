@@ -51,13 +51,13 @@ function filterList(type) {
     log("filter-list: ", type);
     listFilter = type;
     var items = $("ul li");
+    return;
     for (var k in items) {
         
         $(items[k]).css("display", 
         type == "all" ? "list-item" :
         ((type+"-filter") == items[k].type ? "list-item" : "none"));
 
-        continue;
         $(".modal-body button").removeClass(
         "btn-secondary");
         $(".modal-body button").removeClass(
