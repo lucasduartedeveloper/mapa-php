@@ -136,7 +136,7 @@ $(document).ready(function() {
     $("#temporary-workaround").css("width", sw+"px");
     $("#temporary-workaround").css("height", sw+"px");
 
-    $("#video-stream")[0].oncanplay = 
+    $(".video-stream")[0].oncanplay = 
     function() {
         calling.pause();
         calling.currentTime = 0;
