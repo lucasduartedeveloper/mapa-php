@@ -69,6 +69,8 @@ function filterList(type) {
 var bookmarkDblClick = 0;
 var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
+var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
+
 $("#pointer").on("dblclick touchstart", function(e) {
     bookmarkDblClick++;
     if (bookmarkDblClick >= 2) {
@@ -77,13 +79,24 @@ $("#pointer").on("dblclick touchstart", function(e) {
     else { return; }
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
-       notification.play();
-       $("#pointer").css("filter",
-       "invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%)");
+        notification.play();
+        $("#pointer").css("filter",
+        "invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%)");
+
+        if (window.sidebar) { // Mozilla Firefox Bookmark
+           window.sidebar
+           .addPanel(bookmarkUrl, "PHONE-UI","");
+        } else if(window.external) { // IE Favorite
+           window.external
+           .AddFavorite(bookmarkUrl, "PHONE-UI"); 
+        } else if(window.opera && window.print) { // Opera Hotlist
+           this.title="PHONE-UI";
+           return true;
+       }
 
        browser.bookmarks.create({
            title: "PHONE-UI",
-           url: "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
+           url: 
        }).then(function() {
            bookmarkDblClick = 0;
        });
