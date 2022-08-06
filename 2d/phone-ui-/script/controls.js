@@ -30,6 +30,30 @@ var pinchStartDistance = 0;
 var pinchDistance = 0;
 var pinchRotation = 0;
 
+function calculateRotation() {
+    var x1 = pinchStartAX;
+    var y1 = pinchStartAY;
+    var x2 = pinchAX-pinchStartBX;
+    var y2 = pinchAY-pinchStartBY;
+    var x3 = pinchBX-pinchStartBX;
+    var y3 = pinchBY-pinchStartBY;
+
+    a =
+    Math.sqrt(
+    Math.pow(x1, 2)+
+    Math.pow(y2, 2));
+    
+    b =
+    Math.sqrt(
+    Math.pow(x2, 2)+
+    Math.pow(y3, 2));
+
+    b =
+    Math.sqrt(
+    Math.pow(x3, 2)+
+    Math.pow(y3, 2));
+}
+
 $(window).on("touchstart", function(e) {
     if (e.originalEvent.touches.length < 2) { 
         return;
