@@ -52,7 +52,7 @@ function filterList(type) {
     listFilter = type;
     var items = $("ul li");
     for (var k in items) {
-        items[k].css("display", 
+        $(items[k]).css("display", 
         type == "all" ? "list-item" :
         (type+"-filter" == items[k].id ? "list-item" : "none"));
     }
