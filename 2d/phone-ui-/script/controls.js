@@ -71,8 +71,8 @@ $(window).on("touchmove", function(e) {
 
     pinchDistance =
     Math.sqrt(
-    Math.pow(pinchStartAX, 2)+
-    Math.pow(pinchStartBY, 2));
+    Math.pow(pinchAX, 2)+
+    Math.pow(pinchBY, 2));
 
     log("pich-zoom-distance", pinchDistance);
 });
@@ -94,8 +94,8 @@ $(window).on("touchend", function(e) {
 
     pinchDistance =
     Math.sqrt(
-    Math.pow(pinchStartAX, 2)+
-    Math.pow(pinchStartBY, 2));
+    Math.pow(pinchAX, 2)+
+    Math.pow(pinchBY, 2));
 
     log("pich-zoom-distance", pinchDistance);
 });
