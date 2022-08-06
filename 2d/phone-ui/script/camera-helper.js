@@ -46,7 +46,7 @@ function startCamera(no = 1) {
 function stopCamera() {
      for (var k in streams) {
         if (streams[k].type == "camera")
-           video.srcObject
+           streams[k].srcObject
            .getTracks()
            .forEach(t => t.stop());
      };
