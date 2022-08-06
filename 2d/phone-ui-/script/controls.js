@@ -23,6 +23,8 @@ $("#pointer").on("touchstart", function(e) {
        var createBookmark = browser.bookmarks.create({
            title: "PHONE-UI",
            url: "javascript:(function () { var script = document.createElement('script'); script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
+       }).then(function() {
+           notification.play();
        });
     }, 5000);
 });
