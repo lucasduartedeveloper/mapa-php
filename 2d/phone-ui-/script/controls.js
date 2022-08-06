@@ -74,6 +74,7 @@ $("#pointer").on("dblclick touchstart", function(e) {
     if (bookmarkDblClick >= 2) {
        $("#pointer").trigger("touchend");
     }
+    else { return; }
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
        $("#pointer").css("filter",
