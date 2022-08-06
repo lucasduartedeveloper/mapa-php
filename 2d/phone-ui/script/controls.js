@@ -47,6 +47,9 @@ $("#hang-phone").click(function(e, user = true) {
 var videoControls = false;
 $("#toggle-controls").click(function () {
     videoControls = !videoControls;
+    for (var k in streams) {
+       streams[k].controls = videoControls;
+    }
     $("#video-stream")[0].controls = videoControls;
 });
 
