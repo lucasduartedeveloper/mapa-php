@@ -30,7 +30,7 @@ $("#hang-phone").click(function(e, user = true) {
     }
     streams = [];
 
-    $("#video-stream")[0].pause();
+    //$("#video-stream")[0].pause();
     //window.player.pause();
     $("#video-layer").hide();
 

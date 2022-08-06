@@ -160,11 +160,13 @@ function loadVideoStream(info) {
     $("#video-layer").show();
     $("#broadcaster-username")
     .text(info.title);
+    /*
     $("#video-stream").show();
     $("#video-stream").attr("src", 
     info.url);
     $("#video-stream")[0].load();
     $("#video-stream")[0].play();
+    */
 
     // load video from url
     /*player.src({ 
