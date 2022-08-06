@@ -50,7 +50,6 @@ $("#toggle-controls").click(function () {
     for (var k in streams) {
        streams[k].controls = videoControls;
     }
-    $("#video-stream")[0].controls = videoControls;
 });
 
 var video = false;
