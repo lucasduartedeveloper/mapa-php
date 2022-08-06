@@ -24,6 +24,12 @@ $("#hang-phone").click(function(e, user = true) {
 
     stopCamera();
 
+    for (var k in streams) {
+       $("#video-streams-container").remove(streams[k]);
+       streams[k].pause();
+    }
+    streams = [];
+
     $("#video-stream")[0].pause();
     //window.player.pause();
     $("#video-layer").hide();
