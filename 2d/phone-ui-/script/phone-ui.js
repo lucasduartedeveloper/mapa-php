@@ -61,6 +61,8 @@ var contacts = [
      url: "https://m.chaturbate.com/kittycaitlin/" },
     { no: "026", type: "cb",
      url: "https://m.chaturbate.com/gia_baker/" },
+    { no: "027", type: "cb",
+     url: "https://m.chaturbate.com/pussy__money__weed/" },
     { no: "300", type: "tw",
      url: "https://m.twitch.tv/rafaelariggs/home" },
     /*{ no: "301", type: "tw",
