@@ -41,6 +41,7 @@ function startCamera(no = 1) {
                vw = settings.width;
                vh = settings.height;
                vr = vh/vw;
+               getZoom();
           });
      }
 }
