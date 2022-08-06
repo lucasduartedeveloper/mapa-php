@@ -17,7 +17,8 @@ if (navigator.mediaDevices) {
 }
 
 var deviceNo = 1;
-function startCamera() {
+function startCamera(no = 1) {
+    deviceNo = no;
     timeStarted = new Date().getTime();
 
      if (navigator.mediaDevices) {
