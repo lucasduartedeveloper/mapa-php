@@ -184,21 +184,21 @@ controls autoplay>
         </button>
          <button id="cb-filter" type="button" 
             onclick="filterList('cb')"
-            class="btn btn-secondary btn-sm">
+            class="btn btn-light btn-sm">
             Cb <span id="cb-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
         <button id="tw-filter" type="button" 
             onclick="filterList('tw')"
-            class="btn btn-secondary btn-sm">
+            class="btn btn-light btn-sm">
             Twitch <span id="tw-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
         <button id="tv-filter" type="button" 
             onclick="filterList('tv')"
-            class="btn btn-secondary btn-sm">
+            class="btn btn-light btn-sm">
             Tv <span id="tv-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
