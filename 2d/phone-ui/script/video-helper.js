@@ -138,6 +138,7 @@ function loadVideoStream(info) {
 
     $(stream).addClass("video-stream");
     if (info.type == "camera") {
+        stream.type = info.type;
         stream.srcObject = info.url;
         log("camera-on");
     }
