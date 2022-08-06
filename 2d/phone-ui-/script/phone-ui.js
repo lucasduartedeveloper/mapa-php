@@ -93,6 +93,8 @@ var contacts = [
      url: "https://moviesjoy.best/deadpool/" },
     { no: "552", type: "tv-iframe", title: "VENOM",
      url: "https://moviesjoy.best/venom/" },
+    { no: "553", type: "tv-iframe", title: "GLOBO",
+     url: "https://megacanais.com/globo-sp-ao-vivo_/" },
     { no: "800", type: "audio-stream", 
      url: "https://ice.fabricahost.com.br/jovempanlondrina" },
     { no: "900", type: "uploaded-video", 
