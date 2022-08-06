@@ -175,15 +175,15 @@ controls autoplay>
         </button>
       </div>
       <div class="modal-body">
-         <button type="button" class="btn btn-primary">
+         <button id="cb-filter" type="button" class="btn btn-primary">
             Cb <span class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
-        <button type="button" class="btn btn-primary">
+        <button id="tw-filter" type="button" class="btn btn-primary">
             Twitch <span class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
-        <button type="button" class="btn btn-primary">
+        <button id="tv-filter" type="button" class="btn btn-primary">
             Tv <span class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
