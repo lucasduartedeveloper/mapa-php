@@ -179,6 +179,14 @@ controls autoplay>
             Twitch <span class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
+        <button type="button" class="btn btn-primary">
+            Twitch <span class="badge badge-light">9</span>
+            <span class="sr-only">unread messages</span>
+        </button>
+        <button type="button" class="btn btn-primary">
+            Twitch <span class="badge badge-light">9</span>
+            <span class="sr-only">unread messages</span>
+        </button>
         <p id="contact-list">
         </p>
       </div>
