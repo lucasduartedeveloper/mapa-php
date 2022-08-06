@@ -59,6 +59,8 @@ function loadCbStream(json) {
         });
     }
     else {
+        calling.pause();
+        calling.currentTime = 0;
         log("info", 
         json.broadcaster_username + " is Offline");
         say(json.broadcaster_username + " is Offline");
