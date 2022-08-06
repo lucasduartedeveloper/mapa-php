@@ -145,6 +145,8 @@ function loadVideoStream(info) {
         $(stream).attr("src", info.url);
     }
     $(stream).appendTo("#video-streams-container");
+    stream.load();
+    stream.play();
 
     streams.push(stream);
     if (streams.length > 1) {
