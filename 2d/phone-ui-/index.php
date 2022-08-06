@@ -176,7 +176,7 @@ controls autoplay>
       </div>
       <div class="modal-body">
          <button id="all-filter" type="button" class="btn btn-secondary">
-            Cb <span id="all-count" 
+            All <span id="all-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
