@@ -147,6 +147,16 @@ function loadVideoStream(info) {
     $(stream).attr("src", nfo.url);
     $(stream).appendTo("#video-streams-container");
 
+    streams.push(stream);
+    if (streams.length > 1) {
+        $(".video-stream").css("width", (sw/2)+"px");        
+        $(".video-stream").css("height", ((sw/2)*0.8)+"px");
+    }
+    else {  
+        $(".video-stream").css("width", (sw)+"px");        
+        $(".video-stream").css("height", ((sw)*0.8)+"px");
+    }
+
     $("#temporary-workaround").hide();
     $("#video-layer").show();
     $("#broadcaster-username")
