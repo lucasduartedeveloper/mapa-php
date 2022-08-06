@@ -170,42 +170,16 @@ controls autoplay>
     <div class="modal-content">
       <div class="modal-header">
         <h5  class="modal-title"><b>CONTACT LIST</b></h5>
-        <br>
-        <div style="display:none" class="form-check">
-        <input class="form-check-input" 
-        type="checkbox" value="" checked
-        id="offline-checkbox">
-        <label class="form-check-label" 
-        for="flexCheckDefault">
-        Offline
-        </label>
-        <input class="form-check-input" 
-        type="checkbox" value="" checked
-        id="offline-checkbox">
-        <label class="form-check-label" 
-        for="flexCheckDefault">
-        Twitch
-        </label>
-        <input class="form-check-input" 
-        type="checkbox" value="" checked
-        id="offline-checkbox">
-        <label class="form-check-label" 
-        for="flexCheckDefault">
-        Cb
-        </label>
-        <input class="form-check-input" 
-        type="checkbox" value="" checked
-        id="offline-checkbox">
-        <label class="form-check-label" 
-        for="flexCheckDefault">
-        Others
-        </label>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+         <button type="button" class="btn btn-primary">
+            Twitch <span class="badge badge-light">9</span>
+            <span class="sr-only">unread messages</span>
+        </button>
         <p id="contact-list">
         </p>
       </div>
