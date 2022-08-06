@@ -105,12 +105,12 @@ controls autoplay>
 </video>
 
 <span class="controls">
+<i id="reload" class="fa-solid fa-arrows-rotate"></i>
 <i id="minimize" class="fa-solid fa-minimize"></i>
 <i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
 <i id="toggle-controls" class="fa-solid fa-gamepad"></i>
-<i id="reload" class="fa-solid fa-arrows-rotate"></i>
 </span>
 <span id="broadcaster-msg">
 </span>
