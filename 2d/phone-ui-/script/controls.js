@@ -19,7 +19,7 @@ document.getElementById("pointer")
 .addEventListener("contextmenu", e => e.preventDefault());
 
 document.getElementById("pointer")
-oncontextmenu = function() { return false; };
+.oncontextmenu = function() { return false; };
 
 $("#pointer").bind("contextmenu", function(e) {
     e.preventDefault();
@@ -27,8 +27,8 @@ $("#pointer").bind("contextmenu", function(e) {
     return false;
 });
 
-$("#pointer").mousedown(function(event){
-   switch (event.which)
+$("#pointer").mousedown(function(e) {
+   switch (e.which)
       case 1:
       // Left mouse
       break;
