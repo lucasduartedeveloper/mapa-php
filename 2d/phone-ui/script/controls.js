@@ -132,8 +132,8 @@ function moveCrystal(x, y, e = false, sw2 = sw, sh2 = sh) {
     if (!e || e.target.id == "video-layer")
         $("#pointer, #ball").appendTo("#video-layer");
     $("#pointer, #ball").css("position", "fixed");
-    $("#pointer, #ball").css("left", (x-(ballRadius))+"px");
-    $("#pointer, #ball").css("top", (y-(ballRadius))+"px");
+    $("#pointer, #ball").css("left", (x-ballRadius)+"px");
+    $("#pointer, #ball").css("top", (y-ballRadius)+"px");
 }
 
 function returnCrystal(e = false) {
@@ -144,6 +144,6 @@ function returnCrystal(e = false) {
         $("#pointer, #ball").appendTo("#numbers");
         $("#pointer, #ball").css("position", "initial");
     }
-    $("#pointer, #ball").css("left", (ballX-(ballRadius))+"px");
-    $("#pointer, #ball").css("top", (ballY-(ballRadius))+"px");
+    $("#pointer, #ball").css("left", (ballX-ballRadius)+"px");
+    $("#pointer, #ball").css("top", (ballY-ballRadius)+"px");
 }
