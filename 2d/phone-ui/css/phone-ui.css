@@ -177,7 +177,8 @@ html, body, #app {
 }
 
 #toggle-video, 
-#toggle-controls {
+#toggle-controls,
+#minimize {
   font-size: 30px;
 }
 

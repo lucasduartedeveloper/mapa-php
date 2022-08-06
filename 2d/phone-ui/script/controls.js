@@ -3,6 +3,10 @@ $("#heroku-version").click(function() {
          playerId + "|REFRESH");
 });
 
+$("#minimize").click(function() {
+    $("#video-layer").hide();
+});
+
 $("#answer-phone").click(function() {
     $("#call-layer").hide();
 

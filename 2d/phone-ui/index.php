@@ -105,6 +105,7 @@ controls autoplay>
 </video>
 
 <span class="controls">
+<i id="minimize" class="fa-solid fa-minimize"></i>
 <i id="like" class="fa-solid fa-heart"></i>
 <i id="toggle-video" class="fa-solid fa-video"></i>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
