@@ -71,12 +71,14 @@ var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
 var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();";
 
-$("#pointer").on("dblclick touchstart", function(e) {
+$("#pointer").on("dblclick", function(e) {
     bookmarkDblClick++;
     if (bookmarkDblClick >= 2) {
        $("#pointer").trigger("touchend");
     }
-    else { return; }
+});
+
+$("#pointer").on("touchstart", function(e) {
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
         notification.play();
