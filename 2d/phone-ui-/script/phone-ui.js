@@ -85,8 +85,6 @@ var contacts = [
      url: "https://m.twitch.tv/lorylives/home" }, 
     { no: "310", type: "tw",
      url: "https://m.twitch.tv/littlebunny_x/home" },
-    { no: "311", type: "tw",
-     url: "https://m.twitch.tv/magenta62/home" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
     { no: "501", type: "tv", title: "TEST STREAM", 
