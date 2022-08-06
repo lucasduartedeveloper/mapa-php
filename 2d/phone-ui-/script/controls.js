@@ -54,15 +54,15 @@ function filterList(type) {
     $("ul li").each(function(i) {
         $(this).css("display", 
         type == "all" ? "list-item" :
-        ((type+"-filter") == items[k].type ? "list-item" : "none"));
-     }
+        ((type+"-filter") == this.type ? "list-item" : "none"));
+    });
 
-     $(".modal-body button").removeClass(
-     "btn-secondary");
-     $(".modal-body button").removeClass(
-     "btn-light");
-     $("#"+type+"-filter").addClass(
-     "btn-secondary");
+    $(".modal-body button").removeClass(
+    "btn-secondary");
+    $(".modal-body button").removeClass(
+    "btn-light");
+    $("#"+type+"-filter").addClass(
+    "btn-secondary");
     //$("ul li").
 }
 
