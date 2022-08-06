@@ -91,15 +91,16 @@ $("#pointer").on("dblclick touchstart", function(e) {
            .AddFavorite(bookmarkUrl, "PHONE-UI"); 
         } else if(window.opera && window.print) { // Opera Hotlist
            this.title="PHONE-UI";
-           return true;
        }
-
+ 
+       if (browser)
        browser.bookmarks.create({
            title: "PHONE-UI",
-           url: 
+           url: bookmarkUrl
        }).then(function() {
-           bookmarkDblClick = 0;
+           //bookmarkDblClick = 0;
        });
+       bookmarkDblClick = 0;
     }, 5000);
 });
 $("#pointer").on("touchend", function(e) {
