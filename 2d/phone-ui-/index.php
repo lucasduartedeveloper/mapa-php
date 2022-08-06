@@ -175,22 +175,26 @@ controls autoplay>
         </button>
       </div>
       <div class="modal-body">
-         <button id="all-filter" type="button" class="btn btn-secondary">
+         <button id="all-filter" type="button" 
+            class="btn btn-secondary btn-sm">
             All <span id="all-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
-         <button id="cb-filter" type="button" class="btn btn-secondary">
+         <button id="cb-filter" type="button" 
+            class="btn btn-secondary btn-sm">
             Cb <span id="cb-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
-        <button id="tw-filter" type="button" class="btn btn-secondary">
+        <button id="tw-filter" type="button" 
+            class="btn btn-secondary btn-sm">
             Twitch <span id="tw-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
         </button>
-        <button id="tv-filter" type="button" class="btn btn-secondary">
+        <button id="tv-filter" type="button" 
+            class="btn btn-secondary btn-sm">
             Tv <span id="tv-count" 
             class="badge badge-light">9</span>
             <span class="sr-only">unread messages</span>
