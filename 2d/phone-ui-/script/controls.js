@@ -99,7 +99,7 @@ $(window).on("touchmove", function(e) {
     Math.pow(pinchBY, 2));
 
     window.zoomValue += 
-    ((1/sw)*(pinchDistance - pichStartDistance))*
+    ((1/sw)*(pinchDistance - pinchStartDistance))*
     (window.maxZoom - window.minZoom);
     window.zoomValue = 
     window.zoomValue > window.maxZoom ?
