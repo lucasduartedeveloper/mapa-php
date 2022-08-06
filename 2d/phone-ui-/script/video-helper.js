@@ -229,9 +229,9 @@ function loadVideoOnIframe(url) {
 }
 
 // Video zoom
-window.videoMinZoom = 0.1;
-window.videoMaxZoom = 5;
-window.videoZoomValue = 1;
+var videoMinZoom = 0.1;
+var videoMaxZoom = 5;
+var videoZoomValue = 1;
 
 function setVideoZoom(value) {
     for (var k in streams) {
