@@ -54,7 +54,7 @@ function filterList(type) {
     $("ul li").each(function(i) {
         $(this).css("display", 
         type == "all" ? "list-item" :
-        ((type+"-filter") == this.type ? "list-item" : "none"));
+        ((type) == this.type ? "list-item" : "none"));
     });
 
     $(".modal-body button").removeClass(
