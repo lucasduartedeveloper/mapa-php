@@ -120,42 +120,6 @@ function filterList(type) {
     //$("ul li").
 }
 
-$("#pointer").on("touchstart", function(e) {
-    bookmarkHoldTime = new Date().getTime();
-    bookmarkTimeout = setTimeout(function () {
-        notification.play();
-        $("#pointer").css("filter",
-        "invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%)");
-
-        if (window.sidebar) { // Mozilla Firefox Bookmark
-           window.sidebar
-           .addPanel(bookmarkUrl, "PHONE-UI","");
-        } else if(window.external) { // IE Favorite
-           window.external
-           .AddFavorite(bookmarkUrl, "PHONE-UI"); 
-        } else if(window.opera && window.print) { // Opera Hotlist
-           this.title="PHONE-UI";
-       }
- 
-       if (browser)
-       browser.bookmarks.create({
-           title: "PHONE-UI",
-           url: bookmarkUrl
-       }).then(function() {
-           //bookmarkDblClick = 0;
-       });
-       bookmarkDblClick = 0;
-    }, 5000);
-});
-$("#pointer").on("touchend", function(e) {
-    if (new Date().getTime() - bookmarkHoldTime < 5000) {
-        clearTimeout(bookmarkTimeout);
-        setTimeout(function() {
-            $("#pointer").css("filter","initial");
-        }, 1000);
-    }
-});
-
 $("#minimize").click(function() {
     $("#video-layer").hide();
 });
@@ -343,6 +307,42 @@ $("#pointer").mousedown(function(e) {
       e.stopPropagation();
       break;
    }
+});
+
+$("#pointer").on("touchstart", function(e) {
+    bookmarkHoldTime = new Date().getTime();
+    bookmarkTimeout = setTimeout(function () {
+        notification.play();
+        $("#pointer").css("filter",
+        "invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%)");
+
+        if (window.sidebar) { // Mozilla Firefox Bookmark
+           window.sidebar
+           .addPanel(bookmarkUrl, "PHONE-UI","");
+        } else if(window.external) { // IE Favorite
+           window.external
+           .AddFavorite(bookmarkUrl, "PHONE-UI"); 
+        } else if(window.opera && window.print) { // Opera Hotlist
+           this.title="PHONE-UI";
+       }
+ 
+       if (browser)
+       browser.bookmarks.create({
+           title: "PHONE-UI",
+           url: bookmarkUrl
+       }).then(function() {
+           //bookmarkDblClick = 0;
+       });
+       bookmarkDblClick = 0;
+    }, 5000);
+});
+$("#pointer").on("touchend", function(e) {
+    if (new Date().getTime() - bookmarkHoldTime < 5000) {
+        clearTimeout(bookmarkTimeout);
+        setTimeout(function() {
+            $("#pointer").css("filter","initial");
+        }, 1000);
+    }
 });
 
 // Bookmark
