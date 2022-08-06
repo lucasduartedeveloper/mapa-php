@@ -26,8 +26,13 @@ var pinchAY = 0;
 var pinchBX = 0;
 var pinchBY = 0;
 
+var pinchDistance = 0;
+
 $(window).on("touchstart", function(e) {
     log("pich-zoom-start", e.originalEvent.touches);
+    if (e.originalEvent.touches.length < 2) { 
+        return;
+    }
 
     pinchStartAX = 
     e.originalEvent.touches[0].clientX;
@@ -35,12 +40,31 @@ $(window).on("touchstart", function(e) {
     e.originalEvent.touches[0].clientY;
 
     pinchStartBX = 
-    e.originalEvent.touches[0].clientX;
+    e.originalEvent.touches[1].clientX;
     pinchStartBX = 
-    e.originalEvent.touches[0].clientY;
+    e.originalEvent.touches[1].clientY;
 });
 $(window).on("touchmove", function(e) {
     log("pich-zoom-move", e.originalEvent.touches);
+    if (e.originalEvent.touches.length < 2) { 
+        return;
+    }
+
+    pinchAX = 
+    e.originalEvent.touches[0].clientX;
+    pinchAY = 
+    e.originalEvent.touches[0].clientY;
+
+    pinchBX = 
+    e.originalEvent.touches[1].clientX;
+    pinchBX = 
+    e.originalEvent.touches[1].clientY;
+});
+$(window).on("touchend", function(e) {
+    log("pich-zoom-move", e.originalEvent.touches);
+    if (e.originalEvent.touches.length < 2) { 
+        return;
+    }
 
     pinchAX = 
     e.originalEvent.touches[0].clientX;
