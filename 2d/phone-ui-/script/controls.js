@@ -57,11 +57,12 @@ function filterList(type) {
         type == "all" ? "list-item" :
         ((type+"-filter") == items[k].type ? "list-item" : "none"));
 
-        $("#"+type+"-filter").removeClass(
-        "btn-light" : "btn-secondary");
-
+        $(".modal-body button").removeClass(
+        "btn-secondary");
+        $(".modal-body button").removeClass(
+        "btn-light");
         $("#"+type+"-filter").addClass(
-        "btn-secondary" : "btn-light");
+        "btn-secondary");
     }
     //$("ul li").
 }
