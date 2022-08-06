@@ -7,6 +7,14 @@ $("#minimize").click(function() {
     $("#video-layer").hide();
 });
 
+$("#reload").click(function() {
+    for (var k in streams) {
+       streams[k].pause();
+       streams[k].load();
+       streams[k].play();
+    }
+});
+
 $("#answer-phone").click(function() {
     $("#call-layer").hide();
 
