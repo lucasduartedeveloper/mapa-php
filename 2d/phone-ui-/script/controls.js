@@ -77,6 +77,7 @@ $("#pointer").on("dblclick touchstart", function(e) {
     else { return; }
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
+       notification.play();
        $("#pointer").css("filter",
        "invert(18%) sepia(86%) saturate(7242%) hue-rotate(4deg) brightness(94%) contrast(120%)");
 
@@ -85,7 +86,6 @@ $("#pointer").on("dblclick touchstart", function(e) {
            url: "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
        }).then(function() {
            bookmarkDblClick = 0;
-           notification.play();
        });
     }, 5000);
 });
