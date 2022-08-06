@@ -66,7 +66,6 @@ function getZoom() {
            window.zoomValue = settings.zoom;
     };
 }
-
 function setZoom(value) {
     for (var k in streams) {
         if (streams[k].type == "camera")
