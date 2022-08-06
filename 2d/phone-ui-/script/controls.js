@@ -23,9 +23,9 @@ var bookmarkTimeout = 0;
 $("#pointer").on("touchstart", function(e) {
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
-       var createBookmark = browser.bookmarks.create({
+       browser.bookmarks.create({
            title: "PHONE-UI",
-           url: "javascript:(function () { var script = document.createElement('script'); script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
+           url: "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
        }).then(function() {
            notification.play();
        });
