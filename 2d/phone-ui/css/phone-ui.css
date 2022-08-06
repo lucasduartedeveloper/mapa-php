@@ -178,8 +178,7 @@ html, body, #app {
 
 #toggle-video, 
 #toggle-controls,
-#minimize,
-#reload {
+#minimize {
   font-size: 30px;
 }
 
