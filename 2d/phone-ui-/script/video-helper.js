@@ -138,7 +138,6 @@ function loadVideoStream(info) {
     //download("teste.html", info.data);
     var stream = document.createElement("video");
     $(stream).addClass("video-stream");
-    stream.type = info.type;
 
     if (info.type == "camera") {
         stream.srcObject = info.url;
@@ -149,6 +148,7 @@ function loadVideoStream(info) {
         $(stream).attr("src", info.url);
     }
     $(stream).appendTo("#video-streams-container");
+    stream.type = info.type;
     stream.load();
     stream.play();
 
