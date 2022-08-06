@@ -15,6 +15,9 @@ $(".video-stream").on("touchend", function(e) {
 });
 */
 
+document.getElementById("pointer")
+.addEventListener("contextmenu", e => e.preventDefault());
+
 var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
 $("#pointer").on("touchstart", function(e) {
