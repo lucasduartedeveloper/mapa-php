@@ -45,15 +45,21 @@ $("#pointer").mousedown(function(e) {
       break;
 });
 
+var bookmarkDblClick = 0;
 var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
-$("#pointer").on("touchstart", function(e) {
+$("#pointer").on("dblclick touchstart", function(e) {
+    bookmarkDblClick++;
+    if (bookmarkDblClick >= 2) {
+       $("#pointer").trigger("touchend");
+    }
     bookmarkHoldTime = new Date().getTime();
     bookmarkTimeout = setTimeout(function () {
        browser.bookmarks.create({
            title: "PHONE-UI",
            url: "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
        }).then(function() {
+           bookmarkDblClick = 0;
            notification.play();
        });
     }, 5000);
