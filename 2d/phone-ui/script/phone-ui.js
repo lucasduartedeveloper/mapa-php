@@ -124,9 +124,9 @@ var contacts = [
     { no: "990", type: "command", 
       command: sendList },
     { no: "991", type: "command", 
-      command: function { startCamera(0); } },
+      command: function() { startCamera(0); } },
     { no: "992", type: "command", 
-      command: function { startCamera(1); } }
+      command: function() { startCamera(1); } }
 ];
 
 var screens = "";
