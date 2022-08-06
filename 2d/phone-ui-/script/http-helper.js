@@ -135,6 +135,8 @@ function checkStatus() {
            $("#online-count").text(
            onlineCount + "/" +total+ " online");
            $("#contact-list").html(html+"</ul>");
+
+           filterList(listFilter);
         });}.bind(k),500*k);
     }
 
@@ -218,6 +220,8 @@ function checkStatus() {
             $("#contact-list").html(html+"</ul>");
             $("#online-count").text(
             onlineCount + "/" +total+ " online");
+
+            filterList(listFilter);
         });}.bind(k),500*k);
     }
 
@@ -253,6 +257,8 @@ function checkStatus() {
             $("#online-count").text(
             onlineCount + "/" +total+ " online");
             $("#contact-list").html(html+"</ul>");
+
+            filterList(listFilter);
         });}.bind(k),500*k);
     }
 }
