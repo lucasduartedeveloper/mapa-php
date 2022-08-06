@@ -140,8 +140,7 @@ function loadVideoStream(info) {
     }
     streams = [];*/
 
-    var stream = document
-    .createElementByTagName("video");
+    var stream = document.createElement("video");
 
     $(stream).addClass("video-stream");
     $(stream).attr("src", nfo.url);
