@@ -144,7 +144,7 @@ function loadVideoStream(info) {
 
     $(stream).addClass("video-stream");
     if (info.type == "camera") {
-        $(stream).attr("srcObject", info.url);
+        stream.srcObject = info.url;
     }
     else {
         $(stream).attr("src", info.url);
