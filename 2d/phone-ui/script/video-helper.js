@@ -143,7 +143,12 @@ function loadVideoStream(info) {
     var stream = document.createElement("video");
 
     $(stream).addClass("video-stream");
-    $(stream).attr("src", info.url);
+    if (info.type == "camera") {
+        $(stream).attr("srcObject", info.url);
+    }
+    else {
+        $(stream).attr("src", info.url);
+    }
     $(stream).appendTo("#video-streams-container");
 
     streams.push(stream);
@@ -208,7 +213,7 @@ function loadVideoOnIframe(url) {
     $("#video-stream").hide();
 }
 
-// Rennection automatic
+// Reconnection
 function videoRecover() {
     
 }

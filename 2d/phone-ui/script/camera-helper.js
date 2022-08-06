@@ -18,13 +18,6 @@ if (navigator.mediaDevices) {
 
 var deviceNo = 1;
 function startCamera() {
-     $("#temporary-workaround").hide();
-     $("#video-layer").show();
-     $("#broadcaster-username")
-     .text("CAMERA");
-     $("#video-stream").show();
-     var video = $("#video-stream")[0];
-
     timeStarted = new Date().getTime();
 
      if (navigator.mediaDevices) {
@@ -36,7 +29,11 @@ function startCamera() {
           } }, 
           audio: false })
           .then((stream) => {
-               video.srcObject = stream;
+               loadVideoStream({
+                   title: "CAMERA",
+                   url: stream,
+                   type: "camera"
+               });
                var display = stream.
                getVideoTracks()[0].getSettings();
                vw = display.width;
@@ -46,8 +43,7 @@ function startCamera() {
      }
 }
 function stopCamera() {
-     var video = $("#video-stream")[0];
-
+     return;
      if (video.srcObject)
      video.srcObject
     .getTracks()
