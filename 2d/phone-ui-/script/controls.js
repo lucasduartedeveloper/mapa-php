@@ -46,6 +46,11 @@ $("#pointer").mousedown(function(e) {
    }
 });
 
+function filterList(type) {
+    log(type);
+    //$("ul li").
+}
+
 var bookmarkDblClick = 0;
 var bookmarkHoldTime = 0;
 var bookmarkTimeout = 0;
