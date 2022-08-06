@@ -78,7 +78,7 @@ $("#refresh").click(function() {
 var moneyWidth = window.innerWidth * 0.4;
 var moneyHeight = window.innerWidth * 0.2;
 
-var ballRadius = window.innerWidth * 0.1;
+var ballRadius = window.innerWidth * 0.2;
 
 var ballX = 0;
 var ballY = 0;
