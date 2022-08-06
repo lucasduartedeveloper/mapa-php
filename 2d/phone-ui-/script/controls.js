@@ -52,12 +52,13 @@ function filterList(type) {
     listFilter = type;
     var items = $("ul li");
     for (var k in items) {
-        continue;
+        
         $(items[k]).css("display", 
         type == "all" ? "list-item" :
         ((type+"-filter") == items[k].id ? "list-item" : "none"));
 
-        $(items[k]).addClass(
+        continue;
+        $(items[k]).removeClass(
         ((type+"-filter") == items[k].id ? 
         "btn-light" : "btn-secondary"));
 
