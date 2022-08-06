@@ -143,7 +143,7 @@ function loadVideoStream(info) {
     var stream = document.createElement("video");
 
     $(stream).addClass("video-stream");
-    $(stream).attr("src", nfo.url);
+    $(stream).attr("src", info.url);
     $(stream).appendTo("#video-streams-container");
 
     streams.push(stream);
