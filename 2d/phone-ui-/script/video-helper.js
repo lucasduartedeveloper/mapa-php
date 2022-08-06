@@ -151,8 +151,9 @@ function loadVideoStream(info) {
         $(stream).attr("src", info.url);
     }
     $(stream).appendTo(streamView);
-    $(stream).appendTo("#video-streams-container");
+    $(streamView).appendTo("#video-streams-container");
     stream.type = info.type;
+    stream.streamView = streamView;
     stream.load();
     stream.play();
 
@@ -234,9 +235,10 @@ window.videoZoomValue = 1;
 
 function setVideoZoom(value) {
     for (var k in streams) {
-        if (streams[k].type != "camera")
+        if (streams[k].type != "camera") {
            $(streams[k]).css("transform",
            "scale("+value+","+value+")");
+        }
     };
 }
 

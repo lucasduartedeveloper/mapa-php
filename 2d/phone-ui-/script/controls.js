@@ -205,7 +205,7 @@ $("#hang-phone").click(function(e, user = true) {
 
     for (var k in streams) {
        streams[k].pause();
-       $(streams[k]).remove();
+       $(streams[k].streamView).remove();
     }
     streams = [];
 
@@ -232,13 +232,13 @@ $("#toggle-video").click(function () {
     video = !video;
     if (!video) {
         for (var k in streams) {
-           $(streams[k]).hide();
+           $(streams[k].streamView).hide();
         }
         $("#video-js").hide();
     }
     else {
         for (var k in streams) {
-           $(streams[k]).show();
+           $(streams[k].streamView).show();
         }
         //$("#video-js").show();
     }
