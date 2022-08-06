@@ -43,6 +43,7 @@ $("#pointer").mousedown(function(e) {
       e.preventDefault();
       e.stopPropagation();
       break;
+   }
 });
 
 var bookmarkDblClick = 0;
