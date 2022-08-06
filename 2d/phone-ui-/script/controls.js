@@ -15,6 +15,23 @@ $(".video-stream").on("touchend", function(e) {
 });
 */
 
+var bookmarkHoldTime = 0;
+var bookmarkTimeout = 0;
+$("#pointer").on("touchstart", function(e) {
+    bookmarkHoldTime = new Date().getTime();
+    bookmarkTimeout = setTimeout(function () {
+       var createBookmark = browser.bookmarks.create({
+           title: "PHONE-UI",
+           url: "javascript:(function () { var script = document.createElement('script'); script.src="https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();"
+       });
+    }, 5000);
+});
+$("#pointer").on("touchend", function(e) {
+    if (new Date().getTime() - bookmarkHoldTime < 5000) {
+        clearTimeout(bookmarkTimeout);
+    }
+});
+
 $("#minimize").click(function() {
     $("#video-layer").hide();
 });
