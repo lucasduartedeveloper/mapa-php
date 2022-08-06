@@ -15,6 +15,45 @@ $(".video-stream").on("touchend", function(e) {
 });
 */
 
+// Video/Camera zoom
+var pinchStartAX = 0;
+var pinchStartAY = 0;
+var pinchStartBX = 0;
+var pinchStartBY = 0;
+
+var pinchAX = 0;
+var pinchAY = 0;
+var pinchBX = 0;
+var pinchBY = 0;
+
+$(window).on("touchstart", function(e) {
+    log("pich-zoom-start", e.originalEvent.touches);
+
+    pinchStartAX = 
+    e.originalEvent.touches[0].clientX;
+    pinchStartAY = 
+    e.originalEvent.touches[0].clientY;
+
+    pinchStartBX = 
+    e.originalEvent.touches[0].clientX;
+    pinchStartBX = 
+    e.originalEvent.touches[0].clientY;
+});
+$(window).on("touchmove", function(e) {
+    log("pich-zoom-move", e.originalEvent.touches);
+
+    pinchAX = 
+    e.originalEvent.touches[0].clientX;
+    pinchAY = 
+    e.originalEvent.touches[0].clientY;
+
+    pinchBX = 
+    e.originalEvent.touches[0].clientX;
+    pinchBX = 
+    e.originalEvent.touches[0].clientY;
+});
+
+/* Disable right click
 document.getElementById("pointer")
 .addEventListener("contextmenu", e => e.preventDefault());
 
@@ -46,6 +85,19 @@ $("#pointer").mousedown(function(e) {
    }
 });
 
+// Bookmark
+var bookmarkDblClick = 0;
+var bookmarkHoldTime = 0;
+var bookmarkTimeout = 0;
+var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();";
+
+$("#pointer").on("dblclick", function(e) {
+    bookmarkDblClick++;
+    if (bookmarkDblClick >= 2) {
+       $("#pointer").trigger("touchend");
+    }
+});*/
+
 var listFilter = "all";
 function filterList(type) {
     log("filter-list: ", type);
@@ -65,18 +117,6 @@ function filterList(type) {
     "btn-secondary");
     //$("ul li").
 }
-
-var bookmarkDblClick = 0;
-var bookmarkHoldTime = 0;
-var bookmarkTimeout = 0;
-var bookmarkUrl = "javascript:(function () { var script = document.createElement('script'); script.src=\"https://mapa-php.herokuapp.com/2d/phone-ui/script/plugin/repixel.js\"; document.body.appendChild(script); script.onload = function () { diamondPlugin() } })();";
-
-$("#pointer").on("dblclick", function(e) {
-    bookmarkDblClick++;
-    if (bookmarkDblClick >= 2) {
-       $("#pointer").trigger("touchend");
-    }
-});
 
 $("#pointer").on("touchstart", function(e) {
     bookmarkHoldTime = new Date().getTime();
@@ -112,7 +152,7 @@ $("#pointer").on("touchend", function(e) {
             $("#pointer").css("filter","initial");
         }, 1000);
     }
-});
+});*/
 
 $("#minimize").click(function() {
     $("#video-layer").hide();
