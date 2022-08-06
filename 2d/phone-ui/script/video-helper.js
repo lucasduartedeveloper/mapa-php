@@ -156,6 +156,12 @@ function loadVideoStream(info) {
         $(".video-stream").css("height", ((sw)*0.8)+"px");
     }
 
+    stream.oncanplay = 
+    function() {
+        calling.pause();
+        calling.currentTime = 0;
+    };
+
     $("#temporary-workaround").hide();
     $("#video-layer").show();
     $("#broadcaster-username")

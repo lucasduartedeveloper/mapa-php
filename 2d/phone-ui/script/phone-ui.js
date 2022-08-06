@@ -135,18 +135,13 @@ $(document).ready(function() {
     $("#video-stream, #video-js").attr("height", sw*0.8);
     $("#temporary-workaround").css("width", sw+"px");
     $("#temporary-workaround").css("height", sw+"px");
-
-    $(".video-stream")[0].oncanplay = 
-    function() {
-        calling.pause();
-        calling.currentTime = 0;
-    };
+    
     radio.oncanplay = 
     function() {
         radio.pause();
         radio.currentTime = 0;
     };
-    
+
     var tv = 3.500;
     if (sw>=sh) {
         $("#app").css("width", (sw/tv)+"px");
