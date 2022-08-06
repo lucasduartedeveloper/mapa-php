@@ -126,7 +126,13 @@ var contacts = [
     { no: "991", type: "command", 
       command: function() { startCamera(0); } },
     { no: "992", type: "command", 
-      command: function() { startCamera(1); } }
+      command: function() { startCamera(1); } },
+    { no: "993", type: "command", 
+      command: function() { startCamera(2); } },
+    { no: "994", type: "command", 
+      command: function() { startCamera(3); } },
+    { no: "995", type: "command", 
+      command: function() { startCamera(4); } }
 ];
 
 var screens = "";
