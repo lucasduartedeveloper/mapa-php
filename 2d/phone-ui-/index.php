@@ -116,8 +116,8 @@ controls autoplay>
 <i class="fa-solid fa-comment-dots"></i>
 <span id="broadcaster-msg">
 </span>
-</div>
 <input type="text" class="form-control" placeholder="Your message">
+</div>
 </div>
 </div>
 
