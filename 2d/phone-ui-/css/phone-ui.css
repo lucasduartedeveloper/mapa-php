@@ -207,7 +207,7 @@ html, body, #app {
    flex-direction: row;
    flex-wrap: row-wrap;
    text-align: center;
-   overflow: hidden;
+   --overflow: hidden;
 }
 
 .video-stream-view {
