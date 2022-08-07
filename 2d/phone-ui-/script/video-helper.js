@@ -161,7 +161,7 @@ function loadVideoStream(info) {
     if (streams.length > 1) {
         $("#video-stream-container")
         .css("height", (((sw/2)*0.8)*
-        Math.floor(streams.length/2))+"px");
+        Math.ceil(streams.length/2))+"px");
         $(".video-stream-view")
         .css("width", (sw/2)+"px");
         $(".video-stream-view")
