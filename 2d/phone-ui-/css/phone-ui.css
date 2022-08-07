@@ -226,7 +226,7 @@ html, body, #app {
 
 .bird-box {
    position: absolute;
-   background-image: url("img/bird-box.png");
+   background-image: url("../img/bird-box.png");
    background-repeat: no-repeat;
    background-size: contain;
 }
