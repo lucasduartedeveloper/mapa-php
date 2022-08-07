@@ -227,6 +227,7 @@ html, body, #app {
 
 .bird-box {
    position: absolute;
+   display: none;
    left: 0px;
    top: 0px;
    height: auto;
