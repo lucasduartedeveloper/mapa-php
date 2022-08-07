@@ -156,8 +156,8 @@ function loadVideoStream(info) {
     $(stream).appendTo(streamView);
     $(img).appendTo(streamView);
     $(streamView).appendTo("#video-stream-container");
-    stream.img = img;
-    stream.show = true;
+    streamView.img = img;
+    streamView.showImg = true;
     stream.type = info.type;
     stream.streamView = streamView;
     stream.load();
