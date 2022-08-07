@@ -224,6 +224,10 @@ html, body, #app {
    outline: 2px inset gray;
 }
 
+.bird-box {
+   position: absolute;
+}
+
 #temporary-workaround {
    border: none;
 }

@@ -142,6 +142,9 @@ function loadVideoStream(info) {
     var stream = document.createElement("video");
     $(stream).addClass("video-stream");
 
+    var img = document.createElement("img");
+    $(img).addClass("bird-box");
+
     if (info.type == "camera") {
         stream.srcObject = info.url;
         log("camera-on");
@@ -151,6 +154,7 @@ function loadVideoStream(info) {
         $(stream).attr("src", info.url);
     }
     $(stream).appendTo(streamView);
+    $(img).appendTo(streamView);
     $(streamView).appendTo("#video-stream-container");
     stream.type = info.type;
     stream.streamView = streamView;
@@ -168,6 +172,8 @@ function loadVideoStream(info) {
         .css("height", ((sw/2)*0.8)+"px");
         $(".video-stream").css("width", (sw/2)+"px");        
         $(".video-stream").css("height", ((sw/2)*0.8)+"px");
+        $(".bird-box").css("width", (sw/2)+"px");
+        $(".bird-box").css("height", ((sw/2)*0.8)+"px");
     }
     else {
         $("#video-stream-container")
@@ -178,6 +184,8 @@ function loadVideoStream(info) {
         .css("height", ((sw)*0.8)+"px");
         $(".video-stream").css("width", (sw)+"px");        
         $(".video-stream").css("height", ((sw)*0.8)+"px");
+        $(".bird-box").css("width", (sw)+"px");
+        $(".bird-box").css("height", ((sw)*0.8)+"px");
     }
 
     stream.oncanplay = 
@@ -245,6 +253,10 @@ function setVideoZoom(value) {
            "scale("+value+","+value+")");
         }
     };
+}
+
+function addBirdBox() {
+    $(".bird-box").show();
 }
 
 // Reconnection
