@@ -117,7 +117,7 @@ controls autoplay>
 <span id="broadcaster-msg">
 </span>
 </div>
-<input type="text" class="form-control" placeholder="Username" aria-label="Username">
+<input type="text" class="form-control" placeholder="Your message">
 </div>
 </div>
 
