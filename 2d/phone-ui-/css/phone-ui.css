@@ -205,7 +205,7 @@ html, body, #app {
    justify-content: center;
    align-items: center;
    flex-direction: row;
-   flex-wrap: row-wrap;
+   flex-wrap: wrap;
    text-align: center;
    --overflow: hidden;
 }
