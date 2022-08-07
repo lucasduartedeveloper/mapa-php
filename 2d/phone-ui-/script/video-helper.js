@@ -156,6 +156,8 @@ function loadVideoStream(info) {
     $(stream).appendTo(streamView);
     $(img).appendTo(streamView);
     $(streamView).appendTo("#video-stream-container");
+    stream.img = img;
+    stream.show = true;
     stream.type = info.type;
     stream.streamView = streamView;
     stream.load();
@@ -253,10 +255,6 @@ function setVideoZoom(value) {
            "scale("+value+","+value+")");
         }
     };
-}
-
-function addBirdBox() {
-    $(".bird-box").show();
 }
 
 // Reconnection

@@ -15,6 +15,13 @@ $(".video-stream").on("touchend", function(e) {
 });
 */
 
+$(".video-stream-view").on("dblclick", function(e) {
+    e.target.img.show = !e.target.img.show;
+    e.target.img.style.display = 
+    e.target.img.show ?
+    "initial" : "none";
+});
+
 // Video/Camera zoom
 var pinchStartAX = 0;
 var pinchStartAY = 0;
