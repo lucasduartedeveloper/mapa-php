@@ -16,6 +16,7 @@ $(".video-stream").on("touchend", function(e) {
 */
 
 $(".video-stream-view").on("dblclick", function(e) {
+    log("stream-dblclick", e);
     e.target.img.showImg = !e.target.img.showImg;
     e.target.img.style.display = 
     e.target.img.showImg ?
