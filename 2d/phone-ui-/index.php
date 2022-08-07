@@ -89,7 +89,7 @@ echo "\n";
 <span id="time-streaming">00:00:00</span>
 <iframe id="temporary-workaround"></iframe>
 
-<div id="video-streams-container">
+<div id="video-stream-container">
      <!--
      <video id="video-stream" class="video-stream"
      style="display:none" width="100" height="100"
