@@ -230,8 +230,6 @@ html, body, #app {
    display: none;
    left: 0px;
    top: 0px;
-   height: auto;
-   max-width: 100%;
    background-image: url("../img/bird-box.png");
    background-repeat: no-repeat;
    background-size: contain;
