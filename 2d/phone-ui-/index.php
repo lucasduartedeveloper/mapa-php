@@ -114,10 +114,12 @@ controls autoplay>
 </span>
 <span>
 <i class="fa-solid fa-comment-dots"></i>
+<input type="" 
 <span id="broadcaster-msg">
-
 </span>
 </span>
+<input type="text" class="form-control" placeholder="Username" aria-label="Username">
+</div>
 </div>
 
 <div id="number">
