@@ -201,6 +201,7 @@ html, body, #app {
 
 #video-stream-container {
    display: flex;
+   width: 100vw;
    justify-content: center;
    align-items: center;
    flex-direction: row;
