@@ -329,14 +329,14 @@ li img {
    z-index: 999999;
 }
 
-#broadcaster-msg {
+#chat {
    padding: 10px 20px;
    background: rgba(0,0,0,0.5);
    color: white;
    overflow-x: scroll;
 }
 
-#broadcaster-msg i {
+#chat i {
    color: #eae509;
 }
 
