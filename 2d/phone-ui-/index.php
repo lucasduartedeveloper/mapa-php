@@ -112,7 +112,11 @@ controls autoplay>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
 <i id="toggle-controls" class="fa-solid fa-gamepad"></i>
 </span>
+<span>
+<i class="fa-solid fa-comment-dots"></i>
 <span id="broadcaster-msg">
+
+</span>
 </span>
 </div>
 
