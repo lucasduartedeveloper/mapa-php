@@ -227,7 +227,8 @@ html, body, #app {
 
 .watermark {
    position: absolute;
-   display: none;
+   --display: none;
+   opacity: 0.5;
    left: 0px;
    top: 0px;
    background-image: url("../img/watermark.png");
