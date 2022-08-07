@@ -199,7 +199,7 @@ html, body, #app {
   border-radius: 20px;
 }
 
-#video-stream-container {
+#video-streams-container {
    display: flex;
    width: 100vw;
    justify-content: center;
