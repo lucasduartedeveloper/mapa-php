@@ -201,7 +201,6 @@ html, body, #app {
 
 #video-streams-container {
    display: flex;
-   width: 100vw;
    justify-content: center;
    align-items: center;
    flex-direction: row;
@@ -213,17 +212,13 @@ html, body, #app {
 .video-stream-view {
    background: rgba(0,0,0,1);
    outline: 2px inset orange;
-   width: 100vw;
    overflow: hidden;
-   --border-radius: 20px;
 }
 
 .video-stream,
 .video-js {
    background: rgba(0,0,0,1);
    outline: 2px inset gray;
-   width: 100vw;
-   --border-radius: 20px;
 }
 
 #temporary-workaround {
