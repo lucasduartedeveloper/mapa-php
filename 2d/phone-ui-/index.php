@@ -112,12 +112,11 @@ controls autoplay>
 <i id="hang-phone" class="fa-solid fa-phone-slash"></i>
 <i id="toggle-controls" class="fa-solid fa-gamepad"></i>
 </span>
-<span>
+<div id="chat">
 <i class="fa-solid fa-comment-dots"></i>
-<input type="" 
 <span id="broadcaster-msg">
 </span>
-</span>
+</div>
 <input type="text" class="form-control" placeholder="Username" aria-label="Username">
 </div>
 </div>
