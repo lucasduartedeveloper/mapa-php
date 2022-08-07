@@ -160,6 +160,9 @@ function loadVideoStream(info) {
     streams.push(stream);
     if (streams.length > 1) {
         $(".video-stream-view")
+        .css("height", (((sw/2)*0.8)*
+        (1+Math.floor(streams.length/2))+"px");
+        $(".video-stream-view")
         .css("width", (sw/2)+"px");
         $(".video-stream-view")
         .css("height", ((sw/2)*0.8)+"px");
@@ -167,6 +170,8 @@ function loadVideoStream(info) {
         $(".video-stream").css("height", ((sw/2)*0.8)+"px");
     }
     else {
+        $(".video-stream-view")
+        .css("height", ((sw)*0.8)+"px");
         $(".video-stream-view")
         .css("width", (sw)+"px");
         $(".video-stream-view")
