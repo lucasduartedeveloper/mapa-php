@@ -138,7 +138,7 @@ var contacts = [
     { no: "995", type: "command", 
       command: function() { startCamera(4); } },
     { no: "999", type: "command",
-      command: function() { alert("AVAILABLE"); } },
+      command: function() { alert("AVAILABLE"); } }
 ];
 
 var screens = "";
