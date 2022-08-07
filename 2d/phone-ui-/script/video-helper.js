@@ -143,7 +143,7 @@ function loadVideoStream(info) {
     $(stream).addClass("video-stream");
 
     var img = document.createElement("img");
-    $(img).addClass("bird-box");
+    $(img).addClass("watermark");
 
     if (info.type == "camera") {
         stream.srcObject = info.url;
@@ -156,8 +156,7 @@ function loadVideoStream(info) {
     $(stream).appendTo(streamView);
     $(img).appendTo(streamView);
     $(streamView).appendTo("#video-stream-container");
-    streamView.img = img;
-    streamView.showImg = true;
+    streamView.watermark = img;
     stream.type = info.type;
     stream.streamView = streamView;
     stream.load();
@@ -174,8 +173,8 @@ function loadVideoStream(info) {
         .css("height", ((sw/2)*0.8)+"px");
         $(".video-stream").css("width", (sw/2)+"px");        
         $(".video-stream").css("height", ((sw/2)*0.8)+"px");
-        $(".bird-box").css("width", (sw/2)+"px");
-        $(".bird-box").css("height", ((sw/2)*0.8)+"px");
+        $(".watermark").css("width", (sw/2)+"px");
+        $(".watermark").css("height", ((sw/2)*0.8)+"px");
     }
     else {
         $("#video-stream-container")
@@ -186,8 +185,8 @@ function loadVideoStream(info) {
         .css("height", ((sw)*0.8)+"px");
         $(".video-stream").css("width", (sw)+"px");        
         $(".video-stream").css("height", ((sw)*0.8)+"px");
-        $(".bird-box").css("width", (sw)+"px");
-        $(".bird-box").css("height", ((sw)*0.8)+"px");
+        $(".watermark").css("width", (sw)+"px");
+        $(".watermark").css("height", ((sw)*0.8)+"px");
     }
 
     stream.oncanplay = 

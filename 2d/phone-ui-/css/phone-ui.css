@@ -225,14 +225,14 @@ html, body, #app {
    outline: 2px inset gray;
 }
 
-.bird-box {
+.watermark {
    position: absolute;
    display: none;
    left: 0px;
    top: 0px;
-   background-image: url("../img/bird-box.png");
+   background-image: url("../img/watermark.png");
    background-repeat: no-repeat;
-   background-size: contain;
+   background-size: cover;
 }
 
 #temporary-workaround {
