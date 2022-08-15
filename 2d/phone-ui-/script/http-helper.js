@@ -172,7 +172,7 @@ function checkStatus() {
             x = data.indexOf(".png", n);
 
             var avatarImg = "img/placeholder.png";
-            avatarImg = data.substring(n+37, x+4);
+            avatarImg = data.substring(n+30, x+4);
             //log("avt-img", data.substring(n+33, x+4));
 
             n = data
