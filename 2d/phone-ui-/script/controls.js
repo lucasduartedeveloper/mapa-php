@@ -231,15 +231,11 @@ var video = false;
 $("#toggle-video").click(function () {
     video = !video;
     if (!video) {
-        for (var k in streams) {
-           $(streams[k].streamView).hide();
-        }
+        $("#video-stream-container").hide();
         $("#video-js").hide();
     }
     else {
-        for (var k in streams) {
-           $(streams[k].streamView).show();
-        }
+        $("#video-stream-container").show();
         //$("#video-js").show();
     }
 });
