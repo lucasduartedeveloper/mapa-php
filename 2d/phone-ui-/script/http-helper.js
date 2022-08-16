@@ -179,7 +179,7 @@ function checkStatus() {
             .indexOf("class=\"ScChannelStatusTextIndicator");
             x = data.indexOf("</p>", n);
 
-            var online = n > 0 && 
+            twList[xhr.k].online = n > 0 && 
             data.substring(n, x).toLowerCase().includes("live");
             //log("status-text", data.substring(n, x));
 
@@ -193,7 +193,7 @@ function checkStatus() {
             data.substring(n+1, x-1).replace(",","") : -1;
             //log("viewers", data.substring(n, x));
 
-            if (online && viewers >= 0) {
+            if (twList[xhr.k].online && viewers >= 0) {
                 html += 
                 "<li type=\"tw\" "+
                 "onclick=\"handleDial('"+
