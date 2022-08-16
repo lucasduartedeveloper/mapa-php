@@ -70,8 +70,16 @@ function loadTwitchStream(info) {
     //log("twitch", info.data);
     //download("page.html", info.data);
     
-    var n = info.url.indexOf("/home");
+    loadVideoStream({
+        title: info.json.broadcaster_username +
+        " ("+info.json.num_viewers+")",
+        url: info.url,
+        type: "application/x-mpegURL"
+    });
+    window.open(info.url, "_blank");
+    return;
 
+    var n = info.url.indexOf("/home");
     if (confirm("INSPECT: "+info.url.substring(0, n))) {
         window.open(
         "ajax/http-get.php?url="+
