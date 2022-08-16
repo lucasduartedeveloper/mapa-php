@@ -415,7 +415,9 @@ function handleBrowserState(isActive) {
       ringing.currentTime = 0;
       log("answered", 
       contactWaiting.json.broadcaster_username);
-      loadCbStream(contactWaiting.json);
+      if (contactWaiting.type == "cb)
+          loadCbStream(contactWaiting.json);
+      eles loadTwitchStream(contactWaiting);
       contactWaiting = false;
    }
    else {
