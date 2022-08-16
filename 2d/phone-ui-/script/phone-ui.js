@@ -417,7 +417,7 @@ function handleBrowserState(isActive) {
       contactWaiting.json.broadcaster_username);
       if (contactWaiting.type == "cb)
           loadCbStream(contactWaiting.json);
-      eles loadTwitchStream(contactWaiting);
+      else loadTwitchStream(contactWaiting);
       contactWaiting = false;
    }
    else {
