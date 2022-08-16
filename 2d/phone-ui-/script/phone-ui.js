@@ -433,7 +433,7 @@ function handleBrowserState(isActive) {
               previousTimeStamp = new Date().getTime();
               //log("contactWaiting", contactWaiting);
               ringing.play();
-              return;
+              break;
           }
       }
    }
