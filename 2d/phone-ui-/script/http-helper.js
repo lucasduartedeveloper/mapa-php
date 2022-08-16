@@ -163,6 +163,10 @@ function checkStatus() {
 
             var channelName = 
             twList[xhr.k].url.substring(n+4, x);
+            twList[xhr.k].json = {
+                broadcaster_username:
+                channelName
+            };
 
             n = data.indexOf("</h3>");
             x = data.indexOf("</h3>");
@@ -173,6 +177,7 @@ function checkStatus() {
 
             var avatarImg = "img/placeholder.png";
             avatarImg = "https://"+data.substring(n+37, x+4);
+            twList[xhr.k].avatar = avatarImg;
             //log("avt-img", data.substring(n+33, x+4));
 
             n = data
