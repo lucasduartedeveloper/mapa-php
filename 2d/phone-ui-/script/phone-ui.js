@@ -392,9 +392,11 @@ function step(timestamp) {
       //handleBrowserState(true);
 
      var avatarImg = 
-     contactWaiting.avatar ? 
+     contactWaiting.type == "tw" ?
+     (contactWaiting.avatar) :
+     (contactWaiting.avatar ? 
      "img/avatar/"+contactWaiting.avatar : 
-     "img/placeholder.png";
+     "img/placeholder.png");
 
      $("#broadcaster-avatar").attr("src",
      avatarImg);
