@@ -420,10 +420,10 @@ function handleBrowserState(isActive) {
       log("screen","off");
       for (var k in contacts) {
           if ((autoNo == "ANY" || contacts[k].no == autoNo) && 
-              (contacts[k].type == "cb" ||
-              contacts[k].type == "tw") &&
+              (contacts[k].type == "tw") ||
+              (contacts[k].type == "cb" &&
               contacts[k].json &&
-              contacts[k].json.room_status == "public") {
+              contacts[k].json.room_status == "public")) {
               contactWaiting = contacts[k];
               previousTimeStamp = new Date().getTime();
               //log("contactWaiting", contactWaiting);
