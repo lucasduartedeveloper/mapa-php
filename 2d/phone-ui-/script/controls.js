@@ -180,6 +180,7 @@ $("#reload").click(function() {
        streams[k].load();
        streams[k].play();
     }
+    timeStarted = new Date().getTime();
 });
 
 $("#answer-phone").click(function() {
