@@ -160,9 +160,10 @@ function filterList(type) {
         type == "all" ? "list-item" :
         ((type) == this.type ? "list-item" : "none"));
         
+        /* Improve
         $(this).css("display",
         $(this).hasClass("low-opacity") ?
-        "none" : $(this).css("display"));
+        "none" : $(this).css("display"));*/
     });
 
     $(".modal-body button").removeClass(
