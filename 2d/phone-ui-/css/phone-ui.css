@@ -102,6 +102,7 @@ html, body, #app {
 
 #numbers button span {
    display: block;
+   margin-top: -15px;
    background: rgba(1,1,1,0);
    color: #000;
    font-size: 15px;
