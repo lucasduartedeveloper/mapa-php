@@ -299,3 +299,14 @@ function download(filename, text) {
     element.setAttribute('download', filename);
     element.click();
 }
+
+// $("li").html(renderRating(3));
+var renderRating = function(n) {
+    var html = "<span>";
+    var emptyStar = "<i class=\"fa-regular fa-star\"></i>";
+    var filledStar = "<i class=\"fa-solid fa-star\"></i>";
+    for (var k = 1; k < 6; k++) {
+         html += (k <= n ? filledStar : emptyStar);
+    }
+    return html+"</span>";
+}
