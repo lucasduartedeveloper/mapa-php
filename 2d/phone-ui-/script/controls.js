@@ -159,6 +159,10 @@ function filterList(type) {
         $(this).css("display", 
         type == "all" ? "list-item" :
         ((type) == this.type ? "list-item" : "none"));
+        
+        $(this).css("display",
+        $(this).hasClass("low-opacity") ?
+        "none" : $(this).css("display"));
     });
 
     $(".modal-body button").removeClass(
