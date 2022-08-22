@@ -105,8 +105,9 @@ function checkStatus() {
                   html += 
                   "<li type=\"cb\" onclick=\"handleDial('"+
                   cbList[xhr.k].no+"')\">"+
-                 "<img src=\""+avatarImg+"\"/>"+
-                 "<span class=\"live-indicator\">LIVE</span>"+
+                  "<img src=\""+avatarImg+"\"/>"+
+                  "<span class=\"live-indicator\">LIVE</span>"+
+                  renderRating(3)+
                   cbList[xhr.k].no+": "+
                   json.broadcaster_username+
                   " ("+json.num_viewers+")</li>";
@@ -205,6 +206,7 @@ function checkStatus() {
                 twList[xhr.k].no+"')\">"+
                 "<img src=\""+avatarImg+"\"/>"+  
                 "<span class=\"live-indicator\">LIVE</span>"+
+                renderRating(3)+
                 twList[xhr.k].no+": "+
                 channelName+" ("+viewers+")</li>";
                 onlineCount++; 
@@ -302,7 +304,7 @@ function download(filename, text) {
 
 // $("li").html(renderRating(3));
 var renderRating = function(n) {
-    var html = "<span>";
+    var html = "<span class=\"star-rating\">";
     var emptyStar = "<i class=\"fa-regular fa-star\"></i>";
     var filledStar = "<i class=\"fa-solid fa-star\"></i>";
     for (var k = 1; k < 6; k++) {
