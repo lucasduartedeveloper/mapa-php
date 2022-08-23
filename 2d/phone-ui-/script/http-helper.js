@@ -323,7 +323,7 @@ var setRating = function(self=this, n=0, x=0) {
 }
 
 var renderRating = function(n) {
-    var html = "<span onclick="setRating" class=\"star-rating\">";
+    var html = "<span onclick=\"setRating\" class=\"star-rating\">";
     var emptyStar = "<i class=\"fa-regular fa-star\"></i>";
     var filledStar = "<i class=\"fa-solid fa-star\"></i>";
     for (var k = 1; k < 6; k++) {
