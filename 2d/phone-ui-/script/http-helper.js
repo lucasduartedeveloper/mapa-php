@@ -309,6 +309,9 @@ var setRatings = function() {
     for (var k in contacts) {
        contacts[k].rating = 3;
     }
+    contacts[27].rating = 5;
+    contacts[1].rating = 5;
+    contacts[13].rating = 5;
     contacts[9].rating = 5;
     contacts[10].rating = 5;
     contacts[22].rating = 5;
