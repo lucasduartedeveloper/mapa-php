@@ -45,6 +45,8 @@ function cbLogin() {
 }
 
 function checkStatus() {
+    setRatings();
+
     log("checkStatus", "");
     var cbList = contacts.filter(c => c.type == "cb");
 
@@ -107,7 +109,7 @@ function checkStatus() {
                   cbList[xhr.k].no+"')\">"+
                   "<img src=\""+avatarImg+"\"/>"+
                   "<span class=\"live-indicator\">LIVE</span>"+
-                  renderRating(3)+
+                  renderRating(cbList[xhr.k].rating)+
                   cbList[xhr.k].no+": "+
                   json.broadcaster_username+
                   " ("+json.num_viewers+")</li>";
@@ -206,7 +208,7 @@ function checkStatus() {
                 twList[xhr.k].no+"')\">"+
                 "<img src=\""+avatarImg+"\"/>"+  
                 "<span class=\"live-indicator\">LIVE</span>"+
-                renderRating(3)+
+                renderRating(twList[xhr.k].rating)+
                 twList[xhr.k].no+": "+
                 channelName+" ("+viewers+")</li>";
                 onlineCount++; 
@@ -303,6 +305,15 @@ function download(filename, text) {
 }
 
 // $("li").html(renderRating(3));
+var setRatings = function() {
+    for (var k in contacts) {
+       contacts[k].rating = 3;
+    }
+    contacts[9].rating = 5;
+    contacts[10].rating = 5;
+    contacts[22].rating = 5;
+}
+
 var renderRating = function(n) {
     var html = "<span class=\"star-rating\">";
     var emptyStar = "<i class=\"fa-regular fa-star\"></i>";
