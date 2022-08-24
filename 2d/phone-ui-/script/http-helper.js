@@ -177,7 +177,7 @@ function checkStatus() {
 
             n = data.indexOf("tw-image-avatar");
             x = data.indexOf(".png", n);
-            if (twList[xhr.k].no = "311")
+            if (twList[xhr.k].no == "311")
                 x = data.indexOf(".jpeg", n);
 
             var avatarImg = "img/placeholder.png";
