@@ -177,7 +177,7 @@ function checkStatus() {
 
             n = data.indexOf("tw-image-avatar");
             x = data.indexOf(".png", n);
-            x = (n > 250) ? data.indexOf(".jpeg", n) : x;
+            x = (x > 150) ? data.indexOf(".jpeg", n) : x;
 
             var avatarImg = "img/placeholder.png";
             avatarImg = "https://"+data.substring(n+37, x+4);
