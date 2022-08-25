@@ -450,6 +450,10 @@ function handleBrowserState(isActive) {
    }
 }
 
+var proxyList = [
+  "43.129.95.244:8080",
+];
+
 /* 
 autoAnswer = true;
 autoNo = "025";
