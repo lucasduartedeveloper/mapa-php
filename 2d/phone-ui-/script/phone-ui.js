@@ -65,8 +65,8 @@ var contacts = [
      url: "https://m.chaturbate.com/pussy__money__weed/" },
     { no: "028", type: "cb",
      url: "https://m.chaturbate.com/eleonora_linn/" },
-    { no: "029", type: "cb",
-     url: "https://m.chaturbate.com/vanandjuani/" },
+    /*{ no: "029", type: "cb",
+     url: "https://m.chaturbate.com/vanandjuani/" },*/
     { no: "100", type: "sc",
      url: "https://pt.stripchat.com/chunggChaeyion_s" },
     { no: "300", type: "tw",
