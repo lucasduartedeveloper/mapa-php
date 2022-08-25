@@ -236,7 +236,7 @@ function checkStatus() {
             onlineCount + "/" +total+ " online");
 
             filterList(listFilter);
-        });}.bind(k),500*k);
+        });}.bind(k),/*500*k*/100);
     }
 
    var tvList = contacts.filter(c => c.type == "tv");
@@ -273,7 +273,7 @@ function checkStatus() {
             $("#contact-list").html(html+"</ul>");
 
             filterList(listFilter);
-        });}.bind(k),500*k);
+        });}.bind(k),/*500*k*/100);
     }
 }
 
