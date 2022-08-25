@@ -141,7 +141,7 @@ function checkStatus() {
            $("#contact-list").html(html+"</ul>");
 
            filterList(listFilter);
-        });}.bind(k),500*k);
+        });}.bind(k),/*500*k*/100);
     }
 
     var twList = contacts.filter(c => c.type == "tw");
@@ -333,3 +333,7 @@ var renderRating = function(n) {
     }
     return html+"</span>";
 }
+
+var proxyList = [
+  "43.129.95.244:8080",
+];
