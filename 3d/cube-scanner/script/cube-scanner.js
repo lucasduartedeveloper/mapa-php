@@ -517,8 +517,10 @@ $(document).ready(function() {
              // [code]
          }
 
+          var inside = cubeList[cubeNo].name.includes("(inside)");
           $("#cube-container img.front")          
           .css({ 
+         "opacity" : (inside ? "0" : "1"),
          "width" : (width * scale) +"px",
          "height" : (height * scale) +"px",
          "transform" :  
