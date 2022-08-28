@@ -49,7 +49,7 @@ html, body, #app {
 /* Controls */
 #numbers {
    position: fixed;
-   top: 100px;
+   top: 80px;
    background: #343434;
    width: 90vw;
    font-size: 40px;
@@ -95,7 +95,7 @@ html, body, #app {
    flex-direction: row;
    width: 40vw;
    height: 20vw;
-   margin: 3vw 5vw;
+   margin: 1vw 5vw;
    background: #38C75E;
    color: #fff;
 }
@@ -113,7 +113,7 @@ html, body, #app {
    color: #000;
    width: 20vw;
    height: 20vw;
-   margin: 3vw 5vw;
+   margin: 1vw 5vw;
    border-radius: 50%;
    border: 2px solid #ccc;
 }
