@@ -150,9 +150,9 @@ $(window).on("touchend", function(e) {
     pinchStartBY = 0
 });
 
-var listFilter = "all";
+var listFilter = "tv";
 function filterList(type) {
-    log("filter-list: ", type);
+    //log("filter-list: ", type);
     listFilter = type;
 
     $("ul li").each(function(i) {
