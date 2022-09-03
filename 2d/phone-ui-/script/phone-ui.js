@@ -1,7 +1,7 @@
 var audio = new Audio("audio/heart-beat.wav");
 var radio = new Audio();
 
-var timeStarted = 0;
+var timeStarted = 0; // 0123456789
 
 var sw = window.innerWidth;
 var sh = window.innerHeight;
