@@ -93,6 +93,8 @@ var contacts = [
      url: "https://m.twitch.tv/catiaflaviaaa/home" },
     { no: "312", type: "tw",
      url: "https://m.twitch.tv/gemita/home" },
+    { no: "313", type: "tw",
+     url: "https://m.twitch.tv/laribasgal/home" },
     { no: "500", type: "tv", title: "SBT", 
      url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8" },
     { no: "501", type: "tv", title: "TEST STREAM", 
