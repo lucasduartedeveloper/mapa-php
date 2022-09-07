@@ -183,9 +183,9 @@ function BasicCanvasSave(imageData){window.open(imageData,'jqScribble Image');}
 
             canvas.addEventListener('touchmove', function(e)
             {
-                // Rotation
+                /*// Rotation
                 console.log("x: " + e.touches[0].pageX, "y: " + e.touches[0].pageY);
-                //
+                //*/
                 
                 var o = $elm.offset();
                 e.preventDefault();
