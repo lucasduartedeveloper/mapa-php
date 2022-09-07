@@ -204,6 +204,9 @@ function BasicCanvasSave(imageData){window.open(imageData,'jqScribble Image');}
                 },
                 mousemove: function(e)
                 {
+                    // Rotation
+                    console.log("x: " + e.pageX, "y: " + e.pageY);
+                    //
                     var o = $elm.offset();
                     if(self.brush.active)self.brush.strokeMove(e.pageX-o.left, e.pageY-o.top);
                 },
