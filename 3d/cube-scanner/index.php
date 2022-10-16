@@ -289,7 +289,7 @@ class="form-range">
 <script src="script/coloris.min.js"></script>
 
 <script src="script/image-collision.js?v=0"></script>
-<script src="script/authentication.js?v=21"></script>
+<script src="script/authentication.js?v=22"></script>
 <script src="script/websocket.js?v=4"></script>
 
 <script src="script/cube-shadow.js?v=39"></script>
