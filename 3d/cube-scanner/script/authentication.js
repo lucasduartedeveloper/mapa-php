@@ -26,8 +26,8 @@ function authenticate(data, blackout=false) {
       }
     }
 
-    authenticated = maxBrightness > 30 || 
-    data.length == 0;
+    authenticated = blackout || (maxBrightness > 30 || 
+    data.length == 0);
     if (authenticated) {
         ws.send("CUBE-SCANNER|" +
                   playerId + "|" + "[]");
