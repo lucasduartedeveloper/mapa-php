@@ -7,8 +7,9 @@
 var authenticated = false;
 var maxBrightness = 0;
 
-function authenticate(data) {
-    for (var i = (data.length/2); i <= (data.length/2); i += 4) {
+function authenticate(data, blackout=false) {
+    if (!blackout) {
+      for (var i = (data.length/2); i <= (data.length/2); i += 4) {
         var brightness = 0.34 * data[i] + 
         0.5 * data[i + 1] + 0.16 * data[i + 2];
 
@@ -22,6 +23,7 @@ function authenticate(data) {
         if (brightness > maxBrightness) {
             maxBrightness = brightness;
         }
+      }
     }
 
     authenticated = maxBrightness > 30 || 
