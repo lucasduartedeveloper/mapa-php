@@ -437,6 +437,17 @@ $(document).ready(function() {
     };
     document.body.appendChild(elem12);
 
+    elem13 = document.createElement("span");
+    elem13.style.position = "absolute"
+    elem13.style.color = "lightblue";
+    elem13.style.fontSize = (sw/18)+"px";
+    elem13.style.textAlign = "center";
+    elem13.style.right = (((sw-変数)/2)+(sw/2)-(sw/2))+"px";
+    elem13.style.top = (((sw-変数)/2)+(sh/2)-(sh/2))+"px";
+    elem13.style.width = (変数/4)+"px";
+    elem13.style.height = (変数/4)+"px";
+    document.body.appendChild(elem13);
+
     triangle.addEventListener("animationend", function() {
         //triangle.classList.remove("animate__flipOutY");
         //triangle.classList.add("animate__flipInY");
@@ -1012,7 +1023,8 @@ var next = function(cancolor=true, nojump=false) {
         py: Math.floor(Math.random()*8),
         px2: Math.floor(Math.random()*8),
         py2: Math.floor(Math.random()*8),
-        bot: { running: false, mov: 1 }
+        bot: { running: false, mov: 1 },
+        finger_no: Math.floor(Math.random()*5)
     };
     obj.cx = (obj.px*(変数/8))+(変数/16);
     obj.cy = (obj.py*(変数/8))+(変数/16);
@@ -1085,7 +1097,43 @@ var next = function(cancolor=true, nojump=false) {
         else 
         say(letters[language_no == 0 ? 1 : 0][obj.py]+(obj.px+1));
     }
+    //drawHand(true);
     return obj;
+};
+
+var finger_pos = [
+   { x: (変数/6), y: 変数/5 },
+   { x: (変数/6)*2, y: 変数/5 },
+   { x: (変数/6)*3, y: 変数/5 },
+   { x: (変数/6)*4, y: 変数/5 },
+   { x: (変数/6)*5, y: 変数/5 }
+];
+
+var drawHand = function(update=false) {
+    var canvas = document.createElement("canvas");
+    canvas.width = 変数/2;
+    canvas.height = 変数/2;
+    var ctx = canvas.getContext("2d");
+
+    var pos = finger_pos[nextObj.finger];
+    ctx.fillStyle = "#fff";
+
+    var img = document.createElement("img");
+    img.canvas = canvas;
+    img.ctx = ctx;
+    img.pos = pos;
+    img.update = update;
+    img.onload = function() {
+        var ctx = this.ctx;
+        ctx.drawImage(this, 0, 0, (変数/2), (変数/2));
+        ctx.beginPath();
+        ctx.arc(this.pos.x, this.pos.y, 変数/40, 0, 2*Math.PI);
+        ctx.fill();
+
+        elem13.style.backgroundImage = 
+        "url('"+this.canvas.toDataURL()+"')";
+    };
+    img.src = "img/hand.png";
 };
 
 var checkDirection = function(px, py) {
